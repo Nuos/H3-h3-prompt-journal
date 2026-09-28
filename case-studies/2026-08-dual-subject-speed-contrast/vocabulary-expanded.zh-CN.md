@@ -34,7 +34,7 @@
 | 16 | brief /briːf/ n. | 创作简报、任务说明。`the brief wanted the opposite` 指原创作要求恰好相反；此处不是形容词“短暂的”。 |
 | 17 | continuous /kənˈtɪnjuəs/ adj. | 连续不中断的。形容心海不断衔接下一动作；不直接说明画面是一镜到底，也不等于每个关节始终快速移动。 |
 | 18 | delayed /dɪˈleɪd/ adj. | 延迟的、晚发生的。修饰七七的反应或动作开始时间；与 `slow` 的执行速度慢不同，可以同时存在。 |
-| 19 | lag /læɡ/ n.; v. | 落后量；滞后。`with a lag` 强調两人动作进度之间存在差距；`lag behind`＝落在……之后。 |
+| 19 | lag /læɡ/ n.; v. | 落后量；滞后。`with a lag` 强调两人动作进度之间存在差距；`lag behind`＝落在……之后。 |
 | 20 | round /raʊnd/ v. | 数值语境中取整、近似化。作者用 `rounded them to` 比喻把细致要求压成粗略解释，并非声称模型真的执行了四舍五入算法。 |
 
 **原句回读：** `both bodies lock to the same tempo, the same downbeat, the same phrasing`。
@@ -46,7 +46,7 @@
 |---|---|---|
 | 21 | qualitatively /ˈkwɑːləteɪtɪvli/ adv. | 定性地，以性质而非数字描述。`describe tempo qualitatively` 如“很快、很慢”；相对的是可计数的数量关系，不是“质量很高地”。 |
 | 22 | explicit /ɪkˈsplɪsɪt/ adj. | 明说的、明确的。`explicit arithmetic anchor` 要求比例直接写出，不由模型从氛围词自行猜测。 |
-| 23 | arithmetic /əˈrɪθmətɪk/ adj.; /əˈrɪθmətɪk/ n. | 算术的；算术。这里修饰 anchor，说明参照是动作计数关系；不表示模型会因此拥有严格的计数保证。 |
+| 23 | arithmetic /ˌærɪθˈmetɪk/ adj.; /əˈrɪθmətɪk/ n. | 算术的；算术。形容词与名词的重音位置不同；这里说明 anchor 具有算术、动作计数性质，不表示模型会因此拥有严格的计数保证。 |
 | 24 | anchor /ˈæŋkər/ n.; v. | 锚；固定参照。这里是用于检查差异的 3:1 计数规则，与相机路径中的空间锚点不是同一个维度。 |
 | 25 | convert /kənˈvɜːrt/ v. | 转换。`convert A into B`＝把 A 改写成 B；本文是将审美意图转换成动作数约束，不是转换视频格式。 |
 | 26 | aesthetic /esˈθetɪk/ adj. | 审美的。`aesthetic tempo gap` 指观众应感到的速度反差，强调创作目的，而非一个现成测量指标。 |
@@ -105,3 +105,5 @@
 ## 校读边界
 
 README 中关于模型“不能把 3:1 变成相等”等句子属于作者的经验性论断。学习时应掌握其表达方式，但不能把自然语言约束理解为保证计数正确的执行器。`3 actions` 的动作边界仍需在实际检查中明确。本次只增补词汇与语言理解，不重新认定成片是否达到比例。
+
+**读音校对：** 第 23 项已分开标注 arithmetic 的形容词与名词重音，参照 [Merriam-Webster](https://www.merriam-webster.com/dictionary/arithmetic)。不能把名词的读音原样套到形容词条目。
