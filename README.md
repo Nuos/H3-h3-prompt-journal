@@ -4,9 +4,9 @@
 
 # 🎬 H3 Prompt Journal
 
-**MiniMax H3 视频/舞蹈提示词案例日记 —— 18 篇真实反推与实测，每篇附可直接粘贴的完整提示词。**
+**MiniMax H3 视频/舞蹈提示词案例日记 —— 22 篇真实反推与实测，每篇附可直接粘贴的完整提示词。**
 
-[![Cases](https://img.shields.io/badge/case_studies-24-blue)](./case-studies)
+[![Cases](https://img.shields.io/badge/case_studies-26-blue)](./case-studies)
 [![Platform](https://img.shields.io/badge/model-MiniMax_H3-red)](https://github.com/MiniMax-AI/MiniMax-H3)
 [![Results](https://img.shields.io/badge/🎬_成片演示-X_文章页-1DA1F2)](https://x.com/LoveUolanda/articles)
 
@@ -81,6 +81,8 @@ case-studies/YYYY-MM-short-name/
 | <img src="docs/images/018-leg-lift-contact-cut.jpg" width="160"> | [018 · Leg-Lift Contact-Cut Stocking, Six Looks](./case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/) | 抬腿触地即切袜·六形态：永久支撑腿 + 单一活动腿，"脚触地"这一物理事件=剪辑触发器（CONTACT=CUT）。AnimateDiff 渐变升级为利落硬切。🎬 成片见 [X 文章页](https://x.com/LoveUolanda/articles) |
 | — | [015 · Xiashan Veiled Solo (Twelve Segments)](./case-studies/2026-10-xiashan-veiled-solo-twelve-segment/) | 十二段面纱独舞：双图分权（图1服装/图2脸+背+纱）+ 链记法编舞 + 切点原因转场 + 醉酒式运镜（只有相机醉，人物永不醉）。🎬 成片见 [X 文章页](https://x.com/LoveUolanda/articles) |
 | <img src="docs/images/019-identity-only-half-body.jpg" width="160"> | [019 · Identity-Only Half-Body Dance (Six Segments)](./case-studies/2026-10-identity-only-half-body-dance-six-segment/) | Identity-only 双图分权：图1只锁脸、图2只锁全身外观+环境，"图1半身像感"降级为纯镜头语言，开场零姿势继承（六段都从舞谱第一拍起跳）。111 BPM 六段连续可爱舞蹈，Motion Cut 全部切在未完成动作中间，Hero Action 专属镜头。🎬 成片见 [X 文章页](https://x.com/LoveUolanda/articles) |
+| — | [022 · Classical Wuxia Dance (Thirteen Segments)](./case-studies/2026-10-classical-wuxia-dance-13-segment/) | 十三段真人古典武侠舞：每段 self-contained（同图 + 该段裁剪音频），节拍网格（90.5 BPM · 拍 0.663s / 小节 2.65s / 乐句 5.30s），段内 local 时间从 0 起算 + 音乐连续 hand-off + 参考图/武器状态硬保护（图中无剑则双手空），第 13 段纯器乐尾奏。附 20 条导演级方法论。🎬 成片见 [X 文章页](https://x.com/LoveUolanda/articles) |
+| — | [023 · Kanzaki Sunny-Beach Sword-Dance MV (Eighteen Segments)](./case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/) | 十八段真人海滩剑舞音乐 MV（230.034s · 139.5 BPM · 9 组 18 段）：图 1 人物+现场双锁（海滩不换景）；道具外观/状态双规则（Seg01–02 拔刀、Seg03–18 持刀+空鞘、全曲一把刀身一个鞘）；每段一镜到底 `[Shot 1]`、组间靠后期匹配剪辑；NO DEGREE LAW 物理机位、每段一个主运镜、景别服从当拍动作；纯表演式无对白无口型。附 11 章真人 MV 导演方法论 + 两次自检。🎬 成片见 [X 文章页](https://x.com/LoveUolanda/articles) |
 
 ### 摄影机语言工具箱 · 双系统标准
 
@@ -91,6 +93,7 @@ case-studies/YYYY-MM-short-name/
 | <img src="case-studies/2026-10-advanced-camera-combinations/cover.png" width="160"> | [Advanced Camera Movement Combinations](./case-studies/2026-10-advanced-camera-combinations/) | **物理运镜组合库（NO DEGREE VERSION）**：14 条 SEGMENT RULES + 13 词词库 + 10 组即用运镜组合（前随→侧移→越肩→回正 / 推进→遮镜→暗侧移→揭示 / 贴地滑移→起身 / Hero Lock→微推→触发响应…）。彻底取消度数语言：`ARC 40°` 淘汰，改为 START POSITION → PHYSICAL PATH → SUBJECT TRIGGER → END POSITION → FINAL FRAMING。 |
 | <img src="case-studies/2026-10-dance-motion-chain-library/cover.png" width="160"> | [Dance Motion Chain Library · 舞蹈动链 H3 库](./case-studies/2026-10-dance-motion-chain-library/) | **动作链标准件总库（Rev.1.0 全文镜像）**：A 宅舞 23 链 / B 抖舞 / C 古风 49 链 / D 多人 12 纪律 / E 运镜纪律 / G Hero 库 / H 13 支成品范本 / I 视角库 / J 写真 9 范本 / 拼舞模板——每条链带入态/出态与十要素描述，积木式拼舞；本仓库只读副本，正本在本地 git。 |
 | <img src="docs/images/020-motion-transfer.jpg" width="160"> | [020 · H3 Motion Transfer — Subject-First Reconstruction](./case-studies/2026-10-h3-motion-transfer/) | **动作迁移（图1人物×目标视频动作×音频时序）**：三参考严格分权（图1=人+世界，视频1首帧=镜头几何，视频1正文=动作机制，音频1=时序权威），SUBJECT-FIRST 不可逆初始化顺序 + 八项 FINAL VALIDATION 自检。⚠️ 硬约束：**单次迁移最长 8–9 秒**，长舞按乐句拆段。附案例成片与 ComfyUI 工作流要点。🎬 [成片](./case-studies/2026-10-h3-motion-transfer/result-video.mp4) |
+| <img src="docs/images/021-formation-lock.jpg" width="160"> | [021 · Four-Subject Formation Choreography (Fourteen Segments)](./case-studies/2026-10-four-subject-formation-choreography/) | 十四段四人群舞：逐字锚定块（Universal Visual Anchor）×14 次粘贴 + 动作态接力（OUTGOING HOOK→INCOMING STATE）+ 舞蹈化队形转换（脚先转/限象限/切镜代替拉远）。第 10 段完整英文提示词 + 14 段终版整合表。🎬 [SEG 10 成片](./case-studies/2026-10-four-subject-formation-choreography/assets/demo_segment10.mp4) |
 
 
 
