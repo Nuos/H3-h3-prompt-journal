@@ -1,0 +1,30 @@
+{
+  "verified_at_utc": "2026-11-05T13:30:02.031301+00:00",
+  "timezone_for_user_dates": "America/Los_Angeles",
+  "anthropics": {
+    "repository": "anthropics/skills",
+    "head": "ca45fc496a3436251f191354091d557da31c15b5",
+    "tree": "3b83fb7a7255ef97c3ce8657bd0a3a4d667bd7be"
+  },
+  "minimax": {
+    "repository": "MiniMax-AI/MiniMax-H3",
+    "head": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+    "tree": "2b8a0fd49aa7176ef9ae7e92811d06e301196462"
+  },
+  "agent_skills": {
+    "repository": "agentskills/agentskills",
+    "head": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "tree": "4887e8fa23c1fc0aaf43343b2016c182e1238c52",
+    "specification_blob_sha": "d9a2db099d905da8b879a5c6f996728073985279"
+  },
+  "anthropic_skill_creator": {
+    "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/skill-creator/SKILL.md",
+    "git_blob_sha": "65b3a402dbd09b8e83f9d637c6b553875189085c",
+    "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+    "bytes": 33168,
+    "local_path": "validation/m5/standards/anthropic-skill-creator.md",
+    "license_file": "docs/h3skill/_standards/anthropics-skill-creator-LICENSE.txt",
+    "purpose": "Directory, metadata, progressive disclosure and creation guidance; no new creative domain evidence."
+  },
+  "scope": "Branches and four immutable file blobs fetched this turn; equal to existing snapshots. No claim about future versions or Claude host trigger performance."
+}

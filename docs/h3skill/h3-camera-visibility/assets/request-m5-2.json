@@ -1,0 +1,244 @@
+{
+  "kind": "M5Request",
+  "contract_version": "1.0.0",
+  "request_id": "REQ-M5-2",
+  "target": "M5.2",
+  "work_id": "WORK-CAMERA-DEMO",
+  "base_version": 0,
+  "sources": {
+    "D-brief": {
+      "kind": "design_decision",
+      "locator": "synthetic:m5-contract-fixtures",
+      "version": "design-1",
+      "excerpt": "D 类合成设计夹具：普通道具交接、群舞全身广角、固定接触特写、揭示与水线观察；不作为 H3 生成效果证据。"
+    },
+    "D-action": {
+      "kind": "external_input",
+      "locator": "synthetic:compatible-action-context",
+      "version": "design-1",
+      "excerpt": "仅用于测试的外部兼容 ActionEvent 身份与 shot 关系，不要求运行 M4。"
+    }
+  },
+  "inputs": {
+    "framing_brief": "为五种 D 类合成观察任务建立framing摄影计划，保留未知，不声称已验证媒体。",
+    "viewpoint_context": {
+      "items": {
+        "VP-HANDOFF": {
+          "viewpoint_id": "VP-HANDOFF",
+          "shot_id": "SHOT-HANDOFF",
+          "viewing_task": {
+            "state": "known",
+            "value": "观察两人普通道具交接，手与道具始终可读",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "position": {
+            "state": "known",
+            "value": "平视侧前方",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "height": {
+            "state": "unknown",
+            "reason": "没有测量高度，不伪造数值或单位"
+          },
+          "distance": {
+            "state": "unknown",
+            "reason": "仅有观察关系，未给出物理距离"
+          },
+          "optical_axis": {
+            "state": "known",
+            "value": "朝向当前主要观察目标",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "roll": {
+            "state": "known",
+            "value": "保持画面竖直方向稳定",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        },
+        "VP-DANCE": {
+          "viewpoint_id": "VP-DANCE",
+          "shot_id": "SHOT-DANCE",
+          "viewing_task": {
+            "state": "known",
+            "value": "观察多人队形与完整脚步",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "position": {
+            "state": "known",
+            "value": "略高正前方",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "height": {
+            "state": "unknown",
+            "reason": "没有测量高度，不伪造数值或单位"
+          },
+          "distance": {
+            "state": "unknown",
+            "reason": "仅有观察关系，未给出物理距离"
+          },
+          "optical_axis": {
+            "state": "known",
+            "value": "朝向当前主要观察目标",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "roll": {
+            "state": "known",
+            "value": "保持画面竖直方向稳定",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        },
+        "VP-CONTACT": {
+          "viewpoint_id": "VP-CONTACT",
+          "shot_id": "SHOT-CONTACT",
+          "viewing_task": {
+            "state": "known",
+            "value": "观察手指与普通物体表面接触细节",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "position": {
+            "state": "known",
+            "value": "接触面斜上方",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "height": {
+            "state": "unknown",
+            "reason": "没有测量高度，不伪造数值或单位"
+          },
+          "distance": {
+            "state": "unknown",
+            "reason": "仅有观察关系，未给出物理距离"
+          },
+          "optical_axis": {
+            "state": "known",
+            "value": "朝向接触区域",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "roll": {
+            "state": "known",
+            "value": "保持画面竖直方向稳定",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        },
+        "VP-REVEAL": {
+          "viewpoint_id": "VP-REVEAL",
+          "shot_id": "SHOT-REVEAL",
+          "viewing_task": {
+            "state": "known",
+            "value": "动作完成后揭示物体结果与人物反应",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "position": {
+            "state": "known",
+            "value": "主体侧前方",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "height": {
+            "state": "unknown",
+            "reason": "没有测量高度，不伪造数值或单位"
+          },
+          "distance": {
+            "state": "unknown",
+            "reason": "仅有观察关系，未给出物理距离"
+          },
+          "optical_axis": {
+            "state": "known",
+            "value": "朝向当前主要观察目标",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "roll": {
+            "state": "known",
+            "value": "保持画面竖直方向稳定",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        },
+        "VP-WATERLINE": {
+          "viewpoint_id": "VP-WATERLINE",
+          "shot_id": "SHOT-WATERLINE",
+          "viewing_task": {
+            "state": "known",
+            "value": "沿水线连续观察并揭示远处环境",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "position": {
+            "state": "known",
+            "value": "水线稍上方",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "height": {
+            "state": "unknown",
+            "reason": "没有测量高度，不伪造数值或单位"
+          },
+          "distance": {
+            "state": "unknown",
+            "reason": "仅有观察关系，未给出物理距离"
+          },
+          "optical_axis": {
+            "state": "known",
+            "value": "朝向当前主要观察目标",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "roll": {
+            "state": "known",
+            "value": "保持画面竖直方向稳定",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        }
+      }
+    }
+  }
+}

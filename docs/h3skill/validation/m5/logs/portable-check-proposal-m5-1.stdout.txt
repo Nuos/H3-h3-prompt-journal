@@ -1,0 +1,148 @@
+{
+  "kind": "M5ToolResult",
+  "contract_version": "1.0.0",
+  "command": "check",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "optical_feasibility",
+      "actual_visibility",
+      "path_collision",
+      "media_observation",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/viewpoints/items/VP-HANDOFF/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/viewpoints/items/VP-HANDOFF/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/viewpoints/items/VP-DANCE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/viewpoints/items/VP-DANCE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/viewpoints/items/VP-CONTACT/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/viewpoints/items/VP-CONTACT/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/viewpoints/items/VP-REVEAL/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/viewpoints/items/VP-REVEAL/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/viewpoints/items/VP-WATERLINE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/viewpoints/items/VP-WATERLINE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    }
+  ],
+  "trace": {
+    "call_id": "m5-84be30489083442191b1811ed3fe6646",
+    "parent_module": "M5",
+    "started_at": "2026-11-05T13:50:43.530576+00:00",
+    "finished_at": "2026-11-05T13:50:43.533445+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "artifact": "b1638c4787f43b242c5b11df63e2279e531de351a461a48ffaadd22aa267a884",
+      "request": "94813a29d7f5c7159d58e40e3167ccacd846112dcd09d62e1452df01efa11b68"
+    },
+    "resources": {
+      "references/contracts.json": "cfdabea1eaad08f8fc4df293d9221670d527be5efd7a1084e25db3d23ef4dc3d",
+      "references/module-registry.json": "c4a5a07f53953cb18dde0fd174321bf73cc44bbb7aaebeb31b59654b3e93c3ec"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "REQ-M5-1"
+    ],
+    "input_versions": [
+      {
+        "request_id": "REQ-M5-1",
+        "target": "M5.1",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "REQ-M5-1": {
+        "D-brief": "design-1",
+        "D-action": "design-1"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  }
+}

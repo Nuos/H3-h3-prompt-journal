@@ -1,0 +1,25 @@
+{
+  "kind": "M5Request",
+  "contract_version": "1.0.0",
+  "request_id": "REQ-STANDALONE-1",
+  "target": "M5.1",
+  "work_id": "WORK-CAMERA-DEMO",
+  "base_version": 0,
+  "sources": {
+    "D-brief": {
+      "kind": "design_decision",
+      "locator": "synthetic:m5-contract-fixtures",
+      "version": "design-1",
+      "excerpt": "D 类合成设计夹具：普通道具交接、群舞全身广角、固定接触特写、揭示与水线观察；不作为 H3 生成效果证据。"
+    },
+    "D-action": {
+      "kind": "external_input",
+      "locator": "synthetic:compatible-action-context",
+      "version": "design-1",
+      "excerpt": "仅用于测试的外部兼容 ActionEvent 身份与 shot 关系，不要求运行 M4。"
+    }
+  },
+  "inputs": {
+    "viewpoint_brief": "独立处理一个普通道具交接观察任务；其他模块不需执行。"
+  }
+}

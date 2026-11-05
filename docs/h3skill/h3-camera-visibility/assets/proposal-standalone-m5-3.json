@@ -1,0 +1,91 @@
+{
+  "kind": "M5Proposal",
+  "contract_version": "1.0.0",
+  "proposal_id": "PROP-STANDALONE-3",
+  "module_id": "M5.3",
+  "source_request_id": "REQ-STANDALONE-3",
+  "work_id": "WORK-CAMERA-DEMO",
+  "base_version": 0,
+  "sources": {
+    "D-brief": {
+      "kind": "design_decision",
+      "locator": "synthetic:m5-contract-fixtures",
+      "version": "design-1",
+      "excerpt": "D 类合成设计夹具：普通道具交接、群舞全身广角、固定接触特写、揭示与水线观察；不作为 H3 生成效果证据。"
+    },
+    "D-action": {
+      "kind": "external_input",
+      "locator": "synthetic:compatible-action-context",
+      "version": "design-1",
+      "excerpt": "仅用于测试的外部兼容 ActionEvent 身份与 shot 关系，不要求运行 M4。"
+    }
+  },
+  "context": {
+    "focus_brief": "独立处理一个普通道具交接观察任务；其他模块不需执行。",
+    "framing_context": {
+      "owner": "external",
+      "source_id": "D-brief",
+      "source_version": "design-1",
+      "values": {
+        "framing_id": "FR-EXTERNAL",
+        "composition": "保持双手与道具可见"
+      }
+    }
+  },
+  "changes": {
+    "focus": {
+      "items": {
+        "FC-HANDOFF": {
+          "focus_id": "FC-HANDOFF",
+          "shot_id": "SHOT-HANDOFF",
+          "framing_ref": {
+            "kind": "external",
+            "id": "FR-EXTERNAL",
+            "shot_id": "SHOT-HANDOFF",
+            "source_id": "D-brief",
+            "source_version": "design-1"
+          },
+          "focus_mode": "rack",
+          "focus_target": {
+            "state": "known",
+            "value": "当前主要观察目标",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "depth_of_field": {
+            "state": "unknown",
+            "reason": "景深取决于尚未提供的光学与距离条件"
+          },
+          "clear_subjects": {
+            "state": "known",
+            "value": "观察两人普通道具交接，手与道具始终可读",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "focus_changes": {
+            "state": "known",
+            "value": "由手中道具转向接收者手部",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "optical_basis": {
+            "state": "unknown",
+            "reason": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围"
+          },
+          "focus_assessment": {
+            "state": "unverified",
+            "reason": "清晰目标已表达，实际景深与焦点表现尚未验证。"
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

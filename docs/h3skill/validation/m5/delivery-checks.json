@@ -1,0 +1,296 @@
+{
+  "kind": "M5DeliveryChecks",
+  "started_at": "2026-11-05T13:50:42.627726+00:00",
+  "finished_at": "2026-11-05T13:50:44.348615+00:00",
+  "python": "3.12.14",
+  "checks": [
+    {
+      "check": "anthropic-format",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/22d2b2ce8467/H3-h3-prompt-journal/docs/h3skill/_standards/anthropics-quick-validate.py",
+        "/workspace/scratch/22d2b2ce8467/H3-h3-prompt-journal/docs/h3skill/h3-camera-visibility"
+      ],
+      "cwd": "/workspace/scratch/22d2b2ce8467/H3-h3-prompt-journal/docs/h3skill",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "runtime_imports_are_standard_library",
+      "passed": true,
+      "imports": [
+        "__future__",
+        "argparse",
+        "copy",
+        "datetime",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "re",
+        "sys",
+        "uuid"
+      ],
+      "external_imports": []
+    },
+    {
+      "check": "portable-help",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "--help"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-route-request-m5",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "route",
+        "assets/request-m5.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-route-request-m5-1",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "route",
+        "assets/request-m5-1.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-route-request-m5-2",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "route",
+        "assets/request-m5-2.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-route-request-m5-3",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "route",
+        "assets/request-m5-3.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-route-request-m5-4",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "route",
+        "assets/request-m5-4.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-check-proposal-m5-1",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "check",
+        "assets/proposal-m5-1.json",
+        "--request",
+        "assets/request-m5-1.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-check-proposal-m5-2",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "check",
+        "assets/proposal-m5-2.json",
+        "--request",
+        "assets/request-m5-2.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-check-proposal-m5-3",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "check",
+        "assets/proposal-m5-3.json",
+        "--request",
+        "assets/request-m5-3.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-check-proposal-m5-4",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "check",
+        "assets/proposal-m5-4.json",
+        "--request",
+        "assets/request-m5-4.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-check-batch",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "check",
+        "assets/proposal-batch.json",
+        "--requests",
+        "assets/requests.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-check-empty-state",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "check",
+        "assets/state-empty.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-accept",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "accept",
+        "assets/state-empty.json",
+        "assets/proposal-batch.json",
+        "--requests",
+        "assets/requests.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "accepted_output_is_separate_state",
+      "passed": true
+    },
+    {
+      "check": "portable-check-accepted-state",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility/scripts/m5_contract.py",
+        "check",
+        "accepted-state.json"
+      ],
+      "cwd": "/tmp/m5-standalone-zzuqsx9j/h3-camera-visibility",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "acceptance_does_not_claim_overall_semantic_or_media_pass",
+      "passed": true,
+      "validation": {
+        "local_contract": "pass",
+        "overall": "unverified",
+        "unverified": [
+          "semantic_intent",
+          "source_authenticity",
+          "optical_feasibility",
+          "actual_visibility",
+          "path_collision",
+          "media_observation",
+          "generated_video_quality",
+          "global_G0_G4"
+        ]
+      }
+    }
+  ],
+  "passed": 18,
+  "total": 18,
+  "ok": true,
+  "file_sha256": {
+    "h3-camera-visibility/SKILL.md": "9e4107945ad10be6e78d572f3e09035541e7058ee302f981061a536217b27c7e",
+    "h3-camera-visibility/assets/fixture-manifest.json": "0b2ace2c735145d34a62b33be5afc7e364d89b246eae8187bafa95eb6430cc49",
+    "h3-camera-visibility/assets/proposal-batch.json": "6b2fd21f88d23294fd0b3d8a99fd25dbc9e56fc285708f16c11957297bf5cfb6",
+    "h3-camera-visibility/assets/proposal-m5-1.json": "6f5e0c31c83245654055d3d47e1d3f2a369176150af6ad259819444303de754d",
+    "h3-camera-visibility/assets/proposal-m5-2.json": "14e8776fb24100cb96c4dd147333151cd7b48b4bc14fb0a04ef95e642e6c9509",
+    "h3-camera-visibility/assets/proposal-m5-3.json": "063e1ec166a52305f8ac8ff42d3c05cead6ca73316e91f1f0179335c3088eecd",
+    "h3-camera-visibility/assets/proposal-m5-4.json": "6125d0f631f6f7b0729d9ebab641b655b2aee9616e3721c4bfece45f6005ba17",
+    "h3-camera-visibility/assets/proposal-standalone-m5-1.json": "55e6b9f160b99dac7df3fb59b2524c7e753851ae3e546e93cb34a322ac2ad72f",
+    "h3-camera-visibility/assets/proposal-standalone-m5-2.json": "3ab426c1dbcd04d5949395b7389813e0d3da6348a25b5dd91a9ccde67cab9b96",
+    "h3-camera-visibility/assets/proposal-standalone-m5-3.json": "d2195b5af920a9ff7f5de312a4cbf6d7b9f31e55f7ba73c9251c11c474a5f2f0",
+    "h3-camera-visibility/assets/proposal-standalone-m5-4.json": "332d9c247c8c1f961f6a51c00515bddf4d74f0c2075378a317edcf50a0d5fc29",
+    "h3-camera-visibility/assets/request-m5-1.json": "37e6b89ab45cb3005100c57e36cc4995db4e1b49ca2f4541714cc647cc359b7d",
+    "h3-camera-visibility/assets/request-m5-2.json": "bda436b1bb4219df637a0b91f26c6a7596dba7f610792b8e71e95be1e2a548d6",
+    "h3-camera-visibility/assets/request-m5-3.json": "fccf5ce8bffcc42f9aca61c6ff3f5cfa966cf2d17a63b1aac224642953f5741f",
+    "h3-camera-visibility/assets/request-m5-4.json": "d3e7ba792dd50089b10d0e1d61f04c447c053b9624a5623be19baa8bfea62fca",
+    "h3-camera-visibility/assets/request-m5.json": "2dd14fceca03326ffedab2f1587ca5cd04561b143c67aa38017eb4978ec7ae3a",
+    "h3-camera-visibility/assets/request-minimal-m5-2.json": "afa21bc47e8d45826bb9a7c86703af158189b3999735a58f1e085dec02c5960d",
+    "h3-camera-visibility/assets/request-standalone-m5-1.json": "da095ea669c941ba9d478adac41bbc6bfafd38d60c0ad38a99c107a4e4092f6b",
+    "h3-camera-visibility/assets/request-standalone-m5-2.json": "61ca99c4be05fa2068ba6ec11d6232895d247c76e477b4e4ca3c1aaabf22f281",
+    "h3-camera-visibility/assets/request-standalone-m5-3.json": "df0c461e5160262dc3688e3868fb6c2ecb19598cc2c4ab67adb768b17b0ab633",
+    "h3-camera-visibility/assets/request-standalone-m5-4.json": "877434784837bffab035a7e244c01527edd379f922c64b02fdd633e43d0e7abf",
+    "h3-camera-visibility/assets/requests.json": "40c27a0cc6ac3abc8dfccab44685f372575c477b71d61f707005535659586308",
+    "h3-camera-visibility/assets/state-empty.json": "e4fce09dea57514820a85f1d60d0998c3f8fdc07327a920f1d02925f94eb585d",
+    "h3-camera-visibility/references/audit-and-handoff.md": "5afbc116e3f3f5e20066aeb453643afe20f67d935775060e3d0ea7a35fbd4b49",
+    "h3-camera-visibility/references/case-evidence.md": "37558c7c30c2ca01c7284f972867c8f03bb0d439184df99ba6448666cea09403",
+    "h3-camera-visibility/references/case-index.json": "bb23f46a968dbf95de5bc8b4147dabacce3746c7ca02133f331e4ccd6f052d84",
+    "h3-camera-visibility/references/case-source-LICENSE.txt": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+    "h3-camera-visibility/references/contract-guide.md": "0a233321b596ff9bd5fd243b459f223ba9ffd63ac0d51096a3aab0815bcef5d8",
+    "h3-camera-visibility/references/contracts.json": "acc8c99b3683e9f28c24593d565019aa36dc9a19e375a8629556bb49a348442c",
+    "h3-camera-visibility/references/focus-and-depth.md": "425ea100d8dfe62d55821b475f793c52c3f9aa3e357867fbc05f7bf9e18c7fba",
+    "h3-camera-visibility/references/framing-and-visibility.md": "207269089edfd72d66deae6c2147f5b4814e6af1c10c57bc9f3f1043f70e39c7",
+    "h3-camera-visibility/references/h3-NOTICE.txt": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+    "h3-camera-visibility/references/h3-base-official.txt": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+    "h3-camera-visibility/references/h3-label-mapping.md": "d0ae592300929fb19ea3db58010dc97735be1c0ed0b86510c4096d01e3f03109",
+    "h3-camera-visibility/references/h3-protocol-source.json": "2a414d076b38dc83ce935303998c35764e02e908fd6f671786201ccf094c0946",
+    "h3-camera-visibility/references/h3-ref-official.txt": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+    "h3-camera-visibility/references/module-registry.json": "67fce089daf86f15efd7d41fbe715bb20c3505b02ca202effac233d4d8bac38f",
+    "h3-camera-visibility/references/movement-and-triggers.md": "0ac02aeb73bb0458ccb66af365fbb883a99e5a6200a1d6ead812020e56a47084",
+    "h3-camera-visibility/references/provenance-and-license.md": "db9c76628a2f04434c64fe060b9ba577b5d61303290d8c10ca42a0dd65b5fe1b",
+    "h3-camera-visibility/references/viewpoints-and-axis.md": "170b19e99e89c341fcd6e7f74149f3437e2e85b13635389aac14a3525b227b71",
+    "h3-camera-visibility/scripts/m5_contract.py": "bdbe09d7cdf7802df1dc8135313e9c6149b2f1ef81f04e4e92869fd81c1abbad"
+  },
+  "not_certified": [
+    "natural-language quality",
+    "source authenticity",
+    "optical feasibility",
+    "collision detection",
+    "camera visibility",
+    "actual timing",
+    "H3 inference",
+    "generated media",
+    "complete G0-G4 gates"
+  ]
+}

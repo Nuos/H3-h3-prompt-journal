@@ -1,0 +1,281 @@
+{
+  "kind": "M5ToolResult",
+  "contract_version": "1.0.0",
+  "command": "route",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "optical_feasibility",
+      "actual_visibility",
+      "path_collision",
+      "media_observation",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/viewpoint_context/items/VP-HANDOFF/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/viewpoint_context/items/VP-HANDOFF/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/viewpoint_context/items/VP-DANCE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/viewpoint_context/items/VP-DANCE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/viewpoint_context/items/VP-CONTACT/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/viewpoint_context/items/VP-CONTACT/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/viewpoint_context/items/VP-REVEAL/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/viewpoint_context/items/VP-REVEAL/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/viewpoint_context/items/VP-WATERLINE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/viewpoint_context/items/VP-WATERLINE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/framing_context/items/FR-HANDOFF/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/framing_context/items/FR-DANCE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/framing_context/items/FR-CONTACT/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/framing_context/items/FR-REVEAL/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/framing_context/items/FR-WATERLINE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/focus_context/items/FC-HANDOFF/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/focus_context/items/FC-HANDOFF/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/focus_context/items/FC-DANCE/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/focus_context/items/FC-CONTACT/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/focus_context/items/FC-CONTACT/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/focus_context/items/FC-REVEAL/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/focus_context/items/FC-REVEAL/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/focus_context/items/FC-WATERLINE/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/focus_context/items/FC-WATERLINE/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    }
+  ],
+  "trace": {
+    "call_id": "m5-c8a770432689420185a87b4e2dec4859",
+    "parent_module": "M5",
+    "started_at": "2026-11-05T13:50:43.450358+00:00",
+    "finished_at": "2026-11-05T13:50:43.454825+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "request": "ab0e9d82dc5c2f4088c7cc5d98f72bfbb7d3e2f8af7ed5d243f280d6f0e8293a"
+    },
+    "resources": {
+      "references/contracts.json": "cfdabea1eaad08f8fc4df293d9221670d527be5efd7a1084e25db3d23ef4dc3d",
+      "references/module-registry.json": "c4a5a07f53953cb18dde0fd174321bf73cc44bbb7aaebeb31b59654b3e93c3ec"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "REQ-M5-4"
+    ],
+    "input_versions": [
+      {
+        "request_id": "REQ-M5-4",
+        "target": "M5.4",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "REQ-M5-4": {
+        "D-brief": "design-1",
+        "D-action": "design-1"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  },
+  "routes": [
+    {
+      "module_id": "M5.4",
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/movement-and-triggers.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md"
+      ],
+      "write_scope": "/content/movements",
+      "return_to": "M5",
+      "minimum_inputs": [
+        "movement_brief",
+        "viewpoint_context"
+      ],
+      "repair_target": "M5.4"
+    }
+  ],
+  "route_status": "ready_with_unverified_inputs",
+  "invocation": "not_invoked"
+}

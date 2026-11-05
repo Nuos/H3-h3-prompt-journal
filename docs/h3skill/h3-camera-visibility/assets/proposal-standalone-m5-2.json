@@ -1,0 +1,107 @@
+{
+  "kind": "M5Proposal",
+  "contract_version": "1.0.0",
+  "proposal_id": "PROP-STANDALONE-2",
+  "module_id": "M5.2",
+  "source_request_id": "REQ-STANDALONE-2",
+  "work_id": "WORK-CAMERA-DEMO",
+  "base_version": 0,
+  "sources": {
+    "D-brief": {
+      "kind": "design_decision",
+      "locator": "synthetic:m5-contract-fixtures",
+      "version": "design-1",
+      "excerpt": "D 类合成设计夹具：普通道具交接、群舞全身广角、固定接触特写、揭示与水线观察；不作为 H3 生成效果证据。"
+    },
+    "D-action": {
+      "kind": "external_input",
+      "locator": "synthetic:compatible-action-context",
+      "version": "design-1",
+      "excerpt": "仅用于测试的外部兼容 ActionEvent 身份与 shot 关系，不要求运行 M4。"
+    }
+  },
+  "context": {
+    "framing_brief": "独立处理一个普通道具交接观察任务；其他模块不需执行。",
+    "viewpoint_context": {
+      "owner": "external",
+      "source_id": "D-brief",
+      "source_version": "design-1",
+      "values": {
+        "position": "侧前方",
+        "viewpoint_id": "VP-EXTERNAL",
+        "state": "external-business-state",
+        "source_refs": [
+          "opaque-business-key"
+        ]
+      }
+    }
+  },
+  "changes": {
+    "framing": {
+      "items": {
+        "FR-HANDOFF": {
+          "framing_id": "FR-HANDOFF",
+          "shot_id": "SHOT-HANDOFF",
+          "viewpoint_ref": {
+            "kind": "external",
+            "id": "VP-EXTERNAL",
+            "shot_id": "SHOT-HANDOFF",
+            "source_id": "D-brief",
+            "source_version": "design-1"
+          },
+          "shot_scale": {
+            "state": "known",
+            "value": "中景",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "field_of_view": {
+            "state": "unknown",
+            "reason": "没有镜头参数与实景尺度，视场范围尚不能量化"
+          },
+          "composition": {
+            "state": "known",
+            "value": "主要信息放在无遮挡的画面区域，保留任务需要的身体或物体边界",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "targets": [
+            {
+              "target_id": "TARGET-HANDOFF",
+              "description": "观察两人普通道具交接，手与道具始终可读",
+              "priority": "primary",
+              "action_event_ref": {
+                "kind": "external",
+                "id": "AE-HANDOFF",
+                "shot_id": "SHOT-HANDOFF",
+                "source_id": "D-action",
+                "source_version": "design-1"
+              },
+              "required_visibility": {
+                "state": "known",
+                "value": "在有关动作或观察阶段保持关键区域可读；实际遮挡待媒体审阅",
+                "source_refs": [
+                  "D-brief"
+                ]
+              },
+              "source_refs": [
+                "D-brief"
+              ]
+            }
+          ],
+          "visibility_assessment": {
+            "state": "unverified",
+            "reason": "这是取景要求；未进行镜头光学计算或真实画面观察。"
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

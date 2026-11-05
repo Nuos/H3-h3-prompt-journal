@@ -1,0 +1,1342 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Nuos/H3-h3-prompt-journal/docs/h3skill/h3-camera-visibility/references/contracts.json",
+  "title": "M5 CameraPlan offline contracts",
+  "description": "D engineering contract. Schema validity does not establish visibility, optical feasibility, media observation, or H3 output quality. Public fields are closed; explicitly marked external payloads are opaque.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/M5Request"
+    },
+    {
+      "$ref": "#/$defs/M5Proposal"
+    },
+    {
+      "$ref": "#/$defs/M5ProposalBatch"
+    },
+    {
+      "$ref": "#/$defs/M5State"
+    }
+  ],
+  "$defs": {
+    "Unknown": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "unknown"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "NotApplicable": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "not_applicable"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "KnownFact": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "known"
+        },
+        "value": {},
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "state",
+        "value",
+        "source_refs"
+      ],
+      "additionalProperties": false,
+      "description": "An asserted planning fact, not measured or generated-media verification. Its value is an opaque JSON payload."
+    },
+    "Fact": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/KnownFact"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Brief": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "user_requirement",
+            "approved_plan",
+            "case_text",
+            "external_input",
+            "media_observation",
+            "design_decision",
+            "official_document",
+            "hypothesis"
+          ]
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "version",
+        "excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "Sources": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      }
+    },
+    "ExternalContext": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5.1",
+            "M5.2",
+            "M5.3",
+            "M5.4",
+            "M8",
+            "external"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "Projection": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/(content|sources|issues)(/|$)"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "value": {}
+      },
+      "required": [
+        "path",
+        "source_version",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "Issue": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "owner": {
+          "enum": [
+            "M5.1",
+            "M5.2",
+            "M5.3",
+            "M5.4"
+          ]
+        },
+        "status": {
+          "enum": [
+            "open",
+            "resolved"
+          ]
+        },
+        "severity": {
+          "enum": [
+            "blocking",
+            "warning"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "resolution": {
+          "$ref": "#/$defs/KnownFact"
+        }
+      },
+      "required": [
+        "issue_id",
+        "owner",
+        "status",
+        "severity",
+        "message",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Resolution": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "issue_id",
+        "rationale",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "M5Request": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M5Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "target": {
+          "enum": [
+            "M5",
+            "M5.1",
+            "M5.2",
+            "M5.3",
+            "M5.4"
+          ]
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "request_id",
+        "target",
+        "sources",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "M5Proposal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M5Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "proposal_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "module_id": {
+          "enum": [
+            "M5.1",
+            "M5.2",
+            "M5.3",
+            "M5.4"
+          ]
+        },
+        "source_request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs"
+        },
+        "changes": {
+          "$ref": "#/$defs/Changes"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "minItems": 0
+        },
+        "resolutions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Resolution"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "sources",
+        "context",
+        "changes",
+        "issues",
+        "resolutions"
+      ],
+      "additionalProperties": false
+    },
+    "M5ProposalBatch": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M5ProposalBatch"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "batch_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/M5Proposal"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "batch_id",
+        "proposals"
+      ],
+      "additionalProperties": false
+    },
+    "Receipt": {
+      "type": "object",
+      "properties": {
+        "digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "module_id": {
+          "enum": [
+            "M5.1",
+            "M5.2",
+            "M5.3",
+            "M5.4"
+          ]
+        },
+        "accepted_version": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "digest",
+        "source_request_id",
+        "module_id",
+        "accepted_version"
+      ],
+      "additionalProperties": false
+    },
+    "Consumer": {
+      "type": "object",
+      "properties": {
+        "module_id": {
+          "enum": [
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5.1",
+            "M5.2",
+            "M5.3",
+            "M5.4",
+            "M6",
+            "M7",
+            "M8",
+            "M9",
+            "M10",
+            "M11",
+            "M12"
+          ]
+        },
+        "result_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_state_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^/(content|sources|issues|display)(/|$)"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "status": {
+          "enum": [
+            "current",
+            "stale"
+          ]
+        }
+      },
+      "required": [
+        "module_id",
+        "result_version",
+        "source_state_version",
+        "read_paths",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "M5State": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M5State"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "owner": {
+          "const": "M5"
+        },
+        "object_type": {
+          "const": "CameraPlan"
+        },
+        "status": {
+          "const": "draft"
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "content": {
+          "$ref": "#/$defs/Content"
+        },
+        "issues": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Issue"
+          }
+        },
+        "accepted_proposals": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Receipt"
+          }
+        },
+        "consumers": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Consumer"
+          }
+        },
+        "display": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "note": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "version",
+        "owner",
+        "object_type",
+        "status",
+        "sources",
+        "content",
+        "issues",
+        "accepted_proposals",
+        "consumers"
+      ],
+      "additionalProperties": false
+    },
+    "Unverified": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "unverified"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "InternalRef": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "internal"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        }
+      },
+      "required": [
+        "kind",
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "ExternalRef": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "external"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "shot_id",
+        "source_id",
+        "source_version"
+      ],
+      "additionalProperties": false
+    },
+    "PlanRef": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/InternalRef"
+        },
+        {
+          "$ref": "#/$defs/ExternalRef"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "ActionRef": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/ExternalRef"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        },
+        {
+          "$ref": "#/$defs/NotApplicable"
+        }
+      ]
+    },
+    "Viewpoint": {
+      "type": "object",
+      "properties": {
+        "viewpoint_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "viewing_task": {
+          "$ref": "#/$defs/Fact"
+        },
+        "position": {
+          "$ref": "#/$defs/Fact"
+        },
+        "height": {
+          "$ref": "#/$defs/Fact"
+        },
+        "distance": {
+          "$ref": "#/$defs/Fact"
+        },
+        "optical_axis": {
+          "$ref": "#/$defs/Fact"
+        },
+        "roll": {
+          "$ref": "#/$defs/Fact"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "viewpoint_id",
+        "shot_id",
+        "viewing_task",
+        "position",
+        "height",
+        "distance",
+        "optical_axis",
+        "roll",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "VisibilityTarget": {
+      "type": "object",
+      "properties": {
+        "target_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "priority": {
+          "enum": [
+            "primary",
+            "secondary"
+          ]
+        },
+        "action_event_ref": {
+          "$ref": "#/$defs/ActionRef"
+        },
+        "required_visibility": {
+          "$ref": "#/$defs/Fact"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "target_id",
+        "description",
+        "priority",
+        "action_event_ref",
+        "required_visibility",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Framing": {
+      "type": "object",
+      "properties": {
+        "framing_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "viewpoint_ref": {
+          "$ref": "#/$defs/PlanRef"
+        },
+        "shot_scale": {
+          "$ref": "#/$defs/Fact"
+        },
+        "field_of_view": {
+          "$ref": "#/$defs/Fact"
+        },
+        "composition": {
+          "$ref": "#/$defs/Fact"
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VisibilityTarget"
+          },
+          "minItems": 1
+        },
+        "visibility_assessment": {
+          "$ref": "#/$defs/Unverified"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "framing_id",
+        "shot_id",
+        "viewpoint_ref",
+        "shot_scale",
+        "field_of_view",
+        "composition",
+        "targets",
+        "visibility_assessment",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Focus": {
+      "type": "object",
+      "properties": {
+        "focus_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "framing_ref": {
+          "$ref": "#/$defs/PlanRef"
+        },
+        "focus_mode": {
+          "enum": [
+            "fixed",
+            "follow",
+            "rack",
+            "unknown"
+          ]
+        },
+        "focus_target": {
+          "$ref": "#/$defs/Fact"
+        },
+        "depth_of_field": {
+          "$ref": "#/$defs/Fact"
+        },
+        "clear_subjects": {
+          "$ref": "#/$defs/Fact"
+        },
+        "focus_changes": {
+          "$ref": "#/$defs/Fact"
+        },
+        "optical_basis": {
+          "$ref": "#/$defs/Fact"
+        },
+        "focus_assessment": {
+          "$ref": "#/$defs/Unverified"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "focus_id",
+        "shot_id",
+        "framing_ref",
+        "focus_mode",
+        "focus_target",
+        "depth_of_field",
+        "clear_subjects",
+        "focus_changes",
+        "optical_basis",
+        "focus_assessment",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Movement": {
+      "type": "object",
+      "properties": {
+        "camera_event_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "viewpoint_ref": {
+          "$ref": "#/$defs/PlanRef"
+        },
+        "framing_ref": {
+          "$ref": "#/$defs/PlanRef"
+        },
+        "focus_ref": {
+          "$ref": "#/$defs/PlanRef"
+        },
+        "action_event_ref": {
+          "$ref": "#/$defs/ActionRef"
+        },
+        "movement_mode": {
+          "enum": [
+            "fixed",
+            "moving",
+            "unknown"
+          ]
+        },
+        "coordination_strategy": {
+          "enum": [
+            "ahead",
+            "same_phase",
+            "lag",
+            "fixed",
+            "none",
+            "unknown"
+          ]
+        },
+        "position_change": {
+          "enum": [
+            "unchanged",
+            "changed",
+            "unknown"
+          ]
+        },
+        "optical_axis_change": {
+          "enum": [
+            "unchanged",
+            "changed",
+            "unknown"
+          ]
+        },
+        "roll_change": {
+          "enum": [
+            "unchanged",
+            "changed",
+            "unknown"
+          ]
+        },
+        "path_start": {
+          "$ref": "#/$defs/Fact"
+        },
+        "path_end": {
+          "$ref": "#/$defs/Fact"
+        },
+        "path_description": {
+          "$ref": "#/$defs/Fact"
+        },
+        "trigger": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/KnownFact"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            },
+            {
+              "$ref": "#/$defs/NotApplicable"
+            }
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "camera_event_id",
+        "shot_id",
+        "viewpoint_ref",
+        "framing_ref",
+        "focus_ref",
+        "action_event_ref",
+        "movement_mode",
+        "coordination_strategy",
+        "position_change",
+        "optical_axis_change",
+        "roll_change",
+        "path_start",
+        "path_end",
+        "path_description",
+        "trigger",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Viewpoints": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Viewpoint"
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "Framings": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Framing"
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "FocusPlans": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Focus"
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "Movements": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Movement"
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs": {
+      "type": "object",
+      "properties": {
+        "camera_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "viewpoint_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "framing_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "focus_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "movement_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "viewpoint_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Viewpoints"
+            },
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "framing_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Framings"
+            },
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "focus_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/FocusPlans"
+            },
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "movement_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Movements"
+            },
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "task_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "reference_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "space_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "action_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "state_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "readonly_projection": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Projection"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "Changes": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "viewpoints": {
+              "$ref": "#/$defs/Viewpoints"
+            }
+          },
+          "required": [
+            "viewpoints"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "framing": {
+              "$ref": "#/$defs/Framings"
+            }
+          },
+          "required": [
+            "framing"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "focus": {
+              "$ref": "#/$defs/FocusPlans"
+            }
+          },
+          "required": [
+            "focus"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "movements": {
+              "$ref": "#/$defs/Movements"
+            }
+          },
+          "required": [
+            "movements"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "Content": {
+      "type": "object",
+      "properties": {
+        "viewpoints": {
+          "$ref": "#/$defs/Viewpoints"
+        },
+        "framing": {
+          "$ref": "#/$defs/Framings"
+        },
+        "focus": {
+          "$ref": "#/$defs/FocusPlans"
+        },
+        "movements": {
+          "$ref": "#/$defs/Movements"
+        }
+      },
+      "required": [
+        "viewpoints",
+        "framing",
+        "focus",
+        "movements"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

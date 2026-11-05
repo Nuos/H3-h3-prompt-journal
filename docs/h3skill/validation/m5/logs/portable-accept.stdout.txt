@@ -1,0 +1,2542 @@
+{
+  "kind": "M5ToolResult",
+  "contract_version": "1.0.0",
+  "command": "accept",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "optical_feasibility",
+      "actual_visibility",
+      "path_collision",
+      "media_observation",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/0/changes/viewpoints/items/VP-HANDOFF/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/0/changes/viewpoints/items/VP-HANDOFF/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/0/changes/viewpoints/items/VP-DANCE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/0/changes/viewpoints/items/VP-DANCE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/0/changes/viewpoints/items/VP-CONTACT/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/0/changes/viewpoints/items/VP-CONTACT/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/0/changes/viewpoints/items/VP-REVEAL/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/0/changes/viewpoints/items/VP-REVEAL/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/0/changes/viewpoints/items/VP-WATERLINE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/0/changes/viewpoints/items/VP-WATERLINE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/context/viewpoint_context/items/VP-HANDOFF/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/context/viewpoint_context/items/VP-HANDOFF/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/context/viewpoint_context/items/VP-DANCE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/context/viewpoint_context/items/VP-DANCE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/context/viewpoint_context/items/VP-CONTACT/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/context/viewpoint_context/items/VP-CONTACT/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/context/viewpoint_context/items/VP-REVEAL/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/context/viewpoint_context/items/VP-REVEAL/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/context/viewpoint_context/items/VP-WATERLINE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/context/viewpoint_context/items/VP-WATERLINE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/changes/framing/items/FR-HANDOFF/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/changes/framing/items/FR-DANCE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/changes/framing/items/FR-CONTACT/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/changes/framing/items/FR-REVEAL/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/1/changes/framing/items/FR-WATERLINE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-HANDOFF/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-HANDOFF/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-DANCE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-DANCE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-CONTACT/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-CONTACT/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-REVEAL/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-REVEAL/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-WATERLINE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-WATERLINE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/1/changes/framing/items/FR-HANDOFF/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/1/changes/framing/items/FR-DANCE/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/1/changes/framing/items/FR-CONTACT/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/1/changes/framing/items/FR-REVEAL/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/1/changes/framing/items/FR-WATERLINE/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/context/framing_context/items/FR-HANDOFF/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/context/framing_context/items/FR-DANCE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/context/framing_context/items/FR-CONTACT/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/context/framing_context/items/FR-REVEAL/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/context/framing_context/items/FR-WATERLINE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/changes/focus/items/FC-HANDOFF/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/changes/focus/items/FC-HANDOFF/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/changes/focus/items/FC-DANCE/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/changes/focus/items/FC-CONTACT/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/changes/focus/items/FC-CONTACT/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/changes/focus/items/FC-REVEAL/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/changes/focus/items/FC-REVEAL/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/changes/focus/items/FC-WATERLINE/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/2/changes/focus/items/FC-WATERLINE/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/framing_context/items/FR-HANDOFF/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/framing_context/items/FR-DANCE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/framing_context/items/FR-CONTACT/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/framing_context/items/FR-REVEAL/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/framing_context/items/FR-WATERLINE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/batch/proposals/2/changes/focus/items/FC-HANDOFF/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/batch/proposals/2/changes/focus/items/FC-DANCE/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/batch/proposals/2/changes/focus/items/FC-CONTACT/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/batch/proposals/2/changes/focus/items/FC-REVEAL/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/batch/proposals/2/changes/focus/items/FC-WATERLINE/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "reference_context_unknown",
+      "path": "/batch/proposals/2/changes/framing/items/FR-HANDOFF/viewpoint_ref",
+      "message": "Internal reference cannot be checked without viewpoints",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/2/changes/framing/items/FR-HANDOFF/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "reference_context_unknown",
+      "path": "/batch/proposals/2/changes/framing/items/FR-DANCE/viewpoint_ref",
+      "message": "Internal reference cannot be checked without viewpoints",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/2/changes/framing/items/FR-DANCE/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "reference_context_unknown",
+      "path": "/batch/proposals/2/changes/framing/items/FR-CONTACT/viewpoint_ref",
+      "message": "Internal reference cannot be checked without viewpoints",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/2/changes/framing/items/FR-CONTACT/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "reference_context_unknown",
+      "path": "/batch/proposals/2/changes/framing/items/FR-REVEAL/viewpoint_ref",
+      "message": "Internal reference cannot be checked without viewpoints",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/2/changes/framing/items/FR-REVEAL/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "reference_context_unknown",
+      "path": "/batch/proposals/2/changes/framing/items/FR-WATERLINE/viewpoint_ref",
+      "message": "Internal reference cannot be checked without viewpoints",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/2/changes/framing/items/FR-WATERLINE/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/viewpoint_context/items/VP-HANDOFF/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/viewpoint_context/items/VP-HANDOFF/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/viewpoint_context/items/VP-DANCE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/viewpoint_context/items/VP-DANCE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/viewpoint_context/items/VP-CONTACT/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/viewpoint_context/items/VP-CONTACT/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/viewpoint_context/items/VP-REVEAL/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/viewpoint_context/items/VP-REVEAL/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/viewpoint_context/items/VP-WATERLINE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/viewpoint_context/items/VP-WATERLINE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/framing_context/items/FR-HANDOFF/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/framing_context/items/FR-DANCE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/framing_context/items/FR-CONTACT/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/framing_context/items/FR-REVEAL/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/framing_context/items/FR-WATERLINE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/focus_context/items/FC-HANDOFF/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/focus_context/items/FC-HANDOFF/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/focus_context/items/FC-DANCE/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/focus_context/items/FC-CONTACT/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/focus_context/items/FC-CONTACT/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/focus_context/items/FC-REVEAL/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/focus_context/items/FC-REVEAL/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/focus_context/items/FC-WATERLINE/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/batch/proposals/3/context/focus_context/items/FC-WATERLINE/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-HANDOFF/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-HANDOFF/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-DANCE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-DANCE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-CONTACT/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-CONTACT/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-REVEAL/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-REVEAL/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-WATERLINE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/viewpoint_context/items/VP-WATERLINE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/framing_context/items/FR-HANDOFF/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/framing_context/items/FR-DANCE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/framing_context/items/FR-CONTACT/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/framing_context/items/FR-REVEAL/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/framing_context/items/FR-WATERLINE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/focus_context/items/FC-HANDOFF/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/focus_context/items/FC-HANDOFF/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/focus_context/items/FC-DANCE/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/focus_context/items/FC-CONTACT/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/focus_context/items/FC-CONTACT/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/focus_context/items/FC-REVEAL/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/focus_context/items/FC-REVEAL/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/focus_context/items/FC-WATERLINE/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/focus_context/items/FC-WATERLINE/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.4"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/batch/proposals/3/changes/focus/items/FC-HANDOFF/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/batch/proposals/3/changes/focus/items/FC-DANCE/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/batch/proposals/3/changes/focus/items/FC-CONTACT/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/batch/proposals/3/changes/focus/items/FC-REVEAL/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/batch/proposals/3/changes/focus/items/FC-WATERLINE/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/3/changes/framing/items/FR-HANDOFF/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/3/changes/framing/items/FR-DANCE/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/3/changes/framing/items/FR-CONTACT/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/3/changes/framing/items/FR-REVEAL/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/batch/proposals/3/changes/framing/items/FR-WATERLINE/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/viewpoints/items/VP-HANDOFF/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/viewpoints/items/VP-HANDOFF/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/viewpoints/items/VP-DANCE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/viewpoints/items/VP-DANCE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/viewpoints/items/VP-CONTACT/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/viewpoints/items/VP-CONTACT/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/viewpoints/items/VP-REVEAL/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/viewpoints/items/VP-REVEAL/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/viewpoints/items/VP-WATERLINE/height",
+      "message": "没有测量高度，不伪造数值或单位",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/viewpoints/items/VP-WATERLINE/distance",
+      "message": "仅有观察关系，未给出物理距离",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/framing/items/FR-HANDOFF/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/framing/items/FR-DANCE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/framing/items/FR-CONTACT/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/framing/items/FR-REVEAL/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/framing/items/FR-WATERLINE/field_of_view",
+      "message": "没有镜头参数与实景尺度，视场范围尚不能量化",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/focus/items/FC-HANDOFF/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/focus/items/FC-HANDOFF/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/focus/items/FC-DANCE/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/focus/items/FC-CONTACT/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/focus/items/FC-CONTACT/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/focus/items/FC-REVEAL/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/focus/items/FC-REVEAL/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/focus/items/FC-WATERLINE/depth_of_field",
+      "message": "景深取决于尚未提供的光学与距离条件",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/content/focus/items/FC-WATERLINE/optical_basis",
+      "message": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/content/focus/items/FC-HANDOFF/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/content/focus/items/FC-DANCE/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/content/focus/items/FC-CONTACT/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/content/focus/items/FC-REVEAL/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "focus_unverified",
+      "path": "/content/focus/items/FC-WATERLINE/focus_assessment",
+      "message": "清晰目标已表达，实际景深与焦点表现尚未验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.3"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/content/framing/items/FR-HANDOFF/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/content/framing/items/FR-DANCE/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/content/framing/items/FR-CONTACT/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/content/framing/items/FR-REVEAL/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    },
+    {
+      "code": "visibility_unverified",
+      "path": "/content/framing/items/FR-WATERLINE/visibility_assessment",
+      "message": "这是取景要求；未进行镜头光学计算或真实画面观察。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5.2"
+    }
+  ],
+  "trace": {
+    "call_id": "m5-0cfaec82fdce49bd9b31d76fad191fb5",
+    "parent_module": "M5",
+    "started_at": "2026-11-05T13:50:44.184130+00:00",
+    "finished_at": "2026-11-05T13:50:44.226404+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "state": "041bb9e802380e5e0d69e2397e10976ef3359043beaba7e622f60e5d49659d93",
+      "batch": "2492747f4ec7e1847b28fea7ca8270cafd3c15131040f2300783c9efccdcf473",
+      "requests": "42290d0eb04cd1134293f6e8f314e3e827d52d5fe568d530255903cfb67445e9"
+    },
+    "resources": {
+      "references/contracts.json": "cfdabea1eaad08f8fc4df293d9221670d527be5efd7a1084e25db3d23ef4dc3d",
+      "references/module-registry.json": "c4a5a07f53953cb18dde0fd174321bf73cc44bbb7aaebeb31b59654b3e93c3ec"
+    },
+    "side_effects": "none",
+    "operation_id": "BATCH-M5",
+    "revision": 1,
+    "request_ids": [
+      "REQ-M5-1",
+      "REQ-M5-2",
+      "REQ-M5-3",
+      "REQ-M5-4"
+    ],
+    "input_versions": [
+      {
+        "request_id": "REQ-M5-1",
+        "target": "M5.1",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      },
+      {
+        "request_id": "REQ-M5-2",
+        "target": "M5.2",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      },
+      {
+        "request_id": "REQ-M5-3",
+        "target": "M5.3",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      },
+      {
+        "request_id": "REQ-M5-4",
+        "target": "M5.4",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "REQ-M5-1": {
+        "D-brief": "design-1",
+        "D-action": "design-1"
+      },
+      "REQ-M5-2": {
+        "D-brief": "design-1",
+        "D-action": "design-1"
+      },
+      "REQ-M5-3": {
+        "D-brief": "design-1",
+        "D-action": "design-1"
+      },
+      "REQ-M5-4": {
+        "D-brief": "design-1",
+        "D-action": "design-1"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "accepted_draft",
+    "output_status": "pass",
+    "error_codes": []
+  },
+  "state": {
+    "kind": "M5State",
+    "contract_version": "1.0.0",
+    "work_id": "WORK-CAMERA-DEMO",
+    "version": 1,
+    "owner": "M5",
+    "object_type": "CameraPlan",
+    "status": "draft",
+    "sources": {
+      "D-brief": {
+        "kind": "design_decision",
+        "locator": "synthetic:m5-contract-fixtures",
+        "version": "design-1",
+        "excerpt": "D 类合成设计夹具：普通道具交接、群舞全身广角、固定接触特写、揭示与水线观察；不作为 H3 生成效果证据。"
+      },
+      "D-action": {
+        "kind": "external_input",
+        "locator": "synthetic:compatible-action-context",
+        "version": "design-1",
+        "excerpt": "仅用于测试的外部兼容 ActionEvent 身份与 shot 关系，不要求运行 M4。"
+      }
+    },
+    "content": {
+      "viewpoints": {
+        "items": {
+          "VP-HANDOFF": {
+            "viewpoint_id": "VP-HANDOFF",
+            "shot_id": "SHOT-HANDOFF",
+            "viewing_task": {
+              "state": "known",
+              "value": "观察两人普通道具交接，手与道具始终可读",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "position": {
+              "state": "known",
+              "value": "平视侧前方",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "height": {
+              "state": "unknown",
+              "reason": "没有测量高度，不伪造数值或单位"
+            },
+            "distance": {
+              "state": "unknown",
+              "reason": "仅有观察关系，未给出物理距离"
+            },
+            "optical_axis": {
+              "state": "known",
+              "value": "朝向当前主要观察目标",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "roll": {
+              "state": "known",
+              "value": "保持画面竖直方向稳定",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "VP-DANCE": {
+            "viewpoint_id": "VP-DANCE",
+            "shot_id": "SHOT-DANCE",
+            "viewing_task": {
+              "state": "known",
+              "value": "观察多人队形与完整脚步",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "position": {
+              "state": "known",
+              "value": "略高正前方",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "height": {
+              "state": "unknown",
+              "reason": "没有测量高度，不伪造数值或单位"
+            },
+            "distance": {
+              "state": "unknown",
+              "reason": "仅有观察关系，未给出物理距离"
+            },
+            "optical_axis": {
+              "state": "known",
+              "value": "朝向当前主要观察目标",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "roll": {
+              "state": "known",
+              "value": "保持画面竖直方向稳定",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "VP-CONTACT": {
+            "viewpoint_id": "VP-CONTACT",
+            "shot_id": "SHOT-CONTACT",
+            "viewing_task": {
+              "state": "known",
+              "value": "观察手指与普通物体表面接触细节",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "position": {
+              "state": "known",
+              "value": "接触面斜上方",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "height": {
+              "state": "unknown",
+              "reason": "没有测量高度，不伪造数值或单位"
+            },
+            "distance": {
+              "state": "unknown",
+              "reason": "仅有观察关系，未给出物理距离"
+            },
+            "optical_axis": {
+              "state": "known",
+              "value": "朝向接触区域",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "roll": {
+              "state": "known",
+              "value": "保持画面竖直方向稳定",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "VP-REVEAL": {
+            "viewpoint_id": "VP-REVEAL",
+            "shot_id": "SHOT-REVEAL",
+            "viewing_task": {
+              "state": "known",
+              "value": "动作完成后揭示物体结果与人物反应",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "position": {
+              "state": "known",
+              "value": "主体侧前方",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "height": {
+              "state": "unknown",
+              "reason": "没有测量高度，不伪造数值或单位"
+            },
+            "distance": {
+              "state": "unknown",
+              "reason": "仅有观察关系，未给出物理距离"
+            },
+            "optical_axis": {
+              "state": "known",
+              "value": "朝向当前主要观察目标",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "roll": {
+              "state": "known",
+              "value": "保持画面竖直方向稳定",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "VP-WATERLINE": {
+            "viewpoint_id": "VP-WATERLINE",
+            "shot_id": "SHOT-WATERLINE",
+            "viewing_task": {
+              "state": "known",
+              "value": "沿水线连续观察并揭示远处环境",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "position": {
+              "state": "known",
+              "value": "水线稍上方",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "height": {
+              "state": "unknown",
+              "reason": "没有测量高度，不伪造数值或单位"
+            },
+            "distance": {
+              "state": "unknown",
+              "reason": "仅有观察关系，未给出物理距离"
+            },
+            "optical_axis": {
+              "state": "known",
+              "value": "朝向当前主要观察目标",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "roll": {
+              "state": "known",
+              "value": "保持画面竖直方向稳定",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          }
+        }
+      },
+      "framing": {
+        "items": {
+          "FR-HANDOFF": {
+            "framing_id": "FR-HANDOFF",
+            "shot_id": "SHOT-HANDOFF",
+            "viewpoint_ref": {
+              "kind": "internal",
+              "id": "VP-HANDOFF"
+            },
+            "shot_scale": {
+              "state": "known",
+              "value": "中景",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "field_of_view": {
+              "state": "unknown",
+              "reason": "没有镜头参数与实景尺度，视场范围尚不能量化"
+            },
+            "composition": {
+              "state": "known",
+              "value": "主要信息放在无遮挡的画面区域，保留任务需要的身体或物体边界",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "targets": [
+              {
+                "target_id": "TARGET-HANDOFF",
+                "description": "观察两人普通道具交接，手与道具始终可读",
+                "priority": "primary",
+                "action_event_ref": {
+                  "kind": "external",
+                  "id": "AE-HANDOFF",
+                  "shot_id": "SHOT-HANDOFF",
+                  "source_id": "D-action",
+                  "source_version": "design-1"
+                },
+                "required_visibility": {
+                  "state": "known",
+                  "value": "在有关动作或观察阶段保持关键区域可读；实际遮挡待媒体审阅",
+                  "source_refs": [
+                    "D-brief"
+                  ]
+                },
+                "source_refs": [
+                  "D-brief"
+                ]
+              }
+            ],
+            "visibility_assessment": {
+              "state": "unverified",
+              "reason": "这是取景要求；未进行镜头光学计算或真实画面观察。"
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "FR-DANCE": {
+            "framing_id": "FR-DANCE",
+            "shot_id": "SHOT-DANCE",
+            "viewpoint_ref": {
+              "kind": "internal",
+              "id": "VP-DANCE"
+            },
+            "shot_scale": {
+              "state": "known",
+              "value": "全景广角",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "field_of_view": {
+              "state": "unknown",
+              "reason": "没有镜头参数与实景尺度，视场范围尚不能量化"
+            },
+            "composition": {
+              "state": "known",
+              "value": "主要信息放在无遮挡的画面区域，保留任务需要的身体或物体边界",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "targets": [
+              {
+                "target_id": "TARGET-DANCE",
+                "description": "观察多人队形与完整脚步",
+                "priority": "primary",
+                "action_event_ref": {
+                  "kind": "external",
+                  "id": "AE-DANCE",
+                  "shot_id": "SHOT-DANCE",
+                  "source_id": "D-action",
+                  "source_version": "design-1"
+                },
+                "required_visibility": {
+                  "state": "known",
+                  "value": "在有关动作或观察阶段保持关键区域可读；实际遮挡待媒体审阅",
+                  "source_refs": [
+                    "D-brief"
+                  ]
+                },
+                "source_refs": [
+                  "D-brief"
+                ]
+              }
+            ],
+            "visibility_assessment": {
+              "state": "unverified",
+              "reason": "这是取景要求；未进行镜头光学计算或真实画面观察。"
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "FR-CONTACT": {
+            "framing_id": "FR-CONTACT",
+            "shot_id": "SHOT-CONTACT",
+            "viewpoint_ref": {
+              "kind": "internal",
+              "id": "VP-CONTACT"
+            },
+            "shot_scale": {
+              "state": "known",
+              "value": "接触特写",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "field_of_view": {
+              "state": "unknown",
+              "reason": "没有镜头参数与实景尺度，视场范围尚不能量化"
+            },
+            "composition": {
+              "state": "known",
+              "value": "主要信息放在无遮挡的画面区域，保留任务需要的身体或物体边界",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "targets": [
+              {
+                "target_id": "TARGET-CONTACT",
+                "description": "观察手指与普通物体表面接触细节",
+                "priority": "primary",
+                "action_event_ref": {
+                  "kind": "external",
+                  "id": "AE-CONTACT",
+                  "shot_id": "SHOT-CONTACT",
+                  "source_id": "D-action",
+                  "source_version": "design-1"
+                },
+                "required_visibility": {
+                  "state": "known",
+                  "value": "在有关动作或观察阶段保持关键区域可读；实际遮挡待媒体审阅",
+                  "source_refs": [
+                    "D-brief"
+                  ]
+                },
+                "source_refs": [
+                  "D-brief"
+                ]
+              }
+            ],
+            "visibility_assessment": {
+              "state": "unverified",
+              "reason": "这是取景要求；未进行镜头光学计算或真实画面观察。"
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "FR-REVEAL": {
+            "framing_id": "FR-REVEAL",
+            "shot_id": "SHOT-REVEAL",
+            "viewpoint_ref": {
+              "kind": "internal",
+              "id": "VP-REVEAL"
+            },
+            "shot_scale": {
+              "state": "known",
+              "value": "中近景",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "field_of_view": {
+              "state": "unknown",
+              "reason": "没有镜头参数与实景尺度，视场范围尚不能量化"
+            },
+            "composition": {
+              "state": "known",
+              "value": "主要信息放在无遮挡的画面区域，保留任务需要的身体或物体边界",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "targets": [
+              {
+                "target_id": "TARGET-REVEAL",
+                "description": "动作完成后揭示物体结果与人物反应",
+                "priority": "primary",
+                "action_event_ref": {
+                  "kind": "external",
+                  "id": "AE-REVEAL",
+                  "shot_id": "SHOT-REVEAL",
+                  "source_id": "D-action",
+                  "source_version": "design-1"
+                },
+                "required_visibility": {
+                  "state": "known",
+                  "value": "在有关动作或观察阶段保持关键区域可读；实际遮挡待媒体审阅",
+                  "source_refs": [
+                    "D-brief"
+                  ]
+                },
+                "source_refs": [
+                  "D-brief"
+                ]
+              }
+            ],
+            "visibility_assessment": {
+              "state": "unverified",
+              "reason": "这是取景要求；未进行镜头光学计算或真实画面观察。"
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "FR-WATERLINE": {
+            "framing_id": "FR-WATERLINE",
+            "shot_id": "SHOT-WATERLINE",
+            "viewpoint_ref": {
+              "kind": "internal",
+              "id": "VP-WATERLINE"
+            },
+            "shot_scale": {
+              "state": "known",
+              "value": "中远景",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "field_of_view": {
+              "state": "unknown",
+              "reason": "没有镜头参数与实景尺度，视场范围尚不能量化"
+            },
+            "composition": {
+              "state": "known",
+              "value": "主要信息放在无遮挡的画面区域，保留任务需要的身体或物体边界",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "targets": [
+              {
+                "target_id": "TARGET-WATERLINE",
+                "description": "沿水线连续观察并揭示远处环境",
+                "priority": "primary",
+                "action_event_ref": {
+                  "state": "not_applicable",
+                  "reason": "该摄影事件由观察任务启动，无对应主体动作事件"
+                },
+                "required_visibility": {
+                  "state": "known",
+                  "value": "在有关动作或观察阶段保持关键区域可读；实际遮挡待媒体审阅",
+                  "source_refs": [
+                    "D-brief"
+                  ]
+                },
+                "source_refs": [
+                  "D-brief"
+                ]
+              }
+            ],
+            "visibility_assessment": {
+              "state": "unverified",
+              "reason": "这是取景要求；未进行镜头光学计算或真实画面观察。"
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          }
+        }
+      },
+      "focus": {
+        "items": {
+          "FC-HANDOFF": {
+            "focus_id": "FC-HANDOFF",
+            "shot_id": "SHOT-HANDOFF",
+            "framing_ref": {
+              "kind": "internal",
+              "id": "FR-HANDOFF"
+            },
+            "focus_mode": "rack",
+            "focus_target": {
+              "state": "known",
+              "value": "当前主要观察目标",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "depth_of_field": {
+              "state": "unknown",
+              "reason": "景深取决于尚未提供的光学与距离条件"
+            },
+            "clear_subjects": {
+              "state": "known",
+              "value": "观察两人普通道具交接，手与道具始终可读",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "focus_changes": {
+              "state": "known",
+              "value": "由手中道具转向接收者手部",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "optical_basis": {
+              "state": "unknown",
+              "reason": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围"
+            },
+            "focus_assessment": {
+              "state": "unverified",
+              "reason": "清晰目标已表达，实际景深与焦点表现尚未验证。"
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "FC-DANCE": {
+            "focus_id": "FC-DANCE",
+            "shot_id": "SHOT-DANCE",
+            "framing_ref": {
+              "kind": "internal",
+              "id": "FR-DANCE"
+            },
+            "focus_mode": "fixed",
+            "focus_target": {
+              "state": "known",
+              "value": "当前主要观察目标",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "depth_of_field": {
+              "state": "known",
+              "value": "群舞所需的多个深度层次均提出清晰需求",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "clear_subjects": {
+              "state": "known",
+              "value": "前后排演员及脚步",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "focus_changes": {
+              "state": "known",
+              "value": "保持焦点策略，不作未经要求的焦点切换",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "optical_basis": {
+              "state": "unknown",
+              "reason": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围"
+            },
+            "focus_assessment": {
+              "state": "unverified",
+              "reason": "清晰目标已表达，实际景深与焦点表现尚未验证。"
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "FC-CONTACT": {
+            "focus_id": "FC-CONTACT",
+            "shot_id": "SHOT-CONTACT",
+            "framing_ref": {
+              "kind": "internal",
+              "id": "FR-CONTACT"
+            },
+            "focus_mode": "fixed",
+            "focus_target": {
+              "state": "known",
+              "value": "接触面",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "depth_of_field": {
+              "state": "unknown",
+              "reason": "景深取决于尚未提供的光学与距离条件"
+            },
+            "clear_subjects": {
+              "state": "known",
+              "value": "观察手指与普通物体表面接触细节",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "focus_changes": {
+              "state": "known",
+              "value": "保持焦点策略，不作未经要求的焦点切换",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "optical_basis": {
+              "state": "unknown",
+              "reason": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围"
+            },
+            "focus_assessment": {
+              "state": "unverified",
+              "reason": "清晰目标已表达，实际景深与焦点表现尚未验证。"
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "FC-REVEAL": {
+            "focus_id": "FC-REVEAL",
+            "shot_id": "SHOT-REVEAL",
+            "framing_ref": {
+              "kind": "internal",
+              "id": "FR-REVEAL"
+            },
+            "focus_mode": "rack",
+            "focus_target": {
+              "state": "known",
+              "value": "当前主要观察目标",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "depth_of_field": {
+              "state": "unknown",
+              "reason": "景深取决于尚未提供的光学与距离条件"
+            },
+            "clear_subjects": {
+              "state": "known",
+              "value": "动作完成后揭示物体结果与人物反应",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "focus_changes": {
+              "state": "known",
+              "value": "由动作主体转向结果区域",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "optical_basis": {
+              "state": "unknown",
+              "reason": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围"
+            },
+            "focus_assessment": {
+              "state": "unverified",
+              "reason": "清晰目标已表达，实际景深与焦点表现尚未验证。"
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "FC-WATERLINE": {
+            "focus_id": "FC-WATERLINE",
+            "shot_id": "SHOT-WATERLINE",
+            "framing_ref": {
+              "kind": "internal",
+              "id": "FR-WATERLINE"
+            },
+            "focus_mode": "follow",
+            "focus_target": {
+              "state": "known",
+              "value": "当前主要观察目标",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "depth_of_field": {
+              "state": "unknown",
+              "reason": "景深取决于尚未提供的光学与距离条件"
+            },
+            "clear_subjects": {
+              "state": "known",
+              "value": "沿水线连续观察并揭示远处环境",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "focus_changes": {
+              "state": "known",
+              "value": "保持焦点策略，不作未经要求的焦点切换",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "optical_basis": {
+              "state": "unknown",
+              "reason": "未提供焦距、光圈和对焦距离，不能验证实际清晰范围"
+            },
+            "focus_assessment": {
+              "state": "unverified",
+              "reason": "清晰目标已表达，实际景深与焦点表现尚未验证。"
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          }
+        }
+      },
+      "movements": {
+        "items": {
+          "CE-HANDOFF": {
+            "camera_event_id": "CE-HANDOFF",
+            "shot_id": "SHOT-HANDOFF",
+            "viewpoint_ref": {
+              "kind": "internal",
+              "id": "VP-HANDOFF"
+            },
+            "framing_ref": {
+              "kind": "internal",
+              "id": "FR-HANDOFF"
+            },
+            "focus_ref": {
+              "kind": "internal",
+              "id": "FC-HANDOFF"
+            },
+            "action_event_ref": {
+              "kind": "external",
+              "id": "AE-HANDOFF",
+              "shot_id": "SHOT-HANDOFF",
+              "source_id": "D-action",
+              "source_version": "design-1"
+            },
+            "movement_mode": "moving",
+            "coordination_strategy": "ahead",
+            "position_change": "changed",
+            "optical_axis_change": "changed",
+            "roll_change": "unchanged",
+            "path_start": {
+              "state": "known",
+              "value": "平视侧前方",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "path_end": {
+              "state": "known",
+              "value": "满足观察目标的结束机位",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "path_description": {
+              "state": "known",
+              "value": "提前观察接收者与接触区域",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "trigger": {
+              "state": "known",
+              "value": "根据所声明的动作关系启动；绝对排时交 M7",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "CE-DANCE": {
+            "camera_event_id": "CE-DANCE",
+            "shot_id": "SHOT-DANCE",
+            "viewpoint_ref": {
+              "kind": "internal",
+              "id": "VP-DANCE"
+            },
+            "framing_ref": {
+              "kind": "internal",
+              "id": "FR-DANCE"
+            },
+            "focus_ref": {
+              "kind": "internal",
+              "id": "FC-DANCE"
+            },
+            "action_event_ref": {
+              "kind": "external",
+              "id": "AE-DANCE",
+              "shot_id": "SHOT-DANCE",
+              "source_id": "D-action",
+              "source_version": "design-1"
+            },
+            "movement_mode": "moving",
+            "coordination_strategy": "same_phase",
+            "position_change": "changed",
+            "optical_axis_change": "changed",
+            "roll_change": "unchanged",
+            "path_start": {
+              "state": "known",
+              "value": "略高正前方",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "path_end": {
+              "state": "known",
+              "value": "满足观察目标的结束机位",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "path_description": {
+              "state": "known",
+              "value": "随队形变化缓慢后移，保持完整脚步",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "trigger": {
+              "state": "known",
+              "value": "根据所声明的动作关系启动；绝对排时交 M7",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "CE-CONTACT": {
+            "camera_event_id": "CE-CONTACT",
+            "shot_id": "SHOT-CONTACT",
+            "viewpoint_ref": {
+              "kind": "internal",
+              "id": "VP-CONTACT"
+            },
+            "framing_ref": {
+              "kind": "internal",
+              "id": "FR-CONTACT"
+            },
+            "focus_ref": {
+              "kind": "internal",
+              "id": "FC-CONTACT"
+            },
+            "action_event_ref": {
+              "kind": "external",
+              "id": "AE-CONTACT",
+              "shot_id": "SHOT-CONTACT",
+              "source_id": "D-action",
+              "source_version": "design-1"
+            },
+            "movement_mode": "fixed",
+            "coordination_strategy": "fixed",
+            "position_change": "unchanged",
+            "optical_axis_change": "unchanged",
+            "roll_change": "unchanged",
+            "path_start": {
+              "state": "known",
+              "value": "接触面斜上方",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "path_end": {
+              "state": "known",
+              "value": "接触面斜上方",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "path_description": {
+              "state": "known",
+              "value": "保持同一机位和光轴，只由主体完成接触",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "trigger": {
+              "state": "not_applicable",
+              "reason": "固定观察，无摄影运动触发"
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "CE-REVEAL": {
+            "camera_event_id": "CE-REVEAL",
+            "shot_id": "SHOT-REVEAL",
+            "viewpoint_ref": {
+              "kind": "internal",
+              "id": "VP-REVEAL"
+            },
+            "framing_ref": {
+              "kind": "internal",
+              "id": "FR-REVEAL"
+            },
+            "focus_ref": {
+              "kind": "internal",
+              "id": "FC-REVEAL"
+            },
+            "action_event_ref": {
+              "kind": "external",
+              "id": "AE-REVEAL",
+              "shot_id": "SHOT-REVEAL",
+              "source_id": "D-action",
+              "source_version": "design-1"
+            },
+            "movement_mode": "moving",
+            "coordination_strategy": "lag",
+            "position_change": "changed",
+            "optical_axis_change": "changed",
+            "roll_change": "unchanged",
+            "path_start": {
+              "state": "known",
+              "value": "主体侧前方",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "path_end": {
+              "state": "known",
+              "value": "满足观察目标的结束机位",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "path_description": {
+              "state": "known",
+              "value": "等动作关系允许后再转向结果区域，绝对时刻交 M7",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "trigger": {
+              "state": "known",
+              "value": "根据所声明的动作关系启动；绝对排时交 M7",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "CE-WATERLINE": {
+            "camera_event_id": "CE-WATERLINE",
+            "shot_id": "SHOT-WATERLINE",
+            "viewpoint_ref": {
+              "kind": "internal",
+              "id": "VP-WATERLINE"
+            },
+            "framing_ref": {
+              "kind": "internal",
+              "id": "FR-WATERLINE"
+            },
+            "focus_ref": {
+              "kind": "internal",
+              "id": "FC-WATERLINE"
+            },
+            "action_event_ref": {
+              "state": "not_applicable",
+              "reason": "该摄影事件由观察任务启动，无对应主体动作事件"
+            },
+            "movement_mode": "moving",
+            "coordination_strategy": "none",
+            "position_change": "changed",
+            "optical_axis_change": "changed",
+            "roll_change": "unchanged",
+            "path_start": {
+              "state": "known",
+              "value": "水线稍上方",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "path_end": {
+              "state": "known",
+              "value": "满足观察目标的结束机位",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "path_description": {
+              "state": "known",
+              "value": "因观察任务连续前进，不绑定主体动作触发",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "trigger": {
+              "state": "known",
+              "value": "任务开始条件：开始沿水线观察并揭示环境",
+              "source_refs": [
+                "D-brief"
+              ]
+            },
+            "source_refs": [
+              "D-brief"
+            ]
+          }
+        }
+      }
+    },
+    "issues": {},
+    "accepted_proposals": {
+      "PROP-M5-1": {
+        "digest": "b1638c4787f43b242c5b11df63e2279e531de351a461a48ffaadd22aa267a884",
+        "source_request_id": "REQ-M5-1",
+        "module_id": "M5.1",
+        "accepted_version": 1
+      },
+      "PROP-M5-2": {
+        "digest": "c459419f39000b8f78c2bb653884dbe367172b217a5720068bec084520288440",
+        "source_request_id": "REQ-M5-2",
+        "module_id": "M5.2",
+        "accepted_version": 1
+      },
+      "PROP-M5-3": {
+        "digest": "e768157d44abc61ce2677440200b7e0140069cc937931e14511b6a1efa9946c7",
+        "source_request_id": "REQ-M5-3",
+        "module_id": "M5.3",
+        "accepted_version": 1
+      },
+      "PROP-M5-4": {
+        "digest": "a21a73e4e23aec15e5a80df837dcdebe6befeafd507a2071804a4838de059aaf",
+        "source_request_id": "REQ-M5-4",
+        "module_id": "M5.4",
+        "accepted_version": 1
+      }
+    },
+    "consumers": {}
+  },
+  "acceptance": "accepted_draft",
+  "impact": {
+    "changed_paths": [
+      "/content/focus/items/FC-CONTACT",
+      "/content/focus/items/FC-DANCE",
+      "/content/focus/items/FC-HANDOFF",
+      "/content/focus/items/FC-REVEAL",
+      "/content/focus/items/FC-WATERLINE",
+      "/content/framing/items/FR-CONTACT",
+      "/content/framing/items/FR-DANCE",
+      "/content/framing/items/FR-HANDOFF",
+      "/content/framing/items/FR-REVEAL",
+      "/content/framing/items/FR-WATERLINE",
+      "/content/movements/items/CE-CONTACT",
+      "/content/movements/items/CE-DANCE",
+      "/content/movements/items/CE-HANDOFF",
+      "/content/movements/items/CE-REVEAL",
+      "/content/movements/items/CE-WATERLINE",
+      "/content/viewpoints/items/VP-CONTACT",
+      "/content/viewpoints/items/VP-DANCE",
+      "/content/viewpoints/items/VP-HANDOFF",
+      "/content/viewpoints/items/VP-REVEAL",
+      "/content/viewpoints/items/VP-WATERLINE",
+      "/sources/D-action",
+      "/sources/D-brief"
+    ],
+    "stale_consumers": {},
+    "scope": "declared read-path intersections only; hidden dependencies unverified"
+  }
+}

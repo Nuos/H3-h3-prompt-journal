@@ -1,0 +1,27 @@
+{
+  "kind": "M5State",
+  "contract_version": "1.0.0",
+  "work_id": "WORK-CAMERA-DEMO",
+  "version": 0,
+  "owner": "M5",
+  "object_type": "CameraPlan",
+  "status": "draft",
+  "sources": {},
+  "content": {
+    "viewpoints": {
+      "items": {}
+    },
+    "framing": {
+      "items": {}
+    },
+    "focus": {
+      "items": {}
+    },
+    "movements": {
+      "items": {}
+    }
+  },
+  "issues": {},
+  "accepted_proposals": {},
+  "consumers": {}
+}

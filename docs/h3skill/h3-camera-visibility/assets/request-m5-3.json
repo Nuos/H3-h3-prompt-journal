@@ -1,0 +1,311 @@
+{
+  "kind": "M5Request",
+  "contract_version": "1.0.0",
+  "request_id": "REQ-M5-3",
+  "target": "M5.3",
+  "work_id": "WORK-CAMERA-DEMO",
+  "base_version": 0,
+  "sources": {
+    "D-brief": {
+      "kind": "design_decision",
+      "locator": "synthetic:m5-contract-fixtures",
+      "version": "design-1",
+      "excerpt": "D 类合成设计夹具：普通道具交接、群舞全身广角、固定接触特写、揭示与水线观察；不作为 H3 生成效果证据。"
+    },
+    "D-action": {
+      "kind": "external_input",
+      "locator": "synthetic:compatible-action-context",
+      "version": "design-1",
+      "excerpt": "仅用于测试的外部兼容 ActionEvent 身份与 shot 关系，不要求运行 M4。"
+    }
+  },
+  "inputs": {
+    "focus_brief": "为五种 D 类合成观察任务建立focus摄影计划，保留未知，不声称已验证媒体。",
+    "framing_context": {
+      "items": {
+        "FR-HANDOFF": {
+          "framing_id": "FR-HANDOFF",
+          "shot_id": "SHOT-HANDOFF",
+          "viewpoint_ref": {
+            "kind": "internal",
+            "id": "VP-HANDOFF"
+          },
+          "shot_scale": {
+            "state": "known",
+            "value": "中景",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "field_of_view": {
+            "state": "unknown",
+            "reason": "没有镜头参数与实景尺度，视场范围尚不能量化"
+          },
+          "composition": {
+            "state": "known",
+            "value": "主要信息放在无遮挡的画面区域，保留任务需要的身体或物体边界",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "targets": [
+            {
+              "target_id": "TARGET-HANDOFF",
+              "description": "观察两人普通道具交接，手与道具始终可读",
+              "priority": "primary",
+              "action_event_ref": {
+                "kind": "external",
+                "id": "AE-HANDOFF",
+                "shot_id": "SHOT-HANDOFF",
+                "source_id": "D-action",
+                "source_version": "design-1"
+              },
+              "required_visibility": {
+                "state": "known",
+                "value": "在有关动作或观察阶段保持关键区域可读；实际遮挡待媒体审阅",
+                "source_refs": [
+                  "D-brief"
+                ]
+              },
+              "source_refs": [
+                "D-brief"
+              ]
+            }
+          ],
+          "visibility_assessment": {
+            "state": "unverified",
+            "reason": "这是取景要求；未进行镜头光学计算或真实画面观察。"
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        },
+        "FR-DANCE": {
+          "framing_id": "FR-DANCE",
+          "shot_id": "SHOT-DANCE",
+          "viewpoint_ref": {
+            "kind": "internal",
+            "id": "VP-DANCE"
+          },
+          "shot_scale": {
+            "state": "known",
+            "value": "全景广角",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "field_of_view": {
+            "state": "unknown",
+            "reason": "没有镜头参数与实景尺度，视场范围尚不能量化"
+          },
+          "composition": {
+            "state": "known",
+            "value": "主要信息放在无遮挡的画面区域，保留任务需要的身体或物体边界",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "targets": [
+            {
+              "target_id": "TARGET-DANCE",
+              "description": "观察多人队形与完整脚步",
+              "priority": "primary",
+              "action_event_ref": {
+                "kind": "external",
+                "id": "AE-DANCE",
+                "shot_id": "SHOT-DANCE",
+                "source_id": "D-action",
+                "source_version": "design-1"
+              },
+              "required_visibility": {
+                "state": "known",
+                "value": "在有关动作或观察阶段保持关键区域可读；实际遮挡待媒体审阅",
+                "source_refs": [
+                  "D-brief"
+                ]
+              },
+              "source_refs": [
+                "D-brief"
+              ]
+            }
+          ],
+          "visibility_assessment": {
+            "state": "unverified",
+            "reason": "这是取景要求；未进行镜头光学计算或真实画面观察。"
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        },
+        "FR-CONTACT": {
+          "framing_id": "FR-CONTACT",
+          "shot_id": "SHOT-CONTACT",
+          "viewpoint_ref": {
+            "kind": "internal",
+            "id": "VP-CONTACT"
+          },
+          "shot_scale": {
+            "state": "known",
+            "value": "接触特写",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "field_of_view": {
+            "state": "unknown",
+            "reason": "没有镜头参数与实景尺度，视场范围尚不能量化"
+          },
+          "composition": {
+            "state": "known",
+            "value": "主要信息放在无遮挡的画面区域，保留任务需要的身体或物体边界",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "targets": [
+            {
+              "target_id": "TARGET-CONTACT",
+              "description": "观察手指与普通物体表面接触细节",
+              "priority": "primary",
+              "action_event_ref": {
+                "kind": "external",
+                "id": "AE-CONTACT",
+                "shot_id": "SHOT-CONTACT",
+                "source_id": "D-action",
+                "source_version": "design-1"
+              },
+              "required_visibility": {
+                "state": "known",
+                "value": "在有关动作或观察阶段保持关键区域可读；实际遮挡待媒体审阅",
+                "source_refs": [
+                  "D-brief"
+                ]
+              },
+              "source_refs": [
+                "D-brief"
+              ]
+            }
+          ],
+          "visibility_assessment": {
+            "state": "unverified",
+            "reason": "这是取景要求；未进行镜头光学计算或真实画面观察。"
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        },
+        "FR-REVEAL": {
+          "framing_id": "FR-REVEAL",
+          "shot_id": "SHOT-REVEAL",
+          "viewpoint_ref": {
+            "kind": "internal",
+            "id": "VP-REVEAL"
+          },
+          "shot_scale": {
+            "state": "known",
+            "value": "中近景",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "field_of_view": {
+            "state": "unknown",
+            "reason": "没有镜头参数与实景尺度，视场范围尚不能量化"
+          },
+          "composition": {
+            "state": "known",
+            "value": "主要信息放在无遮挡的画面区域，保留任务需要的身体或物体边界",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "targets": [
+            {
+              "target_id": "TARGET-REVEAL",
+              "description": "动作完成后揭示物体结果与人物反应",
+              "priority": "primary",
+              "action_event_ref": {
+                "kind": "external",
+                "id": "AE-REVEAL",
+                "shot_id": "SHOT-REVEAL",
+                "source_id": "D-action",
+                "source_version": "design-1"
+              },
+              "required_visibility": {
+                "state": "known",
+                "value": "在有关动作或观察阶段保持关键区域可读；实际遮挡待媒体审阅",
+                "source_refs": [
+                  "D-brief"
+                ]
+              },
+              "source_refs": [
+                "D-brief"
+              ]
+            }
+          ],
+          "visibility_assessment": {
+            "state": "unverified",
+            "reason": "这是取景要求；未进行镜头光学计算或真实画面观察。"
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        },
+        "FR-WATERLINE": {
+          "framing_id": "FR-WATERLINE",
+          "shot_id": "SHOT-WATERLINE",
+          "viewpoint_ref": {
+            "kind": "internal",
+            "id": "VP-WATERLINE"
+          },
+          "shot_scale": {
+            "state": "known",
+            "value": "中远景",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "field_of_view": {
+            "state": "unknown",
+            "reason": "没有镜头参数与实景尺度，视场范围尚不能量化"
+          },
+          "composition": {
+            "state": "known",
+            "value": "主要信息放在无遮挡的画面区域，保留任务需要的身体或物体边界",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "targets": [
+            {
+              "target_id": "TARGET-WATERLINE",
+              "description": "沿水线连续观察并揭示远处环境",
+              "priority": "primary",
+              "action_event_ref": {
+                "state": "not_applicable",
+                "reason": "该摄影事件由观察任务启动，无对应主体动作事件"
+              },
+              "required_visibility": {
+                "state": "known",
+                "value": "在有关动作或观察阶段保持关键区域可读；实际遮挡待媒体审阅",
+                "source_refs": [
+                  "D-brief"
+                ]
+              },
+              "source_refs": [
+                "D-brief"
+              ]
+            }
+          ],
+          "visibility_assessment": {
+            "state": "unverified",
+            "reason": "这是取景要求；未进行镜头光学计算或真实画面观察。"
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        }
+      }
+    }
+  }
+}

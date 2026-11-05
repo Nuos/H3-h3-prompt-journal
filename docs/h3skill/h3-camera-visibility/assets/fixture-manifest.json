@@ -1,0 +1,20 @@
+{
+  "classification": "D design fixtures",
+  "not_generation_evidence": true,
+  "scenarios": [
+    "ordinary prop handoff with focus transition and ahead relation",
+    "group dance wide coverage with same-phase relation",
+    "fixed contact detail with fixed focus",
+    "result reveal with lag relation",
+    "task-triggered waterline observation without ActionEvent binding"
+  ],
+  "purposes": [
+    "four independent child calls",
+    "atomic CameraPlan composition",
+    "source and context fidelity",
+    "fixed camera versus subject action",
+    "unknown optical and visibility evidence"
+  ],
+  "all_expected_overall_status": "unverified",
+  "source_boundary": "Derived design tasks within the repository case-study camera topics; these JSON values are synthetic, not a transcript or observed result."
+}

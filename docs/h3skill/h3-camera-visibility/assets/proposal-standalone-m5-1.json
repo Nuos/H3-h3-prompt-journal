@@ -1,0 +1,77 @@
+{
+  "kind": "M5Proposal",
+  "contract_version": "1.0.0",
+  "proposal_id": "PROP-STANDALONE-1",
+  "module_id": "M5.1",
+  "source_request_id": "REQ-STANDALONE-1",
+  "work_id": "WORK-CAMERA-DEMO",
+  "base_version": 0,
+  "sources": {
+    "D-brief": {
+      "kind": "design_decision",
+      "locator": "synthetic:m5-contract-fixtures",
+      "version": "design-1",
+      "excerpt": "D 类合成设计夹具：普通道具交接、群舞全身广角、固定接触特写、揭示与水线观察；不作为 H3 生成效果证据。"
+    },
+    "D-action": {
+      "kind": "external_input",
+      "locator": "synthetic:compatible-action-context",
+      "version": "design-1",
+      "excerpt": "仅用于测试的外部兼容 ActionEvent 身份与 shot 关系，不要求运行 M4。"
+    }
+  },
+  "context": {
+    "viewpoint_brief": "独立处理一个普通道具交接观察任务；其他模块不需执行。"
+  },
+  "changes": {
+    "viewpoints": {
+      "items": {
+        "VP-HANDOFF": {
+          "viewpoint_id": "VP-HANDOFF",
+          "shot_id": "SHOT-HANDOFF",
+          "viewing_task": {
+            "state": "known",
+            "value": "观察两人普通道具交接，手与道具始终可读",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "position": {
+            "state": "known",
+            "value": "平视侧前方",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "height": {
+            "state": "unknown",
+            "reason": "没有测量高度，不伪造数值或单位"
+          },
+          "distance": {
+            "state": "unknown",
+            "reason": "仅有观察关系，未给出物理距离"
+          },
+          "optical_axis": {
+            "state": "known",
+            "value": "朝向当前主要观察目标",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "roll": {
+            "state": "known",
+            "value": "保持画面竖直方向稳定",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

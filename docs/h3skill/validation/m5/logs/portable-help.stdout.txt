@@ -1,0 +1,17 @@
+usage: m5_contract.py [-h] {route,check,accept,impact} ...
+
+Portable M5 contract checker. Python 3.10+, standard library, no network.
+Checks explicit camera contracts and ID/shot/ownership relations. It does not
+solve optics or paths, inspect media, write prompts, or certify H3
+generations.
+
+positional arguments:
+  {route,check,accept,impact}
+    route               Return callable module routes; do not invoke agents
+    check               Check a public contract artifact
+    accept              Atomically return a new draft state; original requests
+                        required
+    impact              Compare changes with declared consumer read paths
+
+options:
+  -h, --help            show this help message and exit

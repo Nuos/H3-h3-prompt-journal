@@ -1,0 +1,115 @@
+{
+  "kind": "M5Proposal",
+  "contract_version": "1.0.0",
+  "proposal_id": "PROP-STANDALONE-4",
+  "module_id": "M5.4",
+  "source_request_id": "REQ-STANDALONE-4",
+  "work_id": "WORK-CAMERA-DEMO",
+  "base_version": 0,
+  "sources": {
+    "D-brief": {
+      "kind": "design_decision",
+      "locator": "synthetic:m5-contract-fixtures",
+      "version": "design-1",
+      "excerpt": "D 类合成设计夹具：普通道具交接、群舞全身广角、固定接触特写、揭示与水线观察；不作为 H3 生成效果证据。"
+    },
+    "D-action": {
+      "kind": "external_input",
+      "locator": "synthetic:compatible-action-context",
+      "version": "design-1",
+      "excerpt": "仅用于测试的外部兼容 ActionEvent 身份与 shot 关系，不要求运行 M4。"
+    }
+  },
+  "context": {
+    "movement_brief": "独立处理一个普通道具交接观察任务；其他模块不需执行。",
+    "viewpoint_context": {
+      "owner": "external",
+      "source_id": "D-brief",
+      "source_version": "design-1",
+      "values": {
+        "position": "侧前方",
+        "viewpoint_id": "VP-EXTERNAL",
+        "state": "external-business-state",
+        "source_refs": [
+          "opaque-business-key"
+        ]
+      }
+    }
+  },
+  "changes": {
+    "movements": {
+      "items": {
+        "CE-HANDOFF": {
+          "camera_event_id": "CE-HANDOFF",
+          "shot_id": "SHOT-HANDOFF",
+          "viewpoint_ref": {
+            "kind": "external",
+            "id": "VP-EXTERNAL",
+            "shot_id": "SHOT-HANDOFF",
+            "source_id": "D-brief",
+            "source_version": "design-1"
+          },
+          "framing_ref": {
+            "kind": "external",
+            "id": "FR-EXTERNAL",
+            "shot_id": "SHOT-HANDOFF",
+            "source_id": "D-brief",
+            "source_version": "design-1"
+          },
+          "focus_ref": {
+            "kind": "external",
+            "id": "FC-EXTERNAL",
+            "shot_id": "SHOT-HANDOFF",
+            "source_id": "D-brief",
+            "source_version": "design-1"
+          },
+          "action_event_ref": {
+            "kind": "external",
+            "id": "AE-HANDOFF",
+            "shot_id": "SHOT-HANDOFF",
+            "source_id": "D-action",
+            "source_version": "design-1"
+          },
+          "movement_mode": "moving",
+          "coordination_strategy": "ahead",
+          "position_change": "changed",
+          "optical_axis_change": "changed",
+          "roll_change": "unchanged",
+          "path_start": {
+            "state": "known",
+            "value": "平视侧前方",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "path_end": {
+            "state": "known",
+            "value": "满足观察目标的结束机位",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "path_description": {
+            "state": "known",
+            "value": "提前观察接收者与接触区域",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "trigger": {
+            "state": "known",
+            "value": "根据所声明的动作关系启动；绝对排时交 M7",
+            "source_refs": [
+              "D-brief"
+            ]
+          },
+          "source_refs": [
+            "D-brief"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

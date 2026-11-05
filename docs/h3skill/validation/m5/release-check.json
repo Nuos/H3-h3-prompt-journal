@@ -1,0 +1,184 @@
+{
+  "kind": "M5ReleaseVerification",
+  "repository_base": "aa4ae291fa8afa0a62fa96ffde26ca25a8db8352",
+  "checks": [
+    {
+      "check": "required_release_scopes_and_documents_exist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "minimal_name_description_frontmatter",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry_below_recommended_500_lines",
+      "passed": true,
+      "detail": 91
+    },
+    {
+      "check": "only_declared_runtime_roots",
+      "passed": true,
+      "detail": [
+        "SKILL.md",
+        "assets",
+        "references",
+        "scripts"
+      ]
+    },
+    {
+      "check": "runtime_has_no_symlink_dependencies",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "runtime_links_exist",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "no_sibling_runtime_links",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "every_reference_routed_from_entry",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "json_and_python_parse",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "parent_and_four_public_children",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "registered_minimum_inputs_match_runtime",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all_five_nodes_register_all_eighteen_architecture_principles",
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "check": "registered_resources_available",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "frozen_plan_and_controls_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "h3-work-intent_byte_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "h3-asset-reference_byte_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "h3-scene-blocking_byte_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "h3-action-performance_byte_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "only_authorized_m5_release_paths_changed",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "case_text_hashes_match_sources",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "case_inventory_covers_current_text_corpus",
+      "passed": true,
+      "detail": {
+        "files": 98,
+        "cases": 29
+      }
+    },
+    {
+      "check": "immutable_official_h3-base-official.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "immutable_official_h3-ref-official.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "official_standard_snapshots_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "current_anthropic_creator_snapshot_matches_record",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "recorded_delivery_checks_pass_and_match_runtime",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "long_reference_documents_have_navigation",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "recorded_m5_tests_match_tested_inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "human_readable_review_record_present",
+      "passed": true,
+      "detail": "Presence only; this check does not certify the review conclusions."
+    },
+    {
+      "check": "actual_agent_trial_and_independent_review_records_present",
+      "passed": true,
+      "detail": "Record presence only; manual review evaluates the outputs and their stated limits."
+    },
+    {
+      "check": "release_manifest_matches_exact_deliverables",
+      "passed": true,
+      "detail": {
+        "files": 85
+      }
+    }
+  ],
+  "passed": 31,
+  "total": 31,
+  "ok": true,
+  "scope": "Structure, source integrity, frozen baseline, change scope and release inventory only.",
+  "not_certified": [
+    "camera semantic correctness",
+    "optical feasibility and collision detection",
+    "actual visibility",
+    "M7 timing",
+    "H3 inference",
+    "generated media",
+    "G2-G4 full gates"
+  ]
+}

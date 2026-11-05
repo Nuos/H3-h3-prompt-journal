@@ -1,0 +1,1027 @@
+{
+  "registry_version": "1.0.0",
+  "route_version": "1.0.0",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "parent": "M5",
+  "package": "h3-camera-visibility",
+  "public_children": [
+    "M5.1",
+    "M5.2",
+    "M5.3",
+    "M5.4"
+  ],
+  "modules": {
+    "M5": {
+      "id": "M5",
+      "parent": null,
+      "name": "摄影机、景别、构图与焦点",
+      "public": true,
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "goal": "聚合四分区提案并唯一接受；记录版本、来源、问题与真实依赖。",
+      "scope": "聚合四分区提案并唯一接受；记录版本、来源、问题与真实依赖。",
+      "non_goals": [
+        "身份与参考权限 M2",
+        "空间调度 M3",
+        "人物动作 M4",
+        "声音 M6",
+        "绝对排时 M7",
+        "权威状态 M8",
+        "剪辑 M9",
+        "风格 M10",
+        "后端序列化 M11",
+        "真实媒体观察 M12"
+      ],
+      "minimum_inputs": [
+        "camera_brief"
+      ],
+      "optional_inputs": "见 contracts.json Inputs：只读来源/上下文/投影按任务提供",
+      "readonly_inputs": "合同兼容的上下文或带理由的 unknown；不自动运行上游",
+      "write_scope": [
+        "parent metadata; partitions only through validated child proposals"
+      ],
+      "output": "CameraPlan draft through M5State",
+      "return_to": "caller",
+      "route": {
+        "in": "M5Request.target=M5",
+        "input_mapping": "camera_brief 保留原任务；route 仅返回四子入口与各自最少输入。调用方按所需职责形成各子 M5Request，附原来源、必要只读投影与同一父基版本；不得把父请求直接作为子提案原请求。",
+        "preconditions": [
+          "camera_brief"
+        ],
+        "out": "four child route descriptions; no agent execution",
+        "return_to": "caller",
+        "on_failure": "M5",
+        "repair": "具体 diagnostics.repair_target；语义修订回字段责任方，不无界递归"
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md"
+      ],
+      "required_dependencies": [
+        "Python 3.10+ standard library for CLI",
+        "bundled contracts.json and module-registry.json"
+      ],
+      "optional_dependencies": [
+        "Agent for natural-language domain work",
+        "actual media and optical measurements only when available"
+      ],
+      "acceptance": "M5 accept STATE BATCH --requests ORIGINAL_REQUEST_ARRAY",
+      "completion": "结构和已实现确定性关系可检查；语义、光学、可见性、媒体与全局G0—G4分别保留状态",
+      "consumers": [
+        "M5.1",
+        "M5.2",
+        "M5.3",
+        "M5.4",
+        "M3",
+        "M4",
+        "M7",
+        "M8",
+        "M9",
+        "M10",
+        "M11",
+        "M12"
+      ],
+      "effects": {
+        "route_check_impact": "read-only",
+        "accept": "return new draft; no input file writes",
+        "media_or_remote_writes": "none"
+      },
+      "compatibility": {
+        "accepted_contract_version": "1.0.0",
+        "migration": "No implicit migration; register a new version for breaking changes"
+      },
+      "mandatory_rules": {
+        "HC-01": {
+          "rule": "专业职责一致",
+          "implementation": "聚合四分区提案并唯一接受；记录版本、来源、问题与真实依赖。"
+        },
+        "HC-02": {
+          "rule": "变化原因一致",
+          "implementation": "位姿、取景、焦点、运动分别修改；父级只聚合接受，不另写摄影决定。"
+        },
+        "HC-03": {
+          "rule": "合理拆分粒度",
+          "implementation": "四个公开子模块；镜头术语和案例策略不是新增职责节点。"
+        },
+        "LC-01": {
+          "rule": "公开最小合同",
+          "implementation": {
+            "minimum_inputs": [
+              "camera_brief"
+            ],
+            "schema": "references/contracts.json",
+            "version": "1.0.0",
+            "unknown": "必需字段缺失失败；显式 unknown 限定判断范围"
+          }
+        },
+        "LC-02": {
+          "rule": "共享记录按需读取",
+          "implementation": "只读输入和来源版本保真；本域分区提案，不取得整个 ProjectPlan 写权限。"
+        },
+        "LC-03": {
+          "rule": "数据来源可替代",
+          "implementation": "兼容用户或外部输入直接满足合同，不要求执行或安装 M1—M4。"
+        },
+        "LC-04": {
+          "rule": "依赖显式且可隔离",
+          "implementation": "必需／可选输入按合同声明；impact 只沿登记 read_paths 标记 stale。"
+        },
+        "LC-05": {
+          "rule": "后端与领域分离",
+          "implementation": "不生成 H3 顶层摄影字段；M11 编译模式/Label，M7 处理绝对排时。"
+        },
+        "MD-01": {
+          "rule": "独立职责合同",
+          "implementation": {
+            "id": "M5",
+            "parent": null,
+            "input": [
+              "camera_brief"
+            ],
+            "write_scope": [
+              "parent metadata; partitions only through validated child proposals"
+            ],
+            "check": "scripts/m5_contract.py check"
+          }
+        },
+        "MD-02": {
+          "rule": "可组合与可替换",
+          "implementation": "独立子提案可由父接受组合；替代实现遵守字段语义与来源合同。"
+        },
+        "MD-03": {
+          "rule": "唯一字段责任",
+          "implementation": "M5 父唯一接受；子模块只写被分配分区，跨职责修改作为请求。"
+        },
+        "MD-04": {
+          "rule": "资源与兼容边界",
+          "implementation": "Python3.10+标准库，运行资源随目录；破坏性变更使用新合同版本及显式迁移，不隐式升级。"
+        },
+        "RT-01": {
+          "rule": "路由信息完整",
+          "implementation": {
+            "in": "M5Request.target=M5",
+            "input_mapping": "camera_brief 保留原任务；route 仅返回四子入口与各自最少输入。调用方按所需职责形成各子 M5Request，附原来源、必要只读投影与同一父基版本；不得把父请求直接作为子提案原请求。",
+            "preconditions": [
+              "camera_brief"
+            ],
+            "out": "four child route descriptions; no agent execution",
+            "return_to": "caller",
+            "on_failure": "M5",
+            "repair": "具体 diagnostics.repair_target；语义修订回字段责任方，不无界递归"
+          }
+        },
+        "RT-02": {
+          "rule": "调度与专业决定分开",
+          "implementation": "route 仅选择显式目标，不改用户动作、站位、参考权限或剪辑。"
+        },
+        "RT-03": {
+          "rule": "信息与资源按需传递",
+          "implementation": "入口按任务单跳读取；trace区分实际schema/registry读取与仅列出的专业资源。"
+        },
+        "RT-04": {
+          "rule": "失败与修复显式",
+          "implementation": "阻断、未知、执行错误分别报告，明确修复责任与任务边界。"
+        },
+        "RT-05": {
+          "rule": "重试匹配操作效果",
+          "implementation": "只读检查可安全重试；父接受精确幂等，创作修订使用新提案和当前基版本。"
+        },
+        "RT-06": {
+          "rule": "调用与变更可追溯",
+          "implementation": "实际调用记录ID/版本/来源/输入摘要/资源摘要/状态/错误/操作效果，变更按真实读取路径复验。"
+        }
+      },
+      "tests": [
+        "docs/h3skill/tests/m5/test_contract.py",
+        "docs/h3skill/tests/m5/test-results.json"
+      ],
+      "test_files_are_runtime_dependencies": false
+    },
+    "M5.1": {
+      "id": "M5.1",
+      "parent": "M5",
+      "name": "观察机位与光轴",
+      "public": true,
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "goal": "决定观察位置、高度、距离、光轴与机身位姿。",
+      "scope": "决定观察位置、高度、距离、光轴与机身位姿。",
+      "non_goals": [
+        "身份与参考权限 M2",
+        "空间调度 M3",
+        "人物动作 M4",
+        "声音 M6",
+        "绝对排时 M7",
+        "权威状态 M8",
+        "剪辑 M9",
+        "风格 M10",
+        "后端序列化 M11",
+        "真实媒体观察 M12"
+      ],
+      "minimum_inputs": [
+        "viewpoint_brief"
+      ],
+      "optional_inputs": "见 contracts.json Inputs：只读来源/上下文/投影按任务提供",
+      "readonly_inputs": "合同兼容的上下文或带理由的 unknown；不自动运行上游",
+      "write_scope": [
+        "/content/viewpoints"
+      ],
+      "output": "M5Proposal for viewpoints",
+      "return_to": "M5",
+      "route": {
+        "in": "M5Request.target=M5.1",
+        "input_mapping": "inputs 原样作为 proposal.context；来源和基版本保持不变",
+        "preconditions": [
+          "viewpoint_brief"
+        ],
+        "out": "M5Proposal.changes.viewpoints",
+        "return_to": "M5",
+        "on_failure": "M5.1",
+        "repair": "具体 diagnostics.repair_target；语义修订回字段责任方，不无界递归"
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/viewpoints-and-axis.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md"
+      ],
+      "required_dependencies": [
+        "Python 3.10+ standard library for CLI",
+        "bundled contracts.json and module-registry.json"
+      ],
+      "optional_dependencies": [
+        "Agent for natural-language domain work",
+        "actual media and optical measurements only when available"
+      ],
+      "acceptance": "M5 accept STATE BATCH --requests ORIGINAL_REQUEST_ARRAY",
+      "completion": "结构和已实现确定性关系可检查；语义、光学、可见性、媒体与全局G0—G4分别保留状态",
+      "consumers": [
+        "M5.2",
+        "M5.3",
+        "M5.4",
+        "M3",
+        "M4",
+        "M7",
+        "M8",
+        "M9",
+        "M10",
+        "M11",
+        "M12"
+      ],
+      "effects": {
+        "route_check_impact": "read-only",
+        "accept": "return new draft; no input file writes",
+        "media_or_remote_writes": "none"
+      },
+      "compatibility": {
+        "accepted_contract_version": "1.0.0",
+        "migration": "No implicit migration; register a new version for breaking changes"
+      },
+      "mandatory_rules": {
+        "HC-01": {
+          "rule": "专业职责一致",
+          "implementation": "决定观察位置、高度、距离、光轴与机身位姿。"
+        },
+        "HC-02": {
+          "rule": "变化原因一致",
+          "implementation": "位姿、取景、焦点、运动分别修改；父级只聚合接受，不另写摄影决定。"
+        },
+        "HC-03": {
+          "rule": "合理拆分粒度",
+          "implementation": "四个公开子模块；镜头术语和案例策略不是新增职责节点。"
+        },
+        "LC-01": {
+          "rule": "公开最小合同",
+          "implementation": {
+            "minimum_inputs": [
+              "viewpoint_brief"
+            ],
+            "schema": "references/contracts.json",
+            "version": "1.0.0",
+            "unknown": "必需字段缺失失败；显式 unknown 限定判断范围"
+          }
+        },
+        "LC-02": {
+          "rule": "共享记录按需读取",
+          "implementation": "只读输入和来源版本保真；本域分区提案，不取得整个 ProjectPlan 写权限。"
+        },
+        "LC-03": {
+          "rule": "数据来源可替代",
+          "implementation": "兼容用户或外部输入直接满足合同，不要求执行或安装 M1—M4。"
+        },
+        "LC-04": {
+          "rule": "依赖显式且可隔离",
+          "implementation": "必需／可选输入按合同声明；impact 只沿登记 read_paths 标记 stale。"
+        },
+        "LC-05": {
+          "rule": "后端与领域分离",
+          "implementation": "不生成 H3 顶层摄影字段；M11 编译模式/Label，M7 处理绝对排时。"
+        },
+        "MD-01": {
+          "rule": "独立职责合同",
+          "implementation": {
+            "id": "M5.1",
+            "parent": "M5",
+            "input": [
+              "viewpoint_brief"
+            ],
+            "write_scope": [
+              "/content/viewpoints"
+            ],
+            "check": "scripts/m5_contract.py check"
+          }
+        },
+        "MD-02": {
+          "rule": "可组合与可替换",
+          "implementation": "独立子提案可由父接受组合；替代实现遵守字段语义与来源合同。"
+        },
+        "MD-03": {
+          "rule": "唯一字段责任",
+          "implementation": "M5 父唯一接受；子模块只写被分配分区，跨职责修改作为请求。"
+        },
+        "MD-04": {
+          "rule": "资源与兼容边界",
+          "implementation": "Python3.10+标准库，运行资源随目录；破坏性变更使用新合同版本及显式迁移，不隐式升级。"
+        },
+        "RT-01": {
+          "rule": "路由信息完整",
+          "implementation": {
+            "in": "M5Request.target=M5.1",
+            "input_mapping": "inputs 原样作为 proposal.context；来源和基版本保持不变",
+            "preconditions": [
+              "viewpoint_brief"
+            ],
+            "out": "M5Proposal.changes.viewpoints",
+            "return_to": "M5",
+            "on_failure": "M5.1",
+            "repair": "具体 diagnostics.repair_target；语义修订回字段责任方，不无界递归"
+          }
+        },
+        "RT-02": {
+          "rule": "调度与专业决定分开",
+          "implementation": "route 仅选择显式目标，不改用户动作、站位、参考权限或剪辑。"
+        },
+        "RT-03": {
+          "rule": "信息与资源按需传递",
+          "implementation": "入口按任务单跳读取；trace区分实际schema/registry读取与仅列出的专业资源。"
+        },
+        "RT-04": {
+          "rule": "失败与修复显式",
+          "implementation": "阻断、未知、执行错误分别报告，明确修复责任与任务边界。"
+        },
+        "RT-05": {
+          "rule": "重试匹配操作效果",
+          "implementation": "只读检查可安全重试；父接受精确幂等，创作修订使用新提案和当前基版本。"
+        },
+        "RT-06": {
+          "rule": "调用与变更可追溯",
+          "implementation": "实际调用记录ID/版本/来源/输入摘要/资源摘要/状态/错误/操作效果，变更按真实读取路径复验。"
+        }
+      },
+      "tests": [
+        "docs/h3skill/tests/m5/test_contract.py",
+        "docs/h3skill/tests/m5/test-results.json"
+      ],
+      "test_files_are_runtime_dependencies": false
+    },
+    "M5.2": {
+      "id": "M5.2",
+      "parent": "M5",
+      "name": "取景、构图与可见性",
+      "public": true,
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "goal": "决定画面范围、景别、主体关系及关键事件可见条件。",
+      "scope": "决定画面范围、景别、主体关系及关键事件可见条件。",
+      "non_goals": [
+        "身份与参考权限 M2",
+        "空间调度 M3",
+        "人物动作 M4",
+        "声音 M6",
+        "绝对排时 M7",
+        "权威状态 M8",
+        "剪辑 M9",
+        "风格 M10",
+        "后端序列化 M11",
+        "真实媒体观察 M12"
+      ],
+      "minimum_inputs": [
+        "framing_brief",
+        "viewpoint_context"
+      ],
+      "optional_inputs": "见 contracts.json Inputs：只读来源/上下文/投影按任务提供",
+      "readonly_inputs": "合同兼容的上下文或带理由的 unknown；不自动运行上游",
+      "write_scope": [
+        "/content/framing"
+      ],
+      "output": "M5Proposal for framing",
+      "return_to": "M5",
+      "route": {
+        "in": "M5Request.target=M5.2",
+        "input_mapping": "inputs 原样作为 proposal.context；来源和基版本保持不变",
+        "preconditions": [
+          "framing_brief",
+          "viewpoint_context"
+        ],
+        "out": "M5Proposal.changes.framing",
+        "return_to": "M5",
+        "on_failure": "M5.2",
+        "repair": "具体 diagnostics.repair_target；语义修订回字段责任方，不无界递归"
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/framing-and-visibility.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md"
+      ],
+      "required_dependencies": [
+        "Python 3.10+ standard library for CLI",
+        "bundled contracts.json and module-registry.json"
+      ],
+      "optional_dependencies": [
+        "Agent for natural-language domain work",
+        "actual media and optical measurements only when available"
+      ],
+      "acceptance": "M5 accept STATE BATCH --requests ORIGINAL_REQUEST_ARRAY",
+      "completion": "结构和已实现确定性关系可检查；语义、光学、可见性、媒体与全局G0—G4分别保留状态",
+      "consumers": [
+        "M5.1",
+        "M5.3",
+        "M5.4",
+        "M3",
+        "M4",
+        "M7",
+        "M8",
+        "M9",
+        "M10",
+        "M11",
+        "M12"
+      ],
+      "effects": {
+        "route_check_impact": "read-only",
+        "accept": "return new draft; no input file writes",
+        "media_or_remote_writes": "none"
+      },
+      "compatibility": {
+        "accepted_contract_version": "1.0.0",
+        "migration": "No implicit migration; register a new version for breaking changes"
+      },
+      "mandatory_rules": {
+        "HC-01": {
+          "rule": "专业职责一致",
+          "implementation": "决定画面范围、景别、主体关系及关键事件可见条件。"
+        },
+        "HC-02": {
+          "rule": "变化原因一致",
+          "implementation": "位姿、取景、焦点、运动分别修改；父级只聚合接受，不另写摄影决定。"
+        },
+        "HC-03": {
+          "rule": "合理拆分粒度",
+          "implementation": "四个公开子模块；镜头术语和案例策略不是新增职责节点。"
+        },
+        "LC-01": {
+          "rule": "公开最小合同",
+          "implementation": {
+            "minimum_inputs": [
+              "framing_brief",
+              "viewpoint_context"
+            ],
+            "schema": "references/contracts.json",
+            "version": "1.0.0",
+            "unknown": "必需字段缺失失败；显式 unknown 限定判断范围"
+          }
+        },
+        "LC-02": {
+          "rule": "共享记录按需读取",
+          "implementation": "只读输入和来源版本保真；本域分区提案，不取得整个 ProjectPlan 写权限。"
+        },
+        "LC-03": {
+          "rule": "数据来源可替代",
+          "implementation": "兼容用户或外部输入直接满足合同，不要求执行或安装 M1—M4。"
+        },
+        "LC-04": {
+          "rule": "依赖显式且可隔离",
+          "implementation": "必需／可选输入按合同声明；impact 只沿登记 read_paths 标记 stale。"
+        },
+        "LC-05": {
+          "rule": "后端与领域分离",
+          "implementation": "不生成 H3 顶层摄影字段；M11 编译模式/Label，M7 处理绝对排时。"
+        },
+        "MD-01": {
+          "rule": "独立职责合同",
+          "implementation": {
+            "id": "M5.2",
+            "parent": "M5",
+            "input": [
+              "framing_brief",
+              "viewpoint_context"
+            ],
+            "write_scope": [
+              "/content/framing"
+            ],
+            "check": "scripts/m5_contract.py check"
+          }
+        },
+        "MD-02": {
+          "rule": "可组合与可替换",
+          "implementation": "独立子提案可由父接受组合；替代实现遵守字段语义与来源合同。"
+        },
+        "MD-03": {
+          "rule": "唯一字段责任",
+          "implementation": "M5 父唯一接受；子模块只写被分配分区，跨职责修改作为请求。"
+        },
+        "MD-04": {
+          "rule": "资源与兼容边界",
+          "implementation": "Python3.10+标准库，运行资源随目录；破坏性变更使用新合同版本及显式迁移，不隐式升级。"
+        },
+        "RT-01": {
+          "rule": "路由信息完整",
+          "implementation": {
+            "in": "M5Request.target=M5.2",
+            "input_mapping": "inputs 原样作为 proposal.context；来源和基版本保持不变",
+            "preconditions": [
+              "framing_brief",
+              "viewpoint_context"
+            ],
+            "out": "M5Proposal.changes.framing",
+            "return_to": "M5",
+            "on_failure": "M5.2",
+            "repair": "具体 diagnostics.repair_target；语义修订回字段责任方，不无界递归"
+          }
+        },
+        "RT-02": {
+          "rule": "调度与专业决定分开",
+          "implementation": "route 仅选择显式目标，不改用户动作、站位、参考权限或剪辑。"
+        },
+        "RT-03": {
+          "rule": "信息与资源按需传递",
+          "implementation": "入口按任务单跳读取；trace区分实际schema/registry读取与仅列出的专业资源。"
+        },
+        "RT-04": {
+          "rule": "失败与修复显式",
+          "implementation": "阻断、未知、执行错误分别报告，明确修复责任与任务边界。"
+        },
+        "RT-05": {
+          "rule": "重试匹配操作效果",
+          "implementation": "只读检查可安全重试；父接受精确幂等，创作修订使用新提案和当前基版本。"
+        },
+        "RT-06": {
+          "rule": "调用与变更可追溯",
+          "implementation": "实际调用记录ID/版本/来源/输入摘要/资源摘要/状态/错误/操作效果，变更按真实读取路径复验。"
+        }
+      },
+      "tests": [
+        "docs/h3skill/tests/m5/test_contract.py",
+        "docs/h3skill/tests/m5/test-results.json"
+      ],
+      "test_files_are_runtime_dependencies": false
+    },
+    "M5.3": {
+      "id": "M5.3",
+      "parent": "M5",
+      "name": "焦点与景深策略",
+      "public": true,
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "goal": "决定清晰目标、保持或变化策略及光学证据缺口。",
+      "scope": "决定清晰目标、保持或变化策略及光学证据缺口。",
+      "non_goals": [
+        "身份与参考权限 M2",
+        "空间调度 M3",
+        "人物动作 M4",
+        "声音 M6",
+        "绝对排时 M7",
+        "权威状态 M8",
+        "剪辑 M9",
+        "风格 M10",
+        "后端序列化 M11",
+        "真实媒体观察 M12"
+      ],
+      "minimum_inputs": [
+        "focus_brief",
+        "framing_context"
+      ],
+      "optional_inputs": "见 contracts.json Inputs：只读来源/上下文/投影按任务提供",
+      "readonly_inputs": "合同兼容的上下文或带理由的 unknown；不自动运行上游",
+      "write_scope": [
+        "/content/focus"
+      ],
+      "output": "M5Proposal for focus",
+      "return_to": "M5",
+      "route": {
+        "in": "M5Request.target=M5.3",
+        "input_mapping": "inputs 原样作为 proposal.context；来源和基版本保持不变",
+        "preconditions": [
+          "focus_brief",
+          "framing_context"
+        ],
+        "out": "M5Proposal.changes.focus",
+        "return_to": "M5",
+        "on_failure": "M5.3",
+        "repair": "具体 diagnostics.repair_target；语义修订回字段责任方，不无界递归"
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/focus-and-depth.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md"
+      ],
+      "required_dependencies": [
+        "Python 3.10+ standard library for CLI",
+        "bundled contracts.json and module-registry.json"
+      ],
+      "optional_dependencies": [
+        "Agent for natural-language domain work",
+        "actual media and optical measurements only when available"
+      ],
+      "acceptance": "M5 accept STATE BATCH --requests ORIGINAL_REQUEST_ARRAY",
+      "completion": "结构和已实现确定性关系可检查；语义、光学、可见性、媒体与全局G0—G4分别保留状态",
+      "consumers": [
+        "M5.1",
+        "M5.2",
+        "M5.4",
+        "M3",
+        "M4",
+        "M7",
+        "M8",
+        "M9",
+        "M10",
+        "M11",
+        "M12"
+      ],
+      "effects": {
+        "route_check_impact": "read-only",
+        "accept": "return new draft; no input file writes",
+        "media_or_remote_writes": "none"
+      },
+      "compatibility": {
+        "accepted_contract_version": "1.0.0",
+        "migration": "No implicit migration; register a new version for breaking changes"
+      },
+      "mandatory_rules": {
+        "HC-01": {
+          "rule": "专业职责一致",
+          "implementation": "决定清晰目标、保持或变化策略及光学证据缺口。"
+        },
+        "HC-02": {
+          "rule": "变化原因一致",
+          "implementation": "位姿、取景、焦点、运动分别修改；父级只聚合接受，不另写摄影决定。"
+        },
+        "HC-03": {
+          "rule": "合理拆分粒度",
+          "implementation": "四个公开子模块；镜头术语和案例策略不是新增职责节点。"
+        },
+        "LC-01": {
+          "rule": "公开最小合同",
+          "implementation": {
+            "minimum_inputs": [
+              "focus_brief",
+              "framing_context"
+            ],
+            "schema": "references/contracts.json",
+            "version": "1.0.0",
+            "unknown": "必需字段缺失失败；显式 unknown 限定判断范围"
+          }
+        },
+        "LC-02": {
+          "rule": "共享记录按需读取",
+          "implementation": "只读输入和来源版本保真；本域分区提案，不取得整个 ProjectPlan 写权限。"
+        },
+        "LC-03": {
+          "rule": "数据来源可替代",
+          "implementation": "兼容用户或外部输入直接满足合同，不要求执行或安装 M1—M4。"
+        },
+        "LC-04": {
+          "rule": "依赖显式且可隔离",
+          "implementation": "必需／可选输入按合同声明；impact 只沿登记 read_paths 标记 stale。"
+        },
+        "LC-05": {
+          "rule": "后端与领域分离",
+          "implementation": "不生成 H3 顶层摄影字段；M11 编译模式/Label，M7 处理绝对排时。"
+        },
+        "MD-01": {
+          "rule": "独立职责合同",
+          "implementation": {
+            "id": "M5.3",
+            "parent": "M5",
+            "input": [
+              "focus_brief",
+              "framing_context"
+            ],
+            "write_scope": [
+              "/content/focus"
+            ],
+            "check": "scripts/m5_contract.py check"
+          }
+        },
+        "MD-02": {
+          "rule": "可组合与可替换",
+          "implementation": "独立子提案可由父接受组合；替代实现遵守字段语义与来源合同。"
+        },
+        "MD-03": {
+          "rule": "唯一字段责任",
+          "implementation": "M5 父唯一接受；子模块只写被分配分区，跨职责修改作为请求。"
+        },
+        "MD-04": {
+          "rule": "资源与兼容边界",
+          "implementation": "Python3.10+标准库，运行资源随目录；破坏性变更使用新合同版本及显式迁移，不隐式升级。"
+        },
+        "RT-01": {
+          "rule": "路由信息完整",
+          "implementation": {
+            "in": "M5Request.target=M5.3",
+            "input_mapping": "inputs 原样作为 proposal.context；来源和基版本保持不变",
+            "preconditions": [
+              "focus_brief",
+              "framing_context"
+            ],
+            "out": "M5Proposal.changes.focus",
+            "return_to": "M5",
+            "on_failure": "M5.3",
+            "repair": "具体 diagnostics.repair_target；语义修订回字段责任方，不无界递归"
+          }
+        },
+        "RT-02": {
+          "rule": "调度与专业决定分开",
+          "implementation": "route 仅选择显式目标，不改用户动作、站位、参考权限或剪辑。"
+        },
+        "RT-03": {
+          "rule": "信息与资源按需传递",
+          "implementation": "入口按任务单跳读取；trace区分实际schema/registry读取与仅列出的专业资源。"
+        },
+        "RT-04": {
+          "rule": "失败与修复显式",
+          "implementation": "阻断、未知、执行错误分别报告，明确修复责任与任务边界。"
+        },
+        "RT-05": {
+          "rule": "重试匹配操作效果",
+          "implementation": "只读检查可安全重试；父接受精确幂等，创作修订使用新提案和当前基版本。"
+        },
+        "RT-06": {
+          "rule": "调用与变更可追溯",
+          "implementation": "实际调用记录ID/版本/来源/输入摘要/资源摘要/状态/错误/操作效果，变更按真实读取路径复验。"
+        }
+      },
+      "tests": [
+        "docs/h3skill/tests/m5/test_contract.py",
+        "docs/h3skill/tests/m5/test-results.json"
+      ],
+      "test_files_are_runtime_dependencies": false
+    },
+    "M5.4": {
+      "id": "M5.4",
+      "parent": "M5",
+      "name": "摄影机运动与触发",
+      "public": true,
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "goal": "决定独立摄影事件、起终机位、路径、触发与响应策略。",
+      "scope": "决定独立摄影事件、起终机位、路径、触发与响应策略。",
+      "non_goals": [
+        "身份与参考权限 M2",
+        "空间调度 M3",
+        "人物动作 M4",
+        "声音 M6",
+        "绝对排时 M7",
+        "权威状态 M8",
+        "剪辑 M9",
+        "风格 M10",
+        "后端序列化 M11",
+        "真实媒体观察 M12"
+      ],
+      "minimum_inputs": [
+        "movement_brief",
+        "viewpoint_context"
+      ],
+      "optional_inputs": "见 contracts.json Inputs：只读来源/上下文/投影按任务提供",
+      "readonly_inputs": "合同兼容的上下文或带理由的 unknown；不自动运行上游",
+      "write_scope": [
+        "/content/movements"
+      ],
+      "output": "M5Proposal for movements",
+      "return_to": "M5",
+      "route": {
+        "in": "M5Request.target=M5.4",
+        "input_mapping": "inputs 原样作为 proposal.context；来源和基版本保持不变",
+        "preconditions": [
+          "movement_brief",
+          "viewpoint_context"
+        ],
+        "out": "M5Proposal.changes.movements",
+        "return_to": "M5",
+        "on_failure": "M5.4",
+        "repair": "具体 diagnostics.repair_target；语义修订回字段责任方，不无界递归"
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/movement-and-triggers.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md"
+      ],
+      "required_dependencies": [
+        "Python 3.10+ standard library for CLI",
+        "bundled contracts.json and module-registry.json"
+      ],
+      "optional_dependencies": [
+        "Agent for natural-language domain work",
+        "actual media and optical measurements only when available"
+      ],
+      "acceptance": "M5 accept STATE BATCH --requests ORIGINAL_REQUEST_ARRAY",
+      "completion": "结构和已实现确定性关系可检查；语义、光学、可见性、媒体与全局G0—G4分别保留状态",
+      "consumers": [
+        "M5.1",
+        "M5.2",
+        "M5.3",
+        "M3",
+        "M4",
+        "M7",
+        "M8",
+        "M9",
+        "M10",
+        "M11",
+        "M12"
+      ],
+      "effects": {
+        "route_check_impact": "read-only",
+        "accept": "return new draft; no input file writes",
+        "media_or_remote_writes": "none"
+      },
+      "compatibility": {
+        "accepted_contract_version": "1.0.0",
+        "migration": "No implicit migration; register a new version for breaking changes"
+      },
+      "mandatory_rules": {
+        "HC-01": {
+          "rule": "专业职责一致",
+          "implementation": "决定独立摄影事件、起终机位、路径、触发与响应策略。"
+        },
+        "HC-02": {
+          "rule": "变化原因一致",
+          "implementation": "位姿、取景、焦点、运动分别修改；父级只聚合接受，不另写摄影决定。"
+        },
+        "HC-03": {
+          "rule": "合理拆分粒度",
+          "implementation": "四个公开子模块；镜头术语和案例策略不是新增职责节点。"
+        },
+        "LC-01": {
+          "rule": "公开最小合同",
+          "implementation": {
+            "minimum_inputs": [
+              "movement_brief",
+              "viewpoint_context"
+            ],
+            "schema": "references/contracts.json",
+            "version": "1.0.0",
+            "unknown": "必需字段缺失失败；显式 unknown 限定判断范围"
+          }
+        },
+        "LC-02": {
+          "rule": "共享记录按需读取",
+          "implementation": "只读输入和来源版本保真；本域分区提案，不取得整个 ProjectPlan 写权限。"
+        },
+        "LC-03": {
+          "rule": "数据来源可替代",
+          "implementation": "兼容用户或外部输入直接满足合同，不要求执行或安装 M1—M4。"
+        },
+        "LC-04": {
+          "rule": "依赖显式且可隔离",
+          "implementation": "必需／可选输入按合同声明；impact 只沿登记 read_paths 标记 stale。"
+        },
+        "LC-05": {
+          "rule": "后端与领域分离",
+          "implementation": "不生成 H3 顶层摄影字段；M11 编译模式/Label，M7 处理绝对排时。"
+        },
+        "MD-01": {
+          "rule": "独立职责合同",
+          "implementation": {
+            "id": "M5.4",
+            "parent": "M5",
+            "input": [
+              "movement_brief",
+              "viewpoint_context"
+            ],
+            "write_scope": [
+              "/content/movements"
+            ],
+            "check": "scripts/m5_contract.py check"
+          }
+        },
+        "MD-02": {
+          "rule": "可组合与可替换",
+          "implementation": "独立子提案可由父接受组合；替代实现遵守字段语义与来源合同。"
+        },
+        "MD-03": {
+          "rule": "唯一字段责任",
+          "implementation": "M5 父唯一接受；子模块只写被分配分区，跨职责修改作为请求。"
+        },
+        "MD-04": {
+          "rule": "资源与兼容边界",
+          "implementation": "Python3.10+标准库，运行资源随目录；破坏性变更使用新合同版本及显式迁移，不隐式升级。"
+        },
+        "RT-01": {
+          "rule": "路由信息完整",
+          "implementation": {
+            "in": "M5Request.target=M5.4",
+            "input_mapping": "inputs 原样作为 proposal.context；来源和基版本保持不变",
+            "preconditions": [
+              "movement_brief",
+              "viewpoint_context"
+            ],
+            "out": "M5Proposal.changes.movements",
+            "return_to": "M5",
+            "on_failure": "M5.4",
+            "repair": "具体 diagnostics.repair_target；语义修订回字段责任方，不无界递归"
+          }
+        },
+        "RT-02": {
+          "rule": "调度与专业决定分开",
+          "implementation": "route 仅选择显式目标，不改用户动作、站位、参考权限或剪辑。"
+        },
+        "RT-03": {
+          "rule": "信息与资源按需传递",
+          "implementation": "入口按任务单跳读取；trace区分实际schema/registry读取与仅列出的专业资源。"
+        },
+        "RT-04": {
+          "rule": "失败与修复显式",
+          "implementation": "阻断、未知、执行错误分别报告，明确修复责任与任务边界。"
+        },
+        "RT-05": {
+          "rule": "重试匹配操作效果",
+          "implementation": "只读检查可安全重试；父接受精确幂等，创作修订使用新提案和当前基版本。"
+        },
+        "RT-06": {
+          "rule": "调用与变更可追溯",
+          "implementation": "实际调用记录ID/版本/来源/输入摘要/资源摘要/状态/错误/操作效果，变更按真实读取路径复验。"
+        }
+      },
+      "tests": [
+        "docs/h3skill/tests/m5/test_contract.py",
+        "docs/h3skill/tests/m5/test-results.json"
+      ],
+      "test_files_are_runtime_dependencies": false
+    }
+  },
+  "classification": "D engineering implementation of frozen module contracts; not evidence of H3 generation quality",
+  "commit_mode": "child proposals, parent acceptance",
+  "state_owner": "M5",
+  "object_type": "CameraPlan",
+  "state_status": "draft",
+  "domain_libraries_are_public_nodes": false,
+  "resources": {
+    "common": [
+      "references/contracts.json",
+      "references/module-registry.json",
+      "references/contract-guide.md"
+    ],
+    "domain": [
+      "references/viewpoints-and-axis.md",
+      "references/framing-and-visibility.md",
+      "references/focus-and-depth.md",
+      "references/movement-and-triggers.md"
+    ],
+    "handoff": [
+      "references/audit-and-handoff.md",
+      "references/h3-label-mapping.md"
+    ],
+    "sources": [
+      "references/case-evidence.md",
+      "references/case-index.json",
+      "references/provenance-and-license.md",
+      "references/h3-protocol-source.json",
+      "references/h3-base-official.txt",
+      "references/h3-ref-official.txt",
+      "references/case-source-LICENSE.txt",
+      "references/h3-NOTICE.txt"
+    ]
+  },
+  "status_model": {
+    "execution": "completed/error are execution results",
+    "validation": "pass/fail/unverified apply only to stated scope",
+    "overall": "unverified unless a blocking failure exists",
+    "stale": "changed dependencies require review; previous evidence retained"
+  },
+  "versions": {
+    "schema": "1.0.0",
+    "implementation": "0.1.0",
+    "route": "1.0.0"
+  },
+  "effects": {
+    "network": false,
+    "model_inference": false,
+    "writes_input_files": false
+  },
+  "routing_budget": "No hidden agent recursion or automatic retries. Return missing information or conflicts to the named owner.",
+  "consumer_registration": "M5State.consumers can register external modules and M5.1—M5.4 results. Only explicit read_paths propagate staleness; listed potential consumers are not automatic dependencies."
+}
