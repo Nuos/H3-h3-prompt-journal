@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "document_package": "docs/skillplan",
+  "plan_version": "0.1.0",
+  "review_date": "2026-11-04",
+  "timezone": "America/Los_Angeles",
+  "base_commit": "35658d3615d02c6aa6e4221fb223d73b86aa6875",
+  "validation_kind": "documentation_consistency_and_source_reference_checks",
+  "status": "pass",
+  "errors": [],
+  "checks": {
+    "module_contracts": {
+      "expected": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6",
+        "M7",
+        "M8",
+        "M9",
+        "M10",
+        "M11",
+        "M12"
+      ],
+      "framework": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6",
+        "M7",
+        "M8",
+        "M9",
+        "M10",
+        "M11",
+        "M12"
+      ],
+      "archive": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6",
+        "M7",
+        "M8",
+        "M9",
+        "M10",
+        "M11",
+        "M12"
+      ]
+    },
+    "full_analysis_archive": {
+      "major_sections": [
+        "一、建议提炼的 12 个通用核心模块",
+        "二、各模块应该提炼到什么程度",
+        "三、这些模块怎样真正联动",
+        "四、影视剧与 MV 怎样使用同一套核心",
+        "五、提炼时需要保留的规则边界",
+        "六、怎样承接已经完成的 29 个案例技能"
+      ],
+      "module_sections": 12,
+      "numbered_source_groups": 14
+    },
+    "source_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19"
+    ],
+    "audit_gates": {
+      "ids": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4"
+      ],
+      "consistent_in": [
+        "README.md",
+        "01-core-framework.md",
+        "02-development-roadmap.md"
+      ]
+    },
+    "development_phases": [
+      "P0",
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9"
+    ],
+    "source_reading_coverage": {
+      "case_count": 15,
+      "specified_file_count": 31,
+      "specified_line_count": 9618,
+      "specified_by_name": {
+        "README.md": {
+          "files": 15,
+          "lines": 1252
+        },
+        "methodology.md": {
+          "files": 2,
+          "lines": 545
+        },
+        "prompt.md": {
+          "files": 14,
+          "lines": 7821
+        }
+      },
+      "supplementary_file": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md",
+      "supplementary_lines": 2767,
+      "total_core_files": 32,
+      "total_core_lines": 12385,
+      "workflow_json_included": false,
+      "media_observed": false
+    },
+    "links": {
+      "relative_targets_checked": 9,
+      "pinned_project_targets_checked": 87,
+      "project_line_anchors_checked": 60,
+      "pinned_upstream_reference_occurrences": 10,
+      "upstream_scope": "Pinned URL structure and existing provenance only; no claim of individually refreshed HTTP checks."
+    },
+    "original_case_baseline_unchanged": true,
+    "editorial_review": {
+      "performed": true,
+      "scope": "Root read all five documents; independent agent reviewed README, original analysis archive, and roadmap for consistency. This is document review, not generated-media validation.",
+      "resolved_items": [
+        "Continuous-chain invariant scoped to declared continuity, with parallel events handled separately.",
+        "State-transition counting uses time intervals, allowing repeated state values.",
+        "Explicit common grasping during object handoff remains legal.",
+        "M9 edit intent/selection and M7 authoritative time mapping have separate ownership.",
+        "Action, camera and sound events use one ID namespace but retain distinct event IDs.",
+        "Standalone case packages retain complete required dependencies."
+      ]
+    }
+  },
+  "files": [
+    {
+      "path": "docs/skillplan/00-analysis-full.md",
+      "bytes": 35675,
+      "lines": 562,
+      "sha256": "e877dc9b5fc82d02eab9c86276f5844c003bad8b96336ffa8951eec6e90df1da"
+    },
+    {
+      "path": "docs/skillplan/01-core-framework.md",
+      "bytes": 43349,
+      "lines": 524,
+      "sha256": "547c5d7c7ea7258c8b6107101b6905e52e82b95d48e2670ccadb33d71461fa91"
+    },
+    {
+      "path": "docs/skillplan/02-development-roadmap.md",
+      "bytes": 40779,
+      "lines": 409,
+      "sha256": "b40716ae3c6388bdc7959b80ad4daf889c635fd66c2440597f9ed77fed5050e5"
+    },
+    {
+      "path": "docs/skillplan/03-source-evidence.md",
+      "bytes": 51372,
+      "lines": 423,
+      "sha256": "986598996e1e5bbfd41e1e5ade5007003e47e08a3462f9b15304accc8f05f45b"
+    },
+    {
+      "path": "docs/skillplan/README.md",
+      "bytes": 13222,
+      "lines": 178,
+      "sha256": "6e694c1c68353cdc15951128618d5468d61e7f4f8bc88e0bc423c8683cf4d3cf"
+    }
+  ],
+  "not_performed": [
+    "New core skill implementation",
+    "New domain regression execution",
+    "H3 inference",
+    "Original workflow execution",
+    "Media observation or measurements",
+    "Rendered Mermaid visual QA"
+  ],
+  "record_scope": "Hashes cover the five Markdown documents; this record does not hash itself. Git staging/publication checks are reported separately after execution."
+}
