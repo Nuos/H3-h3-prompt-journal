@@ -1,12 +1,12 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "document_package": "docs/skillplan",
-  "plan_version": "0.1.1",
+  "plan_version": "0.1.2",
   "review_date": "2026-11-04",
   "timezone": "America/Los_Angeles",
-  "base_commit": "196ebed12d74505f18146a75d82480a5b5f06ed4",
+  "base_commit": "ec576f117d45a96fb38ee2a5f66a8ffa1e52ff90",
   "case_source_baseline": "35658d3615d02c6aa6e4221fb223d73b86aa6875",
-  "validation_kind": "selected_answer_completeness_and_workflow_documentation_checks",
+  "validation_kind": "mandatory_architecture_principles_and_recursive_module_documentation_checks",
   "status": "pass",
   "errors": [],
   "checks": {
@@ -168,16 +168,15 @@
       "readme_matches_archive": true
     },
     "link_checks": {
-      "relative_targets": 25,
-      "project_targets": 99,
+      "relative_targets": 37,
+      "project_targets": 101,
       "external_link_occurrences": 10,
       "scope": "Relative filesystem targets and locally available Git objects/line anchors; no fresh external HTTP or rendered-anchor check."
     },
     "preserved_existing_documents": [
       "00-analysis-full.md",
-      "01-core-framework.md",
-      "02-development-roadmap.md",
-      "03-source-evidence.md"
+      "03-source-evidence.md",
+      "04-framework-confirmation-full.md"
     ],
     "routing_supplement": {
       "table_rows": {
@@ -197,35 +196,40 @@
       },
       "canonical_module_names_match_archive": true,
       "design_status": "planned; runtime routes and gate contracts have not been executed",
-      "editorial_review": "Root read the complete supplement, including responsibility, applicability, gate, repair, and version boundaries. Ambiguous G3 re-review wording was corrected to permit a new check of the same media when plan, method, or scope changes; prior evidence is retained."
+      "editorial_review": "Root reviewed the current routing changes and retained the prior reviewed route table and Mermaid sources unchanged; the new mandatory principles and retry boundaries are document design, not executed runtime checks."
     },
-    "independent_quote_review": {
-      "reviewer": "independent quote_coverage_review agent",
-      "q01_q16": "all covered",
-      "automated_checks": {
-        "module_ids": 12,
-        "module_content_cells": 36,
-        "mermaid_nodes": 12,
-        "mermaid_directed_edges": 16,
-        "mermaid_dashed_edges": 4,
-        "mermaid_repair_edge_label": "定位问题并回传修复",
-        "result": "exact match against independently transcribed expectations"
+    "historical_quote_review": {
+      "source_commit": "ec576f117d45a96fb38ee2a5f66a8ffa1e52ff90",
+      "source_record": "docs/skillplan/validation-record.json",
+      "review": {
+        "reviewer": "independent quote_coverage_review agent",
+        "q01_q16": "all covered",
+        "automated_checks": {
+          "module_ids": 12,
+          "module_content_cells": 36,
+          "mermaid_nodes": 12,
+          "mermaid_directed_edges": 16,
+          "mermaid_dashed_edges": 4,
+          "mermaid_repair_edge_label": "定位问题并回传修复",
+          "result": "exact match against independently transcribed expectations"
+        },
+        "structural_and_editorial_checks": {
+          "shared_object_rows": 9,
+          "boundaries": 5,
+          "genre_comparison_rows": 6,
+          "audit_gate_rows": 5,
+          "development_phase_rows": 10,
+          "historical_delivery_file_rows": 6,
+          "historical_verification_bullets": 4
+        },
+        "manual_review": "Full archived answer reviewed against the selected source; no substantive omission or wording drift found.",
+        "limitations": [
+          "No automated whole-body character comparison",
+          "No H3 inference",
+          "No generated-media quality assessment"
+        ]
       },
-      "structural_and_editorial_checks": {
-        "shared_object_rows": 9,
-        "boundaries": 5,
-        "genre_comparison_rows": 6,
-        "audit_gate_rows": 5,
-        "development_phase_rows": 10,
-        "historical_delivery_file_rows": 6,
-        "historical_verification_bullets": 4
-      },
-      "manual_review": "Full archived answer reviewed against the selected source; no substantive omission or wording drift found.",
-      "limitations": [
-        "No automated whole-body character comparison",
-        "No H3 inference",
-        "No generated-media quality assessment"
-      ]
+      "scope": "Carried forward from the fixed prior record; complete 04 archive byte equality is checked in this update."
     },
     "selected_content_coverage": [
       {
@@ -233,119 +237,259 @@
         "content": "总体组成完整结构句",
         "archive_section": "一",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q02",
         "content": "镜头执行方案的问题与证据",
         "archive_section": "一.1",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q03",
         "content": "全部 Mermaid 节点、边、线型和标签",
         "archive_section": "一.1",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q04",
         "content": "箭头含义、联合调整和检查更新",
         "archive_section": "一.1",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q05",
         "content": "模块与 Skill 打包区别及四个拆包因素",
         "archive_section": "一.1",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q06",
         "content": "十二模块三维表的 36 个正文单元格",
         "archive_section": "一.2",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q07",
         "content": "四条模块职责区别",
         "archive_section": "一.2",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q08",
         "content": "九类共享对象及表达内容",
         "archive_section": "二.1",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q09",
         "content": "五条责任边界及全部例子",
         "archive_section": "二.2",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q10",
         "content": "影视剧与音乐 MV 六行比较",
         "archive_section": "三",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q11",
         "content": "规则作用域与影视剧补样缺口",
         "archive_section": "三",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q12",
         "content": "G0–G4 检查对象和结论范围",
         "archive_section": "四",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q13",
         "content": "完整修复闭环、文字与媒体边界",
         "archive_section": "四",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q14",
         "content": "P0–P9 建设内容与阶段成果",
         "archive_section": "五",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q15",
         "content": "工程顺序理由和接口复用",
         "archive_section": "五",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       },
       {
         "id": "Q16",
         "content": "历史六文件表、四项核验和引用链接",
         "archive_section": "六",
         "result": "covered",
-        "method": "independent editorial review; table and graph items additionally compared automatically"
+        "method": "Prior independent editorial review retained because the archived file is unchanged; structural table and graph checks repeated in this update"
       }
-    ]
+    ],
+    "mandatory_architecture_principles": {
+      "requirement_status": "mandatory",
+      "implementation_status": "planned",
+      "principles": [
+        "HC: 高内聚",
+        "LC: 低耦合",
+        "MD: 模块化",
+        "RT: 路由信息设计"
+      ],
+      "rule_ids": [
+        "HC-01",
+        "HC-02",
+        "HC-03",
+        "LC-01",
+        "LC-02",
+        "LC-03",
+        "LC-04",
+        "LC-05",
+        "MD-01",
+        "MD-02",
+        "MD-03",
+        "MD-04",
+        "RT-01",
+        "RT-02",
+        "RT-03",
+        "RT-04",
+        "RT-05",
+        "RT-06"
+      ],
+      "rule_count": 18,
+      "scope": "M1-M12 and all existing/future submodules at any depth; initial inventory is a design proposal, not implemented capabilities.",
+      "initial_submodule_inventory": {
+        "M1": [
+          "M1.1",
+          "M1.2",
+          "M1.3"
+        ],
+        "M2": [
+          "M2.1",
+          "M2.2",
+          "M2.3"
+        ],
+        "M3": [
+          "M3.1",
+          "M3.2",
+          "M3.3"
+        ],
+        "M4": [
+          "M4.1",
+          "M4.2",
+          "M4.3"
+        ],
+        "M5": [
+          "M5.1",
+          "M5.2",
+          "M5.3",
+          "M5.4"
+        ],
+        "M6": [
+          "M6.1",
+          "M6.2",
+          "M6.3",
+          "M6.4"
+        ],
+        "M7": [
+          "M7.1",
+          "M7.2",
+          "M7.3"
+        ],
+        "M8": [
+          "M8.1",
+          "M8.2",
+          "M8.3"
+        ],
+        "M9": [
+          "M9.1",
+          "M9.2",
+          "M9.3"
+        ],
+        "M10": [
+          "M10.1",
+          "M10.2",
+          "M10.3",
+          "M10.4"
+        ],
+        "M11": [
+          "M11.1",
+          "M11.2",
+          "M11.3",
+          "M11.4"
+        ],
+        "M12": [
+          "M12.1",
+          "M12.2",
+          "M12.3",
+          "M12.4"
+        ]
+      },
+      "initial_submodule_count": 41,
+      "module_contract_information_groups": 11,
+      "route_contract_information_groups": 12,
+      "acceptance_groups": 10,
+      "archive_and_source_files_preserved": [
+        "00-analysis-full.md",
+        "03-source-evidence.md",
+        "04-framework-confirmation-full.md"
+      ],
+      "original_module_contract_body_preserved": true,
+      "original_route_table_and_mermaid_sources_preserved": true,
+      "validation_scope": "Documentation structure, recursive scope registration, IDs and links; no assertion that module implementations or recursive runtime checks have executed."
+    },
+    "architecture_editorial_review": {
+      "performed": true,
+      "scope": "Root reviewed all changed documents; an independent architecture reviewer read all five document changes including the complete new normative document. This is documentation review, not runtime validation.",
+      "result": "pass",
+      "reviewed_documents": [
+        "docs/skillplan/README.md",
+        "docs/skillplan/01-core-framework.md",
+        "docs/skillplan/02-development-roadmap.md",
+        "docs/skillplan/05-workflow-routing.md",
+        "docs/skillplan/06-modularity-routing-principles.md"
+      ],
+      "confirmed_boundaries": [
+        "Mandatory principles cover M1-M12 and all submodule depths, including future nodes.",
+        "Shared plan consumers receive required read-only projections; compatible snapshots do not require equal object revision numbers.",
+        "External contract-compatible data can satisfy dependencies without running all upstream modules.",
+        "Parent-child proposal or delegation preserves a single authoritative field decision and commit path.",
+        "Submodule invocation and isolated checking do not require one standalone Skill or process per submodule.",
+        "Initial 41-submodule inventory is a design proposal, not implemented or tested capabilities.",
+        "M9/M7, M8/M12, and M2/M11 ownership boundaries remain intact.",
+        "Local checks can return with module outputs; M12 aggregates when global audit is needed.",
+        "Contract compatibility compares semantics and constraints, not literal equality of stochastic text.",
+        "Document checks do not certify runtime routing, H3 inference, or media quality."
+      ],
+      "resolved_items": [
+        "Roadmap M8 summary now owns planned state and references independent M12 observations.",
+        "Roadmap P5 separates the orchestrator's routing from M1 work intent.",
+        "Retry requirements distinguish safe read/computation retry from operations that may duplicate external effects."
+      ]
+    }
   },
   "previous_validation": {
-    "commit": "196ebed12d74505f18146a75d82480a5b5f06ed4",
+    "commit": "ec576f117d45a96fb38ee2a5f66a8ffa1e52ff90",
     "path": "docs/skillplan/validation-record.json",
-    "sha256": "164316f15e8bec2dde939752be8be250a66e11563f61922dd316fa3df1962f05",
+    "sha256": "96c1894a0beef8f386dbbd62d64909b554baadb6af9dd8bdfdafbe84ce788e72",
     "status": "pass",
     "source_reading_coverage": {
       "case_count": 15,
@@ -383,15 +527,15 @@
     },
     {
       "path": "docs/skillplan/01-core-framework.md",
-      "bytes": 43349,
-      "lines": 524,
-      "sha256": "547c5d7c7ea7258c8b6107101b6905e52e82b95d48e2670ccadb33d71461fa91"
+      "bytes": 46993,
+      "lines": 554,
+      "sha256": "518e183f3ef2ac5abac3159f8c4c994dafff3e6e94997f08b689f21fe649d9e7"
     },
     {
       "path": "docs/skillplan/02-development-roadmap.md",
-      "bytes": 40779,
-      "lines": 409,
-      "sha256": "b40716ae3c6388bdc7959b80ad4daf889c635fd66c2440597f9ed77fed5050e5"
+      "bytes": 45488,
+      "lines": 441,
+      "sha256": "94d0a333514998aba1d179dd78433160100bf7444be52b1f23b4419e56a3db28"
     },
     {
       "path": "docs/skillplan/03-source-evidence.md",
@@ -407,15 +551,21 @@
     },
     {
       "path": "docs/skillplan/05-workflow-routing.md",
-      "bytes": 44783,
-      "lines": 384,
-      "sha256": "623e96b0b47baf875d18ad92aa7e309d0b0c6dba49b5e3189d99228edd1d7171"
+      "bytes": 50540,
+      "lines": 424,
+      "sha256": "a80703c4d01c1bddab43a947872724e96c710a74bdfa6f08b92e8211491f7270"
+    },
+    {
+      "path": "docs/skillplan/06-modularity-routing-principles.md",
+      "bytes": 32566,
+      "lines": 301,
+      "sha256": "316ede58a536f8b2580c1c9d7fa6b37fe7b4637cbea311838927295b39d9d334"
     },
     {
       "path": "docs/skillplan/README.md",
-      "bytes": 19829,
-      "lines": 226,
-      "sha256": "ad213e316d0b2ce8be5a3c17f88bc5aac8923743f12b63ca1625045a9a874e61"
+      "bytes": 23029,
+      "lines": 248,
+      "sha256": "3e819a61d72d3cb7de8aff97ae9d5ee294fe79c9687a6a34479a17d9b5dcba35"
     }
   ],
   "not_performed": [
@@ -429,5 +579,5 @@
     "Rendered Mermaid visual QA",
     "Fresh external source HTTP checks"
   ],
-  "record_scope": "Hashes cover seven Markdown documents, not this record itself. Git staging and remote publication are checked separately after this record is generated."
+  "record_scope": "Hashes cover eight Markdown documents, not this record itself. Git staging and remote publication are checked separately after this record is generated."
 }
