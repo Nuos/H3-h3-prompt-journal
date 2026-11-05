@@ -1,0 +1,119 @@
+{
+  "kind": "M6ReleaseVerification",
+  "status": "pass",
+  "checks_passed": 13,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "check": "release_manifest_hashes",
+      "status": "pass",
+      "errors": [],
+      "count": 116,
+      "excludes": "Manifest itself and the derived release-check output are excluded to avoid self-hash cycles."
+    },
+    {
+      "check": "package_layout",
+      "status": "pass",
+      "errors": [],
+      "roots": [
+        "SKILL.md",
+        "assets",
+        "references",
+        "scripts"
+      ],
+      "scope": "Chosen distribution layout; optional host metadata is not an official mandatory file."
+    },
+    {
+      "check": "frontmatter_and_progressive_disclosure",
+      "status": "pass",
+      "errors": [],
+      "lines": 92,
+      "description_chars": 288,
+      "scope": "Supplementary checks; official Anthropic quick_validate is recorded separately."
+    },
+    {
+      "check": "relative_resource_links",
+      "status": "pass",
+      "errors": [],
+      "count": 45
+    },
+    {
+      "check": "single_hop_reference_routes",
+      "status": "pass",
+      "errors": [],
+      "count": 17
+    },
+    {
+      "check": "complete_runtime_manifest",
+      "status": "pass",
+      "errors": [],
+      "count": 40
+    },
+    {
+      "check": "runtime_standard_library",
+      "status": "pass",
+      "errors": [],
+      "imports": [
+        "__future__",
+        "argparse",
+        "copy",
+        "datetime",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "re",
+        "sys",
+        "uuid"
+      ]
+    },
+    {
+      "check": "strict_resource_json",
+      "status": "pass",
+      "errors": [],
+      "count": 25
+    },
+    {
+      "check": "official_protocol_exact_bytes",
+      "status": "pass",
+      "errors": [],
+      "count": 2,
+      "source_commit": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+    },
+    {
+      "check": "documented_official_field_mapping",
+      "status": "pass",
+      "errors": [],
+      "scope": "Mapping consistency, not execution of an H3 compiler."
+    },
+    {
+      "check": "case_text_identity_and_read_scope",
+      "status": "pass",
+      "errors": [],
+      "count": 98,
+      "scope": "Source identities and recorded reading ranges; no claim that keyword indexing equals full reading."
+    },
+    {
+      "check": "frozen_plan_sha256",
+      "status": "pass",
+      "errors": [],
+      "count": 9
+    },
+    {
+      "check": "protected_sources",
+      "status": "pass",
+      "errors": [],
+      "count": 290,
+      "local_bytes_checked": 155,
+      "immutable_tree_entries_checked": 290,
+      "snapshot_identity": "33be739a4044175b560733745bdd4f71d721e3d5",
+      "expected_snapshot_identity": "33be739a4044175b560733745bdd4f71d721e3d5",
+      "scope": "Local source preservation plus the exact supplied immutable tree, if any. A base-tree check is not a publication-diff check; the final candidate tree must be checked separately. Media blobs were not semantically inspected."
+    }
+  ],
+  "limits": [
+    "No H3 inference or media evaluation.",
+    "Behavior and portable invocation tests are separate recorded runs.",
+    "A provided Git tree snapshot only establishes its own immutable state."
+  ]
+}

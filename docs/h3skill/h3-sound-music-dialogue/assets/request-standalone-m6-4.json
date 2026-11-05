@@ -1,0 +1,27 @@
+{
+  "kind": "M6Request",
+  "contract_version": "1.0.0",
+  "work_id": "sound_example",
+  "base_version": 0,
+  "request_id": "request_standalone_m6_4",
+  "target": "M6.4",
+  "sources": {
+    "brief": {
+      "kind": "user_requirement",
+      "locator": "synthetic-design-fixture://m6/sound-contract",
+      "version": "1",
+      "excerpt": "Use the registered ambient source segment; preserve the dialogue exactly; add a footstep at the referenced action. These are contract fixtures, not observations of case-study media."
+    }
+  },
+  "inputs": {
+    "effects_brief": "Tie a single footstep to action_step.",
+    "action_context": {
+      "state": "unknown",
+      "reason": "No upstream artifact or audio observation is available; preserve the gap."
+    },
+    "source_context": {
+      "state": "unknown",
+      "reason": "No upstream artifact or audio observation is available; preserve the gap."
+    }
+  }
+}

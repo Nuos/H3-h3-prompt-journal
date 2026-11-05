@@ -1,0 +1,2680 @@
+{
+  "kind": "M6PortabilityRun",
+  "started_at_utc": "2026-11-05T15:52:09.083906+00:00",
+  "finished_at_utc": "2026-11-05T15:52:10.160069+00:00",
+  "environment": "Only a temporary copy of the skill directory; python -I -S disables site packages and ambient import paths.",
+  "python": "3.12.14",
+  "status": "pass",
+  "invocations": 14,
+  "failures": [],
+  "inputs_unchanged": true,
+  "runtime_file_sha256": {
+    "SKILL.md": "08907980148921f708027eb8d0f3b4a0d89a7f4259712f5244f4399cb79ef158",
+    "assets/request-m6-4.json": "fafeb38dc8eb2c100c685f8e1f5cc13642d962f7944be5768f70ae1b14e775c7",
+    "assets/request-standalone-m6-3.json": "1adfd68c0fafbbf8fac71db25cf8f694da12752528a194c32fd67990cbcc46f2",
+    "assets/proposal-standalone-m6-1.json": "1d6f0bfe7a955d4d4bee560e3d7356e476f5ed0c46cc08b3a1709f04d7b351dc",
+    "assets/request-standalone-m6-1.json": "e601e5ae0f1de615dba176e8c17c38e209144264d9391998a82defe3c469a181",
+    "assets/state-empty.json": "e559e88d125e0333fde2730f3b94d9c101091d45e800ff7a96dba294269dc1c0",
+    "assets/requests.json": "7af51415d2ba115b5b7df14f850b556938776be8231817075f41ab2134223f29",
+    "assets/proposal-standalone-m6-3.json": "69315de9a1c3f4056e974547d187108dac28bc0457d421a26a9318ac884f2489",
+    "assets/proposal-m6-4.json": "87112412ae70b4fc4b4ff09dd6e2a5824a2029db77674b963bee0e0c04bdb5ec",
+    "assets/request-m6-3.json": "333727c5c8eee70e097c3e96b153b4c8fbef447083aebd5fc856c69a5a97874d",
+    "assets/proposal-m6-3.json": "124073c761f8f4edc4b6bcbd36856d9ac0c1a8fa21d912aab5cad5983973c2f5",
+    "assets/proposal-m6-1.json": "7f510b4cf3549284ea6d5775313a145edfb07915746972b5803ae1bb975fc84a",
+    "assets/request-standalone-m6-2.json": "521fb4736fd30e7512623d603622d79a47b34afd67bb994d1b438d6b5aac3a25",
+    "assets/request-m6-1.json": "09a838dbd8f6d2ddc47bc650d12c500c031db2c9101d75153d81ede49efa1055",
+    "assets/request-m6-2.json": "2362f24a4a3de95a6472a41834b27476cccade206f23ce23eff7eb1d7bf178fc",
+    "assets/fixture-manifest.json": "777e4e765ec9a562b6c4f38545416c55e7c25d4d3399d01aaf45010083bb8c9e",
+    "assets/proposal-m6-2.json": "f99e36c882afa9daaf47bc88c6de992c4b9ca3973ec435029e6c9e2f4bbef625",
+    "assets/proposal-standalone-m6-2.json": "b075872dd5b6007512d957dc3e8974f932dffc456f0e8a55178f16dafbd96157",
+    "assets/proposal-batch.json": "d1a5a0b94a840939f002e9df580b1aa669f35036040c24fe7c407295e27fd4ce",
+    "assets/proposal-standalone-m6-4.json": "488d790333f0b021a49edee7470e6af0198b4f7e25335f46b2ab111cb052f4dd",
+    "assets/request-m6.json": "ccc57dc0316d236cf61b9825bf24b12ae95f43c42b3f6292f2079906411f8e97",
+    "assets/request-standalone-m6-4.json": "0511f950cd556fef1887e3d248e709de79b36eaca1bfd484cb12f0c3e4731a47",
+    "scripts/m6_contract.py": "7d4173070df5b34d3f77e240bee83c53f9f5eaf9909bd77e97d14c3c652462ee",
+    "references/provenance-and-license.md": "3bb6178a33105db6d28fc52dc76c137e13a953a5e5fb760a7ec10e2702b207c4",
+    "references/case-index.json": "bb250b7609aa24719774fa986fe1a6f76061fb2c9572ae3233d367a43371cf2b",
+    "references/ambience-and-action-sounds.md": "40917bbd1dc2c29e2fdd19b5781ca41d9670f71be3fe2de16d0cd8f6cf630c5c",
+    "references/case-evidence.md": "07f7c433277e35224756f96833bddf7dedb1af711c2a4ff039aafbebd93d68af",
+    "references/sources-and-speakers.md": "60f7a2fe8b3a7015d2fe570e672e577d2aff276ac393b62b8c1ab19d1b0bc9c5",
+    "references/h3-base-official.txt": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+    "references/case-source-LICENSE.txt": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+    "references/h3-label-mapping.md": "dd47d8fa00e186202eb04f8f4e005406f39d08f9d033d5971de211ec60d32f0f",
+    "references/h3-NOTICE.txt": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+    "references/audit-and-handoff.md": "70003f3fe39cf80bfb670540f53237ab631871a34c196109e218eb350ac4af34",
+    "references/h3-ref-official.txt": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+    "references/h3-protocol-source.json": "364c57b7ef6485a503221c30aee2a6817c442f3d1870424ca7aead4539452fad",
+    "references/dialogue-and-vocal-events.md": "9da56744386056c00ee98514a096a8f298dbd715131d43981df58ef58112d4a8",
+    "references/contracts.json": "a521215b27f9768ac7685cb29844a364ccf64d7e3d0bfb5321fe94ceceae5d41",
+    "references/music-and-audio-policy.md": "d4efb01021a552808c12f30084fa5ae5c5ca04ba018cb6fc894ddca9688116c8",
+    "references/contract-guide.md": "78e4307bb74119f4d09f7db227085f5954d47c9586f3da882df4ef2d42ee9c59",
+    "references/module-registry.json": "f7ee53579c181c91cb6e78df0182dd844726b0e63bb0ae9f1291e4143d554d23"
+  },
+  "runs": [
+    {
+      "name": "standalone_route_M6.1",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "route",
+        "assets/request-standalone-m6-1.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "route",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [],
+        "trace": {
+          "call_id": "m6-880e7a2ca9e544f99f1aab76480c9f2a",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:09.229990+00:00",
+          "finished_at": "2026-11-05T15:52:09.232453+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "request": "b34c558893b1f5a13736983a3ac47c210da7e3ffe6ec8628d6d98b4bb6394b7d"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "request_standalone_m6_1"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_standalone_m6_1",
+              "target": "M6.1",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_standalone_m6_1": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "routes": [
+          {
+            "module_id": "M6.1",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/sources-and-speakers.md"
+            ],
+            "write_scope": "/content/sources",
+            "return_to": "M6",
+            "minimum_inputs": [
+              "source_brief"
+            ],
+            "repair_target": "M6.1"
+          }
+        ],
+        "route_status": "ready_for_call",
+        "invocation": "not_invoked"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_check_M6.1",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "check",
+        "assets/proposal-standalone-m6-1.json",
+        "--request",
+        "assets/request-standalone-m6-1.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "check",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/changes/sources/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.1"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/changes/sources/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.1"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-23d4049956ab417ebf1e9c0e043aabd5",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:09.286300+00:00",
+          "finished_at": "2026-11-05T15:52:09.288103+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "artifact": "11a58199231334169f53497e711e6fe60858fdb19706100e9cbbb90a82a1a21c",
+            "request": "b34c558893b1f5a13736983a3ac47c210da7e3ffe6ec8628d6d98b4bb6394b7d"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "request_standalone_m6_1"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_standalone_m6_1",
+              "target": "M6.1",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_standalone_m6_1": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_route_M6.2",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "route",
+        "assets/request-standalone-m6-2.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "route",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/inputs/source_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-f8c364829f2e4faba0be04d21e00aeec",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:09.353393+00:00",
+          "finished_at": "2026-11-05T15:52:09.354759+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "request": "02ecc2704ff2c26c3372b142eed389fca2e3fb73d4d11bb1d524486176428f9b"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "request_standalone_m6_2"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_standalone_m6_2",
+              "target": "M6.2",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_standalone_m6_2": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "routes": [
+          {
+            "module_id": "M6.2",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/dialogue-and-vocal-events.md"
+            ],
+            "write_scope": "/content/vocal_events",
+            "return_to": "M6",
+            "minimum_inputs": [
+              "vocal_brief",
+              "source_context"
+            ],
+            "repair_target": "M6.2"
+          }
+        ],
+        "route_status": "ready_with_unverified_inputs",
+        "invocation": "not_invoked"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_check_M6.2",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "check",
+        "assets/proposal-standalone-m6-2.json",
+        "--request",
+        "assets/request-standalone-m6-2.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "check",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/context/source_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "reference_context_unknown",
+            "path": "/changes/vocal_events/items/lineA/source_ref",
+            "message": "Internal reference cannot be checked without sources",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-55656f73367c4c24ae880338170f1d98",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:09.424499+00:00",
+          "finished_at": "2026-11-05T15:52:09.426881+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "artifact": "f7b3aa76dc2a5a541ee6f07b1a9f05fc9ec3ad33d755ddc8864f8e03308fe03a",
+            "request": "02ecc2704ff2c26c3372b142eed389fca2e3fb73d4d11bb1d524486176428f9b"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "request_standalone_m6_2"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_standalone_m6_2",
+              "target": "M6.2",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_standalone_m6_2": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_route_M6.3",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "route",
+        "assets/request-standalone-m6-3.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "route",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/inputs/reference_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.3"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-5d8394ef1d8e476e8c9d743e2eb0c5b8",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:09.490232+00:00",
+          "finished_at": "2026-11-05T15:52:09.491602+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "request": "5b6b8b6f4f21751bd9e19f86af7491f2c41834ecf13d8390e25a7e026f78bb44"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "request_standalone_m6_3"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_standalone_m6_3",
+              "target": "M6.3",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_standalone_m6_3": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "routes": [
+          {
+            "module_id": "M6.3",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/music-and-audio-policy.md"
+            ],
+            "write_scope": "/content/music",
+            "return_to": "M6",
+            "minimum_inputs": [
+              "music_brief",
+              "reference_context"
+            ],
+            "repair_target": "M6.3"
+          }
+        ],
+        "route_status": "ready_with_unverified_inputs",
+        "invocation": "not_invoked"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_check_M6.3",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "check",
+        "assets/proposal-standalone-m6-3.json",
+        "--request",
+        "assets/request-standalone-m6-3.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "check",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/context/reference_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.3"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/changes/music/items/musicA/beat_plan",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.3"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/reference_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.3"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-33ca4e3d20a84032afcd9a34175c6dff",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:09.553602+00:00",
+          "finished_at": "2026-11-05T15:52:09.555811+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "artifact": "dbb590e89fc218f186b817172341ecdd238af9ac7899384ead127e594bcf9fd6",
+            "request": "5b6b8b6f4f21751bd9e19f86af7491f2c41834ecf13d8390e25a7e026f78bb44"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "request_standalone_m6_3"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_standalone_m6_3",
+              "target": "M6.3",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_standalone_m6_3": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_route_M6.4",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "route",
+        "assets/request-standalone-m6-4.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "route",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/inputs/action_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/inputs/source_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-77169cb5f72e47068530e99fd4fbfe9d",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:09.629831+00:00",
+          "finished_at": "2026-11-05T15:52:09.632304+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "request": "aa94e2f8c3efb3484ec191a681ddd038fbedb54fc3463bb4b005d546024e2706"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "request_standalone_m6_4"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_standalone_m6_4",
+              "target": "M6.4",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_standalone_m6_4": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "routes": [
+          {
+            "module_id": "M6.4",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/ambience-and-action-sounds.md"
+            ],
+            "write_scope": "/content/effects",
+            "return_to": "M6",
+            "minimum_inputs": [
+              "effects_brief",
+              "action_context"
+            ],
+            "repair_target": "M6.4"
+          }
+        ],
+        "route_status": "ready_with_unverified_inputs",
+        "invocation": "not_invoked"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_check_M6.4",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "check",
+        "assets/proposal-standalone-m6-4.json",
+        "--request",
+        "assets/request-standalone-m6-4.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "check",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/context/action_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/context/source_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/changes/effects/items/stepA/continuity",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/action_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "reference_context_unknown",
+            "path": "/changes/effects/items/stepA/source_ref",
+            "message": "Internal reference cannot be checked without sources",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-806f9c764e3d43c9b29a7c2cecbb6714",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:09.691005+00:00",
+          "finished_at": "2026-11-05T15:52:09.693013+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "artifact": "ea2d9430fe26624619a571be2d5b4f8ba0dfb8cde640bb9859f7f44f172ff7ad",
+            "request": "aa94e2f8c3efb3484ec191a681ddd038fbedb54fc3463bb4b005d546024e2706"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "request_standalone_m6_4"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_standalone_m6_4",
+              "target": "M6.4",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_standalone_m6_4": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "parent_route",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "route",
+        "assets/request-m6.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "route",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [],
+        "trace": {
+          "call_id": "m6-be38bb1f22e1446e97718d2e022a6f83",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:09.786112+00:00",
+          "finished_at": "2026-11-05T15:52:09.787502+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "request": "02a2ea248f45221b1e0cf9c14312ae5fa46babb32769b49d9386ee1019d86350"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "request_m6"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_m6",
+              "target": "M6",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_m6": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "routes": [
+          {
+            "module_id": "M6.1",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/sources-and-speakers.md"
+            ],
+            "write_scope": "/content/sources",
+            "return_to": "M6",
+            "minimum_inputs": [
+              "source_brief"
+            ],
+            "repair_target": "M6.1"
+          },
+          {
+            "module_id": "M6.2",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/dialogue-and-vocal-events.md"
+            ],
+            "write_scope": "/content/vocal_events",
+            "return_to": "M6",
+            "minimum_inputs": [
+              "vocal_brief",
+              "source_context"
+            ],
+            "repair_target": "M6.2"
+          },
+          {
+            "module_id": "M6.3",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/music-and-audio-policy.md"
+            ],
+            "write_scope": "/content/music",
+            "return_to": "M6",
+            "minimum_inputs": [
+              "music_brief",
+              "reference_context"
+            ],
+            "repair_target": "M6.3"
+          },
+          {
+            "module_id": "M6.4",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/ambience-and-action-sounds.md"
+            ],
+            "write_scope": "/content/effects",
+            "return_to": "M6",
+            "minimum_inputs": [
+              "effects_brief",
+              "action_context"
+            ],
+            "repair_target": "M6.4"
+          }
+        ],
+        "route_status": "ready_for_call",
+        "invocation": "not_invoked"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "combined_proposals",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "check",
+        "assets/proposal-batch.json",
+        "--requests",
+        "assets/requests.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "check",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/1/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/1/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/3/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/3/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/proposals/0/changes/sources/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.1"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/proposals/0/changes/sources/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.1"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/proposals/1/context/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/proposals/1/context/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/proposals/2/changes/music/items/musicA/beat_plan",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.3"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/proposals/3/context/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/proposals/3/context/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/proposals/3/changes/effects/items/stepA/continuity",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-711c82ef9932407bb09d58ba765fc8ef",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:09.870255+00:00",
+          "finished_at": "2026-11-05T15:52:09.876796+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "artifact": "ac69a2ec9d559740e4affb5eea0e0ff00d3174ebd1e227ae7f3c55f045f4cd75",
+            "requests": "cf01dc6b5eef344e29613afe8feeffbd1ef0e4f9135b10a18087b836eecb9973"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "request_m6_1",
+            "request_m6_2",
+            "request_m6_3",
+            "request_m6_4"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_m6_1",
+              "target": "M6.1",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "request_m6_2",
+              "target": "M6.2",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "request_m6_3",
+              "target": "M6.3",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "request_m6_4",
+              "target": "M6.4",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_m6_1": {
+              "brief": "1"
+            },
+            "request_m6_2": {
+              "brief": "1"
+            },
+            "request_m6_3": {
+              "brief": "1"
+            },
+            "request_m6_4": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "atomic_accept",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "accept",
+        "assets/state-empty.json",
+        "assets/proposal-batch.json",
+        "--requests",
+        "assets/requests.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "accept",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/1/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/1/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/3/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/3/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/0/changes/sources/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.1"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/0/changes/sources/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.1"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/1/context/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/1/context/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/2/changes/music/items/musicA/beat_plan",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.3"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/3/context/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/3/context/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/3/changes/effects/items/stepA/continuity",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/sources/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/sources/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/music/items/musicA/beat_plan",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/effects/items/stepA/continuity",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-3c19762ffbee4eedbbbc65633c824359",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:09.945679+00:00",
+          "finished_at": "2026-11-05T15:52:09.953583+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "state": "483dd6e228e1f56f98110384d8ba33904e4412fc487286e972347033a202f552",
+            "batch": "ac69a2ec9d559740e4affb5eea0e0ff00d3174ebd1e227ae7f3c55f045f4cd75",
+            "requests": "cf01dc6b5eef344e29613afe8feeffbd1ef0e4f9135b10a18087b836eecb9973"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": "batch_m6",
+          "revision": 1,
+          "request_ids": [
+            "request_m6_1",
+            "request_m6_2",
+            "request_m6_3",
+            "request_m6_4"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_m6_1",
+              "target": "M6.1",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "request_m6_2",
+              "target": "M6.2",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "request_m6_3",
+              "target": "M6.3",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "request_m6_4",
+              "target": "M6.4",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_m6_1": {
+              "brief": "1"
+            },
+            "request_m6_2": {
+              "brief": "1"
+            },
+            "request_m6_3": {
+              "brief": "1"
+            },
+            "request_m6_4": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "accepted_draft",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "state": {
+          "kind": "M6State",
+          "contract_version": "1.0.0",
+          "work_id": "sound_example",
+          "version": 1,
+          "owner": "M6",
+          "object_type": "SoundPlan",
+          "status": "draft",
+          "sources": {
+            "brief": {
+              "kind": "user_requirement",
+              "locator": "synthetic-design-fixture://m6/sound-contract",
+              "version": "1",
+              "excerpt": "Use the registered ambient source segment; preserve the dialogue exactly; add a footstep at the referenced action. These are contract fixtures, not observations of case-study media."
+            }
+          },
+          "content": {
+            "sources": {
+              "items": {
+                "speakerA": {
+                  "sound_source_id": "speakerA",
+                  "shot_id": "shot1",
+                  "source_kind": "speaker",
+                  "subject_ref": {
+                    "kind": "external",
+                    "id": "subjectA",
+                    "shot_id": "shot1",
+                    "source_id": "brief",
+                    "source_version": "1"
+                  },
+                  "voice_ref": {
+                    "state": "unknown",
+                    "reason": "No upstream artifact or audio observation is available; preserve the gap."
+                  },
+                  "description": {
+                    "state": "known",
+                    "value": "A visible speaker with a stable identity.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "voice_requirement": {
+                    "state": "known",
+                    "value": "Quiet, intelligible speech; no inferred accent.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "permission": {
+                    "state": "unknown",
+                    "reason": "No upstream artifact or audio observation is available; preserve the gap."
+                  },
+                  "source_refs": [
+                    "brief"
+                  ],
+                  "applies_to_shots": [
+                    "shot1"
+                  ]
+                }
+              }
+            },
+            "vocal_events": {
+              "items": {
+                "lineA": {
+                  "vocal_event_id": "lineA",
+                  "shot_id": "shot1",
+                  "source_ref": {
+                    "kind": "internal",
+                    "id": "speakerA"
+                  },
+                  "event_kind": "spoken_dialogue",
+                  "original_text": "Keep this line, exactly!",
+                  "approved_text": "Keep this line, exactly!",
+                  "rewrite_approval": {
+                    "state": "not_applicable",
+                    "reason": "Not required by this sound event."
+                  },
+                  "delivery": {
+                    "state": "known",
+                    "value": "Speak naturally after the action cue.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "lip_sync": "required",
+                  "audio_origin": "new",
+                  "track_ref": {
+                    "state": "not_applicable",
+                    "reason": "Not required by this sound event."
+                  },
+                  "timing_owner": "M7",
+                  "source_refs": [
+                    "brief"
+                  ],
+                  "language": {
+                    "state": "known",
+                    "value": "English",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "continuity": {
+                    "state": "known",
+                    "value": "This line remains a distinct event. Start after the supplied action cue; do not infer an absolute time. Cross-cut continuation is unresolved.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  }
+                }
+              }
+            },
+            "music": {
+              "items": {
+                "musicA": {
+                  "music_id": "musicA",
+                  "shot_id": "shot1",
+                  "use_strategy": "partially_copy",
+                  "audio_selection": {
+                    "asset": {
+                      "asset_id": "audioA",
+                      "asset_version": "1",
+                      "source_id": "brief",
+                      "source_version": "1",
+                      "available": false,
+                      "duration_seconds": 13.793
+                    },
+                    "window": {
+                      "start_seconds": 0,
+                      "end_seconds": 13.793
+                    }
+                  },
+                  "whole_source": "yes",
+                  "additional_audio": "yes",
+                  "removals_or_replacements": "no",
+                  "music_requirement": {
+                    "state": "known",
+                    "value": "Retain the complete registered source and add the authorized speech and footstep; therefore partially_copy.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "beat_plan": {
+                    "state": "unknown",
+                    "reason": "No upstream artifact or audio observation is available; preserve the gap."
+                  },
+                  "timing_owner": "M7",
+                  "edit_owner": "M9",
+                  "source_refs": [
+                    "brief"
+                  ],
+                  "applies_to_shots": [
+                    "shot1"
+                  ]
+                }
+              }
+            },
+            "effects": {
+              "items": {
+                "stepA": {
+                  "effect_id": "stepA",
+                  "shot_id": "shot1",
+                  "source_ref": {
+                    "kind": "internal",
+                    "id": "speakerA"
+                  },
+                  "action_ref": {
+                    "kind": "external",
+                    "id": "action_step",
+                    "shot_id": "shot1",
+                    "source_id": "brief",
+                    "source_version": "1"
+                  },
+                  "event_kind": "action",
+                  "description": {
+                    "state": "known",
+                    "value": "One footstep tied to the supplied contact event.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "spatial_relation": {
+                    "state": "known",
+                    "value": "Local to the speaker, with plausible room sound.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "continuity": {
+                    "state": "unknown",
+                    "reason": "No upstream artifact or audio observation is available; preserve the gap."
+                  },
+                  "audio_origin": "new",
+                  "track_ref": {
+                    "state": "not_applicable",
+                    "reason": "Not required by this sound event."
+                  },
+                  "explicit_silence": {
+                    "state": "not_applicable",
+                    "reason": "Not required by this sound event."
+                  },
+                  "timing_owner": "M7",
+                  "source_refs": [
+                    "brief"
+                  ]
+                }
+              }
+            }
+          },
+          "issues": {},
+          "accepted_proposals": {
+            "proposal_m6_1": {
+              "digest": "b394f770fd358d6daa23abc00c851bfcfa108cb7eee7b3a073c43c22208f8c9b",
+              "source_request_id": "request_m6_1",
+              "module_id": "M6.1",
+              "accepted_version": 1
+            },
+            "proposal_m6_2": {
+              "digest": "8f2b660075e0e3b48285653f1092b166741e35856a33c173fbacaedc4c4491f2",
+              "source_request_id": "request_m6_2",
+              "module_id": "M6.2",
+              "accepted_version": 1
+            },
+            "proposal_m6_3": {
+              "digest": "6a7e40a3849e13e50b899f7d2a32a60f5bd3a50e210382827f26b58c59636c1b",
+              "source_request_id": "request_m6_3",
+              "module_id": "M6.3",
+              "accepted_version": 1
+            },
+            "proposal_m6_4": {
+              "digest": "3fb9f77738f39baebd56d10f21b27980edfc2aff47986cd93a9a8772c7e9d550",
+              "source_request_id": "request_m6_4",
+              "module_id": "M6.4",
+              "accepted_version": 1
+            }
+          },
+          "consumers": {
+            "time_consumer": {
+              "module_id": "M7",
+              "result_version": 1,
+              "source_state_version": 0,
+              "read_paths": [
+                "/content/vocal_events"
+              ],
+              "status": "stale"
+            },
+            "label_consumer": {
+              "module_id": "M11",
+              "result_version": 1,
+              "source_state_version": 0,
+              "read_paths": [
+                "/content/sources",
+                "/content/music"
+              ],
+              "status": "stale"
+            }
+          },
+          "display": {
+            "title": "M6 contract design fixture"
+          }
+        },
+        "acceptance": "accepted_draft",
+        "impact": {
+          "changed_paths": [
+            "/content/effects/items/stepA",
+            "/content/music/items/musicA",
+            "/content/sources/items/speakerA",
+            "/content/vocal_events/items/lineA",
+            "/sources/brief"
+          ],
+          "stale_consumers": {
+            "time_consumer": {
+              "module_id": "M7",
+              "changed_paths": [
+                "/content/vocal_events/items/lineA"
+              ],
+              "status": "stale",
+              "already_stale": false
+            },
+            "label_consumer": {
+              "module_id": "M11",
+              "changed_paths": [
+                "/content/music/items/musicA",
+                "/content/sources/items/speakerA"
+              ],
+              "status": "stale",
+              "already_stale": false
+            }
+          },
+          "scope": "declared read-path intersections only; hidden dependencies unverified"
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "accepted_state_contract",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "check",
+        "accepted-state.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "check",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/content/sources/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/sources/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/music/items/musicA/beat_plan",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/effects/items/stepA/continuity",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-d2a500aaaa4748f08b887ade3af269c5",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:10.009896+00:00",
+          "finished_at": "2026-11-05T15:52:10.013184+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "artifact": "66eb689dc30ebe50389a6bfc6a72dd136fd9bbd0aaa5c7b430c56d988d11aaff"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [],
+          "input_versions": [],
+          "source_versions": {},
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "exact_accept_replay",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "accept",
+        "accepted-state.json",
+        "assets/proposal-batch.json",
+        "--requests",
+        "assets/requests.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "accept",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/content/sources/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/sources/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/music/items/musicA/beat_plan",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/effects/items/stepA/continuity",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/1/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/1/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/3/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/requests/3/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/0/changes/sources/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.1"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/0/changes/sources/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.1"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/1/context/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/1/context/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.2"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/2/changes/music/items/musicA/beat_plan",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.3"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/3/context/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/3/context/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/batch/proposals/3/changes/effects/items/stepA/continuity",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/request/inputs/source_context/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6.4"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/sources/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/sources/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/music/items/musicA/beat_plan",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/effects/items/stepA/continuity",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-0363632540d5406289e29553f1b2bd48",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:10.066236+00:00",
+          "finished_at": "2026-11-05T15:52:10.074896+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "state": "66eb689dc30ebe50389a6bfc6a72dd136fd9bbd0aaa5c7b430c56d988d11aaff",
+            "batch": "ac69a2ec9d559740e4affb5eea0e0ff00d3174ebd1e227ae7f3c55f045f4cd75",
+            "requests": "cf01dc6b5eef344e29613afe8feeffbd1ef0e4f9135b10a18087b836eecb9973"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": "batch_m6",
+          "revision": 1,
+          "request_ids": [
+            "request_m6_1",
+            "request_m6_2",
+            "request_m6_3",
+            "request_m6_4"
+          ],
+          "input_versions": [
+            {
+              "request_id": "request_m6_1",
+              "target": "M6.1",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "request_m6_2",
+              "target": "M6.2",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "request_m6_3",
+              "target": "M6.3",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "request_m6_4",
+              "target": "M6.4",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "request_m6_1": {
+              "brief": "1"
+            },
+            "request_m6_2": {
+              "brief": "1"
+            },
+            "request_m6_3": {
+              "brief": "1"
+            },
+            "request_m6_4": {
+              "brief": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "idempotent_replay",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "state": {
+          "kind": "M6State",
+          "contract_version": "1.0.0",
+          "work_id": "sound_example",
+          "version": 1,
+          "owner": "M6",
+          "object_type": "SoundPlan",
+          "status": "draft",
+          "sources": {
+            "brief": {
+              "kind": "user_requirement",
+              "locator": "synthetic-design-fixture://m6/sound-contract",
+              "version": "1",
+              "excerpt": "Use the registered ambient source segment; preserve the dialogue exactly; add a footstep at the referenced action. These are contract fixtures, not observations of case-study media."
+            }
+          },
+          "content": {
+            "sources": {
+              "items": {
+                "speakerA": {
+                  "sound_source_id": "speakerA",
+                  "shot_id": "shot1",
+                  "source_kind": "speaker",
+                  "subject_ref": {
+                    "kind": "external",
+                    "id": "subjectA",
+                    "shot_id": "shot1",
+                    "source_id": "brief",
+                    "source_version": "1"
+                  },
+                  "voice_ref": {
+                    "state": "unknown",
+                    "reason": "No upstream artifact or audio observation is available; preserve the gap."
+                  },
+                  "description": {
+                    "state": "known",
+                    "value": "A visible speaker with a stable identity.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "voice_requirement": {
+                    "state": "known",
+                    "value": "Quiet, intelligible speech; no inferred accent.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "permission": {
+                    "state": "unknown",
+                    "reason": "No upstream artifact or audio observation is available; preserve the gap."
+                  },
+                  "source_refs": [
+                    "brief"
+                  ],
+                  "applies_to_shots": [
+                    "shot1"
+                  ]
+                }
+              }
+            },
+            "vocal_events": {
+              "items": {
+                "lineA": {
+                  "vocal_event_id": "lineA",
+                  "shot_id": "shot1",
+                  "source_ref": {
+                    "kind": "internal",
+                    "id": "speakerA"
+                  },
+                  "event_kind": "spoken_dialogue",
+                  "original_text": "Keep this line, exactly!",
+                  "approved_text": "Keep this line, exactly!",
+                  "rewrite_approval": {
+                    "state": "not_applicable",
+                    "reason": "Not required by this sound event."
+                  },
+                  "delivery": {
+                    "state": "known",
+                    "value": "Speak naturally after the action cue.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "lip_sync": "required",
+                  "audio_origin": "new",
+                  "track_ref": {
+                    "state": "not_applicable",
+                    "reason": "Not required by this sound event."
+                  },
+                  "timing_owner": "M7",
+                  "source_refs": [
+                    "brief"
+                  ],
+                  "language": {
+                    "state": "known",
+                    "value": "English",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "continuity": {
+                    "state": "known",
+                    "value": "This line remains a distinct event. Start after the supplied action cue; do not infer an absolute time. Cross-cut continuation is unresolved.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  }
+                }
+              }
+            },
+            "music": {
+              "items": {
+                "musicA": {
+                  "music_id": "musicA",
+                  "shot_id": "shot1",
+                  "use_strategy": "partially_copy",
+                  "audio_selection": {
+                    "asset": {
+                      "asset_id": "audioA",
+                      "asset_version": "1",
+                      "source_id": "brief",
+                      "source_version": "1",
+                      "available": false,
+                      "duration_seconds": 13.793
+                    },
+                    "window": {
+                      "start_seconds": 0,
+                      "end_seconds": 13.793
+                    }
+                  },
+                  "whole_source": "yes",
+                  "additional_audio": "yes",
+                  "removals_or_replacements": "no",
+                  "music_requirement": {
+                    "state": "known",
+                    "value": "Retain the complete registered source and add the authorized speech and footstep; therefore partially_copy.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "beat_plan": {
+                    "state": "unknown",
+                    "reason": "No upstream artifact or audio observation is available; preserve the gap."
+                  },
+                  "timing_owner": "M7",
+                  "edit_owner": "M9",
+                  "source_refs": [
+                    "brief"
+                  ],
+                  "applies_to_shots": [
+                    "shot1"
+                  ]
+                }
+              }
+            },
+            "effects": {
+              "items": {
+                "stepA": {
+                  "effect_id": "stepA",
+                  "shot_id": "shot1",
+                  "source_ref": {
+                    "kind": "internal",
+                    "id": "speakerA"
+                  },
+                  "action_ref": {
+                    "kind": "external",
+                    "id": "action_step",
+                    "shot_id": "shot1",
+                    "source_id": "brief",
+                    "source_version": "1"
+                  },
+                  "event_kind": "action",
+                  "description": {
+                    "state": "known",
+                    "value": "One footstep tied to the supplied contact event.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "spatial_relation": {
+                    "state": "known",
+                    "value": "Local to the speaker, with plausible room sound.",
+                    "source_refs": [
+                      "brief"
+                    ]
+                  },
+                  "continuity": {
+                    "state": "unknown",
+                    "reason": "No upstream artifact or audio observation is available; preserve the gap."
+                  },
+                  "audio_origin": "new",
+                  "track_ref": {
+                    "state": "not_applicable",
+                    "reason": "Not required by this sound event."
+                  },
+                  "explicit_silence": {
+                    "state": "not_applicable",
+                    "reason": "Not required by this sound event."
+                  },
+                  "timing_owner": "M7",
+                  "source_refs": [
+                    "brief"
+                  ]
+                }
+              }
+            }
+          },
+          "issues": {},
+          "accepted_proposals": {
+            "proposal_m6_1": {
+              "digest": "b394f770fd358d6daa23abc00c851bfcfa108cb7eee7b3a073c43c22208f8c9b",
+              "source_request_id": "request_m6_1",
+              "module_id": "M6.1",
+              "accepted_version": 1
+            },
+            "proposal_m6_2": {
+              "digest": "8f2b660075e0e3b48285653f1092b166741e35856a33c173fbacaedc4c4491f2",
+              "source_request_id": "request_m6_2",
+              "module_id": "M6.2",
+              "accepted_version": 1
+            },
+            "proposal_m6_3": {
+              "digest": "6a7e40a3849e13e50b899f7d2a32a60f5bd3a50e210382827f26b58c59636c1b",
+              "source_request_id": "request_m6_3",
+              "module_id": "M6.3",
+              "accepted_version": 1
+            },
+            "proposal_m6_4": {
+              "digest": "3fb9f77738f39baebd56d10f21b27980edfc2aff47986cd93a9a8772c7e9d550",
+              "source_request_id": "request_m6_4",
+              "module_id": "M6.4",
+              "accepted_version": 1
+            }
+          },
+          "consumers": {
+            "time_consumer": {
+              "module_id": "M7",
+              "result_version": 1,
+              "source_state_version": 0,
+              "read_paths": [
+                "/content/vocal_events"
+              ],
+              "status": "stale"
+            },
+            "label_consumer": {
+              "module_id": "M11",
+              "result_version": 1,
+              "source_state_version": 0,
+              "read_paths": [
+                "/content/sources",
+                "/content/music"
+              ],
+              "status": "stale"
+            }
+          },
+          "display": {
+            "title": "M6 contract design fixture"
+          }
+        },
+        "acceptance": "idempotent_replay",
+        "impact": {
+          "changed_paths": [],
+          "stale_consumers": {
+            "time_consumer": {
+              "module_id": "M7",
+              "changed_paths": [],
+              "status": "stale",
+              "already_stale": true
+            },
+            "label_consumer": {
+              "module_id": "M11",
+              "changed_paths": [],
+              "status": "stale",
+              "already_stale": true
+            }
+          },
+          "scope": "declared read-path intersections only; hidden dependencies unverified"
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "registered_impact",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m6_contract.py",
+        "impact",
+        "assets/state-empty.json",
+        "accepted-state.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M6ToolResult",
+        "contract_version": "1.0.0",
+        "command": "impact",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "audio_availability_and_quality",
+            "measured_beat_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "explicit_unknown",
+            "path": "/content/sources/items/speakerA/voice_ref",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/sources/items/speakerA/permission",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/music/items/musicA/beat_plan",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          },
+          {
+            "code": "explicit_unknown",
+            "path": "/content/effects/items/stepA/continuity",
+            "message": "No upstream artifact or audio observation is available; preserve the gap.",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M6"
+          }
+        ],
+        "trace": {
+          "call_id": "m6-adb5ac7c4bc447f38442306698e628f2",
+          "parent_module": "M6",
+          "started_at": "2026-11-05T15:52:10.145973+00:00",
+          "finished_at": "2026-11-05T15:52:10.149403+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "before": "483dd6e228e1f56f98110384d8ba33904e4412fc487286e972347033a202f552",
+            "after": "66eb689dc30ebe50389a6bfc6a72dd136fd9bbd0aaa5c7b430c56d988d11aaff"
+          },
+          "resources": {
+            "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+            "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [],
+          "input_versions": [],
+          "source_versions": {},
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "impact": {
+          "changed_paths": [
+            "/content/effects/items/stepA",
+            "/content/music/items/musicA",
+            "/content/sources/items/speakerA",
+            "/content/vocal_events/items/lineA",
+            "/sources/brief"
+          ],
+          "stale_consumers": {
+            "time_consumer": {
+              "module_id": "M7",
+              "changed_paths": [
+                "/content/vocal_events/items/lineA"
+              ],
+              "status": "stale",
+              "already_stale": false
+            },
+            "label_consumer": {
+              "module_id": "M11",
+              "changed_paths": [
+                "/content/music/items/musicA",
+                "/content/sources/items/speakerA"
+              ],
+              "status": "stale",
+              "already_stale": false
+            }
+          },
+          "scope": "declared read-path intersections only; hidden dependencies unverified"
+        }
+      },
+      "stderr": ""
+    }
+  ],
+  "limits": [
+    "No H3 call, audio/video reading, synthesis, mixing, or media-quality claim.",
+    "Successful routing does not execute an Agent's professional sound-planning work."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "kind": "M6ToolResult",
+  "contract_version": "1.0.0",
+  "command": "check",
+  "execution": "completed",
+  "disposition": "rejected",
+  "validation": {
+    "local_contract": "fail",
+    "overall": "fail",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "audio_availability_and_quality",
+      "measured_beat_authenticity",
+      "actual_lip_sync",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "contract_shape",
+      "path": "/changes",
+      "message": "oneOf has 0 matching alternatives",
+      "status": "fail",
+      "blocking": true,
+      "repair_target": "M6"
+    }
+  ],
+  "trace": {
+    "call_id": "m6-d65cdd21644841aab32895046e701fd0",
+    "parent_module": "M6",
+    "started_at": "2026-11-05T16:02:10.526172+00:00",
+    "finished_at": "2026-11-05T16:02:10.529202+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "artifact": "c6eea8c7999e9fde5b54785a0cfe6d20838054463303ea44352ac5115bd4dcc5",
+      "request": "b05caebaab24a9f913281a00d1889f1ef5ed38fafcb755a8a7e42012f77be121"
+    },
+    "resources": {
+      "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+      "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "dialogue_request_m6_1"
+    ],
+    "input_versions": [
+      {
+        "request_id": "dialogue_request_m6_1",
+        "target": "M6.1",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "dialogue_request_m6_1": {
+        "brief": "1",
+        "draft_assumption": "1",
+        "sound_design": "1"
+      }
+    },
+    "applicability": {
+      "local_contract": "fail",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "fail",
+    "error_codes": [
+      "contract_shape"
+    ]
+  }
+}

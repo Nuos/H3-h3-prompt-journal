@@ -1,0 +1,85 @@
+{
+  "kind": "M6ToolResult",
+  "contract_version": "1.0.0",
+  "command": "route",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "audio_availability_and_quality",
+      "measured_beat_authenticity",
+      "actual_lip_sync",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [],
+  "trace": {
+    "call_id": "m6-32145eb1dcd945bb93f313264fe43bd2",
+    "parent_module": "M6",
+    "started_at": "2026-11-05T16:00:26.846451+00:00",
+    "finished_at": "2026-11-05T16:00:26.850674+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "request": "2d984a02bb0eff766725053727f5f1a45811613630a4a28c207779a4c62b3ffd"
+    },
+    "resources": {
+      "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+      "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "mv_request_m6_3"
+    ],
+    "input_versions": [
+      {
+        "request_id": "mv_request_m6_3",
+        "target": "M6.3",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "mv_request_m6_3": {
+        "MV-BRIEF": "1"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  },
+  "routes": [
+    {
+      "module_id": "M6.3",
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/music-and-audio-policy.md"
+      ],
+      "write_scope": "/content/music",
+      "return_to": "M6",
+      "minimum_inputs": [
+        "music_brief",
+        "reference_context"
+      ],
+      "repair_target": "M6.3"
+    }
+  ],
+  "route_status": "ready_for_call",
+  "invocation": "not_invoked"
+}

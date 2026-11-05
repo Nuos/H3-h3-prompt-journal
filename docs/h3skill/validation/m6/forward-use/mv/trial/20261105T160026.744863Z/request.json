@@ -1,0 +1,85 @@
+{
+  "kind": "M6Request",
+  "contract_version": "1.0.0",
+  "work_id": "m6_forward_mv_guided_audit",
+  "base_version": 0,
+  "request_id": "mv_request_m6_3",
+  "target": "M6.3",
+  "sources": {
+    "MV-BRIEF": {
+      "kind": "user_requirement",
+      "locator": "docs/h3skill/validation/m6/forward-use/mv-task.txt",
+      "version": "1",
+      "excerpt": "使用本仓库 docs/h3skill/h3-sound-music-dialogue 的技能处理以下声音编排请求。可以读取技能要求的资源并运行其离线工具；不要改动技能文件或其他任务目录。把实际使用的输入、声音提案／诊断、工具调用和交付说明存到 validation/m6/forward-use/mv/。\n\n当前任务是一段 12 秒双人海边舞蹈，生成模式待协议层确认。画面人物是 ROLE-A 与 ROLE-B，动作事件 ACT-STEP 为 ROLE-A 的一步落地，另有 ROLE-B 的手势 ACT-GESTURE。已有参考视频用于动作；音轨 AUDIO-MASTER 被用户指定为成片声音来源。用户要求完整 1:1 保留 AUDIO-MASTER，作为目标视频完整最终音轨，同时还要求新合成两个清楚的脚步声和海浪环境声。\n\n音乐中某句歌词只用于提示 ROLE-B 开始手势；这段文字目前尚无经过核对的转写。用户希望给出每个动作的精确卡点秒数，只提供了“约 120 BPM”的文字说明。当前没有可播放音频或视频，也没有音频时长、首拍偏移、准确拍点、源窗口或角色音色资料。音轨登记是用户说明，不能当作已经听过信号。用户暂未同意修改任何一项声音要求。\n\n交付本次能够完成的 M6 声音方案或审计诊断，明确必要的后续信息与负责模块，并说明哪些输出已经经过工具检查。所提供素材说明仅为本轮设计任务数据，没有实际生成媒体。\n"
+    }
+  },
+  "inputs": {
+    "music_brief": "12 秒双人海边舞蹈；AUDIO-MASTER 必须完整 1:1 保留并作为完整最终音轨，同时新增两个清楚脚步声与海浪环境声。用户未同意修改任何要求；约 120 BPM 仅为文字说明。",
+    "reference_context": {
+      "owner": "external",
+      "source_id": "MV-BRIEF",
+      "source_version": "1",
+      "values": {
+        "target_duration_seconds": 12,
+        "generation_mode": {
+          "state": "unknown",
+          "reason": "待 M11 协议层确认"
+        },
+        "audio_registration": {
+          "asset_id": "AUDIO-MASTER",
+          "available": false,
+          "asset_version": {
+            "state": "unknown",
+            "reason": "未提供实际媒体或其版本"
+          },
+          "duration_seconds": {
+            "state": "unknown",
+            "reason": "用户未提供音轨时长；12 秒是目标视频时长"
+          },
+          "source_window": {
+            "state": "unknown",
+            "reason": "用户未提供源音轨窗口"
+          },
+          "first_beat_offset_seconds": {
+            "state": "unknown",
+            "reason": "没有可播放信号或拍点测量"
+          },
+          "measurement_evidence": {
+            "state": "unknown",
+            "reason": "音轨登记仅为用户说明，没有信号观测"
+          },
+          "bpm_description": "约 120 BPM，用户文字说明，未经测量"
+        },
+        "lyric_cue": {
+          "function": "仅提示 ROLE-B 开始 ACT-GESTURE，不据此指定 ROLE-B 唱词或口型",
+          "original_text": {
+            "state": "unknown",
+            "reason": "未取得经核对歌词转写"
+          },
+          "approved_text": {
+            "state": "unknown",
+            "reason": "未取得经核对歌词文本"
+          },
+          "time_seconds": {
+            "state": "unknown",
+            "reason": "无歌词转写及音频定位依据"
+          }
+        },
+        "action_reference": "用户称参考视频用于动作；当前无可播放视频，未授权将视频音频作为最终声源",
+        "known_action_ids": [
+          "ACT-STEP",
+          "ACT-GESTURE"
+        ],
+        "second_footstep_action": {
+          "state": "unknown",
+          "reason": "只提供 ROLE-A 的 ACT-STEP；第二个脚步对应动作未提供"
+        },
+        "voice_information": {
+          "state": "unknown",
+          "reason": "未提供角色音色资料；语义歌词提示不构成新演唱要求"
+        },
+        "scope_id_note": "MV-SCOPE-12S 只是本次审计的内部范围 ID，非已批准镜头编号或 H3 标签"
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "kind": "M6Request",
+  "contract_version": "1.0.0",
+  "work_id": "sound_example",
+  "base_version": 0,
+  "request_id": "request_m6_4",
+  "target": "M6.4",
+  "sources": {
+    "brief": {
+      "kind": "user_requirement",
+      "locator": "synthetic-design-fixture://m6/sound-contract",
+      "version": "1",
+      "excerpt": "Use the registered ambient source segment; preserve the dialogue exactly; add a footstep at the referenced action. These are contract fixtures, not observations of case-study media."
+    }
+  },
+  "inputs": {
+    "effects_brief": "Tie a single footstep to action_step.",
+    "action_context": {
+      "owner": "M4",
+      "source_id": "brief",
+      "source_version": "1",
+      "values": {
+        "action_id": "action_step"
+      }
+    },
+    "source_context": {
+      "items": {
+        "speakerA": {
+          "sound_source_id": "speakerA",
+          "shot_id": "shot1",
+          "source_kind": "speaker",
+          "subject_ref": {
+            "kind": "external",
+            "id": "subjectA",
+            "shot_id": "shot1",
+            "source_id": "brief",
+            "source_version": "1"
+          },
+          "voice_ref": {
+            "state": "unknown",
+            "reason": "No upstream artifact or audio observation is available; preserve the gap."
+          },
+          "description": {
+            "state": "known",
+            "value": "A visible speaker with a stable identity.",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "voice_requirement": {
+            "state": "known",
+            "value": "Quiet, intelligible speech; no inferred accent.",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "permission": {
+            "state": "unknown",
+            "reason": "No upstream artifact or audio observation is available; preserve the gap."
+          },
+          "source_refs": [
+            "brief"
+          ],
+          "applies_to_shots": [
+            "shot1"
+          ]
+        }
+      }
+    }
+  }
+}

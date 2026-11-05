@@ -1,0 +1,1915 @@
+{
+  "kind": "M6ProtectedBaseline",
+  "base_commit": "780a8729cca22e13d4fa44f031f8824056a5deee",
+  "base_tree": "33be739a4044175b560733745bdd4f71d721e3d5",
+  "source": "GitHub connector recursive tree read at the immutable input commit. Hash equality checks source preservation; it does not assert semantic reading or media inspection.",
+  "protected_prefixes": [
+    "docs/skillplan/",
+    "case-studies/",
+    "docs/h3skill/h3-work-intent/",
+    "docs/h3skill/h3-asset-reference/",
+    "docs/h3skill/h3-scene-blocking/",
+    "docs/h3skill/h3-action-performance/",
+    "docs/h3skill/h3-camera-visibility/"
+  ],
+  "files": [
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.md",
+      "git_blob_sha1": "72c4bfeedf2eb966d05e44515128b620a219b5e1",
+      "bytes": 8973,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md",
+      "git_blob_sha1": "6a77d28f7032e60ee8bc7ae192d99c02e47655e1",
+      "bytes": 26476,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/picture-1-additional-poses.png",
+      "git_blob_sha1": "58838e19495f4dcbda2f112e257a43ab73baa329",
+      "bytes": 2073762,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/picture-1-pose-library.png",
+      "git_blob_sha1": "9a02bc57dd97f53604fcd3c3a3f470e212d7d42b",
+      "bytes": 2432092,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/picture-1-supplementary-poses.png",
+      "git_blob_sha1": "6b9438355e03a85a0ebe8a459b5ae815e021720c",
+      "bytes": 2517363,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/picture-2-face-identity.png",
+      "git_blob_sha1": "1a646e90f81175e072639063f75a7649f3eeda62",
+      "bytes": 2063114,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md",
+      "git_blob_sha1": "5cb92433398250390c00dad804bbc3804550e897",
+      "bytes": 18328,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md",
+      "git_blob_sha1": "e39931e9262ed9599d84fddbccf3155f6ca75e29",
+      "bytes": 71417,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/reference-bgm-tokyo-drifter.wav",
+      "git_blob_sha1": "afa13e5435aefbdd4ec5bba71478bd06ac4fda1c",
+      "bytes": 33262252,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/reference-motion-sample.mp4",
+      "git_blob_sha1": "1de080ecbe549778ae340b40c32f6b4eb29f8803",
+      "bytes": 48910519,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "b44081b88877ae7d8f97ce6424bf92c92c13f17c",
+      "bytes": 13734,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/README.md",
+      "git_blob_sha1": "4672e2c8969cf78cc7ae9c84f4060d5ce293b6eb",
+      "bytes": 3642,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md",
+      "git_blob_sha1": "883bccae513bb798c4fb868bf19aabdc12a1380a",
+      "bytes": 12645,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/prompt.md",
+      "git_blob_sha1": "5643ee691a8e81250057e3a04ca564c8f4c28971",
+      "bytes": 2653,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "9242adcb39f1b9c837ea8ce3be3491eadee83c3b",
+      "bytes": 12760,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.md",
+      "git_blob_sha1": "eb24f9095c1512b03d423354161c7db656dd7bff",
+      "bytes": 7128,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md",
+      "git_blob_sha1": "8510ce889dd55118aa65ad8ae78562d71ece5aae",
+      "bytes": 19743,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md",
+      "git_blob_sha1": "b60d367e04180dbf99976c451223c57a6fc58f5f",
+      "bytes": 6580,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md",
+      "git_blob_sha1": "1bea74520f7c00446f2c3059c77b8fe54356f75b",
+      "bytes": 18406,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/reference-dance-demo.mp4",
+      "git_blob_sha1": "a853180ff39eb393c625c70f0570391c3021eee1",
+      "bytes": 4764189,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "531b7e9a5ecd744adb443cde1d0426029bed441d",
+      "bytes": 11341,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.md",
+      "git_blob_sha1": "fb114c0db8112ad8d72616f8d92a7e0f8c7dbb27",
+      "bytes": 8448,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md",
+      "git_blob_sha1": "1908c33251798ce7dba748b2545e36be5269b0dd",
+      "bytes": 19937,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/picture-1-character-key-visual.png",
+      "git_blob_sha1": "56c263bc469d244cdd9394461acb6ca369626b56",
+      "bytes": 2298973,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/picture-2-turnaround-equipment.png",
+      "git_blob_sha1": "aa354374e48bd89b679553c9d52503f62d51fb1b",
+      "bytes": 1880882,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/picture-3-segment1-cinematography-guide.png",
+      "git_blob_sha1": "bc1be0996a2c5510708843e326caa06462ee2a36",
+      "bytes": 2545503,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/picture-3-segment2-cinematography-guide.png",
+      "git_blob_sha1": "4d7720b875c3b11e9dbe5b4e82aeb38453da7a24",
+      "bytes": 2582858,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md",
+      "git_blob_sha1": "d70f7a2d8f6af02914d9bb0b9344173da8cb4b84",
+      "bytes": 26514,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md",
+      "git_blob_sha1": "456aaec92703f8ef4e4034db690d45457be4ab8b",
+      "bytes": 43730,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/result-video.mp4",
+      "git_blob_sha1": "9413add98f850b50a2074b34245e9e6f752e8f88",
+      "bytes": 14309126,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "768687db0a705a353c6a3a1c2823919a6c217061",
+      "bytes": 11567,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/README.md",
+      "git_blob_sha1": "a397a5e0e672904eb80e370ae6ac560a5e5133cd",
+      "bytes": 4954,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/README.zh-CN.md",
+      "git_blob_sha1": "8d974ae50506cfe61b707a97199ea1f3cdde99cc",
+      "bytes": 14281,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/prompt.md",
+      "git_blob_sha1": "500cf634e40a302ef36ac505d7fa2500f0cc5630",
+      "bytes": 16750,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md",
+      "git_blob_sha1": "28e6cc42c0510fdf352dbdea31cd33629277da07",
+      "bytes": 47909,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "ca42d3b76e2c8493c535c22ed507554b3a980b92",
+      "bytes": 11916,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+      "git_blob_sha1": "07ccc6cada79700019656c65000e1ff185ab1ccb",
+      "bytes": 5869,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md",
+      "git_blob_sha1": "5290ad33edc00bea3e1ae24e3305ae1b2601e869",
+      "bytes": 15559,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/picture-1-sticker-character.png",
+      "git_blob_sha1": "a33e3137d045784642bc96d7c9ad18d7157b7881",
+      "bytes": 1315360,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+      "git_blob_sha1": "07719668193e6b82226f1380399f0e576c831273",
+      "bytes": 4666,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md",
+      "git_blob_sha1": "c56419699287a9e074debad5ddfc7242df73f5d9",
+      "bytes": 13742,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "bca11db0afd44a9a12e1b32b08c833d2a67d08f1",
+      "bytes": 11158,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/README.md",
+      "git_blob_sha1": "be69aaa3305c0a7859548f5dd6ee2729fe32866b",
+      "bytes": 3603,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/README.zh-CN.md",
+      "git_blob_sha1": "2c78fa8d8c1dff078a32f656ba0d52ed5a4a425d",
+      "bytes": 8760,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/prompt.md",
+      "git_blob_sha1": "85cd5ebdbb4ce5979ade026607b00822c949d3fc",
+      "bytes": 29240,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/prompt.zh-CN.md",
+      "git_blob_sha1": "2c55a4c1372c8350da7d744a05a07cc857edef9a",
+      "bytes": 71063,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "bbf05f5f51abe140d2c6de8402138225d821156d",
+      "bytes": 12116,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.md",
+      "git_blob_sha1": "090d9f52cd0c979167b7f3db1927549729cfbc17",
+      "bytes": 6295,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md",
+      "git_blob_sha1": "5d05a80c26ed684a4307d16c826422680f538568",
+      "bytes": 15364,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+      "git_blob_sha1": "ae572459f259615b45f88b300eeedc6c804cfc35",
+      "bytes": 7374,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md",
+      "git_blob_sha1": "1bb82da7b81205a4dde66fea5a7ab1eec1a539f5",
+      "bytes": 21315,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "876c670bb25057112d32084e914eb3ca9ee9440e",
+      "bytes": 11165,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/README.md",
+      "git_blob_sha1": "9fc55df75cc6f0d0fdcee1812ae36bd8ffc46ac3",
+      "bytes": 12441,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt",
+      "git_blob_sha1": "14d6577a94976b6fea29266c827d0f27ba0b4996",
+      "bytes": 30627,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt",
+      "git_blob_sha1": "2c480eba7377db6c36d26cba2b8c66f3ef46f92b",
+      "bytes": 30831,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "a991cc33afbf28ef65f819ac18bba8dbb8b6cfdf",
+      "bytes": 12096,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+      "git_blob_sha1": "820f293466c621b83008067f2ba57dce4b88927e",
+      "bytes": 13205,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt",
+      "git_blob_sha1": "4da9e6df67e2adbb33d569cb830cde800b7878f8",
+      "bytes": 26943,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt",
+      "git_blob_sha1": "f9c13e974868d922acd8f49a725e6d4f88f2c12f",
+      "bytes": 27451,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt",
+      "git_blob_sha1": "b4863def7914a1dcbaca6695330c8b548b184377",
+      "bytes": 27900,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt",
+      "git_blob_sha1": "22fefc9744dadf16edd24039071ed7eed0ed24c5",
+      "bytes": 27319,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "73f3a15ffddc95437e8632d458e522ab00730899",
+      "bytes": 19149,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-purple-veil-dance-seven-segment/README.md",
+      "git_blob_sha1": "8b7c6f9b7480b4e613abeb1d766795064510203d",
+      "bytes": 8262,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-purple-veil-dance-seven-segment/prompt.md",
+      "git_blob_sha1": "8befb4ec85eb720efa6b4ee432b9e48787b7801e",
+      "bytes": 37639,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/README.md",
+      "git_blob_sha1": "75fa100fd4a1e954789545920279ba9f1c56b000",
+      "bytes": 9740,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md",
+      "git_blob_sha1": "d92b6d24ebdf9ca88e48421fd349c0d905c97302",
+      "bytes": 20295,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md",
+      "git_blob_sha1": "9af61b2d1f043927c61ae390add95847731bd8b5",
+      "bytes": 13761,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/reference-video.mp4",
+      "git_blob_sha1": "06b96a106eb135d1d1d5ed5fcc77363f936bc9ed",
+      "bytes": 683169,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "35c9c1232d988f92c4145e6359876bc2ba05972f",
+      "bytes": 10852,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/README.md",
+      "git_blob_sha1": "9c82e8c71cf560609789fadde850be9ab8436446",
+      "bytes": 12527,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md",
+      "git_blob_sha1": "c1b73a7a879bd5994b59100c5ae041fc457a85ec",
+      "bytes": 134285,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md",
+      "git_blob_sha1": "b0d7bb62373528713b6731309f1a9fe7e5b18604",
+      "bytes": 87307,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "f0fc45a5eb2026e9cbd06fc5b9a55ff3b20d264c",
+      "bytes": 21002,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md",
+      "git_blob_sha1": "9f42cf388a5b8e3d84a5b2160b5aab445733d829",
+      "bytes": 6844,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md",
+      "git_blob_sha1": "0b28c91a167e20b593b2131bbb18ec9440dabbb4",
+      "bytes": 17909,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md",
+      "git_blob_sha1": "5134e8fe1a15e2c381e2546ae700754596380c6f",
+      "bytes": 15041,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md",
+      "git_blob_sha1": "01c8289ffeb1639b225c35b986406f9d5405f0e1",
+      "bytes": 42551,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/result-video.mp4",
+      "git_blob_sha1": "6aaecdfac2c61a9a2c53b87e6d531c663b30585f",
+      "bytes": 7026537,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md",
+      "git_blob_sha1": "de577943cdfcafa3046d019dfda86129583926cc",
+      "bytes": 11110,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-advanced-camera-combinations/README.md",
+      "git_blob_sha1": "6248882c17cc0841012bd538825849ce9b27a53c",
+      "bytes": 4900,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-advanced-camera-combinations/cover.png",
+      "git_blob_sha1": "568bc092dc600593b5b78201a4dd61b1aa7e2526",
+      "bytes": 6530,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-advanced-camera-combinations/prompt.md",
+      "git_blob_sha1": "329cc1d8327759900ad9ee2495c0945ffb8f88dd",
+      "bytes": 18459,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md",
+      "git_blob_sha1": "7ead89d1d75c434c1ab69aab841c53c1e3a23481",
+      "bytes": 12008,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/cover.png",
+      "git_blob_sha1": "e6d60c29a15eb1253bd4fa2eedb64b2112d0d7fa",
+      "bytes": 2068771,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md",
+      "git_blob_sha1": "4508141604349c6aab29a86a88cc35965b646714",
+      "bytes": 56000,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/README.md",
+      "git_blob_sha1": "dae6601f45b9f4d0ae3cec10114eb102a0f500db",
+      "bytes": 5545,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/cover.png",
+      "git_blob_sha1": "0aeb64dc7eb1e2eaecc311d1dd83462432a97408",
+      "bytes": 6530,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/prompt.md",
+      "git_blob_sha1": "6437e5a26f84f34aa5dc803b1dbc5c79f9dcab13",
+      "bytes": 15365,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/README.md",
+      "git_blob_sha1": "6bc13ac4af04d59ff036e50bdf55e662a6cb7b79",
+      "bytes": 7765,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "git_blob_sha1": "5a6760efa52e3a0f2ef14073e9cbd8a5c93923a8",
+      "bytes": 16996,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md",
+      "git_blob_sha1": "13b0cfedb1e8ba8c92ed13c7d4adcee9f43edf03",
+      "bytes": 84646,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/README.md",
+      "git_blob_sha1": "d196d84601fd33a2cc9a4be93d35aa969494bb6e",
+      "bytes": 4031,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/cover.png",
+      "git_blob_sha1": "d9c8c12b21064fbe1e1a5974bfcb2a5cde699d51",
+      "bytes": 6426,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md",
+      "git_blob_sha1": "53a0bfadbfa128998aaa5fcfc4d015f0e0e41e30",
+      "bytes": 265991,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/README.md",
+      "git_blob_sha1": "13b9d82944302e6e9d1c3ed33da1738c3d5bf065",
+      "bytes": 9119,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/assets/demo_segment10.mp4",
+      "git_blob_sha1": "922596ab79a40f8e3f2814625671e95225966b3a",
+      "bytes": 12331243,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/assets/frame_1.5s.png",
+      "git_blob_sha1": "e91c90ddd46233e22ed020b4baf2223ef0dffd0c",
+      "bytes": 1109500,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/assets/frame_12.5s.png",
+      "git_blob_sha1": "3340a0b9f1b265fce5e6a82d4ca458b1cfdf493c",
+      "bytes": 1286974,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/assets/frame_5.5s.png",
+      "git_blob_sha1": "6deb8e3dfd64745e1aae9041d54e2731d0d9ea19",
+      "bytes": 1294014,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/assets/frame_9.0s.png",
+      "git_blob_sha1": "308e43e73e5ff4df173f8d4d17894de9fc4bafd6",
+      "bytes": 1433431,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "git_blob_sha1": "2ceabb516af03c306d58b2a74474838f37dfcdbc",
+      "bytes": 16205,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/README.md",
+      "git_blob_sha1": "90e326cd2f2eeb13f1b3bb82a4997969df1884fe",
+      "bytes": 3875,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/cover.png",
+      "git_blob_sha1": "0bb393e7ce92e101291c69a84fdc4ef30d852699",
+      "bytes": 7805,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+      "git_blob_sha1": "827fe8500e9b67ad068d9fee566f276f0caa8a2f",
+      "bytes": 107172,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/prompt.md",
+      "git_blob_sha1": "d2832c361a34e9e441d2dcba8e207e684b97fef6",
+      "bytes": 13165,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/result-video.mp4",
+      "git_blob_sha1": "b4cbc98a975adbc6fa4e5d1dbfe91ae2b45b2651",
+      "bytes": 10823899,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "git_blob_sha1": "80383594744c1caefadf9feb941d853953813338",
+      "bytes": 5248,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/cover-saint-arms-open.png",
+      "git_blob_sha1": "036f92e4e2bedf74029b4a94db287defb5b4e836",
+      "bytes": 442738,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "git_blob_sha1": "b4e12f5932869ecff50fa75cfc5c963766d4f076",
+      "bytes": 34220,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md",
+      "git_blob_sha1": "858a611c88260f27eccf3751aaee75009981ae4e",
+      "bytes": 11856,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "git_blob_sha1": "89d84013643a50dfcd796f1397f7fc0cadc199c1",
+      "bytes": 22179,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md",
+      "git_blob_sha1": "8aae663ded62e74b33248443b36111d9e2630aa9",
+      "bytes": 194131,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+      "git_blob_sha1": "d5787b1e34ad1ae88ed33f7441633a51a222f510",
+      "bytes": 4094,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+      "git_blob_sha1": "356034cad0dbf6e7b3e0f14b76debb325b8163f6",
+      "bytes": 19122,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-physical-camera-position-library/README.md",
+      "git_blob_sha1": "6dbea940341fd033a59c475b443bf14cdd2380f9",
+      "bytes": 4235,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-physical-camera-position-library/cover.png",
+      "git_blob_sha1": "3c14705631ec3a66cc4ce849b942e8f4da38f756",
+      "bytes": 6530,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-physical-camera-position-library/prompt.md",
+      "git_blob_sha1": "29931724c56332b3c4cb8f15c9e7b39187f3f6e5",
+      "bytes": 25066,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+      "git_blob_sha1": "f0df490b0ddd28d78f1eb1332c72a46248dd4654",
+      "bytes": 4602,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+      "git_blob_sha1": "a6ac7572bfd08806686680e60d0d21f333e574ca",
+      "bytes": 8907,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "git_blob_sha1": "9940c805eee0e4f208100593745353d4b2efb9ab",
+      "bytes": 11195,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/cover.png",
+      "git_blob_sha1": "bcc97b26b806dbf7cf2ae052bb9c7aaa9ddf1b3d",
+      "bytes": 1350154,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+      "git_blob_sha1": "1c185e60e2e73a456369709fd0b302cac8fa3a5a",
+      "bytes": 36790,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+      "git_blob_sha1": "bb9a28d25757e4d78d54d4e9dd517d12d063f6c4",
+      "bytes": 3940,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md",
+      "git_blob_sha1": "539cebf0828ce83ad43d6b7381445c69c3b9f411",
+      "bytes": 8762,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "git_blob_sha1": "7d2d18c1697928bed90d80361f5ac16997302d28",
+      "bytes": 7390,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "git_blob_sha1": "1db431d27a43f05da550ad1d96bf05bb1325bc05",
+      "bytes": 101257,
+      "mode": "100644"
+    },
+    {
+      "path": "case-studies/VOCABULARY-EXPANSION.zh-CN.md",
+      "git_blob_sha1": "67eabcf0dfe631dcfdd54b8ee78acb8af38bc9db",
+      "bytes": 9130,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/SKILL.md",
+      "git_blob_sha1": "7c2caed9bd2d964de59038236fb0710ed88eb450",
+      "bytes": 10521,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/fixture-manifest.json",
+      "git_blob_sha1": "6ee990937ea3a16da6363187e51c93fa214d1620",
+      "bytes": 738,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/proposal-batch.json",
+      "git_blob_sha1": "879e47d728807f0b00e0ae76c57ea3997a45de68",
+      "bytes": 23692,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/proposal-m4-1.json",
+      "git_blob_sha1": "04d4c76e17b63004cadb111281959075f2c56fed",
+      "bytes": 3783,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/proposal-m4-2.json",
+      "git_blob_sha1": "3b82a3c2fdf2665de60c2750104b407b3adfc459",
+      "bytes": 6733,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/proposal-m4-3.json",
+      "git_blob_sha1": "2350fb7018a2536309b79f44318a65daf3ec3e15",
+      "bytes": 9818,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/request-m4-1.json",
+      "git_blob_sha1": "57d24ff5524367bf73ae8c94ec9032f6d1fccea0",
+      "bytes": 635,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/request-m4-2.json",
+      "git_blob_sha1": "c0182660483135dda5c1981484f2f7a8d3fac0d6",
+      "bytes": 3683,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/request-m4-3.json",
+      "git_blob_sha1": "665273954ff45d8d50c765fef424b340d672728e",
+      "bytes": 6648,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/request-m4.json",
+      "git_blob_sha1": "71a52a43ba648d45215f7b9c29864a0457e909b0",
+      "bytes": 631,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/request-minimal-m4-2.json",
+      "git_blob_sha1": "05ad20781653e9e182c9a9da32b73e193b2f35c8",
+      "bytes": 434,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/requests.json",
+      "git_blob_sha1": "b5d6f82b65bf49931af9070c6343173da67b0e6f",
+      "bytes": 11820,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/assets/state-empty.json",
+      "git_blob_sha1": "9a30bfe94b6f006146cbe65e4b84d71dfb32d107",
+      "bytes": 475,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/action-mechanics.md",
+      "git_blob_sha1": "92ea2b6485caa11bdbb2d5f2830295d80df793bf",
+      "bytes": 7471,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/audit-and-handoff.md",
+      "git_blob_sha1": "94b47fe6fc60f4d5009078e8afb9a9074e0c0046",
+      "bytes": 11559,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/case-evidence.md",
+      "git_blob_sha1": "d213f8dd836ffd5c3103db7b32ef7840c85a4bf7",
+      "bytes": 13297,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/case-index.json",
+      "git_blob_sha1": "7ccd714a432f1072662ffeb952daa167bd18c59c",
+      "bytes": 68893,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/case-source-LICENSE.txt",
+      "git_blob_sha1": "1edcc82393ad4bce49aca4ab0c074dc75fcc268e",
+      "bytes": 1069,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/contract-guide.md",
+      "git_blob_sha1": "9ba590f8d9778a57c8e453d7a83a91d80d2018b7",
+      "bytes": 12796,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/contracts.json",
+      "git_blob_sha1": "e759bb14d6d9435ce4b50e524f41a14b860c945f",
+      "bytes": 29326,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/h3-NOTICE.txt",
+      "git_blob_sha1": "65d507740b0ae63baacdcc501b35ee1ffa5d1226",
+      "bytes": 121,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/h3-base-official.txt",
+      "git_blob_sha1": "40cf586a634d677d6b7107b367cf0ec9621be728",
+      "bytes": 15773,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/h3-label-mapping.md",
+      "git_blob_sha1": "20dc7ce747de5b822f42897fd5c5ddc688dc3345",
+      "bytes": 14738,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/h3-protocol-source.json",
+      "git_blob_sha1": "ad7d1d075c25df756b97ac7f602b4361acafda0c",
+      "bytes": 30965,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/h3-ref-official.txt",
+      "git_blob_sha1": "7ae1b2d07d743fd2392258a96449be9e9e322d35",
+      "bytes": 23553,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/module-registry.json",
+      "git_blob_sha1": "cfd1d100ce35e8e2bc95b5c1ff4bcc104c3bb570",
+      "bytes": 37234,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/outcomes-and-continuation.md",
+      "git_blob_sha1": "3c1c6c226e36ab95af1d47247bfd3cc12162fbb7",
+      "bytes": 6461,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/performance-events.md",
+      "git_blob_sha1": "669ff529021c689fd2464ce62b21f82306bf9274",
+      "bytes": 7543,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/provenance-and-license.md",
+      "git_blob_sha1": "0614deb04694d9126fe575339d6cdd0d6f854b92",
+      "bytes": 7534,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/scripts/m4_contract.py",
+      "git_blob_sha1": "c6ba9037bd2293e57d641bb5eb5e9589834f4bc5",
+      "bytes": 40117,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/SKILL.md",
+      "git_blob_sha1": "17e7fce1c5997c2c20e7836dd9a4e2af64b88f29",
+      "bytes": 9560,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/proposal-batch.json",
+      "git_blob_sha1": "dd032ee1457bc464f4a08aca04b18b36447a86d4",
+      "bytes": 23724,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/proposal-m2-1.json",
+      "git_blob_sha1": "5941cfd9b18305cef9ca1f5a951eb01551dae307",
+      "bytes": 3882,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/proposal-m2-2.json",
+      "git_blob_sha1": "c3d2881daf48a4c81ee8acbc28b801da3df90b0b",
+      "bytes": 6616,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/proposal-m2-3.json",
+      "git_blob_sha1": "1b3ad9372fa5aa50c3cce38a23ffb651d3ec4c53",
+      "bytes": 10555,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/request-m2-1.json",
+      "git_blob_sha1": "7f298610b5cc3ce55294c5650fc0ba24559ce17b",
+      "bytes": 1593,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/request-m2-2.json",
+      "git_blob_sha1": "d61d539356e536c1486e26a14248092ff22d3ace",
+      "bytes": 3921,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/request-m2-3.json",
+      "git_blob_sha1": "4798b2ecfa7856f678b2ba944fdbe4520dd1b9d0",
+      "bytes": 6682,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/request-m2.json",
+      "git_blob_sha1": "aea65fe01fecea79951560e499f5db258be4619c",
+      "bytes": 1589,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/state-empty.json",
+      "git_blob_sha1": "16efd69b7c354c1d43fa3bf89eaff8765fd89497",
+      "bytes": 533,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/asset-registration.md",
+      "git_blob_sha1": "2b93c35579296597af53672c511f8e5f6a9fc9b9",
+      "bytes": 4200,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/audit-and-handoff.md",
+      "git_blob_sha1": "ec4b95fc7dfb3f199ba7d39c13b69670c473b6eb",
+      "bytes": 5562,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/case-evidence.md",
+      "git_blob_sha1": "19010062771a669afd55c70da457868beeca2113",
+      "bytes": 19723,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/case-index.json",
+      "git_blob_sha1": "31509fb463e41b884733964ebca48a01de660a86",
+      "bytes": 95513,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/case-source-LICENSE.txt",
+      "git_blob_sha1": "1edcc82393ad4bce49aca4ab0c074dc75fcc268e",
+      "bytes": 1069,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/contract-guide.md",
+      "git_blob_sha1": "c8bd5020c9d792ba5ecafeec01784c062766c132",
+      "bytes": 19049,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/contracts.json",
+      "git_blob_sha1": "86f1906c525ddcd17828fa9c9878364eff0f9114",
+      "bytes": 22195,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/entity-binding.md",
+      "git_blob_sha1": "9fba94696c911b8514a8e6f7c8ae79c0f82a0c6c",
+      "bytes": 3835,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/h3-NOTICE.txt",
+      "git_blob_sha1": "65d507740b0ae63baacdcc501b35ee1ffa5d1226",
+      "bytes": 121,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/h3-base-official.txt",
+      "git_blob_sha1": "40cf586a634d677d6b7107b367cf0ec9621be728",
+      "bytes": 15773,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/h3-label-mapping.md",
+      "git_blob_sha1": "25904f3147c44a456c3998f2017ddd1d2b6c0e78",
+      "bytes": 16655,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/h3-protocol-source.json",
+      "git_blob_sha1": "dabd4795a89a270bb6df9fe4ae5791a635412e68",
+      "bytes": 32925,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/h3-ref-official.txt",
+      "git_blob_sha1": "7ae1b2d07d743fd2392258a96449be9e9e322d35",
+      "bytes": 23553,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/module-registry.json",
+      "git_blob_sha1": "a6566d95d8548ec6b5fb0ea9d97c5d794f5a454b",
+      "bytes": 15518,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/provenance-and-license.md",
+      "git_blob_sha1": "bc40029bf26d396544123312c2bf5468730159d3",
+      "bytes": 4478,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/reference-permissions.md",
+      "git_blob_sha1": "61defab1b1be05aefca8c6ab878f4bc66dc69649",
+      "bytes": 6055,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/scripts/m2_contract.py",
+      "git_blob_sha1": "d15ecdddf0a62a609035a4a9417eb37fb6d237ad",
+      "bytes": 46226,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/SKILL.md",
+      "git_blob_sha1": "484fc0f691aebb3ec020b458bf039441a1083c9e",
+      "bytes": 10413,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/fixture-manifest.json",
+      "git_blob_sha1": "6be3662310338a01c3f233fe3e11c3b5c93a56c2",
+      "bytes": 811,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/proposal-batch.json",
+      "git_blob_sha1": "432db0036142a32efc7dcb9282575cbb707c721a",
+      "bytes": 82604,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/proposal-m5-1.json",
+      "git_blob_sha1": "8d79050f881ec4da0a119536181d15fb36fb4ab4",
+      "bytes": 7050,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/proposal-m5-2.json",
+      "git_blob_sha1": "dccfa14fda4ac89fa8815df8d0aeb25d22bb9cc3",
+      "bytes": 16389,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/proposal-m5-3.json",
+      "git_blob_sha1": "694c0700c43a95cd5fc6f0507e0c80d5f0b13d07",
+      "bytes": 17428,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/proposal-m5-4.json",
+      "git_blob_sha1": "46faa627712b4f49db15d6248355d7ad56143388",
+      "bytes": 32001,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/proposal-standalone-m5-1.json",
+      "git_blob_sha1": "e517baef398f24e07ad46e858a9e3cdc3fc0a146",
+      "bytes": 2238,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/proposal-standalone-m5-2.json",
+      "git_blob_sha1": "3baf2ccbe760c3e28abaa9edb808ba3086dba9f9",
+      "bytes": 3350,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/proposal-standalone-m5-3.json",
+      "git_blob_sha1": "c9da70e81787d001e54442e537810ef71c8bf1ae",
+      "bytes": 2776,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/proposal-standalone-m5-4.json",
+      "git_blob_sha1": "3db7ba988aad1e230878b60163e0a6f75294edd4",
+      "bytes": 3408,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/request-m5-1.json",
+      "git_blob_sha1": "a18e5ff29f755770ac6ef3b26298e1c9444d844c",
+      "bytes": 883,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/request-m5-2.json",
+      "git_blob_sha1": "3fe5c069203f83d11512ae34dbf202fa194d9450",
+      "bytes": 6954,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/request-m5-3.json",
+      "git_blob_sha1": "d5532daf523b100430393aca298f8883ccb83046",
+      "bytes": 10219,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/request-m5-4.json",
+      "git_blob_sha1": "1ad71b9109b8a2db37bde06914a0af37bb75c908",
+      "bytes": 23421,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/request-m5.json",
+      "git_blob_sha1": "3a0aafbe5fa454584982977c5db8448ccb6ee883",
+      "bytes": 860,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/request-minimal-m5-2.json",
+      "git_blob_sha1": "8c5f2f92bb908d986adf3b9a30eb8f855ed10070",
+      "bytes": 958,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/request-standalone-m5-1.json",
+      "git_blob_sha1": "2f12c37bd9ad974fdf046c265dcf72843c2be7da",
+      "bytes": 863,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/request-standalone-m5-2.json",
+      "git_blob_sha1": "2193bdc3b879e7bd75b9ae8e0690b09fecfb5b45",
+      "bytes": 1197,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/request-standalone-m5-3.json",
+      "git_blob_sha1": "0e185be013bd6f1e64c07e6e92f839d1bfbeb7df",
+      "bytes": 1100,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/request-standalone-m5-4.json",
+      "git_blob_sha1": "bc9021f5f4634ed5fc1b8cfe9f3c33eab3241612",
+      "bytes": 1198,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/requests.json",
+      "git_blob_sha1": "46830ffe272bdc86ab2e9f5769ec1db7f7e93eea",
+      "bytes": 44168,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/assets/state-empty.json",
+      "git_blob_sha1": "07d39698885e0516dda6dd923d8f4de52f5afe03",
+      "bytes": 443,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/audit-and-handoff.md",
+      "git_blob_sha1": "6b3937eaa060e77f6acb174818bf88d54cc1e57f",
+      "bytes": 6016,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/case-evidence.md",
+      "git_blob_sha1": "50645f7cd11516311d375f784ac222dac8983ef9",
+      "bytes": 19394,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/case-index.json",
+      "git_blob_sha1": "141da9a05ce692f43cec4baaca83cdbc7d8c7df5",
+      "bytes": 68154,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/case-source-LICENSE.txt",
+      "git_blob_sha1": "1edcc82393ad4bce49aca4ab0c074dc75fcc268e",
+      "bytes": 1069,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/contract-guide.md",
+      "git_blob_sha1": "b1d8d387197406a955cba36334c071fd736bf775",
+      "bytes": 11729,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/contracts.json",
+      "git_blob_sha1": "71a4b32e714babca5722f3a1a0f76c8dea2e07d1",
+      "bytes": 29949,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/focus-and-depth.md",
+      "git_blob_sha1": "811913ecd9979267e017c6916ba4902b6cd61897",
+      "bytes": 3643,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/framing-and-visibility.md",
+      "git_blob_sha1": "cc5e5a111fca7521c8dd9fc1920b14719209abc0",
+      "bytes": 4126,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/h3-NOTICE.txt",
+      "git_blob_sha1": "65d507740b0ae63baacdcc501b35ee1ffa5d1226",
+      "bytes": 121,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/h3-base-official.txt",
+      "git_blob_sha1": "40cf586a634d677d6b7107b367cf0ec9621be728",
+      "bytes": 15773,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/h3-label-mapping.md",
+      "git_blob_sha1": "01e3ff732520e9699c4753f5f5f9de1c85da7bca",
+      "bytes": 12804,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/h3-protocol-source.json",
+      "git_blob_sha1": "ccae3b4309fc29795831334d40bceabf9c88cf4d",
+      "bytes": 30587,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/h3-ref-official.txt",
+      "git_blob_sha1": "7ae1b2d07d743fd2392258a96449be9e9e322d35",
+      "bytes": 23553,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/module-registry.json",
+      "git_blob_sha1": "f256beedd9d83bdd4febac2a2138ad2946cc7897",
+      "bytes": 39589,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/movement-and-triggers.md",
+      "git_blob_sha1": "0c7624d9d7a79f9a69286dc6ea35289867e2eb7c",
+      "bytes": 4416,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/provenance-and-license.md",
+      "git_blob_sha1": "017bf717fcb378c804c1f05f6796c32d71930ab9",
+      "bytes": 6005,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/references/viewpoints-and-axis.md",
+      "git_blob_sha1": "ce89679317b3b5bd6ee31ebf31b5aa50824ea571",
+      "bytes": 4195,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-camera-visibility/scripts/m5_contract.py",
+      "git_blob_sha1": "51f52b6205843c232b8a8a5ba7ae08dd3e676fa6",
+      "bytes": 37751,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/SKILL.md",
+      "git_blob_sha1": "0af05bb6b2af99523115443c60c1666000cd6dad",
+      "bytes": 8849,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/proposal-batch.json",
+      "git_blob_sha1": "415ddb7b2c5466ff73e3db8c3cf365ee79d5fd5a",
+      "bytes": 14959,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/proposal-m3-1.json",
+      "git_blob_sha1": "1f4b314d9cdec3f3133cfdd659ab08e5520e498c",
+      "bytes": 1855,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/proposal-m3-2.json",
+      "git_blob_sha1": "8c9fd8ef8623a59677a6e845781ff474c37c7139",
+      "bytes": 5100,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/proposal-m3-3.json",
+      "git_blob_sha1": "228f85d84a9c259712cfaf081c064cc31a0b6bba",
+      "bytes": 5772,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/request-m3-1.json",
+      "git_blob_sha1": "5634f0d93db0cd0de2e458318943bdb45d99c9ce",
+      "bytes": 616,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/request-m3-2.json",
+      "git_blob_sha1": "6f3e59940ebc9efe6ffc0e2b27802989a0ca33fc",
+      "bytes": 2162,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/request-m3-3.json",
+      "git_blob_sha1": "ee82f5edae2cbfdb0756555a17fd679b9cbf200a",
+      "bytes": 4622,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/request-m3.json",
+      "git_blob_sha1": "252a9c393dd49b7fefcb61a4f91835db41223a43",
+      "bytes": 624,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/requests.json",
+      "git_blob_sha1": "6dc4587d9eea7399a81f22931d33efb0807987b0",
+      "bytes": 7992,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/state-empty.json",
+      "git_blob_sha1": "85984115235a5b3cbc14097f2d54278366f988df",
+      "bytes": 531,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/audit-and-handoff.md",
+      "git_blob_sha1": "43498e2533089feec98eece4182aede5e3972e7b",
+      "bytes": 8068,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/case-evidence.md",
+      "git_blob_sha1": "4624206cf6fcdb8934c072c20d2097fe679de636",
+      "bytes": 17407,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/case-index.json",
+      "git_blob_sha1": "b9fd731316620029b84138920eb34299444a00e1",
+      "bytes": 51540,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/case-source-LICENSE.txt",
+      "git_blob_sha1": "1edcc82393ad4bce49aca4ab0c074dc75fcc268e",
+      "bytes": 1069,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/contract-guide.md",
+      "git_blob_sha1": "0768baf567fb4ddfe6e8909ad39573f43eaac308",
+      "bytes": 13507,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/contracts.json",
+      "git_blob_sha1": "7aaf03bf06f3bf1bc2165368c80cc0e091a0da8a",
+      "bytes": 24139,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/h3-NOTICE.txt",
+      "git_blob_sha1": "65d507740b0ae63baacdcc501b35ee1ffa5d1226",
+      "bytes": 121,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/h3-base-official.txt",
+      "git_blob_sha1": "40cf586a634d677d6b7107b367cf0ec9621be728",
+      "bytes": 15773,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/h3-label-mapping.md",
+      "git_blob_sha1": "3dc61114080cd5671e8691afe7bbce709ad2ac1b",
+      "bytes": 17061,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/h3-protocol-source.json",
+      "git_blob_sha1": "f63afe039bbae0d707e79c48d0d6131c64b80ae4",
+      "bytes": 31793,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/h3-ref-official.txt",
+      "git_blob_sha1": "7ae1b2d07d743fd2392258a96449be9e9e322d35",
+      "bytes": 23553,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/interaction-and-occlusion.md",
+      "git_blob_sha1": "e0d5c36c729bcf36fd430387e7e6228a3e1875ff",
+      "bytes": 4646,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/module-registry.json",
+      "git_blob_sha1": "e070b125ff68a3d77c1fff3c7698bab7e7cf3efb",
+      "bytes": 9586,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/placement-and-routes.md",
+      "git_blob_sha1": "6ee6200047137f8157a277a37a448dbd1fcf9c7a",
+      "bytes": 4668,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/provenance-and-license.md",
+      "git_blob_sha1": "0804815b9c5585352de31678753ae59eb6cf07b7",
+      "bytes": 7399,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/spatial-topology.md",
+      "git_blob_sha1": "da8aea623368722f3bbf414c3df4b9764ec579de",
+      "bytes": 4786,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/scripts/m3_contract.py",
+      "git_blob_sha1": "b003862a420717617d52070e013f68f58d8259a6",
+      "bytes": 46921,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/SKILL.md",
+      "git_blob_sha1": "d03d24703daba59ebbe012ad0abe54c67105c43e",
+      "bytes": 9788,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/proposal-m1-1.json",
+      "git_blob_sha1": "181c90c9a907b5bf9675e760539d7d73d22690dd",
+      "bytes": 3506,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/proposal-m1-2.json",
+      "git_blob_sha1": "53cf6c2af3fdb5c1fa536609b944cf75fa5699ba",
+      "bytes": 3207,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/proposal-m1-3.json",
+      "git_blob_sha1": "f4f0c66705a60399978621b8f1c21cd9438a8fdf",
+      "bytes": 2305,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/request-m1-1.json",
+      "git_blob_sha1": "545507bba30f0d0f9312bdd77bddc8f847813675",
+      "bytes": 1084,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/request-m1-2.json",
+      "git_blob_sha1": "89b05f1b3797346e1f55c37dc408fa6ab62c4d91",
+      "bytes": 1241,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/request-m1-3.json",
+      "git_blob_sha1": "743b61771904662dc99d28e9027efac76c4cbf71",
+      "bytes": 1198,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/request-m1.json",
+      "git_blob_sha1": "84ad4c90f5ff4663f0c316323f544efbe962490f",
+      "bytes": 1117,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/workbrief-empty.json",
+      "git_blob_sha1": "eeec1a685f5ae5ca5d87c35a27cb0f22883653fe",
+      "bytes": 1040,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/audit-and-handoff.md",
+      "git_blob_sha1": "a386496b9545c99481c3f023a8e279e4758167bf",
+      "bytes": 7463,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/case-evidence.md",
+      "git_blob_sha1": "d47d7daed4132e1b5940e275aa60dac479beb472",
+      "bytes": 30903,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/case-index.json",
+      "git_blob_sha1": "68641fbabc63bed21152b55c3555f40bf4107a2b",
+      "bytes": 153648,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/case-source-LICENSE.txt",
+      "git_blob_sha1": "1edcc82393ad4bce49aca4ab0c074dc75fcc268e",
+      "bytes": 1069,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/contract-guide.md",
+      "git_blob_sha1": "63d06d7fd75aa152e651ac164cd49daba7051555",
+      "bytes": 10943,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/contracts.json",
+      "git_blob_sha1": "eec7b79a7cec9de17232f9d203aa481a8c1830ca",
+      "bytes": 28284,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/emotion-motif.md",
+      "git_blob_sha1": "5f88055351eba006ec0142894da57abd74d382a6",
+      "bytes": 4291,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/h3-base-official.txt",
+      "git_blob_sha1": "40cf586a634d677d6b7107b367cf0ec9621be728",
+      "bytes": 15773,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/h3-label-mapping.md",
+      "git_blob_sha1": "3df434e0a51feb2c27ac59b8dcd16f15bbdd532c",
+      "bytes": 23876,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/h3-protocol-source.json",
+      "git_blob_sha1": "28d1f3806567d0622408db7524d25365e55e8d67",
+      "bytes": 30283,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/h3-ref-official.txt",
+      "git_blob_sha1": "7ae1b2d07d743fd2392258a96449be9e9e322d35",
+      "bytes": 23553,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/intent-constraints.md",
+      "git_blob_sha1": "07528ef1bdf14e7bb53842f68816b15ed774fd77",
+      "bytes": 4616,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/module-registry.json",
+      "git_blob_sha1": "1ca18cb02278aa48178fe16c7124b1bf6eda3c10",
+      "bytes": 15615,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/paragraph-information.md",
+      "git_blob_sha1": "8096779c7a4562f1f8d1f2e052fc6f9717fa1c7c",
+      "bytes": 4575,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/provenance-and-license.md",
+      "git_blob_sha1": "3adfd657fbcb9a83692c5babc7b3620221a1f9a6",
+      "bytes": 4532,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/scripts/m1_contract.py",
+      "git_blob_sha1": "c61d12582dbcd8d5701b6d2d9b6c5eec9d85fdaf",
+      "bytes": 53329,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/00-analysis-full.md",
+      "git_blob_sha1": "bf72a13b58bcd9c24a59edef372162772bbfec17",
+      "bytes": 35675,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/01-core-framework.md",
+      "git_blob_sha1": "03699c33a24286ad6d8409ce136261405774aa04",
+      "bytes": 46993,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/02-development-roadmap.md",
+      "git_blob_sha1": "348b9211f257ed3aa94919170743d79d15797a23",
+      "bytes": 45488,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/03-source-evidence.md",
+      "git_blob_sha1": "f4efba61f8abe3cbd643c9142b7882170061a1e3",
+      "bytes": 51372,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/04-framework-confirmation-full.md",
+      "git_blob_sha1": "0b81d61745c2bf2019a9edb222c7f64d6b04a526",
+      "bytes": 20647,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/05-workflow-routing.md",
+      "git_blob_sha1": "2b6e10942cf1802708d3710734a13ace5639c093",
+      "bytes": 50540,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/06-modularity-routing-principles.md",
+      "git_blob_sha1": "e5b1479e0a8fe3af4e6e6e7b2debf26473f29325",
+      "bytes": 32566,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/AGENTS.md",
+      "git_blob_sha1": "96591503c1cf27c3df92b3b12d0be823ce7a2d93",
+      "bytes": 2843,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/LOCK.md",
+      "git_blob_sha1": "fc15141096ea27a49cfecc45cea3bfa2baa9350b",
+      "bytes": 5615,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/README.md",
+      "git_blob_sha1": "0c4127a37031f5005ba3d20cc214b381bca13793",
+      "bytes": 23029,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/baseline-lock.json",
+      "git_blob_sha1": "d041c420011ba57e69e9b070f19926b931dbfe92",
+      "bytes": 6442,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/skillplan/validation-record.json",
+      "git_blob_sha1": "95fd6d11a48125ceaa670de2fddf51ccf50875b8",
+      "bytes": 19404,
+      "mode": "100644"
+    }
+  ],
+  "initially_materialized_paths": [
+    "case-studies/2026-08-cinematic-character-reveal-two-part/README.md",
+    "case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md",
+    "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md",
+    "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md",
+    "case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-08-dual-subject-speed-contrast/README.md",
+    "case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md",
+    "case-studies/2026-08-dual-subject-speed-contrast/prompt.md",
+    "case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-08-first-person-finger-controlled-dance/README.md",
+    "case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md",
+    "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md",
+    "case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md",
+    "case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-08-furina-windsurfing-fashion-mv/README.md",
+    "case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md",
+    "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md",
+    "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md",
+    "case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-08-single-subject-three-pose/README.md",
+    "case-studies/2026-08-single-subject-three-pose/README.zh-CN.md",
+    "case-studies/2026-08-single-subject-three-pose/prompt.md",
+    "case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md",
+    "case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+    "case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md",
+    "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+    "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md",
+    "case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-08-three-person-orbital-long-take/README.md",
+    "case-studies/2026-08-three-person-orbital-long-take/README.zh-CN.md",
+    "case-studies/2026-08-three-person-orbital-long-take/prompt.md",
+    "case-studies/2026-08-three-person-orbital-long-take/prompt.zh-CN.md",
+    "case-studies/2026-08-three-person-orbital-long-take/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-08-water-obstacle-variety-show/README.md",
+    "case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md",
+    "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+    "case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md",
+    "case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-09-action-chain-sock-fan-comedy/README.md",
+    "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt",
+    "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt",
+    "case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+    "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt",
+    "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt",
+    "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt",
+    "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt",
+    "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-09-purple-veil-dance-seven-segment/README.md",
+    "case-studies/2026-09-purple-veil-dance-seven-segment/prompt.md",
+    "case-studies/2026-09-snap-lock-editorial-reveal/README.md",
+    "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md",
+    "case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md",
+    "case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-09-song-style-classical-dance-six-segment/README.md",
+    "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md",
+    "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md",
+    "case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md",
+    "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md",
+    "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md",
+    "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md",
+    "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md",
+    "case-studies/2026-10-advanced-camera-combinations/README.md",
+    "case-studies/2026-10-advanced-camera-combinations/prompt.md",
+    "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md",
+    "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md",
+    "case-studies/2026-10-camera-movement-discipline-library/README.md",
+    "case-studies/2026-10-camera-movement-discipline-library/prompt.md",
+    "case-studies/2026-10-classical-wuxia-dance-13-segment/README.md",
+    "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+    "case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md",
+    "case-studies/2026-10-dance-motion-chain-library/README.md",
+    "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md",
+    "case-studies/2026-10-four-subject-formation-choreography/README.md",
+    "case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+    "case-studies/2026-10-h3-motion-transfer/README.md",
+    "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+    "case-studies/2026-10-h3-motion-transfer/prompt.md",
+    "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+    "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+    "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md",
+    "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+    "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md",
+    "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+    "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+    "case-studies/2026-10-physical-camera-position-library/README.md",
+    "case-studies/2026-10-physical-camera-position-library/prompt.md",
+    "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+    "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+    "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+    "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+    "case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+    "case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md",
+    "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+    "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+    "case-studies/VOCABULARY-EXPANSION.zh-CN.md",
+    "docs/h3skill/h3-action-performance/SKILL.md",
+    "docs/h3skill/h3-asset-reference/SKILL.md",
+    "docs/h3skill/h3-camera-visibility/SKILL.md",
+    "docs/h3skill/h3-camera-visibility/assets/fixture-manifest.json",
+    "docs/h3skill/h3-camera-visibility/assets/proposal-batch.json",
+    "docs/h3skill/h3-camera-visibility/assets/proposal-m5-1.json",
+    "docs/h3skill/h3-camera-visibility/assets/proposal-m5-2.json",
+    "docs/h3skill/h3-camera-visibility/assets/proposal-m5-3.json",
+    "docs/h3skill/h3-camera-visibility/assets/proposal-m5-4.json",
+    "docs/h3skill/h3-camera-visibility/assets/proposal-standalone-m5-1.json",
+    "docs/h3skill/h3-camera-visibility/assets/proposal-standalone-m5-2.json",
+    "docs/h3skill/h3-camera-visibility/assets/proposal-standalone-m5-3.json",
+    "docs/h3skill/h3-camera-visibility/assets/proposal-standalone-m5-4.json",
+    "docs/h3skill/h3-camera-visibility/assets/request-m5-1.json",
+    "docs/h3skill/h3-camera-visibility/assets/request-m5-2.json",
+    "docs/h3skill/h3-camera-visibility/assets/request-m5-3.json",
+    "docs/h3skill/h3-camera-visibility/assets/request-m5-4.json",
+    "docs/h3skill/h3-camera-visibility/assets/request-m5.json",
+    "docs/h3skill/h3-camera-visibility/assets/request-minimal-m5-2.json",
+    "docs/h3skill/h3-camera-visibility/assets/request-standalone-m5-1.json",
+    "docs/h3skill/h3-camera-visibility/assets/request-standalone-m5-2.json",
+    "docs/h3skill/h3-camera-visibility/assets/request-standalone-m5-3.json",
+    "docs/h3skill/h3-camera-visibility/assets/request-standalone-m5-4.json",
+    "docs/h3skill/h3-camera-visibility/assets/requests.json",
+    "docs/h3skill/h3-camera-visibility/assets/state-empty.json",
+    "docs/h3skill/h3-camera-visibility/references/audit-and-handoff.md",
+    "docs/h3skill/h3-camera-visibility/references/case-evidence.md",
+    "docs/h3skill/h3-camera-visibility/references/case-index.json",
+    "docs/h3skill/h3-camera-visibility/references/case-source-LICENSE.txt",
+    "docs/h3skill/h3-camera-visibility/references/contract-guide.md",
+    "docs/h3skill/h3-camera-visibility/references/contracts.json",
+    "docs/h3skill/h3-camera-visibility/references/focus-and-depth.md",
+    "docs/h3skill/h3-camera-visibility/references/framing-and-visibility.md",
+    "docs/h3skill/h3-camera-visibility/references/h3-NOTICE.txt",
+    "docs/h3skill/h3-camera-visibility/references/h3-base-official.txt",
+    "docs/h3skill/h3-camera-visibility/references/h3-label-mapping.md",
+    "docs/h3skill/h3-camera-visibility/references/h3-protocol-source.json",
+    "docs/h3skill/h3-camera-visibility/references/h3-ref-official.txt",
+    "docs/h3skill/h3-camera-visibility/references/module-registry.json",
+    "docs/h3skill/h3-camera-visibility/references/movement-and-triggers.md",
+    "docs/h3skill/h3-camera-visibility/references/provenance-and-license.md",
+    "docs/h3skill/h3-camera-visibility/references/viewpoints-and-axis.md",
+    "docs/h3skill/h3-camera-visibility/scripts/m5_contract.py",
+    "docs/h3skill/h3-scene-blocking/SKILL.md",
+    "docs/h3skill/h3-work-intent/SKILL.md",
+    "docs/skillplan/00-analysis-full.md",
+    "docs/skillplan/01-core-framework.md",
+    "docs/skillplan/02-development-roadmap.md",
+    "docs/skillplan/03-source-evidence.md",
+    "docs/skillplan/04-framework-confirmation-full.md",
+    "docs/skillplan/05-workflow-routing.md",
+    "docs/skillplan/06-modularity-routing-principles.md",
+    "docs/skillplan/AGENTS.md",
+    "docs/skillplan/LOCK.md",
+    "docs/skillplan/README.md",
+    "docs/skillplan/baseline-lock.json",
+    "docs/skillplan/validation-record.json"
+  ],
+  "materialization_recorded_at_utc": "2026-11-05T15:20:50.655946+00:00"
+}

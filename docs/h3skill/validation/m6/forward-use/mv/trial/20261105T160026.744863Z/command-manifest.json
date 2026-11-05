@@ -1,0 +1,46 @@
+{
+  "trial_type": "主线程引导后的定向审计；非盲测",
+  "cwd": "/workspace/scratch/939e06c380d8/H3-h3-prompt-journal",
+  "brief_sha256": "fdd2047e626ffe30a93a59e6aeb3c4469a64b8353e6ac8dfd08147c6dfc22c46",
+  "runtime_sha256": "7d4173070df5b34d3f77e240bee83c53f9f5eaf9909bd77e97d14c3c652462ee",
+  "templates": {
+    "request": "docs/h3skill/h3-sound-music-dialogue/assets/request-standalone-m6-3.json",
+    "proposal": "docs/h3skill/h3-sound-music-dialogue/assets/proposal-standalone-m6-3.json"
+  },
+  "artifact_sha256": {
+    "request.json": "0bc4c04298ab5c6859d48b1282d012340bb1adc3372ef73a1099c1885e439bb6",
+    "proposal.json": "319c197420451e4a18692a4e7f91b10a6ec94d0611c8dc19b937881406f4937f"
+  },
+  "calls": [
+    {
+      "name": "route",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/939e06c380d8/H3-h3-prompt-journal/docs/h3skill/h3-sound-music-dialogue/scripts/m6_contract.py",
+        "route",
+        "/workspace/scratch/939e06c380d8/H3-h3-prompt-journal/docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/request.json"
+      ],
+      "started_utc": "2026-11-05T16:00:26.749055+00:00",
+      "exit_code": 0,
+      "stdout_file": "route.stdout.txt",
+      "stderr_file": "route.stderr.txt"
+    },
+    {
+      "name": "check",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "/workspace/scratch/939e06c380d8/H3-h3-prompt-journal/docs/h3skill/h3-sound-music-dialogue/scripts/m6_contract.py",
+        "check",
+        "/workspace/scratch/939e06c380d8/H3-h3-prompt-journal/docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/proposal.json",
+        "--request",
+        "/workspace/scratch/939e06c380d8/H3-h3-prompt-journal/docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/request.json"
+      ],
+      "started_utc": "2026-11-05T16:00:26.859394+00:00",
+      "exit_code": 1,
+      "stdout_file": "check.stdout.txt",
+      "stderr_file": "check.stderr.txt"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "M6State",
+  "contract_version": "1.0.0",
+  "work_id": "m6_forward_dialogue",
+  "version": 0,
+  "owner": "M6",
+  "object_type": "SoundPlan",
+  "status": "draft",
+  "sources": {},
+  "content": {
+    "sources": {
+      "items": {}
+    },
+    "vocal_events": {
+      "items": {}
+    },
+    "music": {
+      "items": {}
+    },
+    "effects": {
+      "items": {}
+    }
+  },
+  "issues": {},
+  "accepted_proposals": {},
+  "consumers": {},
+  "display": {
+    "title": "双人对白与同角色画外旁白：离线可组合声音草稿"
+  }
+}

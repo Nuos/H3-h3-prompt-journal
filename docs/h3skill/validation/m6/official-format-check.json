@@ -1,0 +1,51 @@
+{
+  "kind": "M6OfficialFormatCheck",
+  "recorded_at_utc": "2026-11-05T15:52:09.241226+00:00",
+  "command": [
+    "python",
+    "docs/h3skill/_standards/anthropics-quick-validate.py",
+    "docs/h3skill/h3-sound-music-dialogue"
+  ],
+  "exit_code": 0,
+  "stdout": "Skill is valid!\n",
+  "stderr": "",
+  "skill_sha256": "08907980148921f708027eb8d0f3b4a0d89a7f4259712f5244f4399cb79ef158",
+  "skill_lines": 92,
+  "standard_source_commits": {
+    "anthropics_commit": "ca45fc496a3436251f191354091d557da31c15b5",
+    "agentskills_commit": "83021e2be457a9b6679148719c1f6074f0ad975e"
+  },
+  "standard_snapshot_hashes": [
+    {
+      "path": "anthropics-template.md",
+      "expected_sha256": "eb685d91de039ed864fbd790cddf31684b017fd4a34ee1a55760d8d7cdbadefa",
+      "match": true
+    },
+    {
+      "path": "anthropics-quick-validate.py",
+      "expected_sha256": "67cf5703402013936c8fb75ad6a1afecd8841d45cc5e606b634eb05825fde365",
+      "match": true
+    },
+    {
+      "path": "anthropics-skill-creator-LICENSE.txt",
+      "expected_sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "match": true
+    },
+    {
+      "path": "anthropics-spec-pointer.md",
+      "expected_sha256": "ff22f2be775f4b757c9a7a2df0421de4c94021d34d9382cea5dd567ff0cdad2c",
+      "match": true
+    },
+    {
+      "path": "agent-skills-specification.mdx",
+      "expected_sha256": "b9079c0c10b7930e8c6a20ff2bc10cda2a3343c55185120e3f1116a1a529b220",
+      "match": true
+    },
+    {
+      "path": "agent-skills-docs-LICENSE.txt",
+      "expected_sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+      "match": true
+    }
+  ],
+  "scope": "Official minimal frontmatter validator plus fixed standard-source integrity. Formal nonempty/name-directory/link checks are in release verification; behavior is separate."
+}

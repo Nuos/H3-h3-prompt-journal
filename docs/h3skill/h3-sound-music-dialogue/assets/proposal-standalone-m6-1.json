@@ -1,0 +1,68 @@
+{
+  "kind": "M6Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "sound_example",
+  "base_version": 0,
+  "proposal_id": "proposal_standalone_m6_1",
+  "module_id": "M6.1",
+  "source_request_id": "request_standalone_m6_1",
+  "sources": {
+    "brief": {
+      "kind": "user_requirement",
+      "locator": "synthetic-design-fixture://m6/sound-contract",
+      "version": "1",
+      "excerpt": "Use the registered ambient source segment; preserve the dialogue exactly; add a footstep at the referenced action. These are contract fixtures, not observations of case-study media."
+    }
+  },
+  "context": {
+    "source_brief": "Bind the real speaker and preserve unresolved voice evidence."
+  },
+  "changes": {
+    "sources": {
+      "items": {
+        "speakerA": {
+          "sound_source_id": "speakerA",
+          "shot_id": "shot1",
+          "source_kind": "speaker",
+          "subject_ref": {
+            "kind": "external",
+            "id": "subjectA",
+            "shot_id": "shot1",
+            "source_id": "brief",
+            "source_version": "1"
+          },
+          "voice_ref": {
+            "state": "unknown",
+            "reason": "No upstream artifact or audio observation is available; preserve the gap."
+          },
+          "description": {
+            "state": "known",
+            "value": "A visible speaker with a stable identity.",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "voice_requirement": {
+            "state": "known",
+            "value": "Quiet, intelligible speech; no inferred accent.",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "permission": {
+            "state": "unknown",
+            "reason": "No upstream artifact or audio observation is available; preserve the gap."
+          },
+          "source_refs": [
+            "brief"
+          ],
+          "applies_to_shots": [
+            "shot1"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

@@ -1,0 +1,423 @@
+{
+  "kind": "M6Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "m6_forward_dialogue",
+  "base_version": 0,
+  "proposal_id": "dialogue_proposal_m6_4_v2",
+  "module_id": "M6.4",
+  "source_request_id": "dialogue_request_m6_4_v2",
+  "sources": {
+    "brief": {
+      "kind": "user_requirement",
+      "locator": "docs/h3skill/validation/m6/forward-use/dialogue-task.txt",
+      "version": "1",
+      "excerpt": "使用本仓库 docs/h3skill/h3-sound-music-dialogue 的技能，独立完成一段双人对话的声音计划。输入直接由用户提供，不要求执行其他核心模块。可以读取技能资源并使用离线工具；不得修改技能包。把请求、提案、组合结果、工具记录和最终说明存到 validation/m6/forward-use/dialogue/。\n\n镜头 SHOT-A：角色 ENTITY-CLERK 在画面内说：“先放在桌上，别松手。”\n镜头 SHOT-B：角色 ENTITY-VISITOR 说：“好，我接住了。”\n用户另指定 ENTITY-CLERK 的画外旁白：“这一次，我记住了。”，旁白时 ENTITY-CLERK 仍在画面中，没有开口表演。三句话必须保持用户给出的原字词和标点。声音事件顺序就是上述顺序；当前尚无绝对时刻、总片长和实际媒体。\n\n由用户给出的稳定身份：ENTITY-CLERK 是店员，ENTITY-VISITOR 是顾客。VOICE-REF 为已登记音色参考，明确只用于 ENTITY-VISITOR 的音色，不复制原信号，不复演其中台词。当前并未提供 VOICE-REF 的可听文件，不能描述已确认的音色质地。\n\n没有画外配乐。用户要求保留低声室内环境底声及事件 ACT-PLACE 的物件轻放声；ACT-PLACE 的动作由外部公开资料描述为顾客将盒子放在桌面并释放，当前没有具体时间。两镜之间环境底声连续；台词无需跨切。只设计本域声音，不制作动作计划、绝对时间轴或完整 H3 提示词。\n\n请按技能的公开合同提交可组合的声音计划，实际运行相关命令，并将剩余未知及交接信息列明。这些输入属于本轮设计任务数据，不是新收录的案例或媒体观察。\n"
+    },
+    "draft_assumption": {
+      "kind": "hypothesis",
+      "locator": "local-design://m6-forward-dialogue/provisional-shot-binding",
+      "version": "1",
+      "excerpt": "用户未指定旁白与 ACT-PLACE 所属镜头。仅为本轮可组合草稿暂挂 SHOT-B；不是已确认输入，交接前需确认或重绑定。"
+    },
+    "sound_design": {
+      "kind": "design_decision",
+      "locator": "local-design://m6-forward-dialogue/sound-requirements",
+      "version": "1",
+      "excerpt": "新设计声音，不复制 VOICE-REF 原信号。语音清晰自然，不推断音色质地、口音或节奏；环境底声低于语音，轻放声仅绑定桌面接触。"
+    }
+  },
+  "context": {
+    "task_context": {
+      "owner": "external",
+      "source_id": "brief",
+      "source_version": "1",
+      "values": {
+        "source_type": "本轮用户设计输入，不是新案例或媒体观察",
+        "vocal_order": [
+          "VOCAL-01",
+          "VOCAL-02",
+          "VOCAL-03"
+        ]
+      }
+    },
+    "time_context": {
+      "state": "unknown",
+      "reason": "无绝对时刻、事件时长或总片长；仅给出三句语音的先后顺序。"
+    },
+    "reference_context": {
+      "owner": "external",
+      "source_id": "brief",
+      "source_version": "1",
+      "values": {
+        "VOICE-REF": {
+          "role": "ENTITY-VISITOR 的音色参考",
+          "audible_file_available": false,
+          "original_signal_copy": false,
+          "source_dialogue_reenactment": false,
+          "asset_version": {
+            "state": "unknown",
+            "reason": "用户未提供媒体版本。"
+          }
+        }
+      }
+    },
+    "effects_brief": "两镜室内底声连续；ACT-PLACE 仅设计盒子与桌面的轻放接触声。",
+    "source_context": {
+      "items": {
+        "SOUND-CLERK": {
+          "sound_source_id": "SOUND-CLERK",
+          "shot_id": "SHOT-A",
+          "source_kind": "speaker",
+          "subject_ref": {
+            "kind": "external",
+            "id": "ENTITY-CLERK",
+            "shot_id": "SHOT-A",
+            "source_id": "brief",
+            "source_version": "1"
+          },
+          "voice_ref": {
+            "state": "unknown",
+            "reason": "未提供店员音色参考。"
+          },
+          "description": {
+            "state": "known",
+            "value": "店员 ENTITY-CLERK；对白和画外旁白共用稳定角色声源，不新建独立旁白人物。",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "voice_requirement": {
+            "state": "unknown",
+            "reason": "店员音色、口音、声域未指定。"
+          },
+          "permission": {
+            "state": "unknown",
+            "reason": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。"
+          },
+          "source_refs": [
+            "brief"
+          ],
+          "applies_to_shots": [
+            "SHOT-A",
+            "SHOT-B"
+          ]
+        },
+        "SOUND-VISITOR": {
+          "sound_source_id": "SOUND-VISITOR",
+          "shot_id": "SHOT-B",
+          "source_kind": "speaker",
+          "subject_ref": {
+            "kind": "external",
+            "id": "ENTITY-VISITOR",
+            "shot_id": "SHOT-B",
+            "source_id": "brief",
+            "source_version": "1"
+          },
+          "voice_ref": {
+            "kind": "external",
+            "id": "VOICE-REF",
+            "shot_id": "SHOT-B",
+            "source_id": "brief",
+            "source_version": "1"
+          },
+          "description": {
+            "state": "known",
+            "value": "顾客 ENTITY-VISITOR；VOICE-REF 只服务该角色的音色参考。",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "voice_requirement": {
+            "state": "known",
+            "value": "只参考 VOICE-REF 音色；不复制信号、不复演其台词。未听取文件，质地、口音、声域均未确认。",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "permission": {
+            "state": "unknown",
+            "reason": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。"
+          },
+          "source_refs": [
+            "brief"
+          ],
+          "applies_to_shots": [
+            "SHOT-B"
+          ]
+        },
+        "SOUND-ROOM": {
+          "sound_source_id": "SOUND-ROOM",
+          "shot_id": "SHOT-A",
+          "source_kind": "environment",
+          "subject_ref": {
+            "state": "not_applicable",
+            "reason": "室内环境声源不绑定人物。"
+          },
+          "voice_ref": {
+            "state": "not_applicable",
+            "reason": "非人声源。"
+          },
+          "description": {
+            "state": "known",
+            "value": "两镜共享低声室内环境底声。",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "voice_requirement": {
+            "state": "known",
+            "value": "非人声源：不设置人声音色或发声要求。",
+            "source_refs": [
+              "sound_design"
+            ]
+          },
+          "permission": {
+            "state": "unknown",
+            "reason": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。"
+          },
+          "source_refs": [
+            "brief"
+          ],
+          "applies_to_shots": [
+            "SHOT-A",
+            "SHOT-B"
+          ]
+        },
+        "SOUND-BOX": {
+          "sound_source_id": "SOUND-BOX",
+          "shot_id": "SHOT-B",
+          "source_kind": "object",
+          "subject_ref": {
+            "state": "unknown",
+            "reason": "用户未提供盒子的稳定实体 ID；本声源为 ACT-PLACE 接触声的本地设计标识。"
+          },
+          "voice_ref": {
+            "state": "not_applicable",
+            "reason": "非人声源。"
+          },
+          "description": {
+            "state": "known",
+            "value": "ACT-PLACE 所涉及盒子与桌面的轻接触声源；SHOT-B 只是待确认的草稿归属。",
+            "source_refs": [
+              "brief",
+              "draft_assumption"
+            ]
+          },
+          "voice_requirement": {
+            "state": "known",
+            "value": "非人声源：不设置人声音色或发声要求。",
+            "source_refs": [
+              "sound_design"
+            ]
+          },
+          "permission": {
+            "state": "unknown",
+            "reason": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。"
+          },
+          "source_refs": [
+            "brief",
+            "draft_assumption"
+          ],
+          "applies_to_shots": [
+            "SHOT-B"
+          ]
+        }
+      }
+    },
+    "action_context": {
+      "owner": "external",
+      "source_id": "brief",
+      "source_version": "1",
+      "values": {
+        "ACT-PLACE": {
+          "description_as_reported_by_user": "顾客将盒子放在桌面并释放",
+          "shot": {
+            "state": "unknown",
+            "reason": "未提供"
+          },
+          "time": {
+            "state": "unknown",
+            "reason": "未提供"
+          },
+          "external_url_and_version": {
+            "state": "unknown",
+            "reason": "未提供"
+          }
+        }
+      }
+    }
+  },
+  "changes": {
+    "effects": {
+      "items": {
+        "ROOM-A": {
+          "effect_id": "ROOM-A",
+          "shot_id": "SHOT-A",
+          "source_ref": {
+            "kind": "internal",
+            "id": "SOUND-ROOM"
+          },
+          "action_ref": {
+            "state": "not_applicable",
+            "reason": "环境底声不绑定离散动作。"
+          },
+          "event_kind": "environment",
+          "description": {
+            "state": "known",
+            "value": "低声室内环境底声，保持语音可辨识；具体声学质地未观察。",
+            "source_refs": [
+              "brief",
+              "sound_design"
+            ]
+          },
+          "spatial_relation": {
+            "state": "unknown",
+            "reason": "没有空间或媒体资料，室内混响、方位及距离未确认。"
+          },
+          "continuity": {
+            "state": "known",
+            "value": "SHOT-A → SHOT-B 环境底声连续，切镜不重启；具体接缝交由 M9，绝对时刻交由 M7。",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "audio_origin": "new",
+          "track_ref": {
+            "state": "not_applicable",
+            "reason": "未复制原音轨；此为新设计声层。"
+          },
+          "explicit_silence": {
+            "state": "not_applicable",
+            "reason": "用户要求环境底声存在。"
+          },
+          "timing_owner": "M7",
+          "source_refs": [
+            "brief",
+            "sound_design"
+          ]
+        },
+        "ROOM-B": {
+          "effect_id": "ROOM-B",
+          "shot_id": "SHOT-B",
+          "source_ref": {
+            "kind": "internal",
+            "id": "SOUND-ROOM"
+          },
+          "action_ref": {
+            "state": "not_applicable",
+            "reason": "环境底声不绑定离散动作。"
+          },
+          "event_kind": "environment",
+          "description": {
+            "state": "known",
+            "value": "低声室内环境底声，保持语音可辨识；具体声学质地未观察。",
+            "source_refs": [
+              "brief",
+              "sound_design"
+            ]
+          },
+          "spatial_relation": {
+            "state": "unknown",
+            "reason": "没有空间或媒体资料，室内混响、方位及距离未确认。"
+          },
+          "continuity": {
+            "state": "known",
+            "value": "SHOT-A → SHOT-B 环境底声连续，切镜不重启；具体接缝交由 M9，绝对时刻交由 M7。",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "audio_origin": "new",
+          "track_ref": {
+            "state": "not_applicable",
+            "reason": "未复制原音轨；此为新设计声层。"
+          },
+          "explicit_silence": {
+            "state": "not_applicable",
+            "reason": "用户要求环境底声存在。"
+          },
+          "timing_owner": "M7",
+          "source_refs": [
+            "brief",
+            "sound_design"
+          ]
+        },
+        "EFFECT-PLACE": {
+          "effect_id": "EFFECT-PLACE",
+          "shot_id": "SHOT-B",
+          "source_ref": {
+            "kind": "internal",
+            "id": "SOUND-BOX"
+          },
+          "action_ref": {
+            "kind": "external",
+            "id": "ACT-PLACE",
+            "shot_id": "SHOT-B",
+            "source_id": "brief",
+            "source_version": "1"
+          },
+          "event_kind": "action",
+          "description": {
+            "state": "known",
+            "value": "盒子与桌面接触时的一次轻放声。仅绑定接触，不以声音确认释放动作已发生。SHOT-B 归属只是待确认假设。",
+            "source_refs": [
+              "brief",
+              "sound_design",
+              "draft_assumption"
+            ]
+          },
+          "spatial_relation": {
+            "state": "known",
+            "value": "声源定位为盒子与桌面接触处；声像、距离和混响待空间资料。",
+            "source_refs": [
+              "brief",
+              "sound_design"
+            ]
+          },
+          "continuity": {
+            "state": "unknown",
+            "reason": "ACT-PLACE 镜头、接触时刻以及它与三句语音的关系未给出；不可据对白自行排定动作。"
+          },
+          "audio_origin": "new",
+          "track_ref": {
+            "state": "not_applicable",
+            "reason": "无可复制的注册媒体；新设计接触声。"
+          },
+          "explicit_silence": {
+            "state": "not_applicable",
+            "reason": "用户明确要求保留轻放声。"
+          },
+          "timing_owner": "M7",
+          "source_refs": [
+            "brief",
+            "sound_design",
+            "draft_assumption"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [
+    {
+      "issue_id": "PLACE-SHOT-TIME",
+      "owner": "M6.4",
+      "status": "open",
+      "severity": "warning",
+      "message": "ACT-PLACE 的镜头和时刻未知，草稿暂挂 SHOT-B；外部资料由用户转述，URL 与版本未提供，未执行外部检索。",
+      "source_refs": [
+        "brief"
+      ]
+    },
+    {
+      "issue_id": "PLACE-RELEASE-TENSION",
+      "owner": "M6.4",
+      "status": "open",
+      "severity": "warning",
+      "message": "外部动作描述为顾客将盒子放桌面并释放；对白包含别松手、接住了。声音域仅绑定接触，动作/对白关系交外部动作责任方确认，不改写对白或动作。",
+      "source_refs": [
+        "brief"
+      ]
+    }
+  ],
+  "resolutions": []
+}

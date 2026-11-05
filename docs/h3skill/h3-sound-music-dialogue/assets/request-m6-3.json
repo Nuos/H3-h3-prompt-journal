@@ -1,0 +1,37 @@
+{
+  "kind": "M6Request",
+  "contract_version": "1.0.0",
+  "work_id": "sound_example",
+  "base_version": 0,
+  "request_id": "request_m6_3",
+  "target": "M6.3",
+  "sources": {
+    "brief": {
+      "kind": "user_requirement",
+      "locator": "synthetic-design-fixture://m6/sound-contract",
+      "version": "1",
+      "excerpt": "Use the registered ambient source segment; preserve the dialogue exactly; add a footstep at the referenced action. These are contract fixtures, not observations of case-study media."
+    }
+  },
+  "inputs": {
+    "music_brief": "Retain this asset and add the requested speech and footstep.",
+    "reference_context": {
+      "owner": "M2",
+      "source_id": "brief",
+      "source_version": "1",
+      "values": {
+        "audio_role": "background soundtrack"
+      }
+    },
+    "audio_assets": {
+      "audioA": {
+        "asset_id": "audioA",
+        "asset_version": "1",
+        "source_id": "brief",
+        "source_version": "1",
+        "available": false,
+        "duration_seconds": 13.793
+      }
+    }
+  }
+}

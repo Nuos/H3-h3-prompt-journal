@@ -1,0 +1,81 @@
+{
+  "kind": "M6Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "sound_example",
+  "base_version": 0,
+  "proposal_id": "proposal_standalone_m6_2",
+  "module_id": "M6.2",
+  "source_request_id": "request_standalone_m6_2",
+  "sources": {
+    "brief": {
+      "kind": "user_requirement",
+      "locator": "synthetic-design-fixture://m6/sound-contract",
+      "version": "1",
+      "excerpt": "Use the registered ambient source segment; preserve the dialogue exactly; add a footstep at the referenced action. These are contract fixtures, not observations of case-study media."
+    }
+  },
+  "context": {
+    "vocal_brief": "Preserve the supplied text, with independent voice source binding.",
+    "source_context": {
+      "state": "unknown",
+      "reason": "No upstream artifact or audio observation is available; preserve the gap."
+    },
+    "vocal_texts": {
+      "lineA": "Keep this line, exactly!"
+    }
+  },
+  "changes": {
+    "vocal_events": {
+      "items": {
+        "lineA": {
+          "vocal_event_id": "lineA",
+          "shot_id": "shot1",
+          "source_ref": {
+            "kind": "internal",
+            "id": "speakerA"
+          },
+          "event_kind": "spoken_dialogue",
+          "original_text": "Keep this line, exactly!",
+          "approved_text": "Keep this line, exactly!",
+          "rewrite_approval": {
+            "state": "not_applicable",
+            "reason": "Not required by this sound event."
+          },
+          "delivery": {
+            "state": "known",
+            "value": "Speak naturally after the action cue.",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "lip_sync": "required",
+          "audio_origin": "new",
+          "track_ref": {
+            "state": "not_applicable",
+            "reason": "Not required by this sound event."
+          },
+          "timing_owner": "M7",
+          "source_refs": [
+            "brief"
+          ],
+          "language": {
+            "state": "known",
+            "value": "English",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "continuity": {
+            "state": "known",
+            "value": "This line remains a distinct event. Start after the supplied action cue; do not infer an absolute time. Cross-cut continuation is unresolved.",
+            "source_refs": [
+              "brief"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

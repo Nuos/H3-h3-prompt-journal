@@ -1,0 +1,87 @@
+{
+  "kind": "M6Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "sound_example",
+  "base_version": 0,
+  "proposal_id": "proposal_m6_3",
+  "module_id": "M6.3",
+  "source_request_id": "request_m6_3",
+  "sources": {
+    "brief": {
+      "kind": "user_requirement",
+      "locator": "synthetic-design-fixture://m6/sound-contract",
+      "version": "1",
+      "excerpt": "Use the registered ambient source segment; preserve the dialogue exactly; add a footstep at the referenced action. These are contract fixtures, not observations of case-study media."
+    }
+  },
+  "context": {
+    "music_brief": "Retain this asset and add the requested speech and footstep.",
+    "reference_context": {
+      "owner": "M2",
+      "source_id": "brief",
+      "source_version": "1",
+      "values": {
+        "audio_role": "background soundtrack"
+      }
+    },
+    "audio_assets": {
+      "audioA": {
+        "asset_id": "audioA",
+        "asset_version": "1",
+        "source_id": "brief",
+        "source_version": "1",
+        "available": false,
+        "duration_seconds": 13.793
+      }
+    }
+  },
+  "changes": {
+    "music": {
+      "items": {
+        "musicA": {
+          "music_id": "musicA",
+          "shot_id": "shot1",
+          "use_strategy": "partially_copy",
+          "audio_selection": {
+            "asset": {
+              "asset_id": "audioA",
+              "asset_version": "1",
+              "source_id": "brief",
+              "source_version": "1",
+              "available": false,
+              "duration_seconds": 13.793
+            },
+            "window": {
+              "start_seconds": 0,
+              "end_seconds": 13.793
+            }
+          },
+          "whole_source": "yes",
+          "additional_audio": "yes",
+          "removals_or_replacements": "no",
+          "music_requirement": {
+            "state": "known",
+            "value": "Retain the complete registered source and add the authorized speech and footstep; therefore partially_copy.",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "beat_plan": {
+            "state": "unknown",
+            "reason": "No upstream artifact or audio observation is available; preserve the gap."
+          },
+          "timing_owner": "M7",
+          "edit_owner": "M9",
+          "source_refs": [
+            "brief"
+          ],
+          "applies_to_shots": [
+            "shot1"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

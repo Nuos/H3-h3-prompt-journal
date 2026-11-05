@@ -1,0 +1,50 @@
+{
+  "kind": "M6State",
+  "contract_version": "1.0.0",
+  "work_id": "sound_example",
+  "version": 0,
+  "owner": "M6",
+  "object_type": "SoundPlan",
+  "status": "draft",
+  "sources": {},
+  "content": {
+    "sources": {
+      "items": {}
+    },
+    "vocal_events": {
+      "items": {}
+    },
+    "music": {
+      "items": {}
+    },
+    "effects": {
+      "items": {}
+    }
+  },
+  "issues": {},
+  "accepted_proposals": {},
+  "consumers": {
+    "time_consumer": {
+      "module_id": "M7",
+      "result_version": 1,
+      "source_state_version": 0,
+      "read_paths": [
+        "/content/vocal_events"
+      ],
+      "status": "current"
+    },
+    "label_consumer": {
+      "module_id": "M11",
+      "result_version": 1,
+      "source_state_version": 0,
+      "read_paths": [
+        "/content/sources",
+        "/content/music"
+      ],
+      "status": "current"
+    }
+  },
+  "display": {
+    "title": "M6 contract design fixture"
+  }
+}

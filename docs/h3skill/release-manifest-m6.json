@@ -1,0 +1,722 @@
+{
+  "kind": "M6ReleaseManifest",
+  "schema_version": "1.0.0",
+  "package": "h3-sound-music-dialogue",
+  "package_version": "0.1.0",
+  "contract_version": "1.0.0",
+  "recorded_at_utc": "2026-11-05T16:04:46.187433+00:00",
+  "source_base_commit": "780a8729cca22e13d4fa44f031f8824056a5deee",
+  "source_base_tree": "33be739a4044175b560733745bdd4f71d721e3d5",
+  "scope": "M6 runtime, tests, documentation, validation records and README index update; frozen plans, case sources and M1-M5 runtime packages are protected.",
+  "runtime_file_count": 40,
+  "file_count": 116,
+  "total_bytes": 1155687,
+  "hash_exclusions": [
+    {
+      "path": "docs/h3skill/release-manifest-m6.json",
+      "reason": "The manifest cannot include its own content hash."
+    },
+    {
+      "path": "docs/h3skill/validation/m6/release-check.json",
+      "reason": "Derived from the manifest; excluded to avoid a circular hash dependency. Both excluded files are still fixed by the publication Git tree."
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/h3skill/20261105-development-m6-v001.md",
+      "bytes": 27428,
+      "sha256": "85374ab89cbaf5191777a2f15e2f7a4a4d36da2822f7f6ae0f2c69bbb5e7d558",
+      "git_blob_sha1": "5c779cf58277b147972f091b8bb0859002088376"
+    },
+    {
+      "path": "docs/h3skill/README.md",
+      "bytes": 20165,
+      "sha256": "211692dc2510f65c9a7d7050838be8ec70f51ba90a2373bd58fd3640a8487b88",
+      "git_blob_sha1": "08374d680e6fe0b34bbc0ac1ed740a684803f70b"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/SKILL.md",
+      "bytes": 10839,
+      "sha256": "08907980148921f708027eb8d0f3b4a0d89a7f4259712f5244f4399cb79ef158",
+      "git_blob_sha1": "cc499eeb6c667b7aef1c5f1529d33d4d6ebde0e1"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/fixture-manifest.json",
+      "bytes": 883,
+      "sha256": "777e4e765ec9a562b6c4f38545416c55e7c25d4d3399d01aaf45010083bb8c9e",
+      "git_blob_sha1": "ad097da449e1060a2269f332b18806b80e57db84"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/proposal-batch.json",
+      "bytes": 13439,
+      "sha256": "d1a5a0b94a840939f002e9df580b1aa669f35036040c24fe7c407295e27fd4ce",
+      "git_blob_sha1": "f6da1f9c039e3e8c400c49d2eb7cccaf9ad2b2be"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/proposal-m6-1.json",
+      "bytes": 1993,
+      "sha256": "7f510b4cf3549284ea6d5775313a145edfb07915746972b5803ae1bb975fc84a",
+      "git_blob_sha1": "448dd51a99e85c222826a0f1ef36d1f10b8e7133"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/proposal-m6-2.json",
+      "bytes": 3570,
+      "sha256": "f99e36c882afa9daaf47bc88c6de992c4b9ca3973ec435029e6c9e2f4bbef625",
+      "git_blob_sha1": "57453f7d223956af4601f6440f83fd74c3eb1471"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/proposal-m6-3.json",
+      "bytes": 2483,
+      "sha256": "124073c761f8f4edc4b6bcbd36856d9ac0c1a8fa21d912aab5cad5983973c2f5",
+      "git_blob_sha1": "9eee3ed2c3b399351d9601fbe712bf313cd4d0fa"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/proposal-m6-4.json",
+      "bytes": 3616,
+      "sha256": "87112412ae70b4fc4b4ff09dd6e2a5824a2029db77674b963bee0e0c04bdb5ec",
+      "git_blob_sha1": "0612d141dd6072614be216513e67a1cb94e74ebc"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/proposal-standalone-m6-1.json",
+      "bytes": 2015,
+      "sha256": "1d6f0bfe7a955d4d4bee560e3d7356e476f5ed0c46cc08b3a1709f04d7b351dc",
+      "git_blob_sha1": "b6f914b7fd03415c2df70a6b779990c8568fa26e"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/proposal-standalone-m6-2.json",
+      "bytes": 2469,
+      "sha256": "b075872dd5b6007512d957dc3e8974f932dffc456f0e8a55178f16dafbd96157",
+      "git_blob_sha1": "4bc2559b96491a5c44faabda8cd4b8dba09dc98c"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/proposal-standalone-m6-3.json",
+      "bytes": 2473,
+      "sha256": "69315de9a1c3f4056e974547d187108dac28bc0457d421a26a9318ac884f2489",
+      "git_blob_sha1": "3fa25579968cb7dd8360f22b5cbf3fd6625deb31"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/proposal-standalone-m6-4.json",
+      "bytes": 2494,
+      "sha256": "488d790333f0b021a49edee7470e6af0198b4f7e25335f46b2ab111cb052f4dd",
+      "git_blob_sha1": "88a1e042abaf427743ac1ea7b887b9f35d0696d1"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/request-m6-1.json",
+      "bytes": 626,
+      "sha256": "09a838dbd8f6d2ddc47bc650d12c500c031db2c9101d75153d81ede49efa1055",
+      "git_blob_sha1": "fa5c5c67c8e3037765439abdcb5e5026c354a6e0"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/request-m6-2.json",
+      "bytes": 1972,
+      "sha256": "2362f24a4a3de95a6472a41834b27476cccade206f23ce23eff7eb1d7bf178fc",
+      "git_blob_sha1": "9f6636c6ae7a93706b93a4d7423108dcb6a06826"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/request-m6-3.json",
+      "bytes": 1047,
+      "sha256": "333727c5c8eee70e097c3e96b153b4c8fbef447083aebd5fc856c69a5a97874d",
+      "git_blob_sha1": "2c8322cd24ba56a72c431d80b8e185d776118f3c"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/request-m6-4.json",
+      "bytes": 2045,
+      "sha256": "fafeb38dc8eb2c100c685f8e1f5cc13642d962f7944be5768f70ae1b14e775c7",
+      "git_blob_sha1": "205bfc7ff4927ba22cd01389edfca6c33aecb110"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/request-m6.json",
+      "bytes": 640,
+      "sha256": "ccc57dc0316d236cf61b9825bf24b12ae95f43c42b3f6292f2079906411f8e97",
+      "git_blob_sha1": "cce4da326118f5aedc58596a4be80c039e65ff36"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/request-standalone-m6-1.json",
+      "bytes": 637,
+      "sha256": "e601e5ae0f1de615dba176e8c17c38e209144264d9391998a82defe3c469a181",
+      "git_blob_sha1": "64d92458426a4f036913cb74e18c3ee441c4e74f"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/request-standalone-m6-2.json",
+      "bytes": 860,
+      "sha256": "521fb4736fd30e7512623d603622d79a47b34afd67bb994d1b438d6b5aac3a25",
+      "git_blob_sha1": "c972d495424925a9130b72c9b288ac114d1a0e27"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/request-standalone-m6-3.json",
+      "bytes": 1026,
+      "sha256": "1adfd68c0fafbbf8fac71db25cf8f694da12752528a194c32fd67990cbcc46f2",
+      "git_blob_sha1": "62cc5783f1a71caa328064534077713dd554ea3e"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/request-standalone-m6-4.json",
+      "bytes": 912,
+      "sha256": "0511f950cd556fef1887e3d248e709de79b36eaca1bfd484cb12f0c3e4731a47",
+      "git_blob_sha1": "95ef9a85ba989d567c73c41714c6a9bfe09813f1"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/requests.json",
+      "bytes": 6083,
+      "sha256": "7af51415d2ba115b5b7df14f850b556938776be8231817075f41ab2134223f29",
+      "git_blob_sha1": "32520f13fdc23af23b72e37268f3ad509e2dfec6"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/assets/state-empty.json",
+      "bytes": 934,
+      "sha256": "e559e88d125e0333fde2730f3b94d9c101091d45e800ff7a96dba294269dc1c0",
+      "git_blob_sha1": "9badb9c8c61bd114c52a5a171d3c48a5fbd99dab"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/ambience-and-action-sounds.md",
+      "bytes": 5727,
+      "sha256": "40917bbd1dc2c29e2fdd19b5781ca41d9670f71be3fe2de16d0cd8f6cf630c5c",
+      "git_blob_sha1": "41987194a43db3005e7ec3fb43ae562a33c87adf"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/audit-and-handoff.md",
+      "bytes": 8438,
+      "sha256": "70003f3fe39cf80bfb670540f53237ab631871a34c196109e218eb350ac4af34",
+      "git_blob_sha1": "1e07b84732c1a9ef2ea19bc32c9afe8e2dc870ad"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/case-evidence.md",
+      "bytes": 14270,
+      "sha256": "07f7c433277e35224756f96833bddf7dedb1af711c2a4ff039aafbebd93d68af",
+      "git_blob_sha1": "eaf9dd7ffe9ebab10be6447dcc2d6be5b39ffa0a"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/case-index.json",
+      "bytes": 64198,
+      "sha256": "bb250b7609aa24719774fa986fe1a6f76061fb2c9572ae3233d367a43371cf2b",
+      "git_blob_sha1": "a276b6d59d4a709fc949c64d0abda374b38df304"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/case-source-LICENSE.txt",
+      "bytes": 1069,
+      "sha256": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+      "git_blob_sha1": "1edcc82393ad4bce49aca4ab0c074dc75fcc268e"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/contract-guide.md",
+      "bytes": 7276,
+      "sha256": "78e4307bb74119f4d09f7db227085f5954d47c9586f3da882df4ef2d42ee9c59",
+      "git_blob_sha1": "424d5ec73acbb52190ee8b185d0ac166befca5e4"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/contracts.json",
+      "bytes": 38335,
+      "sha256": "a521215b27f9768ac7685cb29844a364ccf64d7e3d0bfb5321fe94ceceae5d41",
+      "git_blob_sha1": "6e0ff6ce72ec2fc835b21a952ee76891cb529203"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/dialogue-and-vocal-events.md",
+      "bytes": 6019,
+      "sha256": "9da56744386056c00ee98514a096a8f298dbd715131d43981df58ef58112d4a8",
+      "git_blob_sha1": "2adb7764a5d7255647ec605627868082cd4c35f1"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/h3-NOTICE.txt",
+      "bytes": 121,
+      "sha256": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+      "git_blob_sha1": "65d507740b0ae63baacdcc501b35ee1ffa5d1226"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/h3-base-official.txt",
+      "bytes": 15773,
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+      "git_blob_sha1": "40cf586a634d677d6b7107b367cf0ec9621be728"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/h3-label-mapping.md",
+      "bytes": 17361,
+      "sha256": "dd47d8fa00e186202eb04f8f4e005406f39d08f9d033d5971de211ec60d32f0f",
+      "git_blob_sha1": "56eea3bbdd4a8e15f738d89fb2fb2f362c3ff127"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/h3-protocol-source.json",
+      "bytes": 32026,
+      "sha256": "364c57b7ef6485a503221c30aee2a6817c442f3d1870424ca7aead4539452fad",
+      "git_blob_sha1": "693e99ddeb3d11a0dbf20eec47ed463ece092c30"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/h3-ref-official.txt",
+      "bytes": 23553,
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+      "git_blob_sha1": "7ae1b2d07d743fd2392258a96449be9e9e322d35"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/module-registry.json",
+      "bytes": 32010,
+      "sha256": "f7ee53579c181c91cb6e78df0182dd844726b0e63bb0ae9f1291e4143d554d23",
+      "git_blob_sha1": "09bb09e1986f33b538b36dffad8c4115ccba8732"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/music-and-audio-policy.md",
+      "bytes": 6608,
+      "sha256": "d4efb01021a552808c12f30084fa5ae5c5ca04ba018cb6fc894ddca9688116c8",
+      "git_blob_sha1": "962b1ebe12febb5089001948b8f37d7d22d72377"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/provenance-and-license.md",
+      "bytes": 5882,
+      "sha256": "3bb6178a33105db6d28fc52dc76c137e13a953a5e5fb760a7ec10e2702b207c4",
+      "git_blob_sha1": "a356eb82c5c225f4a1d99b98c980dc1ec4aca237"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/references/sources-and-speakers.md",
+      "bytes": 5604,
+      "sha256": "60f7a2fe8b3a7015d2fe570e672e577d2aff276ac393b62b8c1ab19d1b0bc9c5",
+      "git_blob_sha1": "b2df8a740dd2d9855dfc264a173bd4994cc1bd20"
+    },
+    {
+      "path": "docs/h3skill/h3-sound-music-dialogue/scripts/m6_contract.py",
+      "bytes": 50057,
+      "sha256": "7d4173070df5b34d3f77e240bee83c53f9f5eaf9909bd77e97d14c3c652462ee",
+      "git_blob_sha1": "d4fd21210d294bdca2dcac3a6ca98823adb809c8"
+    },
+    {
+      "path": "docs/h3skill/tests/m6_portability.py",
+      "bytes": 5417,
+      "sha256": "dd273259101af50a09893d55651b304641b86f2b2cea0f06fc585e278d9375f3",
+      "git_blob_sha1": "fa3a422098adc5167b805113169780a38326860e"
+    },
+    {
+      "path": "docs/h3skill/tests/test_m6_contract.py",
+      "bytes": 20440,
+      "sha256": "64d8b127ba7ea27023cbe906c9d2f2974bc1d1088dd3d4dc709eb3781a9720a4",
+      "git_blob_sha1": "b2de4b2d8752c99834ab77bdbd60048f09f44b50"
+    },
+    {
+      "path": "docs/h3skill/tools/verify_m6_release.py",
+      "bytes": 15305,
+      "sha256": "f1c66bbcab314c5d4d9bd1e5f95f759a084bf116d026c0121dec55787331d85d",
+      "git_blob_sha1": "0086d38a1be43525f1af0e599a80089c358c3809"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/behavior-test-run.json",
+      "bytes": 1205,
+      "sha256": "e314211ca0fb0dabcfeaea6c0447056ae1575916aac02865850d7b7b55721938",
+      "git_blob_sha1": "65165bc3f9d281e09c39a5db9e7d64bf13041ef2"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/behavior-test.stderr.txt",
+      "bytes": 3508,
+      "sha256": "bcfcc88bef1ba0b846e12329418349ab9a9efccd56d15bf276fecb1fdddc032c",
+      "git_blob_sha1": "638b0fdf56f55752bccebc174fd8557a15bbde6f"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/behavior-test.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/FINAL.md",
+      "bytes": 6800,
+      "sha256": "5747406e411c35aa8e2367dd484f3e33d035ed74eb33e0b7c3fbd775ff5d5b09",
+      "git_blob_sha1": "433c07ced1c0a307ca362db0b0dc6e72ab49091f"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/actual-request.txt",
+      "bytes": 1699,
+      "sha256": "bbac3ad42292906b728840ca85afcbf12c801d793e380626e46f42cd02a1b95f",
+      "git_blob_sha1": "69039aaeb62c23f19fd7f71807d68be6915f35cb"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/final-state.json",
+      "bytes": 22071,
+      "sha256": "c6f8d47a76ddaf06f2183f5c9ba588491b370410ba3a56c7df8e481dc9c289cb",
+      "git_blob_sha1": "adedb8ac5bd5ec732046cfd64941848360226364"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/proposal-batch-v1.json",
+      "bytes": 49227,
+      "sha256": "d04e1016356b8e555076108caef6a755a2b9e77fb1eeda4fab64e5fc7faa14c4",
+      "git_blob_sha1": "90eb901ed663a6e8cc798610ea8442f44b86e71c"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/proposal-batch-v2.json",
+      "bytes": 49920,
+      "sha256": "433905325a73ea7ff7b367b318fe8942ff0dca84e858880075c04a0a6b4c5c4f",
+      "git_blob_sha1": "fe9501e9fc4ad0f8a8aeed9eed02684df3691f75"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/proposal-m6-1-v1.json",
+      "bytes": 9197,
+      "sha256": "1b65343d215070c45ecf226bcc398e53e78e4e9150b7937a6cef8429b1198f4a",
+      "git_blob_sha1": "296bb7797887673239cabee358a3ee97d31d4fc2"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/proposal-m6-1-v2.json",
+      "bytes": 9404,
+      "sha256": "5e0b0fa34c2a6169a7c7aa6c5d667adf1f74d43aa87898824d6ce0c719ce1869",
+      "git_blob_sha1": "34113a780fdedff3d8c91d409439ece4dea69fe3"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/proposal-m6-2-v1.json",
+      "bytes": 14719,
+      "sha256": "095913460f09412d6e21cb0b518d63aaa8c844f00e224259cd715d249c8dc559",
+      "git_blob_sha1": "86cc190441ad4550b13b77f0baa09a17ef9eb43b"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/proposal-m6-2-v2.json",
+      "bytes": 14926,
+      "sha256": "ee1baeeab866aab1a3fd9c2518f11fee5e9677d334b05380105691bb4eb8bae3",
+      "git_blob_sha1": "f062ece362c2c7682a89a020de8bc08ce0b7daae"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/proposal-m6-3-v1.json",
+      "bytes": 5353,
+      "sha256": "be956eaaa0b678c2947f50152a9b338fb3b6de70ae5bbdf5f767856e141cbac4",
+      "git_blob_sha1": "3e47d28f800b61f06ff73329ca70847017f02f49"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/proposal-m6-4-v1.json",
+      "bytes": 15086,
+      "sha256": "a29cbd6fbd615286cb6e113b8c4f40b81a861019046c712dc3aabb243b88050f",
+      "git_blob_sha1": "c44ce54cd80add391eb34b2b06aeec6b31c82760"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/proposal-m6-4-v2.json",
+      "bytes": 15293,
+      "sha256": "54dcc7808a82527a263048efb6e7136e71874ae0a4a51e2733bf11f62b57b98b",
+      "git_blob_sha1": "a0a8794ce1dd31df3f469503f2fc4b29fe44c364"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/repair-20261105T160241613373Z/07-check-m6-1-v2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/repair-20261105T160241613373Z/07-check-m6-1-v2.stdout.json",
+      "bytes": 4515,
+      "sha256": "97dc63c26087d44afb13fc06b1a10ed80290007898f1fc9e99bd2be7db8cb35a",
+      "git_blob_sha1": "eb074b58ce0bdc0d2694947494a103a27ff5cc89"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/repair-20261105T160241613373Z/08-check-m6-2-v2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/repair-20261105T160241613373Z/08-check-m6-2-v2.stdout.json",
+      "bytes": 6696,
+      "sha256": "afe50b5c9a88a82a9944b1aff51bd88eb1df77dd3d8cd7e3bb71b651fd11d72f",
+      "git_blob_sha1": "b1ae755f59ef45ad09a43f06a5070458e36dc79f"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/repair-20261105T160241613373Z/09-check-m6-4-v2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/repair-20261105T160241613373Z/09-check-m6-4-v2.stdout.json",
+      "bytes": 7603,
+      "sha256": "69722a925cb8cbdc5a0235c311d5d3f3ae8b3b0ca8333cbf62cbe6550541a0d5",
+      "git_blob_sha1": "7430b8a76e1f12dd6df80112c1ef3e5af9b003f4"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/repair-20261105T160241613373Z/10-accept-v2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/repair-20261105T160241613373Z/10-accept-v2.stdout.json",
+      "bytes": 49697,
+      "sha256": "5e83242ef2d4213b4b3d4954e9261de1b29c276df53ba4ecdac21be7931354a0",
+      "git_blob_sha1": "cf0fa423c7ceb0e4e2143820bab4745422a3aa05"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/repair-20261105T160241613373Z/commands.jsonl",
+      "bytes": 2372,
+      "sha256": "4ef50f3de9e5dcc615ae351492e2116a24d3fcff7dbbd066b2178941a1f5509d",
+      "git_blob_sha1": "8b238d6308f6ca4e5fc12c034c65e77c14133b39"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/reproduce.sh",
+      "bytes": 165,
+      "sha256": "263fd0c8c64ec82d15e8cb9f8f4e8aa6ccd030091b31dfda093be645122f7cab",
+      "git_blob_sha1": "2f23d9ed461d21ec02e94972c73ed807d12099e3"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/request-m6-1-v2.json",
+      "bytes": 3865,
+      "sha256": "8f8e2419c70065c985f4a431b65e79cde8767b7ef288a5f0601218e0605896bc",
+      "git_blob_sha1": "1f9b3618de7253efdf7f4b101e3960a5140d7d81"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/request-m6-1.json",
+      "bytes": 3862,
+      "sha256": "ca39c10558bfd681ea18df8ef6576b52c3856f87c4ad10b32510f0fef5ed0e6f",
+      "git_blob_sha1": "6f437e01115497de7c27c585b743e979d1e9fe2a"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/request-m6-2-v2.json",
+      "bytes": 9167,
+      "sha256": "9a26ca170d3138bbb5c77caaa19234aa764b327d11253001eabdad690624064d",
+      "git_blob_sha1": "575aff0de1c12cf03fb09d5c9a50db63d00e0e2b"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/request-m6-2.json",
+      "bytes": 8960,
+      "sha256": "5596d145d37a7f5228b305cc23fbadc9993b8838c51e418885d9362ab1707803",
+      "git_blob_sha1": "b552281c6158fc229caec26792d0c1086ad4cf41"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/request-m6-3.json",
+      "bytes": 3837,
+      "sha256": "8310c2c29b7ec0c86b12730944674b18559c3566ff9c2c413161accdeef9ccc3",
+      "git_blob_sha1": "33d057eb70fb5139fe30cd3aed7a8fb0294abeab"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/request-m6-4-v2.json",
+      "bytes": 9568,
+      "sha256": "79403bc40f2ba1a3894847fb3929636dc90c4288f8cb33c1bde58874ede06132",
+      "git_blob_sha1": "6952edb029c18bd6ce2c662611aea7b6878e8d3a"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/request-m6-4.json",
+      "bytes": 9361,
+      "sha256": "cc1e3ec8406e7eddb3efa0fe3bc4268e1eebbbd9aa4a09c734b41211d05d761f",
+      "git_blob_sha1": "7bb5f53301c61a425ae6ee5679f288e1c63cbb87"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/request-m6.json",
+      "bytes": 5480,
+      "sha256": "93dcef30916f45a90c17f5464d7ed7f1779a7a791110dce1d6a1e8d3d06f4fea",
+      "git_blob_sha1": "e0ad1f737e1c2d80c8aeb683b77b0c286caae702"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/requests-v2.json",
+      "bytes": 27666,
+      "sha256": "454f7a52754545a748116a70eb19e42928e946f6a6ddd61552f80b1ed33db851",
+      "git_blob_sha1": "8a29101e9010ad9cfb275afd0238d4e6b8f054b1"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/requests.json",
+      "bytes": 27225,
+      "sha256": "e1385393a9f5522bba7cbb90ce6fec82c00df66c71349c728fa02949bac22269",
+      "git_blob_sha1": "4da3733ef76cbc9f76366ccaa927ad04e6baf03b"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/revise_and_finish.py",
+      "bytes": 4166,
+      "sha256": "f44958c97f68318b99f4f7c8e82be3b3586815ebc9494f6cbdc40d895220ec55",
+      "git_blob_sha1": "5946fc722561cc4ff8372d36129c6632bcdc4a13"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/01-route.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/01-route.stdout.json",
+      "bytes": 3923,
+      "sha256": "3fd65297a4222829bbd578a05b1ca68c7493c9003b7a51ca8a3b06339db96346",
+      "git_blob_sha1": "2d30e9a414961e4cdcdf928323554d382d62550b"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/02-check-m6-1.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/02-check-m6-1.stdout.json",
+      "bytes": 2131,
+      "sha256": "1e0816597de507db1cc8e221fe29de761708eb3203d835a8b95765f80ca04152",
+      "git_blob_sha1": "8f988d611f1eb204b7cd82eaac6c933a020d5042"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/03-check-m6-2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/03-check-m6-2.stdout.json",
+      "bytes": 2146,
+      "sha256": "9ee0d36ddedb1cba09e23c57dee0218c28c80ea227b2965ce88cb626329b98c3",
+      "git_blob_sha1": "dc3b8a74b503f254d186de21949987ff0d84be69"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/04-check-m6-3.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/04-check-m6-3.stdout.json",
+      "bytes": 2472,
+      "sha256": "84b6ac8a1526d7fca5189afcfa23b44db0b8475b417a7cef146e38a4f0d64767",
+      "git_blob_sha1": "5c06773991da29f71e6c853d34b769071d65dd73"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/05-check-m6-4.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/05-check-m6-4.stdout.json",
+      "bytes": 2146,
+      "sha256": "b976ce8c316f9c0f5738a51f31c1f67c6b0276a1f728bbb2e019daa0fa59af16",
+      "git_blob_sha1": "63f2c21889a8a1886faad6207e453935a01b3218"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/06-accept.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/06-accept.stdout.json",
+      "bytes": 4665,
+      "sha256": "ab540bdc4bfca7fa6543800e1e4ca7414276bb6850fcddc8dc55bb325253bb23",
+      "git_blob_sha1": "011817cdef194332fcfe2d4e6860141666fd947e"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-20261105T160210375010Z/commands.jsonl",
+      "bytes": 3696,
+      "sha256": "06dfa73757f7be8d9c1d5e176bbfffa5ccb728555638b6dda9d9d46553ffc8e6",
+      "git_blob_sha1": "f8f6cf325ee494615361bfcb26f5363a909bccae"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-summary-v1.json",
+      "bytes": 4989,
+      "sha256": "49e86348205025c9fb084b18d5e132c1f8ab0f32ddddce83f2f17d42ef646ee3",
+      "git_blob_sha1": "bfd98c165c1a84d06103458daacb197d64dd5a8d"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run-summary.json",
+      "bytes": 8622,
+      "sha256": "37084fd253aa276ec373c26e847984261d64ce6523803ba7afd02c1885adcaa0",
+      "git_blob_sha1": "7b7992806cc07e6c4b82eb8ea05fb07c91408ce1"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/run_trial.py",
+      "bytes": 14539,
+      "sha256": "260c5f7c63e52bfe9927b6befa90ee040612805b71f1418c30d5b972a7680272",
+      "git_blob_sha1": "dc0163fab8271c224654c6b5eb072f6e23c5c96b"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue/state-empty.json",
+      "bytes": 547,
+      "sha256": "d87db0e1fdf65cef8b606c1724ed56f6f22f40e1d9c359c33072fc712068d179",
+      "git_blob_sha1": "f9feed101468f30abc4dfc592c91636d255551ef"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/dialogue-task.txt",
+      "bytes": 1699,
+      "sha256": "bbac3ad42292906b728840ca85afcbf12c801d793e380626e46f42cd02a1b95f",
+      "git_blob_sha1": "69039aaeb62c23f19fd7f71807d68be6915f35cb"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/RESULT.md",
+      "bytes": 6098,
+      "sha256": "4950d47b2486586a4fcb3ef801c893471dc21408722a017f908436dbb6630460",
+      "git_blob_sha1": "dc3d4a237007ffdf207362091b74af5b17d7f4a7"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/reproduce.py",
+      "bytes": 7937,
+      "sha256": "c9cfa709be6882249f4e815083682dcd973f7e9d98a34e21096b2cbc5de2d04d",
+      "git_blob_sha1": "0c323618c0e207c1577a01941393b487d7998ce2"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/actual-request.txt",
+      "bytes": 1462,
+      "sha256": "fdd2047e626ffe30a93a59e6aeb3c4469a64b8353e6ac8dfd08147c6dfc22c46",
+      "git_blob_sha1": "29063f6d0563099aad42211f808bb1d6d498a81f"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/check.exit.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "git_blob_sha1": "d00491fd7e5bb6fa28c517a0bb32b8b506539d4d"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/check.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/check.stdout.txt",
+      "bytes": 3440,
+      "sha256": "1d3b3623f0e0c4bdba1eb8986301c6ba24fa451e5c3b2e06fa1b9c08e31156d8",
+      "git_blob_sha1": "88df5d7e0f16240a5b136e5262837fa2e432456a"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/command-manifest.json",
+      "bytes": 2120,
+      "sha256": "4e517b4a87e36733773513c708975d08798f304c9f98141e4ec815b2ad48f8f0",
+      "git_blob_sha1": "ff1d33c13c6c7d39a00b080db942e8159fae51a5"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/proposal.json",
+      "bytes": 6392,
+      "sha256": "319c197420451e4a18692a4e7f91b10a6ec94d0611c8dc19b937881406f4937f",
+      "git_blob_sha1": "ddb87d2642b7043ce2f8b4232b0cebccf82a75ec"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/request.json",
+      "bytes": 4512,
+      "sha256": "0bc4c04298ab5c6859d48b1282d012340bb1adc3372ef73a1099c1885e439bb6",
+      "git_blob_sha1": "d4234e9047c303068006db0bc4afa2427d6309b3"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/route.exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "git_blob_sha1": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/route.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv/trial/20261105T160026.744863Z/route.stdout.txt",
+      "bytes": 2270,
+      "sha256": "58c7c773ee090dbf19973040cfc25f17f8d12896d0f6225971c75e1b887c0158",
+      "git_blob_sha1": "91dc4ebc052e62a56204ce39cc6db8d058e96e78"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/forward-use/mv-task.txt",
+      "bytes": 1462,
+      "sha256": "fdd2047e626ffe30a93a59e6aeb3c4469a64b8353e6ac8dfd08147c6dfc22c46",
+      "git_blob_sha1": "29063f6d0563099aad42211f808bb1d6d498a81f"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/official-format-check.json",
+      "bytes": 1836,
+      "sha256": "daed7f6c351edc7d1568433375b56c0cdd1907e6b6c84eebffe4864cdea4d195",
+      "git_blob_sha1": "bfa6e1177b7af4f23d96a643c53eb55a1c36b4cc"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/portability-run.json",
+      "bytes": 97834,
+      "sha256": "bf899a0811c52d39b21d669fcb669cb16041ce66db053c86e4733796be957fc1",
+      "git_blob_sha1": "4857affb22fa774ed66dab7caf2d4dd5e82b2a00"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/protected-baseline.json",
+      "bytes": 71510,
+      "sha256": "6c17feeab6cbde4e4a4ac286f5e478184e16c7e27ba66d629a5f9c0b81280400",
+      "git_blob_sha1": "08a6b4e26f9aa548616ef84a1e704c88cb42707e"
+    },
+    {
+      "path": "docs/h3skill/validation/m6/protocol-review.md",
+      "bytes": 8484,
+      "sha256": "9759d57d704b3057b53f2dbd79b43ef71f478b118e065644dcaf836442c1acd4",
+      "git_blob_sha1": "75ef2346204ac16babc036673cb5eb2ad7af7a40"
+    }
+  ]
+}

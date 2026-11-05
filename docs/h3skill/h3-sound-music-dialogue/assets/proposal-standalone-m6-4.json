@@ -1,0 +1,83 @@
+{
+  "kind": "M6Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "sound_example",
+  "base_version": 0,
+  "proposal_id": "proposal_standalone_m6_4",
+  "module_id": "M6.4",
+  "source_request_id": "request_standalone_m6_4",
+  "sources": {
+    "brief": {
+      "kind": "user_requirement",
+      "locator": "synthetic-design-fixture://m6/sound-contract",
+      "version": "1",
+      "excerpt": "Use the registered ambient source segment; preserve the dialogue exactly; add a footstep at the referenced action. These are contract fixtures, not observations of case-study media."
+    }
+  },
+  "context": {
+    "effects_brief": "Tie a single footstep to action_step.",
+    "action_context": {
+      "state": "unknown",
+      "reason": "No upstream artifact or audio observation is available; preserve the gap."
+    },
+    "source_context": {
+      "state": "unknown",
+      "reason": "No upstream artifact or audio observation is available; preserve the gap."
+    }
+  },
+  "changes": {
+    "effects": {
+      "items": {
+        "stepA": {
+          "effect_id": "stepA",
+          "shot_id": "shot1",
+          "source_ref": {
+            "kind": "internal",
+            "id": "speakerA"
+          },
+          "action_ref": {
+            "kind": "external",
+            "id": "action_step",
+            "shot_id": "shot1",
+            "source_id": "brief",
+            "source_version": "1"
+          },
+          "event_kind": "action",
+          "description": {
+            "state": "known",
+            "value": "One footstep tied to the supplied contact event.",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "spatial_relation": {
+            "state": "known",
+            "value": "Local to the speaker, with plausible room sound.",
+            "source_refs": [
+              "brief"
+            ]
+          },
+          "continuity": {
+            "state": "unknown",
+            "reason": "No upstream artifact or audio observation is available; preserve the gap."
+          },
+          "audio_origin": "new",
+          "track_ref": {
+            "state": "not_applicable",
+            "reason": "Not required by this sound event."
+          },
+          "explicit_silence": {
+            "state": "not_applicable",
+            "reason": "Not required by this sound event."
+          },
+          "timing_owner": "M7",
+          "source_refs": [
+            "brief"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

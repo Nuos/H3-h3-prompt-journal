@@ -1,0 +1,31 @@
+{
+  "kind": "M6BehaviorTestRun",
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "docs/h3skill/tests",
+    "-p",
+    "test_m6_contract.py",
+    "-v"
+  ],
+  "started_at_utc": "2026-11-05T15:52:09.070696+00:00",
+  "finished_at_utc": "2026-11-05T15:52:12.807662+00:00",
+  "exit_code": 0,
+  "test_count": 21,
+  "status": "pass",
+  "stdout": "behavior-test.stdout.txt",
+  "stderr": "behavior-test.stderr.txt",
+  "runtime_sha256": "7d4173070df5b34d3f77e240bee83c53f9f5eaf9909bd77e97d14c3c652462ee",
+  "tests_sha256": "64d8b127ba7ea27023cbe906c9d2f2974bc1d1088dd3d4dc709eb3781a9720a4",
+  "resource_sha256": {
+    "SKILL.md": "08907980148921f708027eb8d0f3b4a0d89a7f4259712f5244f4399cb79ef158",
+    "references/contracts.json": "a521215b27f9768ac7685cb29844a364ccf64d7e3d0bfb5321fe94ceceae5d41",
+    "references/module-registry.json": "f7ee53579c181c91cb6e78df0182dd844726b0e63bb0ae9f1291e4143d554d23"
+  },
+  "scope": "Public CLI contract and sound-policy behavior; no H3 or media evaluation.",
+  "revision_reason": "Refresh final records after clarifying no-score versus whole-track-silence ownership in documentation and registry prose; runtime logic unchanged."
+}

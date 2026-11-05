@@ -1,0 +1,834 @@
+{
+  "registry_version": "1.0.0",
+  "route_version": "1.0.0",
+  "package_version": "0.1.0",
+  "parent_module": "M6",
+  "object_type": "SoundPlan",
+  "contract_version": "1.0.0",
+  "principles": [
+    "high_cohesion",
+    "loose_coupling",
+    "modularity",
+    "information_routing"
+  ],
+  "modules": {
+    "M6.1": {
+      "name": "声源与说话者绑定",
+      "write_scope": "/content/sources",
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/sources-and-speakers.md"
+      ],
+      "minimum_inputs": [
+        "source_brief"
+      ],
+      "alternate_inputs": "ExternalContext with registered evidence/version, or explicit unknown with a reason",
+      "output": "M6Proposal",
+      "parent": "M6",
+      "repair_target": "M6.1",
+      "forbidden_writes": [
+        "M7 authoritative timing",
+        "M9 edit plan",
+        "M11 final Label IDs"
+      ],
+      "independent_call": true,
+      "module_id": "M6.1",
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "public": true,
+      "entry_conditions": {
+        "explicit_target": "M6.1",
+        "professional_trigger": "Identify real vocal/audio sources, bind voices to existing identities, or audit source reuse.",
+        "unknown_inputs": "Route to the same scope; preserve unresolved conclusions, never infer silence or measured evidence."
+      },
+      "input_mapping": {
+        "required": [
+          "source_brief"
+        ],
+        "optional_or_readonly_projections": [
+          "source_brief",
+          "reference_context",
+          "space_context",
+          "task_context",
+          "readonly_projection"
+        ],
+        "source_contract": "M6Request.sources + inputs; readonly external source/version or explicit unknown",
+        "time_domain": "Source asset windows may be declared with provenance; authoritative target timing remains M7."
+      },
+      "dependencies": {
+        "required": [
+          "source_brief"
+        ],
+        "optional": [
+          "source_context",
+          "vocal_context",
+          "music_context",
+          "effects_context",
+          "task_context",
+          "reference_context",
+          "space_context",
+          "action_context",
+          "camera_context",
+          "time_context",
+          "state_context",
+          "edit_context",
+          "label_context"
+        ],
+        "runtime": [
+          "Python >= 3.10 standard library"
+        ],
+        "forced_upstream_execution": false
+      },
+      "local_checks": [
+        "stable sound_source_id",
+        "referenced source/version integrity",
+        "declared shot applicability",
+        "BGM source not invented as Subject"
+      ],
+      "return_contract": "M6Proposal",
+      "parent_acceptance": "M6 accepts all-or-nothing against actual requests and parent version.",
+      "failure_route": {
+        "shape_or_semantic": "M6.1",
+        "foreign_ownership": "Return a scoped request to the actual owner; never write its partition.",
+        "timing": "M7",
+        "editing": "M9",
+        "labels": "M11",
+        "unknown": "Preserve explicit unknown and provide safe partial draft."
+      },
+      "retry": "An identical accepted proposal and original request replay unchanged; new creative revisions need a fresh request/proposal ID at the current base version.",
+      "validation_status": "execution evidence is external in validation/m6; this registry is a definition, not a run result",
+      "visibility": "public",
+      "implementation_status": "implemented",
+      "goal": "绑定声源、视觉实体与声音身份，区分人物/旁白/独立声音/音轨/环境/物件。",
+      "trigger": "出现谁在发声、声音身份、音色参考、画内/画外/旁白或音轨词句提示的任务。",
+      "not_applicable": "Task contains no decision in this node; route it to its actual owner, not a fabricated empty success.",
+      "readonly_paths": [
+        "/inputs/source_brief",
+        "/inputs/reference_context",
+        "/inputs/space_context",
+        "/inputs/task_context",
+        "/inputs/readonly_projection"
+      ],
+      "output_consumers": [
+        "M6.2",
+        "M6.4",
+        "M7",
+        "M8",
+        "M11"
+      ],
+      "return_to": "M6 parent acceptance or standalone caller",
+      "parent_child_boundary": "This child proposes only its write_scope; parent checks/accepts or returns it unchanged for revision.",
+      "required_dependencies": [
+        "M6 contract 1.0.0",
+        "Python standard library only when executing CLI"
+      ],
+      "optional_dependencies": [
+        "M6.2",
+        "M6.4",
+        "M7",
+        "M8",
+        "M11"
+      ],
+      "operation_effect": "pure calculation and JSON output; plan revision exists only when caller stores accepted .state",
+      "retry_policy": "Exact request checking repeatable; parent accepted proposal replay is idempotent, changed proposal ID requires new request/base.",
+      "failure_return": {
+        "shape_or_missing": "caller and current node",
+        "semantic_conflict": "M6.1",
+        "source_or_permission": "M2; current node retains unresolved issue",
+        "timing": "M7",
+        "editing": "M9",
+        "protocol": "M11"
+      },
+      "compatibility": "See top-level compatibility. No hidden sibling-module import or mandatory execution order.",
+      "conditional_resources": [
+        {
+          "path": "references/audit-and-handoff.md",
+          "when": "local/combined review or repair routing"
+        },
+        {
+          "path": "references/case-evidence.md",
+          "when": "need scoped domain source evidence"
+        },
+        {
+          "path": "references/case-index.json",
+          "when": "need exact path, hash or reading coverage"
+        },
+        {
+          "path": "references/h3-label-mapping.md",
+          "when": "H3-specific field, mode or Label handoff"
+        }
+      ]
+    },
+    "M6.2": {
+      "name": "对白与发声事件",
+      "write_scope": "/content/vocal_events",
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/dialogue-and-vocal-events.md"
+      ],
+      "minimum_inputs": [
+        "vocal_brief",
+        "source_context"
+      ],
+      "alternate_inputs": "ExternalContext with registered evidence/version, or explicit unknown with a reason",
+      "output": "M6Proposal",
+      "parent": "M6",
+      "repair_target": "M6.2",
+      "forbidden_writes": [
+        "M7 authoritative timing",
+        "M9 edit plan",
+        "M11 final Label IDs"
+      ],
+      "independent_call": true,
+      "module_id": "M6.2",
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "public": true,
+      "entry_conditions": {
+        "explicit_target": "M6.2",
+        "professional_trigger": "Preserve or arrange supplied dialogue, lyrics and vocal events with delivery and continuation conditions.",
+        "unknown_inputs": "Route to the same scope; preserve unresolved conclusions, never infer silence or measured evidence."
+      },
+      "input_mapping": {
+        "required": [
+          "vocal_brief",
+          "source_context"
+        ],
+        "optional_or_readonly_projections": [
+          "vocal_brief",
+          "source_context",
+          "vocal_texts",
+          "approved_vocal_texts",
+          "music_context",
+          "action_context",
+          "edit_context",
+          "readonly_projection"
+        ],
+        "source_contract": "M6Request.sources + inputs; readonly external source/version or explicit unknown",
+        "time_domain": "Source asset windows may be declared with provenance; authoritative target timing remains M7."
+      },
+      "dependencies": {
+        "required": [
+          "vocal_brief",
+          "source_context"
+        ],
+        "optional": [
+          "vocal_context",
+          "music_context",
+          "effects_context",
+          "task_context",
+          "reference_context",
+          "space_context",
+          "action_context",
+          "camera_context",
+          "time_context",
+          "state_context",
+          "edit_context",
+          "label_context"
+        ],
+        "runtime": [
+          "Python >= 3.10 standard library"
+        ],
+        "forced_upstream_execution": false
+      },
+      "local_checks": [
+        "actual-request text fidelity",
+        "explicit approved rewrite",
+        "source binding and applicable shots",
+        "lyric cue not independent lip-sync voice"
+      ],
+      "return_contract": "M6Proposal",
+      "parent_acceptance": "M6 accepts all-or-nothing against actual requests and parent version.",
+      "failure_route": {
+        "shape_or_semantic": "M6.2",
+        "foreign_ownership": "Return a scoped request to the actual owner; never write its partition.",
+        "timing": "M7",
+        "editing": "M9",
+        "labels": "M11",
+        "unknown": "Preserve explicit unknown and provide safe partial draft."
+      },
+      "retry": "An identical accepted proposal and original request replay unchanged; new creative revisions need a fresh request/proposal ID at the current base version.",
+      "validation_status": "execution evidence is external in validation/m6; this registry is a definition, not a run result",
+      "visibility": "public",
+      "implementation_status": "implemented",
+      "goal": "保存原词原语、批准话语、发声方式、歌词角色和跨镜延续条件。",
+      "trigger": "存在对白、旁白、演唱、非语言发声、话语保真或跨镜声音延续。",
+      "not_applicable": "Task contains no decision in this node; route it to its actual owner, not a fabricated empty success.",
+      "readonly_paths": [
+        "/inputs/vocal_brief",
+        "/inputs/source_context",
+        "/inputs/vocal_texts",
+        "/inputs/approved_vocal_texts",
+        "/inputs/music_context",
+        "/inputs/action_context",
+        "/inputs/edit_context",
+        "/inputs/readonly_projection"
+      ],
+      "output_consumers": [
+        "M4",
+        "M5",
+        "M7",
+        "M8",
+        "M9",
+        "M11"
+      ],
+      "return_to": "M6 parent acceptance or standalone caller",
+      "parent_child_boundary": "This child proposes only its write_scope; parent checks/accepts or returns it unchanged for revision.",
+      "required_dependencies": [
+        "M6 contract 1.0.0",
+        "Python standard library only when executing CLI"
+      ],
+      "optional_dependencies": [
+        "M4",
+        "M5",
+        "M7",
+        "M8",
+        "M9",
+        "M11"
+      ],
+      "operation_effect": "pure calculation and JSON output; plan revision exists only when caller stores accepted .state",
+      "retry_policy": "Exact request checking repeatable; parent accepted proposal replay is idempotent, changed proposal ID requires new request/base.",
+      "failure_return": {
+        "shape_or_missing": "caller and current node",
+        "semantic_conflict": "M6.2",
+        "source_or_permission": "M2; current node retains unresolved issue",
+        "timing": "M7",
+        "editing": "M9",
+        "protocol": "M11"
+      },
+      "compatibility": "See top-level compatibility. No hidden sibling-module import or mandatory execution order.",
+      "conditional_resources": [
+        {
+          "path": "references/audit-and-handoff.md",
+          "when": "local/combined review or repair routing"
+        },
+        {
+          "path": "references/case-evidence.md",
+          "when": "need scoped domain source evidence"
+        },
+        {
+          "path": "references/case-index.json",
+          "when": "need exact path, hash or reading coverage"
+        },
+        {
+          "path": "references/h3-label-mapping.md",
+          "when": "H3-specific field, mode or Label handoff"
+        }
+      ]
+    },
+    "M6.3": {
+      "name": "音乐与音轨使用策略",
+      "write_scope": "/content/music",
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/music-and-audio-policy.md"
+      ],
+      "minimum_inputs": [
+        "music_brief",
+        "reference_context"
+      ],
+      "alternate_inputs": "ExternalContext with registered evidence/version, or explicit unknown with a reason",
+      "output": "M6Proposal",
+      "parent": "M6",
+      "repair_target": "M6.3",
+      "forbidden_writes": [
+        "M7 authoritative timing",
+        "M9 edit plan",
+        "M11 final Label IDs"
+      ],
+      "independent_call": true,
+      "module_id": "M6.3",
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "public": true,
+      "entry_conditions": {
+        "explicit_target": "M6.3",
+        "professional_trigger": "Choose source-audio copy/reference/generation strategy, verify source window identity, or audit music/beat evidence.",
+        "unknown_inputs": "Route to the same scope; preserve unresolved conclusions, never infer silence or measured evidence."
+      },
+      "input_mapping": {
+        "required": [
+          "music_brief",
+          "reference_context"
+        ],
+        "optional_or_readonly_projections": [
+          "music_brief",
+          "reference_context",
+          "audio_assets",
+          "vocal_context",
+          "effects_context",
+          "time_context",
+          "edit_context",
+          "readonly_projection"
+        ],
+        "source_contract": "M6Request.sources + inputs; readonly external source/version or explicit unknown",
+        "time_domain": "Source asset windows may be declared with provenance; authoritative target timing remains M7."
+      },
+      "dependencies": {
+        "required": [
+          "music_brief",
+          "reference_context"
+        ],
+        "optional": [
+          "source_context",
+          "vocal_context",
+          "music_context",
+          "effects_context",
+          "task_context",
+          "space_context",
+          "action_context",
+          "camera_context",
+          "time_context",
+          "state_context",
+          "edit_context",
+          "label_context"
+        ],
+        "runtime": [
+          "Python >= 3.10 standard library"
+        ],
+        "forced_upstream_execution": false
+      },
+      "local_checks": [
+        "current asset/version identity",
+        "window within registered source",
+        "fully_copy versus new/deleted/replaced audio",
+        "measurement evidence and beat claims"
+      ],
+      "return_contract": "M6Proposal",
+      "parent_acceptance": "M6 accepts all-or-nothing against actual requests and parent version.",
+      "failure_route": {
+        "shape_or_semantic": "M6.3",
+        "foreign_ownership": "Return a scoped request to the actual owner; never write its partition.",
+        "timing": "M7",
+        "editing": "M9",
+        "labels": "M11",
+        "unknown": "Preserve explicit unknown and provide safe partial draft."
+      },
+      "retry": "An identical accepted proposal and original request replay unchanged; new creative revisions need a fresh request/proposal ID at the current base version.",
+      "validation_status": "execution evidence is external in validation/m6; this registry is a definition, not a run result",
+      "visibility": "public",
+      "implementation_status": "implemented",
+      "goal": "确定复制、参考、生成或无配乐策略，记录当前资产、源窗口和音乐依据；明确全片静音由 M6.4 登记。",
+      "trigger": "使用已有音频、切片、音乐/音色参考，选择声音策略或发现复制矛盾。",
+      "not_applicable": "Task contains no decision in this node; route it to its actual owner, not a fabricated empty success.",
+      "readonly_paths": [
+        "/inputs/music_brief",
+        "/inputs/reference_context",
+        "/inputs/audio_assets",
+        "/inputs/vocal_context",
+        "/inputs/effects_context",
+        "/inputs/time_context",
+        "/inputs/edit_context",
+        "/inputs/readonly_projection"
+      ],
+      "output_consumers": [
+        "M1",
+        "M2",
+        "M4",
+        "M5",
+        "M7",
+        "M8",
+        "M9",
+        "M11"
+      ],
+      "return_to": "M6 parent acceptance or standalone caller",
+      "parent_child_boundary": "This child proposes only its write_scope; parent checks/accepts or returns it unchanged for revision.",
+      "required_dependencies": [
+        "M6 contract 1.0.0",
+        "Python standard library only when executing CLI"
+      ],
+      "optional_dependencies": [
+        "M1",
+        "M2",
+        "M4",
+        "M5",
+        "M7",
+        "M8",
+        "M9",
+        "M11"
+      ],
+      "operation_effect": "pure calculation and JSON output; plan revision exists only when caller stores accepted .state",
+      "retry_policy": "Exact request checking repeatable; parent accepted proposal replay is idempotent, changed proposal ID requires new request/base.",
+      "failure_return": {
+        "shape_or_missing": "caller and current node",
+        "semantic_conflict": "M6.3",
+        "source_or_permission": "M2; current node retains unresolved issue",
+        "timing": "M7",
+        "editing": "M9",
+        "protocol": "M11"
+      },
+      "compatibility": "See top-level compatibility. No hidden sibling-module import or mandatory execution order.",
+      "conditional_resources": [
+        {
+          "path": "references/audit-and-handoff.md",
+          "when": "local/combined review or repair routing"
+        },
+        {
+          "path": "references/case-evidence.md",
+          "when": "need scoped domain source evidence"
+        },
+        {
+          "path": "references/case-index.json",
+          "when": "need exact path, hash or reading coverage"
+        },
+        {
+          "path": "references/h3-label-mapping.md",
+          "when": "H3-specific field, mode or Label handoff"
+        }
+      ]
+    },
+    "M6.4": {
+      "name": "环境与动作声音",
+      "write_scope": "/content/effects",
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/ambience-and-action-sounds.md"
+      ],
+      "minimum_inputs": [
+        "effects_brief",
+        "action_context"
+      ],
+      "alternate_inputs": "ExternalContext with registered evidence/version, or explicit unknown with a reason",
+      "output": "M6Proposal",
+      "parent": "M6",
+      "repair_target": "M6.4",
+      "forbidden_writes": [
+        "M7 authoritative timing",
+        "M9 edit plan",
+        "M11 final Label IDs"
+      ],
+      "independent_call": true,
+      "module_id": "M6.4",
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "public": true,
+      "entry_conditions": {
+        "explicit_target": "M6.4",
+        "professional_trigger": "Bind environment/action sounds to causes and continuation, or audit explicit silence.",
+        "unknown_inputs": "Route to the same scope; preserve unresolved conclusions, never infer silence or measured evidence."
+      },
+      "input_mapping": {
+        "required": [
+          "effects_brief",
+          "action_context"
+        ],
+        "optional_or_readonly_projections": [
+          "effects_brief",
+          "action_context",
+          "source_context",
+          "music_context",
+          "space_context",
+          "whole_track_silence",
+          "readonly_projection"
+        ],
+        "source_contract": "M6Request.sources + inputs; readonly external source/version or explicit unknown",
+        "time_domain": "Source asset windows may be declared with provenance; authoritative target timing remains M7."
+      },
+      "dependencies": {
+        "required": [
+          "effects_brief",
+          "action_context"
+        ],
+        "optional": [
+          "source_context",
+          "vocal_context",
+          "music_context",
+          "effects_context",
+          "task_context",
+          "reference_context",
+          "space_context",
+          "camera_context",
+          "time_context",
+          "state_context",
+          "edit_context",
+          "label_context"
+        ],
+        "runtime": [
+          "Python >= 3.10 standard library"
+        ],
+        "forced_upstream_execution": false
+      },
+      "local_checks": [
+        "action/source/track reference",
+        "retained versus new audio origin",
+        "explicit full-silence request",
+        "copy/silence conflicts in combined state"
+      ],
+      "return_contract": "M6Proposal",
+      "parent_acceptance": "M6 accepts all-or-nothing against actual requests and parent version.",
+      "failure_route": {
+        "shape_or_semantic": "M6.4",
+        "foreign_ownership": "Return a scoped request to the actual owner; never write its partition.",
+        "timing": "M7",
+        "editing": "M9",
+        "labels": "M11",
+        "unknown": "Preserve explicit unknown and provide safe partial draft."
+      },
+      "retry": "An identical accepted proposal and original request replay unchanged; new creative revisions need a fresh request/proposal ID at the current base version.",
+      "validation_status": "execution evidence is external in validation/m6; this registry is a definition, not a run result",
+      "visibility": "public",
+      "implementation_status": "implemented",
+      "goal": "安排环境与动作声音、来源、动作触发、源内/新增关系及持续结束条件。",
+      "trigger": "需要环境底声、动作/物件接触声、声音延续或明确全片静音。",
+      "not_applicable": "Task contains no decision in this node; route it to its actual owner, not a fabricated empty success.",
+      "readonly_paths": [
+        "/inputs/effects_brief",
+        "/inputs/action_context",
+        "/inputs/source_context",
+        "/inputs/music_context",
+        "/inputs/space_context",
+        "/inputs/whole_track_silence",
+        "/inputs/readonly_projection"
+      ],
+      "output_consumers": [
+        "M4",
+        "M7",
+        "M8",
+        "M9",
+        "M11"
+      ],
+      "return_to": "M6 parent acceptance or standalone caller",
+      "parent_child_boundary": "This child proposes only its write_scope; parent checks/accepts or returns it unchanged for revision.",
+      "required_dependencies": [
+        "M6 contract 1.0.0",
+        "Python standard library only when executing CLI"
+      ],
+      "optional_dependencies": [
+        "M4",
+        "M7",
+        "M8",
+        "M9",
+        "M11"
+      ],
+      "operation_effect": "pure calculation and JSON output; plan revision exists only when caller stores accepted .state",
+      "retry_policy": "Exact request checking repeatable; parent accepted proposal replay is idempotent, changed proposal ID requires new request/base.",
+      "failure_return": {
+        "shape_or_missing": "caller and current node",
+        "semantic_conflict": "M6.4",
+        "source_or_permission": "M2; current node retains unresolved issue",
+        "timing": "M7",
+        "editing": "M9",
+        "protocol": "M11"
+      },
+      "compatibility": "See top-level compatibility. No hidden sibling-module import or mandatory execution order.",
+      "conditional_resources": [
+        {
+          "path": "references/audit-and-handoff.md",
+          "when": "local/combined review or repair routing"
+        },
+        {
+          "path": "references/case-evidence.md",
+          "when": "need scoped domain source evidence"
+        },
+        {
+          "path": "references/case-index.json",
+          "when": "need exact path, hash or reading coverage"
+        },
+        {
+          "path": "references/h3-label-mapping.md",
+          "when": "H3-specific field, mode or Label handoff"
+        }
+      ]
+    },
+    "M6": {
+      "module_id": "M6",
+      "parent": null,
+      "name": "声音、音乐、对白与歌词关系",
+      "contract_version": "1.0.0",
+      "visibility": "public",
+      "implementation_status": "implemented",
+      "validation_status": "external recorded validation; definition alone is not execution",
+      "goal": "在单次SoundPlan作用范围内协调四分区和未决问题，并唯一接受版本化声音计划。",
+      "trigger": "完整声音规划、跨分区冲突、子提案接受或变更复验。",
+      "minimum_inputs": [
+        "sound_brief"
+      ],
+      "accept_inputs": [
+        "M6State",
+        "M6ProposalBatch",
+        "actual original M6Request array"
+      ],
+      "readonly_paths": [
+        "/content",
+        "/sources",
+        "/issues",
+        "/accepted_proposals",
+        "/consumers"
+      ],
+      "write_scope": "whole SoundPlan acceptance only; child semantic values are not rewritten",
+      "output": "M6ToolResult.state containing a new M6State draft, or rejection diagnostics",
+      "parent_child_boundary": "M6.1–M6.4 own professional candidates; M6 alone checks the atomic transition and records receipts.",
+      "required_dependencies": [
+        "four public child contracts 1.0.0 for their applicable partitions",
+        "Python standard library when executing CLI"
+      ],
+      "optional_dependencies": [
+        "compatible external plans or user data"
+      ],
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/audit-and-handoff.md"
+      ],
+      "return_to": "original caller and actual registered consumers",
+      "failure_return": "diagnostic repair_target owning the field; no partial acceptance",
+      "local_checks": [
+        "actual-request and evidence fidelity",
+        "work and base-version consistency",
+        "unique field ownership",
+        "candidate source/track scope consistency",
+        "open blockers",
+        "atomic failure and idempotent receipts",
+        "registered consumer invalidation"
+      ],
+      "operation_effect": "returns new JSON only; no file writes, media generation, external service or uploads",
+      "retry_policy": "same accepted proposals produce same state; altered receipt identity rejects",
+      "compatibility": "1.0.0 only; breaking changes require version and migration records",
+      "independent_call": true,
+      "output_consumers": [
+        "M7",
+        "M8",
+        "M9",
+        "M11",
+        "M12"
+      ]
+    }
+  },
+  "field_ownership": {
+    "/content/sources": "M6.1",
+    "/content/vocal_events": "M6.2",
+    "/content/music": "M6.3",
+    "/content/effects": "M6.4"
+  },
+  "principle_checks": {
+    "HC": [
+      "HC-01 professional source/vocal/music/effects separation",
+      "HC-02 no timing/edit/Label semantic ownership",
+      "HC-03 parent checks cross-partition sound relations"
+    ],
+    "LC": [
+      "LC-01 closed public versioned minimum inputs",
+      "LC-02 copied immutable context and projections",
+      "LC-03 ExternalContext or reasoned unknown alternatives",
+      "LC-04 read-path based invalidation, no forced upstream calls"
+    ],
+    "MD": [
+      "MD-01 four separately routed/checkable child contracts",
+      "MD-02 replaceable standard JSON producer/consumer boundaries",
+      "MD-03 one partition per child; atomic parent acceptance",
+      "MD-04 all runtime resources bundled; Python standard library only"
+    ],
+    "RT": [
+      "RT-01 explicit triggers/mappings/returns/repair owners",
+      "RT-02 resource selection by target module",
+      "RT-03 child professional work remains distinct from routing/check scripts",
+      "RT-04 no hidden recursive invocations",
+      "RT-05 request-bound retries and creative revision versions",
+      "RT-06 call IDs, input/resource digests, source versions and actual dependency impact"
+    ]
+  },
+  "navigation": {
+    "public_nodes": "/modules",
+    "architecture": "/architecture",
+    "runtime": "/runtime",
+    "routing": "/route_policy",
+    "compatibility": "/compatibility"
+  },
+  "architecture": {
+    "basis": "docs/skillplan/06-modularity-routing-principles.md frozen v0.1.2",
+    "clauses": [
+      "HC-01",
+      "HC-02",
+      "HC-03",
+      "LC-01",
+      "LC-02",
+      "LC-03",
+      "LC-04",
+      "LC-05",
+      "MD-01",
+      "MD-02",
+      "MD-03",
+      "MD-04",
+      "RT-01",
+      "RT-02",
+      "RT-03",
+      "RT-04",
+      "RT-05",
+      "RT-06"
+    ],
+    "authority_model": "child proposals; parent M6 alone accepts versioned SoundPlan; no silent semantic rewrite",
+    "domain_vs_backend": "M6 owns sound semantics; M2 stable assets/permissions; M7 timing; M8 state; M9 editing; M11 final labels/compiler; M12 media observations",
+    "independent_installation": "One package containing five independently callable public responsibility nodes; four child nodes do not require four installable packages."
+  },
+  "runtime": {
+    "python": "3.10+",
+    "dependencies": "standard library only",
+    "entrypoint": "scripts/m6_contract.py",
+    "commands": [
+      "route",
+      "check",
+      "accept",
+      "impact"
+    ],
+    "side_effects": "none; commands print JSON and do not mutate input files",
+    "required_runtime_resources": [
+      "references/contracts.json",
+      "references/module-registry.json"
+    ],
+    "agent_role": "Agent reads scoped professional references and makes domain decisions; route does not invoke an Agent or read every returned resource.",
+    "not_implemented": [
+      "audio listening/transcription",
+      "beat measurement",
+      "sound synthesis or voice cloning",
+      "audio mixing",
+      "H3 inference",
+      "actual media quality grading",
+      "M7-M12 runtimes"
+    ]
+  },
+  "route_policy": {
+    "dispatch": "An explicit M6Request.target chooses M6 or one M6.N node. Agent natural-language entry uses SKILL.md description and its task table.",
+    "parent_route": "M6 can return four child routes; each child still needs its own minimal request, not an implicit execution of siblings.",
+    "success_return": "Structured diagnostics and M6Proposal; parent accept returns M6ToolResult.state as a new draft.",
+    "unknown": "Missing required input is blocked; explicit unknown retains scope and unverified status without manufacturing evidence.",
+    "failure_types": [
+      "shape_or_version",
+      "missing_input",
+      "unknown_or_unverified",
+      "reference_or_scope_conflict",
+      "request_fidelity",
+      "policy_conflict",
+      "stale_base",
+      "idempotency_conflict",
+      "execution_error"
+    ],
+    "repair": "Return issue owner and path; semantic changes return to their field owner. No automatic cross-module recursive calls.",
+    "retry": "Pure route/check/impact may repeat. Exact accepted proposal retry is idempotent; modified content requires a new proposal ID and current base version.",
+    "termination": "Stop the affected conclusion on unresolved blocking issues; continue independent supported scope; do not retry indefinitely to manufacture a pass.",
+    "trace": "ToolResult.trace records call/operation IDs, versions, request IDs, input hashes, source versions, loaded schema/registry hashes, side effects, status and error codes.",
+    "invalidation": "Consumers register real read_paths; impact intersects changed paths with their ancestors/descendants, preserving pre-existing stale flags. Undeclared semantic dependencies require Agent review."
+  },
+  "compatibility": {
+    "accepted_contract_versions": [
+      "1.0.0"
+    ],
+    "package_version": "0.1.0",
+    "breaking_change_policy": "New contract version plus explicit migration/affected-consumer notes; no silent coercion of M1-M5 or incompatible M6 records.",
+    "alternative_producer": "User data, approved existing plans or another implementation can satisfy the same typed contract without running named upstream modules.",
+    "deprecated_nodes": []
+  }
+}

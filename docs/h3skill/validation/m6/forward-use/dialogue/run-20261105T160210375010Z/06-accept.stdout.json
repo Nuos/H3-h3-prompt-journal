@@ -1,0 +1,163 @@
+{
+  "kind": "M6ToolResult",
+  "contract_version": "1.0.0",
+  "command": "accept",
+  "execution": "completed",
+  "disposition": "rejected",
+  "validation": {
+    "local_contract": "fail",
+    "overall": "fail",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "audio_availability_and_quality",
+      "measured_beat_authenticity",
+      "actual_lip_sync",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "contract_shape",
+      "path": "/batch/proposals/0/changes",
+      "message": "oneOf has 0 matching alternatives",
+      "status": "fail",
+      "blocking": true,
+      "repair_target": "M6"
+    },
+    {
+      "code": "contract_shape",
+      "path": "/batch/proposals/1/context/source_context",
+      "message": "oneOf has 0 matching alternatives",
+      "status": "fail",
+      "blocking": true,
+      "repair_target": "M6"
+    },
+    {
+      "code": "contract_shape",
+      "path": "/batch/proposals/3/context/source_context",
+      "message": "oneOf has 0 matching alternatives",
+      "status": "fail",
+      "blocking": true,
+      "repair_target": "M6"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/requests/0/inputs/time_context",
+      "message": "无绝对时刻、事件时长或总片长；仅给出三句语音的先后顺序。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.1"
+    },
+    {
+      "code": "contract_shape",
+      "path": "/requests/1/inputs/source_context",
+      "message": "oneOf has 0 matching alternatives",
+      "status": "fail",
+      "blocking": true,
+      "repair_target": "M6"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/requests/2/inputs/time_context",
+      "message": "无绝对时刻、事件时长或总片长；仅给出三句语音的先后顺序。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.3"
+    },
+    {
+      "code": "contract_shape",
+      "path": "/requests/3/inputs/source_context",
+      "message": "oneOf has 0 matching alternatives",
+      "status": "fail",
+      "blocking": true,
+      "repair_target": "M6"
+    }
+  ],
+  "trace": {
+    "call_id": "m6-127b32f3b81149e8abe14b20f2a78645",
+    "parent_module": "M6",
+    "started_at": "2026-11-05T16:02:10.829143+00:00",
+    "finished_at": "2026-11-05T16:02:10.835974+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "state": "b96779c7ce095ead5054306b5a94b6bce7969bf2bbe2f84ef4de970e8a0b8517",
+      "batch": "7a78d032c91d77d9fcdb43c760ef95091ff438ce323f953a46fb0f1f542ac357",
+      "requests": "7701606c5cc0e411abd7a311033b053302aebf9792490f75c5e0fc464b14ba58"
+    },
+    "resources": {
+      "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+      "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+    },
+    "side_effects": "none",
+    "operation_id": "dialogue_batch_v1",
+    "revision": null,
+    "request_ids": [
+      "dialogue_request_m6_1",
+      "dialogue_request_m6_2",
+      "dialogue_request_m6_3",
+      "dialogue_request_m6_4"
+    ],
+    "input_versions": [
+      {
+        "request_id": "dialogue_request_m6_1",
+        "target": "M6.1",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      },
+      {
+        "request_id": "dialogue_request_m6_2",
+        "target": "M6.2",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      },
+      {
+        "request_id": "dialogue_request_m6_3",
+        "target": "M6.3",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      },
+      {
+        "request_id": "dialogue_request_m6_4",
+        "target": "M6.4",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "dialogue_request_m6_1": {
+        "brief": "1",
+        "draft_assumption": "1",
+        "sound_design": "1"
+      },
+      "dialogue_request_m6_2": {
+        "brief": "1",
+        "draft_assumption": "1",
+        "sound_design": "1"
+      },
+      "dialogue_request_m6_3": {
+        "brief": "1",
+        "draft_assumption": "1",
+        "sound_design": "1"
+      },
+      "dialogue_request_m6_4": {
+        "brief": "1",
+        "draft_assumption": "1",
+        "sound_design": "1"
+      }
+    },
+    "applicability": {
+      "local_contract": "fail",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "fail",
+    "error_codes": [
+      "contract_shape"
+    ]
+  }
+}

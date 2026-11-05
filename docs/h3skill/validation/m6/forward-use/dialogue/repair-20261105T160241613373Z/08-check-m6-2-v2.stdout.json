@@ -1,0 +1,196 @@
+{
+  "kind": "M6ToolResult",
+  "contract_version": "1.0.0",
+  "command": "check",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "audio_availability_and_quality",
+      "measured_beat_authenticity",
+      "actual_lip_sync",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "explicit_unknown",
+      "path": "/context/time_context",
+      "message": "无绝对时刻、事件时长或总片长；仅给出三句语音的先后顺序。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/context/source_context/items/SOUND-CLERK/voice_ref",
+      "message": "未提供店员音色参考。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/context/source_context/items/SOUND-CLERK/voice_requirement",
+      "message": "店员音色、口音、声域未指定。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/context/source_context/items/SOUND-CLERK/permission",
+      "message": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/context/source_context/items/SOUND-VISITOR/permission",
+      "message": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/context/source_context/items/SOUND-ROOM/permission",
+      "message": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/context/source_context/items/SOUND-BOX/subject_ref",
+      "message": "用户未提供盒子的稳定实体 ID；本声源为 ACT-PLACE 接触声的本地设计标识。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/context/source_context/items/SOUND-BOX/permission",
+      "message": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/time_context",
+      "message": "无绝对时刻、事件时长或总片长；仅给出三句语音的先后顺序。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/source_context/items/SOUND-CLERK/voice_ref",
+      "message": "未提供店员音色参考。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/source_context/items/SOUND-CLERK/voice_requirement",
+      "message": "店员音色、口音、声域未指定。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/source_context/items/SOUND-CLERK/permission",
+      "message": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/source_context/items/SOUND-VISITOR/permission",
+      "message": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/source_context/items/SOUND-ROOM/permission",
+      "message": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/source_context/items/SOUND-BOX/subject_ref",
+      "message": "用户未提供盒子的稳定实体 ID；本声源为 ACT-PLACE 接触声的本地设计标识。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/source_context/items/SOUND-BOX/permission",
+      "message": "无实际媒体及其授权记录；本轮只执行用户要求的离线声音设计。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.2"
+    }
+  ],
+  "trace": {
+    "call_id": "m6-8dbc2b86bc864e73a71d32c8c8d91d47",
+    "parent_module": "M6",
+    "started_at": "2026-11-05T16:02:41.733834+00:00",
+    "finished_at": "2026-11-05T16:02:41.738429+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "artifact": "ffe1b621d19ff7833a1606d37f5602658463e8526fd057b4d440b80702eb59ed",
+      "request": "f10dfbe3d10500f555947913d63a8913d30af22ff9f3a48ee67cadf1bc8d3222"
+    },
+    "resources": {
+      "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+      "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "dialogue_request_m6_2_v2"
+    ],
+    "input_versions": [
+      {
+        "request_id": "dialogue_request_m6_2_v2",
+        "target": "M6.2",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "dialogue_request_m6_2_v2": {
+        "brief": "1",
+        "draft_assumption": "1",
+        "sound_design": "1"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "kind": "M6ToolResult",
+  "contract_version": "1.0.0",
+  "command": "check",
+  "execution": "completed",
+  "disposition": "rejected",
+  "validation": {
+    "local_contract": "fail",
+    "overall": "fail",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "audio_availability_and_quality",
+      "measured_beat_authenticity",
+      "actual_lip_sync",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/music/items/MV-MUSIC/audio_selection",
+      "message": "AUDIO-MASTER 登记可识别，但媒体 unavailable，真实时长及源窗口均未知；不能填造 AudioAsset 或选择窗口",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/music/items/MV-MUSIC/beat_plan",
+      "message": "约 120 BPM 不能确定真实拍点、首拍偏移、歌词位置或每个动作的精确卡点；交 M7 在取得信号和动作资料后确定",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.3"
+    },
+    {
+      "code": "fully_copy_conflict",
+      "path": "/changes/music/items/MV-MUSIC/additional_audio",
+      "message": "fully_copy uses the complete current asset as the entire final soundtrack; any added, deleted or replaced sound requires partially_copy",
+      "status": "fail",
+      "blocking": true,
+      "repair_target": "M6.3"
+    },
+    {
+      "code": "soundtrack_context_unknown",
+      "path": "/changes/music/items/MV-MUSIC",
+      "message": "Cannot inspect vocal_events additions in this isolated call",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.3"
+    },
+    {
+      "code": "soundtrack_context_unknown",
+      "path": "/changes/music/items/MV-MUSIC",
+      "message": "Cannot inspect effects additions in this isolated call",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.3"
+    }
+  ],
+  "trace": {
+    "call_id": "m6-aca637cdcbbb47f289cf9c579d3f9469",
+    "parent_module": "M6",
+    "started_at": "2026-11-05T16:00:26.960738+00:00",
+    "finished_at": "2026-11-05T16:00:26.963320+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "artifact": "aca58ad3c4864a2a794633e0d3169130add83ad1bddf88400898284a4fd585cd",
+      "request": "2d984a02bb0eff766725053727f5f1a45811613630a4a28c207779a4c62b3ffd"
+    },
+    "resources": {
+      "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+      "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "mv_request_m6_3"
+    ],
+    "input_versions": [
+      {
+        "request_id": "mv_request_m6_3",
+        "target": "M6.3",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "mv_request_m6_3": {
+        "MV-BRIEF": "1"
+      }
+    },
+    "applicability": {
+      "local_contract": "fail",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "fail",
+    "error_codes": [
+      "fully_copy_conflict"
+    ]
+  }
+}

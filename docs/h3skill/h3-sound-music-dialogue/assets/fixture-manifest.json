@@ -1,0 +1,27 @@
+{
+  "kind": "M6DesignFixtures",
+  "evidence_status": "synthetic design fixtures; not H3 outputs, actual audio observations or validation results",
+  "purpose": "Four independently callable contracts and one atomic combined draft. Missing media/permissions remain unknown.",
+  "files": [
+    "proposal-batch.json",
+    "proposal-m6-1.json",
+    "proposal-m6-2.json",
+    "proposal-m6-3.json",
+    "proposal-m6-4.json",
+    "proposal-standalone-m6-1.json",
+    "proposal-standalone-m6-2.json",
+    "proposal-standalone-m6-3.json",
+    "proposal-standalone-m6-4.json",
+    "request-m6-1.json",
+    "request-m6-2.json",
+    "request-m6-3.json",
+    "request-m6-4.json",
+    "request-m6.json",
+    "request-standalone-m6-1.json",
+    "request-standalone-m6-2.json",
+    "request-standalone-m6-3.json",
+    "request-standalone-m6-4.json",
+    "requests.json",
+    "state-empty.json"
+  ]
+}

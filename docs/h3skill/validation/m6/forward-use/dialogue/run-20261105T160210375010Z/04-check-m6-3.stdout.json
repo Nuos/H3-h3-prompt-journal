@@ -1,0 +1,84 @@
+{
+  "kind": "M6ToolResult",
+  "contract_version": "1.0.0",
+  "command": "check",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "audio_availability_and_quality",
+      "measured_beat_authenticity",
+      "actual_lip_sync",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "explicit_unknown",
+      "path": "/context/time_context",
+      "message": "无绝对时刻、事件时长或总片长；仅给出三句语音的先后顺序。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/time_context",
+      "message": "无绝对时刻、事件时长或总片长；仅给出三句语音的先后顺序。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M6.3"
+    }
+  ],
+  "trace": {
+    "call_id": "m6-636e6a3148254f2ca64cc90b984e639d",
+    "parent_module": "M6",
+    "started_at": "2026-11-05T16:02:10.668739+00:00",
+    "finished_at": "2026-11-05T16:02:10.671264+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "artifact": "4d625f07cdc3b493bd74496bee3c296032ab92bbac6be1128fabfbe0d86d2602",
+      "request": "2c2e9cd98357263cc62842664f0f854b18333570da73a55a2eda9eb1df09af1e"
+    },
+    "resources": {
+      "references/contracts.json": "1dd239e9c4a3406f01c5a0f93bdf3232e3374eb95a2d6a52e35170020690e642",
+      "references/module-registry.json": "96e5f8276dbd4faf41214cfc36c689a6314d4776522046452acab3e3d0e449b2"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "dialogue_request_m6_3"
+    ],
+    "input_versions": [
+      {
+        "request_id": "dialogue_request_m6_3",
+        "target": "M6.3",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "dialogue_request_m6_3": {
+        "brief": "1",
+        "draft_assumption": "1",
+        "sound_design": "1"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  }
+}
