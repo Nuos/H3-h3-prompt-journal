@@ -1,0 +1,34 @@
+{
+  "skill_name": "h3-water-obstacle-variety-show",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive_causal_comedy",
+      "prompt": "参考人物图，做一段闯关险些成功后落水的喜剧；要自然动作和两句中文对白。",
+      "expected_output": "输出参考权限、必经因果、自由度、对白主体、时间预算和验收表；抓稳→侧击→失握→落水→湿发收尾顺序不变。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary_long_story",
+      "prompt": "20秒、八个故事段、一句台词，要求直接一次生成且保留全部。",
+      "expected_output": "区分创作时长与4–15秒生成片段，提出分片及状态交接；不照搬原案20秒为官方单次能力。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative_precision_dance",
+      "prompt": "把舞者每拍移动5厘米，按120BPM严格一镜到底，既无挑战也无反转。",
+      "expected_output": "判断不属于本技能的主要触发，建议逐拍动作与摄影控制方法，不强塞水上闯关模板。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "negative_false_parameter",
+      "prompt": "直接用0.3渲染，升到1后保证动作完全相同且更便宜。",
+      "expected_output": "指出参数单位与平台映射缺失，记录missing并删除成本和一致性保证。",
+      "files": []
+    }
+  ]
+}

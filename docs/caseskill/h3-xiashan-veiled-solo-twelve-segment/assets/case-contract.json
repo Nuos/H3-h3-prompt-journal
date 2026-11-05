@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+  "skill_name": "h3-xiashan-veiled-solo-twelve-segment",
+  "required_check_ids": [
+    "XS01",
+    "XS02",
+    "XS03",
+    "XS04",
+    "XS05",
+    "XS06",
+    "XS07",
+    "XS08",
+    "XS09",
+    "XS10"
+  ],
+  "checks": [
+    {
+      "id": "XS01",
+      "rule": "每段执行文本必须包含所需规则；统一配置负责维护，独立任务不依赖文件末尾全局段。",
+      "source": "README.md:13–15,58–68；review:27,39–42"
+    },
+    {
+      "id": "XS02",
+      "rule": "图像权威按属性分开，正面服装图不同时控制环境与色调；无头信息不能用于面部锁定。",
+      "source": "README.md:25–32；prompt.md:20,34；review:48"
+    },
+    {
+      "id": "XS03",
+      "rule": "穿戴面纱、可挥动舞袖、可推开的场景纱帘是三个对象；动作主语、接触和不可变状态必须区分。",
+      "source": "README.md:17,32；prompt.md:21,300–303,631–663"
+    },
+    {
+      "id": "XS04",
+      "rule": "141.845秒正文时间表与181.956秒README不能并用；局部拍点需从源时间换算，动作拍数与窗口余时全部分配。",
+      "source": "README.md:56–68；prompt.md:14,47–59,685；review:23,29,33,46–47"
+    },
+    {
+      "id": "XS05",
+      "rule": "绝对静止覆盖持续微运动层；若选择宏观静止，则删除absolute等绝对措辞并说明仍可呼吸。",
+      "source": "prompt.md:45,242,425,547,716–733；review:31"
+    },
+    {
+      "id": "XS06",
+      "rule": "歌词提供时序和情绪，不默认增添人、物、字幕或完整口型；没有SRT和音频不能声称逐句已对齐。",
+      "source": "README.md:16,20,50–56；prompt.md:283,405；review:23,33"
+    },
+    {
+      "id": "XS07",
+      "rule": "接缝的对象必须在前段实际结尾和后段实际开头可见；静止起步与首段开场是显式例外，不套用仍在运动的模板。",
+      "source": "prompt.md:169–187,425–428,474–492,669–724；review:48"
+    },
+    {
+      "id": "XS08",
+      "rule": "稳定与延迟观察模式通过段级白名单选择；不能同时要求稳定、不环绕及延迟环绕。",
+      "source": "README.md:18–19,46–48；prompt.md:7,309,553,614,675；review:31,47"
+    },
+    {
+      "id": "XS09",
+      "rule": "手、地面支撑与身体发力应驱动袖摆；地面技术需写接触转换，不以衣料运动代替动作因果。",
+      "source": "README.md:38–44,69；prompt.md:600–621"
+    },
+    {
+      "id": "XS10",
+      "rule": "原案混合的首帧话术、integrated_multimodal_description和音频参考／全复用冲突须编译为单一Ref2VA方案；原文仅作档案。",
+      "source": "prompt.md:17–43,23–32,67–69；references/h3-official.md"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "权威与资产配置",
+      "content": "每张图的授权／排除属性，穿戴物、舞袖、门帘的状态与接触边界，背景与调色来源，镜头模式白名单。"
+    },
+    {
+      "name": "时间和动作总表",
+      "content": "源段界、段长、局部拍点、证据状态、链入态／出态、已分配拍数与余时、技术峰值和静止覆盖区间。"
+    },
+    {
+      "name": "逐段可提交提示词",
+      "content": "英语Ref2VA六字段、完整内联规则、真实切镜与镜头内阶段、统一音频使用策略；与只读原稿区分。"
+    },
+    {
+      "name": "接缝与验证清单",
+      "content": "相邻段可见对象／方向／支撑／速度表，静止切点例外，资产背景试段、双段接缝、地面、旋转、终止检查及尚未验证项。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

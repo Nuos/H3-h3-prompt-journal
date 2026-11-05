@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-motion-transfer",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "提供图像、动作视频、目标音频与已知重音，写新世界动作重建方案。",
+      "expected_output": "三参考权限互不越界，身体机制和相机分开，目标时间有来源，前后验收明确。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "直接照README运行9秒124帧工作流并裁前22帧音频1秒。",
+      "expected_output": "指出连线表达式226帧、视频26帧与音频1秒的差异；核查旁路音频，未修复前不宣称可复现。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative",
+      "prompt": "证明所有H3动作迁移单次上限永远是9秒，并在生成前确认每帧身份正确。",
+      "expected_output": "拒绝把配置经验升级为通用限制；每帧检查只能在有生成结果后执行。",
+      "files": []
+    }
+  ]
+}

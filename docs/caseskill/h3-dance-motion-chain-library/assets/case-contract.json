@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-dance-motion-chain-library",
+  "skill_name": "h3-dance-motion-chain-library",
+  "required_check_ids": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "checks": [
+    {
+      "id": "R1",
+      "rule": "先片型分流和版本锁定，再按稳定ID读取所需链；Rev.1.4的A—K及拼舞模板是同一知识库，不是已实现的自动模块，也不需要每次全文注入。",
+      "source": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md:1-13,914-933,1934-1951,2221-2225,2756-2764；docs/casereview/2026-10-dance-motion-chain-library.md:5,23,37"
+    },
+    {
+      "id": "R2",
+      "rule": "单条真实字段优先于概括；库并非所有链都有完整出入态或2–8拍。标题、分解、H3和结束状态冲突先记录并裁决，补齐内容标工程设计；不静默修成来源事实。",
+      "source": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md:206-246,398-402,434-450,494-498,619-621,2112-2136；docs/casereview/2026-10-dance-motion-chain-library.md:31,45"
+    },
+    {
+      "id": "R3",
+      "rule": "时间窗先于动作数量；每窗必须从支撑与动力进入，达到唯一主要结果，制动并产生可接的出态。容量表是启发估计，不能宣称某时长对所有人／BPM／动作绝对可行或绝对不可行。",
+      "source": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md:42-56；工程补齐：容量启发与硬约束区分"
+    },
+    {
+      "id": "R4",
+      "rule": "连续链满足前OUT=后IN，或显式安排桥接；持续层／动链层／微表情层按支撑与hold兼容，不把不断膝弹、完全锁姿和单脚平衡无条件叠加。",
+      "source": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md:17-22,31-41,2758-2761；工程补齐：层间互斥与状态字段"
+    },
+    {
+      "id": "R5",
+      "rule": "共享时间轴不等于所有摄影零相位差；sync_follow、anticipate_hit、delayed_observer和static_observe单窗择一并写时间。提前画框到位、同时到位、迟半拍不能一起当全库铁律。",
+      "source": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md:23-30,686-698,777-817；docs/casereview/2026-10-dance-motion-chain-library.md:43"
+    },
+    {
+      "id": "R6",
+      "rule": "剪辑语法单独选：动作完成处切、旋转相位匹配切、姿态跳切各自保留条件；首帧锚定、身份参考、单张姿势推测也分开，不跨模式机械粘贴。",
+      "source": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md:716-721,750-763,919-933,1953-1975,2393-2412；docs/casereview/2026-10-dance-motion-chain-library.md:44"
+    },
+    {
+      "id": "R7",
+      "rule": "旋转记录episode数与每段周数／方向／轴心／停止点；Hero要完整预载和回收。源≤2次及2–4处Hero是局部经验，计数单位须声明，G实现度和稳定星级不构成官方或本次实测保证。",
+      "source": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md:20-22,494-498,861-910,2764；工程补齐：双层旋转计数"
+    },
+    {
+      "id": "R8",
+      "rule": "按目标参考映射身体、服装、道具和场景；K章源档案与H3句中的外观世界不可覆盖当前图像权限。单图时间顺序、遮挡内动作与未入镜回收保持inferred标签，不升级成已观测。",
+      "source": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md:2223-2241,2278-2282,2393-2412；docs/casereview/2026-10-dance-motion-chain-library.md:32,46"
+    },
+    {
+      "id": "R9",
+      "rule": "拍数、BPM、onset和声场分清measured／source-reported／planned／inferred／missing。自由散板可按秒设计；响度不证明固定BPM，原声波形需在装配阶段回贴。源片长不等于官方单次生成参数。",
+      "source": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md:924-928,935-945,1025-1035,2142-2192,2227-2230；工程补齐：官方24FPS／4–15秒与编辑裁窗"
+    },
+    {
+      "id": "R10",
+      "rule": "多人固定的是当前任务的身份与角色数量，动静、接触及槽位逐人声明；示例四人／2×2／不镜像／solo位置不全局化。每段最终给可判定验收项，未生成不报告完成率或成功视频。",
+      "source": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md:55,589-680,2508-2535,2579-2582；docs/casereview/2026-10-dance-motion-chain-library.md:32,39"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "任务模式与参考合同",
+      "content": "片型、官方生成模式、首帧／身份参考权限、素材missing状态、人数与资产、摄影响应和剪辑语法、旋转计数单位。"
+    },
+    {
+      "name": "选中链工程卡",
+      "content": "source_id／version／lines、原拍数与实际分解、目标拍数／秒数、入态／出态、支撑／动力／峰值／制动／道具／材料、证据等级、字段冲突及裁决。"
+    },
+    {
+      "name": "逐窗编舞与摄影表",
+      "content": "全局和局部时间、BPM或onset依据、主动作完成点、IN/OUT桥接、持续与微表情层适用范围、摄影物理几何和启动／峰值／恢复／延迟；独立生成段自包含。"
+    },
+    {
+      "name": "H3正文与编辑装配清单",
+      "content": "按实际模式编译选中链，清除源外观覆盖，音频方式及生成／剪辑时长分列；必要时记录长片分段、短片裁窗、原声回贴和跨切状态。"
+    },
+    {
+      "name": "逐窗审校与生成后验收",
+      "content": "十项检查结论、未通过窗口的修复、来源与工程变更表；实际成片未生成则结果栏pending，不填虚构onset、帧数成功率或模型稳定性。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

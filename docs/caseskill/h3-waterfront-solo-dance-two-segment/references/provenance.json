@@ -1,0 +1,43 @@
+{
+  "case_id": "2026-10-waterfront-solo-dance-two-segment",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "67b089f4d560d388e0ceb7dcc7f9011b7456fec69aed0c73f1d70dd341470276",
+      "bytes": 3940,
+      "lines": 48,
+      "git_blob_sha": "bb9a28d25757e4d78d54d4e9dd517d12d063f6c4",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+      "reading_note": "输入、取证误报、单镜头复核、切段与动作接力方法。"
+    },
+    {
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "5fac40dab9977ecf671bba747db25f4aee43ce892b796f230c319a8ad80da332",
+      "bytes": 8762,
+      "lines": 119,
+      "git_blob_sha": "539cebf0828ce83ad43d6b7381445c69c3b9f411",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md",
+      "reading_note": "两段完整提示词、拍点、动作链、原字段错误和终止/持续层冲突。"
+    },
+    {
+      "path": "docs/casereview/2026-10-waterfront-solo-dance-two-segment.md",
+      "local_path": "references/source-review.md",
+      "sha256": "0810ff8a158ff04b88211880c77ced21a8445462335060d9d193cb13db5c2a8f",
+      "bytes": 4991,
+      "lines": 49,
+      "git_blob_sha": "984d85b04e090558c9983d2e770ca85fd588735c",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-waterfront-solo-dance-two-segment.md",
+      "reading_note": "全量案例评估，指出相位、首帧、终止状态和证据缺口，指导工程修复。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

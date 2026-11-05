@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-four-subject-formation-choreography",
+  "skill_name": "h3-four-subject-formation-choreography",
+  "required_check_ids": [
+    "FSC01",
+    "FSC02",
+    "FSC03",
+    "FSC04",
+    "FSC05",
+    "FSC06",
+    "FSC07",
+    "FSC08",
+    "FSC09"
+  ],
+  "checks": [
+    {
+      "id": "FSC01",
+      "rule": "同一任务的视觉锚逐段复用相同版本，主体ID不随站位与镜头前后变化重新编号。",
+      "source": "case-studies/2026-10-four-subject-formation-choreography/README.md:37-55；case-studies/2026-10-four-subject-formation-choreography/prompt.md:6-20,32-38"
+    },
+    {
+      "id": "FSC02",
+      "rule": "参考图负责已声明的身份/场景，后续段的起始动作来自INCOMING而非重新摆参考姿势。",
+      "source": "case-studies/2026-10-four-subject-formation-choreography/prompt.md:8-20,36-38"
+    },
+    {
+      "id": "FSC03",
+      "rule": "队形换位必须有支撑脚—承重—膝胯—肩臂—恢复的动作链，不能只有目的地或普通步行。",
+      "source": "case-studies/2026-10-four-subject-formation-choreography/README.md:70-82；case-studies/2026-10-four-subject-formation-choreography/prompt.md:40-42,79-86"
+    },
+    {
+      "id": "FSC04",
+      "rule": "主体动作性格和错拍关系保持可区分，共同重音之外不把四人写成同步复制。",
+      "source": "case-studies/2026-10-four-subject-formation-choreography/prompt.md:50-62"
+    },
+    {
+      "id": "FSC05",
+      "rule": "把中心交叉和层交换编码成局部许可；不同时保留全局不穿越和正文交叉动作。",
+      "source": "case-studies/2026-10-four-subject-formation-choreography/README.md:78-79；case-studies/2026-10-four-subject-formation-choreography/prompt.md:79-86,100-118；docs/casereview/2026-10-four-subject-formation-choreography.md:31,39-46"
+    },
+    {
+      "id": "FSC06",
+      "rule": "区分同距跟随后退与拉远揭示队形：前者可依动作使用，后者受本案例近景观看策略限制。",
+      "source": "case-studies/2026-10-four-subject-formation-choreography/prompt.md:71,75,142；docs/casereview/2026-10-four-subject-formation-choreography.md:47"
+    },
+    {
+      "id": "FSC07",
+      "rule": "每段OUTGOING与下一段INCOMING逐主体传承位置、承重、旋转、手臂路径和行进方向。",
+      "source": "case-studies/2026-10-four-subject-formation-choreography/README.md:57-68；case-studies/2026-10-four-subject-formation-choreography/prompt.md:36-38,86,134"
+    },
+    {
+      "id": "FSC08",
+      "rule": "歌词只塑造情绪/力度，不把歌词名词自动生成道具、特效或字幕；音频是否原样保留按任务职责显式声明。",
+      "source": "case-studies/2026-10-four-subject-formation-choreography/README.md:118-120,154-155；case-studies/2026-10-four-subject-formation-choreography/prompt.md:44-48,142-148"
+    },
+    {
+      "id": "FSC09",
+      "rule": "原14段总览、93.75 BPM和近零漂移自述不得当成完整工程与通用性能证据。",
+      "source": "case-studies/2026-10-four-subject-formation-choreography/README.md:46-51,94-120；docs/casereview/2026-10-four-subject-formation-choreography.md:23,33,48"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "身份锚与参考职责表",
+      "content": "稳定Subject ID、参考定位、身份/服装/场景作用域、anchor版本和缺失资产。"
+    },
+    {
+      "name": "逐人队形与穿越许可表",
+      "content": "每个时间窗的起终位置、支撑脚、动作链、通道、参与交叉者、让行顺序、遮挡/避碰待核验项。"
+    },
+    {
+      "name": "段落接缝表",
+      "content": "每人OUTGOING/INCOMING对照，含位置、承重、躯干、手臂余势、方向和未解决差异。"
+    },
+    {
+      "name": "完整片段提示词",
+      "content": "固定锚和本段动态编排完整组装；可单独阅读，不依赖未提供的其他13段文本。"
+    },
+    {
+      "name": "时序与证据核对表",
+      "content": "local/global、beat来源、实际/计划状态，说明哪些结论仅来自案例文字及哪些未做连续生成验证。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

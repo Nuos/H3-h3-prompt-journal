@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-identity-only-half-body-dance-six-segment",
+  "delivery_kind": "prompts",
+  "status": "draft",
+  "assembly": "sequential",
+  "runtime": {
+    "profile": "official-2026-10-28"
+  },
+  "fps": 24,
+  "assets": [],
+  "references": [],
+  "segments": [],
+  "handoffs": [],
+  "case_checks": [
+    {
+      "id": "ID-01",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ID-02",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ID-03",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ID-04",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ID-05",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ID-06",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ID-07",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ID-08",
+      "status": "unverified",
+      "evidence": ""
+    }
+  ],
+  "unresolved": [
+    "依据当前任务填入真实输入、输出和案例检查证据；本文件是待填写模板。"
+  ]
+}

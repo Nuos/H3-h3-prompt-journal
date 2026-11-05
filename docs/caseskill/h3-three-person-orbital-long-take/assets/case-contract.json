@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-08-three-person-orbital-long-take",
+  "skill_name": "h3-three-person-orbital-long-take",
+  "required_check_ids": [
+    "OL01",
+    "OL02",
+    "OL03",
+    "OL04",
+    "OL05",
+    "OL06",
+    "OL07",
+    "OL08",
+    "OL09",
+    "OL10"
+  ],
+  "checks": [
+    {
+      "id": "OL01",
+      "rule": "三个身份槽位各自绑定实际参考；Picture 1兼管主环境，Picture 2/3只管各自外观，角色顺序和环绕中心变化不重编号、不换身份。",
+      "source": "prompt.md:4–62,167–207；vocabulary-expanded.zh-CN.md:7–23；references/h3-official.md"
+    },
+    {
+      "id": "OL02",
+      "rule": "三人始终在场与当前可见谁分开；反射、剪影和局部肢体也属于可见内容，转接残留遮挡边缘的许可要显式定义。",
+      "source": "prompt.md:68–138,524–576,1189–1207；vocabulary-expanded.zh-CN.md:25–41,97–99；review:26–28"
+    },
+    {
+      "id": "OL03",
+      "rule": "多视角环绕弧和完整360度采用不同验收，不能以垂直扫描、人物自转或前侧到后侧的片段冒充整圈。",
+      "source": "README.md:20–29；prompt.md:275–330,643–658,741–747；review:38"
+    },
+    {
+      "id": "OL04",
+      "rule": "站位、相机路径、视场、身体活动净空和最终半身群像必须联合检查；单张环境图不等于已校准三维空间或已证明可行布局。",
+      "source": "prompt.md:68–164,780–925,1271–1279；vocabulary-expanded.zh-CN.md:43–59；review:28,40"
+    },
+    {
+      "id": "OL05",
+      "rule": "换环绕中心保持摄影机轨迹连续；P1高位结束接P2头部，P2低位结束接P3脚部，遮挡表面必须符合当前高度与真实服装。",
+      "source": "prompt.md:367–387,527–576,582–614,661–735；工程高度衔接修订"
+    },
+    {
+      "id": "OL06",
+      "rule": "转接单独占用时间，不与下一正式环绕重复计时；保存最终群像预算，完成优先不能变成无上限超时或牺牲第三人。",
+      "source": "README.md:65–68；prompt.md:582,709,981–1126；review:39"
+    },
+    {
+      "id": "OL07",
+      "rule": "人物在有限站位范围独立微动，摄影机绕开人体；近身视差和遮挡来自空间运动，不靠人物故意挡镜、原地摇摄或身份形变。",
+      "source": "prompt.md:210–241,390–425,467–494,617–637,755–778,1158–1183"
+    },
+    {
+      "id": "OL08",
+      "rule": "结尾采用有减速转向窗口的短物理后拉，在近距离半身群像停止；停止相机不冻结三人，最终同框不证明全过程物理连续。",
+      "source": "prompt.md:780–979,1371–1391；vocabulary-expanded.zh-CN.md:91–92；review:30"
+    },
+    {
+      "id": "OL09",
+      "rule": "原案20秒一镜到底保留为概念要求；已核验标准H3单次4–15秒，较短改编或多段拼接都必须明示对原要求的变更。",
+      "source": "README.md:8,61–68；prompt.md:30,957–979；references/h3-official.md；官方范围与案例参数对照"
+    },
+    {
+      "id": "OL10",
+      "rule": "Occlusion-Linked Orbital Long Take是案例方法名，不是H3接口参数；一个连续镜头只有一个Shot，译文与作者成功陈述不能当成新增实测结果。",
+      "source": "README.md:31–45,61–70；vocabulary-expanded.zh-CN.md:90–107；review:22,30；references/h3-official.md"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "身份与空间契约",
+      "content": "三个固定人物槽位到实际素材／Subject的映射、独立主环境Subject、参考权限、可见锚点和未知区域、站位与微动作范围。"
+    },
+    {
+      "name": "环绕与显隐计划",
+      "content": "明确弧线或360度验收、三次水平／垂直路径、每阶段present与visible集合、转接例外许可、遮挡表面、接入机位和反射／净空待核验项。"
+    },
+    {
+      "name": "唯一时间轴和最终群像方案",
+      "content": "每个环绕、转接、制动、后拉与稳定窗口，原案冲突修复、总长核算、三人相近摄影待遇、最终身体覆盖与现有站位的相容性。"
+    },
+    {
+      "name": "单镜头Ref2VA与执行边界",
+      "content": "六字段英文提示词、一个Shot内连续阶段、实际声音策略、概念20秒与已核验范围内候选的明确标记；文本审计、待空间预检和待生成回归分别报告。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

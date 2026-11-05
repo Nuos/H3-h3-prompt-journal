@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-09-action-chain-sock-fan-comedy",
+  "delivery_kind": "prompts",
+  "status": "draft",
+  "assembly": "sequential",
+  "runtime": {
+    "profile": "official-2026-10-28"
+  },
+  "fps": 24,
+  "assets": [],
+  "references": [],
+  "segments": [],
+  "handoffs": [],
+  "case_checks": [
+    {
+      "id": "S1",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "S2",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "S3",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "S4",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "S5",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "S6",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "S7",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "S8",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "S9",
+      "status": "unverified",
+      "evidence": ""
+    }
+  ],
+  "unresolved": [
+    "依据当前任务填入真实输入、输出和案例检查证据；本文件是待填写模板。"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "case_id": "2026-08-first-person-finger-controlled-dance",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "ba7ef1911f9d93901318f2784b9ca7c8fa0fb0141536933c16ccb4dd7b9b71b5",
+      "bytes": 7128,
+      "lines": 109,
+      "git_blob_sha": "eb24f9095c1512b03d423354161c7db656dd7bff",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-first-person-finger-controlled-dance/README.md",
+      "reading_note": "完整阅读；映射方法、前景配额、作者结果及可替换范围。"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md",
+      "local_path": "references/source-README.zh-CN.md",
+      "sha256": "85e125d85f8a0ab0303611a459f8d6890453d8608889f2fce1fd738d91aaf790",
+      "bytes": 19743,
+      "lines": 334,
+      "git_blob_sha": "8510ce889dd55118aa65ad8ae78562d71ece5aae",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md",
+      "reading_note": "完整阅读；方法逐段译注与十条命令结果描述。"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "68769f007f1ceaf0b3c5d20be07c4298d2c1ea827b59913e1fe6d2904613b1c2",
+      "bytes": 6580,
+      "lines": 67,
+      "git_blob_sha": "b60d367e04180dbf99976c451223c57a6fc58f5f",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-first-person-finger-controlled-dance/prompt.md",
+      "reading_note": "完整阅读；四向身体定义、十条与结尾三条、构图及声音全文。"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md",
+      "local_path": "references/source-prompt.zh-CN.md",
+      "sha256": "4abfdbb588760ddf6896a0af277b85827157058815f04d326aa4cc07be483f65",
+      "bytes": 18406,
+      "lines": 302,
+      "git_blob_sha": "1bea74520f7c00446f2c3059c77b8fe54356f75b",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md",
+      "reading_note": "完整阅读；正文中译，核对屏幕坐标和度量差异。"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "68a5945faff4822892e725bf8c07f9cc08cf2c60dafb853010f1def84c775b6f",
+      "bytes": 11341,
+      "lines": 103,
+      "git_blob_sha": "531b7e9a5ecd744adb443cde1d0426029bed441d",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md",
+      "reading_note": "完整阅读；天花板冲突、结尾序列歧义、术语边界。"
+    },
+    {
+      "path": "docs/casereview/2026-08-first-person-finger-controlled-dance.md",
+      "local_path": "references/source-review.md",
+      "sha256": "43e35e0d619371ec570646833994b88fbff25fb90309ad0a0148ff5635fdd90b",
+      "bytes": 4799,
+      "lines": 53,
+      "git_blob_sha": "5ec697e1f3be779c02d56af61e5d4a9574d5db4a",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-first-person-finger-controlled-dance.md",
+      "reading_note": "完整阅读；命令总数、几何核验、响应容差缺口已落实。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

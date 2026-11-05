@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-identity-only-half-body-dance-six-segment",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "ID-T1",
+      "prompt": "图1托腮、图2叉腰，要求0秒换重心起舞，脸和衣服保持。",
+      "expected_output": "明确属性授权与姿势排除，同时提供0秒连续动作，不把任一图设为精确首帧。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "ID-T2",
+      "prompt": "首拍0.468秒，之前无动作描述；后段从新站姿开始，仍称无缝。",
+      "expected_output": "补0秒预载/余势并要求段间状态接口；不能仅凭持续运动断言无缝。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "ID-T3",
+      "prompt": "沿用半身模板展示精确交叉脚步，但绝对禁止出现脚。",
+      "expected_output": "指出可见性与验收冲突，提出改观看范围或改动作目标，不声称可验证被裁掉的脚步。",
+      "files": []
+    }
+  ]
+}

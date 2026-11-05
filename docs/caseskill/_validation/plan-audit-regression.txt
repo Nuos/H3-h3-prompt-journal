@@ -1,0 +1,26 @@
+test_complete_plan_and_three_field_prompt (test_plan_audit.PlanAuditRegression.test_complete_plan_and_three_field_prompt) ... ok
+test_component_output_does_not_need_fake_generation (test_plan_audit.PlanAuditRegression.test_component_output_does_not_need_fake_generation) ... ok
+test_crop_cannot_claim_unavailable_generated_frames (test_plan_audit.PlanAuditRegression.test_crop_cannot_claim_unavailable_generated_frames) ... ok
+test_custom_runtime_requires_evidence (test_plan_audit.PlanAuditRegression.test_custom_runtime_requires_evidence) ... ok
+test_duration_and_frame_count_mismatch (test_plan_audit.PlanAuditRegression.test_duration_and_frame_count_mismatch) ... ok
+test_empty_template_cannot_be_ready (test_plan_audit.PlanAuditRegression.test_empty_template_cannot_be_ready) ... ok
+test_long_case_requires_generation_slices (test_plan_audit.PlanAuditRegression.test_long_case_requires_generation_slices) ... ok
+test_missing_first_frame_and_wrong_picture_binding (test_plan_audit.PlanAuditRegression.test_missing_first_frame_and_wrong_picture_binding) ... ok
+test_multi_segment_requires_state_and_audio_handoff (test_plan_audit.PlanAuditRegression.test_multi_segment_requires_state_and_audio_handoff) ... ok
+test_nonfinite_time_rejected (test_plan_audit.PlanAuditRegression.test_nonfinite_time_rejected) ... ok
+test_per_generation_reference_limits_not_whole_project (test_plan_audit.PlanAuditRegression.test_per_generation_reference_limits_not_whole_project) ... ok
+test_postproduction_freeze_additions_have_separate_time_budget (test_plan_audit.PlanAuditRegression.test_postproduction_freeze_additions_have_separate_time_budget) ... ok
+test_postproduction_freeze_outside_usable_clip_is_rejected (test_plan_audit.PlanAuditRegression.test_postproduction_freeze_outside_usable_clip_is_rejected) ... ok
+test_prompt_cut_must_match_plan (test_plan_audit.PlanAuditRegression.test_prompt_cut_must_match_plan) ... ok
+test_prompt_file_cannot_escape_task_directory (test_plan_audit.PlanAuditRegression.test_prompt_file_cannot_escape_task_directory) ... ok
+test_ref2va_accepts_six_fields_and_source_only_picture (test_plan_audit.PlanAuditRegression.test_ref2va_accepts_six_fields_and_source_only_picture) ... ok
+test_ref2va_rejects_base_mode_field (test_plan_audit.PlanAuditRegression.test_ref2va_rejects_base_mode_field) ... ok
+test_short_edit_uses_legal_generation_and_crop_timeline (test_plan_audit.PlanAuditRegression.test_short_edit_uses_legal_generation_and_crop_timeline) ... ok
+test_timing_gap_from_inconsistent_dance_blocks (test_plan_audit.PlanAuditRegression.test_timing_gap_from_inconsistent_dance_blocks) ... ok
+test_unknown_reference_and_more_than_nine_images (test_plan_audit.PlanAuditRegression.test_unknown_reference_and_more_than_nine_images) ... ok
+test_video_sound_is_not_automatically_an_audio_reference (test_plan_audit.PlanAuditRegression.test_video_sound_is_not_automatically_an_audio_reference) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.011s
+
+OK

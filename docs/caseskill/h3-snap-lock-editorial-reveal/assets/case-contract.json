@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-09-snap-lock-editorial-reveal",
+  "skill_name": "h3-snap-lock-editorial-reveal",
+  "required_check_ids": [
+    "SLR01",
+    "SLR02",
+    "SLR03",
+    "SLR04",
+    "SLR05",
+    "SLR06",
+    "SLR07",
+    "SLR08"
+  ],
+  "checks": [
+    {
+      "id": "SLR01",
+      "rule": "HARD LOCK和INSTANT BURST互斥；所有相机运动必须完全落在burst窗口，不能拖入静态区。",
+      "source": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md:9-53,448-504"
+    },
+    {
+      "id": "SLR02",
+      "rule": "相机硬锁不等于后期freeze-frame；人物可以保留已允许的呼吸、眼动和发丝微动。",
+      "source": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md:346-395；case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md:20,91,103"
+    },
+    {
+      "id": "SLR03",
+      "rule": "图像拥有所声明视觉职责，音频拥有事件时间；更换音频后重新建立时间表，不能套源毫秒点。",
+      "source": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md:1-8,82-102,505-522；docs/casereview/2026-09-snap-lock-editorial-reveal.md:27"
+    },
+    {
+      "id": "SLR04",
+      "rule": "相机绕光轴的roll与身体转向分开，必须记录绝对取向及累计关系。",
+      "source": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md:103-120,273-277,404-429；case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md:105"
+    },
+    {
+      "id": "SLR05",
+      "rule": "三次冲击要逐个占用可检查帧并回稳；极短区间的可读性要经实际帧率和视频确认。",
+      "source": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md:320-345；case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md:107；docs/casereview/2026-09-snap-lock-editorial-reveal.md:27,40"
+    },
+    {
+      "id": "SLR06",
+      "rule": "英文执行稿与中文教学改写不等价，不混合即刻启停与另加预备加减速的规则。",
+      "source": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md:41-53；case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md:44,83,104,134；docs/casereview/2026-09-snap-lock-editorial-reveal.md:29,39"
+    },
+    {
+      "id": "SLR07",
+      "rule": "编辑式快照是分立构图逻辑，不自动等同一条真实摄影机连续扫过身体的路径。",
+      "source": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md:10-19,464-478；case-studies/2026-09-snap-lock-editorial-reveal/README.md:14-37"
+    },
+    {
+      "id": "SLR08",
+      "rule": "8fps以上密采样只是源作者建议，原帧核对和音频标注才是具体事件证据；成片相似不唯一证明源结构。",
+      "source": "case-studies/2026-09-snap-lock-editorial-reveal/README.md:90-99；docs/casereview/2026-09-snap-lock-editorial-reveal.md:25,31"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "两态帧表",
+      "content": "start/end帧、对应时间、HARD_LOCK/BURST、构图、绝对roll、delta_roll、运动类型和人物微动权限。"
+    },
+    {
+      "name": "音频事件映射",
+      "content": "事件ID、来源/测量状态、触发的视觉事件、原始时点与量化时点/误差。"
+    },
+    {
+      "name": "冲击与旋转决策记录",
+      "content": "冲击数和最少帧预算、绝对朝向轨迹、源文冲突的取舍及blocked项。"
+    },
+    {
+      "name": "完整H3快照提示词",
+      "content": "视觉参考、相机两态与时间边界、人物动作、画面清晰恢复和最终锁定，避免夹带教学改写冲突。"
+    },
+    {
+      "name": "逐事件验收",
+      "content": "实际运动/静止帧、可数冲击、roll与人物姿态、音画事件差和未生成状态。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-advanced-camera-combinations",
+  "skill_name": "h3-advanced-camera-combinations",
+  "required_check_ids": [
+    "ACM01",
+    "ACM02",
+    "ACM03",
+    "ACM04",
+    "ACM05",
+    "ACM06",
+    "ACM07",
+    "ACM08"
+  ],
+  "checks": [
+    {
+      "id": "ACM01",
+      "rule": "用起点—物理路径—主体触发—终点—最终构图展开运镜；术语可以保留为索引，执行正文不得只靠术语或角度数。",
+      "source": "case-studies/2026-10-advanced-camera-combinations/prompt.md:4,10-18,298-328"
+    },
+    {
+      "id": "ACM02",
+      "rule": "每次前后、升降、换侧均写实际位移及光轴目标，不用数字变焦或未描述的瞬移代替。",
+      "source": "case-studies/2026-10-advanced-camera-combinations/prompt.md:11-16,27-39"
+    },
+    {
+      "id": "ACM03",
+      "rule": "人物与相机共用时间轴；只有实际音频数据支持时才把时间点标为已核验重拍。",
+      "source": "case-studies/2026-10-advanced-camera-combinations/prompt.md:18,40；docs/casereview/2026-10-advanced-camera-combinations.md:28,32"
+    },
+    {
+      "id": "ACM04",
+      "rule": "本库 SHOT 默认解释为同一镜头内的连续阶段；实际硬切需要显式另行声明。",
+      "source": "docs/casereview/2026-10-advanced-camera-combinations.md:28,36（工程补齐）"
+    },
+    {
+      "id": "ACM05",
+      "rule": "组合07按正文采用背后起始，标题前方起始不再与正文混用。",
+      "source": "case-studies/2026-10-advanced-camera-combinations/prompt.md:193-214；docs/casereview/2026-10-advanced-camera-combinations.md:42"
+    },
+    {
+      "id": "ACM06",
+      "rule": "组合10的静态建立和先行微推进必须标为局部例外；严格动作触发任务取消该预先移动。",
+      "source": "case-studies/2026-10-advanced-camera-combinations/prompt.md:270-294；docs/casereview/2026-10-advanced-camera-combinations.md:42（冲突处理）"
+    },
+    {
+      "id": "ACM07",
+      "rule": "单人、上半身优先、一两步位移是案例局部条件；不宣称去掉角度数字本身已被证明提高 H3 稳定性。",
+      "source": "case-studies/2026-10-advanced-camera-combinations/prompt.md:5,19-21；docs/casereview/2026-10-advanced-camera-combinations.md:30-32"
+    },
+    {
+      "id": "ACM08",
+      "rule": "独立粘贴输出必须同时携带参考职责与所需公共规则，且用明确宽高比代替含混的“Vertical 4:3”。",
+      "source": "case-studies/2026-10-advanced-camera-combinations/prompt.md:5,9；docs/casereview/2026-10-advanced-camera-combinations.md:43-44"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "运镜决策与前提表",
+      "content": "选用组合编号、适用动作、可用空间、遮挡条件、未满足条件和已采用的简化。"
+    },
+    {
+      "name": "人物—摄影机连续阶段表",
+      "content": "start/end、人物起始与动作峰、相机起点/路线/光轴/到位、continuous_phase 或 hard_cut、音乐证据状态。"
+    },
+    {
+      "name": "完整 H3 片段正文",
+      "content": "包含参考职责、场景、完整动作链、物理机位、同步关系和段末钩子，可单独阅读；审计说明放正文之外。"
+    },
+    {
+      "name": "修复与待核验项",
+      "content": "记录07方位、10例外、宽高比、时长改动及未测音频/未提供资产，避免把工程修复冒充原文。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

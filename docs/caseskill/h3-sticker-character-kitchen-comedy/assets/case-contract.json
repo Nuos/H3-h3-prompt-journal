@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-08-sticker-character-kitchen-comedy",
+  "skill_name": "h3-sticker-character-kitchen-comedy",
+  "required_check_ids": [
+    "SK-01",
+    "SK-02",
+    "SK-03",
+    "SK-04",
+    "SK-05",
+    "SK-06",
+    "SK-07",
+    "SK-08",
+    "SK-09"
+  ],
+  "checks": [
+    {
+      "id": "SK-01",
+      "rule": "仅角色保持二维贴纸媒介；厨房、蒸汽、盐、锅和真人手保持实拍，不把角色图的画风扩散到全景。",
+      "source": "README.md:5-9,21-35；prompt.md:21-39"
+    },
+    {
+      "id": "SK-02",
+      "rule": "恒定身份与允许的暂时卡通表情/形变分开；鼓嘴、肿包、X眼和星星不构成整体三维化或新主体。",
+      "source": "prompt.md:63-99；vocabulary-expanded.zh-CN.md:65-77,99-107"
+    },
+    {
+      "id": "SK-03",
+      "rule": "倒盐所用罐口全程无遮挡，盐从实际开口流进锅；封盖禁令补充正向几何，不替代可见动作路径。",
+      "source": "prompt.md:45-53；vocabulary-expanded.zh-CN.md:29-41"
+    },
+    {
+      "id": "SK-04",
+      "rule": "人手不碰罐只约束Shot 1倒盐阶段；Shot 2夺罐必须有明确许可和所有权转移，不能互相冲突。",
+      "source": "prompt.md:53,59；review:38"
+    },
+    {
+      "id": "SK-05",
+      "rule": "原10秒结构为四镜头、三切点3/5/8秒；每镜头动作有可读时间，毫秒记法不是实测时间准确性保证。",
+      "source": "prompt.md:37-101；review:28,39"
+    },
+    {
+      "id": "SK-06",
+      "rule": "先倒入盐再喂同锅食物；同一锅铲和真实人手各司其职，接罐后的放置与再操作必须连续。",
+      "source": "prompt.md:49-83；review:26,34"
+    },
+    {
+      "id": "SK-07",
+      "rule": "瞬间僵住、刚性姿态微颤、随后跌落和最终保持构图分别定时，不能用全片冻结禁掉后续反应。",
+      "source": "prompt.md:85-101；vocabulary-expanded.zh-CN.md:65-77"
+    },
+    {
+      "id": "SK-08",
+      "rule": "环境声存在时overall_soundscape写厨房声，只有配乐缺席时non_diegetic_music为N/A；不得把无对白/无音乐误作绝对静音。",
+      "source": "prompt.md:103-109；vocabulary-expanded.zh-CN.md:83-95"
+    },
+    {
+      "id": "SK-09",
+      "rule": "媒介纳入身份、封盖否定清单属于案例方法；不声称身份指令必然优于风格指令，或一次样本证明所有混合媒介有效。",
+      "source": "README.md:28-35,54-66；review:5,22,30,40"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "媒介与角色职责表",
+      "content": "二维/实拍归属、固定身份、允许变化、每阶段行动者及禁止行为的作用域。"
+    },
+    {
+      "name": "道具状态和所有权表",
+      "content": "盐罐开口、位置、持有人、盐流；锅铲在翻炒/轻敲/舀食/送入口各阶段的连续状态。"
+    },
+    {
+      "name": "因果分镜与内部时间预算",
+      "content": "真实Shot数量、切点、动作窗口、接触先后和最终保持范围；标明原参数与新增调度。"
+    },
+    {
+      "name": "英文H3提示词及验收清单",
+      "content": "官方模式字段、明确图片权限、声场策略，附逐镜二维外观、道具交接、动作路径和切点验证项目。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

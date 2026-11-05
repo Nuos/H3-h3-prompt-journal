@@ -1,0 +1,161 @@
+{
+  "pass": true,
+  "source_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "source_case_count": 29,
+  "tracked_case_text_count": 97,
+  "review_count": 29,
+  "preserved_source_records": 126,
+  "tracked_case_texts_not_copied": [],
+  "extra_case_texts": [],
+  "root_level_index_files_not_individual_cases": [
+    "case-studies/VOCABULARY-EXPANSION.zh-CN.md"
+  ],
+  "optional_ui_checks": [
+    {
+      "skill_name": "h3-cinematic-character-reveal-two-part",
+      "short_description_chars": 38,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-dual-subject-speed-contrast",
+      "short_description_chars": 36,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-first-person-finger-controlled-dance",
+      "short_description_chars": 34,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-furina-windsurfing-fashion-mv",
+      "short_description_chars": 37,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-single-subject-three-pose",
+      "short_description_chars": 33,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-sticker-character-kitchen-comedy",
+      "short_description_chars": 39,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-three-person-orbital-long-take",
+      "short_description_chars": 38,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-water-obstacle-variety-show",
+      "short_description_chars": 33,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-action-chain-sock-fan-comedy",
+      "short_description_chars": 35,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-editorial-lamp-rhythm-fashion-ab",
+      "short_description_chars": 34,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-purple-veil-dance-seven-segment",
+      "short_description_chars": 37,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-snap-lock-editorial-reveal",
+      "short_description_chars": 32,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-song-style-classical-dance-six-segment",
+      "short_description_chars": 38,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-three-person-prank-freeze-gag-cos-swap",
+      "short_description_chars": 34,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-advanced-camera-combinations",
+      "short_description_chars": 33,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-baifeng-mengchen-classical-dance-six-segment",
+      "short_description_chars": 34,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-camera-movement-discipline-library",
+      "short_description_chars": 31,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-classical-wuxia-dance-13-segment",
+      "short_description_chars": 33,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-dance-motion-chain-library",
+      "short_description_chars": 35,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-four-subject-formation-choreography",
+      "short_description_chars": 33,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-motion-transfer",
+      "short_description_chars": 32,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-identity-only-half-body-dance-six-segment",
+      "short_description_chars": 39,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-kanzaki-beach-sword-dance-18-segment",
+      "short_description_chars": 34,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-leg-lift-contact-cut-stocking-six-look",
+      "short_description_chars": 31,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-physical-camera-position-library",
+      "short_description_chars": 35,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-sock-showcase-right-entry-three-shot",
+      "short_description_chars": 32,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-summer-pool-beach-waterline-mv-4-segment",
+      "short_description_chars": 35,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-waterfront-solo-dance-two-segment",
+      "short_description_chars": 34,
+      "invocation_present": true
+    },
+    {
+      "skill_name": "h3-xiashan-veiled-solo-twelve-segment",
+      "short_description_chars": 33,
+      "invocation_present": true
+    }
+  ],
+  "media_inspected": false
+}

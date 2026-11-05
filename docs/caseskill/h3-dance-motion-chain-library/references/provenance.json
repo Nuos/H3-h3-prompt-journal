@@ -1,0 +1,43 @@
+{
+  "case_id": "2026-10-dance-motion-chain-library",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "ce47520bafe4d3fd129f20068452199eb4c3fda0219b2537f34f6fbf31866a90",
+      "bytes": 4031,
+      "lines": 41,
+      "git_blob_sha": "d196d84601fd33a2cc9a4be93d35aa969494bb6e",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-dance-motion-chain-library/README.md",
+      "reading_note": "全文41行阅读：Rev.1.4只读镜像、章节总览、十要素与时间容量，核对总述2–8拍、2–4人和实际例外。"
+    },
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md",
+      "local_path": "references/source-dance-motion-chain-h3.md",
+      "sha256": "69caa314ae11942dfff9cca14ba4a88ecf6187a336e3569f512f7c1f07d7a37b",
+      "bytes": 265991,
+      "lines": 2767,
+      "git_blob_sha": "53a0bfadbfa128998aaa5fcfc4d015f0e0e41e30",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md",
+      "reading_note": "全文2767行逐段读取全部非空文本：0使用规则；A1–23；B1–18；C1–49；D1–22；E1–10含未单列标题的右入换装段；F/G；H0及13完整范本；I.0–25全部物理机位块；J0–10母模板与九范本；K1–74含15视频/2图档案；七步拼舞及来源脚注。基于实际字段抽出版本、容量、模式与元数据冲突，未把源观察当本次复测。"
+    },
+    {
+      "path": "docs/casereview/2026-10-dance-motion-chain-library.md",
+      "local_path": "references/source-review.md",
+      "sha256": "625b3a87a806fa66d1d0908f04e2edb6c7f9e7f891222ae3658251078cc21fd5",
+      "bytes": 5952,
+      "lines": 53,
+      "git_blob_sha": "82023f5e00c122acaa9e5736de96fee036126740",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-dance-motion-chain-library.md",
+      "reading_note": "全文53行阅读：采用容量／衔接定位、E同步例外、首帧／剪辑分流、C19/C35/J7缺口、K素材权限和证据等级建议；额外补出全文发现的其他拍数／时长问题。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

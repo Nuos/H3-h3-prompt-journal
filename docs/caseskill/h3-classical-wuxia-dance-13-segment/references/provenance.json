@@ -1,0 +1,53 @@
+{
+  "case_id": "2026-10-classical-wuxia-dance-13-segment",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "e054bd15bedd75cd384c9e5e0e35c9ca17a1ad8685d041b12964876ab872e53c",
+      "bytes": 7765,
+      "lines": 83,
+      "git_blob_sha": "6bc13ac4af04d59ff036e50bdf55e662a6cb7b79",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-classical-wuxia-dance-13-segment/README.md",
+      "reading_note": "全文83行：输入权限、十三段窗口与文件、局部时间、武器状态、媒体未分发边界。"
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "local_path": "references/source-methodology.md",
+      "sha256": "24707ce3ca43b3696b97bf634d3fc87b3568116c33e3a31635a0ea01974ec1d8",
+      "bytes": 16996,
+      "lines": 199,
+      "git_blob_sha": "5a6760efa52e3a0f2ef14073e9cbd8a5c93923a8",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "reading_note": "全文199行：二十条创作方法及动作密度、技术预算、动力链、剪辑模式、参考权限和自检。"
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "40ca025fbdab770c72c25a0f259a4319f45725313b3a92bac5bcfee10ca8cd9d",
+      "bytes": 84646,
+      "lines": 543,
+      "git_blob_sha": "13b0cfedb1e8ba8c92ed13c7d4adcee9f43edf03",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md",
+      "reading_note": "全文543行：十三段执行稿、每段人声与拍点、S05事件矛盾、跨段起止、无歌词尾奏、实施限制。"
+    },
+    {
+      "path": "docs/casereview/2026-10-classical-wuxia-dance-13-segment.md",
+      "local_path": "references/source-review.md",
+      "sha256": "65538e4f10ff02b7d3c333abe3ec6fbe97c9a7d13be6c558eb716b29970fc64b",
+      "bytes": 5573,
+      "lines": 50,
+      "git_blob_sha": "6c6426b579c881b22c1fe09273fb9d39fd809477",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-classical-wuxia-dance-13-segment.md",
+      "reading_note": "全文50行：主流程价值、缺manifest、时间触发错误及接缝未细化的修订依据。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

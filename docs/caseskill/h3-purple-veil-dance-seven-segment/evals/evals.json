@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-purple-veil-dance-seven-segment",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "PV-T1",
+      "prompt": "段A结束在高位右袖向左扫，段B计划腰部特写开场，请输出接力。",
+      "expected_output": "发现交接物不在镜头内，改为对应袖腕特写或重写前段出口；左右、高度、方向全闭环。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "PV-T2",
+      "prompt": "全局24.250–37.550，正文写到13.550；全局49.666–63.466正文只到13.483。",
+      "expected_output": "算出13.300和13.800，分别识别越界0.250、漏时0.317；不悄悄改变已确认音频边界。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "PV-T3",
+      "prompt": "全程五官不可见，但歌词处短暂露眼；没有音频却请填实测onset。",
+      "expected_output": "处理可见性冲突并保持用户遮面要求；将onset列为待核，不虚构测量。",
+      "files": []
+    }
+  ]
+}

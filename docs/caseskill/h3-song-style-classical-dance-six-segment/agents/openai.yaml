@@ -1,0 +1,4 @@
+interface:
+  display_name: "宋韵古典舞的双层节拍、差异化高光与连续交接"
+  short_description: "编排宋韵古典舞的双层节拍、差异化高光与连续交接，核对参考职责、时间与状态交接"
+  default_prompt: "使用 $h3-song-style-classical-dance-six-segment，根据我提供的素材与约束完成编排、提示词和逐项检查。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "三人画外干扰、定格笑点与仅换皮复现"
+  short_description: "编排三人画外干扰、定格笑点与仅换皮复现，核对参考职责、时间与状态交接"
+  default_prompt: "使用 $h3-three-person-prank-freeze-gag-cos-swap，根据我提供的素材与约束完成编排、提示词和逐项检查。"

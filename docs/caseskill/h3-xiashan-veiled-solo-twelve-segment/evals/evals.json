@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-xiashan-veiled-solo-twelve-segment",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "双图分管正背和脸，三段有面纱，只有中段使用轻微醉镜，给出局部时间和接缝。",
+      "expected_output": "出现独立权威表、面纱／袖／帘消歧、每段完整约束、模式白名单、明确左右侧和方向的接缝；不固定十二段。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "照原案例说141.845秒，也保留README的181.956秒拼接表；歌词40句直接标已核验。",
+      "expected_output": "指出版本与缺证冲突，正文时间表暂作文本权威，标记歌词／manifest待核，不保留两套互斥总时长。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "counterexample",
+      "prompt": "末拍绝对静止但胸部提沉永不停；S09不要环绕但又延迟环绕；S08拍发丝但正文拍脚。",
+      "expected_output": "逐项选定可执行政策并同步正文、标题、镜头和状态；不输出互斥要求拼接的提示词。",
+      "files": []
+    }
+  ]
+}

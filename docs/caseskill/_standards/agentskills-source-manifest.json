@@ -1,0 +1,182 @@
+{
+  "repository": "agentskills/agentskills",
+  "commit_sha": "83021e2be457a9b6679148719c1f6074f0ad975e",
+  "commit_date": "2026-11-04T19:47:24Z",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "git_blob_sha": "8442d59ebfa692dd4b487d0dcba85679f0d774e8",
+      "bytes": 1960,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/AGENTS.md",
+      "sha256": "ed905e17e95d5ce6324a0a9868a792c2d141e72501129bdb3466881c8ef5a3bb"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob_sha": "a20f4476df158a57a68409015ea607c738856f57",
+      "bytes": 11344,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/LICENSE",
+      "sha256": "993da3f8d330d69108e521636555f7783ef81d46b904394c59ec5ff651331fe5"
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha": "247e4a18e908d3bf27092f886f25c2515d84ecbc",
+      "bytes": 3361,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/README.md",
+      "sha256": "7ff4a9a612ab21189aa793fd43223bd854280a122ac12ce29f5bea84d5930a1d"
+    },
+    {
+      "path": "docs/LICENSE",
+      "git_blob_sha": "4ea99c213c5c0c005ae4e80df8e52169d06896ec",
+      "bytes": 18656,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/LICENSE",
+      "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94"
+    },
+    {
+      "path": "docs/README.md",
+      "git_blob_sha": "8c0b44bc296d34a777d94be9a90b47d7738ce336",
+      "bytes": 482,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/README.md",
+      "sha256": "a54c9f51550b48091a9c9838e7d0caa0bcd09284dd4d375e75fc7ec1745e0ec4"
+    },
+    {
+      "path": "docs/skill-creation/best-practices.mdx",
+      "git_blob_sha": "cfe9188d2d0b3d5106d528e830d6119adb5cff93",
+      "bytes": 14608,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/skill-creation/best-practices.mdx",
+      "sha256": "a729bc1d746366ecb8c5056b100439fbf760007a0f836e089c0f3aff9ce5c2f8"
+    },
+    {
+      "path": "docs/skill-creation/evaluating-skills.mdx",
+      "git_blob_sha": "7c90d54295be88ac40de7f19db0876cee6180c4e",
+      "bytes": 16755,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/skill-creation/evaluating-skills.mdx",
+      "sha256": "20e53ee9085966bb25345fc4c431bcf24f1f1b410b687605dc870c76f8579a49"
+    },
+    {
+      "path": "docs/skill-creation/optimizing-descriptions.mdx",
+      "git_blob_sha": "8bb2a2fc83dcf254a06502a3eba92cc2d9633a4f",
+      "bytes": 13151,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/skill-creation/optimizing-descriptions.mdx",
+      "sha256": "5d6f72364f819399d07887843519d3ac037131778a5776584e5e6118d479a492"
+    },
+    {
+      "path": "docs/skill-creation/quickstart.mdx",
+      "git_blob_sha": "0d41a87bf323fcc627440972c21840a7d882eabe",
+      "bytes": 3844,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/skill-creation/quickstart.mdx",
+      "sha256": "a6614e814e19fb505b2e45a39a61643d62ac4ebee0515ceb913d09512d8489db"
+    },
+    {
+      "path": "docs/skill-creation/using-scripts.mdx",
+      "git_blob_sha": "11ce443e9b17281305e2ac593ef155a83a38a1dd",
+      "bytes": 12405,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/skill-creation/using-scripts.mdx",
+      "sha256": "064185783e0f848a9cad2cf5866902d5c46cbddc71235a124b3abbf3ebd7c02d"
+    },
+    {
+      "path": "docs/specification.mdx",
+      "git_blob_sha": "d9a2db099d905da8b879a5c6f996728073985279",
+      "bytes": 7166,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/specification.mdx",
+      "sha256": "b9079c0c10b7930e8c6a20ff2bc10cda2a3343c55185120e3f1116a1a529b220"
+    },
+    {
+      "path": "skills-ref/LICENSE",
+      "git_blob_sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "bytes": 11357,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "skills-ref/README.md",
+      "git_blob_sha": "9ba700189a98da8fb4433af067aa1ea5a6dbdc33",
+      "bytes": 2166,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/README.md",
+      "sha256": "23945a45bd15d18d7da3652cd4ea6ea66950db464613c4810d7026bd0921eb9f"
+    },
+    {
+      "path": "skills-ref/pyproject.toml",
+      "git_blob_sha": "26f0bd339ff79a1f51a9dbeb10c424fd9c09cb73",
+      "bytes": 571,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/pyproject.toml",
+      "sha256": "4333dea52ff4a4fe87f96e5a25f2517a57127bbabb09cb30f3d9057da77a5967"
+    },
+    {
+      "path": "skills-ref/src/skills_ref/__init__.py",
+      "git_blob_sha": "43776daaf113e072d0e3cd7bed8d898ba4e12939",
+      "bytes": 449,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/src/skills_ref/__init__.py",
+      "sha256": "a3da705c4847ac19c016f67e3a6c56a94e160986a823d148c21dca4c9b312b4a"
+    },
+    {
+      "path": "skills-ref/src/skills_ref/cli.py",
+      "git_blob_sha": "9af9fc3068a6420d8d0715616b11d2628e10a86a",
+      "bytes": 2697,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/src/skills_ref/cli.py",
+      "sha256": "cdcc2cc418cac2e47340455b406e39a73c0906d6184e0920d12e8c341ce5b139"
+    },
+    {
+      "path": "skills-ref/src/skills_ref/errors.py",
+      "git_blob_sha": "e9b49b50a02f27a08df2d9561c7d1973974ab17f",
+      "bytes": 572,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/src/skills_ref/errors.py",
+      "sha256": "5780d314db735400c3959d20ed19a8c59445786d35a1a1b7cf368f01576d91f4"
+    },
+    {
+      "path": "skills-ref/src/skills_ref/models.py",
+      "git_blob_sha": "77fa89ed2ccce99b10068fccd2ca26a2db24b1b1",
+      "bytes": 1461,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/src/skills_ref/models.py",
+      "sha256": "c6645fcfc04c78e773657856e8c6058e43951ce283e9b303ca721df1acac6a7b"
+    },
+    {
+      "path": "skills-ref/src/skills_ref/parser.py",
+      "git_blob_sha": "690c14e27b61405e3b1346dc22c8678cd3e79b35",
+      "bytes": 3413,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/src/skills_ref/parser.py",
+      "sha256": "9a74c9a90eb217b82bec27570332eab74547acfbee2973c0a8bcd23f6c7bc211"
+    },
+    {
+      "path": "skills-ref/src/skills_ref/prompt.py",
+      "git_blob_sha": "3a7d714bf60745a04e025764e724e9043791b6e9",
+      "bytes": 1724,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/src/skills_ref/prompt.py",
+      "sha256": "8ed90a61685b84050a8fde32e63d5f3f04c205b05bfc5f8ef4bb2f101cc9cf15"
+    },
+    {
+      "path": "skills-ref/src/skills_ref/validator.py",
+      "git_blob_sha": "22cf6f8ae5f905d780cb097c0938711cc37016a9",
+      "bytes": 5154,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/src/skills_ref/validator.py",
+      "sha256": "b5ee3d8537c83c959c31c2cb080a5227646ede5aea545f1ac835ed3c4645f6c5"
+    },
+    {
+      "path": "skills-ref/tests/__init__.py",
+      "git_blob_sha": "e33067fe47fd1bc61c34344e24be742f12d992da",
+      "bytes": 36,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/tests/__init__.py",
+      "sha256": "16095d8892a0168d9e49b2ab4d45b8ef288f2499a28ebcc93acd2ba73a7d9f6d"
+    },
+    {
+      "path": "skills-ref/tests/test_parser.py",
+      "git_blob_sha": "c1b9c4a1c7c14f55cffcdccfa5028eefb5f9ffd3",
+      "bytes": 4765,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/tests/test_parser.py",
+      "sha256": "362cc3be360e9a7b1bbe61d78cbd1ec2433971a6448eb7808c21f78f132285c2"
+    },
+    {
+      "path": "skills-ref/tests/test_prompt.py",
+      "git_blob_sha": "3173c5e7b31e129653c7c82fbb9f4be8a5ffde4f",
+      "bytes": 1713,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/tests/test_prompt.py",
+      "sha256": "f324cf101f21f5924618a14c48e4f79c6f93bc34895d159ceb171bee7197a419"
+    },
+    {
+      "path": "skills-ref/tests/test_validator.py",
+      "git_blob_sha": "3b5e89da7af4b5db2eb8aa74d35a5f7e2e3893c7",
+      "bytes": 7220,
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/skills-ref/tests/test_validator.py",
+      "sha256": "daafa296fffd05be21dbd451d93d81ea4155ab6386934a5a522c3483aee6a7e4"
+    }
+  ]
+}

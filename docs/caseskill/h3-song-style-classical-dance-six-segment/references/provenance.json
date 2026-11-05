@@ -1,0 +1,63 @@
+{
+  "case_id": "2026-09-song-style-classical-dance-six-segment",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "6b506f0c45ddc7ecf5ba5ee266b99e163e34e6d7d49827efb44d3bd4a3ab8264",
+      "bytes": 12527,
+      "lines": 142,
+      "git_blob_sha": "9c82e8c71cf560609789fadde850be9ab8436446",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-song-style-classical-dance-six-segment/README.md",
+      "reading_note": "全文142行：案例输入、六段窗口、双层节奏、技术高光、作者结果陈述与缺素材边界。"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "010f5d1db16cfb5dd9dfe3c8b765050c01571949ca8cca4442437dc5b4bd4626",
+      "bytes": 134285,
+      "lines": 2939,
+      "git_blob_sha": "c1b73a7a879bd5994b59100c5ae041fc457a85ec",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md",
+      "reading_note": "全文2939行：逐段英文执行正文，人物和环境权限、动力链、相机状态、S04竞争拍表、S05旧720度回指、S03/S05共享换腿及最终微动冲突。"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md",
+      "local_path": "references/source-prompt.zh-CN.md",
+      "sha256": "57065a52ed353280752c676f6b862d84b99667ded3ea66dae57e2c5bc5fabed9",
+      "bytes": 87307,
+      "lines": 1100,
+      "git_blob_sha": "b0d7bb62373528713b6731309f1a9fe7e5b18604",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md",
+      "reading_note": "全文1100行：全部中文译文和词汇释义，核对其沿用原稿、three-quarter旧译、S05回指与末段冻结范围；译文不作独立实验。"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "ffdfaf289f5158cdddd0107535fe832b083f15e7fea415d376ed4407b2995681",
+      "bytes": 21002,
+      "lines": 200,
+      "git_blob_sha": "f0fc45a5eb2026e9cbd06fc5b9a55ff3b20d264c",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md",
+      "reading_note": "全文200行：80项增补词汇及原文回读，重点区分状态与姿态、相机与人体停动、景别范围、力学比喻、正式术语和原唱／口型。"
+    },
+    {
+      "path": "docs/casereview/2026-09-song-style-classical-dance-six-segment.md",
+      "local_path": "references/source-review.md",
+      "sha256": "3a414f875b33dee2ea501979de4f6e430ff1568d0024a8840e21f4edfe115c49",
+      "bytes": 5156,
+      "lines": 47,
+      "git_blob_sha": "f8fb61a517c25582a9452dbb6ad8e735d97f204e",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-09-song-style-classical-dance-six-segment.md",
+      "reading_note": "全文47行：方法价值、接缝粒度、作者陈述证据边界及P0旧版残留／混合画幅契约缺失。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

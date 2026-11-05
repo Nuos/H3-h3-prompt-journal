@@ -1,0 +1,43 @@
+{
+  "case_id": "2026-10-four-subject-formation-choreography",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "fcdd6a8bea055e2a357007d0024381c7c23dccf1ca2f74eceabb2de26e2fe1c7",
+      "bytes": 9119,
+      "lines": 164,
+      "git_blob_sha": "13b9d82944302e6e9d1c3ed33da1738c3d5bf065",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-four-subject-formation-choreography/README.md",
+      "reading_note": "全文读取：14段总览、三机制、原视觉锚策略、自己象限规则和成功自述的证据范围。"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "2fdcf5cab127dbe3fdcf2a4991386b3bd31a2b08db04a0753f3715794d8ab481",
+      "bytes": 16205,
+      "lines": 148,
+      "git_blob_sha": "2ceabb516af03c306d58b2a74474838f37dfcdbc",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "reading_note": "全文读取：SEG10十部分完整正文、四主体资产、六镜头、22拍、穿越与层交换以及音频职责。"
+    },
+    {
+      "path": "docs/casereview/2026-10-four-subject-formation-choreography.md",
+      "local_path": "references/source-review.md",
+      "sha256": "5e444a9a79c711bb3c8b27a2b653ff4f164d7da3fa3f48f1053d66e129d502ad",
+      "bytes": 5373,
+      "lines": 55,
+      "git_blob_sha": "3579e2249169973dbcad5674050c761b24861afa",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-four-subject-formation-choreography.md",
+      "reading_note": "全文读取：队形冲突、跟随后退作用域、缺manifest与缺13段成稿，作为条件规则和完整性告知依据。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

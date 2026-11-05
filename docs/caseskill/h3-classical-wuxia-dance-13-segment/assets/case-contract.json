@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-classical-wuxia-dance-13-segment",
+  "skill_name": "h3-classical-wuxia-dance-13-segment",
+  "required_check_ids": [
+    "WX01",
+    "WX02",
+    "WX03",
+    "WX04",
+    "WX05",
+    "WX06",
+    "WX07",
+    "WX08",
+    "WX09",
+    "WX10"
+  ],
+  "checks": [
+    {
+      "id": "WX01",
+      "rule": "作品意图、音乐和编舞先于镜头；删除相机文字后动作仍应成立。",
+      "source": "methodology.md:11–29,178–191"
+    },
+    {
+      "id": "WX02",
+      "rule": "动作链包含准备、受力、展开、重音峰值、惯性和恢复；持续层不是所有身体部位始终移动。",
+      "source": "methodology.md:31–69"
+    },
+    {
+      "id": "WX03",
+      "rule": "母题通过质地、方向、幅度和先后变化贯穿作品；动作密度和技术预算不采用固定数量公式。",
+      "source": "methodology.md:61–102；prompt.md:265–271,476–481"
+    },
+    {
+      "id": "WX04",
+      "rule": "源窗口与局部时间分开，拍点／人声起止／剪辑点分别建事件，缺manifest不等于有实测精度。",
+      "source": "README.md:16–49；methodology.md:130–136；review:28,40–42"
+    },
+    {
+      "id": "WX05",
+      "rule": "S05的6.044和9.000不能标作6.950和9.633人声的入句时刻；允许提前动作，但应说明提前与对应事件。",
+      "source": "prompt.md:185–200；review:40"
+    },
+    {
+      "id": "WX06",
+      "rule": "图像权威随项目授权；歌词意象不增添物体，武器状态锁定要区分无武器、佩戴入鞘和实际持握。",
+      "source": "README.md:51–55；methodology.md:146–158；prompt.md:13,227,298–313"
+    },
+    {
+      "id": "WX07",
+      "rule": "摄影机说明真实位置与路径；每次切镜或移动必须提供支撑、线条、方向或音乐结构的新信息。",
+      "source": "methodology.md:104–128；prompt.md:104–109"
+    },
+    {
+      "id": "WX08",
+      "rule": "音乐首尾相连与身体接缝是两项检查；跨段连续必须有状态表，蒙太奇跳接必须明确许可。",
+      "source": "README.md:42–49；methodology.md:138–144；review:30,41"
+    },
+    {
+      "id": "WX09",
+      "rule": "无歌词、间奏和尾奏仍编排动作；最终收束以实际音频尾为目标，不把缺歌词当成静止指令。",
+      "source": "README.md:20,70；prompt.md:500–543"
+    },
+    {
+      "id": "WX10",
+      "rule": "成品时间戳只代表编排意图；按官方Ref2VA字段归一后，文本检查、音频核验和生成回归分别报告。",
+      "source": "methodology.md:170–176；prompt.md:540–543；review:32,42；references/h3-official.md"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "作品与参考契约",
+      "content": "舞种与能量曲线、剪辑模式、图像授权、武器分支及保持范围、音频最终使用策略。"
+    },
+    {
+      "name": "统一音乐事件表",
+      "content": "源文件、源起止、段长、局部拍点／人声起止／器乐窗／cut，来源及精度标签，提前动作与入句动作的对应关系。"
+    },
+    {
+      "name": "动作与接缝计划",
+      "content": "母题发展、每链动力过程、可见技术信息、镜头目的，以及连续边界的身体／道具／构图匹配表。"
+    },
+    {
+      "name": "逐段Ref2VA提示词与审计",
+      "content": "各自完整的官方六字段执行文本，末段器乐收束，已修复的文本冲突、仍缺媒体证据和待运行回归项。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

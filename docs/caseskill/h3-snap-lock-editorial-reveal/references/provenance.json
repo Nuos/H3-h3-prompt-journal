@@ -1,0 +1,63 @@
+{
+  "case_id": "2026-09-snap-lock-editorial-reveal",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "4dbe8f75fdb88738af500927d5fce3501b27d5de269faa36fd1aac9ce0b728b2",
+      "bytes": 9740,
+      "lines": 132,
+      "git_blob_sha": "75fa100fd4a1e954789545920279ba9f1c56b000",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-snap-lock-editorial-reveal/README.md",
+      "reading_note": "全文读取：采样误判、两态方法、原5.30秒时间预算及作者成片/反推自述。"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "fc2c5eea24fe28a714d921ad3a7ef77931911147641088e7079816cfcfb6edf6",
+      "bytes": 20295,
+      "lines": 571,
+      "git_blob_sha": "d92b6d24ebdf9ca88e48421fd349c0d905c97302",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-snap-lock-editorial-reveal/prompt.md",
+      "reading_note": "全文读取：571行英文执行稿、静态禁止项、短burst、三冲击、闭眼与两次roll逻辑。"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md",
+      "local_path": "references/source-prompt.zh-CN.md",
+      "sha256": "2db644dfd0e9a2d7f4ae963cd59ec03c1396271716af8f1292fb09f0b9f2cb56",
+      "bytes": 13761,
+      "lines": 278,
+      "git_blob_sha": "9af61b2d1f043927c61ae390add95847731bd8b5",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md",
+      "reading_note": "全文读取：278行中文教学改写及术语，发现其加减速/身体连接/附加音效不等同英文。"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "aee1575e8a8140ef0e92dac02e972c48d13d1d975989fe6b487e1bae788ad1bf",
+      "bytes": 10852,
+      "lines": 107,
+      "git_blob_sha": "35c9c1232d988f92c4145e6359876bc2ba05972f",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md",
+      "reading_note": "全文读取：50项词义/句法、相机动作主语、hard lock与freeze区别、角度/帧预算校读。"
+    },
+    {
+      "path": "docs/casereview/2026-09-snap-lock-editorial-reveal.md",
+      "local_path": "references/source-review.md",
+      "sha256": "f740ef6094436d4eea184a99cc935af30a74c1cc9358c795ed64ca69a723802c",
+      "bytes": 5157,
+      "lines": 50,
+      "git_blob_sha": "4d74c966fb40610f27c9ca008c31c135cf815320",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-09-snap-lock-editorial-reveal.md",
+      "reading_note": "全文读取：版本分歧、roll累积、极短冲击和源片机制证据边界。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-waterfront-solo-dance-two-segment",
+  "skill_name": "h3-waterfront-solo-dance-two-segment",
+  "required_check_ids": [
+    "WF-01",
+    "WF-02",
+    "WF-03",
+    "WF-04",
+    "WF-05",
+    "WF-06",
+    "WF-07",
+    "WF-08"
+  ],
+  "checks": [
+    {
+      "id": "WF-01",
+      "rule": "低阈值命中只是候选，单镜头结论需要逐帧证据；缺少原片时保持作者报告标记。",
+      "source": "README.md:14-22；review:26,32"
+    },
+    {
+      "id": "WF-02",
+      "rule": "局部拍点等于全局拍点减片段起点；在强拍切出的后段首拍为0，不能继续沿用全片首拍偏移。",
+      "source": "prompt.md:68-91；review:30,40"
+    },
+    {
+      "id": "WF-03",
+      "rule": "每条动作链必须给出可配对的入态、拍数/时长、出态；物理动量不能在分段处复位。",
+      "source": "README.md:28-30,45-47；prompt.md:43-47,79-89"
+    },
+    {
+      "id": "WF-04",
+      "rule": "参考图片的身份用途和精确首帧用途分别声明；接力状态优先于未被指定为首帧的静态人物姿势。",
+      "source": "prompt.md:62-80；review:41"
+    },
+    {
+      "id": "WF-05",
+      "rule": "最终停势覆盖持续呼吸层的范围和起始时刻必须显式设定，避免同时要求绝对静止与每拍微动。",
+      "source": "prompt.md:77,91-95；review:41"
+    },
+    {
+      "id": "WF-06",
+      "rule": "锁定正面全身机位是此类连续独舞方案的可选任务约束，不是全部H3片段的默认机位。",
+      "source": "README.md:38-40；prompt.md:49-50,97-98"
+    },
+    {
+      "id": "WF-07",
+      "rule": "首拍未到的引入和最终残余时长分别标注，不以整数小节假设覆盖全部时间线。",
+      "source": "README.md:26；prompt.md:91-92；review:40"
+    },
+    {
+      "id": "WF-08",
+      "rule": "舞蹈音轨1:1复用需要真实分段资产；人声未核实时不编造歌词锚点，原本机路径不能视为当前可用资产。",
+      "source": "prompt.md:3-6,114-119；review:32"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "切镜取证表",
+      "content": "候选时间、检测参数/版本、逐帧窗口、连续性观察、判定及证据状态。"
+    },
+    {
+      "name": "全局/局部音乐时间表",
+      "content": "BPM来源、首拍、拍长、小节长、片段全局区间、局部强拍与引入/尾段。"
+    },
+    {
+      "name": "动作接力状态表",
+      "content": "逐链入态—过程—出态、前段出口与后段入口、终止状态的生效时间。"
+    },
+    {
+      "name": "逐段H3提示词与提交清单",
+      "content": "官方模式正文、明确图像/音频绑定、时长与机位，另附文本Gate结果和仍待生成验证的项目。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

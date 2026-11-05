@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-09-song-style-classical-dance-six-segment",
+  "skill_name": "h3-song-style-classical-dance-six-segment",
+  "required_check_ids": [
+    "SG01",
+    "SG02",
+    "SG03",
+    "SG04",
+    "SG05",
+    "SG06",
+    "SG07",
+    "SG08",
+    "SG09",
+    "SG10"
+  ],
+  "checks": [
+    {
+      "id": "SG01",
+      "rule": "完整视觉参考与身份结构澄清参考权限分开，参考图不自动等于首帧或前段实际末态；歌词中的原文色词不构成新增视觉色彩指令。",
+      "source": "prompt.md:13–40,1932–1941,2343–2371；vocabulary-expanded.zh-CN.md:18–34；references/h3-official.md"
+    },
+    {
+      "id": "SG02",
+      "rule": "段内时间由源窗口换算，细拍、慢舞句和结构重音分层；使用唯一递增拍表，BPM不能替代未知相位或实测音频。",
+      "source": "README.md:58–93；prompt.md:1457–1461,2403–2428；vocabulary-expanded.zh-CN.md:74–90,188–190"
+    },
+    {
+      "id": "SG03",
+      "rule": "高光以主导机制和支撑／路径区分；承认S03与S05共享换腿子动作，删除S05第二Hero与不存在的720度历史回指。",
+      "source": "README.md:71–82；prompt.md:1132–1227,2150–2196,2911；vocabulary-expanded.zh-CN.md:184–186,196–200；review:38"
+    },
+    {
+      "id": "SG04",
+      "rule": "脚与重心驱动躯干、手腕和水袖，裙摆始终依附腰头并有材料滞后；衣料比喻与力学意图不是已验证物理模拟。",
+      "source": "README.md:44–50；prompt.md:420–532,2601–2650；vocabulary-expanded.zh-CN.md:36–52,92–126,166–170"
+    },
+    {
+      "id": "SG05",
+      "rule": "接缝要求左右明确的动态状态匹配，不能只用同一身份或“某只脚”证明连续；无生成末帧时仅声明计划目标。",
+      "source": "prompt.md:166–173,288–301,1821–1835,2323–2331；vocabulary-expanded.zh-CN.md:18–34,168；review:28"
+    },
+    {
+      "id": "SG06",
+      "rule": "前五段竖幅倾向与末段16:9必须有交付契约；新项目先选共同画幅，保留混合旧片时明示母版、留边／裁切与独立版本。",
+      "source": "README.md:7–11,58–69；prompt.md:2336–2342；review:39"
+    },
+    {
+      "id": "SG07",
+      "rule": "跟拍、短重构图和硬锁有明确区间；锁定相机时人体可继续；景别按真实身体覆盖，three-quarter为四分之三侧面。",
+      "source": "prompt.md:1880–1896,2651–2699；prompt.zh-CN.md:715,1057–1067；vocabulary-expanded.zh-CN.md:146–182"
+    },
+    {
+      "id": "SG08",
+      "rule": "持续舞句不等于禁止切镜，动作阶段不等于Shot；技术峰值先完整呈现，再让脸部构图完成情绪收束。",
+      "source": "prompt.md:188–193,1731–1804,2830–2853；README.md:95–100；references/h3-official.md"
+    },
+    {
+      "id": "SG09",
+      "rule": "结尾必须选相机硬锁且微动允许，或全画面冻结其一；原音完整复用与叠加拟音也要分别选择，不用一句绝对约束覆盖不同对象。",
+      "source": "prompt.md:2296–2321,2700–2784,2806–2829；prompt.zh-CN.md:1050–1078；vocabulary-expanded.zh-CN.md:192–194；references/h3-official.md"
+    },
+    {
+      "id": "SG10",
+      "rule": "原案Hero命名、六段结构和双层节奏属于案例编排；翻译与作者结果陈述不增加独立实验，文本检查不认证模型同步或连续性。",
+      "source": "README.md:125–138；vocabulary-expanded.zh-CN.md:196–200；review:26,30,40；references/h3-official.md"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "素材与交付契约",
+      "content": "人物／场景Subject及参考权限、服装结构边界、允许动作、共同画幅或混合画幅合成方案、音频最终使用策略。"
+    },
+    {
+      "name": "双层音乐与高光表",
+      "content": "每段源起止和局部事件、精确计算与显示精度、细拍／慢舞句／★◆的层级、高光主导变量、共享子机制及准备恢复预算。"
+    },
+    {
+      "name": "身体材料交接和摄影机计划",
+      "content": "左右明确的支撑与动作链、腰头至裙缘／腕至袖尾的延迟、段间目标状态表、跟拍／重构图／锁定区间、真实切镜及最终三个对象的停止条件。"
+    },
+    {
+      "name": "逐段Ref2VA与证据分层审计",
+      "content": "每段可独立提交的六字段英文正文，修订后的时间与旧回指清单，翻译术语修正，未核验音频相位／末帧／成片效果及下一步实际核验项。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

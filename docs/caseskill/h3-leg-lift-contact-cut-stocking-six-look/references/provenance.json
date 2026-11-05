@@ -1,0 +1,43 @@
+{
+  "case_id": "2026-10-leg-lift-contact-cut-stocking-six-look",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "e8b79275bdebce7596df0b6625c5a5a9bf1ef2c05c18e1abf1f29fb498f4a506",
+      "bytes": 4094,
+      "lines": 58,
+      "git_blob_sha": "d5787b1e34ad1ae88ed33f7441633a51a222f510",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+      "reading_note": "全文读取：触地触发、固定支撑腿、六次转换和5.17秒要求；识别零外貌说法与正文、视频可选范围。"
+    },
+    {
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "5bcea5bf820f4a1432bb6427ed2bd6fad85d26cccad891d2975153ea96dca0ed",
+      "bytes": 19122,
+      "lines": 759,
+      "git_blob_sha": "356034cad0dbf6e7b3e0f14b76debb325b8163f6",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+      "reading_note": "全文读取：759行参考分权、两腿支撑、六轮起抬/触地/保持、七状态、固定机位和音频条款。"
+    },
+    {
+      "path": "docs/casereview/2026-10-leg-lift-contact-cut-stocking-six-look.md",
+      "local_path": "references/source-review.md",
+      "sha256": "b623cbcd5375420b00a545951814a4a9e9c6e53ae5da46e9324ac32b30debe76",
+      "bytes": 5657,
+      "lines": 51,
+      "git_blob_sha": "e4b679169b8fd190920867bec67f05a38d4c71cb",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-leg-lift-contact-cut-stocking-six-look.md",
+      "reading_note": "全文读取：状态计数、尾段0.48秒缺口、帧级验收与固定机位/编辑语义问题。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

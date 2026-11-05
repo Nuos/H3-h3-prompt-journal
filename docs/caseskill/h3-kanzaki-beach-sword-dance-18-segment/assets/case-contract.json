@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+  "skill_name": "h3-kanzaki-beach-sword-dance-18-segment",
+  "required_check_ids": [
+    "KZ01",
+    "KZ02",
+    "KZ03",
+    "KZ04",
+    "KZ05",
+    "KZ06",
+    "KZ07",
+    "KZ08",
+    "KZ09",
+    "KZ10"
+  ],
+  "checks": [
+    {
+      "id": "KZ01",
+      "rule": "人物和场景的图像权限分别定义；固定现场与替换背景不能同时设为绝对权威。",
+      "source": "README.md:49–51；methodology.md:39–65,254–267"
+    },
+    {
+      "id": "KZ02",
+      "rule": "道具外观由参考继承，数量、持有人、位置和当前状态由时间表决定；后续状态覆盖参考图初始入鞘状态。",
+      "source": "README.md:53–61；methodology.md:132–171；prompt.md:224–240"
+    },
+    {
+      "id": "KZ03",
+      "rule": "原案S01和S02各自独立拔刀是已授权开场设计；应修S02前文／正文矛盾及S01两个拔出时间，而非擅自删除第二次。",
+      "source": "prompt.md:23,45,118,124,158,163,179–183；review:49"
+    },
+    {
+      "id": "KZ04",
+      "rule": "保留真实源窗和相位，不为整齐重切小节；BPM给间隔而不自动给每段首拍或人声时点。",
+      "source": "methodology.md:173–201；prompt.md:11–16,65–86,915–919"
+    },
+    {
+      "id": "KZ05",
+      "rule": "道具路径由脚步、重心、躯干及持握传递，峰值必须有制动和恢复；动作与镜头同时响应音乐。",
+      "source": "README.md:75–77；methodology.md:68–89,194–201"
+    },
+    {
+      "id": "KZ06",
+      "rule": "采用本案摄影政策时，一个主运镜至多一个辅助；数字角度要改成位置与路径，且摘要、动作行、相机段同步。",
+      "source": "methodology.md:93–130；prompt.md:130,191,374,616,917,1107；review:33,48"
+    },
+    {
+      "id": "KZ07",
+      "rule": "每段一镜到底与后期匹配是不同阶段；两段一组不要求精确同帧续接，也不授权内部暗切。",
+      "source": "README.md:63–65；methodology.md:233–252；prompt.md:45,120,134"
+    },
+    {
+      "id": "KZ08",
+      "rule": "场景连续指同一空间、海岸线与光源逻辑，不等于不同机位下海平线永远占同一屏幕坐标；同一反光桥接必须指同一可见对象。",
+      "source": "methodology.md:254–267；prompt.md:219,244,252,705,730,738"
+    },
+    {
+      "id": "KZ09",
+      "rule": "fully_copy表示完整最终音轨复用；新增环境声时必须改用混合保留方案，原案sole track加底声的冲突不可保留。",
+      "source": "README.md:10,85；prompt.md:103,111,141–145；references/h3-official.md"
+    },
+    {
+      "id": "KZ10",
+      "rule": "六字段齐全、一个Shot标签和作者勾选只能证明文本结构；重编官方类型、Subject职责与英语正文后仍需另行验证媒体和生成。",
+      "source": "prompt.md:47–62,101–145；methodology.md:269–337；review:29,35,50–51；references/h3-official.md"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "参考与状态配置",
+      "content": "人物／场景权限、道具外观来源、数量、解剖学握持、鞘的身体附着、段级初态和转换窗口、开场重述许可。"
+    },
+    {
+      "name": "音乐与段落设计表",
+      "content": "源起止、文件、局部时点与证据级别、视觉问题、动作链、能量位置、主运镜与辅助、可见信息优先级。"
+    },
+    {
+      "name": "独立Ref2VA执行文本",
+      "content": "逐段完整六字段、英语正文、单Shot连续路径、当前状态覆盖参考初态、统一音频策略，不依赖全局说明或上段上下文。"
+    },
+    {
+      "name": "后期桥接与双重审查记录",
+      "content": "反光／发丝／剑线等匹配候选，段内与后期边界；状态、时间、镜头、场景、声音和作品完成感的文本审计，另列生成待验证项。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

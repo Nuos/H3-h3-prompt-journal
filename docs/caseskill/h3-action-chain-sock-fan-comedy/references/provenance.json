@@ -1,0 +1,63 @@
+{
+  "case_id": "2026-09-action-chain-sock-fan-comedy",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "c2d6041235ad743caf143c8e0cdeb9487a65a9b35bf4a9dbc472aed6d1b11a7a",
+      "bytes": 12441,
+      "lines": 128,
+      "git_blob_sha": "9fc55df75cc6f0d0fdcee1812ae36bd8ffc46ac3",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-action-chain-sock-fan-comedy/README.md",
+      "reading_note": "完整阅读；身份表、25态总览、作者复盘及成片证据边界。"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt",
+      "local_path": "references/source-prompt.txt",
+      "sha256": "93acf96bbfc304a7d8fb7d8cf35dbef9780867ff03d9a1da5e1dd8a02b7808c9",
+      "bytes": 30627,
+      "lines": 624,
+      "git_blob_sha": "14d6577a94976b6fea29266c827d0f27ba0b4996",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt",
+      "reading_note": "完整阅读；25态、永久约束、音频标签和物理轨迹全文。"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt",
+      "local_path": "references/source-prompt.zh-CN.txt",
+      "sha256": "2b8623fabbff40976378af0a5ebb287704243f5bc9ee28714a28a20a64fba5c0",
+      "bytes": 30831,
+      "lines": 463,
+      "git_blob_sha": "2c480eba7377db6c36d26cba2b8c66f3ef46f92b",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt",
+      "reading_note": "完整阅读；全部状态和永久规则中文译注，核对错误主语。"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "fc1fb02f894e2eb314b62295871bb7de732fdc72b5d72d6b615443fc4443be07",
+      "bytes": 12096,
+      "lines": 111,
+      "git_blob_sha": "a991cc33afbf28ef65f819ac18bba8dbb8b6cfdf",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md",
+      "reading_note": "完整阅读；永久身份与动态状态、腕掌分工、错误主语和验证边界。"
+    },
+    {
+      "path": "docs/casereview/2026-09-action-chain-sock-fan-comedy.md",
+      "local_path": "references/source-review.md",
+      "sha256": "0a87f199dcd4bc1501203a6dd39bf779dfbf58736acd2de11c4ae4b2f40cb457",
+      "bytes": 5126,
+      "lines": 50,
+      "git_blob_sha": "6ce20ff0e4edee30f61c9aa779650e6f5b4b2e0e",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-09-action-chain-sock-fan-comedy.md",
+      "reading_note": "完整阅读；手部解剖绑定、主语修正、音头预算与阶段不变量缺口已落实。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

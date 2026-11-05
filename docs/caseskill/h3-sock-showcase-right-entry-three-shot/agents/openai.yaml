@@ -1,0 +1,4 @@
+interface:
+  display_name: "H3 右入单状态展示与硬切装配"
+  short_description: "编排H3 右入单状态展示与硬切装配，核对参考职责、时间与状态交接"
+  default_prompt: "使用 $h3-sock-showcase-right-entry-three-shot，根据我提供的素材与约束完成编排、提示词和逐项检查。"

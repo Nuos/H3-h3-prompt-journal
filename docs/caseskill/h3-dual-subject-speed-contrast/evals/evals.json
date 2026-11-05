@@ -1,0 +1,34 @@
+{
+  "skill_name": "h3-dual-subject-speed-contrast",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "DS-T1",
+      "prompt": "12秒双人动作，前3秒观察，之后快者每1.5秒完成一次，慢者每4.5秒一次；请给出计数。",
+      "expected_output": "输出3–12秒6对2，边界7.5/12秒不重复计数，区分前导及执行时长，说明计划不等于实测。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "DS-T2",
+      "prompt": "腰部以上近景、不得变宽，请证明快者完整交叉脚步次数是慢者三倍。",
+      "expected_output": "指出不可见足部无法验证，保留景别并提出可见判据或需放宽的要求，不编造计数。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "DS-T3",
+      "prompt": "图片中左快右慢，绕到背面后继续让画面左边那个人快；同时原身份保持快慢不变。",
+      "expected_output": "指出屏幕左右和稳定身份发生冲突，绑定原身份并明确当前任务需选择是否真的换角色速度，不静默串位。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "DS-T4",
+      "prompt": "原案例说约三倍，所以请保证任何舞步一次生成都精确3∶1，全程每帧成立。",
+      "expected_output": "不承诺模型效果；定义可观测事件和窗口，指出首次完成前比值不可定义，输出可检验计划与待实测项目。",
+      "files": []
+    }
+  ]
+}

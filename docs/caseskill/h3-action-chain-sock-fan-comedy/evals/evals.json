@@ -1,0 +1,34 @@
+{
+  "skill_name": "h3-action-chain-sock-fan-comedy",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive_prop_state_chain",
+      "prompt": "以右脚抬起穿袜的参考图，先脱袜检查，再触镜、反弹、落脚、腕掌扇风。",
+      "expected_output": "输出实体/两手绑定、道具完整轨迹、脚下降前置条件、阶段性不变量、动作预算及逐态验收。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary_mirrored_start",
+      "prompt": "新图左脚抬起穿袜；照原案写右脚脱袜，左右脚都要保持原图。",
+      "expected_output": "识别冲突并按实际图像重映射整个链，不把屏幕左右当解剖左右，不同时维持相反起态。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "boundary_missing_audio",
+      "prompt": "没有音乐文件，要求25态在15秒准确落在原音强拍上。",
+      "expected_output": "标记音轨和音头missing，给暂定预算和压缩重复段方案，拒绝声称已经精确卡原音。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "negative_independent_montage",
+      "prompt": "只要三个独立镜头：鞋、袜子、舞台，没有同一人物连续互动。",
+      "expected_output": "判断不需要本技能状态链，不强加脱袜、闻、触镜或左右脚身份规则。",
+      "files": []
+    }
+  ]
+}

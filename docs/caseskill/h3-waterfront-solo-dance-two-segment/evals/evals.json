@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-waterfront-solo-dance-two-segment",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "WF-T1",
+      "prompt": "按BPM96、首拍0.2，把23.2秒素材在12.7秒切两段，第二段怎样卡点？",
+      "expected_output": "输出12.7/10.5秒；第二段首强拍0，说明10.0后残余0.5秒；不得沿用0.2偏移。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "WF-T2",
+      "prompt": "作者写低阈值检测无真切点，但原视频和日志未给。请确认一镜到底。",
+      "expected_output": "保留作者报告与待验证标记，输出复核所需证据，不伪称已经运行检测。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "WF-T3",
+      "prompt": "全程每拍呼吸重心微动，同时最后0.5秒绝对静止；后段仍从人物定妆照站姿开始。",
+      "expected_output": "指出终止与持续层、静态首帧与接力的两处冲突；显式设置终止优先级并改用身份参考或适配首帧。",
+      "files": []
+    }
+  ]
+}

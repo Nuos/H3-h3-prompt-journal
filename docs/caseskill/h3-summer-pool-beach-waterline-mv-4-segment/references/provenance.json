@@ -1,0 +1,43 @@
+{
+  "case_id": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "4a9382a4562c88bd25afc0d8debcc6d31a2a40c172f0581bea6d4c4ad65588e7",
+      "bytes": 11195,
+      "lines": 146,
+      "git_blob_sha": "9940c805eee0e4f208100593745353d4b2efb9ab",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "reading_note": "完整四段时间、身份分权、特殊视点与切镜/阶段说明、实际输出边界。"
+    },
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "4ddcd492a10a451e124dba192db2c6608aae4a8e62ddbc601a424e5b46a303cd",
+      "bytes": 36790,
+      "lines": 283,
+      "git_blob_sha": "1c185e60e2e73a456369709fd0b302cac8fa3a5a",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+      "reading_note": "四段英文全文；场景动作接触、机位几何、音频、色调和衣物权限冲突。"
+    },
+    {
+      "path": "docs/casereview/2026-10-summer-pool-beach-waterline-mv-4-segment.md",
+      "local_path": "references/source-review.md",
+      "sha256": "be19e480fa2720c5085d825089a378adaebd0138b3273c093c14d1747ede5790",
+      "bytes": 5157,
+      "lines": 49,
+      "git_blob_sha": "fe0e20d65d31d54c7c38f9bdcbfcc4f6ef43b570",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-summer-pool-beach-waterline-mv-4-segment.md",
+      "reading_note": "全部评估；段内/段际计数、音乐证据不足和色调/服装/道具交接修复。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

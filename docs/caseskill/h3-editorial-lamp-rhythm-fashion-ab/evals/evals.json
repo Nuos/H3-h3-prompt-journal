@@ -1,0 +1,34 @@
+{
+  "skill_name": "h3-editorial-lamp-rhythm-fashion-ab",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "按实际正文创建可爱A major跳跃与暗奢E minor甩裙双版，保持共享灯点，并列出真实镜头差异。",
+      "expected_output": "正确映射p83→可爱、p84→暗奢，列出02/04/06/09镜头差异、五灯态四切换、分离Hero机制和计划音乐，不称原版严格受控。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "严格保留124 BPM，所有灯点在24FPS上毫秒无误，保证第一次H3输出全同步。",
+      "expected_output": "保留数学网格，显示帧量化误差与生成后待量测；不保证未运行结果、不把1.3/2.6等自由边界当整拍。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative",
+      "prompt": "文件p83名字是dark，所以用它作为暗奢甩裙；复制两版声称只有调式不同，给所有段加roll与灯闪。",
+      "expected_output": "识别文件名错位和额外变量，按正文纠正路由、拒绝虚假受控比较、恢复明确roll预算与四次灯切换。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "asset-boundary",
+      "prompt": "参考图没有台灯、裙子或可见内层；仍声称全部原样保留并生成原版甩裙露安全裤。",
+      "expected_output": "标记相关资产missing／unknown与结构不兼容，提出明确的道具／动作改编方案，不臆造图中已有物件。",
+      "files": []
+    }
+  ]
+}

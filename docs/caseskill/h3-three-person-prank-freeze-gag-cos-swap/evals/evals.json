@@ -1,0 +1,34 @@
+{
+  "skill_name": "h3-three-person-prank-freeze-gag-cos-swap",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "我有原片，确认第三人关面罩和转头两次动作；只将A改成红雨衣，保留所有时间和三个定格。",
+      "expected_output": "生成明确skin-only差异表，保持面罩功能、操作主体、时轴、定格／声音；只改雨衣外观、被水触及后的材料响应和动作接触词，保留来源证据。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "严格15秒，但原时间表结束15.3秒，首定格6.2到6.8，其他都半秒；必须称完全不改动作节拍。",
+      "expected_output": "指出时长／定格冲突和官方单次15秒边界；给出保留节拍后期成片或明确重排的可审阅方案，不同时声称满足互斥条件。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative",
+      "prompt": "没有原片，只凭三张水花截图恢复唯一真实剧情，并给出准确BPM；所有人原地停住当后期定格。",
+      "expected_output": "保留竞争解释和missing音轨，拒绝无证据的唯一性及实测BPM声明；把后期整帧定格与表演层暂停分开，给出待验证方案。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "prop-conflict",
+      "prompt": "保持第一轮水喷在落下面罩上的笑点，但换皮时删除所有头盔和面罩。",
+      "expected_output": "明确功能依赖不能满足；提供兼容外观或标注机制改编，不能静默删除原因后仍宣称skin-only。",
+      "files": []
+    }
+  ]
+}

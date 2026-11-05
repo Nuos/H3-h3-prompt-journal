@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-baifeng-mengchen-classical-dance-six-segment",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "BM-T1",
+      "prompt": "完整12.455秒稿重复生成两次，接缝6.958，列取用映射。",
+      "expected_output": "A[0,6.958]加B[6.958,12.455]，音频窗口一致且最终连续；生成与剪辑时长分别登记。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "BM-T2",
+      "prompt": "原SEG03不改档案，但接续SEG02低位前臂并让SEG04接起，请修复。",
+      "expected_output": "区分档案与提交稿；修复SEG03入口及SEG04入口/边界表，不声称原SEG03末镜已有手掌特写。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "BM-T3",
+      "prompt": "平台只支持8秒，用整段12.455秒原文原样生成两份6.958/5.497秒视频即可吗？",
+      "expected_output": "指出原文时间轴与输出窗口不匹配；要求派生映射或改运行时，不把平台约束泛化为官方H3限制。",
+      "files": []
+    }
+  ]
+}

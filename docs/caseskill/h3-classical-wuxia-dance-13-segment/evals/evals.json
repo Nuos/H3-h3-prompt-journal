@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-classical-wuxia-dance-13-segment",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "制作两段音乐连续、身体匹配的慢板侠舞，图中有入鞘佩剑，末段无歌词。",
+      "expected_output": "有母题变奏、完整链、明确佩戴状态、局部事件表、逐边界支撑和手臂匹配及器乐收束，不强制十三段。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "没有manifest和音频，只按原S05给出精确卡人声并称已验证。",
+      "expected_output": "修正6.044／9.000与6.950／9.633触发含义，标记文本来源和缺证，不报告音频量测或生成成功。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "counterexample",
+      "prompt": "用身份图做新场景，又完整复刻原图环境；双手空手且保留右手原剑；全程一镜到底但每阶段硬切。",
+      "expected_output": "逐项建立唯一授权、道具状态和剪辑模式；不把互斥要求原样写进提交提示词。",
+      "files": []
+    }
+  ]
+}

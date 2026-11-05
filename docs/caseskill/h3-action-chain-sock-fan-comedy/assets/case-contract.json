@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-09-action-chain-sock-fan-comedy",
+  "skill_name": "h3-action-chain-sock-fan-comedy",
+  "required_check_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "checks": [
+    {
+      "id": "S1",
+      "rule": "身份标签永久，支撑、穿戴和位置是随阶段变化的状态；左右采用人物解剖学坐标。",
+      "source": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt:19–44"
+    },
+    {
+      "id": "S2",
+      "rule": "上一态结束必须满足下一态前置条件；道具从穿戴、手持到飞行的归属变化必须可追踪。",
+      "source": "case-studies/2026-09-action-chain-sock-fan-comedy/README.md:34–57"
+    },
+    {
+      "id": "S3",
+      "rule": "将两手角色绑定到具体解剖学手，持物→投掷→扇风是同一只手，另一只手保持捂嘴职责。",
+      "source": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt:484–499；docs/casereview/2026-09-action-chain-sock-fan-comedy.md:27,41"
+    },
+    {
+      "id": "S4",
+      "rule": "释放先于飞行，触镜先于反弹，下落开始后才允许抬起脚下降；不能用同时发生省略因果。",
+      "source": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt:187–266"
+    },
+    {
+      "id": "S5",
+      "rule": "扇风阶段保持近端肩臂肘前臂总体稳定，只让腕掌产生主要横摆；允许后来下身有独立节奏。",
+      "source": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt:300–426"
+    },
+    {
+      "id": "S6",
+      "rule": "支撑脚不移动只适用于单腿支撑阶段，不能与后续该脚tap同时写成全程禁令。",
+      "source": "docs/casereview/2026-09-action-chain-sock-fan-comedy.md:41"
+    },
+    {
+      "id": "S7",
+      "rule": "STATE 8 的看物主体必须是人物与眼睛，不是持物的手。",
+      "source": "case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md:107"
+    },
+    {
+      "id": "S8",
+      "rule": "抽象重音标签必须有实际时刻、持续预算和容差才构成可验收音乐计划；无音轨不得虚构。",
+      "source": "docs/casereview/2026-09-action-chain-sock-fan-comedy.md:29,39–40"
+    },
+    {
+      "id": "S9",
+      "rule": "25个自然语言状态和作者成功自述不等于已通过物理、同步或稳定性验证。",
+      "source": "case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md:111"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "实体和阶段不变量表",
+      "content": "解剖学左右、手部职责、道具归属、支撑状态、穿戴状态及各规则生效区间。"
+    },
+    {
+      "name": "动作状态表",
+      "content": "每态前提、活动/保持部位、动作、结果、下一态接口和不允许并发的动作。"
+    },
+    {
+      "name": "音频事件与片段计划",
+      "content": "实际或missing的音头、动作时间预算、容差、重复段降级、生成切片和跨片末态。"
+    },
+    {
+      "name": "正式正文及验收记录",
+      "content": "可用H3结构的正文和逐态人工审片清单，明确计划检查与未完成的媒体验证。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

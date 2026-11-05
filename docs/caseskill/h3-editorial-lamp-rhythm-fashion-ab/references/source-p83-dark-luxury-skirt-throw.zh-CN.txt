@@ -1,0 +1,370 @@
+# p83 — 15 秒高时尚编辑广告逐段翻译
+
+> 对应原文件：`p83-dark-luxury-skirt-throw.txt`。本文件按原始语义段落/动作段落顺序处理：先给出关键词、术语、概念（IPA、词性缩写、简体中文释义），再给出整段简体中文翻译。基础词汇、介词、冠词、数词不重复释义。原始英文文件保持不变。
+
+## 总任务
+
+**关键词与术语：**
+- high-fashion /ˌhaɪ ˈfæʃən/ adj.：高级时尚的
+- editorial fashion film /ˌedɪˈtɔːriəl ˈfæʃən fɪlm/ n. phr.：编辑类时尚短片
+- musical timeline /ˈmjuːzɪkəl ˈtaɪmlaɪn/ n. phr.：音乐时间轴；所有动作和剪辑依附的节奏结构
+
+**整段翻译：**  
+生成一支 15 秒高时尚编辑短片，整支影片完全由一条俏皮、优雅的音乐时间轴驱动。
+
+---
+
+## REFERENCE AUTHORITY｜参考权威
+
+**关键词与术语：**
+- sole visual authority /soʊl ˈvɪʒuəl əˈθɔːrəti/ n. phr.：唯一视觉权威
+- physical environment /ˈfɪzɪkəl ɪnˈvaɪrənmənt/ n. phr.：完整物理环境
+- skirt construction /skɜːrt kənˈstrʌkʃən/ n. phr.：裙装结构
+- opaque /oʊˈpeɪk/ adj.：不透明的
+- fitted /ˈfɪtɪd/ adj.：贴身合体的
+- underlayer /ˈʌndərˌleɪər/ n.：内层服装
+- set dressing /set ˈdresɪŋ/ n.：场景陈设
+- exposure /ɪkˈspoʊʒər/ n.：曝光
+- color grade /ˈkʌlər ɡreɪd/ n. phr.：调色
+- rhythmic anchor /ˈrɪðmɪk ˈæŋkər/ n. phr.：节奏视觉锚点
+
+**整段翻译：**  
+使用 <Picture 1> 作为成年女主与完整物理环境的**唯一视觉权威**。必须精确保留角色身份、脸、头发、身体比例、肤色、整套服装、鞋、全部配饰、裙装结构、裙下既有的不透明贴身舞蹈安全短裤、现有台灯、台灯位置、房间几何、家具、地面、墙面、表面材质、布景陈设、光线方向、曝光、调色、对比度以及真实摄影质感。不得重新设计、重新解释、重新造型、移动位置、替换、增删任何角色或环境元素；不得增加新道具、新台灯，不得移动现有台灯，也不得重新设计房间。
+
+Picture 1 中现有台灯是贯穿影片反复出现的视觉与节奏锚点。舞蹈安全短裤是全片**必须存在**的不透明贴身内层，始终保持不透明、贴合、稳固且不改变。最终跳跃可以因正常服装运动而清晰看到这条既有安全短裤，但短裤绝不能消失、透明、变形、滑脱或被替换。最终揭示必须始终属于完整着装的时尚表达，绝不能成为裸体或内衣暴露。
+
+---
+
+## VISUAL CONCEPT｜视觉概念
+
+**关键词与术语：**
+- conventional /kənˈvenʃənəl/ adj.：常规的
+- differentiated /ˌdɪfəˈrenʃieɪtɪd/ adj.：彼此明显区分的
+- body composition /ˈbɑːdi ˌkɑːmpəˈzɪʃən/ n. phr.：身体构图
+- weight shift /weɪt ʃɪft/ n. phr.：重心转移
+- graphic arm shape /ˈɡræfɪk ɑːrm ʃeɪp/ n. phr.：图形化手臂线条
+- crouching /ˈkraʊtʃɪŋ/ n.：屈膝下沉
+- editorial /ˌedɪˈtɔːriəl/ adj.：编辑摄影式的；时尚杂志视觉语言的
+
+**整段翻译：**  
+这不是常规舞蹈视频，而是一支由明显不同的身体构图组成的可爱、优雅、高时尚编辑态度片。整体情绪应当俏皮、迷人、清新、轻盈、自信、时髦、精准，并带一点恶作剧感。角色是成年专业时尚表演者。
+
+“可爱感”来自小而精准的重心移动、干净脚位、轻微歪头、快速肩部重音、图形化手臂形状、紧凑下蹲、轻盈弹性、俏皮眼神、布料运动，以及“受控时尚摆姿”与“突然高能动作”之间的反差。不得把角色幼态化，不得使用夸张卡通表演、动漫表情或过度 kawaii 手势；整体必须建立在真实成年时尚摄影基础上。性感只能是克制、编辑式的，而不是直接裸露或明确情色。
+
+绝不能让人物胸口正对镜头直接向摄影机弯腰，也不能创建让胸部成为视觉主体的正面下弯构图。每当躯干降低时，人物必须保持侧面、后侧三分之四或强侧三分之四方向。人脸始终可识别，并保持自然表情。
+
+---
+
+## MUSICAL DRIVE — NEW CUTE VERSION｜音乐驱动——新版可爱风
+
+**关键词与术语：**
+- non-diegetic music /ˌnɑːn daɪəˈdʒetɪk ˈmjuːzɪk/ n.：非场景内音乐；配乐
+- electro-pop /ɪˈlektroʊ pɑːp/ n.：电子流行
+- time signature /ˈtaɪm ˌsɪɡnətʃər/ n.：拍号
+- bar /bɑːr/ n.：小节
+- gated kick /ˈɡeɪtɪd kɪk/ n. phr.：门限处理的底鼓
+- bass pulse /beɪs pʌls/ n. phr.：低音脉冲
+- hi-hat /ˈhaɪ hæt/ n.：踩镲
+- mallet pluck /ˈmælət plʌk/ n. phr.：槌击/拨奏式亮音
+- pizzicato /ˌpɪtsɪˈkɑːtoʊ/ n.：拨弦奏法
+- reverse swell /rɪˈvɜːrs swel/ n. phr.：反向渐强
+- riser /ˈraɪzər/ n.：上升过渡音效
+- drone /droʊn/ n.：持续低频铺底
+- rhythmic stutter /ˈrɪðmɪk ˈstʌtər/ n. phr.：节奏断续效果
+
+**整段翻译：**  
+非场景内配乐采用“俏皮奢华高时尚电子流行编辑”风格。情绪：可爱、明亮、优雅、有节奏、略带恶作剧感、制作高级。BPM 124，4/4 拍，A 大调，总时长严格 15.0 秒，音乐必须是一条不中断的连续线。每拍约 0.484 秒，每小节约 1.936 秒；使用 7 个完整小节，再加 3 拍最终 Hero 尾段。
+
+新版曲目必须明显比“暗黑奢华电子”更轻、更可爱。核心配器包括：紧但柔和的底鼓、圆润俏皮的低音脉冲、清脆轻踩镲、明亮槌击拨奏、小型铃声重音、短促闪亮合成器音、轻微 pizzicato 式电子音、细小拍手重音、反向渐强、短俏皮 riser、干净低频冲击和轻微节奏断续。避免暗黑不祥 drone、沉重电影低频、攻击性工业打击、恐怖质感、厚重 pad、人声、歌词与歌唱。
+
+音乐应像昂贵时尚广告，但带清晰俏皮人格。音乐重音应让人联想到：step、tap、turn、pause、bounce、spark、lift、final jump。节奏密度必须足够稀疏，使人物物理动作、鞋底接触、布料运动和台灯切换都能分别被清楚感知。
+
+---
+
+## FIVE MUSICAL CHAPTERS｜五个音乐章节
+
+**关键词与术语：**
+- chapter /ˈtʃæptər/ n.：章节
+- suspended anticipation /səˈspendɪd ænˌtɪsəˈpeɪʃən/ n. phr.：悬停式期待
+- downbeat /ˈdaʊnbiːt/ n.：强拍；小节第一拍
+- flicker /ˈflɪkər/ v./n.：闪烁
+
+**整段翻译：**  
+音乐分成五章：A 章 0.000–3.871，为俏皮身体节奏；B 章 3.871–7.742，台灯关闭、图形化剪影；C 章 7.742–11.613，台灯开启、更明亮俏皮的能量；D 章 11.613–13.548，台灯关闭、悬停式期待；E 章 13.548–15.000，台灯开启并释放最终跳跃 Hero 冲击。
+
+精确灯光节奏：0.000 台灯 ON；3.871 OFF；7.742 ON；11.613 OFF；13.548 ON。每一次台灯状态变化都必须精确落在音乐 downbeat。禁止随机切换、渐变熄灭、闪烁、改色以及额外光源。
+
+---
+
+## EDITORIAL CAMERA SYSTEM｜编辑摄影机系统
+
+**关键词与术语：**
+- discrete composition /dɪˈskriːt ˌkɑːmpəˈzɪʃən/ n. phr.：离散摄影构图
+- compressed telephoto /kəmˈprest ˈteləfoʊtoʊ/ n. phr.：长焦压缩
+- lateral tracking /ˈlætərəl ˈtrækɪŋ/ n. phr.：横向跟拍
+- reverse tracking /rɪˈvɜːrs ˈtrækɪŋ/ n. phr.：反向跟拍
+- dolly /ˈdɑːli/ n.：轨道推拉摄影
+- rack focus /ræk ˈfoʊkəs/ n.：拉焦
+- occlusion /əˈkluːʒən/ n.：遮挡
+- Dutch angle /dʌtʃ ˈæŋɡəl/ n.：荷兰角；倾斜画面
+- ROLL /roʊl/ n.：摄影机绕光轴滚转
+- hard brake /hɑːrd breɪk/ n. phr.：硬刹停；突然完全停止运动
+
+**整段翻译：**  
+摄影机要像一名响应音乐的专业时尚摄影师。不要使用一条连续摄影机运动，而要创建彼此离散的摄影构图；每个摄影机状态都必须由不同的身体动作驱动。可以使用长焦压缩、中近景/中全景、短横向跟拍、短反向跟拍、快速重新构图、短 dolly、拉焦、肩部遮挡、发丝边缘擦镜、短弧形运镜、受控 ROLL、短 Dutch-angle 修正、垂直升降、快速后拉以及短暂完全静止。
+
+ROLL 只能选择性使用，不能持续倾斜或旋转摄影机，不能绕房间轨道式转圈，也不能做 360° roll。每次 roll 都必须短促、受控，并严格绑定某一个动作重音：MOMENT 01 重心转移时短顺时针 roll；MOMENT 03 侧向深蹲时短逆时针 roll；MOMENT 05 定向脚部移动时短顺时针 roll；MOMENT 07 静止前最后一个动力重音时极短 roll；MOMENT 08 和 09 保持水平。每次 roll 后地平线必须恢复，摄影技巧绝不能比人物更抢眼。
+
+禁止俯视、贴地广角、极端鱼眼、持续环绕、无休止 zoom 和模板化慢推。
+
+---
+
+## BODY / MOVEMENT LANGUAGE｜身体 / 动作语言
+
+**关键词与术语：**
+- body architecture /ˈbɑːdi ˈɑːrkɪtektʃər/ n. phr.：身体结构构图
+- pelvic response /ˈpelvɪk rɪˈspɑːns/ n. phr.：骨盆响应
+- torso counterbalance /ˈtɔːrsoʊ ˈkaʊntərˌbæləns/ n. phr.：躯干反向平衡
+- shoulder articulation /ˈʃoʊldər ɑːrˌtɪkjəˈleɪʃən/ n. phr.：肩部关节表达
+- initiation /ɪˌnɪʃiˈeɪʃən/ n.：动作启动
+- brake /breɪk/ n.：刹停
+- contrapposto /ˌkɑːntrəˈpɑːstoʊ/ n.：对立式站姿
+
+**整段翻译：**  
+每一个动作必须具有不同的身体结构。采用真实身体力学链：支撑脚 → 重心转移 → 骨盆响应 → 躯干反向平衡 → 肩部关节变化 → 手臂伸展 → 手部终点。每个动作都包含 `INITIATION → TRAVEL → ACCENT → BRAKE → RELEASE`。动作之间禁止回到中性站姿；禁止重复相同身体形状、contrapposto、髋摆、甩发、向镜头走、原地转、摸头发、相同腿部动作或相同手臂几何。每一个动作都应该像一张完全不同的时尚照片“活了起来”。
+
+---
+
+## [0.000–1.300] MOMENT 01 — TOE LIFT / REVERSE WEIGHT SHIFT｜提踵 / 反向重心转移
+
+**关键词与术语：**
+- heel lift /hiːl lɪft/ n. phr.：提踵
+- ribcage /ˈrɪbkeɪdʒ/ n.：胸廓
+- three-quarter side /ˌθriː ˈkwɔːrtər saɪd/ n. phr.：三分之四侧面
+- fashion stillness /ˈfæʃən ˈstɪlnəs/ n. phr.：时尚摄影式静止
+
+**整段翻译：**  
+直接从 <Picture 1> 开始。上半身相对平静，支撑脚牢固踩地，另一侧脚跟轻提；重心通过骨盆向后移动，胸廓保持受控，肩膀只做细微反向调整。一只手臂向身体后方斜伸，另一只手靠近现有服装。人物给镜头一个极轻、受控的眼神重音。动作应轻巧俏皮，而非戏剧化。
+
+摄影机从三分之四侧面的中全景开始，以短横移跟随向后重心转移；音乐重音处加入极短顺时针 ROLL，随后立刻恢复水平。约 1.0 秒时，提起的脚跟落地，重心转移完成，手臂到达终点；摄影机硬刹、身体硬刹，形成短暂时尚静止。
+
+---
+
+## [1.300–2.600] MOMENT 02 — HEAD TILT / ELBOW FRAME｜歪头 / 肘部构图
+
+**关键词与术语：**
+- graphic frame /ˈɡræfɪk freɪm/ n. phr.：图形化框架
+- focal compression /ˈfoʊkəl kəmˈpreʃən/ n. phr.：焦段压缩
+- pluck /plʌk/ n.：拨奏/短促亮音
+
+**整段翻译：**  
+创建一个与上一动作完全不同的上半身构图。一侧肘部向外抬起，前臂在头旁形成干净的图形框，但不能遮脸；头轻微向肘部相反方向倾斜，另一侧肩膀略微下沉，躯干保持直立。人物给出小幅、自信半笑或柔和俏皮表情，禁止夸张面部表演。
+
+摄影机从侧面移向前侧三分之四，以短焦段压缩变化代替大幅物理移动，并做前景前臂 → 双眼的拉焦。明亮 pluck 出现时，肘部到达最终图形位置，头完成轻微倾斜，随后 HARD BRAKE。本段不使用 roll，最终观感应像时尚肖像，而不是普通舞步。
+
+---
+
+## [2.600–3.871] MOMENT 03 — SIDE-FACING SQUAT / LONG LEG LINE｜侧向深蹲 / 长腿线
+
+**关键词与术语：**
+- center of gravity /ˈsentər əv ˈɡrævəti/ n. phr.：重心
+- side profile /saɪd ˈproʊfaɪl/ n. phr.：侧面轮廓
+- counterbalance /ˈkaʊntərˌbæləns/ v.：反向平衡
+- sub hit /sʌb hɪt/ n. phr.：低频重击
+- editorial punctuation /ˌedɪˈtɔːriəl ˌpʌŋktʃuˈeɪʃən/ n. phr.：编辑节奏标点
+
+**整段翻译：**  
+进入清晰不同的侧向深蹲。通过弯曲支撑膝降低重心，髋部向下，但躯干始终提起；人物保持对摄影机的强侧面方向，胸部绝不正对镜头。另一条腿斜向外伸，形成长而干净的时尚腿线；一只手沿现有裙子外缘下移，另一只手臂后伸做反向平衡。动作路径为：站立 → 下沉 → 深而受控的侧蹲 → 短暂静止。不得变成地面姿态，不得胸口前倾镜头，也不得过度分腿；裙子自然随身体下降。
+
+摄影机随髋部向下跟随，保持中全景；最低点做一次短逆时针 ROLL，立即恢复地平线。音乐低频 sub hit 时，伸出腿完成斜线，支撑膝稳定，随后摄影机和身体双 HARD BRAKE。精确在 3.871 秒，TABLE LAMP → OFF；这一开关成为第一处主要编辑标点。
+
+---
+
+## [3.871–5.806] MOMENT 04 — RISE / SHOULDER PEEK｜起身 / 越肩回看
+
+**关键词与术语：**
+- rear three-quarter /rɪr ˌθriː ˈkwɔːrtər/ n.：后侧三分之四
+- shoulder occlusion /ˈʃoʊldər əˈkluːʒən/ n. phr.：肩部遮挡
+- eye line /aɪ laɪn/ n. phr.：视线方向
+
+**整段翻译：**  
+从 MOMENT 03 的低位开始，通过支撑脚起身：髋先上升，躯干跟随，伸出的腿收回到身体下方。上升过程中身体转入后侧三分之四方向，后肩更靠近摄影机，人物短暂越肩看向镜头。一只手臂垂直下落，另一只在躯干上形成斜线；这不能重复 MOMENT 03，重点改为背部剪影、肩线、颈部和眼神。
+
+摄影机从肩后开始，横向并向上跟随；允许肩膀短暂遮挡镜头。脸重新出现时拉焦“肩缘 → 眼睛”。只有需要时才做极短逆时针摄影机修正，不得持续 roll。音乐重音处肩部锁定，CAMERA HARD BRAKE；台灯保持 OFF。
+
+---
+
+## [5.806–7.742] MOMENT 05 — LATERAL STEP / TOE POINT｜横向步 / 脚尖点地
+
+**关键词与术语：**
+- lateral step /ˈlætərəl step/ n.：横向移动步
+- toe point /toʊ pɔɪnt/ n. phr.：脚尖点地造型
+- directional travel /dəˈrekʃənəl ˈtrævəl/ n. phr.：方向性位移
+
+**整段翻译：**  
+进入完全不同的动作：人物做一个小而受控的横向步，支撑脚向侧面转移重心，另一条腿轻轻向侧面伸出，以清晰脚尖点地结束。骨盆大致稳定，躯干直立，一只手臂斜向外打开，另一只更靠近躯干，形成干净俏皮的时尚剪影。本动作强调方向位移、脚位与精准 toe point。不要变成扫腿、踢腿、旋转，也不要重复蹲姿结构；裙子只做短促左右布料响应。
+
+摄影机采用中全景侧面，跟随横移；脚尖点地重音处做短顺时针 ROLL，立即恢复水平，并在脚尖完成时精确停机。7.742 秒 TABLE LAMP → ON，房间立即恢复参考图光线。
+
+---
+
+## [7.742–9.677] MOMENT 06 — DIAGONAL REACH / LIGHT BOUNCE｜斜向伸展 / 轻弹
+
+**关键词与术语：**
+- bounce /baʊns/ n.：轻弹
+- grounded /ˈɡraʊndɪd/ adj.：脚不离地的
+- vertical rise /ˈvɜːrtɪkəl raɪz/ n. phr.：摄影机垂直上升
+
+**整段翻译：**  
+创建更明亮、更俏皮的上半身时刻。人物通过踝与膝做小幅受控上弹，但这**不是跳跃**，双脚始终着地。一只手臂斜向上伸，另一只向下外伸，肩线形成开放对角；头短暂跟随抬高手，然后视线回镜头。动作活泼可爱但仍成熟精致。
+
+摄影机从抬起手附近开始，沿“手 → 前臂 → 肩 → 颈 → 脸”跟随，并做受控垂直上升。不使用 roll。明亮音乐重音处抬高手到最高点，轻弹结束，HARD BRAKE，人物直接看镜头。
+
+---
+
+## [9.677–11.613] MOMENT 07 — QUICK KNEE TAP / SHOULDER ACCENT｜快速提膝 / 肩部重音
+
+**关键词与术语：**
+- compact knee lift /kəmˈpækt niː lɪft/ n. phr.：紧凑提膝
+- asymmetric /ˌeɪsɪˈmetrɪk/ adj.：不对称的
+- percussive /pərˈkʌsɪv/ adj.：打击乐式、短促有冲击的
+- hi-hat burst /ˈhaɪ hæt bɜːrst/ n. phr.：踩镲快速连击
+
+**整段翻译：**  
+创建又一个明确不同的动作：人物快速做紧凑提膝，膝盖略向前、向内，但不能变成踢腿；支撑腿吸收重量。同一瞬间，一侧肩膀锐利后打，另一侧肩略向前，双臂形成紧凑不对称形态。身体加速度使裙子产生一次小布料 snap。动作短、俏皮、打击乐式；不得像 MOMENT 03 的蹲，也不得像 MOMENT 05 横移，更不得像最终跳跃。
+
+摄影机先短暂跟下半身，再快速向上 reframe 抓脸。最强重音处做一次极短、受控顺时针 ROLL，随后立即回正。10.645 是 SUB HIT，11.129 是快速 hi-hat burst；膝盖收回，肩回到最终受控位置。精确 11.613 秒，TABLE LAMP → OFF。
+
+---
+
+## [11.613–12.250] MOMENT 08 — TEMPORAL VACUUM / STILL IMAGE｜时间真空 / 静止画面
+
+**关键词与术语：**
+- temporal vacuum /ˈtempərəl ˈvækjuːm/ n. phr.：时间真空；节奏突然稀疏形成的停顿
+- micro-motion /ˈmaɪkroʊ ˈmoʊʃən/ n.：微运动
+- parallax /ˈpærəlæks/ n.：视差
+- rhythmic density /ˈrɪðmɪk ˈdensəti/ n. phr.：节奏密度
+
+**整段翻译：**  
+台灯 OFF 后，音乐突然变稀疏，人物几乎完全静止，不引入新姿态。头略转，一条腿在前，两臂分开到足以保持清楚剪影。只保留自然微运动：细微呼吸、少量发丝运动、配饰轻动和布料缓慢 settling。
+
+摄影机几乎完全静止，地平线保持水平，只允许极小前向视差；禁止 roll、zoom、orbit、reframe。由于音乐暂时移除了节奏密度，画面应产生悬停感，但不能真正使用慢动作。
+
+---
+
+## [12.250–13.548] MOMENT 09 — JUMP PRELOAD / ARM SWING PREPARATION｜跳跃预载 / 手臂摆动准备
+
+**关键词与术语：**
+- preload /ˈpriːloʊd/ n.：预载；爆发动作前压缩蓄力
+- momentum /moʊˈmentəm/ n.：动量
+- anticipation /ænˌtɪsəˈpeɪʃən/ n.：预期张力
+- full-body-ready composition /ˌfʊl ˈbɑːdi ˈredi ˌkɑːmpəˈzɪʃən/ n. phr.：为完整全身动作准备的构图
+
+**整段翻译：**  
+这是最终跳跃的准备，禁止提前起跳。人物保持直立和轻微侧三分之四方向，双脚踩地，膝盖压缩，髋略降，双臂自然向**后**摆形成短暂蓄力，为向上跳跃制造动量。躯干保持提起，头部稳定，不胸口前弯，不提前打开裙子，手也不触碰或操控裙摆。
+
+动作链：settle → 轻微屈膝 → 双臂向后扫 → 身体压缩 → 保持 preload。裙子自然闭合，此阶段不透明贴身安全短裤仍完全被遮盖。
+
+摄影机从中全景开始，略向后移动到适合完整全身跳跃的构图，在头顶上方留足垂直空间，机位约胸部高度；禁止贴地角度和 roll。约 13.300 秒，音乐 riser 达到最大期待值，膝继续压缩、双臂略在身体后方蓄力，身体短暂停顿，摄影机完全准备好。精确 13.548 秒，TABLE LAMP → ON，MOMENT 10 立即开始。
+
+---
+
+## [13.548–15.0] MOMENT 10 — TWO-HAND HIGH JUMP / BACK-FOLDED FEET HERO｜双手高举跳跃 / 双脚向后并拢 Hero
+
+**关键词与术语：**
+- airborne /ˈerbɔːrn/ adj.：腾空的
+- back-folded /bæk ˈfoʊldɪd/ adj.：向后折叠的
+- apex /ˈeɪpeks/ n.：腾空最高点
+- inertia /ɪˈnɜːrʃə/ n.：惯性
+- bullet-time feel /ˈbʊlɪt taɪm fiːl/ n. phr.：子弹时间式观感；峰值处时间密度被拉长的感觉
+- central axis /ˈsentrəl ˈæksɪs/ n. phr.：中心稳定轴
+
+**整段翻译：**  
+在**精确音乐冲击点**，TABLE LAMP → ON，这是全片最亮的视觉标点；同一瞬间，人物完成全片最大能量动作。最终动作不是打开裙子的手势，而是一个有力量、愉快的 FASHION JUMP。
+
+动作链严格为：`KNEE DRIVE → ARM SWING → UPWARD JUMP → BOTH HANDS HIGH ABOVE HEAD → BOTH LOWER LEGS FOLD BACK TOGETHER IN THE AIR → SKIRT LIFTS NATURALLY FROM THE JUMP → OPAQUE SAFETY SHORTS BECOME CLEARLY VISIBLE → AIRBORNE HERO POSE → LANDING → FABRIC SETTLE → CAMERA LOCK`。
+
+人物通过双腿强力向上发力，双臂向上摆。跳跃最高点时，双手高举过头，形成长 V 形上伸剪影；同时双膝自然向后弯，两条小腿一起向后折，双脚保持彼此靠近，在身体后方读成一个紧凑成对形状。双腿不能向两侧分开，脚不能踢向镜头，也不要夸张杂技姿势。上身在空中保持直立，头稳定，表情略微变得更明亮、更俏皮。
+
+裙子只因真实向上跳跃和惯性自然抬起、离开腿部，抬升幅度足以清楚看见**已有的不透明贴身舞蹈安全短裤**。这一揭示必须来自跳跃和裙摆抬升，禁止用手拉开裙子、主动暴露短裤、制造透明布料或走光。安全短裤继续不透明、贴身、稳固。这始终是完整着装的时尚跳跃。视觉核心是：`HIGH ARMS + COMPACT BACK-FOLDED FEET + AIRBORNE BODY + LIFTED SKIRT + OPAQUE SAFETY SHORTS`。
+
+摄影机在起跳前保持中全景。人物离地时，摄影机快速后拉并略随人物上升，以短受控弧线运动，完整展示腾空剪影：双手、头、躯干、整个裙摆、腿与鞋都不能裁掉。禁止极端低角、俯视或环绕。最高点加入短暂 BULLET-TIME FEEL：只在动作峰值拉长主观时间密度，不使用真正慢动作，也不机械冻结人物；发丝、裙摆和服装边缘仍保留真实惯性，人物保持稳定中心轴，甚至在身体到达最高点后裙摆仍可因惯性继续略上升。
+
+约 13.9 秒，身体开始受控下降；手仍短暂保持高位，视觉峰值时双脚继续在身后并拢，安全短裤在抬起裙摆下清楚可见，然后双脚自然返回地面。约 14.1 秒安全落地并进入最终 Hero 站姿，CAMERA HARD LOCK，此后禁止 zoom、orbit 或 reframe。
+
+---
+
+## 15.0 HERO END｜最终 Hero 结束
+
+**关键词与术语：**
+- campaign photograph /kæmˈpeɪn ˈfoʊtəɡræf/ n. phr.：品牌宣传大片
+- near-perfect stillness /nɪr ˈpɜːrfɪkt ˈstɪlnəs/ n. phr.：近乎完全静止
+
+**整段翻译：**  
+最终全身 Hero 构图保持到 15.0 秒。人物已经自然落地，双脚着地；双臂可以短暂继续高举，然后收束到最干净稳定的剪影。最终仍是完整全身构图，整套服装可见；安全短裤只在最终跳跃和裙摆抬起自然造成的程度内可见。头发与裙摆完成自然 settling，前约 0.5 秒后进入近乎完全静止。最终帧应像一次俏皮高能跳跃后立即捕捉到的高级时尚 campaign 照片。现有台灯保持 ON，环境不得发生转化。
+
+---
+
+## LIGHTING SYSTEM｜灯光系统
+
+**关键词与术语：**
+- state timeline /steɪt ˈtaɪmlaɪn/ n. phr.：状态时间轴
+- visual punctuation /ˈvɪʒuəl ˌpʌŋktʃuˈeɪʃən/ n. phr.：视觉标点
+
+**整段翻译：**  
+现有台灯属于**编辑剪辑语言**的一部分。状态时间轴严格为：0.000 ON；3.871 OFF；7.742 ON；11.613 OFF；13.548 ON。所有切换必须精确落在音乐 downbeat。禁止随机切换、渐变、闪烁、脉冲、改色和新增光源；房间物理状态始终一致。13.548 的最终 ON 是释放跳跃的视觉标点。
+
+---
+
+## EDITORIAL CUT SYSTEM｜编辑转场系统
+
+**关键词与术语：**
+- hair-edge wipe /her edʒ waɪp/ n. phr.：发丝边缘遮挡转场
+- whip /wɪp/ n.：快速甩镜转场
+- body-line match /ˈbɑːdi laɪn mætʃ/ n. phr.：身体线条匹配剪辑
+- accent cut /ˈæksent kʌt/ n. phr.：踩重音切镜
+
+**整段翻译：**  
+选择性使用肩部遮挡、发丝边缘擦镜、快速横向 whip、snap zoom、rack focus、身体线条匹配、短重音切镜、短 Dutch-angle 修正、受控 ROLL、摄影机硬刹与快速后拉。每个切镜或转场都必须对应明确音乐重音或身体冲量。不要堆成特效蒙太奇，也不要机械遍历所有转场类型；视觉语言始终优雅、干净、高级。
+
+---
+
+## PERFORMANCE RULES｜表演规则
+
+**关键词与术语：**
+- fully clothed /ˌfʊli ˈkloʊðd/ adj.：完整着装的
+- vulgar /ˈvʌlɡər/ adj.：低俗的
+- explicit /ɪkˈsplɪsɪt/ adj.：明确情色化的
+- acrobatics /ˌækrəˈbætɪks/ n.：杂技动作
+
+**整段翻译：**  
+必须是完整着装的成年时尚表演：可爱、优雅、俏皮、自信、身体控制精准。禁止幼态表演、夸张动漫动作、低俗手势、明确情色行为、正面胸部聚焦下弯、乳沟特写、刻意胸部构图或胸部先向镜头推进。身体降低时仅用侧面、正侧或后侧三分之四。禁止重复 S 曲线、髋摆、contrapposto、走路、旋转、甩发、摸脸、扫腿；禁止模板化舞蹈、空闲重置、夸张杂技、危险落地、贴地仰拍、俯拍。不得增加人物、肢体、换服装、换配饰、增加道具/家具/台灯、文字、Logo、对白、歌唱或 lip-sync。
+
+---
+
+## SOUND｜声音
+
+**关键词与术语：**
+- room tone /ruːm toʊn/ n.：空间底噪
+- clothing friction /ˈkloʊðɪŋ ˈfrɪkʃən/ n. phr.：衣料摩擦声
+- switch click /swɪtʃ klɪk/ n. phr.：开关点击声
+- soundscape /ˈsaʊndskeɪp/ n.：整体声景
+
+**整段翻译：**  
+总体声景使用参考环境中的轻自然 room tone、细微鞋底接触、小型受控脚步 tap、自然衣料摩擦、柔和布料运动、合适位置的小裙摆 snap、自然发丝运动和轻微配饰声。最终跳跃包括轻微鞋底离地声、衣物加速度声、自然裙摆抬升声和柔和落地接触声。
+
+在 3.871、7.742、11.613、13.548 精确加入清楚但克制的真实台灯开关 click；最后一次 click 强化最终音乐冲击。不要摄影快门声、观众、群众、旁白或对白。
+
+---
+
+## FINAL PRIORITY ORDER｜最终优先级
+
+**关键词与术语：**
+- priority order /praɪˈɔːrəti ˈɔːrdər/ n. phr.：优先级顺序
+- body initiation /ˈbɑːdi ɪˌnɪʃiˈeɪʃən/ n. phr.：身体动作启动
+- progressively /prəˈɡresɪvli/ adv.：逐步地
+
+**整段翻译：**  
+优先级严格为：`BGM structure → musical accent → body initiation → body mechanics → distinct pose architecture → camera response → selective ROLL → camera brake → lamp state → editorial transition → next musical event`。音乐驱动动作，台灯是节奏视觉锚点，每次状态变化都必须有音乐理由。每个动作必须与前一个明显不同，并且整段表演能量逐步提高。
+
+最终事件必须明显大于之前所有动作。13.548 秒必须同时发生：`MUSIC HIT + TABLE LAMP ON + POWERFUL UPWARD JUMP + BOTH HANDS RAISED HIGH + BOTH FEET FOLDED BACK TOGETHER IN THE AIR + LIFTED SKIRT FROM JUMP INERTIA + OPAQUE SAFETY SHORTS CLEARLY VISIBLE + FULL-BODY AIRBORNE SILHOUETTE + BRIEF BULLET-TIME FEEL`。随后安全落地，并在最后进入最干净稳定的 Hero Frame。

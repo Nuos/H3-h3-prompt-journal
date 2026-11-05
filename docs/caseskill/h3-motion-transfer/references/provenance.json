@@ -1,0 +1,53 @@
+{
+  "case_id": "2026-10-h3-motion-transfer",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "091c7f3efd88dd609375d22c4afb110306d2d1ee85c7d1363128d6dfa9379a6b",
+      "bytes": 3875,
+      "lines": 54,
+      "git_blob_sha": "90e326cd2f2eeb13f1b3bb82a4997969df1884fe",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-h3-motion-transfer/README.md",
+      "reading_note": "全文读取：三参考分权、作者效果自述、8–9秒经验与ComfyUI摘要，识别其和JSON差异。"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+      "local_path": "references/source-h3-motion-transfer-workflow.json",
+      "sha256": "152b3df9c83e5677e2df46756a122eb64a3e05b0e15ff63e3f2ebadcea41b659",
+      "bytes": 107172,
+      "lines": 4982,
+      "git_blob_sha": "827fe8500e9b67ad068d9fee566f276f0caa8a2f",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+      "reading_note": "全文完整解析阅读：62节点全部字段、91连线、所有顶层字段和内嵌提示词；compact输出省去空白但没有省略字段，另补读被工具截断的节点137/139/147/153/132/154。"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "884616f829c22f00dc2f210e57621927bcb0ab58c28055f648bce2c2c2fa9915",
+      "bytes": 13165,
+      "lines": 586,
+      "git_blob_sha": "d2832c361a34e9e441d2dcba8e207e684b97fef6",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-h3-motion-transfer/prompt.md",
+      "reading_note": "全文读取：586行完整重建正文、首帧权限、初始化顺序、运动提取、音频和八项核查。"
+    },
+    {
+      "path": "docs/casereview/2026-10-h3-motion-transfer.md",
+      "local_path": "references/source-review.md",
+      "sha256": "6a9251d66954321109cbada7db34f3801d34d6670eac05d13470fb40a783f46d",
+      "bytes": 5872,
+      "lines": 50,
+      "git_blob_sha": "4648d68a63f0e06e1eeb90bbf78d0684a8467047",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-h3-motion-transfer.md",
+      "reading_note": "全文读取：有效参数、音频端口/旁路、裁剪冲突、模型名不符以及生成前后验收边界。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

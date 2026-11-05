@@ -1,0 +1,43 @@
+{
+  "case_id": "2026-10-camera-movement-discipline-library",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "51179fb7c3fd71729a939d287f6dad624dcf5bf719fe4532c16399929e84e179",
+      "bytes": 5545,
+      "lines": 93,
+      "git_blob_sha": "dae6601f45b9f4d0ae3cec10114eb102a0f500db",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-camera-movement-discipline-library/README.md",
+      "reading_note": "全文读取：一个主要行为、物理五字段、反目录及摘要版本差异。"
+    },
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "c70294287fc4155e691de6e7d50a09bb08f8d2bcd9bc18620f49c47c3a0d3053",
+      "bytes": 15365,
+      "lines": 234,
+      "git_blob_sha": "6437e5a26f84f34aa5dc803b1dbc5c79f9dcab13",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-camera-movement-discipline-library/prompt.md",
+      "reading_note": "全文读取：E1–E10历史样本、后续同步法则、词库和反舞蹈条款；识别响应时相与剪辑策略冲突。"
+    },
+    {
+      "path": "docs/casereview/2026-10-camera-movement-discipline-library.md",
+      "local_path": "references/source-review.md",
+      "sha256": "a334cde32d05e5987cc96f7fe07318fb876a4e790ccb6e84c79e06f48bf15f9e",
+      "bytes": 5030,
+      "lines": 54,
+      "git_blob_sha": "c97916bcabf3844da0760d0cda6fe1305d009584",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-camera-movement-discipline-library.md",
+      "reading_note": "全文读取：S1参考库定位、模式路由建议、来源自述与证据边界，转为显式条件规则。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-physical-camera-position-library",
+  "skill_name": "h3-physical-camera-position-library",
+  "required_check_ids": [
+    "CP-01",
+    "CP-02",
+    "CP-03",
+    "CP-04",
+    "CP-05",
+    "CP-06",
+    "CP-07",
+    "CP-08"
+  ],
+  "checks": [
+    {
+      "id": "CP-01",
+      "rule": "每镜明确机位的八要素，不把25条模板全部堆入同一提示词。",
+      "source": "prompt.md:719-751"
+    },
+    {
+      "id": "CP-02",
+      "rule": "位置高度、镜头方向和绕光轴滚转分别建模；荷兰角不等于低机位或高机位。",
+      "source": "prompt.md:579-657；review:29,39"
+    },
+    {
+      "id": "CP-03",
+      "rule": "正上方应同时满足相机在主体正上方、光轴垂直地面；斜上方保留面部可见度是另一方案。",
+      "source": "prompt.md:291-357"
+    },
+    {
+      "id": "CP-04",
+      "rule": "贴地、后跟、手持等描述保留其真实空间与运动关系，不用裁切、身体伸缩或独立旋转主体伪造透视。",
+      "source": "prompt.md:159-225,517-603,661-715"
+    },
+    {
+      "id": "CP-05",
+      "rule": "静止相机与持续跟拍不能在同一时段无说明并存；组合必须明确阶段及转换路径。",
+      "source": "prompt.md:380,524-536；review:29"
+    },
+    {
+      "id": "CP-06",
+      "rule": "仅在项目明确启用NO DEGREE时，将角度数字改成相对空间几何，保持垂直/斜向/侧前后关系；库本身含数值角度。",
+      "source": "prompt.md:308,396,442；review:40"
+    },
+    {
+      "id": "CP-07",
+      "rule": "对原库的模型效果保证改写为验收目标；当前材料无对照数据证明物理描述必然胜过短角度标签。",
+      "source": "README.md:11,27；prompt.md:795；review:41"
+    },
+    {
+      "id": "CP-08",
+      "rule": "设备隐藏是该子技能的默认设计要求；若任务明确拍摄剧组设备，按任务重设，而不是把摄影机物理描述误生成为画内摄影机。",
+      "source": "prompt.md:7-31"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "机位参数与兼容表",
+      "content": "逐镜方位、高度、距离、光轴、滚转、移动模式、主体路径、可见部位及假设来源。"
+    },
+    {
+      "name": "八要素机位描述",
+      "content": "可以嵌入当前H3主字段的自然英文句子，与实际时间区间绑定。"
+    },
+    {
+      "name": "构图验收与修复建议",
+      "content": "预测可见几何、可能误解、冲突消解及待生成验证项目；不把文本检查当画面成功。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

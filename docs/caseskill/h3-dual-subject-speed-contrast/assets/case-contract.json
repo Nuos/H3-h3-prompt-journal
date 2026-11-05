@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-08-dual-subject-speed-contrast",
+  "skill_name": "h3-dual-subject-speed-contrast",
+  "required_check_ids": [
+    "DS-01",
+    "DS-02",
+    "DS-03",
+    "DS-04",
+    "DS-05",
+    "DS-06",
+    "DS-07",
+    "DS-08"
+  ],
+  "checks": [
+    {
+      "id": "DS-01",
+      "rule": "两个角色保持独立稳定身份；一张输入图不等于一个Subject，绕行后不按当前屏幕左右重新分配快慢角色。",
+      "source": "README.md:5-8；prompt.md:3-10；vocabulary-expanded.zh-CN.md:11-18"
+    },
+    {
+      "id": "DS-02",
+      "rule": "完成数比例必须附动作单元起止、统计窗口和容差；比例只在定义的窗口验收，不能替代逐事件计数。",
+      "source": "prompt.md:44-74；review:37-45"
+    },
+    {
+      "id": "DS-03",
+      "rule": "响应延迟、执行时长、累计落后分别建模；3∶1完成数不等于所有身体部位瞬时速度恒为三倍。",
+      "source": "vocabulary-expanded.zh-CN.md:27-38,47-56；review:31,39"
+    },
+    {
+      "id": "DS-04",
+      "rule": "慢者仅模仿此前看见的动作，不预知下一动作；快者持续衔接，慢者不突然追赶恢复同步。",
+      "source": "prompt.md:20-41,76-100；vocabulary-expanded.zh-CN.md:65-77"
+    },
+    {
+      "id": "DS-05",
+      "rule": "计数判据必须在当前景别中可见；腰至头顶或膝上构图不能声称验证了被裁掉的完整脚步。",
+      "source": "prompt.md:103-148；review:32,44"
+    },
+    {
+      "id": "DS-06",
+      "rule": "近距离环绕可连续通过不同视角，不等于横摇、画面滚转或新增切镜；两人身份与动作相位贯穿镜头。",
+      "source": "prompt.md:120-148；vocabulary-expanded.zh-CN.md:83-92"
+    },
+    {
+      "id": "DS-07",
+      "rule": "沿用原案纯器乐时排除各种人声，但音乐仍是有效声音；若用户改声音策略，以当前明确任务为准。",
+      "source": "prompt.md:151-171"
+    },
+    {
+      "id": "DS-08",
+      "rule": "作者“约三倍”是结果报告；没有真实媒体计数时，不声称本次已达到比例或能保证模型稳定异速。",
+      "source": "README.md:20-24,64-68；review:33,45"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "主体与事件定义",
+      "content": "快慢Subject映射、动作单元进入/完成姿态、判据可见部位及参考权限。"
+    },
+    {
+      "name": "双人配对事件表",
+      "content": "观察前导、δ、两人各事件起止、完成时刻、窗口归属、目标/计划完成数和比例容差。"
+    },
+    {
+      "name": "摄影及声音组件或完整提示词",
+      "content": "按任务提供连续环绕组件，或正确模式的英文H3正文；中文时序与待核验项在正文之外。"
+    },
+    {
+      "name": "逐项验收记录",
+      "content": "区分计划计数与生成后实测计数，记录遮挡、同步化、追赶和身份串位等失败。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-h3-motion-transfer",
+  "skill_name": "h3-motion-transfer",
+  "required_check_ids": [
+    "MTR01",
+    "MTR02",
+    "MTR03",
+    "MTR04",
+    "MTR05",
+    "MTR06",
+    "MTR07",
+    "MTR08",
+    "MTR09",
+    "MTR10"
+  ],
+  "checks": [
+    {
+      "id": "MTR01",
+      "rule": "参考按身份/世界、运动/相机、时序分权；Video1人物不作为第二个输出主体。",
+      "source": "case-studies/2026-10-h3-motion-transfer/prompt.md:26-44,47-115,366-413"
+    },
+    {
+      "id": "MTR02",
+      "rule": "首帧只继承相机几何和开场身体机制，不继承源外观、服装、背景或照明。",
+      "source": "case-studies/2026-10-h3-motion-transfer/prompt.md:118-186,279-304"
+    },
+    {
+      "id": "MTR03",
+      "rule": "人物优先重建是提示词组织顺序，不是已证实的模型内部计算顺序或独立运行阶段。",
+      "source": "case-studies/2026-10-h3-motion-transfer/prompt.md:245-276；docs/casereview/2026-10-h3-motion-transfer.md:27"
+    },
+    {
+      "id": "MTR04",
+      "rule": "目标音频重定时必须基于提供的BPM/事件/乐句证据；整段变速源片不等价于动作机制重建。",
+      "source": "case-studies/2026-10-h3-motion-transfer/prompt.md:416-467"
+    },
+    {
+      "id": "MTR05",
+      "rule": "8–9秒仅属案例经验；可用时长以当前模式和真实部署能力为准。",
+      "source": "case-studies/2026-10-h3-motion-transfer/README.md:40-50；docs/casereview/2026-10-h3-motion-transfer.md:5,41-44"
+    },
+    {
+      "id": "MTR06",
+      "rule": "工作流参数优先沿连线求有效值，不能将1344×768和124帧旧widget直接报告为实际输出。",
+      "source": "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json:1050-1422；docs/casereview/2026-10-h3-motion-transfer.md:41"
+    },
+    {
+      "id": "MTR07",
+      "rule": "必须验证活动音频节点和ref_video_audios/ref_audios端口职责，不能仅写Audio1就认为音频已输入模型。",
+      "source": "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json:683-745（节点155）；节点136、191；docs/casereview/2026-10-h3-motion-transfer.md:42"
+    },
+    {
+      "id": "MTR08",
+      "rule": "续接视频/音频裁剪必须共享时间原点；22帧、26帧、1秒不能不加解释地混用。",
+      "source": "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json:3052-3456（节点194、211-213）；docs/casereview/2026-10-h3-motion-transfer.md:43"
+    },
+    {
+      "id": "MTR09",
+      "rule": "预检不能确认未生成的视频每帧身份；八项视觉/时序核对应在有输出后执行。",
+      "source": "case-studies/2026-10-h3-motion-transfer/prompt.md:487-537；docs/casereview/2026-10-h3-motion-transfer.md:31,37"
+    },
+    {
+      "id": "MTR10",
+      "rule": "新世界的支撑面和机位通道必须能容纳源动作，不能仅换场景文字而忽略足部接触与运动空间。",
+      "source": "case-studies/2026-10-h3-motion-transfer/prompt.md:446-484；docs/casereview/2026-10-h3-motion-transfer.md:33"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "参考权限与素材清单",
+      "content": "每个资产的文件/缺失状态、角色、允许继承、拒绝继承、实际输入端口与作用时窗。"
+    },
+    {
+      "name": "动作和相机重建表",
+      "content": "源事件、首帧身体/几何、目标人物机制、新世界可行性、目标时点及节奏证据。"
+    },
+    {
+      "name": "完整H3迁移提示词",
+      "content": "人物与世界约束、开场构图、动作链、相机路线、音频职责和明确边界；不用源片人物外观填空。"
+    },
+    {
+      "name": "工作流预检摘要（可选）",
+      "content": "活动/旁路节点、实际权重与依赖、有效参数来源、帧数/时长换算、分辨率、音频端口、裁剪一致性、阻塞项。"
+    },
+    {
+      "name": "前后两阶段验收表",
+      "content": "提交前静态检查与生成后八项结果检查分列，附素材/配置哈希、种子、失败类型和重试记录；未运行明确写未执行。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

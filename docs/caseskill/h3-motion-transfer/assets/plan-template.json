@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-h3-motion-transfer",
+  "delivery_kind": "prompts",
+  "status": "draft",
+  "assembly": "sequential",
+  "runtime": {
+    "profile": "official-2026-10-28"
+  },
+  "fps": 24,
+  "assets": [],
+  "references": [],
+  "segments": [],
+  "handoffs": [],
+  "case_checks": [
+    {
+      "id": "MTR01",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "MTR02",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "MTR03",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "MTR04",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "MTR05",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "MTR06",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "MTR07",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "MTR08",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "MTR09",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "MTR10",
+      "status": "unverified",
+      "evidence": ""
+    }
+  ],
+  "unresolved": [
+    "依据当前任务填入真实输入、输出和案例检查证据；本文件是待填写模板。"
+  ]
+}

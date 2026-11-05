@@ -1,0 +1,73 @@
+{
+  "case_id": "2026-08-cinematic-character-reveal-two-part",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "26f2a637765712b3456c1bb94aabbf53b3c6bc05c8f359a2b752967a5be008f8",
+      "bytes": 8973,
+      "lines": 109,
+      "git_blob_sha": "72c4bfeedf2eb966d05e44515128b620a219b5e1",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-cinematic-character-reveal-two-part/README.md",
+      "reading_note": "全文109行：两段用途、六项接缝契约、姿态与脸部权限、13CUT口径和作者结果。"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md",
+      "local_path": "references/source-README.zh-CN.md",
+      "sha256": "59e6653d0a5be8f978d09ea3c657089a4fff6aa0591024758623fe749b852ea5",
+      "bytes": 26476,
+      "lines": 415,
+      "git_blob_sha": "6a77d28f7032e60ee8bc7ae192d99c02e47655e1",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md",
+      "reading_note": "全文415行逐段译注；核对六项契约、实际七项规避列表、经验20秒阈值和结果断言。"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "662a755d3abb0f985ee5c273aac6a9943c559cac13bc8d4d6ec11be559d8c226",
+      "bytes": 18328,
+      "lines": 653,
+      "git_blob_sha": "5cb92433398250390c00dad804bbc3804550e897",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md",
+      "reading_note": "全文653行：两段各13块，块内真实短切、Pose01–11、同场景/纯器乐/环境声、未落实的跨生成状态。"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md",
+      "local_path": "references/source-prompt.zh-CN.md",
+      "sha256": "7acbdc272d9d7f01b0f1baaab693198c6fb04e20a5cfd79401f4fee451b476f6",
+      "bytes": 71417,
+      "lines": 1869,
+      "git_blob_sha": "e39931e9262ed9599d84fddbccf3155f6ca75e29",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md",
+      "reading_note": "全文1869行译注：前半1–876与后半880–1869全部读取，核对姿态/剪辑/声场、末态微动和three-quarter近似说明。"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "c523ba2fa3ff1ee8cc79e4b75d4cce7fc9c66abe553552aa8d3498d17e3ddea5",
+      "bytes": 13734,
+      "lines": 127,
+      "git_blob_sha": "b44081b88877ae7d8f97ce6424bf92c92c13f17c",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md",
+      "reading_note": "全文127行，60词及six实际七项、建筑遮挡重复、角度、拼写、风格来源与实际传参校读。"
+    },
+    {
+      "path": "docs/casereview/2026-08-cinematic-character-reveal-two-part.md",
+      "local_path": "references/source-review.md",
+      "sha256": "62eac3de84c77925e8e9b5820c238924b47dbc45feab0f9b8b2c995ba5e9bcec",
+      "bytes": 5721,
+      "lines": 52,
+      "git_blob_sha": "fdc11208bf8da388054d0763c54a82f84d6c3dae",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-cinematic-character-reveal-two-part.md",
+      "reading_note": "全文评估：两段接缝数据传递、批准姿态索引、CUT块与真实Shot区分、非实测拍点和去重缺口。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

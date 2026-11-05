@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+  "delivery_kind": "prompts",
+  "status": "draft",
+  "assembly": "sequential",
+  "runtime": {
+    "profile": "official-2026-10-28"
+  },
+  "fps": 24,
+  "assets": [],
+  "references": [],
+  "segments": [],
+  "handoffs": [],
+  "case_checks": [
+    {
+      "id": "R1",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "R2",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "R3",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "R4",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "R5",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "R6",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "R7",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "R8",
+      "status": "unverified",
+      "evidence": ""
+    }
+  ],
+  "unresolved": [
+    "依据当前任务填入真实输入、输出和案例检查证据；本文件是待填写模板。"
+  ]
+}

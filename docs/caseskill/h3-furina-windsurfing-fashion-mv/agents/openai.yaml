@@ -1,0 +1,4 @@
+interface:
+  display_name: "H3 分层参考与帆板写真 MV 高潮编排"
+  short_description: "编排H3 分层参考与帆板写真 MV 高潮编排，核对参考职责、时间与状态交接"
+  default_prompt: "使用 $h3-furina-windsurfing-fashion-mv，根据我提供的素材与约束完成编排、提示词和逐项检查。"

@@ -1,0 +1,34 @@
+{
+  "skill_name": "h3-cinematic-character-reveal-two-part",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "CR-T1",
+      "prompt": "30秒分两段，给出第二段精确视觉和音乐连续的交付方式，第一段还没生成。",
+      "expected_output": "列真实末帧待取得、相机/动作状态、母带15秒偏移及环境层；第二段保持有缺项的准备状态，不称继承已完成。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "CR-T2",
+      "prompt": "照搬13 CUT每块，CUT 08里五次短切，同时保证只有13个镜头。",
+      "expected_output": "指出块与Shot数量矛盾，展开或重排实际镜头，保持时间覆盖；不输出13与多切并存。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "CR-T3",
+      "prompt": "8张批准姿态，要沿用原稿Pose 10/11并禁止新姿态，所有镜头机制也不能重复。",
+      "expected_output": "先检查实际姿态索引，拒绝虚构10/11；重用已批准姿态以新构图，具体审计建筑遮挡重复并修订。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "CR-T4",
+      "prompt": "没有音频，只依据1.3秒五拍高潮，声称已精准踩实际BGM；同时fully_copy后加新环境声。",
+      "expected_output": "标记拍点未实测，要求拍表/合法音频参考；区分完整最终音轨复制与保留音乐后混音，纠正冲突。",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "pass": true,
+  "cases": 29,
+  "case_text_files": 97,
+  "official_spec_commit": "83021e2be457a9b6679148719c1f6074f0ad975e",
+  "h3_official_commit": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+  "errors": [],
+  "skills": [
+    {
+      "case_id": "2026-08-cinematic-character-reveal-two-part",
+      "skill_name": "h3-cinematic-character-reveal-two-part",
+      "official_skills_ref_pass": true,
+      "skill_lines": 83,
+      "source_text_count": 5,
+      "scenario_count": 4,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-08-dual-subject-speed-contrast",
+      "skill_name": "h3-dual-subject-speed-contrast",
+      "official_skills_ref_pass": true,
+      "skill_lines": 80,
+      "source_text_count": 4,
+      "scenario_count": 4,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-08-first-person-finger-controlled-dance",
+      "skill_name": "h3-first-person-finger-controlled-dance",
+      "official_skills_ref_pass": true,
+      "skill_lines": 80,
+      "source_text_count": 5,
+      "scenario_count": 4,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-08-furina-windsurfing-fashion-mv",
+      "skill_name": "h3-furina-windsurfing-fashion-mv",
+      "official_skills_ref_pass": true,
+      "skill_lines": 88,
+      "source_text_count": 5,
+      "scenario_count": 4,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-08-single-subject-three-pose",
+      "skill_name": "h3-single-subject-three-pose",
+      "official_skills_ref_pass": true,
+      "skill_lines": 80,
+      "source_text_count": 5,
+      "scenario_count": 5,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-08-sticker-character-kitchen-comedy",
+      "skill_name": "h3-sticker-character-kitchen-comedy",
+      "official_skills_ref_pass": true,
+      "skill_lines": 82,
+      "source_text_count": 5,
+      "scenario_count": 4,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-08-three-person-orbital-long-take",
+      "skill_name": "h3-three-person-orbital-long-take",
+      "official_skills_ref_pass": true,
+      "skill_lines": 85,
+      "source_text_count": 5,
+      "scenario_count": 6,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-08-water-obstacle-variety-show",
+      "skill_name": "h3-water-obstacle-variety-show",
+      "official_skills_ref_pass": true,
+      "skill_lines": 80,
+      "source_text_count": 5,
+      "scenario_count": 4,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-09-action-chain-sock-fan-comedy",
+      "skill_name": "h3-action-chain-sock-fan-comedy",
+      "official_skills_ref_pass": true,
+      "skill_lines": 81,
+      "source_text_count": 4,
+      "scenario_count": 4,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "skill_name": "h3-editorial-lamp-rhythm-fashion-ab",
+      "official_skills_ref_pass": true,
+      "skill_lines": 85,
+      "source_text_count": 6,
+      "scenario_count": 4,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-09-purple-veil-dance-seven-segment",
+      "skill_name": "h3-purple-veil-dance-seven-segment",
+      "official_skills_ref_pass": true,
+      "skill_lines": 78,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-09-snap-lock-editorial-reveal",
+      "skill_name": "h3-snap-lock-editorial-reveal",
+      "official_skills_ref_pass": true,
+      "skill_lines": 80,
+      "source_text_count": 4,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-09-song-style-classical-dance-six-segment",
+      "skill_name": "h3-song-style-classical-dance-six-segment",
+      "official_skills_ref_pass": true,
+      "skill_lines": 82,
+      "source_text_count": 4,
+      "scenario_count": 5,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+      "skill_name": "h3-three-person-prank-freeze-gag-cos-swap",
+      "official_skills_ref_pass": true,
+      "skill_lines": 81,
+      "source_text_count": 5,
+      "scenario_count": 4,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-advanced-camera-combinations",
+      "skill_name": "h3-advanced-camera-combinations",
+      "official_skills_ref_pass": true,
+      "skill_lines": 77,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "skill_name": "h3-baifeng-mengchen-classical-dance-six-segment",
+      "official_skills_ref_pass": true,
+      "skill_lines": 79,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-camera-movement-discipline-library",
+      "skill_name": "h3-camera-movement-discipline-library",
+      "official_skills_ref_pass": true,
+      "skill_lines": 77,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "skill_name": "h3-classical-wuxia-dance-13-segment",
+      "official_skills_ref_pass": true,
+      "skill_lines": 81,
+      "source_text_count": 3,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-dance-motion-chain-library",
+      "skill_name": "h3-dance-motion-chain-library",
+      "official_skills_ref_pass": true,
+      "skill_lines": 84,
+      "source_text_count": 2,
+      "scenario_count": 6,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-four-subject-formation-choreography",
+      "skill_name": "h3-four-subject-formation-choreography",
+      "official_skills_ref_pass": true,
+      "skill_lines": 79,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-h3-motion-transfer",
+      "skill_name": "h3-motion-transfer",
+      "official_skills_ref_pass": true,
+      "skill_lines": 83,
+      "source_text_count": 3,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-identity-only-half-body-dance-six-segment",
+      "skill_name": "h3-identity-only-half-body-dance-six-segment",
+      "official_skills_ref_pass": true,
+      "skill_lines": 78,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "skill_name": "h3-kanzaki-beach-sword-dance-18-segment",
+      "official_skills_ref_pass": true,
+      "skill_lines": 81,
+      "source_text_count": 3,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-leg-lift-contact-cut-stocking-six-look",
+      "skill_name": "h3-leg-lift-contact-cut-stocking-six-look",
+      "official_skills_ref_pass": true,
+      "skill_lines": 78,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-physical-camera-position-library",
+      "skill_name": "h3-physical-camera-position-library",
+      "official_skills_ref_pass": true,
+      "skill_lines": 76,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-sock-showcase-right-entry-three-shot",
+      "skill_name": "h3-sock-showcase-right-entry-three-shot",
+      "official_skills_ref_pass": true,
+      "skill_lines": 77,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+      "skill_name": "h3-summer-pool-beach-waterline-mv-4-segment",
+      "official_skills_ref_pass": true,
+      "skill_lines": 78,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-waterfront-solo-dance-two-segment",
+      "skill_name": "h3-waterfront-solo-dance-two-segment",
+      "official_skills_ref_pass": true,
+      "skill_lines": 78,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    },
+    {
+      "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+      "skill_name": "h3-xiashan-veiled-solo-twelve-segment",
+      "official_skills_ref_pass": true,
+      "skill_lines": 80,
+      "source_text_count": 2,
+      "scenario_count": 3,
+      "errors": [],
+      "pass": true
+    }
+  ],
+  "scope": "Format, coverage, resource paths, source integrity and tooling; no model inference or semantic-video certification."
+}

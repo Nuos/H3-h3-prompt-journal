@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-leg-lift-contact-cut-stocking-six-look",
+  "skill_name": "h3-leg-lift-contact-cut-stocking-six-look",
+  "required_check_ids": [
+    "LCC01",
+    "LCC02",
+    "LCC03",
+    "LCC04",
+    "LCC05",
+    "LCC06",
+    "LCC07",
+    "LCC08",
+    "LCC09"
+  ],
+  "checks": [
+    {
+      "id": "LCC01",
+      "rule": "触地为服饰切换的物理触发；旧look在空中和下降全程保持，切点不等于起抬点。",
+      "source": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md:37-106,221-231,679-739"
+    },
+    {
+      "id": "LCC02",
+      "rule": "CONTACT→CUT→PLANTED HOLD→STABLE→NEXT LIFT有序；硬切立即成为新look，保持用于确认展示，不写成逐渐溶解。",
+      "source": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md:43-78,187-219,577-602"
+    },
+    {
+      "id": "LCC03",
+      "rule": "支撑脚保持位置和主要承重，活动脚只做紧凑抬落；换装前后身体/脚位/机位不发生附带跳变。",
+      "source": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md:19-35,131-185,604-638"
+    },
+    {
+      "id": "LCC04",
+      "rule": "N次转换有N+1个状态；六次变化LOOK0→6实际是七状态。",
+      "source": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md:108,187-219；docs/casereview/2026-10-leg-lift-contact-cut-stocking-six-look.md:44"
+    },
+    {
+      "id": "LCC05",
+      "rule": "切点毫秒必须结合实际fps成为可核验帧号，不把“同帧”文本要求当成已获得的控制能力。",
+      "source": "docs/casereview/2026-10-leg-lift-contact-cut-stocking-six-look.md:31,37-45"
+    },
+    {
+      "id": "LCC06",
+      "rule": "全片时间必须覆盖；复现源5.17秒需补4.690–5.170尾段或明确改短总长。",
+      "source": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md:3,50；case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md:563-575；docs/casereview/2026-10-leg-lift-contact-cut-stocking-six-look.md:43"
+    },
+    {
+      "id": "LCC07",
+      "rule": "固定相机、同视角外观硬切、单次生成是三个不同概念，必须分别声明。",
+      "source": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md:48-50；case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md:297-307,620-638；docs/casereview/2026-10-leg-lift-contact-cut-stocking-six-look.md:31,46"
+    },
+    {
+      "id": "LCC08",
+      "rule": "Video1缺失时用明确动作/事件表替代；原视频渐变属于被改写的形式，不能按外观或morph全量继承。",
+      "source": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md:17,42-48；case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md:5,119-120；docs/casereview/2026-10-leg-lift-contact-cut-stocking-six-look.md:33,44"
+    },
+    {
+      "id": "LCC09",
+      "rule": "原音轨全量保留与新增环境/接触声不能含混并用；声音策略必须明确并避免重复事件声。",
+      "source": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md:7,640-677（冲突识别与工程补齐）"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "固定属性与状态序列表",
+      "content": "固定身份/环境/鞋/机位，可变服饰字段，LOOK0初态和N个后续状态。"
+    },
+    {
+      "name": "接触—切换帧表",
+      "content": "每轮lift_start、contact_time、contact_frame、cut_frame、hold_end、next_lift、旧/新look、音频事件和量化误差。"
+    },
+    {
+      "name": "完整H3展示提示词",
+      "content": "视觉锚、支撑关系、固定镜头、逐轮动作与外观状态、尾段和音频策略完整定义。"
+    },
+    {
+      "name": "生成后事件验收表",
+      "content": "逐轮实际接触帧/切换帧/稳定保持帧、支持脚偏移、非许可属性变化和失败修订。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

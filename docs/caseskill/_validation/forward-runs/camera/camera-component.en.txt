@@ -1,0 +1,36 @@
+CAMERA COMPONENT — 12-SECOND DUET
+Use the shared 0.000–12.000 second clock below. Both dancers are already moving at 0.000 seconds and continue dancing through the final frame. Their continuous turn begins at 4.000 seconds and releases directly into the next moving phrase at 6.000 seconds. Preparation is active footwork and weight transfer, never a held pose.
+
+GEOMETRY AND CONTINUITY
+Use a wide, full-body two-shot throughout, keeping both dancers, their feet and extended hands within the frame. In stage coordinates, X runs left to right, Y runs front to back and Z runs upward. The front camera starts at (0, -6, 1.2) metres, aimed at the duet centre at height 1.2 metres, and its destination is (0, -8, 1.2) metres. The side view is prepositioned at (+8, 0, 1.2) metres, looking along negative X toward the same centre. Maintain the same lens and camera height. The dancers use two diagonally staggered turn centres, approximately (-0.9, -1.0) and (+0.9, +1.0) metres in the stage plane, keeping both bodies separately readable from the front and side.
+
+0.000–2.000 — FIXED FRONT OBSERVATION
+CAMERA POSITION: Front camera at (0, -6, 1.2) metres.
+CAMERA GEOMETRY: Level, frontal, wide full-body two-shot centred on the duet.
+CAMERA MOVEMENT: none.
+MOVEMENT TRIGGER: none; both dancers continue the opening phrase within the established frame.
+END CAMERA POSITION: Unchanged at (0, -6, 1.2) metres.
+
+2.000–3.500 — ANTICIPATORY DOLLY
+CAMERA POSITION: Begin at the established front position, (0, -6, 1.2) metres.
+CAMERA GEOMETRY: Preserve the frontal axis, level horizon, lens and height while widening the two-shot by physical backward travel.
+CAMERA MOVEMENT: One smooth, straight backward dolly along negative Y to (0, -8, 1.2) metres. Ease out and complete the stop at exactly 3.500 seconds; no zoom, orbit, roll or secondary correction.
+MOVEMENT TRIGGER: Start at 2.000 seconds during the dancers' moving preparation, anticipating their turn at 4.000 seconds. Camera arrival precedes turn onset by exactly 0.500 seconds.
+END CAMERA POSITION: Fully settled at (0, -8, 1.2) metres at 3.500 seconds.
+
+3.500–5.000 — FIXED FRONT TURN COVERAGE
+CAMERA POSITION: Front destination, (0, -8, 1.2) metres.
+CAMERA GEOMETRY: Level, frontal, wide full-body two-shot; retain the established composition.
+CAMERA MOVEMENT: none.
+MOVEMENT TRIGGER: none; the camera remains fixed while the dancers continue moving preparation from 3.500 to 4.000 seconds and begin their uninterrupted turn at 4.000 seconds.
+END CAMERA POSITION: Unchanged at (0, -8, 1.2) metres up to the edit at 5.000 seconds.
+
+5.000–12.000 — FIXED SIDE OBSERVATION
+CAMERA POSITION: Prepositioned side view at (+8, 0, 1.2) metres.
+CAMERA GEOMETRY: Level, wide full-body two-shot looking along negative X; preserve separation between the two dancers in depth and keep their whole bodies visible.
+CAMERA MOVEMENT: none.
+MOVEMENT TRIGGER: none; this view is already in position when selected by the cut.
+END CAMERA POSITION: Unchanged at (+8, 0, 1.2) metres through 12.000 seconds.
+
+EDIT AND MOTION CONTINUITY
+Make exactly one cut, at 5.000 seconds, while both dancers are still turning. Cut directly from the fixed front view to the prepositioned side view. This is a rotation-phase match cut on the same uninterrupted action: the first side-view frame shows the next chronological phase after the last front-view frame, preserving each dancer's world-space rotation direction, shoulder phase, angular speed, support-foot continuity and ongoing hair and clothing inertia. The new viewing angle may change the projected screen direction; do not reverse the actual turn to imitate the previous screen projection. Do not repeat, skip, restart or finish the turn at the cut. The side view continues the turn until its moving release at 6.000 seconds, followed by continuous duet movement through 12.000 seconds. No other cuts, transitions, time remapping, frozen frames, pose holds or static ending. A stationary camera never means stationary dancers.

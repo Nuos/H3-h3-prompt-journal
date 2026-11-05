@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-08-first-person-finger-controlled-dance",
+  "delivery_kind": "prompts",
+  "status": "draft",
+  "assembly": "sequential",
+  "runtime": {
+    "profile": "official-2026-10-28"
+  },
+  "fps": 24,
+  "assets": [],
+  "references": [],
+  "segments": [],
+  "handoffs": [],
+  "case_checks": [
+    {
+      "id": "F1",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "F2",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "F3",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "F4",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "F5",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "F6",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "F7",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "F8",
+      "status": "unverified",
+      "evidence": ""
+    }
+  ],
+  "unresolved": [
+    "依据当前任务填入真实输入、输出和案例检查证据；本文件是待填写模板。"
+  ]
+}

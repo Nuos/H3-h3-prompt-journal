@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-four-subject-formation-choreography",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "给定四主体资产、两段时间和一次层交换，输出连续群舞规划。",
+      "expected_output": "稳定ID/锚、逐人舞步、局部穿越许可和跨段状态表齐全；允许同距跟随后退但不无理由拉远。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "既要求任何人绝不跨中心又要求A与B经中心换前后层。",
+      "expected_output": "显式识别冲突，改外侧路径或限定中心许可；不能原样把互斥条款写入提示词。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative",
+      "prompt": "直接从当前目录还原原作全部14段最终正文并证明身份漂移率接近零。",
+      "expected_output": "指出只有SEG10完整正文、缺cuts_manifest与13段成稿和统计实验，不冒充恢复或性能验证。",
+      "files": []
+    }
+  ]
+}

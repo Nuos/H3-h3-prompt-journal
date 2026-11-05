@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-08-water-obstacle-variety-show",
+  "skill_name": "h3-water-obstacle-variety-show",
+  "required_check_ids": [
+    "W1",
+    "W2",
+    "W3",
+    "W4",
+    "W5",
+    "W6",
+    "W7",
+    "W8"
+  ],
+  "checks": [
+    {
+      "id": "W1",
+      "rule": "参考图只锁定已约定的人物身份与外观；新增场地和游戏道具由文本定义，不从身份图臆造。",
+      "source": "case-studies/2026-08-water-obstacle-variety-show/prompt.md:5–7,33–35"
+    },
+    {
+      "id": "W2",
+      "rule": "必经剧情按因果顺序执行，抓牢先于侧击，侧击导致失握，入水先于湿发收尾。",
+      "source": "case-studies/2026-08-water-obstacle-variety-show/prompt.md:87–153"
+    },
+    {
+      "id": "W3",
+      "rule": "在不破坏必要事件的条件下，明确授权模型选择微动作、镜头、表演和观众反应；自由不能取消锚点。",
+      "source": "case-studies/2026-08-water-obstacle-variety-show/prompt.md:43–55"
+    },
+    {
+      "id": "W4",
+      "rule": "同一赛道、终点墙与相邻水池保持连通，人物从真实上一状态继续；切镜不重置位置或干湿状态。",
+      "source": "case-studies/2026-08-water-obstacle-variety-show/prompt.md:99–107,133–147"
+    },
+    {
+      "id": "W5",
+      "rule": "故事节拍不等同于音乐音头；无音轨时只能提出音乐情绪与事件关系。",
+      "source": "case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md:101"
+    },
+    {
+      "id": "W6",
+      "rule": "时间不足时先压缩可选反应、重复闪避和解说，保留反转因果与收尾对白；长创作方案另拆生成片段。",
+      "source": "docs/casereview/2026-08-water-obstacle-variety-show.md:36–42"
+    },
+    {
+      "id": "W7",
+      "rule": "“一镜到底般的感觉”仅指连续观感，原案允许八个镜头；严格无切镜必须单独设计和检查。",
+      "source": "case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md:105"
+    },
+    {
+      "id": "W8",
+      "rule": "0.3、0.8、1是未明确单位的作者经验，不作为官方参数、价格、速度或提高规格后动作不变的保证。",
+      "source": "case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md:103"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "身份与自由度契约",
+      "content": "人物参考绑定、场地生成范围、不可变项和明确允许变化项。"
+    },
+    {
+      "name": "剧情依赖与状态表",
+      "content": "必要事件、前提、结果、位置、支撑/抓握、干湿状态及跨片交接。"
+    },
+    {
+      "name": "时间预算和H3正文",
+      "content": "故事总时间、4–15秒生成切片、每段剧情与自由度、对白和声画事件关系。"
+    },
+    {
+      "name": "验收与修订记录",
+      "content": "逐事件勾选、顺序错误、场地跳变、干湿错误、台词缺失和可操作修复；区分文本检查与尚未执行的生成验证。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

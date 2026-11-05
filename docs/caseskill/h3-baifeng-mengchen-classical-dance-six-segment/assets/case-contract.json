@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+  "skill_name": "h3-baifeng-mengchen-classical-dance-six-segment",
+  "required_check_ids": [
+    "BM-01",
+    "BM-02",
+    "BM-03",
+    "BM-04",
+    "BM-05",
+    "BM-06",
+    "BM-07",
+    "BM-08",
+    "BM-09"
+  ],
+  "checks": [
+    {
+      "id": "BM-01",
+      "rule": "动作链必须写入态、动力、承重、路径、峰值、回收和出态；动作名或形容词不能替代过程。",
+      "source": "README.md:59-82；prompt.md:200-232"
+    },
+    {
+      "id": "BM-02",
+      "rule": "段内特写改变观察信息，段间匹配保持动作状态；二者分别设计。",
+      "source": "README.md:97-103；prompt.md:465-475"
+    },
+    {
+      "id": "BM-03",
+      "rule": "档案原文与当前可提交修订稿分别保存；旧SEG03入出态冲突必须在实际正文和边界表同时修复。",
+      "source": "review:31,46"
+    },
+    {
+      "id": "BM-04",
+      "rule": "双生成方案必须给出两次真实输入、生成时长、取用区间和最终位置，不能只写完整原文不拆或前后各生成一次。",
+      "source": "prompt.md:245-257；review:33,47"
+    },
+    {
+      "id": "BM-05",
+      "rule": "平台时长限制从当前运行时核实；原文12.455秒双生成选择不是H3统一只能生成半段的证据。",
+      "source": "README.md:91；review:33"
+    },
+    {
+      "id": "BM-06",
+      "rule": "同一音乐源的连续窗口在剪辑处不重启；实际接缝以帧率与选帧记录定义。",
+      "source": "prompt.md:249-257；review:48"
+    },
+    {
+      "id": "BM-07",
+      "rule": "参考图的身份/环境权威不能与跨段动作起点混淆；没有精确首帧用途时不强制整图首帧复制。",
+      "source": "prompt.md:126-132,190-204；review:31"
+    },
+    {
+      "id": "BM-08",
+      "rule": "甩发揭眼、低位起身及反向截断都要有具体支撑和运动因果；不得用新增人物、道具或无因抖动替代本任务的身体表演。",
+      "source": "README.md:74-82；prompt.md:335-368"
+    },
+    {
+      "id": "BM-09",
+      "rule": "原案0.25–0.55秒特写、最多一次全转、无对白/口型是片风格规则；迁移时按任务保留或调整。",
+      "source": "prompt.md:3,55；review:29"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "动作链与镜头表",
+      "content": "全局/局部时间、入态、支撑、动作因果、主机制、特写信息和出态。"
+    },
+    {
+      "name": "原稿档案与可提交修订稿",
+      "content": "只读来源、工程变更说明、官方Ref2VA正文及准确的段间接口。"
+    },
+    {
+      "name": "双生成执行/取用清单",
+      "content": "每次输入图/音频/提示词版本、生成时长、source local in/out、目标时间、fps及接缝余量。"
+    },
+    {
+      "name": "匹配剪辑与验收记录",
+      "content": "身体/手轨迹/相机共同相位、实际选帧、音轨连续、缺陷和待生成验证项。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

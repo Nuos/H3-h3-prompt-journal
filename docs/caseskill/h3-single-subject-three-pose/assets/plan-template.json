@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-08-single-subject-three-pose",
+  "delivery_kind": "prompts",
+  "status": "draft",
+  "assembly": "sequential",
+  "runtime": {
+    "profile": "official-2026-10-28"
+  },
+  "fps": 24,
+  "assets": [],
+  "references": [],
+  "segments": [],
+  "handoffs": [],
+  "case_checks": [
+    {
+      "id": "P1",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "P2",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "P3",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "P4",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "P5",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "P6",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "P7",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "P8",
+      "status": "unverified",
+      "evidence": ""
+    }
+  ],
+  "unresolved": [
+    "依据当前任务填入真实输入、输出和案例检查证据；本文件是待填写模板。"
+  ]
+}

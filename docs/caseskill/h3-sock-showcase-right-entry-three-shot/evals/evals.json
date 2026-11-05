@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-sock-showcase-right-entry-three-shot",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "同景三状态鞋袜展示，每状态2.5秒，要求右入无字幕。",
+      "expected_output": "三独立任务和7.5秒编辑表，首帧状态明确，末pose→新stride硬切，原音轨装配责任清楚。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "保留原5.9秒时窗，但H3环境最小生成时长是4秒。",
+      "expected_output": "生成长度与编辑长度分开，规划有效裁切窗并验证动作边界；不宣称可以直接调用1.667秒。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative",
+      "prompt": "一次生成三个状态同时走进画面，用左出右进做到完全无剪辑。",
+      "expected_output": "指出与单状态独立任务策略不符，不添加人物或退出流程；若用户确要另一机制，明确改用不同流程。",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "case_id": "2026-08-dual-subject-speed-contrast",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "03a82e79d8479c6ebc80ded8347f8522a96a64cb8f56e0a76c1a129f44e5bc25",
+      "bytes": 3642,
+      "lines": 70,
+      "git_blob_sha": "4672e2c8969cf78cc7ae9c84f4060d5ce293b6eb",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-dual-subject-speed-contrast/README.md",
+      "reading_note": "全文读取输入、同步问题、比例和模仿方法、摄影声音及作者结果；区分经验解释和模型保证。"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md",
+      "local_path": "references/source-README.zh-CN.md",
+      "sha256": "e2ddd770ce690d4561b71cfd8f48d62b3b62924008705a15ad3b3f1ae6b25513",
+      "bytes": 12645,
+      "lines": 247,
+      "git_blob_sha": "883bccae513bb798c4fb868bf19aabdc12a1380a",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md",
+      "reading_note": "全文读取逐段双语解释，核对相对动作进度与观察滞后的译义；不算第二组实验。"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "60461d26bbfc22ddf6aad4e75ecfae1f75a8ed674460a13189b22f72db6eafe3",
+      "bytes": 2653,
+      "lines": 171,
+      "git_blob_sha": "5643ee691a8e81250057e3a04ca564c8f4c28971",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-dual-subject-speed-contrast/prompt.md",
+      "reading_note": "全文读取中文原提示词171行，抽取两人绑定、3∶1关系、连续与不追赶、景别、器乐约束。"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "97e486a8dbaf52c0025317f2aaa8e4f26bd249c5dda63e587413463ac9e30b1e",
+      "bytes": 12760,
+      "lines": 109,
+      "git_blob_sha": "9242adcb39f1b9c837ea8ce3be3491eadee83c3b",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md",
+      "reading_note": "全文读取计数/速度/延迟和近景/环绕辨析、作者报告证据边界。"
+    },
+    {
+      "path": "docs/casereview/2026-08-dual-subject-speed-contrast.md",
+      "local_path": "references/source-review.md",
+      "sha256": "1fe46d99080ca8598e81edf340eb8eb27e350240a806e9bf87e7ffc43030f07b",
+      "bytes": 4464,
+      "lines": 52,
+      "git_blob_sha": "f37943e6cd8fa8058e0505a1c56dbd23c42792a8",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-dual-subject-speed-contrast.md",
+      "reading_note": "全文读取案例缺口：计数单位和统计窗口未定义、近景不能验证完整脚步、经验不可作执行保证。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

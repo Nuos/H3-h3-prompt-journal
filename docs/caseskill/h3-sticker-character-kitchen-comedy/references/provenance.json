@@ -1,0 +1,73 @@
+{
+  "case_id": "2026-08-sticker-character-kitchen-comedy",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "88e8bbec07a740b63e7f68417bb1e555031e3c33dacada45c625732b9a5a0907",
+      "bytes": 5869,
+      "lines": 93,
+      "git_blob_sha": "07ccc6cada79700019656c65000e1ff185ab1ccb",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+      "reading_note": "全文读取两类失败、媒介/道具方法、职责、切点、声音与作者结果；标记未经对照验证的泛化。"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md",
+      "local_path": "references/source-README.zh-CN.md",
+      "sha256": "e96affe636ae6fee6dad25daadbe1906ec36d097bc8ef4858b634c8eac4137da",
+      "bytes": 15559,
+      "lines": 287,
+      "git_blob_sha": "5290ad33edc00bea3e1ae24e3305ae1b2601e869",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md",
+      "reading_note": "全文读取287行逐段译注，包括全局化不碰罐的叙述风险及three-beat和四镜头的区别。"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "cb0dd901e8162ecb1bfbd89475df2648dcbe8eeb34821cdb9726228d1c09f46e",
+      "bytes": 4666,
+      "lines": 109,
+      "git_blob_sha": "07719668193e6b82226f1380399f0e576c831273",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+      "reading_note": "全文读取109行使用说明、六节正文、四Shot及声场；核对3/5/8秒和实际交互顺序。"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md",
+      "local_path": "references/source-prompt.zh-CN.md",
+      "sha256": "27301d4d415043c298487e5c6f6cbcbda5eb9de98e841acdf683956f3e249764",
+      "bytes": 13742,
+      "lines": 369,
+      "git_blob_sha": "c56419699287a9e074debad5ddfc7242df73f5d9",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md",
+      "reading_note": "全文读取369行译文/术语，核对开口、动作归属、鼓嘴/僵住/微颤/倒地和末尾构图。"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "557648e76f7319cd4dae52878bb62f5b30055a9bdeb66f5e04b78c316a5505a1",
+      "bytes": 11158,
+      "lines": 107,
+      "git_blob_sha": "bca11db0afd44a9a12e1b32b08c833d2a67d08f1",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md",
+      "reading_note": "全文读取媒介/身份、开口/盖子、锅/灶、轻敲/夸张反应及环境声与静音的概念区分。"
+    },
+    {
+      "path": "docs/casereview/2026-08-sticker-character-kitchen-comedy.md",
+      "local_path": "references/source-review.md",
+      "sha256": "57ca92c848e70e4f79d0fee7bf18bb5badea563f19a614e212e049996f7a03ee",
+      "bytes": 4714,
+      "lines": 50,
+      "git_blob_sha": "fa80357ed29beca577b1833a171dc974f5593a62",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-sticker-character-kitchen-comedy.md",
+      "reading_note": "全文读取局部不碰罐、动作预算、媒介/道具因果回归及经验边界的评估。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

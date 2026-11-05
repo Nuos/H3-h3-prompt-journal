@@ -1,0 +1,41 @@
+{
+  "skill_name": "h3-song-style-classical-dance-six-segment",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "SG-positive-dual-grid",
+      "prompt": "三段各9秒，BPM120首拍0.25，主重音每8细拍；两张图第二张只管身份，要求连续、16:9、动作均不腾空。",
+      "expected_output": "输出0.5秒细拍与1秒慢脉冲，结构★的第二段局部3.25/7.25、第三段2.25/6.25；参考权限分开，三个允许的主导机制、左右明确的动态接缝与统一画幅，各段完整Ref2VA。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "SG-boundary-missing-media",
+      "prompt": "只有原案六段文字，照着三位小数证明每个高光已精确对上实曲和上一段末帧。",
+      "expected_output": "可修正文本和核算时长，但明确无音频与成片不能证明同步、实际末态或成功率；保留作者数据的来源标签，不伪造波形测量和生成回归。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "SG-counterexample-stale-hero",
+      "prompt": "照搬S05第二个Hero和前段720度动作，保留S04所有拍表；S03和S05改个名字就声称完全不同。",
+      "expected_output": "删除无前文依据的历史回指并按清单命名；执行稿只保留S04递增权威表；指出两段共享腿线交换，按主导变量区分或替换机制，不能靠名称宣称零重复。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "SG-boundary-lock-and-aspect",
+      "prompt": "前五段竖屏最后横屏直接拼成16:9，最终absolute static但保留呼吸与袖尾；中近景裁到胸部仍要看脚部支撑。",
+      "expected_output": "补统一母版与contain／独立版本契约，不拉伸或任意裁掉支撑；默认解释为相机锁定、人体材料微动并改名locked ending；需要支撑时明确脚至头顶覆盖，化解胸像与看脚冲突。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "case_test_id": "SG-counterexample-audio-scope",
+      "prompt": "Audio fully_copy，同时新增脚步与布料声；因为舞者不唱歌，把原曲歌词删除。",
+      "expected_output": "区分原唱配乐与人物口型；若新增声音则改partially_copy并列明保留范围，若fully_copy则不新增拟音；不因无口型删除原音人声。",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "skill_name": "h3-furina-windsurfing-fashion-mv",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "提供身份图、装备图、两段摄影指导图和测量过的完整音乐事件表，制作三段各 15 秒的帆板写真 MV。",
+      "expected_output": "输出三项 24FPS、15 秒生成计划和 45 秒编辑表；前两段有各自摄影图，第三段只有人物/装备参考及文字运镜；三段六字段正文、两道 IN/OUT 接口、局部/全局事件和全片重制后复验齐全。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary_first_frame",
+      "prompt": "每段都必须精确从同一张站在摄影棚的定妆照开始，同时第二段已经高速乘浪、第三段已经在大浪前，要求无跳变连接。",
+      "expected_output": "明确首帧状态冲突；把原图作为身份来源，或准备各段真实接续帧并选择对应支持模式。没有真实 OUT 帧时列 missing，不以模型跨段记忆或纯文字承诺解决精确接缝。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative_audio",
+      "prompt": "没有音频，也不测量 Suno 结果；直接写原曲是 128 BPM、最终 39.5 秒一定是最强重音并保证返回配乐刚好 45 秒。",
+      "expected_output": "128 BPM 和 39.5 秒只能记为设计目标，实测字段保持 missing；不保证外部重制时长或原时码，要求返回轨事件表与再次同步。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "boundary_duration",
+      "prompt": "把全部 45 秒作为一个标准 H3 生成任务，第三段英雄画面冻结人物和海浪 4 秒以保证卡点。",
+      "expected_output": "拆为合规的 4–15 秒、24FPS 生成切片并单列编辑总长；解释稳定英雄构图不等于冻结整幅画面，重排动作/音乐以保留离水到回水的连续链。",
+      "files": []
+    }
+  ]
+}

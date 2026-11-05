@@ -1,0 +1,83 @@
+{
+  "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "e30609f323379c5495ea1d3c46c03d948f1692407b74a2aa3a5bac4286427290",
+      "bytes": 13205,
+      "lines": 115,
+      "git_blob_sha": "820f293466c621b83008067f2ba57dce4b88927e",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+      "reading_note": "全文阅读：五章灯态、31拍数学、十Moment及A/B宣称；与实际正文逐项对照纠正入口和受控范围。"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt",
+      "local_path": "references/source-p83-dark-luxury-skirt-throw.txt",
+      "sha256": "da58a065f3c2f7b825e1958717f4cbe97dfd9fa60a816e054b2f55ce4243f032",
+      "bytes": 26943,
+      "lines": 1306,
+      "git_blob_sha": "4da9e6df67e2adbb33d569cb830cde800b7878f8",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt",
+      "reading_note": "全文阅读全部1306行（逐行保留所有非空内容）：实际NEW CUTE/A major、jump Hero，02/06/09禁roll，04可选correction，05全局sweep残词、完整音画优先级。"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt",
+      "local_path": "references/source-p83-dark-luxury-skirt-throw.zh-CN.txt",
+      "sha256": "1013cd7615d245d9e0127e4004a5091479fe09fda746c042b1a96f5814d75b54",
+      "bytes": 27451,
+      "lines": 370,
+      "git_blob_sha": "f9c13e974868d922acd8f49a725e6d4f88f2c12f",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt",
+      "reading_note": "全文阅读：按实际可爱跳跃正文的中文译解；复核轻弹非离地、手不触裙、衣料惯性与最终锁机。"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt",
+      "local_path": "references/source-p84-cute-backfolded-jump.txt",
+      "sha256": "0a5d2c13f1c0718c09be689feab290bf85cc87a9b204c1d95d74e7ed012108d6",
+      "bytes": 27900,
+      "lines": 1234,
+      "git_blob_sha": "b4863def7914a1dcbaca6695330c8b548b184377",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt",
+      "reading_note": "全文阅读全部1234行（逐行保留所有非空内容）：实际E minor/甩裙，02Dutch、04roll、06/09可选roll、OFF残余照明、编辑strobe、甩裙因果与结尾保持。"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt",
+      "local_path": "references/source-p84-cute-backfolded-jump.zh-CN.txt",
+      "sha256": "90fc1572bbb9f11fdd7f40e019cec893ad47e9d412280d8f301f88e89ad78597",
+      "bytes": 27319,
+      "lines": 355,
+      "git_blob_sha": "22fefc9744dadf16edd24039071ed7eed0ed24c5",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt",
+      "reading_note": "全文阅读：实际暗奢译解，核对服装抓握预载、冲量／惯性、摄影后退时机及声音层。"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "b35ad6664669769fc3074266071435db82c39ad5aeac9d45c4f19dd3f40d421a",
+      "bytes": 19149,
+      "lines": 176,
+      "git_blob_sha": "73f3a15ffddc95437e8632d458e522ab00730899",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md",
+      "reading_note": "全文阅读：版本反转准确对照、80词及时间／roll／惯性辨析；确认术语不构成通用技术标准。"
+    },
+    {
+      "path": "docs/casereview/2026-09-editorial-lamp-rhythm-fashion-ab.md",
+      "local_path": "references/source-review.md",
+      "sha256": "e825c496c1b1a1253aace04641b35decf626fae7ec2a9e861bc70c412e006e3b",
+      "bytes": 5961,
+      "lines": 52,
+      "git_blob_sha": "55a8292ee28e9818a70404ee512595a2c29b00f5",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-09-editorial-lamp-rhythm-fashion-ab.md",
+      "reading_note": "全文阅读：采用入口P0、真实roll差异、31拍五态四切换、未量测同步和自由边界等评估修复。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

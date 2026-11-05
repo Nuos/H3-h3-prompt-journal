@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-advanced-camera-combinations",
+  "delivery_kind": "component",
+  "status": "draft",
+  "assembly": "component",
+  "runtime": {
+    "profile": "official-2026-10-28"
+  },
+  "fps": 24,
+  "assets": [],
+  "references": [],
+  "segments": [],
+  "handoffs": [],
+  "case_checks": [
+    {
+      "id": "ACM01",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ACM02",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ACM03",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ACM04",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ACM05",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ACM06",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ACM07",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "ACM08",
+      "status": "unverified",
+      "evidence": ""
+    }
+  ],
+  "unresolved": [
+    "依据当前任务填入真实输入、输出和案例检查证据；本文件是待填写模板。"
+  ]
+}
