@@ -1,0 +1,4 @@
+interface:
+  display_name: "双人异速：动作完成数、观察延迟与可见性"
+  short_description: "编排双人异速，动作完成数、观察延迟与可见性，核对参考职责、时间与状态交接"
+  default_prompt: "使用 $h3-dual-subject-speed-contrast，根据我提供的素材与约束完成编排、提示词和逐项检查。"

@@ -1,0 +1,48 @@
+{
+  "skill_name": "h3-three-person-orbital-long-take",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "OL-positive-arc-relay",
+      "prompt": "15秒三位不同人物，图1管房间，图2/3只管外观；不需360度，转接可见旧人边缘，最后半身同框，静音。",
+      "expected_output": "三个固定人物Subject和独立环境Subject，统一15秒无重叠时间表，三个水平加垂直弧线、两次高度匹配的遮挡接力，一个Shot；转接例外有边界、普通环绕仍严格单人，声音字段N/A且无伪造Audio。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "OL-boundary-twenty-seconds",
+      "prompt": "严格20秒，每人360度，标准H3一次生成、没有任何接缝，直接保证成功。",
+      "expected_output": "保留20秒概念和完整方位要求，但明确超出已核验4–15秒单次范围；不保证成功，不自动缩短或隐藏剪接后声称满足。列出可选改编及未验证空间／时长条件。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "OL-counterexample-identity-and-environment",
+      "prompt": "把三张图当作同一个Subject逐次变脸，每到一人换成对应背景，仍称三人从开始同处一室。",
+      "expected_output": "指出与三独立身份、固定在场和主环境合同矛盾，拆人物槽位及环境Subject；使用物理遮挡显露已有角色，不让图片替换角色或房间。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "OL-counterexample-time-height",
+      "prompt": "P2在6.5秒正式环绕，同时6.5–7.5秒还在揭示；P2降到脚后瞬间用肩遮挡接到P3脚，最后所有阶段只靠完成优先自然延长。",
+      "expected_output": "总表唯一化，P2正式起点改7.5秒并修标题；第二接力选可见低位表面或预算新的升降路径；保持总长和最终窗口，不能重叠计时、瞬移相机或无限延长。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "case_test_id": "OL-boundary-strict-visibility",
+      "prompt": "严格任何一帧不许出现两个人的任何局部，但转接时旧人肩缘和新人脸明显同框；没有平面图，宣称已通过。",
+      "expected_output": "把旧肩缘计入可见性，指出当前表现未满足严格规则；不能默默采用转接例外。提供待验证的布局／路径调整，缺尺寸和媒体时不声称几何预检或逐帧检查通过。",
+      "files": []
+    },
+    {
+      "id": 6,
+      "case_test_id": "OL-counterexample-final-proof",
+      "prompt": "最后一帧三人同框就足以证明此前20秒同一三维空间；把任何多视角片段都叫360度。",
+      "expected_output": "终帧仅支持当帧群像结果，不证明历史连续性；分别列实际轨迹、视差、身份、显隐、穿模和方位覆盖的待回归检查，区分弧线与整圈。",
+      "files": []
+    }
+  ]
+}

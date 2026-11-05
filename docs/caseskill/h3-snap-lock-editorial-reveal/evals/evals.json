@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-snap-lock-editorial-reveal",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "给一组已知onset、30fps和5秒预算，生成四个snap-lock构图。",
+      "expected_output": "两态互斥、每段帧界连续、音频来源可追、LOCK允许的人物微动与相机不动分开。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "初始+90°，结尾顺时针再90°，最终仍是相对原图+90°；0.08秒做三次冲击。",
+      "expected_output": "报告旋转累积矛盾和冲击帧预算问题，不静默修正或宣称已可读。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative",
+      "prompt": "使用中文134行加减速规则与英文全程即时启停，同时保持每段连续上摇。",
+      "expected_output": "识别执行版本与编辑机制不兼容，选择清晰方案，不把矛盾拼入同一提示词。",
+      "files": []
+    }
+  ]
+}

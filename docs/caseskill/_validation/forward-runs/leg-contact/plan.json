@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-leg-lift-contact-cut-stocking-six-look",
+  "delivery_kind": "prompts",
+  "status": "ready",
+  "assembly": "sequential",
+  "runtime": {
+    "profile": "official-2026-10-28"
+  },
+  "fps": 24,
+  "edit_fps": 30,
+  "assets": [],
+  "references": [],
+  "handoffs": [],
+  "segments": [
+    {
+      "id": "SEG01",
+      "mode": "T2VA",
+      "duration_s": 8,
+      "global_start_s": 0,
+      "frame_count": 192,
+      "reference_labels": [],
+      "prompt_file": "SEG01.txt",
+      "entry_state": "LOOK0, both feet planted, left primary support",
+      "exit_state": "LOOK3, both feet at original positions, no further lifts",
+      "shots": [
+        {
+          "id": 1,
+          "start_s": 0,
+          "end_s": 2,
+          "action": "Initial plain socks; right-foot lift and descent before first contact.",
+          "camera": "Fixed frontal head-to-toe view; same framing across every appearance cut.",
+          "sound": "Complete silence, including foot contacts."
+        },
+        {
+          "id": 2,
+          "start_s": 2,
+          "end_s": 4,
+          "action": "Contact changes to stripes; planted display, then next compact lift and descent.",
+          "camera": "Fixed frontal head-to-toe view; same framing across every appearance cut.",
+          "sound": "Complete silence, including foot contacts."
+        },
+        {
+          "id": 3,
+          "start_s": 4,
+          "end_s": 6,
+          "action": "Contact changes to chevrons; planted display, then next compact lift and descent.",
+          "camera": "Fixed frontal head-to-toe view; same framing across every appearance cut.",
+          "sound": "Complete silence, including foot contacts."
+        },
+        {
+          "id": 4,
+          "start_s": 6,
+          "end_s": 8,
+          "action": "Contact changes to dots; final stable display through the end.",
+          "camera": "Fixed frontal head-to-toe view; same framing across every appearance cut.",
+          "sound": "Complete silence, including foot contacts."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "E1",
+      "lift_start_s": 1.5,
+      "descent_start_s": 1.75,
+      "contact_s": 2,
+      "cut_s": 2,
+      "native_contact_frame": 48,
+      "edit_contact_frame": 60,
+      "hold_end_s": 2.5,
+      "next_lift_s": 3.5,
+      "old_look": "LOOK0",
+      "new_look": "LOOK1",
+      "audio": "explicit silence",
+      "quantization_error_s": 0
+    },
+    {
+      "id": "E2",
+      "lift_start_s": 3.5,
+      "descent_start_s": 3.75,
+      "contact_s": 4,
+      "cut_s": 4,
+      "native_contact_frame": 96,
+      "edit_contact_frame": 120,
+      "hold_end_s": 4.5,
+      "next_lift_s": 5.5,
+      "old_look": "LOOK1",
+      "new_look": "LOOK2",
+      "audio": "explicit silence",
+      "quantization_error_s": 0
+    },
+    {
+      "id": "E3",
+      "lift_start_s": 5.5,
+      "descent_start_s": 5.75,
+      "contact_s": 6,
+      "cut_s": 6,
+      "native_contact_frame": 144,
+      "edit_contact_frame": 180,
+      "hold_end_s": 6.5,
+      "next_lift_s": null,
+      "old_look": "LOOK2",
+      "new_look": "LOOK3",
+      "audio": "explicit silence",
+      "quantization_error_s": 0
+    }
+  ],
+  "look_sequence": [
+    "plain charcoal",
+    "fine gray horizontal stripes",
+    "small gray chevrons",
+    "small gray polka dots"
+  ],
+  "case_checks": [
+    {
+      "id": "LCC01",
+      "status": "pass",
+      "evidence": "SEG01.txt Shots 1–4: old pattern survives each lift/descent, and first visible contact at 2/4/6 seconds triggers the change; this is a prompt target, not observed footage."
+    },
+    {
+      "id": "LCC02",
+      "status": "pass",
+      "evidence": "Events explicitly place contact/cut at 2/4/6, planted display through 2.5/4.5/6.5 and next lifts at 3.5/5.5; after final contact no further lift occurs."
+    },
+    {
+      "id": "LCC03",
+      "status": "pass",
+      "evidence": "The farther left foot is fixed as primary support; the nearer right foot lifts six centimeters and returns to one marked point. Body, shoes and camera are matched across cuts."
+    },
+    {
+      "id": "LCC04",
+      "status": "pass",
+      "evidence": "Three changes produce four prints: plain, stripes, chevron, dots. Each print has its own Shot interval."
+    },
+    {
+      "id": "LCC05",
+      "status": "pass",
+      "evidence": "At native 24 FPS, planned boundaries are 48/96/144; at the 30 FPS edit they are 60/120/180, all zero-based t=frame/fps. No frame-accurate generation claim is made."
+    },
+    {
+      "id": "LCC06",
+      "status": "pass",
+      "evidence": "Shots cover [0,2), [2,4), [4,6), [6,8) without gaps; the last two seconds retain the final print."
+    },
+    {
+      "id": "LCC07",
+      "status": "pass",
+      "evidence": "One 8-second T2VA generation request, one fixed camera setup, three explicit same-view appearance cuts; these are separately represented."
+    },
+    {
+      "id": "LCC08",
+      "status": "pass",
+      "evidence": "The task authorizes a new fictional adult and provides no media. T2VA uses no Video or Picture tags; a complete physical event table supplies the action."
+    },
+    {
+      "id": "LCC09",
+      "status": "pass",
+      "evidence": "The task explicitly requests complete silence. Both audio fields are N/A, and the prompt says visible contacts remain silent; no copied track or new sound is asserted."
+    }
+  ],
+  "unresolved": [],
+  "verification_scope": "Prompt content and static plan only; no model inference, video measurement or frame conversion was performed."
+}

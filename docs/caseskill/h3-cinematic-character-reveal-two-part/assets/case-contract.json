@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-08-cinematic-character-reveal-two-part",
+  "skill_name": "h3-cinematic-character-reveal-two-part",
+  "required_check_ids": [
+    "CR-01",
+    "CR-02",
+    "CR-03",
+    "CR-04",
+    "CR-05",
+    "CR-06",
+    "CR-07",
+    "CR-08",
+    "CR-09"
+  ],
+  "checks": [
+    {
+      "id": "CR-01",
+      "rule": "脸部唯一来源与身体/服装/姿态/场景来源分别绑定到同一角色；补充姿态不得混入新脸或新增人物。",
+      "source": "prompt.md:36-58,309-323；vocabulary-expanded.zh-CN.md:25-41"
+    },
+    {
+      "id": "CR-02",
+      "rule": "所有主要姿态必须能在真实参考中定位；Pose 01–11是原稿标签，不是已经建立的图内索引。允许微动不等于允许发明主要姿态。",
+      "source": "prompt.md:54-58,102-149,352-367；review:28,42"
+    },
+    {
+      "id": "CR-03",
+      "rule": "每段13 CUT是时间块数量，包含多次分切的块须展开，不能直接报告恰好13个实际镜头或全片26镜头。",
+      "source": "prompt.md:125-134,403-439,452-497；review:30"
+    },
+    {
+      "id": "CR-04",
+      "rule": "跨生成精确接续需要实际末帧/状态和运行时支持；两张原始定妆图及双端重述不足以证明上一片段状态已传入。",
+      "source": "prompt.md:140-149,368-375；review:28,40；vocabulary-expanded.zh-CN.md:127"
+    },
+    {
+      "id": "CR-05",
+      "rule": "连续BGM和环境声有全局偏移与编辑/复用方案；第二段不从音轨0秒重启，完整音轨复制与新增声效不得冲突。",
+      "source": "prompt.md:221-257,552-585；review:28,36"
+    },
+    {
+      "id": "CR-06",
+      "rule": "无BPM/拍表时不能把秒数表称为已验证卡点；五拍高潮和块内快切需明确实际拍点、细分拍及帧预算。",
+      "source": "prompt.md:403-420,452-497；review:30,42"
+    },
+    {
+      "id": "CR-07",
+      "rule": "镜头去重按具体机制和构图审计，允许回调需声明变化维度；两段建筑遮挡实际相似，不能照抄完全不重复的结果断言。",
+      "source": "prompt.md:116-117,383-439,442-449；review:41；vocabulary-expanded.zh-CN.md:115-119"
+    },
+    {
+      "id": "CR-08",
+      "rule": "图形剪辑改变摄影图像关系，不能变形角色身体；近景优先保留身份和服装细节，稳定姿态允许任务指定的眼睛/衣料微动。",
+      "source": "prompt.md:72-96,151-178,535-550；vocabulary-expanded.zh-CN.md:43-77,101-112"
+    },
+    {
+      "id": "CR-09",
+      "rule": "30秒原案按两个15秒生成切片规划；引入/升级/收束为创作结构，约20秒、纯器乐或特定教堂风格都不是H3通用能力限制。",
+      "source": "README.md:5-12,26-32；prompt.md:30-33,296-300；official standard duration"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "参考权限与姿态索引",
+      "content": "每个输入的实际用途、角色唯一脸部来源、批准姿态ID与图内位置、各段已用/待重点展示状态。"
+    },
+    {
+      "name": "展开后的真实镜头表",
+      "content": "创作块ID与实际Shot映射、全局/局部起止、帧预算、视觉事件与音乐证据、姿态/景别/机制。"
+    },
+    {
+      "name": "双端交接包",
+      "content": "第一段出态、第二段入态、末帧/末段资产、相机/光照/衣料余势、音频偏移、环境声底层与运行时可用性。"
+    },
+    {
+      "name": "两段H3正文与去重报告",
+      "content": "各段独立完整字段、真实参考绑定，逐镜去重/回调例外、静态检查和待生成验证范围。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

@@ -1,0 +1,182 @@
+{
+  "pass": true,
+  "skills": [
+    {
+      "skill_name": "h3-cinematic-character-reveal-two-part",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-dual-subject-speed-contrast",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-first-person-finger-controlled-dance",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-furina-windsurfing-fashion-mv",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-single-subject-three-pose",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-sticker-character-kitchen-comedy",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-three-person-orbital-long-take",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-water-obstacle-variety-show",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-action-chain-sock-fan-comedy",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-editorial-lamp-rhythm-fashion-ab",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-purple-veil-dance-seven-segment",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-snap-lock-editorial-reveal",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-song-style-classical-dance-six-segment",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-three-person-prank-freeze-gag-cos-swap",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-advanced-camera-combinations",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-baifeng-mengchen-classical-dance-six-segment",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-camera-movement-discipline-library",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-classical-wuxia-dance-13-segment",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-dance-motion-chain-library",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-four-subject-formation-choreography",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-motion-transfer",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-identity-only-half-body-dance-six-segment",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-kanzaki-beach-sword-dance-18-segment",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-leg-lift-contact-cut-stocking-six-look",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-physical-camera-position-library",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-sock-showcase-right-entry-three-shot",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-summer-pool-beach-waterline-mv-4-segment",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-waterfront-solo-dance-two-segment",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "skill_name": "h3-xiashan-veiled-solo-twelve-segment",
+      "pass": true,
+      "exit_code": 0,
+      "result": "Skill is valid!"
+    }
+  ],
+  "evidence_records": 234,
+  "evidence_errors": [],
+  "scope": "Creator metadata validator plus evidence ID and line-range checks; not automatic semantic entailment."
+}

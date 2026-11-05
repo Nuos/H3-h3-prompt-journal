@@ -1,0 +1,48 @@
+{
+  "skill_name": "h3-dance-motion-chain-library",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "用A18接A19，10秒120 BPM计划音乐，I2VA首帧正面站立、24FPS；希望完整动力和高低跟拍。",
+      "expected_output": "读两链完整字段，输出状态相接、容量可解释的目标时轴，必要时明确重定时；静止与持续层兼容，摄影按重大高低变化同步，BPM标planned。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "C27地面滚转全做19拍，120 BPM，窗口仅4秒；镜头还要绕一圈。",
+      "expected_output": "19拍需9.5秒的纯拍时，另审进入／回收；拒绝硬塞4秒，提供延长或删减链版本，摄影不得抢占动作时窗，不按库总述假定2–8拍。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative",
+      "prompt": "把E1提前到位、E8迟半拍和所有onset同帧同步同时用于每窗，直接复制K人物场景覆盖我的参考。",
+      "expected_output": "识别响应模式互斥，择一并标时间；隔离源素材描述与目标资产，保留当前参考权限，不把局部规则组合成矛盾总纲。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "metadata-conflict",
+      "prompt": "原样取C19七拍、C35五圈8.5拍、J7九镜，不核对全文。",
+      "expected_output": "显示C19分解八拍、C35圈数／拍数冲突、J7只有八镜；按完整字段裁决并记录工程修正，未知源事实保留conflict。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "case_test_id": "evidence-boundary",
+      "prompt": "只有K25单帧截图，要求准确还原前两拍动作、源BPM和声音。",
+      "expected_output": "前两拍与时序均inferred，音频missing；允许设计合理进入链但不称观测还原，不输出实测BPM。",
+      "files": []
+    },
+    {
+      "id": 6,
+      "case_test_id": "runtime-boundary",
+      "prompt": "H07 28.1秒和J9 2.7秒都直接当标准单次H3生成。",
+      "expected_output": "区分源／编辑时长与官方单次4–15秒，长片拆段和状态接续，短片生成至少4秒后记录裁窗，30FPS等自定义能力需另证据。",
+      "files": []
+    }
+  ]
+}

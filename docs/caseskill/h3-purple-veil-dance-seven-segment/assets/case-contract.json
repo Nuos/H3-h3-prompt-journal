@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-09-purple-veil-dance-seven-segment",
+  "skill_name": "h3-purple-veil-dance-seven-segment",
+  "required_check_ids": [
+    "PV-01",
+    "PV-02",
+    "PV-03",
+    "PV-04",
+    "PV-05",
+    "PV-06",
+    "PV-07",
+    "PV-08"
+  ],
+  "checks": [
+    {
+      "id": "PV-01",
+      "rule": "段内具体动作的先后、路径、支撑与出态优先于spiral/wave等质量词堆叠。",
+      "source": "README.md:14,54-56,68；prompt.md:705-710,751-780"
+    },
+    {
+      "id": "PV-02",
+      "rule": "主动力轮换按段落计划执行；复合高潮按顺序展开，不将全部部位同时设为主动力。",
+      "source": "README.md:21-33；prompt.md:530-540,705-710"
+    },
+    {
+      "id": "PV-03",
+      "rule": "匹配剪辑必须匹配具体交接物、左右、空间高度和运动方向，且对象在后段首镜可见。",
+      "source": "README.md:35-37,74-82；review:39-40"
+    },
+    {
+      "id": "PV-04",
+      "rule": "全局边界决定局部段长；所有动作区间必须覆盖且不越过该长度，首拍和歌词时间各自保留来源。",
+      "source": "README.md:46-48；review:38"
+    },
+    {
+      "id": "PV-05",
+      "rule": "全程面纱锁与眼睛/上脸显露不能并存；按任务选定可见性政策后同步正文与交接表。",
+      "source": "prompt.md:229-234,392-400,629-633；review:39"
+    },
+    {
+      "id": "PV-06",
+      "rule": "侧弓步的支撑脚、伸腿接地和膝不触地条件要显式，不能靠低位形容词代替。",
+      "source": "README.md:17,70；prompt.md:205-218"
+    },
+    {
+      "id": "PV-07",
+      "rule": "紫衣显色方案仅为案例假设/作者经验；通过小规模输出核验后再推广，不称为所有材质的色彩定律。",
+      "source": "README.md:39-44,85-89；review:30"
+    },
+    {
+      "id": "PV-08",
+      "rule": "音频节奏参考与最终信号复用分开；无歌词manifest时不声称已经实测对齐。",
+      "source": "README.md:7-9,48；prompt.md:22-24；review:28-30"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "音乐与分段manifest",
+      "content": "全局区间、真实局部时长、首拍/歌词事件来源、局部换算、末端覆盖。"
+    },
+    {
+      "name": "主动力与交接矩阵",
+      "content": "每段主导机制、跟随部位、左右肢体/衣料交接物、位置高度、方向、首镜可见性。"
+    },
+    {
+      "name": "可见性及显色方案",
+      "content": "服装不变量、面纱允许可见范围、主体与背景光色关系、代表镜头试验与待验证指标。"
+    },
+    {
+      "name": "逐段H3正文与Gate报告",
+      "content": "官方字段提示词、清晰动作时间线、音频角色、越界/漏时/交接/遮面检查。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "紫纱亭舞：主动力轮换、实物交接与服装显色"
+  short_description: "编排紫纱亭舞，主动力轮换、实物交接与服装显色，核对参考职责、时间与状态交接"
+  default_prompt: "使用 $h3-purple-veil-dance-seven-segment，根据我提供的素材与约束完成编排、提示词和逐项检查。"

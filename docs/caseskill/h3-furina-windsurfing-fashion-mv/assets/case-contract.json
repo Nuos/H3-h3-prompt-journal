@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-08-furina-windsurfing-fashion-mv",
+  "skill_name": "h3-furina-windsurfing-fashion-mv",
+  "required_check_ids": [
+    "FWM01",
+    "FWM02",
+    "FWM03",
+    "FWM04",
+    "FWM05",
+    "FWM06",
+    "FWM07",
+    "FWM08",
+    "FWM09",
+    "FWM10"
+  ],
+  "checks": [
+    {
+      "id": "FWM01",
+      "rule": "把人物身份、装备结构和当段摄影关系分别赋予参考权限；不复制多视角版面或图示箭头，并先解决人物图与装备图的服装冲突。",
+      "source": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md:59-133,292-311；case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md:17-19（逐属性冲突裁决为工程补齐）"
+    },
+    {
+      "id": "FWM02",
+      "rule": "源策略第三段只移除摄影指导图，仍保留人物与装备参考；这是为当前高潮重新设计镜头，不是跨段记忆清除或所有任务都应减少图片。",
+      "source": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md:137-185,746-806,1133-1183；docs/casereview/2026-08-furina-windsurfing-fashion-mv.md:32,45"
+    },
+    {
+      "id": "FWM03",
+      "rule": "独立生成的片段必须显式交接运动和构图状态；同一静态定妆图不能同时充当三个互不相同的精确开场帧。按实际模式处理接续素材，文字开场指令仍须结果核验。",
+      "source": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md:294-298,547-551,789-793,1141；docs/casereview/2026-08-furina-windsurfing-fashion-mv.md:43（IN/OUT 接口为评估驱动的工程补齐）"
+    },
+    {
+      "id": "FWM04",
+      "rule": "三段按建立高速运动、逼近更大浪壁、最终受控腾空递进；第二段不得提前完成最终跳跃，第三段回水后不再新增主要动作。",
+      "source": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md:263-283,469-471,514-535,575-577,691-715,1071-1083"
+    },
+    {
+      "id": "FWM05",
+      "rule": "高潮保持帆板运动及装备连接：上浪→离水→空中→下降→板触水→继续滑行；landing 是板体回水，不是人物跌落水中。源动作不含后空翻、复杂旋转或海啸水墙。",
+      "source": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md:816-846,963-1051,1085-1110；case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md:708-791,818-833"
+    },
+    {
+      "id": "FWM06",
+      "rule": "Hero Shot 稳定的是摄影构图和运镜强度，人物、帆板、布料和海浪继续运动。主视觉需同时看清人物、帆、板与离水间隙；近景长焦不等于摄影机物理距离必须极近。",
+      "source": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md:941-947,999-1041；case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md:48,54-56（可读性优先级为工程补齐）"
+    },
+    {
+      "id": "FWM07",
+      "rule": "区分原文报告、当前设计目标与实际音频测量；mini-turnaround 是音乐转接。没有当前音频不得编造 BPM、重拍或最强重音时码。",
+      "source": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md:191-242,419-427,949-961；case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md:205-212；case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md:65-74,99"
+    },
+    {
+      "id": "FWM08",
+      "rule": "完整视频先装配，完整音频再交给外部配乐重制，返回音轨必须重新对齐全片事件；不把 Suno 重制视作固定时长或保留原始拍点的保证。",
+      "source": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md:1187-1287,1291-1334,1441-1465；docs/casereview/2026-08-furina-windsurfing-fashion-mv.md:33,37,44"
+    },
+    {
+      "id": "FWM09",
+      "rule": "源三段自由格式提示词需按实际模式迁移为官方 Ref2VA 六字段或基础模式三字段。标准生成每片 4–15 秒、24FPS；多段成片总时长、剪辑帧率和裁切时长单列，不能冒充一次生成能力。",
+      "source": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md:290-490,543-734,785-1129；docs/casereview/2026-08-furina-windsurfing-fashion-mv.md:37,39；官方 H3 格式与能力边界见本技能 references/h3-official.md（协议迁移及生成/编辑分离为工程补齐）"
+    },
+    {
+      "id": "FWM10",
+      "rule": "参考图等权、撤图更有效、Suno 更连贯均保留为源作者的经验或意图，不写成模型内部机制或已验证保证；源资产缺失和实际未执行的部分必须明示。",
+      "source": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.md:14-18,64-72,94-104；docs/casereview/2026-08-furina-windsurfing-fashion-mv.md:29-33,45；case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md:14,88,107"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "资产与参考权限表",
+      "content": "实际文件/版本、局部标签、人物/装备/摄影/声音职责、保留范围、明确排除、缺失或不可见信息、每段是否启用。"
+    },
+    {
+      "name": "三段状态与时间表",
+      "content": "段落职责、generation_duration、edit_duration、fps、局部/全局窗口、IN/OUT 状态、接续证据与缺项；计划状态与实际批准帧分列。"
+    },
+    {
+      "name": "逐段官方格式提示词",
+      "content": "每段完整独立的 Ref2VA 六字段英文输出，或按真实模式切换后的三字段输出；正文有可见动作、摄影和声音因果，第三段明确无摄影参考而保留角色/装备来源。"
+    },
+    {
+      "name": "动作—摄影—音乐事件表",
+      "content": "Drop、预备、板离水、可读主视觉、板触水、释放及收尾的局部/全局时间、planned/measured 来源、动作状态与摄影状态。"
+    },
+    {
+      "name": "装配与配乐交接单",
+      "content": "片段选择、裁切、全片版本、完整参考音频、外部重制任务、返回轨版本、各声层职责，以及新音乐事件/原视频事件/偏差/修正/复验的对位记录。"
+    },
+    {
+      "name": "验收及证据边界",
+      "content": "两道接缝、装备接触、波浪和风、水花因果、主视觉可读性及最终音画同步；未实际生成、媒体缺失、未测量音频和源作者经验单独列明。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

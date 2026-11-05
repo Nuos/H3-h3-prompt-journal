@@ -1,0 +1,4 @@
+interface:
+  display_name: "单人三姿态锚点与近身连续飞行摄影"
+  short_description: "编排单人三姿态锚点与近身连续飞行摄影，核对参考职责、时间与状态交接"
+  default_prompt: "使用 $h3-single-subject-three-pose，根据我提供的素材与约束完成编排、提示词和逐项检查。"

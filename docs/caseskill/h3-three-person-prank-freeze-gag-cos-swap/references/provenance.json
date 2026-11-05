@@ -1,0 +1,73 @@
+{
+  "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "00b141391037d6173c13721474d8f36ec73b6ea17c3f7429a07955ac8dcc3de6",
+      "bytes": 6844,
+      "lines": 91,
+      "git_blob_sha": "9f42cf388a5b8e3d84a5b2160b5aab445733d829",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md",
+      "reading_note": "全文阅读：分析来源与T2VA输入边界、画外第三人、判别抽帧、声画对账、冻结与仅换皮合同；14字段说法由实际prompt纠正。"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md",
+      "local_path": "references/source-README.zh-CN.md",
+      "sha256": "b06317bdb5059cd2a01a95bfe763e306ef095c37a59dd9c3c595dec632d21781",
+      "bytes": 17909,
+      "lines": 305,
+      "git_blob_sha": "0b28c91a167e20b593b2131bbb18ec9440dabbb4",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md",
+      "reading_note": "全文阅读：逐段原文／中文释义；核对三拍机制、五通道分析和外观替换边界，与原文时长和字段说法交叉审查。"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "da7562b149ee4c72e7813ae6320b50a29e26caafacab9159263b09c023d35a71",
+      "bytes": 15041,
+      "lines": 95,
+      "git_blob_sha": "5134e8fe1a15e2c381e2546ae700754596380c6f",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md",
+      "reading_note": "全文阅读：实际12字段、面罩状态、画外手介入次序、15.3秒末点、三段freeze和声场；建立道具、因果及时间裁决。"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md",
+      "local_path": "references/source-prompt.zh-CN.md",
+      "sha256": "cd27eb33e16c39c26773ba53956886039eeedccd7ea1dbd0639783d1a08951d8",
+      "bytes": 42551,
+      "lines": 628,
+      "git_blob_sha": "01c8289ffeb1639b225c35b986406f9d5405f0e1",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md",
+      "reading_note": "全文阅读：51段双语正文、功能面罩、受力先后、湿润材料和定格声层；确认翻译未提供独立媒体量测。"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "82ec632d7f0e7dca5c38481361f12bd97fff53d113465e65cc142b43fe9a7492",
+      "bytes": 11110,
+      "lines": 109,
+      "git_blob_sha": "de577943cdfcafa3046d019dfda86129583926cc",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md",
+      "reading_note": "全文阅读：50词义辨析、画外agent、freeze与pose hold、无配乐不等于无SFX、15.3秒与RMS边界；防止错误泛化。"
+    },
+    {
+      "path": "docs/casereview/2026-09-three-person-prank-freeze-gag-cos-swap.md",
+      "local_path": "references/source-review.md",
+      "sha256": "d082ad57b352826741d35db87564fd60a1b99ef8ae2df61ac050cdc0a9c1165d",
+      "bytes": 5036,
+      "lines": 53,
+      "git_blob_sha": "fac1c64b21e03ed7de1ffe150dea1a94dc4ad9e4",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-09-three-person-prank-freeze-gag-cos-swap.md",
+      "reading_note": "全文阅读：采纳外部skill与原媒体缺证、字段14/12、15.3秒和首0.6秒、采样不足的评估，并补可对账时轴与状态表。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

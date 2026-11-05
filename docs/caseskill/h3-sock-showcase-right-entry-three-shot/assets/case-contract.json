@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-sock-showcase-right-entry-three-shot",
+  "skill_name": "h3-sock-showcase-right-entry-three-shot",
+  "required_check_ids": [
+    "SRE01",
+    "SRE02",
+    "SRE03",
+    "SRE04",
+    "SRE05",
+    "SRE06",
+    "SRE07",
+    "SRE08"
+  ],
+  "checks": [
+    {
+      "id": "SRE01",
+      "rule": "每个状态独立生成，首帧已经是该状态并处于画右跨步中；单段不描述画内换装。",
+      "source": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md:20-26,40-44；case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md:3-5,17-27,44-54,71-81"
+    },
+    {
+      "id": "SRE02",
+      "rule": "终帧保留pose，下一镜从跨步进入；两侧不是同一动作无缝续接。",
+      "source": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md:25,52,79；docs/casereview/2026-10-sock-showcase-right-entry-three-shot.md:43"
+    },
+    {
+      "id": "SRE03",
+      "rule": "只改变状态目录指定的袜饰属性，其余身份、主服装、场景和机位保持；图像权威保留明确例外。",
+      "source": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md:5,15-25,42-52,69-79；docs/casereview/2026-10-sock-showcase-right-entry-three-shot.md:44"
+    },
+    {
+      "id": "SRE04",
+      "rule": "不添加走出清屏、空帧或另一人物来解释状态变化，硬切本身负责重置片段。",
+      "source": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md:14-15,22-26；case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md:27,54,81"
+    },
+    {
+      "id": "SRE05",
+      "rule": "生成片段与后期整轨音频装配分工明确；fully_copy提示文字不替代真实音频复用。",
+      "source": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md:3,90-98；docs/casereview/2026-10-sock-showcase-right-entry-three-shot.md:31"
+    },
+    {
+      "id": "SRE06",
+      "rule": "切点检测阈值及4.4秒候选只属于源分析记录；没有逐帧证据不能断言它是误报或无关。",
+      "source": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md:13；docs/casereview/2026-10-sock-showcase-right-entry-three-shot.md:29,33,45"
+    },
+    {
+      "id": "SRE07",
+      "rule": "实际调用前核验短时长/帧数支持，可用生成余量和裁切实现目标，但不虚构调用能力。",
+      "source": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md:9,36,63；docs/casereview/2026-10-sock-showcase-right-entry-three-shot.md:39"
+    },
+    {
+      "id": "SRE08",
+      "rule": "一镜一状态、右侧入画和无文字是本展示策略的默认，不作为全部H3任务的统一限制。",
+      "source": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md:32-34；docs/casereview/2026-10-sock-showcase-right-entry-three-shot.md:5,32"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "状态与不变量清单",
+      "content": "每状态唯一变化、固定视觉项、参考权限例外、文字开关。"
+    },
+    {
+      "name": "逐镜独立提示词",
+      "content": "当前状态从首帧生效、右入跨步、落定pose、单人、固定全身机位和片段尾态六锚。"
+    },
+    {
+      "name": "编辑决策表",
+      "content": "镜头ID、状态ID、全局区间、局部时长、实际生成长度、可用裁切窗、硬切两侧动作、音频窗口、fps/帧号。"
+    },
+    {
+      "name": "片段与成片验收表",
+      "content": "首帧状态、人物数、入画方向、终帧pose、构图、切点、总长、原轨复用及尚未核验的候选点。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

@@ -1,0 +1,73 @@
+{
+  "case_id": "2026-08-water-obstacle-variety-show",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "5777d39d3c21ef0666296ff4ad2ff2544306f9a9989b45d8cca8358b4f840c93",
+      "bytes": 6295,
+      "lines": 95,
+      "git_blob_sha": "090d9f52cd0c979167b7f3db1927549729cfbc17",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-water-obstacle-variety-show/README.md",
+      "reading_note": "方法、问题、经验及作者结果；完整阅读。"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md",
+      "local_path": "references/source-README.zh-CN.md",
+      "sha256": "915b57fe603b1d4033f49bd429ec0d8c2657a86cf33b79d6ceeb38c5fdd1fb87",
+      "bytes": 15364,
+      "lines": 278,
+      "git_blob_sha": "5d05a80c26ed684a4307d16c826422680f538568",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md",
+      "reading_note": "方法译注及原案20秒参数经验；完整阅读。"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "a7eb42a7967a1b1f28a61dce224fe2e1fb3182a16f40e7a6969cc52c3eaba266",
+      "bytes": 7374,
+      "lines": 165,
+      "git_blob_sha": "ae572459f259615b45f88b300eeedc6c804cfc35",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+      "reading_note": "身份、因果链、八段和声场的完整原提示词；完整阅读。"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md",
+      "local_path": "references/source-prompt.zh-CN.md",
+      "sha256": "3c29a4562f09a9b05510a06f87ab6b095fbfc899a496b56c0840bc595a452a08",
+      "bytes": 21315,
+      "lines": 515,
+      "git_blob_sha": "1bb82da7b81205a4dde66fea5a7ab1eec1a539f5",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md",
+      "reading_note": "全部结构化正文的中译与术语解释；完整阅读。"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "ae0e874951cbd4b33825d92234db538dbb86f3a6d111902718e75752a0bdb156",
+      "bytes": 11165,
+      "lines": 105,
+      "git_blob_sha": "876c670bb25057112d32084e914eb3ca9ee9440e",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md",
+      "reading_note": "剧情节拍、连续观感与参数边界；完整阅读。"
+    },
+    {
+      "path": "docs/casereview/2026-08-water-obstacle-variety-show.md",
+      "local_path": "references/source-review.md",
+      "sha256": "bd95b7be24658a2076f3c45a7904c7c6f09d7006bd69d5d6a9663b46850b840b",
+      "bytes": 5134,
+      "lines": 50,
+      "git_blob_sha": "2287473ca3044b8df6c7b3c256dbd118d15ba6f8",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-water-obstacle-variety-show.md",
+      "reading_note": "完整阅读；容量、试跑参数与事件验收缺口已转为工作流及测试。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

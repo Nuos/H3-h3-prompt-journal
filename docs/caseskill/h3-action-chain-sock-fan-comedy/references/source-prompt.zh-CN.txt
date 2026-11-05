@@ -1,0 +1,463 @@
+# Action Chain 动作链喜剧提示词逐段翻译
+
+> 对应原文件：`prompt.txt`。本文件按原始语义段落/状态块顺序处理：先给出关键词、术语与概念（IPA、词性缩写、简体中文释义），再给出整段简体中文翻译。基础词汇、介词、冠词、数词不重复释义。原始英文提示词保持不变。
+
+## 开场任务定义
+
+**关键词与术语：**
+- permanent visual reference /ˈpɜːrmənənt ˈvɪʒuəl ˈrefrəns/ n. phr.：永久视觉参考；后续所有画面必须服从的外观权威
+- timing /ˈtaɪmɪŋ/ n.：时间控制；动作发生的时点与持续时间
+- musical accent /ˈmjuːzɪkəl ˈæksent/ n. phr.：音乐重音；用于触发动作状态切换的节拍点
+- live-action /ˌlaɪv ˈækʃən/ adj.：真人实拍质感的
+- choreography /ˌkɔːriˈɑːɡrəfi/ n.：编舞；动作编排
+- trajectory /trəˈdʒektəri/ n.：运动轨迹
+- body mechanics /ˈbɑːdi məˈkænɪks/ n. phr.：身体力学；关节、重心和动力传递关系
+
+**整段翻译：**  
+把 IMAGE 1 作为完整且永久的视觉参考。把 AUDIO 1 作为完整的时间、节奏与音乐重音参考。生成一段真实真人电影感的喜剧舞蹈表演。人物是一名优雅的中国古风成年女性主角。整段表演必须是一条连续的物理动作序列；编舞建立在真实人体运动、平滑手部轨迹、可信的布料与袜子物理、清楚的手—物交互、稳定的左右脚身份，以及连续身体力学之上。
+
+---
+
+## CORE VISUAL IDENTITY｜核心视觉身份
+
+**关键词与术语：**
+- visual identity /ˈvɪʒuəl aɪˈdentəti/ n. phr.：视觉身份
+- costume construction /ˈkɑːstuːm kənˈstrʌkʃən/ n. phr.：服装结构
+- apparent height /əˈpærənt haɪt/ n. phr.：视觉上呈现的身高
+- photographic realism /ˌfoʊtəˈɡræfɪk ˈriːəlɪzəm/ n. phr.：真实摄影质感
+- restrained reaction /rɪˈstreɪnd riˈækʃən/ n. phr.：克制反应
+- gaze /ɡeɪz/ n.：视线；凝视方向
+
+**整段翻译：**  
+IMAGE 1 永久定义人物。严格保留同一张脸、同一面部结构、同一发型、同一服装、同一服装结构、同一身体比例、同一视觉身高、同一皮肤观感、同一灯光、同一环境、同一摄影机透视与同一整体真实摄影质感。整个表演中，原角色必须始终具有明确可识别性。喜剧感来自编舞与人物克制的反应，而不是夸张变脸。面部保持优雅、稳定；情绪主要通过视线方向、焦点、轻微眯眼、细小视线变化、身体时机和克制手势表达。服装始终随身体自然运动。
+
+---
+
+## IMAGE 1 — PERMANENT LEFT / RIGHT FOOT ANCHOR｜永久左右脚锚点
+
+**关键词与术语：**
+- anatomical /ˌænəˈtɑːmɪkəl/ adj.：解剖学意义上的
+- anchor /ˈæŋkər/ n.：锚点；用于防止身份漂移的固定参照
+- supporting foot /səˈpɔːrtɪŋ fʊt/ n. phr.：支撑脚
+- bare /ber/ adj.：裸露的；此处指赤脚
+- footwear /ˈfʊtwer/ n.：鞋类
+- associated with /əˈsoʊsieɪtɪd wɪð/ phr.：与……绑定/关联
+
+**整段翻译：**  
+严格按人物的解剖学左右侧定义 LEFT FOOT 与 RIGHT FOOT，这两个名称是永久的身体身份。IMAGE 1 确立精确起始脚部状态：LEFT FOOT 是解剖学左脚，在 IMAGE 1 中承担支撑，接触地面且完全赤脚；RIGHT FOOT 是解剖学右脚，在 IMAGE 1 中抬离地面，穿着画面中可见的白袜，没有鞋。白袜属于 RIGHT FOOT，而且只有 RIGHT FOOT 会被脱袜。起始关系永久写死为：`LEFT FOOT = GROUND + BARE FOOT`，`RIGHT FOOT = RAISED + WHITE SOCK`。这组 IMAGE 1 关系是永久解剖参照；整个表演中左右脚都不能换身份。白袜最初绑定 RIGHT FOOT；袜子脱下后，LEFT FOOT 与 RIGHT FOOT 都是 BARE FOOT。这种关系在落地、重心移动、踏步、扇风与舞蹈阶段始终不变。
+
+---
+
+## CORE ACTION STORY｜核心动作故事
+
+**关键词与术语：**
+- physical order /ˈfɪzɪkəl ˈɔːrdər/ n. phr.：物理先后顺序
+- follow-through /ˈfɑːloʊ θruː/ n.：随挥；投掷释放后的自然延续动作
+- rebound /rɪˈbaʊnd/ v./n.：反弹
+- stance /stæns/ n.：站姿；支撑状态
+- air-fan arm /er fæn ɑːrm/ n. phr.：用于扇空气的手臂
+- final freeze /ˈfaɪnəl friːz/ n. phr.：最终定格
+
+**整段翻译：**  
+完整物理故事必须严格遵循以下序列：IMAGE 1 起始姿态 → RIGHT FOOT 抬起且穿白袜 → LEFT FOOT 赤脚支撑 → 双手共同脱下白袜 → RIGHT FOOT 变为赤脚 → 袜子留在一只手中 → 看袜子 → 把袜子凑近鼻子 → 短促闻一次 → 袜子略微移开 → 眼睛表现嫌弃 → 另一只手捂住嘴和下半脸 → 持袜手准备投掷 → 直接向摄影机投掷 → 手臂完成完整随挥 → 袜子穿过前景飞向摄影机 → 袜子轻触镜头 → 小幅反弹 → 下落 → **只有此时** RIGHT FOOT 才开始下降 → 右裸脚落到左裸脚旁 → 双脚赤脚站立 → 投掷手臂转为稳定扇风臂 → 手掌左右扇动 → 下半身进入节奏舞步 → 手掌扇动加快 → 最后一次大幅扇掌 → 最终定格。整段表演不得改变这一物理顺序。
+
+---
+
+## STARTING POSE｜起始姿态
+
+**关键词与术语：**
+- planted /ˈplæntɪd/ adj.：牢固踩地的
+- pelvis /ˈpelvɪs/ n.：骨盆
+- body line /ˈbɑːdi laɪn/ n. phr.：身体线条
+- musical cue /ˈmjuːzɪkəl kjuː/ n. phr.：音乐提示点
+
+**整段翻译：**  
+严格从 IMAGE 1 起始。解剖学 LEFT FOOT 踩地并完全赤脚；解剖学 RIGHT FOOT 抬起，穿着可见白袜，不穿鞋；右膝按照 IMAGE 1 弯曲，右小腿继续抬起，右踝和白袜必须清楚可读。躯干保持直立，骨盆自然平衡在 LEFT FOOT 上方，头保持原位置，人物维持 IMAGE 1 中优雅的身体线条。双手自然处于能够协同脱袜的位置。起始姿态保持到 AUDIO 1 中第一个可用的音乐重音。
+
+---
+
+## STATE 1 — TWO-HAND SOCK REMOVAL｜双手脱袜
+
+**关键词与术语：**
+- coordinate /koʊˈɔːrdɪneɪt/ v.：协同配合
+- fluid /ˈfluːɪd/ adj.：流畅的
+- physically believable /ˈfɪzɪkli bɪˈliːvəbl/ adj. phr.：符合真实物理的
+
+**整段翻译：**  
+人物用**双手共同**从抬起的 RIGHT FOOT 上脱下白袜。两只手都真实参与动作，并作为一个连续的人体行为协调工作。袜子从抬起的 RIGHT FOOT 上自然、平滑地脱下，动作快速、流畅、连续且可信。脱袜期间 RIGHT FOOT 始终抬起；LEFT FOOT 始终牢固踩地并完全赤脚。把整个双手脱袜过程视为一个不可拆散的自然连续行为。动作完成时，袜子已经完全离开 RIGHT FOOT；RIGHT FOOT 完全赤脚；LEFT FOOT 仍完全赤脚。
+
+---
+
+## STATE 2 — SOCK TRANSFERS INTO ONE HAND｜袜子转入单手
+
+**关键词与术语：**
+- gather /ˈɡæðər/ v.：收拢并拿住
+- visual state /ˈvɪʒuəl steɪt/ n. phr.：视觉状态
+
+**整段翻译：**  
+双手脱袜结束后，一只手自然收拢并持住袜子，袜子必须持续可见；另一只手空出。RIGHT FOOT 保持抬起且完全赤脚，LEFT FOOT 保持踩地且完全赤脚。视觉状态清楚写成：`RIGHT FOOT = RAISED + BARE`，`LEFT FOOT = GROUND + BARE`，`SOCK = IN ONE HAND`。这个状态短暂但清楚地保持。
+
+---
+
+## STATE 3 — LOOK AT THE SOCK｜看袜子
+
+**关键词与术语：**
+- examine /ɪɡˈzæmɪn/ v.：检查；端详
+- visual inspection /ˈvɪʒuəl ɪnˈspekʃən/ n. phr.：视觉检查
+
+**整段翻译：**  
+人物开始检查脱下的袜子。同一只手继续持袜；头轻微转向袜子，眼睛聚焦袜子，手把袜子略微抬向自己，前臂自然弯曲，袜子始终清晰可见。人物只做一次短暂视觉检查。赤脚 RIGHT FOOT 继续悬空，赤脚 LEFT FOOT 继续踩地，躯干保持直立和平衡。
+
+---
+
+## STATE 4 — SOCK MOVES TOWARD THE NOSE｜袜子靠近鼻子
+
+**关键词与术语：**
+- forearm /ˈfɔːrɑːrm/ n.：前臂
+- inward /ˈɪnwərd/ adv.：向内
+- suspended /səˈspendɪd/ adj.：悬空的
+
+**整段翻译：**  
+在下一个音乐提示点，同一只持袜手把袜子带向面部；前臂向内弯曲，肘部自然靠近躯干，袜子向上、向内移动，头也略微倾向袜子。袜子在鼻子附近停住，但布料与脸之间仍保留一个自然小间隙。人物继续单手持袜，另一只手保持空闲。抬起的赤脚 RIGHT FOOT 继续悬空，赤脚 LEFT FOOT 继续踩地。
+
+---
+
+## STATE 5 — ONE SHORT SNIFF｜一次短促闻嗅
+
+**关键词与术语：**
+- deliberate /dɪˈlɪbərət/ adj.：有意识、明确的
+- inhalation /ˌɪnhəˈleɪʃən/ n.：吸气
+- comedic inspection /kəˈmiːdɪk ɪnˈspekʃən/ n. phr.：喜剧式检查
+
+**整段翻译：**  
+人物只做一次短促、明确的闻嗅动作。袜子保持在鼻子附近，头靠近袜子，眼睛仍聚焦袜子。动作链为：`SOCK CLOSE TO NOSE → SHORT INHALATION → TINY PAUSE`。这次闻嗅像快速的喜剧式检查，面部结构不得发生改变。
+
+---
+
+## STATE 6 — REACTION｜反应
+
+**关键词与术语：**
+- fraction of a beat /ˈfrækʃən əv ə biːt/ n. phr.：极短的一个节拍片段
+- narrow /ˈnæroʊ/ v.：眯起；收窄
+- restrained playful displeasure /rɪˈstreɪnd ˈpleɪfəl dɪsˈpleʒər/ n. phr.：克制、俏皮的嫌弃
+
+**整段翻译：**  
+闻完后立即把袜子从鼻子旁略微移开。人物停顿不足一个完整节拍，**眼睛先反应**：轻微眯眼，短暂重新看袜子，再看向摄影机。情绪信息是克制、俏皮的嫌弃，主要由眼神焦点、轻微眯眼、视线方向和时机表达。嘴部必须继续与原始脸保持一致，角色优雅外观不能被破坏。
+
+---
+
+## STATE 7 — MOUTH-COVERING HAND｜捂嘴手
+
+**关键词与术语：**
+- lower face /ˈloʊər feɪs/ n. phr.：下半脸
+- nose bridge /noʊz brɪdʒ/ n. phr.：鼻梁
+- grouped /ɡruːpt/ adj.：自然并拢成组的
+- separated roles /ˈsepəreɪtɪd roʊlz/ n. phr.：职责分离
+
+**整段翻译：**  
+空闲手抬向嘴和下半脸，手臂自然弯曲，手掌与手指从下方上移，轻轻覆盖嘴部和下半脸；鼻梁与眼睛必须露出，上半脸继续承担表情。手靠近脸部但保持舒适，手指自然并拢，手腕放松。此手从此成为“捂嘴手”。袜子仍在另一只手中，持袜手与捂嘴手的职责明确分离。
+
+---
+
+## STATE 8 — THROW PREPARATION｜投掷准备
+
+**关键词与术语：**
+- preparatory rotation /prɪˈpærətɔːri roʊˈteɪʃən/ n. phr.：预备旋转
+- centered over /ˈsentərd ˈoʊvər/ phr.：重心保持在……上方
+- throwing preparation /ˈθroʊɪŋ ˌprepəˈreɪʃən/ n. phr.：投掷蓄力准备
+
+**整段翻译：**  
+反应之后，持袜手再看一次袜子，眼神短暂传达克制的“真的吗？”捂嘴手仍留在嘴旁。持袜手臂开始后引，肘部弯曲，肩部自然旋转，躯干做小幅预备转动。身体重心仍位于 LEFT FOOT 上方；LEFT FOOT 坚定踩地且完全赤脚；RIGHT FOOT 继续抬起并完全赤脚。袜子随手向后移动，形成清晰投掷准备。
+
+---
+
+## STATE 9 — DIRECT THROW TOWARD CAMERA｜直接扔向镜头
+
+**关键词与术语：**
+- initiate /ɪˈnɪʃieɪt/ v.：发起动作
+- accelerate /əkˈseləreɪt/ v.：加速
+- release point /rɪˈliːs pɔɪnt/ n. phr.：释放点
+- extended position /ɪkˈstendɪd pəˈzɪʃən/ n. phr.：伸展终点姿态
+
+**整段翻译：**  
+在一个强音上，持袜手臂直接向摄影机发力：肩部首先启动 → 上臂向前 → 肘部打开 → 前臂加速 → 手腕沿前进轨迹跟随 → 手直接向镜头前进 → 到释放点时手指自然张开 → 袜子脱离手掌，成为独立物理对象。释放后手臂继续随挥，肘部进入打开的伸展状态，前臂与手完成自然投掷随挥，最终整条投掷臂形成指向镜头的长前伸线。此时 RIGHT FOOT 仍抬起且赤脚，LEFT FOOT 仍踩地且赤脚。
+
+---
+
+## STATE 10 — SOCK FLIGHT｜袜子飞行
+
+**关键词与术语：**
+- foreground /ˈfɔːrɡraʊnd/ n.：前景
+- fabric folds /ˈfæbrɪk foʊldz/ n. phr.：布料褶皱
+- readable trajectory /ˈriːdəbl trəˈdʒektəri/ n. phr.：清楚可读的运动轨迹
+
+**整段翻译：**  
+袜子从手中连续飞向摄影机，与镜头距离平滑缩短，进入前景时视觉尺寸持续增大。布料在空气中自然旋转，褶皱与边缘响应运动；整个袜子始终作为真实布料物体可见，轨迹直接、清楚。人物位于飞袜后方；RIGHT FOOT 仍抬起赤脚，LEFT FOOT 仍踩地赤脚，捂嘴手保持在脸旁，投掷臂在释放后继续伸展。
+
+---
+
+## STATE 11 — LENS CONTACT｜接触镜头
+
+**关键词与术语：**
+- lens contact /lenz ˈkɑːntækt/ n. phr.：镜头接触
+- compress /kəmˈpres/ v.：受压变形
+- viewpoint /ˈvjuːpɔɪnt/ n.：视点；摄影机视角
+
+**整段翻译：**  
+袜子到达摄影机并轻轻触碰镜头，短暂占满最近前景。接触瞬间布料轻微软压，触感要轻且有喜剧感。摄影机视点保持稳定，环境、灯光和透视继续服从 IMAGE 1。袜子此时是离镜头最近的物体；RIGHT FOOT 继续抬起赤脚，LEFT FOOT 继续赤脚。
+
+---
+
+## STATE 12 — REBOUND AND FALL｜反弹并下落
+
+**关键词与术语：**
+- gravity /ˈɡrævəti/ n.：重力
+- downward fall /ˈdaʊnwərd fɔːl/ n. phr.：向下坠落
+- physical trajectory /ˈfɪzɪkəl trəˈdʒektəri/ n. phr.：物理轨迹
+
+**整段翻译：**  
+接触镜头后，袜子轻柔反弹离开镜头，轨迹自然略向后、向下；布料在碰撞后重新放松，并在重力接管时继续旋转，开始穿过前景向下坠落。袜子始终是同一个物理对象，完整轨迹必须读作：`HAND → FORWARD THROW → CAMERA APPROACH → LENS CONTACT → SMALL REBOUND → DOWNWARD FALL`。整个反弹与下落阶段，RIGHT FOOT 仍抬起赤脚，LEFT FOOT 仍踩地赤脚。
+
+---
+
+## STATE 13 — RIGHT FOOT DESCENT｜右脚下降
+
+**关键词与术语：**
+- lower-body state /ˈloʊər ˈbɑːdi steɪt/ n. phr.：下半身状态
+- single-leg support /ˌsɪŋɡəl leɡ səˈpɔːrt/ n. phr.：单腿支撑
+- two-leg support /tuː leɡ səˈpɔːrt/ n. phr.：双腿支撑
+
+**整段翻译：**  
+**只有现在**下半身状态才允许改变。必须在袜子已经清楚触达镜头并开始向下坠落之后，RIGHT FOOT 才开始下降：髋部自然下降，右膝逐步打开，右小腿向下移动，右踝自然旋转，赤脚 RIGHT FOOT 朝地面靠近。LEFT FOOT 继续提供平衡并保持完全赤脚。骨盆从单腿支撑自然过渡到双腿支撑，躯干保持直立，头与躯干保持正常关系。整个身体完成从“右脚悬空、左脚支撑”到“稳定双脚赤脚站立”的自然转变。
+
+---
+
+## STATE 14 — RIGHT BARE FOOT LANDING｜右裸脚落地
+
+**关键词与术语：**
+- sole /soʊl/ n.：脚底
+- forefoot /ˈfɔːrfʊt/ n.：前脚掌
+- distribute weight /dɪˈstrɪbjuːt weɪt/ v. phr.：分配体重
+- settle /ˈsetl/ v.：缓冲后稳定
+
+**整段翻译：**  
+RIGHT FOOT 接近与 LEFT FOOT 相同的地面平面。右脚底转向地面，右脚跟先接近，随后前脚掌自然落稳，右踝做轻微调整，右膝略微放松，骨盆自然稳定在两腿之间。体重分配到赤脚 RIGHT FOOT 与赤脚 LEFT FOOT。最终双脚状态明确为：`RIGHT FOOT = BARE`，`LEFT FOOT = BARE`，两脚都在地面。人物保持相同自然身体尺度，落地缓冲程度只应符合真人正常落地。用一个短音乐拍明确建立新的双脚支撑状态。
+
+---
+
+## STATE 15 — TWO-FOOT VISUAL ANCHOR AFTER LANDING｜落地后的双脚视觉锚
+
+**关键词与术语：**
+- configuration /kənˌfɪɡjəˈreɪʃən/ n.：配置状态
+- lower-body configuration /ˈloʊər ˈbɑːdi kənˌfɪɡjəˈreɪʃən/ n. phr.：下半身固定配置
+
+**整段翻译：**  
+落地后的第一个稳定时刻，要再次明确下半身身份：解剖学 RIGHT FOOT 清楚赤脚，解剖学 LEFT FOOT 清楚赤脚，两者连续继承当前动作建立的裸足状态。从此直到表演结束，下半身永久配置为 `LEFT FOOT = BARE`、`RIGHT FOOT = BARE`。后续裙摆与舞蹈运动都必须从这组固定配置继续读取；裙子自然跟随腿与身体，两只裸脚始终属于同一个连续人物状态。
+
+---
+
+## STATE 16 — THROWING ARM BECOMES STABLE AIR-FAN ARM｜投掷臂转为稳定扇风臂
+
+**关键词与术语：**
+- flat-palm orientation /flæt pɑːm ˌɔːriənˈteɪʃən/ n. phr.：平掌朝向
+- primary moving joint /ˈpraɪmeri ˈmuːvɪŋ dʒɔɪnt/ n. phr.：主要主动关节
+- wrist-led /rɪst led/ adj.：由手腕主导的
+
+**整段翻译：**  
+投袜子的手臂继续朝摄影机伸展。肩、上臂、肘与前臂都保持已建立的稳定前伸位置，整条手臂成为手掌动作的稳定支架。扇风只由手腕和手完成：手自然打开，手掌旋到竖直平掌姿态，手指自然对齐，手腕成为主要主动关节，手掌成为主要运动元素。转换链为：`THROW FOLLOW-THROUGH → EXTENDED STABLE ARM → OPEN PALM → WRIST-LED PALM WAVE`。肩、上臂、肘、前臂保持视觉稳定；只有手腕、手和掌扇动。RIGHT FOOT 与 LEFT FOOT 均保持赤脚。
+
+---
+
+## STATE 17 — FIRST PALM FAN｜第一次手掌扇风
+
+**关键词与术语：**
+- horizontal wave /ˌhɔːrɪˈzɑːntl weɪv/ n. phr.：水平摆动
+- lateral /ˈlætərəl/ adj.：横向的
+- rhythmic settlement /ˈrɪðmɪk ˈsetlmənt/ n. phr.：节拍上的短暂停稳
+
+**整段翻译：**  
+在下一拍，手掌做一次短水平摆动，手腕平滑地把手掌从一侧带向另一侧。手横向移动，但前臂、肘、肩与上臂都维持原位置；动作集中在手腕和手。手掌保持近似同一高度，手指打开并自然对齐，像用手掌轻轻把难闻空气扇走。整条手臂保持平静、前伸、稳定的剪影。一次摆动结束后，手在节拍上短暂停稳。
+
+---
+
+## STATE 18 — SECOND PALM FAN｜第二次反向扇风
+
+**关键词与术语：**
+- reverse direction /rɪˈvɜːrs dəˈrekʃən/ v. phr.：反转方向
+- compact /kəmˈpækt/ adj.：紧凑的
+
+**整段翻译：**  
+下一拍，手腕反转方向，手掌水平扇向另一侧。手自然、平滑改变方向；前臂、肘、上臂和肩继续稳定。动力主要来自 `WRIST → HAND → PALM`。手掌持续打开，手指自然对齐，高度基本不变，动作紧凑、快速、有节奏且可控。
+
+---
+
+## STATE 19 — REPEATED PALM-WAVE RHYTHM｜重复手掌节奏
+
+**关键词与术语：**
+- direction change /dəˈrekʃən tʃeɪndʒ/ n. phr.：方向切换
+- consistent extended pose /kənˈsɪstənt ɪkˈstendɪd poʊz/ n. phr.：一致的前伸姿态
+
+**整段翻译：**  
+继续既定手掌节奏：`PALM LEFT → CENTER → PALM RIGHT → CENTER`。每次换向都跟随 AUDIO 1 的音乐重音。肩、上臂、肘保持稳定，前臂总体朝镜头前伸，真正可见的横向运动只发生在手腕与手掌。手掌形成“把难闻空气扇走”的视觉印象。手臂始终维持一个一致的前伸姿态，节奏来自小幅手掌重复，而不是整条手臂大甩。扇风全过程 RIGHT FOOT 与 LEFT FOOT 都保持赤脚。
+
+---
+
+## STATE 20 — LOWER-BODY DANCE ENTERS｜下半身舞步进入
+
+**关键词与术语：**
+- tap /tæp/ n./v.：轻点地；小踏步
+- weight shift /weɪt ʃɪft/ n. phr.：重心转移
+- centered /ˈsentərd/ adj.：身体居中的
+
+**整段翻译：**  
+当手掌节奏建立后，下半身开始跟随 AUDIO 1。前伸手臂继续稳定，肩、上臂、肘、前臂不做大幅变化，只有手腕、手与掌继续小幅节奏扇动。第一个下半身动作是赤脚 RIGHT FOOT 的小 tap；下一拍由赤脚 LEFT FOOT 做小 tap；两脚每次点地都保持赤脚。随后人物轻柔地左右转移重心，动作紧凑、具有舞蹈感，身体总体保持居中。
+
+---
+
+## STATE 21 — SIMPLE COMEDIC FOOTWORK｜简单喜剧步法
+
+**关键词与术语：**
+- footwork /ˈfʊtwɜːrk/ n.：步法
+- repetitive gesture /rɪˈpetətɪv ˈdʒestʃər/ n. phr.：重复小动作
+
+**整段翻译：**  
+编舞按照简单重复节奏发展：`BARE RIGHT FOOT TAP → BARE LEFT FOOT TAP → SMALL WEIGHT SHIFT → PALM WAVE → SETTLE`；然后重复为 `BARE RIGHT FOOT TAP → BARE LEFT FOOT TAP → OPPOSITE WEIGHT SHIFT → PALM WAVE → SETTLE`。下半身提供较大的节奏运动，上臂保持视觉平静，手掌负责小幅重复扇风。服装自然跟随身体，RIGHT FOOT 与 LEFT FOOT 始终清楚赤脚。
+
+---
+
+## STATE 22 — FASTER RHYTHM｜更快节奏
+
+**关键词与术语：**
+- energetic /ˌenərˈdʒetɪk/ adj.：能量更高的
+- side to side /saɪd tə saɪd/ adv. phr.：左右往复
+
+**整段翻译：**  
+随着 AUDIO 1 能量提高，tap 稍微加快：赤脚 RIGHT FOOT 先做快速节奏点地，赤脚 LEFT FOOT 跟随；快速步法期间两脚始终赤脚。骨盆轻微左右移动，躯干以克制幅度跟随节奏。前伸手臂结构保持稳定，肩、上臂、肘、前臂不乱动；手腕和手掌继续 `LEFT → RIGHT → LEFT → RIGHT`。捂嘴手继续留在脸旁，眼睛继续表达俏皮嫌弃。整体能量由下半身和手掌提升，而主手臂结构仍保持稳定。
+
+---
+
+## STATE 23 — FINAL BUILD｜最终构建
+
+**关键词与术语：**
+- final build /ˈfaɪnəl bɪld/ n. phr.：最终高潮前的能量构建
+- expressive /ɪkˈspresɪv/ adj.：表现力更强的
+- centered final stance /ˈsentərd ˈfaɪnəl stæns/ n. phr.：居中的最终站姿
+
+**整段翻译：**  
+接近最强音乐段时，赤脚 RIGHT FOOT 做稍大的节奏步，LEFT FOOT 跟随，人物逐渐回到中心；躯干给出小节奏重音。前伸手臂仍保持结构稳定，手腕与手掌的摆动幅度变大、更有表现力，而上臂、肘、前臂继续稳定。手保持打开，捂嘴手仍靠近下半脸。人物逐步把编舞收束到居中的最终站姿，两脚牢固落地；最终下半身身份仍为 `RIGHT FOOT = BARE`、`LEFT FOOT = BARE`。
+
+---
+
+## STATE 24 — FINAL PALM WAVE｜最后一次大扇掌
+
+**关键词与术语：**
+- decisive /dɪˈsaɪsɪv/ adj.：果断明确的
+- restrained playful-disgust /rɪˈstreɪnd ˈpleɪfəl dɪsˈɡʌst/ n. phr.：克制而俏皮的嫌弃感
+
+**整段翻译：**  
+在最强的最终音乐重音上，前伸手臂继续保持位置，手腕完成一次果断的横向动作，手掌从一侧清楚移到另一侧，幅度大于之前所有扇掌。肩、上臂、肘与前臂继续稳定，所有可见主运动集中在手腕、手和掌。手掌必须恰好与音乐重音一起停稳。捂嘴手继续靠近脸，眼睛看向摄影机并给出最后一次克制、俏皮的嫌弃。两只脚保持解剖学身份清楚且都赤脚：RIGHT FOOT 赤脚，LEFT FOOT 赤脚。
+
+---
+
+## STATE 25 — FINAL FREEZE｜最终定格
+
+**关键词与术语：**
+- settle naturally /ˈsetl ˈnætʃrəli/ v. phr.：自然稳定下来
+- hold through /hoʊld θruː/ v. phr.：一直保持到……结束
+
+**整段翻译：**  
+最终重音之后，全身自然稳定。两脚牢固踩地；解剖学 RIGHT FOOT 与 LEFT FOOT 都保持完全赤脚。捂嘴手仍靠近下半脸，另一条手臂继续朝摄影机前伸；上臂与前臂维持已建立位置，手腕和手在最后一次扇掌之后自然停稳。眼神继续有表现力，面部与 IMAGE 1 保持一致，服装不改变。角色保持最终姿态直到 AUDIO 1 结束。
+
+---
+
+## PERMANENT HAND ROLES｜永久手部职责
+
+**关键词与术语：**
+- permanent role /ˈpɜːrmənənt roʊl/ n. phr.：永久职责
+- continuous role /kənˈtɪnjuəs roʊl/ n. phr.：连续职责链
+
+**整段翻译：**  
+脱袜时双手共同工作。袜子完全脱下后，一只手永久成为“持袜手”，依次执行 `SOCK HOLD → SOCK INSPECTION → SNIFF → THROW`；另一只手成为“捂嘴手”，执行 `FREE HAND → MOVE TO MOUTH → COVER MOUTH AND LOWER FACE → HOLD THAT POSITION`。投掷之后，原持袜手转为扇风手，其职责链为 `SOCK-HOLDING HAND → THROWING HAND → EXTENDED STABLE ARM → WRIST-LED PALM WAVE`。手臂保持稳定前伸结构，扇风运动只由手腕与手掌提供。
+
+---
+
+## PERMANENT FOOT CONTINUITY｜永久脚部连续性
+
+**关键词与术语：**
+- continuity /ˌkɑːntəˈnuːəti/ n.：连续性
+- anatomical identity /ˌænəˈtɑːmɪkəl aɪˈdentəti/ n. phr.：解剖学身份
+
+**整段翻译：**  
+IMAGE 1 的脚部安排永久有效。LEFT FOOT 是原始支撑脚，全程完全赤脚，并始终是同一只解剖学左脚；RIGHT FOOT 是原始抬起脚，开场穿白袜，脱袜后赤脚，并始终是同一只解剖学右脚。永久关系为：`LEFT FOOT = BARE`；`RIGHT FOOT = WHITE SOCK → BARE FOOT`。只有 RIGHT FOOT 在脱袜阶段改变状态，LEFT FOOT 全程赤脚。RIGHT FOOT 落地时必须以赤脚状态落在左裸脚旁，之后稳定配置为 `LEFT BARE FOOT + RIGHT BARE FOOT`，并贯穿整个舞蹈。
+
+---
+
+## PERMANENT BODY CONTINUITY｜永久身体连续性
+
+**关键词与术语：**
+- proportional consistency /prəˈpɔːrʃənəl kənˈsɪstənsi/ n. phr.：身体比例一致性
+- physique /fɪˈziːk/ n.：体格；身体整体形态
+
+**整段翻译：**  
+解剖学 LEFT FOOT 始终属于同一条左腿，RIGHT FOOT 始终属于同一条右腿。白袜起初在 RIGHT FOOT 上，随后被脱下，RIGHT FOOT 变为赤脚，LEFT FOOT 一直赤脚。身体状态从 `RIGHT FOOT RAISED + LEFT FOOT SUPPORTING` 自然过渡到 `RIGHT FOOT BARE ON FLOOR + LEFT FOOT BARE ON FLOOR`，这一变化通过髋、膝、踝和骨盆的真实运动完成。全程身体比例保持一致，人物视觉身高与总体体格不得漂移。
+
+---
+
+## PERMANENT LOWER-BODY VISUAL STATE｜永久下半身视觉状态
+
+**关键词与术语：**
+- established state /ɪˈstæblɪʃt steɪt/ n. phr.：已经建立并不得改变的状态
+
+**整段翻译：**  
+IMAGE 1 建立的下半身身份是后续所有姿态的参照。开场：`LEFT FOOT = BARE`、`RIGHT FOOT = WHITE SOCK`；脱袜后：`LEFT FOOT = BARE`、`RIGHT FOOT = BARE`；落地后、舞蹈期间以及最终帧均继续保持双脚赤脚。同一对解剖学左右脚在完整编舞中连续存在，不能互换、消失或重新生成。
+
+---
+
+## PERMANENT CAMERA RELATIONSHIP｜永久摄影机关系
+
+**关键词与术语：**
+- perspective /pərˈspektɪv/ n.：透视关系
+- lens interaction /lenz ˌɪntərˈækʃən/ n. phr.：物体与镜头交互
+
+**整段翻译：**  
+摄影机保留 IMAGE 1 建立的透视关系，人物留在同一环境，灯光一致，整体继续保持真实摄影风格。所谓镜头交互仅由袜子的真实物理接近产生：袜子接触镜头时成为极近前景物体，但摄影机透视本身保持稳定；袜子反弹后，原场景重新显露，人物在同一场景中自然继续表演。
+
+---
+
+## PERMANENT FACIAL PERFORMANCE｜永久面部表演
+
+**关键词与术语：**
+- facial performance /ˈfeɪʃəl pərˈfɔːrməns/ n. phr.：面部表演
+- neutral concentration /ˈnuːtrəl ˌkɑːnsənˈtreɪʃən/ n. phr.：中性专注
+- playful displeasure /ˈpleɪfəl dɪsˈpleʒər/ n. phr.：俏皮嫌弃
+
+**整段翻译：**  
+面部始终优雅并具有稳定识别度，情绪表演保持细微。情绪序列为：中性专注 → 对袜子的好奇 → 短促闻嗅 → 眼睛轻微眯起 → 短暂看袜 → 看摄影机 → 俏皮嫌弃 → 克制的喜剧舞蹈。眉毛保留原始结构，额头保持放松，嘴部继续服从 IMAGE 1。捂嘴手承担主要喜剧动作，眼睛承担最终情绪表达。
+
+---
+
+## AUDIO 1 — TIMING SYSTEM｜时间系统
+
+**关键词与术语：**
+- transition /trænˈzɪʃən/ n.：状态切换
+- impact accent /ˈɪmpækt ˈæksent/ n. phr.：冲击重音
+- phrase /freɪz/ n.：乐句
+
+**整段翻译：**  
+AUDIO 1 决定精确节奏，并用强音乐重音作为既定物理状态之间的切换信号。建议时间结构为：ACCENT 1 → 开始双手脱袜；ACCENT 2 → 袜子完全脱下；ACCENT 3 → 看袜；ACCENT 4 → 袜子靠近鼻子；ACCENT 5 → 闻；ACCENT 6 → 眼神反应；ACCENT 7 → 捂嘴手到位；ACCENT 8 → 投掷准备；STRONG ACCENT → 袜子释放；FOLLOWING BEATS → 袜子飞行；IMPACT ACCENT → 镜头接触；NEXT BEAT → 反弹和下落；FOLLOWING BEAT → 赤脚 RIGHT FOOT 开始下降；NEXT BEAT → 右裸脚落到左裸脚旁；NEXT BEATS → 稳定手掌扇风；NEXT PHRASE → 下半身舞蹈；STRONGER PHRASE → 更快扇掌节奏；FINAL ACCENT → 最后一次大扇掌；END → 定格。每个状态的实际持续时间自然服从 AUDIO 1。
+
+---
+
+## FINAL COMPLETE PHYSICAL SEQUENCE｜最终完整物理序列
+
+**关键词与术语：**
+- coherent /koʊˈhɪrənt/ adj.：连贯一致的
+- physical continuity /ˈfɪzɪkəl ˌkɑːntəˈnuːəti/ n. phr.：物理连续性
+- structurally stable /ˈstrʌktʃərəli ˈsteɪbl/ adj. phr.：结构上稳定的
+
+**整段翻译：**  
+最终完整序列为：IMAGE 1 姿态 → LEFT FOOT 赤脚支撑 → RIGHT FOOT 抬起穿白袜 → 双手脱下白袜 → RIGHT FOOT 变赤脚 → LEFT FOOT 仍赤脚 → 袜子留在一手 → 看袜 → 袜子抬向脸 → 短促闻嗅 → 袜子略移开 → 眼睛反应 → 另一手捂嘴 → 持袜臂准备 → 直接投向摄影机 → 完整手臂随挥 → 袜子飞向镜头 → 轻触镜头 → 反弹 → 下落 → RIGHT BARE FOOT 下降 → RIGHT BARE FOOT 落地 → LEFT FOOT 始终赤脚 → 双脚赤脚站立 → 投掷臂变为稳定前伸臂 → 手腕与手掌开始小幅扇风 → 左 → 中 → 右 → 中 → 右裸脚 tap → 左裸脚 tap → 重心移动 → 扇掌 → 重复 → 下半身节奏加快 → 扇掌加快 → 最后一次更大扇掌 → 最终定格。
+
+起始脚部必须永久锚定到 IMAGE 1：LEFT FOOT 是赤脚支撑脚；RIGHT FOOT 是抬起且穿白袜的脚。脱袜由双手作为一个连续自然行为共同完成，过程保持简单、清楚。脱袜后 RIGHT FOOT 与 LEFT FOOT 都赤脚；RIGHT FOOT 落地后仍然双脚赤脚；整个舞蹈中这一状态不再改变，两只解剖学脚的身份永久不变。
+
+投掷完成后，前伸手臂结构保持稳定：肩、上臂、肘与前臂维持既定前伸位置，真正可见的扇风只由手腕、手和手掌产生，手掌制造节奏化横摆，而整条手臂不跟着乱甩。IMAGE 1 永久定义人物，AUDIO 1 永久定义时间与节奏。人物、双手、左脚、右脚、袜子、身体、服装、摄影机和环境从头到尾必须保持连贯一致。

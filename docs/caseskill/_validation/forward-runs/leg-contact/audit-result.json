@@ -1,0 +1,10 @@
+{
+  "errors": [],
+  "warnings": [],
+  "static_pass": true,
+  "complete_under_requested_checks": true,
+  "checked_prompt_files": true,
+  "semantic_validation": "not_performed",
+  "human_case_checks": "declared_by_plan_author_not_independently_verified",
+  "model_inference": "not_performed"
+}

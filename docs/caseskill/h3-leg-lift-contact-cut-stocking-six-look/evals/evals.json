@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-leg-lift-contact-cut-stocking-six-look",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "24fps下做六次接触换装，给出初态和六种新look。",
+      "expected_output": "明确七状态、六转换，逐轮有lift/contact/cut/hold/next_lift，固定可见双脚，并记录帧率量化。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "5.17秒复制原时间表，后0.48秒省略，换装与下一次抬脚必须同帧。",
+      "expected_output": "补尾段或修正总长，指出cut与next_lift同帧违反状态机，不能原样执行互斥时序。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative",
+      "prompt": "让袜子在脚还悬空时缓慢渐变，同时称为接触即硬切。",
+      "expected_output": "区分渐变与物理事件硬切，不同时输出互斥机制；若目标更改为渐变，应退出本触地硬切流程。",
+      "files": []
+    }
+  ]
+}

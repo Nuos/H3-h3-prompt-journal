@@ -1,0 +1,59 @@
+{
+  "scope": "Textual semantic review of real offline skill executions; no video generation, inference, audio analysis or physical-feasibility verification.",
+  "reviewer": "Collection editor (root agent)",
+  "runs": [
+    {
+      "task": "camera",
+      "skill_name": "h3-camera-movement-discipline-library",
+      "execution_type": "independent agent given task and skill path; no expected answer",
+      "text_review": "pass",
+      "criteria": [
+        "Camera reaches its specified destination at 3.5s, 0.5s before the 4s turn onset.",
+        "The only cut occurs at 5s within the 4–6s turn; the side camera is prepositioned.",
+        "Response timing and edit policy are independently selected; camera stillness does not freeze dancers.",
+        "World-space direction, angular speed, support foot and clothing inertia continue through the cut.",
+        "The component has no fake generation segments or invented media; geometry is explicitly an authored assumption.",
+        "Static checks and author semantic attestations are distinguished; the component prose is not automatically semantically verified."
+      ],
+      "static_results": "strict exit 0, 0 errors, 0 warnings",
+      "limitations": "No field-of-view simulation, actual motion or inferred quality checked."
+    },
+    {
+      "task": "showcase",
+      "skill_name": "h3-sock-showcase-right-entry-three-shot",
+      "execution_type": "independent agent given task and skill path; no expected answer",
+      "text_review": "pass_with_intentional_draft",
+      "criteria": [
+        "Three 4s/24FPS generations are cropped to three 3s edits; final 9s/30FPS/270 frames are separately computed.",
+        "Each prompt starts already in its own sock state, mid-entry at screen right; no in-shot transformation.",
+        "The display pose settles by 2s and persists past the retained 3s boundary; actual retained end frames remain to inspect.",
+        "The 3s/6s joins intentionally cut from pose to the next entry stride, with no fictitious motion continuity.",
+        "One postproduction music track spans the final timeline; no claimed audio file or beat measurement.",
+        "Provisional T2VA designs are labeled; missing identity/look assets are not forged into reference bindings.",
+        "Draft and missing media/runtime checks remain unresolved; strict rejection is preserved and explained."
+      ],
+      "static_results": "draft exit 0, 0 errors/12 warnings; strict exit 1, 13 errors/0 warnings, expected rejection",
+      "limitations": "Actual person/look matching, runtime call, crop usability, frame conversion and music assembly are unverified."
+    },
+    {
+      "task": "leg-contact",
+      "skill_name": "h3-leg-lift-contact-cut-stocking-six-look",
+      "execution_type": "collection editor executes a complete happy-path exercise; informed, not independent blind run",
+      "text_review": "pass",
+      "criteria": [
+        "An 8s text-only task selects T2VA without fabricated reference assets.",
+        "Three contact-triggered changes create four sock patterns and four same-view Shot intervals.",
+        "Old pattern persists through lift/descent; new pattern appears at first contact, followed by a visible planted hold.",
+        "The left foot supports and stays in place; the right foot performs compact lifts.",
+        "24FPS generation boundaries 48/96/144 and 30FPS edit boundaries 60/120/180 are separated.",
+        "All 8 seconds, including the final two-second display, are defined; complete silence is explicitly requested.",
+        "Case checks attest to prompt/plan review only, without claiming generated frames exist."
+      ],
+      "static_results": "strict exit 0, 0 errors, 0 warnings",
+      "limitations": "No actual contact, texture cut, support-foot stability or output-frame conversion checked."
+    }
+  ],
+  "authored_scenarios": 106,
+  "all_authored_scenarios_executed": false,
+  "inference_performed": false
+}

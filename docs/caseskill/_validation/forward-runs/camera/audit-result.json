@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "scripts/audit_plan.py",
+    "/workspace/scratch/4a76d93cd636/research/forward-runs/camera/plan.json",
+    "--strict",
+    "--check-files"
+  ],
+  "cwd": "/workspace/scratch/4a76d93cd636/H3-h3-prompt-journal/docs/caseskill/h3-camera-movement-discipline-library",
+  "exit_code": 0,
+  "stdout": "{\n  \"errors\": [],\n  \"warnings\": [],\n  \"static_pass\": true,\n  \"complete_under_requested_checks\": true,\n  \"checked_prompt_files\": true,\n  \"semantic_validation\": \"not_performed\",\n  \"human_case_checks\": \"declared_by_plan_author_not_independently_verified\",\n  \"model_inference\": \"not_performed\"\n}\n",
+  "stderr": ""
+}

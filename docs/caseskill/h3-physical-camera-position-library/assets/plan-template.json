@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-physical-camera-position-library",
+  "delivery_kind": "component",
+  "status": "draft",
+  "assembly": "component",
+  "runtime": {
+    "profile": "official-2026-10-28"
+  },
+  "fps": 24,
+  "assets": [],
+  "references": [],
+  "segments": [],
+  "handoffs": [],
+  "case_checks": [
+    {
+      "id": "CP-01",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "CP-02",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "CP-03",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "CP-04",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "CP-05",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "CP-06",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "CP-07",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "CP-08",
+      "status": "unverified",
+      "evidence": ""
+    }
+  ],
+  "unresolved": [
+    "依据当前任务填入真实输入、输出和案例检查证据；本文件是待填写模板。"
+  ]
+}

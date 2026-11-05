@@ -1,0 +1,73 @@
+{
+  "case_id": "2026-08-furina-windsurfing-fashion-mv",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "9ea0ed0ef4f10175296003c30c9965da8713e03d7c422a641da5e9a0e720c09a",
+      "bytes": 8448,
+      "lines": 140,
+      "git_blob_sha": "fb114c0db8112ad8d72616f8d92a7e0f8c7dbb27",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-furina-windsurfing-fashion-mv/README.md",
+      "reading_note": "全文读取：三层参考、三段结构、局部音乐窗口、全片音频重制及作者经验；其媒体列表与当前目录实际无媒体文件的差异已列为 missing。"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md",
+      "local_path": "references/source-README.zh-CN.md",
+      "sha256": "395bdf407961cf9e2a2ec907d8c1b7829e369e2dd66505d43e5a3fa005c541ae",
+      "bytes": 19937,
+      "lines": 397,
+      "git_blob_sha": "1908c33251798ce7dba748b2545e36be5269b0dd",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md",
+      "reading_note": "全文读取：对照中文职责表和流程；识别音乐 mini-turnaround 被译为“小型转面展示”的错误，以及首帧锚不影响构图的范围冲突。"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "615805834349a4446429ac9422222272b03e418133dc7528f46f30a8756a7bc6",
+      "bytes": 26514,
+      "lines": 1465,
+      "git_blob_sha": "d70f7a2d8f6af02914d9bb0b9344173da8cb4b84",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md",
+      "reading_note": "全文读取全部 1465 行：完整制作说明、三段英文提示词、独立生成输入、第三段跳跃时序、全片提音/Suno/最终同步及跨运动复用。"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md",
+      "local_path": "references/source-prompt.zh-CN.md",
+      "sha256": "d0187e9ebb881642343c610fae823285cb4165867fc4826a0874096d35fa4eac",
+      "bytes": 43730,
+      "lines": 869,
+      "git_blob_sha": "456aaec92703f8ef4e4034db690d45457be4ab8b",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md",
+      "reading_note": "全文读取全部 869 行：三段逐段译文及词汇，确认第二段不跳跃、第三段 7–8 秒离水/9–10 秒稳定构图/11–12 秒回水，区分落水与板体重新接触水面。"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "faffb0713e48175301ae5656bbed1103b1beffa163963b7f2a27d67e3e778252",
+      "bytes": 11567,
+      "lines": 107,
+      "git_blob_sha": "768687db0a705a353c6a3a1c2823919a6c217061",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md",
+      "reading_note": "全文读取：参考权限、多视角版面、帆板/boom/索具、长焦距离、稳定摄影与冻结、音乐转接及重制后重新同步的语义边界。"
+    },
+    {
+      "path": "docs/casereview/2026-08-furina-windsurfing-fashion-mv.md",
+      "local_path": "references/source-review.md",
+      "sha256": "d889c4c0e03db8ba8ba5ebc2371b81470f50cf0d03a80c5827b0f9376812aaeb",
+      "bytes": 5206,
+      "lines": 53,
+      "git_blob_sha": "6b4f55d98c913c7663564f5fe6a208c6cfe82344",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-furina-windsurfing-fashion-mv.md",
+      "reading_note": "全文读取：P0 首帧/接缝状态、P1 新配乐时基和参考权限证据三项缺口，人物参数化及将制作经验转为可检验交付接口。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

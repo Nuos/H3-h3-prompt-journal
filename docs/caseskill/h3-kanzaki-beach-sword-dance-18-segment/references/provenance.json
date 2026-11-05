@@ -1,0 +1,53 @@
+{
+  "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "02820d3b4652b25993a1efd9ace4d3a024b6bd979f61460b7276fb793a4b4eb9",
+      "bytes": 11856,
+      "lines": 115,
+      "git_blob_sha": "858a611c88260f27eccf3751aaee75009981ae4e",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md",
+      "reading_note": "全文115行：18段表、双重参考权限、道具状态、连续镜头、主运镜和音频政策。"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "local_path": "references/source-methodology.md",
+      "sha256": "1b7dcf449f3536b5f3af859351baeb394c3663624648e8ae92a5f5a4b54983a1",
+      "bytes": 22179,
+      "lines": 346,
+      "git_blob_sha": "89d84013643a50dfcd796f1397f7fc0cadc199c1",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "reading_note": "全文346行：十一章方法、固定／替换背景分支、状态与握持、物理运镜、后期桥接、定向修复及双重自检。"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "1ec6d47a864a889cd050065be227ead4be82e2211003f00c796934e8f57588f5",
+      "bytes": 194131,
+      "lines": 1186,
+      "git_blob_sha": "8aae663ded62e74b33248443b36111d9e2630aa9",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md",
+      "reading_note": "全文1186行：18段六字段、开场两次拔刀授权、状态窗口／元数据冲突、五处度数、组合运镜、反光对象差异和音频语义冲突。"
+    },
+    {
+      "path": "docs/casereview/2026-10-kanzaki-beach-sword-dance-18-segment.md",
+      "local_path": "references/source-review.md",
+      "sha256": "a7eaacaa4a44ea2dd50cf6f18db3f944597d40603e8f1c0967f67b44b4ed8564",
+      "bytes": 6634,
+      "lines": 59,
+      "git_blob_sha": "d06968eb76a375faee2e66984fcb25488278fbaa",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-kanzaki-beach-sword-dance-18-segment.md",
+      "reading_note": "全文59行：方法与实例落差、两次拔刀授权边界、主运镜／度数修复、握持及媒体未验证限制。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

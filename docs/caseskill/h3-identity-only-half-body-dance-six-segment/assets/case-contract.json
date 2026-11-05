@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-identity-only-half-body-dance-six-segment",
+  "skill_name": "h3-identity-only-half-body-dance-six-segment",
+  "required_check_ids": [
+    "ID-01",
+    "ID-02",
+    "ID-03",
+    "ID-04",
+    "ID-05",
+    "ID-06",
+    "ID-07",
+    "ID-08"
+  ],
+  "checks": [
+    {
+      "id": "ID-01",
+      "rule": "每张图片必须同时说明授权属性和不继承属性；身份参考不自动成为首帧姿态参考。",
+      "source": "README.md:16-25；prompt.md:7-44"
+    },
+    {
+      "id": "ID-02",
+      "rule": "禁止照片姿态后，必须给出正向动作来源；0秒至首拍的预载/余势不可留白。",
+      "source": "prompt.md:57-61,174-192,697-711；review:44"
+    },
+    {
+      "id": "ID-03",
+      "rule": "后段开场与前段出口逐字段配对，不能用各段新的dance-ready position代替跨段连续性。",
+      "source": "prompt.md:302-310,471-487；review:39,43"
+    },
+    {
+      "id": "ID-04",
+      "rule": "半身感限定相机距离和可见范围，不授权复制照片的头角、手位、身体朝向或静态构图。",
+      "source": "README.md:23；prompt.md:63-84"
+    },
+    {
+      "id": "ID-05",
+      "rule": "关键足部动作须有实际可见窗口；半身偏好与全身技法冲突时调整观看位置，不写看不见的技术验收。",
+      "source": "prompt.md:83-84,222,510,1199"
+    },
+    {
+      "id": "ID-06",
+      "rule": "Motion Cut保持同动作、方向、肢体轨迹、重心与动量；高光峰值不自动要求停住。",
+      "source": "prompt.md:157-172,284-310；README.md:46-47"
+    },
+    {
+      "id": "ID-07",
+      "rule": "全曲与局部音频必须有可追溯映射，局部数字不能被当成全曲测量；六段时长仅为案例样本。",
+      "source": "review:30,39"
+    },
+    {
+      "id": "ID-08",
+      "rule": "旧案冷白银灰/金色及动中结束是可选片风格；换参考图时必须声明与新光照的优先级。",
+      "source": "prompt.md:86-119,1331-1332；review:45"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "双图属性权限表",
+      "content": "脸、发型、服装、体型、环境、光向、姿态、构图的授权/排除与冲突优先级。"
+    },
+    {
+      "name": "连续时间与接合表",
+      "content": "全局起止、局部拍点、0秒预载、段间支撑/朝向/手位/动量/镜位接口。"
+    },
+    {
+      "name": "肖像舞镜头与提示词",
+      "content": "舞句、关键足部可见窗口、动作中切镜、高光观看位置及官方Ref2VA正文。"
+    },
+    {
+      "name": "首帧泄漏及连续性Gate",
+      "content": "参考角色检查、动作空白检查、段缝一致性和实际输出待核验清单。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

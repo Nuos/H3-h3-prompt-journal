@@ -1,0 +1,43 @@
+{
+  "case_id": "2026-10-identity-only-half-body-dance-six-segment",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "c3726c8d92958ba60393b5f0b7c07b6ebd3c9f1152095e0f66423ab871c92695",
+      "bytes": 5248,
+      "lines": 54,
+      "git_blob_sha": "80383594744c1caefadf9feb941d853953813338",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "reading_note": "分权失败背景、两图授权、肖像舞六段结构与高光/结束策略。"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+      "bytes": 34220,
+      "lines": 1524,
+      "git_blob_sha": "b4e12f5932869ecff50fa75cfc5c963766d4f076",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "reading_note": "完整六段1524行；属性授权、逐拍动作、局部镜位和动作中切镜；首拍前空白及跨段接合缺口。"
+    },
+    {
+      "path": "docs/casereview/2026-10-identity-only-half-body-dance-six-segment.md",
+      "local_path": "references/source-review.md",
+      "sha256": "9ebacfbd4b8dc27efc73f9f74e1589a84e5e6b44d9a37abeb3db7c57339bb18b",
+      "bytes": 5304,
+      "lines": 53,
+      "git_blob_sha": "048972a29dcfd0b517e77f8838dc8bcd9f5b92f5",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-identity-only-half-body-dance-six-segment.md",
+      "reading_note": "全部评估；总时长、跨段契约、0秒动作、风格优先级与实测证据边界。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

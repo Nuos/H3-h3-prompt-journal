@@ -1,0 +1,23 @@
+{
+  "errors": [],
+  "warnings": [
+    "Unresolved input, timing, or version decisions remain",
+    "PERSON_REF: source asset has not been supplied",
+    "LOOK_A_REF: source asset has not been supplied",
+    "LOOK_B_REF: source asset has not been supplied",
+    "LOOK_C_REF: source asset has not been supplied",
+    "MUSIC_MASTER: source asset has not been supplied",
+    "SRE01: case-specific review has not been performed",
+    "SRE02: case-specific review has not been performed",
+    "SRE03: case-specific review has not been performed",
+    "SRE04: case-specific review has not been performed",
+    "SRE05: case-specific review has not been performed",
+    "SRE07: case-specific review has not been performed"
+  ],
+  "static_pass": true,
+  "complete_under_requested_checks": false,
+  "checked_prompt_files": true,
+  "semantic_validation": "not_performed",
+  "human_case_checks": "declared_by_plan_author_not_independently_verified",
+  "model_inference": "not_performed"
+}

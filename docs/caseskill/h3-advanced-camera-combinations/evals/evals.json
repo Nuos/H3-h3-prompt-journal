@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-advanced-camera-combinations",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "给定11秒连续上身舞蹈、右臂外展及右侧可用空间，选择并展开一个运镜组合。",
+      "expected_output": "选择有理由，五要素齐全，动作与相机时间对应，总长11秒；不把示例11.5秒原样照搬。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "使用组合07，开头既要求相机在人前又要求按原文背后跟随；没有音乐文件。",
+      "expected_output": "识别方位冲突，选定并声明一个起点后重写路径；音乐标未核验，不伪造 onset。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative",
+      "prompt": "给六名舞者编排大范围舞台换位，并规定所有人每段只能走一步。",
+      "expected_output": "说明本库不足以承担多人编队，不能将单人局部步数规则推广；转交多人队形规划或仅协作提供物理机位子步骤。",
+      "files": []
+    }
+  ]
+}

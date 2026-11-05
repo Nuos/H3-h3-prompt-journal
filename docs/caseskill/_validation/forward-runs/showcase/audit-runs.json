@@ -1,0 +1,37 @@
+[
+  {
+    "run": "draft",
+    "command": [
+      "python3",
+      "scripts/audit_plan.py",
+      "/workspace/scratch/4a76d93cd636/research/forward-runs/showcase/plan.json",
+      "--check-files"
+    ],
+    "cwd": "/workspace/scratch/4a76d93cd636/H3-h3-prompt-journal/docs/caseskill/h3-sock-showcase-right-entry-three-shot",
+    "exit_code": 0,
+    "errors": 0,
+    "warnings": 12,
+    "stderr": "",
+    "checked_prompt_files": true,
+    "static_pass": true,
+    "complete_under_requested_checks": false
+  },
+  {
+    "run": "strict",
+    "command": [
+      "python3",
+      "scripts/audit_plan.py",
+      "/workspace/scratch/4a76d93cd636/research/forward-runs/showcase/plan.json",
+      "--strict",
+      "--check-files"
+    ],
+    "cwd": "/workspace/scratch/4a76d93cd636/H3-h3-prompt-journal/docs/caseskill/h3-sock-showcase-right-entry-three-shot",
+    "exit_code": 1,
+    "errors": 13,
+    "warnings": 0,
+    "stderr": "",
+    "checked_prompt_files": true,
+    "static_pass": false,
+    "complete_under_requested_checks": false
+  }
+]

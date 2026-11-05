@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-08-first-person-finger-controlled-dance",
+  "skill_name": "h3-first-person-finger-controlled-dance",
+  "required_check_ids": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8"
+  ],
+  "checks": [
+    {
+      "id": "F1",
+      "rule": "手是可见动作提示，舞者身体响应当前手势；两个主体的关系必须明确写出。",
+      "source": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md:26–45"
+    },
+    {
+      "id": "F2",
+      "rule": "LEFT/RIGHT统一采用屏幕坐标；UP/DOWN改变舞者重心高度，不能用相机运动或比例拉伸替代。",
+      "source": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md:35–43"
+    },
+    {
+      "id": "F3",
+      "rule": "左右响应包含清楚的重心、躯干和髋部整体位移，单独细小摆髋不算完成命令。",
+      "source": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md:39–43"
+    },
+    {
+      "id": "F4",
+      "rule": "先确定结尾三连是追加还是替换，生成唯一编号总序列再绑定拍点。",
+      "source": "case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md:101"
+    },
+    {
+      "id": "F5",
+      "rule": "同步是同一命令窗口内的起始与完成关系；明确拍点、允许帧差及无提前响应，不能用“同拍”代替验收。",
+      "source": "docs/casereview/2026-08-first-person-finger-controlled-dance.md:30,37–45"
+    },
+    {
+      "id": "F6",
+      "rule": "前景手保持连续人体结构与不遮脸躯干；画面面积、人物高度和物理距离分别检查，不能相互替代。",
+      "source": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md:22–24,58–60"
+    },
+    {
+      "id": "F7",
+      "rule": "强俯视、大量天花板、近距离和全身占比需结合实际参考图验证，有冲突时显式调整而非叠加保证。",
+      "source": "case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md:99"
+    },
+    {
+      "id": "F8",
+      "rule": "舞种可替换，装饰动作服从命令映射；一手一舞者属于本案例构图，不是模型人数限制。",
+      "source": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md:9–11,47–56；docs/casereview/2026-08-first-person-finger-controlled-dance.md:32"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "参考与构图表",
+      "content": "操作者手、舞者、屏幕坐标、图像权限、手面积与人物高度度量、几何冲突和missing列表。"
+    },
+    {
+      "name": "唯一命令时间表",
+      "content": "命令编号、方向、手势起点、身体起点、完成条件、容差、结尾策略与总条数。"
+    },
+    {
+      "name": "H3提示词与音频条件",
+      "content": "参考绑定、连续机位、方向响应、服从控制的舞种、末姿保持及声场/音乐方案。"
+    },
+    {
+      "name": "审片清单",
+      "content": "按每条命令记录实际起始帧、方向、位移、遮挡、出框和通过/修订；不声称已自动完成视频检测。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

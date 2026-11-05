@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-summer-pool-beach-waterline-mv-4-segment",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "SM-T1",
+      "prompt": "原样生成四段cut/phase清单和全局时间。",
+      "expected_output": "2/3/2/1镜头，段内4cut；Part3仅3秒切，8秒不切；Part4无cut；单列段际边界及source/local映射。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "SM-T2",
+      "prompt": "冷中性全片、第一段必须暖金光；原衣服不变又要求白罩衫替换。",
+      "expected_output": "识别色调和服装两类权限冲突，选择明确政策或要求实质信息，不把互斥句并排写进正文。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "SM-T3",
+      "prompt": "Part4保持一镜到底，但5秒切正脸、10秒切俯拍。",
+      "expected_output": "指出切镜要求与单镜头合同冲突；按主目标重写为连续路径或明确改多镜头，不能两者同时声称满足。",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "skill_name": "h3-first-person-finger-controlled-dance",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive_command_mapping",
+      "prompt": "把前景手的上下左右和舞者身体做成8秒同方向模仿，提供拍点及最终8条命令。",
+      "expected_output": "输出8条唯一命令、屏幕坐标、手势和身体起始/完成时间、容差、构图与结束保持，不擅自追加原案三连。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary_ambiguous_closing",
+      "prompt": "照抄原案十条命令，最后再写LEFT→RIGHT→UP，时长没定。",
+      "expected_output": "显式发现追加13条/替换10条歧义，列出两种候选和missing，不能默认声称已验证十条。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative_realtime_program",
+      "prompt": "做实时摄像头识别我的手指，然后控制游戏人物的程序。",
+      "expected_output": "判断超出视频提示词编排范围，不把预录映射当成实时控制代码或已实现系统。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "boundary_still_image_audio",
+      "prompt": "只有一张图，请提取原始BPM并保证绝对同拍。",
+      "expected_output": "说明静态图无法提供BPM/音头证据，记录missing；可给暂定编排，不承诺同步结果。",
+      "files": []
+    }
+  ]
+}

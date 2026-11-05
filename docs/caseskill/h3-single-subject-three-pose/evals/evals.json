@@ -1,0 +1,41 @@
+{
+  "skill_name": "h3-single-subject-three-pose",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive_three_pose_flow",
+      "prompt": "三张同衣同景的人物图，15秒连续近身运镜，最后图3半身保持。",
+      "expected_output": "输出统一身份、三姿态途经点、双线时间表、连续外侧路径、最后保持与飞行作用域，不用静态轮播。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary_conflicting_refs",
+      "prompt": "三图是同脸但衣服背景完全不同，要三张都完全锁定为全程不变。",
+      "expected_output": "识别服装/环境冲突并建立属性权限或要求相容素材；不能同时声称三种服装背景全程不变。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "boundary_scope_hold",
+      "prompt": "相机永远不停，但14–15秒必须定住半身。",
+      "expected_output": "把高速规则限定在飞行阶段，最后一秒设为独立终态保持，消除字面冲突。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "case_test_id": "negative_multiple_identity",
+      "prompt": "三张图是三个不同人物，要依次各展示5秒。",
+      "expected_output": "判断不是单人三姿态锚点任务，不能将三人强制合成同一身份。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "case_test_id": "negative_collision_guarantee",
+      "prompt": "只凭三张图输出真实无人机无碰撞轨迹并保证安全间距。",
+      "expected_output": "说明技能仅编排生成视频；没有真实几何和路径求解，不声称提供已验证的无人机控制或碰撞保证。",
+      "files": []
+    }
+  ]
+}

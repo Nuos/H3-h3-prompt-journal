@@ -1,0 +1,63 @@
+{
+  "repository": "MiniMax-AI/MiniMax-H3",
+  "commit": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+  "checked_date": "2026-11-04",
+  "files": [
+    {
+      "path": "README.md",
+      "git_blob_sha1": "e4d2f4351b1ed64f14c6249d71393ac69a47abdf",
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/README.md",
+      "bytes": 40195,
+      "sha256": "c2110b3754d927b1eaf7cfe7decb522b187a0bc44e659080bc65fc23260bd0c9"
+    },
+    {
+      "path": "skills/h3-prompt-writing/SKILL.md",
+      "git_blob_sha1": "b6d9b2839384a588763a9c24315225dd8ce19d56",
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/SKILL.md",
+      "bytes": 2623,
+      "sha256": "a7000443588ca3f145e3b3fd8900f14e0325dc460bd811268fac89a9dc8e56d0"
+    },
+    {
+      "path": "skills/h3-prompt-writing/references/base-en.txt",
+      "git_blob_sha1": "40cf586a634d677d6b7107b367cf0ec9621be728",
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/base-en.txt",
+      "bytes": 15773,
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"
+    },
+    {
+      "path": "skills/h3-prompt-writing/references/ref-en.txt",
+      "git_blob_sha1": "7ae1b2d07d743fd2392258a96449be9e9e322d35",
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/ref-en.txt",
+      "bytes": 23553,
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"
+    },
+    {
+      "path": "skills/3d-animation-short-generator/references/storyboard-guidelines.md",
+      "git_blob_sha1": "a8639b854041cfb5fc95cd8e020ad5b4c0ffebc1",
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/3d-animation-short-generator/references/storyboard-guidelines.md",
+      "bytes": 14959,
+      "sha256": "a1a5aaed9681dd2f66c5ff1f92ea433bf8a04c8a145cd806623e29e8cabfe1f6"
+    },
+    {
+      "path": "skills/h3-prompt-writing/agents/openai.yaml",
+      "git_blob_sha1": "8151bd25e3dc29bdb67c8049e39c34c60c3f08f8",
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/agents/openai.yaml",
+      "bytes": 240,
+      "sha256": "7770c9d784b7251ab882ee29a738219a3f01811e57ba7fc7822fa83eb8438c1a"
+    },
+    {
+      "path": "skills/3d-animation-short-generator/references/shot-table-spec.md",
+      "git_blob_sha1": "417405085fd3739c105482108f655c3eee2fde75",
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/3d-animation-short-generator/references/shot-table-spec.md",
+      "bytes": 7803,
+      "sha256": "d4770ff3f7c6d1d82770e8a93b91cecad269a0da7a5fd97d5c27862a3e4c805c"
+    },
+    {
+      "path": "skills/3d-animation-short-generator/references/qc-checklist.md",
+      "git_blob_sha1": "72bbee119d00dac548e06a34e301c386935d33a5",
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/3d-animation-short-generator/references/qc-checklist.md",
+      "bytes": 7308,
+      "sha256": "ffd9b192f09aff8cbeb60be859cf13b616ae8ced6a9324cda7728a47e3ea3d3b"
+    }
+  ]
+}

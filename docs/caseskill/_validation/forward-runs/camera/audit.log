@@ -1,0 +1,16 @@
+COMMAND: python3 scripts/audit_plan.py /workspace/scratch/4a76d93cd636/research/forward-runs/camera/plan.json --strict --check-files
+CWD: /workspace/scratch/4a76d93cd636/H3-h3-prompt-journal/docs/caseskill/h3-camera-movement-discipline-library
+EXIT_CODE: 0
+STDOUT:
+{
+  "errors": [],
+  "warnings": [],
+  "static_pass": true,
+  "complete_under_requested_checks": true,
+  "checked_prompt_files": true,
+  "semantic_validation": "not_performed",
+  "human_case_checks": "declared_by_plan_author_not_independently_verified",
+  "model_inference": "not_performed"
+}
+
+STDERR:

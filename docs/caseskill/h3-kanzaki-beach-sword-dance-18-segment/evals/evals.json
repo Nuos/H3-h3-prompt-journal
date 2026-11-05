@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-kanzaki-beach-sword-dance-18-segment",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "单次拔刀后续持刀的两段剑舞，同一场景，每段连续镜头，给出道具状态和后期连接。",
+      "expected_output": "输出数量／握持／空鞘状态表、局部源窗、每段单Shot和一主一辅、桥接候选；不强制18段或原角色。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "按原案S01和S02都独立拔刀，不要把第二次删掉，但修正文内冲突。",
+      "expected_output": "保留两次开场重述，修S02已持刀元数据以及S01 3.500–3.850对3.870冲突，后续段禁止再次拔刀。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "counterexample",
+      "prompt": "每段fully_copy完整最终音轨又加浪声；一镜到底加内切；同时后退环绕升高前推且叫单主运镜。",
+      "expected_output": "明确选择音频政策、镜头结构和主运动，移除相反要求；不凭重命名掩盖冲突。",
+      "files": []
+    }
+  ]
+}

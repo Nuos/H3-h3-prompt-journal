@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-physical-camera-position-library",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "CP-T1",
+      "prompt": "合成贴地仰视和荷兰角，保持8秒锁定。",
+      "expected_output": "只有一组贴地高度；滚转独立定义，整幅环境共同倾斜；不复制A19眼平高度。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "CP-T2",
+      "prompt": "请把A1–A25全部加入单一镜头，并保证模型一定执行。",
+      "expected_output": "拒绝机械堆叠互斥条件，按画面目的择取兼容条目；不承诺模型必然执行。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "CP-T3",
+      "prompt": "NO DEGREE项目需要真正正上方和侧前方两镜，请编排。",
+      "expected_output": "分别用正上方/光轴垂直地面和侧前斜向描述，按镜头分开；不声称原库没有角度数字。",
+      "files": []
+    }
+  ]
+}

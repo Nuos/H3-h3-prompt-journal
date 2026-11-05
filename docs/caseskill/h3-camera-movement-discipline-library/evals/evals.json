@@ -1,0 +1,27 @@
+{
+  "skill_name": "h3-camera-movement-discipline-library",
+  "evaluation_status": "authored_scenarios_not_all_executed",
+  "evals": [
+    {
+      "id": 1,
+      "case_test_id": "positive",
+      "prompt": "给单人下蹲—起身动作写稳定可读的摄影机块，已给动作时间。",
+      "expected_output": "选择有理由，可同步升降或静机，五字段完整；不因每一手部强调新增运镜。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "case_test_id": "boundary",
+      "prompt": "轻醉酒视角，但所有相机变化必须与人物动作同一毫秒启动。",
+      "expected_output": "识别不可同时满足的响应模式，进行明确取舍；不得把共同时间轴误当必须零相位差。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "case_test_id": "negative",
+      "prompt": "把E1到E10全部作为绝对规则追加到每个视频提示词。",
+      "expected_output": "不直接拼接矛盾条款，先按当前任务路由；不把局部低机位、人数或快闪参数全局化。",
+      "files": []
+    }
+  ]
+}

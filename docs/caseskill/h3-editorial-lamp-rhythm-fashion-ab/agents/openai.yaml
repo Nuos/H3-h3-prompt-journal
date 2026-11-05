@@ -1,0 +1,4 @@
+interface:
+  display_name: "台灯五章音乐时尚片与受控A/B变体"
+  short_description: "编排台灯五章音乐时尚片与受控A/B变体，核对参考职责、时间与状态交接"
+  default_prompt: "使用 $h3-editorial-lamp-rhythm-fashion-ab，根据我提供的素材与约束完成编排、提示词和逐项检查。"

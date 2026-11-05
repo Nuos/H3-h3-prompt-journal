@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+  "skill_name": "h3-summer-pool-beach-waterline-mv-4-segment",
+  "required_check_ids": [
+    "SM-01",
+    "SM-02",
+    "SM-03",
+    "SM-04",
+    "SM-05",
+    "SM-06",
+    "SM-07",
+    "SM-08"
+  ],
+  "checks": [
+    {
+      "id": "SM-01",
+      "rule": "身份保留与服装保留独立定义，且每个独立生成任务重新绑定实际身份资产。",
+      "source": "README.md:30-44；prompt.md:20-22,98-113；review:41"
+    },
+    {
+      "id": "SM-02",
+      "rule": "切镜、连续阶段和段际拼接分别登记；时间标记不自动意味着新增Shot。",
+      "source": "README.md:19-26,76-107；review:28"
+    },
+    {
+      "id": "SM-03",
+      "rule": "音乐源时间与local时间明确换算；未给重音表时不把整数设计切点宣称为实测卡点。",
+      "source": "README.md:121-126；review:30"
+    },
+    {
+      "id": "SM-04",
+      "rule": "特殊视点由相机位置/光轴/滚转和环境几何构成，人物身体保持正常重力关系。",
+      "source": "prompt.md:68-78,192-202,254-266"
+    },
+    {
+      "id": "SM-05",
+      "rule": "固定贴地镜头在起身过程中保持原位；从该视点转到新场景须依设计cut完成，不能偷偷变成跟拍。",
+      "source": "prompt.md:184-186,194-202"
+    },
+    {
+      "id": "SM-06",
+      "rule": "泡沫是镜头附近的前景层，水线为持续空间约束；泡沫不附着到脸上且不全程挡脸。",
+      "source": "prompt.md:246-266"
+    },
+    {
+      "id": "SM-07",
+      "rule": "服装、冷暖色调与音频混音政策必须在四段一致或明确标注局部例外，不能互相冲突。",
+      "source": "review:40-42"
+    },
+    {
+      "id": "SM-08",
+      "rule": "擦发、放毛巾、起身和跨段入口都要保持手—道具—身体接触与状态连续。",
+      "source": "prompt.md:146-152,196-206；review:42"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "身份/服装/场景政策表",
+      "content": "每场景固定属性、允许变化、冷暖光规则、音频复制/混音规则。"
+    },
+    {
+      "name": "分段镜头与事件表",
+      "content": "source/local时间、cut/phase/segment_boundary、镜头数、段际接力状态。"
+    },
+    {
+      "name": "物理机位与接触关系表",
+      "content": "位置、高度、光轴、滚转、路径、预期可见几何和手/道具/水/座位状态。"
+    },
+    {
+      "name": "逐段官方提示词与验收清单",
+      "content": "自包含Ref2VA正文和视频生成后需要检查的切点、身份、服装、色调、接触及水线。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

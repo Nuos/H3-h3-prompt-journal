@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+  "delivery_kind": "prompts",
+  "status": "draft",
+  "assembly": "sequential",
+  "runtime": {
+    "profile": "official-2026-10-28"
+  },
+  "fps": 24,
+  "assets": [],
+  "references": [],
+  "segments": [],
+  "handoffs": [],
+  "case_checks": [
+    {
+      "id": "KZ01",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "KZ02",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "KZ03",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "KZ04",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "KZ05",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "KZ06",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "KZ07",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "KZ08",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "KZ09",
+      "status": "unverified",
+      "evidence": ""
+    },
+    {
+      "id": "KZ10",
+      "status": "unverified",
+      "evidence": ""
+    }
+  ],
+  "unresolved": [
+    "依据当前任务填入真实输入、输出和案例检查证据；本文件是待填写模板。"
+  ]
+}

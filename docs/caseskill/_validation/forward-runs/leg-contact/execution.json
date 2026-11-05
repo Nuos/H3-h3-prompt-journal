@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "stderr": "",
+  "command": "python3 <skill>/scripts/audit_plan.py plan.json --strict --check-files",
+  "inference_performed": false,
+  "independent_blind_run": false
+}

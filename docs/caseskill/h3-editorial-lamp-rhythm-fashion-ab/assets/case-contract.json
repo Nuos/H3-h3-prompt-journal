@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+  "skill_name": "h3-editorial-lamp-rhythm-fashion-ab",
+  "required_check_ids": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "checks": [
+    {
+      "id": "R1",
+      "rule": "按音乐调式和Hero正文识别版本：源p83文件=可爱A major后折腿跳跃；源p84文件=暗奢E minor双手甩裙，文件名和README标签相反。",
+      "source": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md:5-12；docs/casereview/2026-09-editorial-lamp-rhythm-fashion-ab.md:27,39"
+    },
+    {
+      "id": "R2",
+      "rule": "五章灯态是ON→OFF→ON→OFF→ON，共五状态、四次切换；初态ON不算一次切换。同一盏灯及房间保持，熄灯使用原房间残余照明，不新造光源。",
+      "source": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md:52-64；case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt:155-173,476-480"
+    },
+    {
+      "id": "R3",
+      "rule": "124 BPM／31拍／15秒及灯点是计划数学关系，不是生成音轨实测。保留整拍、细分和自由过渡标签，并记录24FPS舍入误差，不宣称小数时间恰好落在原生帧边界。",
+      "source": "docs/casereview/2026-09-editorial-lamp-rhythm-fashion-ab.md:25,31,41；工程补齐：精确拍格与帧量化表"
+    },
+    {
+      "id": "R4",
+      "rule": "受控A/B须逐项审计摄影差异；原文暗奢02/04/06/09和可爱版并非同一roll规则。统一roll预算属于显式改编，不能假称原两版只在三个层面分叉。",
+      "source": "docs/casereview/2026-09-editorial-lamp-rhythm-fashion-ab.md:29,35,40；case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt:435,556,670,844；case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt:381,521,627,784"
+    },
+    {
+      "id": "R5",
+      "rule": "每段动作有明确支撑与发起→行进→重音→刹停→释放，连续段身体结构不同且状态可达；轻弹脚不离地，提膝不是踢腿，最终跳跃不提前泄露。",
+      "source": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt:298-338,573-607,636-654,687-713,794-830"
+    },
+    {
+      "id": "R6",
+      "rule": "跳跃版双手高举而不抓裙，双脚向后靠拢且落地；甩裙版先握裙蓄力、手向外发力、裙边滞后。二者不能拼成同一Hero动作链。",
+      "source": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt:866-947,988-1024；case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt:743-865,949-967"
+    },
+    {
+      "id": "R7",
+      "rule": "ROLL绕光轴、短促且有触发，使用后回正；discrete camera states要说明切镜或连续路径。Moment08近静止微视差与片尾hard lock不同，不能混写。",
+      "source": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt:223-292,744-787；case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt:179-257,973-993"
+    },
+    {
+      "id": "R8",
+      "rule": "bullet-time feel不是字面慢动作或真实冻结；以短暂可读峰值、正常下降／制动、衣料残余惯性表达，并给实际时长。没有证据不能承诺自然跳跃长时间悬停。",
+      "source": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt:988-1024；case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt:923-959；docs/casereview/2026-09-editorial-lamp-rhythm-fashion-ab.md:31"
+    },
+    {
+      "id": "R9",
+      "rule": "参考图提供视觉资产，正文集中描述变化；全程保持资产需显式允许计划灯态造成的照明变化。未知内层、缺台灯或不支持Hero的裙结构不得伪称图中已存在。",
+      "source": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt:7-55；case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt:5-53,1005-1031；工程补齐：未知资产状态与灯光例外"
+    },
+    {
+      "id": "R10",
+      "rule": "配乐与整体声场分列，开关click只对应四次实际切换；额外strobe、快门声、随机灯闪或提前Hero会破坏该变体的计数和因果，必须删除或另列变体。",
+      "source": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt:1210-1244；case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt:1041-1057,1141-1168；工程补齐：编辑闪光与实体灯态冲突裁决"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "语义版本与源文件映射",
+      "content": "variant_id、真实调式／配器、Moment05/06/07/09/10动作、各版roll允许位置、原路径和错误文件名注释。"
+    },
+    {
+      "name": "共享节奏与灯态计划",
+      "content": "精确拍号／拍位／秒值、显示值、生成帧、量化误差、灯初态及四切换、自由过渡边界、计划与实测状态。"
+    },
+    {
+      "name": "每版H3提示词与变更表",
+      "content": "公共资产和时轴、逐段身体／摄影／声音、独立Hero链、faithful或controlled路由标记；列明统一摄影等工程修改。"
+    },
+    {
+      "name": "成片验收表",
+      "content": "实际onset、灯态变化帧、身体重音、roll回正、跳跃落地或布料滞后、片尾锁机和A/B差异，未生成时留missing／pending。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

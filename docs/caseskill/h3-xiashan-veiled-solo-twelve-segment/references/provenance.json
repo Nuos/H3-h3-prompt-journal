@@ -1,0 +1,43 @@
+{
+  "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+      "bytes": 7390,
+      "lines": 71,
+      "git_blob_sha": "7d2d18c1697928bed90d80361f5ac16997302d28",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "reading_note": "全篇阅读：双图授权、失败修订、穿戴物锁、歌词政策、全局规则丢失与错误总时间。"
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "bytes": 101257,
+      "lines": 743,
+      "git_blob_sha": "1db431d27a43f05da550ad1d96bf05bb1325bc05",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "reading_note": "全篇阅读743行：逐段动作、音频和相机、拍数窗口、标签／可见对象、静止和峰值接缝等冲突。"
+    },
+    {
+      "path": "docs/casereview/2026-10-xiashan-veiled-solo-twelve-segment.md",
+      "local_path": "references/source-review.md",
+      "sha256": "d1fc5fb6c1f793c2a512a4eb79ccbf53cecc8f518ffbf47883baf7d3966a5cf4",
+      "bytes": 5623,
+      "lines": 56,
+      "git_blob_sha": "8c5e01cc5ef39543a86216b2b3801e22c5a2f549",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-xiashan-veiled-solo-twelve-segment.md",
+      "reading_note": "全篇阅读：方法等级与缺SRT／manifest、拍数／模式／环境权威及版本冲突，作为修复依据。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

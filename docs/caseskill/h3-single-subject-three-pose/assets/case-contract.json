@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-08-single-subject-three-pose",
+  "skill_name": "h3-single-subject-three-pose",
+  "required_check_ids": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "P8"
+  ],
+  "checks": [
+    {
+      "id": "P1",
+      "rule": "三图指向同一人物的三个姿态，姿态是连续经过的锚点，不是三个身份或静态轮播画面。",
+      "source": "case-studies/2026-08-single-subject-three-pose/prompt.md:1–44,130–169"
+    },
+    {
+      "id": "P2",
+      "rule": "人物正常运动且保持正常尺寸；相机负责绕行避让，微小视点只体现为透视、视差和空间移动。",
+      "source": "case-studies/2026-08-single-subject-three-pose/prompt.md:79–104,171–189"
+    },
+    {
+      "id": "P3",
+      "rule": "每个中间动作必须自然导向下一参考姿态；人物动作和相机路径分别描述且时序对应。",
+      "source": "case-studies/2026-08-single-subject-three-pose/prompt.md:301–456,613–638"
+    },
+    {
+      "id": "P4",
+      "rule": "近身路线绕过身体、衣料和头发；没有可确认间隙时使用外侧弧线，不以不可见相机为由穿模。",
+      "source": "case-studies/2026-08-single-subject-three-pose/prompt.md:192–233,663–704"
+    },
+    {
+      "id": "P5",
+      "rule": "持续高速及不冻结仅适用于飞行段，末尾14–15秒半身保持是独立终态。",
+      "source": "case-studies/2026-08-single-subject-three-pose/prompt.md:229–233,559–581；docs/casereview/2026-08-single-subject-three-pose.md:38"
+    },
+    {
+      "id": "P6",
+      "rule": "参考图不一致时先定义身份、服装、场景和姿态的属性优先级，不同时锁定冲突属性。",
+      "source": "docs/casereview/2026-08-single-subject-three-pose.md:26,39"
+    },
+    {
+      "id": "P7",
+      "rule": "靠近与后撤是相机空间位移，保持透视和前后景视差，数字缩放不能代替。",
+      "source": "case-studies/2026-08-single-subject-three-pose/prompt.md:509–581,663–704"
+    },
+    {
+      "id": "P8",
+      "rule": "提示词中的预判和避障是创作行为规范，未提供碰撞求解、净距计算或生成稳定性保证。",
+      "source": "case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md:105–107"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "三图参考权限与姿态表",
+      "content": "主体ID、Pose 1/2/3、身份/服装/场景来源、支撑与四肢/头部配置、冲突和missing。"
+    },
+    {
+      "name": "人物—相机并行时间表",
+      "content": "每段人物起末状态、身体中间动作、相机路径、可见部位、避让原因和相邻段接点。"
+    },
+    {
+      "name": "H3正文与终态",
+      "content": "连续近身摄影描述、参考绑定、飞行规则作用域、空间后撤和第三姿态半身保持。"
+    },
+    {
+      "name": "降级与验收清单",
+      "content": "姿态命中、人物身份、连续路径、穿模、可见性及终帧；给窄缝外绕和少转折版本，区分文本检查与实际审片。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

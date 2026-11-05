@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-camera-movement-discipline-library",
+  "delivery_kind": "component",
+  "status": "ready",
+  "assembly": "component",
+  "runtime": {
+    "profile": "official-2026-10-28"
+  },
+  "fps": 24,
+  "assets": [],
+  "references": [],
+  "segments": [],
+  "handoffs": [],
+  "case_checks": [
+    {
+      "id": "CMD01",
+      "status": "pass",
+      "evidence": "camera-component.en.txt has four camera blocks: fixed front, one straight dolly, fixed front, fixed side. Each has one principal behaviour; no per-accent redirection."
+    },
+    {
+      "id": "CMD02",
+      "status": "pass",
+      "evidence": "Shared clock: dolly starts 2.000 s, arrives/stops 3.500 s, turn begins 4.000 s. arrival - turn onset = -0.500 s; fixed observation never stops the dancers."
+    },
+    {
+      "id": "CMD03",
+      "status": "pass",
+      "evidence": "Response is anticipate_hit during the dolly and stable_observe otherwise; independent edit_policy is phase_match_cut at 5.000 s, inside the 4.000–6.000 s turn."
+    },
+    {
+      "id": "CMD04",
+      "status": "pass",
+      "evidence": "All four blocks contain CAMERA POSITION, CAMERA GEOMETRY, CAMERA MOVEMENT, MOVEMENT TRIGGER and END CAMERA POSITION. Each static block explicitly uses none for movement and trigger."
+    },
+    {
+      "id": "CMD05",
+      "status": "pass",
+      "evidence": "Front dolly follows negative Y from (0,-6,1.2) to (0,-8,1.2) m; side view is prepositioned at (+8,0,1.2) m. Lens, axis, height and arrival are specified. These dimensions are authored assumptions, not measured set data."
+    },
+    {
+      "id": "CMD06",
+      "status": "not_applicable",
+      "evidence": "The current request calls for anticipation, not delayed_observer. No lag, overshoot or reacquisition is prescribed."
+    },
+    {
+      "id": "CMD07",
+      "status": "pass",
+      "evidence": "Current user constraints override historical defaults: lead is exactly 0.500 s, cut occurs mid-turn, and no freeze ending or flash is used. Historical low-angle, dwell and 1.5–2 s anticipation values are not imported."
+    },
+    {
+      "id": "CMD08",
+      "status": "pass",
+      "evidence": "This is an authored camera component with a static plan audit only. No media or inference was run; actual timing, body continuity and generated quality remain unverified."
+    }
+  ],
+  "unresolved": [],
+  "task": {
+    "duration_seconds": 12,
+    "subjects": "duet",
+    "scope": "insertable camera component only",
+    "user_constraints": [
+      "Camera arrives 0.5 seconds before turn onset",
+      "Exactly one action/rotation-phase match cut to the side during the turn",
+      "Dancers remain in continuous motion; no freeze frames"
+    ]
+  },
+  "deliverables": {
+    "english_component": "camera-component.en.txt",
+    "chinese_timing_and_review": "output.md"
+  },
+  "camera_plan": {
+    "response_policy": {
+      "moving_phase": "anticipate_hit",
+      "other_phases": "stable_observe"
+    },
+    "edit_policy": "phase_match_cut",
+    "physical_camera_moves": 1,
+    "edit_count": 1,
+    "camera_move_start_seconds": 2.0,
+    "camera_arrival_and_stop_seconds": 3.5,
+    "turn_start_seconds": 4.0,
+    "turn_end_seconds": 6.0,
+    "cut_seconds": 5.0,
+    "arrival_minus_turn_start_seconds": -0.5,
+    "planned_frames_at_24_fps": {
+      "duration_frames": 288,
+      "arrival_frame": 84,
+      "turn_start_frame": 96,
+      "lead_frames": 12,
+      "cut_first_side_frame": 120,
+      "last_front_frame": 119,
+      "last_clip_frame": 287
+    },
+    "blocks": [
+      {
+        "time_seconds": [
+          0.0,
+          2.0
+        ],
+        "response": "stable_observe",
+        "movement": "none",
+        "trigger": "none",
+        "view": "front"
+      },
+      {
+        "time_seconds": [
+          2.0,
+          3.5
+        ],
+        "response": "anticipate_hit",
+        "movement": "straight backward dolly",
+        "trigger": "shared clock 2.000 s during moving preparation",
+        "view": "front"
+      },
+      {
+        "time_seconds": [
+          3.5,
+          5.0
+        ],
+        "response": "stable_observe",
+        "movement": "none",
+        "trigger": "none",
+        "view": "front"
+      },
+      {
+        "time_seconds": [
+          5.0,
+          12.0
+        ],
+        "response": "stable_observe",
+        "movement": "none",
+        "trigger": "none",
+        "view": "side"
+      }
+    ]
+  },
+  "authored_assumptions": [
+    "Turn occupies 4.000–6.000 seconds; cut at 5.000 seconds",
+    "Stage coordinates, camera distances and 1.2 m height are production design choices",
+    "Two diagonal turn centres preserve two-person visibility",
+    "Existing full prompt supplies identity, scene, wardrobe, style and audio; this component does not invent audio alignment"
+  ],
+  "verification_limits": [
+    "No source media supplied or inspected",
+    "No H3 inference or video quality validation",
+    "No measured beat timing or actual stage dimensions",
+    "Component documents are not generation segments, so the existing audit does not inspect their prose; semantic review is recorded by the plan author"
+  ]
+}

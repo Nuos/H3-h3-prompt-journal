@@ -1,0 +1,73 @@
+{
+  "case_id": "2026-08-single-subject-three-pose",
+  "version": "1.0.0",
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_and_review_files": [
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/README.md",
+      "local_path": "references/source-README.md",
+      "sha256": "fd9275b829033318e3a444b0e16fcd984f9f394bf1776ce2b7c7aee50f869421",
+      "bytes": 4954,
+      "lines": 85,
+      "git_blob_sha": "a397a5e0e672904eb80e370ae6ac560a5e5133cd",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-single-subject-three-pose/README.md",
+      "reading_note": "完整阅读；三姿态方法、七阶段时间表和作者结果。"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/README.zh-CN.md",
+      "local_path": "references/source-README.zh-CN.md",
+      "sha256": "1f496302d0813d94415b32f9f18d354fc69c58f6553cab47bdf21a004f88647c",
+      "bytes": 14281,
+      "lines": 266,
+      "git_blob_sha": "8d974ae50506cfe61b707a97199ea1f3cdde99cc",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-single-subject-three-pose/README.zh-CN.md",
+      "reading_note": "完整阅读；方法逐段译注与主体性分工。"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/prompt.md",
+      "local_path": "references/source-prompt.md",
+      "sha256": "d7a0ec8cfb9cd2e4d241774852d064cabe3254bb56ccf9afc6ecdf1429334615",
+      "bytes": 16750,
+      "lines": 879,
+      "git_blob_sha": "500cf634e40a302ef36ac505d7fa2500f0cc5630",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-single-subject-three-pose/prompt.md",
+      "reading_note": "完整阅读879行；参考权限、身体与相机双线、七阶段、光学和终态约束。"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md",
+      "local_path": "references/source-prompt.zh-CN.md",
+      "sha256": "8083f69d66398fceb847ecd83074dfeba6977de1db3edc50a2c1b6c18942b19e",
+      "bytes": 47909,
+      "lines": 1178,
+      "git_blob_sha": "28e6cc42c0510fdf352dbdea31cd33629277da07",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md",
+      "reading_note": "完整阅读1178行；全文译注，核对动作与摄影路线及末段保持。"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md",
+      "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+      "sha256": "58081c91e536f3c502dd9694bc9e083c69c11cb97129f26f4ef04d3eb48af5e7",
+      "bytes": 11916,
+      "lines": 107,
+      "git_blob_sha": "ca42d3b76e2c8493c535c22ed507554b3a980b92",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md",
+      "reading_note": "完整阅读；身份/姿态/机位区分、相对尺度和避障证据边界。"
+    },
+    {
+      "path": "docs/casereview/2026-08-single-subject-three-pose.md",
+      "local_path": "references/source-review.md",
+      "sha256": "a145603888e4972e098a6b01a34b3efc5d47c7e41ba632126f677af74e37b07b",
+      "bytes": 4961,
+      "lines": 48,
+      "git_blob_sha": "9a2fea7a27e43e478f401d5446eeeff493df1a57",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-single-subject-three-pose.md",
+      "reading_note": "完整阅读；飞行规则作用域、参考冲突、空间契约和验证缺口已落实。"
+    }
+  ],
+  "official_commits": {
+    "agentskills": "83021e2be457a9b6679148719c1f6074f0ad975e",
+    "minimax_h3": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+  },
+  "media_inspected": false,
+  "inference_performed": false
+}

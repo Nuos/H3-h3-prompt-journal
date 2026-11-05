@@ -1,0 +1,1442 @@
+{
+  "repository_commit": "91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e",
+  "case_count": 29,
+  "case_text_count": 97,
+  "review_count": 29,
+  "cases": [
+    {
+      "case_id": "2026-08-cinematic-character-reveal-two-part",
+      "skill_name": "h3-cinematic-character-reveal-two-part",
+      "files": [
+        {
+          "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "26f2a637765712b3456c1bb94aabbf53b3c6bc05c8f359a2b752967a5be008f8",
+          "bytes": 8973,
+          "lines": 109,
+          "git_blob_sha": "72c4bfeedf2eb966d05e44515128b620a219b5e1",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-cinematic-character-reveal-two-part/README.md",
+          "reading_note": "全文109行：两段用途、六项接缝契约、姿态与脸部权限、13CUT口径和作者结果。"
+        },
+        {
+          "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md",
+          "local_path": "references/source-README.zh-CN.md",
+          "sha256": "59e6653d0a5be8f978d09ea3c657089a4fff6aa0591024758623fe749b852ea5",
+          "bytes": 26476,
+          "lines": 415,
+          "git_blob_sha": "6a77d28f7032e60ee8bc7ae192d99c02e47655e1",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md",
+          "reading_note": "全文415行逐段译注；核对六项契约、实际七项规避列表、经验20秒阈值和结果断言。"
+        },
+        {
+          "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "662a755d3abb0f985ee5c273aac6a9943c559cac13bc8d4d6ec11be559d8c226",
+          "bytes": 18328,
+          "lines": 653,
+          "git_blob_sha": "5cb92433398250390c00dad804bbc3804550e897",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md",
+          "reading_note": "全文653行：两段各13块，块内真实短切、Pose01–11、同场景/纯器乐/环境声、未落实的跨生成状态。"
+        },
+        {
+          "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md",
+          "local_path": "references/source-prompt.zh-CN.md",
+          "sha256": "7acbdc272d9d7f01b0f1baaab693198c6fb04e20a5cfd79401f4fee451b476f6",
+          "bytes": 71417,
+          "lines": 1869,
+          "git_blob_sha": "e39931e9262ed9599d84fddbccf3155f6ca75e29",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md",
+          "reading_note": "全文1869行译注：前半1–876与后半880–1869全部读取，核对姿态/剪辑/声场、末态微动和three-quarter近似说明。"
+        },
+        {
+          "path": "case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "c523ba2fa3ff1ee8cc79e4b75d4cce7fc9c66abe553552aa8d3498d17e3ddea5",
+          "bytes": 13734,
+          "lines": 127,
+          "git_blob_sha": "b44081b88877ae7d8f97ce6424bf92c92c13f17c",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md",
+          "reading_note": "全文127行，60词及six实际七项、建筑遮挡重复、角度、拼写、风格来源与实际传参校读。"
+        },
+        {
+          "path": "docs/casereview/2026-08-cinematic-character-reveal-two-part.md",
+          "local_path": "references/source-review.md",
+          "sha256": "62eac3de84c77925e8e9b5820c238924b47dbc45feab0f9b8b2c995ba5e9bcec",
+          "bytes": 5721,
+          "lines": 52,
+          "git_blob_sha": "fdc11208bf8da388054d0763c54a82f84d6c3dae",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-cinematic-character-reveal-two-part.md",
+          "reading_note": "全文评估：两段接缝数据传递、批准姿态索引、CUT块与真实Shot区分、非实测拍点和去重缺口。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-08-dual-subject-speed-contrast",
+      "skill_name": "h3-dual-subject-speed-contrast",
+      "files": [
+        {
+          "path": "case-studies/2026-08-dual-subject-speed-contrast/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "03a82e79d8479c6ebc80ded8347f8522a96a64cb8f56e0a76c1a129f44e5bc25",
+          "bytes": 3642,
+          "lines": 70,
+          "git_blob_sha": "4672e2c8969cf78cc7ae9c84f4060d5ce293b6eb",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-dual-subject-speed-contrast/README.md",
+          "reading_note": "全文读取输入、同步问题、比例和模仿方法、摄影声音及作者结果；区分经验解释和模型保证。"
+        },
+        {
+          "path": "case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md",
+          "local_path": "references/source-README.zh-CN.md",
+          "sha256": "e2ddd770ce690d4561b71cfd8f48d62b3b62924008705a15ad3b3f1ae6b25513",
+          "bytes": 12645,
+          "lines": 247,
+          "git_blob_sha": "883bccae513bb798c4fb868bf19aabdc12a1380a",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md",
+          "reading_note": "全文读取逐段双语解释，核对相对动作进度与观察滞后的译义；不算第二组实验。"
+        },
+        {
+          "path": "case-studies/2026-08-dual-subject-speed-contrast/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "60461d26bbfc22ddf6aad4e75ecfae1f75a8ed674460a13189b22f72db6eafe3",
+          "bytes": 2653,
+          "lines": 171,
+          "git_blob_sha": "5643ee691a8e81250057e3a04ca564c8f4c28971",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-dual-subject-speed-contrast/prompt.md",
+          "reading_note": "全文读取中文原提示词171行，抽取两人绑定、3∶1关系、连续与不追赶、景别、器乐约束。"
+        },
+        {
+          "path": "case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "97e486a8dbaf52c0025317f2aaa8e4f26bd249c5dda63e587413463ac9e30b1e",
+          "bytes": 12760,
+          "lines": 109,
+          "git_blob_sha": "9242adcb39f1b9c837ea8ce3be3491eadee83c3b",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md",
+          "reading_note": "全文读取计数/速度/延迟和近景/环绕辨析、作者报告证据边界。"
+        },
+        {
+          "path": "docs/casereview/2026-08-dual-subject-speed-contrast.md",
+          "local_path": "references/source-review.md",
+          "sha256": "1fe46d99080ca8598e81edf340eb8eb27e350240a806e9bf87e7ffc43030f07b",
+          "bytes": 4464,
+          "lines": 52,
+          "git_blob_sha": "f37943e6cd8fa8058e0505a1c56dbd23c42792a8",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-dual-subject-speed-contrast.md",
+          "reading_note": "全文读取案例缺口：计数单位和统计窗口未定义、近景不能验证完整脚步、经验不可作执行保证。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-08-first-person-finger-controlled-dance",
+      "skill_name": "h3-first-person-finger-controlled-dance",
+      "files": [
+        {
+          "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "ba7ef1911f9d93901318f2784b9ca7c8fa0fb0141536933c16ccb4dd7b9b71b5",
+          "bytes": 7128,
+          "lines": 109,
+          "git_blob_sha": "eb24f9095c1512b03d423354161c7db656dd7bff",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-first-person-finger-controlled-dance/README.md",
+          "reading_note": "完整阅读；映射方法、前景配额、作者结果及可替换范围。"
+        },
+        {
+          "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md",
+          "local_path": "references/source-README.zh-CN.md",
+          "sha256": "85e125d85f8a0ab0303611a459f8d6890453d8608889f2fce1fd738d91aaf790",
+          "bytes": 19743,
+          "lines": 334,
+          "git_blob_sha": "8510ce889dd55118aa65ad8ae78562d71ece5aae",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md",
+          "reading_note": "完整阅读；方法逐段译注与十条命令结果描述。"
+        },
+        {
+          "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "68769f007f1ceaf0b3c5d20be07c4298d2c1ea827b59913e1fe6d2904613b1c2",
+          "bytes": 6580,
+          "lines": 67,
+          "git_blob_sha": "b60d367e04180dbf99976c451223c57a6fc58f5f",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-first-person-finger-controlled-dance/prompt.md",
+          "reading_note": "完整阅读；四向身体定义、十条与结尾三条、构图及声音全文。"
+        },
+        {
+          "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md",
+          "local_path": "references/source-prompt.zh-CN.md",
+          "sha256": "4abfdbb588760ddf6896a0af277b85827157058815f04d326aa4cc07be483f65",
+          "bytes": 18406,
+          "lines": 302,
+          "git_blob_sha": "1bea74520f7c00446f2c3059c77b8fe54356f75b",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md",
+          "reading_note": "完整阅读；正文中译，核对屏幕坐标和度量差异。"
+        },
+        {
+          "path": "case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "68a5945faff4822892e725bf8c07f9cc08cf2c60dafb853010f1def84c775b6f",
+          "bytes": 11341,
+          "lines": 103,
+          "git_blob_sha": "531b7e9a5ecd744adb443cde1d0426029bed441d",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md",
+          "reading_note": "完整阅读；天花板冲突、结尾序列歧义、术语边界。"
+        },
+        {
+          "path": "docs/casereview/2026-08-first-person-finger-controlled-dance.md",
+          "local_path": "references/source-review.md",
+          "sha256": "43e35e0d619371ec570646833994b88fbff25fb90309ad0a0148ff5635fdd90b",
+          "bytes": 4799,
+          "lines": 53,
+          "git_blob_sha": "5ec697e1f3be779c02d56af61e5d4a9574d5db4a",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-first-person-finger-controlled-dance.md",
+          "reading_note": "完整阅读；命令总数、几何核验、响应容差缺口已落实。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-08-furina-windsurfing-fashion-mv",
+      "skill_name": "h3-furina-windsurfing-fashion-mv",
+      "files": [
+        {
+          "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "9ea0ed0ef4f10175296003c30c9965da8713e03d7c422a641da5e9a0e720c09a",
+          "bytes": 8448,
+          "lines": 140,
+          "git_blob_sha": "fb114c0db8112ad8d72616f8d92a7e0f8c7dbb27",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-furina-windsurfing-fashion-mv/README.md",
+          "reading_note": "全文读取：三层参考、三段结构、局部音乐窗口、全片音频重制及作者经验；其媒体列表与当前目录实际无媒体文件的差异已列为 missing。"
+        },
+        {
+          "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md",
+          "local_path": "references/source-README.zh-CN.md",
+          "sha256": "395bdf407961cf9e2a2ec907d8c1b7829e369e2dd66505d43e5a3fa005c541ae",
+          "bytes": 19937,
+          "lines": 397,
+          "git_blob_sha": "1908c33251798ce7dba748b2545e36be5269b0dd",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md",
+          "reading_note": "全文读取：对照中文职责表和流程；识别音乐 mini-turnaround 被译为“小型转面展示”的错误，以及首帧锚不影响构图的范围冲突。"
+        },
+        {
+          "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "615805834349a4446429ac9422222272b03e418133dc7528f46f30a8756a7bc6",
+          "bytes": 26514,
+          "lines": 1465,
+          "git_blob_sha": "d70f7a2d8f6af02914d9bb0b9344173da8cb4b84",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md",
+          "reading_note": "全文读取全部 1465 行：完整制作说明、三段英文提示词、独立生成输入、第三段跳跃时序、全片提音/Suno/最终同步及跨运动复用。"
+        },
+        {
+          "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md",
+          "local_path": "references/source-prompt.zh-CN.md",
+          "sha256": "d0187e9ebb881642343c610fae823285cb4165867fc4826a0874096d35fa4eac",
+          "bytes": 43730,
+          "lines": 869,
+          "git_blob_sha": "456aaec92703f8ef4e4034db690d45457be4ab8b",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md",
+          "reading_note": "全文读取全部 869 行：三段逐段译文及词汇，确认第二段不跳跃、第三段 7–8 秒离水/9–10 秒稳定构图/11–12 秒回水，区分落水与板体重新接触水面。"
+        },
+        {
+          "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "faffb0713e48175301ae5656bbed1103b1beffa163963b7f2a27d67e3e778252",
+          "bytes": 11567,
+          "lines": 107,
+          "git_blob_sha": "768687db0a705a353c6a3a1c2823919a6c217061",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md",
+          "reading_note": "全文读取：参考权限、多视角版面、帆板/boom/索具、长焦距离、稳定摄影与冻结、音乐转接及重制后重新同步的语义边界。"
+        },
+        {
+          "path": "docs/casereview/2026-08-furina-windsurfing-fashion-mv.md",
+          "local_path": "references/source-review.md",
+          "sha256": "d889c4c0e03db8ba8ba5ebc2371b81470f50cf0d03a80c5827b0f9376812aaeb",
+          "bytes": 5206,
+          "lines": 53,
+          "git_blob_sha": "6b4f55d98c913c7663564f5fe6a208c6cfe82344",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-furina-windsurfing-fashion-mv.md",
+          "reading_note": "全文读取：P0 首帧/接缝状态、P1 新配乐时基和参考权限证据三项缺口，人物参数化及将制作经验转为可检验交付接口。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-08-single-subject-three-pose",
+      "skill_name": "h3-single-subject-three-pose",
+      "files": [
+        {
+          "path": "case-studies/2026-08-single-subject-three-pose/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "fd9275b829033318e3a444b0e16fcd984f9f394bf1776ce2b7c7aee50f869421",
+          "bytes": 4954,
+          "lines": 85,
+          "git_blob_sha": "a397a5e0e672904eb80e370ae6ac560a5e5133cd",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-single-subject-three-pose/README.md",
+          "reading_note": "完整阅读；三姿态方法、七阶段时间表和作者结果。"
+        },
+        {
+          "path": "case-studies/2026-08-single-subject-three-pose/README.zh-CN.md",
+          "local_path": "references/source-README.zh-CN.md",
+          "sha256": "1f496302d0813d94415b32f9f18d354fc69c58f6553cab47bdf21a004f88647c",
+          "bytes": 14281,
+          "lines": 266,
+          "git_blob_sha": "8d974ae50506cfe61b707a97199ea1f3cdde99cc",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-single-subject-three-pose/README.zh-CN.md",
+          "reading_note": "完整阅读；方法逐段译注与主体性分工。"
+        },
+        {
+          "path": "case-studies/2026-08-single-subject-three-pose/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "d7a0ec8cfb9cd2e4d241774852d064cabe3254bb56ccf9afc6ecdf1429334615",
+          "bytes": 16750,
+          "lines": 879,
+          "git_blob_sha": "500cf634e40a302ef36ac505d7fa2500f0cc5630",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-single-subject-three-pose/prompt.md",
+          "reading_note": "完整阅读879行；参考权限、身体与相机双线、七阶段、光学和终态约束。"
+        },
+        {
+          "path": "case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md",
+          "local_path": "references/source-prompt.zh-CN.md",
+          "sha256": "8083f69d66398fceb847ecd83074dfeba6977de1db3edc50a2c1b6c18942b19e",
+          "bytes": 47909,
+          "lines": 1178,
+          "git_blob_sha": "28e6cc42c0510fdf352dbdea31cd33629277da07",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md",
+          "reading_note": "完整阅读1178行；全文译注，核对动作与摄影路线及末段保持。"
+        },
+        {
+          "path": "case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "58081c91e536f3c502dd9694bc9e083c69c11cb97129f26f4ef04d3eb48af5e7",
+          "bytes": 11916,
+          "lines": 107,
+          "git_blob_sha": "ca42d3b76e2c8493c535c22ed507554b3a980b92",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md",
+          "reading_note": "完整阅读；身份/姿态/机位区分、相对尺度和避障证据边界。"
+        },
+        {
+          "path": "docs/casereview/2026-08-single-subject-three-pose.md",
+          "local_path": "references/source-review.md",
+          "sha256": "a145603888e4972e098a6b01a34b3efc5d47c7e41ba632126f677af74e37b07b",
+          "bytes": 4961,
+          "lines": 48,
+          "git_blob_sha": "9a2fea7a27e43e478f401d5446eeeff493df1a57",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-single-subject-three-pose.md",
+          "reading_note": "完整阅读；飞行规则作用域、参考冲突、空间契约和验证缺口已落实。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-08-sticker-character-kitchen-comedy",
+      "skill_name": "h3-sticker-character-kitchen-comedy",
+      "files": [
+        {
+          "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "88e8bbec07a740b63e7f68417bb1e555031e3c33dacada45c625732b9a5a0907",
+          "bytes": 5869,
+          "lines": 93,
+          "git_blob_sha": "07ccc6cada79700019656c65000e1ff185ab1ccb",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+          "reading_note": "全文读取两类失败、媒介/道具方法、职责、切点、声音与作者结果；标记未经对照验证的泛化。"
+        },
+        {
+          "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md",
+          "local_path": "references/source-README.zh-CN.md",
+          "sha256": "e96affe636ae6fee6dad25daadbe1906ec36d097bc8ef4858b634c8eac4137da",
+          "bytes": 15559,
+          "lines": 287,
+          "git_blob_sha": "5290ad33edc00bea3e1ae24e3305ae1b2601e869",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md",
+          "reading_note": "全文读取287行逐段译注，包括全局化不碰罐的叙述风险及three-beat和四镜头的区别。"
+        },
+        {
+          "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "cb0dd901e8162ecb1bfbd89475df2648dcbe8eeb34821cdb9726228d1c09f46e",
+          "bytes": 4666,
+          "lines": 109,
+          "git_blob_sha": "07719668193e6b82226f1380399f0e576c831273",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+          "reading_note": "全文读取109行使用说明、六节正文、四Shot及声场；核对3/5/8秒和实际交互顺序。"
+        },
+        {
+          "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md",
+          "local_path": "references/source-prompt.zh-CN.md",
+          "sha256": "27301d4d415043c298487e5c6f6cbcbda5eb9de98e841acdf683956f3e249764",
+          "bytes": 13742,
+          "lines": 369,
+          "git_blob_sha": "c56419699287a9e074debad5ddfc7242df73f5d9",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md",
+          "reading_note": "全文读取369行译文/术语，核对开口、动作归属、鼓嘴/僵住/微颤/倒地和末尾构图。"
+        },
+        {
+          "path": "case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "557648e76f7319cd4dae52878bb62f5b30055a9bdeb66f5e04b78c316a5505a1",
+          "bytes": 11158,
+          "lines": 107,
+          "git_blob_sha": "bca11db0afd44a9a12e1b32b08c833d2a67d08f1",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md",
+          "reading_note": "全文读取媒介/身份、开口/盖子、锅/灶、轻敲/夸张反应及环境声与静音的概念区分。"
+        },
+        {
+          "path": "docs/casereview/2026-08-sticker-character-kitchen-comedy.md",
+          "local_path": "references/source-review.md",
+          "sha256": "57ca92c848e70e4f79d0fee7bf18bb5badea563f19a614e212e049996f7a03ee",
+          "bytes": 4714,
+          "lines": 50,
+          "git_blob_sha": "fa80357ed29beca577b1833a171dc974f5593a62",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-sticker-character-kitchen-comedy.md",
+          "reading_note": "全文读取局部不碰罐、动作预算、媒介/道具因果回归及经验边界的评估。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-08-three-person-orbital-long-take",
+      "skill_name": "h3-three-person-orbital-long-take",
+      "files": [
+        {
+          "path": "case-studies/2026-08-three-person-orbital-long-take/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "1d6bc8411a168725010f7a6d93b194398e3e0df276a04afb00554815c2cd8abb",
+          "bytes": 3603,
+          "lines": 74,
+          "git_blob_sha": "be69aaa3305c0a7859548f5dd6ee2729fe32866b",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-three-person-orbital-long-take/README.md",
+          "reading_note": "全文74行：三图身份与环境分工、遮挡接力方法、README的360度和20秒结果陈述、6秒三人加约2秒结尾。"
+        },
+        {
+          "path": "case-studies/2026-08-three-person-orbital-long-take/README.zh-CN.md",
+          "local_path": "references/source-README.zh-CN.md",
+          "sha256": "c97b7bbcb94fc5788b6875da4469b60caac4ad6a25ff4dec21b293eff379e673",
+          "bytes": 8760,
+          "lines": 194,
+          "git_blob_sha": "2c78fa8d8c1dff078a32f656ba0d52ed5a4a425d",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-three-person-orbital-long-take/README.zh-CN.md",
+          "reading_note": "全文194行：README全部逐段中文译注；核对它保留作者成功与证明措辞，并不构成独立实验，识别three-quarter旧译。"
+        },
+        {
+          "path": "case-studies/2026-08-three-person-orbital-long-take/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "262915229f84cd187353174c68806c04949168b6c686efa36931cb6340c8faaf",
+          "bytes": 29240,
+          "lines": 1413,
+          "git_blob_sha": "85cd5ebdbb4ce5979ade026607b00822c949d3fc",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-three-person-orbital-long-take/prompt.md",
+          "reading_note": "全文1413行：参考权限、固定三人站位、严格可见性、上下上环绕、第二接力高度、竞争时间表、物理路径、微动作、短后拉及负向约束。"
+        },
+        {
+          "path": "case-studies/2026-08-three-person-orbital-long-take/prompt.zh-CN.md",
+          "local_path": "references/source-prompt.zh-CN.md",
+          "sha256": "c5d810b8f46b626753f101e164e8436e2ae6f093ba89ab7d1072ffc4202b5192",
+          "bytes": 71063,
+          "lines": 1599,
+          "git_blob_sha": "2c55a4c1372c8350da7d744a05a07cc857edef9a",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-three-person-orbital-long-take/prompt.zh-CN.md",
+          "reading_note": "全文1599行：192段完整中译与原文回读，核对全部时点、相机中心重置与连续性、低位和肩背遮挡、最终群像及证明措辞。"
+        },
+        {
+          "path": "case-studies/2026-08-three-person-orbital-long-take/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "58feeb800f1450064240f920270b86cf8526631c6d1e9d9565c72d4a925dd58f",
+          "bytes": 12116,
+          "lines": 107,
+          "git_blob_sha": "bbf05f5f51abe140d2c6de8402138225d821156d",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-three-person-orbital-long-take/vocabulary-expanded.zh-CN.md",
+          "reading_note": "全文107行：50项词汇、在场／可见／揭示、环绕／摇摄／滚转、身体遮挡与相机位置、最终同框证据边界和非接口命名。"
+        },
+        {
+          "path": "docs/casereview/2026-08-three-person-orbital-long-take.md",
+          "local_path": "references/source-review.md",
+          "sha256": "f13bfc5b32c8f640770b13d6ce7da2581c9765b378965e12751d8cc3d9f0fbec",
+          "bytes": 5354,
+          "lines": 50,
+          "git_blob_sha": "172fe1fc33f44336ebe8d1588fc86b6008951f7b",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-three-person-orbital-long-take.md",
+          "reading_note": "全文50行：专项子技能范围、环绕定义与时间预算两个P0、站位视场净空联合预检、重复生成证据缺失。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-08-water-obstacle-variety-show",
+      "skill_name": "h3-water-obstacle-variety-show",
+      "files": [
+        {
+          "path": "case-studies/2026-08-water-obstacle-variety-show/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "5777d39d3c21ef0666296ff4ad2ff2544306f9a9989b45d8cca8358b4f840c93",
+          "bytes": 6295,
+          "lines": 95,
+          "git_blob_sha": "090d9f52cd0c979167b7f3db1927549729cfbc17",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-water-obstacle-variety-show/README.md",
+          "reading_note": "方法、问题、经验及作者结果；完整阅读。"
+        },
+        {
+          "path": "case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md",
+          "local_path": "references/source-README.zh-CN.md",
+          "sha256": "915b57fe603b1d4033f49bd429ec0d8c2657a86cf33b79d6ceeb38c5fdd1fb87",
+          "bytes": 15364,
+          "lines": 278,
+          "git_blob_sha": "5d05a80c26ed684a4307d16c826422680f538568",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md",
+          "reading_note": "方法译注及原案20秒参数经验；完整阅读。"
+        },
+        {
+          "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "a7eb42a7967a1b1f28a61dce224fe2e1fb3182a16f40e7a6969cc52c3eaba266",
+          "bytes": 7374,
+          "lines": 165,
+          "git_blob_sha": "ae572459f259615b45f88b300eeedc6c804cfc35",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+          "reading_note": "身份、因果链、八段和声场的完整原提示词；完整阅读。"
+        },
+        {
+          "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md",
+          "local_path": "references/source-prompt.zh-CN.md",
+          "sha256": "3c29a4562f09a9b05510a06f87ab6b095fbfc899a496b56c0840bc595a452a08",
+          "bytes": 21315,
+          "lines": 515,
+          "git_blob_sha": "1bb82da7b81205a4dde66fea5a7ab1eec1a539f5",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md",
+          "reading_note": "全部结构化正文的中译与术语解释；完整阅读。"
+        },
+        {
+          "path": "case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "ae0e874951cbd4b33825d92234db538dbb86f3a6d111902718e75752a0bdb156",
+          "bytes": 11165,
+          "lines": 105,
+          "git_blob_sha": "876c670bb25057112d32084e914eb3ca9ee9440e",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md",
+          "reading_note": "剧情节拍、连续观感与参数边界；完整阅读。"
+        },
+        {
+          "path": "docs/casereview/2026-08-water-obstacle-variety-show.md",
+          "local_path": "references/source-review.md",
+          "sha256": "bd95b7be24658a2076f3c45a7904c7c6f09d7006bd69d5d6a9663b46850b840b",
+          "bytes": 5134,
+          "lines": 50,
+          "git_blob_sha": "2287473ca3044b8df6c7b3c256dbd118d15ba6f8",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-08-water-obstacle-variety-show.md",
+          "reading_note": "完整阅读；容量、试跑参数与事件验收缺口已转为工作流及测试。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-09-action-chain-sock-fan-comedy",
+      "skill_name": "h3-action-chain-sock-fan-comedy",
+      "files": [
+        {
+          "path": "case-studies/2026-09-action-chain-sock-fan-comedy/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "c2d6041235ad743caf143c8e0cdeb9487a65a9b35bf4a9dbc472aed6d1b11a7a",
+          "bytes": 12441,
+          "lines": 128,
+          "git_blob_sha": "9fc55df75cc6f0d0fdcee1812ae36bd8ffc46ac3",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-action-chain-sock-fan-comedy/README.md",
+          "reading_note": "完整阅读；身份表、25态总览、作者复盘及成片证据边界。"
+        },
+        {
+          "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt",
+          "local_path": "references/source-prompt.txt",
+          "sha256": "93acf96bbfc304a7d8fb7d8cf35dbef9780867ff03d9a1da5e1dd8a02b7808c9",
+          "bytes": 30627,
+          "lines": 624,
+          "git_blob_sha": "14d6577a94976b6fea29266c827d0f27ba0b4996",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt",
+          "reading_note": "完整阅读；25态、永久约束、音频标签和物理轨迹全文。"
+        },
+        {
+          "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt",
+          "local_path": "references/source-prompt.zh-CN.txt",
+          "sha256": "2b8623fabbff40976378af0a5ebb287704243f5bc9ee28714a28a20a64fba5c0",
+          "bytes": 30831,
+          "lines": 463,
+          "git_blob_sha": "2c480eba7377db6c36d26cba2b8c66f3ef46f92b",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt",
+          "reading_note": "完整阅读；全部状态和永久规则中文译注，核对错误主语。"
+        },
+        {
+          "path": "case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "fc1fb02f894e2eb314b62295871bb7de732fdc72b5d72d6b615443fc4443be07",
+          "bytes": 12096,
+          "lines": 111,
+          "git_blob_sha": "a991cc33afbf28ef65f819ac18bba8dbb8b6cfdf",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md",
+          "reading_note": "完整阅读；永久身份与动态状态、腕掌分工、错误主语和验证边界。"
+        },
+        {
+          "path": "docs/casereview/2026-09-action-chain-sock-fan-comedy.md",
+          "local_path": "references/source-review.md",
+          "sha256": "0a87f199dcd4bc1501203a6dd39bf779dfbf58736acd2de11c4ae4b2f40cb457",
+          "bytes": 5126,
+          "lines": 50,
+          "git_blob_sha": "6ce20ff0e4edee30f61c9aa779650e6f5b4b2e0e",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-09-action-chain-sock-fan-comedy.md",
+          "reading_note": "完整阅读；手部解剖绑定、主语修正、音头预算与阶段不变量缺口已落实。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "skill_name": "h3-editorial-lamp-rhythm-fashion-ab",
+      "files": [
+        {
+          "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "e30609f323379c5495ea1d3c46c03d948f1692407b74a2aa3a5bac4286427290",
+          "bytes": 13205,
+          "lines": 115,
+          "git_blob_sha": "820f293466c621b83008067f2ba57dce4b88927e",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+          "reading_note": "全文阅读：五章灯态、31拍数学、十Moment及A/B宣称；与实际正文逐项对照纠正入口和受控范围。"
+        },
+        {
+          "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt",
+          "local_path": "references/source-p83-dark-luxury-skirt-throw.txt",
+          "sha256": "da58a065f3c2f7b825e1958717f4cbe97dfd9fa60a816e054b2f55ce4243f032",
+          "bytes": 26943,
+          "lines": 1306,
+          "git_blob_sha": "4da9e6df67e2adbb33d569cb830cde800b7878f8",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt",
+          "reading_note": "全文阅读全部1306行（逐行保留所有非空内容）：实际NEW CUTE/A major、jump Hero，02/06/09禁roll，04可选correction，05全局sweep残词、完整音画优先级。"
+        },
+        {
+          "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt",
+          "local_path": "references/source-p83-dark-luxury-skirt-throw.zh-CN.txt",
+          "sha256": "1013cd7615d245d9e0127e4004a5091479fe09fda746c042b1a96f5814d75b54",
+          "bytes": 27451,
+          "lines": 370,
+          "git_blob_sha": "f9c13e974868d922acd8f49a725e6d4f88f2c12f",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt",
+          "reading_note": "全文阅读：按实际可爱跳跃正文的中文译解；复核轻弹非离地、手不触裙、衣料惯性与最终锁机。"
+        },
+        {
+          "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt",
+          "local_path": "references/source-p84-cute-backfolded-jump.txt",
+          "sha256": "0a5d2c13f1c0718c09be689feab290bf85cc87a9b204c1d95d74e7ed012108d6",
+          "bytes": 27900,
+          "lines": 1234,
+          "git_blob_sha": "b4863def7914a1dcbaca6695330c8b548b184377",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt",
+          "reading_note": "全文阅读全部1234行（逐行保留所有非空内容）：实际E minor/甩裙，02Dutch、04roll、06/09可选roll、OFF残余照明、编辑strobe、甩裙因果与结尾保持。"
+        },
+        {
+          "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt",
+          "local_path": "references/source-p84-cute-backfolded-jump.zh-CN.txt",
+          "sha256": "90fc1572bbb9f11fdd7f40e019cec893ad47e9d412280d8f301f88e89ad78597",
+          "bytes": 27319,
+          "lines": 355,
+          "git_blob_sha": "22fefc9744dadf16edd24039071ed7eed0ed24c5",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt",
+          "reading_note": "全文阅读：实际暗奢译解，核对服装抓握预载、冲量／惯性、摄影后退时机及声音层。"
+        },
+        {
+          "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "b35ad6664669769fc3074266071435db82c39ad5aeac9d45c4f19dd3f40d421a",
+          "bytes": 19149,
+          "lines": 176,
+          "git_blob_sha": "73f3a15ffddc95437e8632d458e522ab00730899",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md",
+          "reading_note": "全文阅读：版本反转准确对照、80词及时间／roll／惯性辨析；确认术语不构成通用技术标准。"
+        },
+        {
+          "path": "docs/casereview/2026-09-editorial-lamp-rhythm-fashion-ab.md",
+          "local_path": "references/source-review.md",
+          "sha256": "e825c496c1b1a1253aace04641b35decf626fae7ec2a9e861bc70c412e006e3b",
+          "bytes": 5961,
+          "lines": 52,
+          "git_blob_sha": "55a8292ee28e9818a70404ee512595a2c29b00f5",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-09-editorial-lamp-rhythm-fashion-ab.md",
+          "reading_note": "全文阅读：采用入口P0、真实roll差异、31拍五态四切换、未量测同步和自由边界等评估修复。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-09-purple-veil-dance-seven-segment",
+      "skill_name": "h3-purple-veil-dance-seven-segment",
+      "files": [
+        {
+          "path": "case-studies/2026-09-purple-veil-dance-seven-segment/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "a37ccb539941f0f3bbfcbd1a9e4a9f78ef4c267f7f17f3d9413345e8d6de3134",
+          "bytes": 8262,
+          "lines": 99,
+          "git_blob_sha": "8b7c6f9b7480b4e613abeb1d766795064510203d",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-purple-veil-dance-seven-segment/README.md",
+          "reading_note": "输入、六项方法、原始失败修订记录、交接与显色策略。"
+        },
+        {
+          "path": "case-studies/2026-09-purple-veil-dance-seven-segment/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "3a9e822fce663198ae0c0446bdfa13c00f095a4b7628e9b0c4ab85f7475bcfd8",
+          "bytes": 37639,
+          "lines": 786,
+          "git_blob_sha": "8befb4ec85eb720efa6b4ee432b9e48787b7801e",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-purple-veil-dance-seven-segment/prompt.md",
+          "reading_note": "七段完整稿；主动力、手袖接力、面纱范围、歌词时点与局部时长冲突。"
+        },
+        {
+          "path": "docs/casereview/2026-09-purple-veil-dance-seven-segment.md",
+          "local_path": "references/source-review.md",
+          "sha256": "aa623961399cfe0753f156cdf488a5656ca13416c069a532d267e3f7a41146f9",
+          "bytes": 4420,
+          "lines": 45,
+          "git_blob_sha": "d7bf39808a2db52ac5d6c52418c00be469eacb7c",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-09-purple-veil-dance-seven-segment.md",
+          "reading_note": "全部评估；时间算术差额、首镜与五官可见性冲突、缺失manifest和反测证据。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-09-snap-lock-editorial-reveal",
+      "skill_name": "h3-snap-lock-editorial-reveal",
+      "files": [
+        {
+          "path": "case-studies/2026-09-snap-lock-editorial-reveal/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "4dbe8f75fdb88738af500927d5fce3501b27d5de269faa36fd1aac9ce0b728b2",
+          "bytes": 9740,
+          "lines": 132,
+          "git_blob_sha": "75fa100fd4a1e954789545920279ba9f1c56b000",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-snap-lock-editorial-reveal/README.md",
+          "reading_note": "全文读取：采样误判、两态方法、原5.30秒时间预算及作者成片/反推自述。"
+        },
+        {
+          "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "fc2c5eea24fe28a714d921ad3a7ef77931911147641088e7079816cfcfb6edf6",
+          "bytes": 20295,
+          "lines": 571,
+          "git_blob_sha": "d92b6d24ebdf9ca88e48421fd349c0d905c97302",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-snap-lock-editorial-reveal/prompt.md",
+          "reading_note": "全文读取：571行英文执行稿、静态禁止项、短burst、三冲击、闭眼与两次roll逻辑。"
+        },
+        {
+          "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md",
+          "local_path": "references/source-prompt.zh-CN.md",
+          "sha256": "2db644dfd0e9a2d7f4ae963cd59ec03c1396271716af8f1292fb09f0b9f2cb56",
+          "bytes": 13761,
+          "lines": 278,
+          "git_blob_sha": "9af61b2d1f043927c61ae390add95847731bd8b5",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md",
+          "reading_note": "全文读取：278行中文教学改写及术语，发现其加减速/身体连接/附加音效不等同英文。"
+        },
+        {
+          "path": "case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "aee1575e8a8140ef0e92dac02e972c48d13d1d975989fe6b487e1bae788ad1bf",
+          "bytes": 10852,
+          "lines": 107,
+          "git_blob_sha": "35c9c1232d988f92c4145e6359876bc2ba05972f",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md",
+          "reading_note": "全文读取：50项词义/句法、相机动作主语、hard lock与freeze区别、角度/帧预算校读。"
+        },
+        {
+          "path": "docs/casereview/2026-09-snap-lock-editorial-reveal.md",
+          "local_path": "references/source-review.md",
+          "sha256": "f740ef6094436d4eea184a99cc935af30a74c1cc9358c795ed64ca69a723802c",
+          "bytes": 5157,
+          "lines": 50,
+          "git_blob_sha": "4d74c966fb40610f27c9ca008c31c135cf815320",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-09-snap-lock-editorial-reveal.md",
+          "reading_note": "全文读取：版本分歧、roll累积、极短冲击和源片机制证据边界。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-09-song-style-classical-dance-six-segment",
+      "skill_name": "h3-song-style-classical-dance-six-segment",
+      "files": [
+        {
+          "path": "case-studies/2026-09-song-style-classical-dance-six-segment/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "6b506f0c45ddc7ecf5ba5ee266b99e163e34e6d7d49827efb44d3bd4a3ab8264",
+          "bytes": 12527,
+          "lines": 142,
+          "git_blob_sha": "9c82e8c71cf560609789fadde850be9ab8436446",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-song-style-classical-dance-six-segment/README.md",
+          "reading_note": "全文142行：案例输入、六段窗口、双层节奏、技术高光、作者结果陈述与缺素材边界。"
+        },
+        {
+          "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "010f5d1db16cfb5dd9dfe3c8b765050c01571949ca8cca4442437dc5b4bd4626",
+          "bytes": 134285,
+          "lines": 2939,
+          "git_blob_sha": "c1b73a7a879bd5994b59100c5ae041fc457a85ec",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md",
+          "reading_note": "全文2939行：逐段英文执行正文，人物和环境权限、动力链、相机状态、S04竞争拍表、S05旧720度回指、S03/S05共享换腿及最终微动冲突。"
+        },
+        {
+          "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md",
+          "local_path": "references/source-prompt.zh-CN.md",
+          "sha256": "57065a52ed353280752c676f6b862d84b99667ded3ea66dae57e2c5bc5fabed9",
+          "bytes": 87307,
+          "lines": 1100,
+          "git_blob_sha": "b0d7bb62373528713b6731309f1a9fe7e5b18604",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md",
+          "reading_note": "全文1100行：全部中文译文和词汇释义，核对其沿用原稿、three-quarter旧译、S05回指与末段冻结范围；译文不作独立实验。"
+        },
+        {
+          "path": "case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "ffdfaf289f5158cdddd0107535fe832b083f15e7fea415d376ed4407b2995681",
+          "bytes": 21002,
+          "lines": 200,
+          "git_blob_sha": "f0fc45a5eb2026e9cbd06fc5b9a55ff3b20d264c",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md",
+          "reading_note": "全文200行：80项增补词汇及原文回读，重点区分状态与姿态、相机与人体停动、景别范围、力学比喻、正式术语和原唱／口型。"
+        },
+        {
+          "path": "docs/casereview/2026-09-song-style-classical-dance-six-segment.md",
+          "local_path": "references/source-review.md",
+          "sha256": "3a414f875b33dee2ea501979de4f6e430ff1568d0024a8840e21f4edfe115c49",
+          "bytes": 5156,
+          "lines": 47,
+          "git_blob_sha": "f8fb61a517c25582a9452dbb6ad8e735d97f204e",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-09-song-style-classical-dance-six-segment.md",
+          "reading_note": "全文47行：方法价值、接缝粒度、作者陈述证据边界及P0旧版残留／混合画幅契约缺失。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+      "skill_name": "h3-three-person-prank-freeze-gag-cos-swap",
+      "files": [
+        {
+          "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "00b141391037d6173c13721474d8f36ec73b6ea17c3f7429a07955ac8dcc3de6",
+          "bytes": 6844,
+          "lines": 91,
+          "git_blob_sha": "9f42cf388a5b8e3d84a5b2160b5aab445733d829",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md",
+          "reading_note": "全文阅读：分析来源与T2VA输入边界、画外第三人、判别抽帧、声画对账、冻结与仅换皮合同；14字段说法由实际prompt纠正。"
+        },
+        {
+          "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md",
+          "local_path": "references/source-README.zh-CN.md",
+          "sha256": "b06317bdb5059cd2a01a95bfe763e306ef095c37a59dd9c3c595dec632d21781",
+          "bytes": 17909,
+          "lines": 305,
+          "git_blob_sha": "0b28c91a167e20b593b2131bbb18ec9440dabbb4",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md",
+          "reading_note": "全文阅读：逐段原文／中文释义；核对三拍机制、五通道分析和外观替换边界，与原文时长和字段说法交叉审查。"
+        },
+        {
+          "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "da7562b149ee4c72e7813ae6320b50a29e26caafacab9159263b09c023d35a71",
+          "bytes": 15041,
+          "lines": 95,
+          "git_blob_sha": "5134e8fe1a15e2c381e2546ae700754596380c6f",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md",
+          "reading_note": "全文阅读：实际12字段、面罩状态、画外手介入次序、15.3秒末点、三段freeze和声场；建立道具、因果及时间裁决。"
+        },
+        {
+          "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md",
+          "local_path": "references/source-prompt.zh-CN.md",
+          "sha256": "cd27eb33e16c39c26773ba53956886039eeedccd7ea1dbd0639783d1a08951d8",
+          "bytes": 42551,
+          "lines": 628,
+          "git_blob_sha": "01c8289ffeb1639b225c35b986406f9d5405f0e1",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md",
+          "reading_note": "全文阅读：51段双语正文、功能面罩、受力先后、湿润材料和定格声层；确认翻译未提供独立媒体量测。"
+        },
+        {
+          "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md",
+          "local_path": "references/source-vocabulary-expanded.zh-CN.md",
+          "sha256": "82ec632d7f0e7dca5c38481361f12bd97fff53d113465e65cc142b43fe9a7492",
+          "bytes": 11110,
+          "lines": 109,
+          "git_blob_sha": "de577943cdfcafa3046d019dfda86129583926cc",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md",
+          "reading_note": "全文阅读：50词义辨析、画外agent、freeze与pose hold、无配乐不等于无SFX、15.3秒与RMS边界；防止错误泛化。"
+        },
+        {
+          "path": "docs/casereview/2026-09-three-person-prank-freeze-gag-cos-swap.md",
+          "local_path": "references/source-review.md",
+          "sha256": "d082ad57b352826741d35db87564fd60a1b99ef8ae2df61ac050cdc0a9c1165d",
+          "bytes": 5036,
+          "lines": 53,
+          "git_blob_sha": "fac1c64b21e03ed7de1ffe150dea1a94dc4ad9e4",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-09-three-person-prank-freeze-gag-cos-swap.md",
+          "reading_note": "全文阅读：采纳外部skill与原媒体缺证、字段14/12、15.3秒和首0.6秒、采样不足的评估，并补可对账时轴与状态表。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-advanced-camera-combinations",
+      "skill_name": "h3-advanced-camera-combinations",
+      "files": [
+        {
+          "path": "case-studies/2026-10-advanced-camera-combinations/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "833804acf934a109dfc8991a0f42bafe0f9b96ee71967d503af5cc888d8595fd",
+          "bytes": 4900,
+          "lines": 57,
+          "git_blob_sha": "6248882c17cc0841012bd538825849ce9b27a53c",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-advanced-camera-combinations/README.md",
+          "reading_note": "全文读取：方法动机、旧规则计数和十组合导航；经验性稳定断言只作作者观察。"
+        },
+        {
+          "path": "case-studies/2026-10-advanced-camera-combinations/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "6dbc877637aff70c1340de1b4eb4a4c221ca2f25926003801f55b574ada32ffa",
+          "bytes": 18459,
+          "lines": 328,
+          "git_blob_sha": "329cc1d8327759900ad9ee2495c0945ffb8f88dd",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-advanced-camera-combinations/prompt.md",
+          "reading_note": "全文读取：15条局部规则、14词条、10组合的起终点与时间，逐项识别07/10及09路径问题。"
+        },
+        {
+          "path": "docs/casereview/2026-10-advanced-camera-combinations.md",
+          "local_path": "references/source-review.md",
+          "sha256": "732699ede7099336ee35bbfe867e177c3d071526fddcb6a6bd2e803b29d96e08",
+          "bytes": 5387,
+          "lines": 50,
+          "git_blob_sha": "7415e27f585b83c07a91988e29870165ec7acc3a",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-advanced-camera-combinations.md",
+          "reading_note": "全文读取：S2就绪边界、独立组装、连续阶段/硬切、例外和时间口径缺口，作为工程补齐依据。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "skill_name": "h3-baifeng-mengchen-classical-dance-six-segment",
+      "files": [
+        {
+          "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "61f167bb5c9707afaee638d3185d58dfaba100f3016dedb55203ecacdfe1bcd5",
+          "bytes": 12008,
+          "lines": 155,
+          "git_blob_sha": "7ead89d1d75c434c1ab69aab841c53c1e3a23481",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md",
+          "reading_note": "全篇音乐、动链反推、六段机制、局部特写、双生成和手工剪辑方法。"
+        },
+        {
+          "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "842fac7e188ff164a60cce1baa6a65844cad2eb7440cf401df63d1b636f3fdba",
+          "bytes": 56000,
+          "lines": 475,
+          "git_blob_sha": "4508141604349c6aab29a86a88cc35965b646714",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md",
+          "reading_note": "通用骨架及六段完整稿、SEG03完整原文、五步双生成与全部接缝表；核对入出态冲突。"
+        },
+        {
+          "path": "docs/casereview/2026-10-baifeng-mengchen-classical-dance-six-segment.md",
+          "local_path": "references/source-review.md",
+          "sha256": "5603b7c9ac3df5dce9a85a2c484f8e3dcbf04c0bdc27d52ba7f01f535f3ac510",
+          "bytes": 5320,
+          "lines": 55,
+          "git_blob_sha": "4606fc68ad5165bf9be6a7cbfcc05cf966b18206",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-baifeng-mengchen-classical-dance-six-segment.md",
+          "reading_note": "全量评估；定位SEG03接缝矛盾、双生成执行映射不足和帧率/版本证据边界。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-camera-movement-discipline-library",
+      "skill_name": "h3-camera-movement-discipline-library",
+      "files": [
+        {
+          "path": "case-studies/2026-10-camera-movement-discipline-library/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "51179fb7c3fd71729a939d287f6dad624dcf5bf719fe4532c16399929e84e179",
+          "bytes": 5545,
+          "lines": 93,
+          "git_blob_sha": "dae6601f45b9f4d0ae3cec10114eb102a0f500db",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-camera-movement-discipline-library/README.md",
+          "reading_note": "全文读取：一个主要行为、物理五字段、反目录及摘要版本差异。"
+        },
+        {
+          "path": "case-studies/2026-10-camera-movement-discipline-library/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "c70294287fc4155e691de6e7d50a09bb08f8d2bcd9bc18620f49c47c3a0d3053",
+          "bytes": 15365,
+          "lines": 234,
+          "git_blob_sha": "6437e5a26f84f34aa5dc803b1dbc5c79f9dcab13",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-camera-movement-discipline-library/prompt.md",
+          "reading_note": "全文读取：E1–E10历史样本、后续同步法则、词库和反舞蹈条款；识别响应时相与剪辑策略冲突。"
+        },
+        {
+          "path": "docs/casereview/2026-10-camera-movement-discipline-library.md",
+          "local_path": "references/source-review.md",
+          "sha256": "a334cde32d05e5987cc96f7fe07318fb876a4e790ccb6e84c79e06f48bf15f9e",
+          "bytes": 5030,
+          "lines": 54,
+          "git_blob_sha": "c97916bcabf3844da0760d0cda6fe1305d009584",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-camera-movement-discipline-library.md",
+          "reading_note": "全文读取：S1参考库定位、模式路由建议、来源自述与证据边界，转为显式条件规则。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "skill_name": "h3-classical-wuxia-dance-13-segment",
+      "files": [
+        {
+          "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "e054bd15bedd75cd384c9e5e0e35c9ca17a1ad8685d041b12964876ab872e53c",
+          "bytes": 7765,
+          "lines": 83,
+          "git_blob_sha": "6bc13ac4af04d59ff036e50bdf55e662a6cb7b79",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-classical-wuxia-dance-13-segment/README.md",
+          "reading_note": "全文83行：输入权限、十三段窗口与文件、局部时间、武器状态、媒体未分发边界。"
+        },
+        {
+          "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+          "local_path": "references/source-methodology.md",
+          "sha256": "24707ce3ca43b3696b97bf634d3fc87b3568116c33e3a31635a0ea01974ec1d8",
+          "bytes": 16996,
+          "lines": 199,
+          "git_blob_sha": "5a6760efa52e3a0f2ef14073e9cbd8a5c93923a8",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+          "reading_note": "全文199行：二十条创作方法及动作密度、技术预算、动力链、剪辑模式、参考权限和自检。"
+        },
+        {
+          "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "40ca025fbdab770c72c25a0f259a4319f45725313b3a92bac5bcfee10ca8cd9d",
+          "bytes": 84646,
+          "lines": 543,
+          "git_blob_sha": "13b0cfedb1e8ba8c92ed13c7d4adcee9f43edf03",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md",
+          "reading_note": "全文543行：十三段执行稿、每段人声与拍点、S05事件矛盾、跨段起止、无歌词尾奏、实施限制。"
+        },
+        {
+          "path": "docs/casereview/2026-10-classical-wuxia-dance-13-segment.md",
+          "local_path": "references/source-review.md",
+          "sha256": "65538e4f10ff02b7d3c333abe3ec6fbe97c9a7d13be6c558eb716b29970fc64b",
+          "bytes": 5573,
+          "lines": 50,
+          "git_blob_sha": "6c6426b579c881b22c1fe09273fb9d39fd809477",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-classical-wuxia-dance-13-segment.md",
+          "reading_note": "全文50行：主流程价值、缺manifest、时间触发错误及接缝未细化的修订依据。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-dance-motion-chain-library",
+      "skill_name": "h3-dance-motion-chain-library",
+      "files": [
+        {
+          "path": "case-studies/2026-10-dance-motion-chain-library/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "ce47520bafe4d3fd129f20068452199eb4c3fda0219b2537f34f6fbf31866a90",
+          "bytes": 4031,
+          "lines": 41,
+          "git_blob_sha": "d196d84601fd33a2cc9a4be93d35aa969494bb6e",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-dance-motion-chain-library/README.md",
+          "reading_note": "全文41行阅读：Rev.1.4只读镜像、章节总览、十要素与时间容量，核对总述2–8拍、2–4人和实际例外。"
+        },
+        {
+          "path": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md",
+          "local_path": "references/source-dance-motion-chain-h3.md",
+          "sha256": "69caa314ae11942dfff9cca14ba4a88ecf6187a336e3569f512f7c1f07d7a37b",
+          "bytes": 265991,
+          "lines": 2767,
+          "git_blob_sha": "53a0bfadbfa128998aaa5fcfc4d015f0e0e41e30",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md",
+          "reading_note": "全文2767行逐段读取全部非空文本：0使用规则；A1–23；B1–18；C1–49；D1–22；E1–10含未单列标题的右入换装段；F/G；H0及13完整范本；I.0–25全部物理机位块；J0–10母模板与九范本；K1–74含15视频/2图档案；七步拼舞及来源脚注。基于实际字段抽出版本、容量、模式与元数据冲突，未把源观察当本次复测。"
+        },
+        {
+          "path": "docs/casereview/2026-10-dance-motion-chain-library.md",
+          "local_path": "references/source-review.md",
+          "sha256": "625b3a87a806fa66d1d0908f04e2edb6c7f9e7f891222ae3658251078cc21fd5",
+          "bytes": 5952,
+          "lines": 53,
+          "git_blob_sha": "82023f5e00c122acaa9e5736de96fee036126740",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-dance-motion-chain-library.md",
+          "reading_note": "全文53行阅读：采用容量／衔接定位、E同步例外、首帧／剪辑分流、C19/C35/J7缺口、K素材权限和证据等级建议；额外补出全文发现的其他拍数／时长问题。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-four-subject-formation-choreography",
+      "skill_name": "h3-four-subject-formation-choreography",
+      "files": [
+        {
+          "path": "case-studies/2026-10-four-subject-formation-choreography/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "fcdd6a8bea055e2a357007d0024381c7c23dccf1ca2f74eceabb2de26e2fe1c7",
+          "bytes": 9119,
+          "lines": 164,
+          "git_blob_sha": "13b9d82944302e6e9d1c3ed33da1738c3d5bf065",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-four-subject-formation-choreography/README.md",
+          "reading_note": "全文读取：14段总览、三机制、原视觉锚策略、自己象限规则和成功自述的证据范围。"
+        },
+        {
+          "path": "case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "2fdcf5cab127dbe3fdcf2a4991386b3bd31a2b08db04a0753f3715794d8ab481",
+          "bytes": 16205,
+          "lines": 148,
+          "git_blob_sha": "2ceabb516af03c306d58b2a74474838f37dfcdbc",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+          "reading_note": "全文读取：SEG10十部分完整正文、四主体资产、六镜头、22拍、穿越与层交换以及音频职责。"
+        },
+        {
+          "path": "docs/casereview/2026-10-four-subject-formation-choreography.md",
+          "local_path": "references/source-review.md",
+          "sha256": "5e444a9a79c711bb3c8b27a2b653ff4f164d7da3fa3f48f1053d66e129d502ad",
+          "bytes": 5373,
+          "lines": 55,
+          "git_blob_sha": "3579e2249169973dbcad5674050c761b24861afa",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-four-subject-formation-choreography.md",
+          "reading_note": "全文读取：队形冲突、跟随后退作用域、缺manifest与缺13段成稿，作为条件规则和完整性告知依据。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-h3-motion-transfer",
+      "skill_name": "h3-motion-transfer",
+      "files": [
+        {
+          "path": "case-studies/2026-10-h3-motion-transfer/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "091c7f3efd88dd609375d22c4afb110306d2d1ee85c7d1363128d6dfa9379a6b",
+          "bytes": 3875,
+          "lines": 54,
+          "git_blob_sha": "90e326cd2f2eeb13f1b3bb82a4997969df1884fe",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-h3-motion-transfer/README.md",
+          "reading_note": "全文读取：三参考分权、作者效果自述、8–9秒经验与ComfyUI摘要，识别其和JSON差异。"
+        },
+        {
+          "path": "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+          "local_path": "references/source-h3-motion-transfer-workflow.json",
+          "sha256": "152b3df9c83e5677e2df46756a122eb64a3e05b0e15ff63e3f2ebadcea41b659",
+          "bytes": 107172,
+          "lines": 4982,
+          "git_blob_sha": "827fe8500e9b67ad068d9fee566f276f0caa8a2f",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+          "reading_note": "全文完整解析阅读：62节点全部字段、91连线、所有顶层字段和内嵌提示词；compact输出省去空白但没有省略字段，另补读被工具截断的节点137/139/147/153/132/154。"
+        },
+        {
+          "path": "case-studies/2026-10-h3-motion-transfer/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "884616f829c22f00dc2f210e57621927bcb0ab58c28055f648bce2c2c2fa9915",
+          "bytes": 13165,
+          "lines": 586,
+          "git_blob_sha": "d2832c361a34e9e441d2dcba8e207e684b97fef6",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-h3-motion-transfer/prompt.md",
+          "reading_note": "全文读取：586行完整重建正文、首帧权限、初始化顺序、运动提取、音频和八项核查。"
+        },
+        {
+          "path": "docs/casereview/2026-10-h3-motion-transfer.md",
+          "local_path": "references/source-review.md",
+          "sha256": "6a9251d66954321109cbada7db34f3801d34d6670eac05d13470fb40a783f46d",
+          "bytes": 5872,
+          "lines": 50,
+          "git_blob_sha": "4648d68a63f0e06e1eeb90bbf78d0684a8467047",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-h3-motion-transfer.md",
+          "reading_note": "全文读取：有效参数、音频端口/旁路、裁剪冲突、模型名不符以及生成前后验收边界。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-identity-only-half-body-dance-six-segment",
+      "skill_name": "h3-identity-only-half-body-dance-six-segment",
+      "files": [
+        {
+          "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "c3726c8d92958ba60393b5f0b7c07b6ebd3c9f1152095e0f66423ab871c92695",
+          "bytes": 5248,
+          "lines": 54,
+          "git_blob_sha": "80383594744c1caefadf9feb941d853953813338",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+          "reading_note": "分权失败背景、两图授权、肖像舞六段结构与高光/结束策略。"
+        },
+        {
+          "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+          "bytes": 34220,
+          "lines": 1524,
+          "git_blob_sha": "b4e12f5932869ecff50fa75cfc5c963766d4f076",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+          "reading_note": "完整六段1524行；属性授权、逐拍动作、局部镜位和动作中切镜；首拍前空白及跨段接合缺口。"
+        },
+        {
+          "path": "docs/casereview/2026-10-identity-only-half-body-dance-six-segment.md",
+          "local_path": "references/source-review.md",
+          "sha256": "9ebacfbd4b8dc27efc73f9f74e1589a84e5e6b44d9a37abeb3db7c57339bb18b",
+          "bytes": 5304,
+          "lines": 53,
+          "git_blob_sha": "048972a29dcfd0b517e77f8838dc8bcd9f5b92f5",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-identity-only-half-body-dance-six-segment.md",
+          "reading_note": "全部评估；总时长、跨段契约、0秒动作、风格优先级与实测证据边界。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "skill_name": "h3-kanzaki-beach-sword-dance-18-segment",
+      "files": [
+        {
+          "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "02820d3b4652b25993a1efd9ace4d3a024b6bd979f61460b7276fb793a4b4eb9",
+          "bytes": 11856,
+          "lines": 115,
+          "git_blob_sha": "858a611c88260f27eccf3751aaee75009981ae4e",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md",
+          "reading_note": "全文115行：18段表、双重参考权限、道具状态、连续镜头、主运镜和音频政策。"
+        },
+        {
+          "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+          "local_path": "references/source-methodology.md",
+          "sha256": "1b7dcf449f3536b5f3af859351baeb394c3663624648e8ae92a5f5a4b54983a1",
+          "bytes": 22179,
+          "lines": 346,
+          "git_blob_sha": "89d84013643a50dfcd796f1397f7fc0cadc199c1",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+          "reading_note": "全文346行：十一章方法、固定／替换背景分支、状态与握持、物理运镜、后期桥接、定向修复及双重自检。"
+        },
+        {
+          "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "1ec6d47a864a889cd050065be227ead4be82e2211003f00c796934e8f57588f5",
+          "bytes": 194131,
+          "lines": 1186,
+          "git_blob_sha": "8aae663ded62e74b33248443b36111d9e2630aa9",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md",
+          "reading_note": "全文1186行：18段六字段、开场两次拔刀授权、状态窗口／元数据冲突、五处度数、组合运镜、反光对象差异和音频语义冲突。"
+        },
+        {
+          "path": "docs/casereview/2026-10-kanzaki-beach-sword-dance-18-segment.md",
+          "local_path": "references/source-review.md",
+          "sha256": "a7eaacaa4a44ea2dd50cf6f18db3f944597d40603e8f1c0967f67b44b4ed8564",
+          "bytes": 6634,
+          "lines": 59,
+          "git_blob_sha": "d06968eb76a375faee2e66984fcb25488278fbaa",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-kanzaki-beach-sword-dance-18-segment.md",
+          "reading_note": "全文59行：方法与实例落差、两次拔刀授权边界、主运镜／度数修复、握持及媒体未验证限制。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-leg-lift-contact-cut-stocking-six-look",
+      "skill_name": "h3-leg-lift-contact-cut-stocking-six-look",
+      "files": [
+        {
+          "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "e8b79275bdebce7596df0b6625c5a5a9bf1ef2c05c18e1abf1f29fb498f4a506",
+          "bytes": 4094,
+          "lines": 58,
+          "git_blob_sha": "d5787b1e34ad1ae88ed33f7441633a51a222f510",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+          "reading_note": "全文读取：触地触发、固定支撑腿、六次转换和5.17秒要求；识别零外貌说法与正文、视频可选范围。"
+        },
+        {
+          "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "5bcea5bf820f4a1432bb6427ed2bd6fad85d26cccad891d2975153ea96dca0ed",
+          "bytes": 19122,
+          "lines": 759,
+          "git_blob_sha": "356034cad0dbf6e7b3e0f14b76debb325b8163f6",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+          "reading_note": "全文读取：759行参考分权、两腿支撑、六轮起抬/触地/保持、七状态、固定机位和音频条款。"
+        },
+        {
+          "path": "docs/casereview/2026-10-leg-lift-contact-cut-stocking-six-look.md",
+          "local_path": "references/source-review.md",
+          "sha256": "b623cbcd5375420b00a545951814a4a9e9c6e53ae5da46e9324ac32b30debe76",
+          "bytes": 5657,
+          "lines": 51,
+          "git_blob_sha": "e4b679169b8fd190920867bec67f05a38d4c71cb",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-leg-lift-contact-cut-stocking-six-look.md",
+          "reading_note": "全文读取：状态计数、尾段0.48秒缺口、帧级验收与固定机位/编辑语义问题。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-physical-camera-position-library",
+      "skill_name": "h3-physical-camera-position-library",
+      "files": [
+        {
+          "path": "case-studies/2026-10-physical-camera-position-library/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "cd03402caed497e0f2f93e10b1c42d2dd07842df602cb7ea42615c55c570387b",
+          "bytes": 4235,
+          "lines": 61,
+          "git_blob_sha": "6dbea940341fd033a59c475b443bf14cdd2380f9",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-physical-camera-position-library/README.md",
+          "reading_note": "来源、25条映射、七项物理条件和未经验证的效果断言。"
+        },
+        {
+          "path": "case-studies/2026-10-physical-camera-position-library/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "3cdfb65af35d87bdb587c0246d1eeda06129a4c33f6142c1f3817907d111bf1b",
+          "bytes": 25066,
+          "lines": 795,
+          "git_blob_sha": "29931724c56332b3c4cb8f15c9e7b39187f3f6e5",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-physical-camera-position-library/prompt.md",
+          "reading_note": "完整A0–A25模板、八要素、位置/光轴/滚转/运动关系。"
+        },
+        {
+          "path": "docs/casereview/2026-10-physical-camera-position-library.md",
+          "local_path": "references/source-review.md",
+          "sha256": "6b9ad25a0f1741162709a6a31b79c88672b9dcfc52e4e3de1e593768836d68e0",
+          "bytes": 4961,
+          "lines": 48,
+          "git_blob_sha": "917d7d7f7a132903322b1a03edbb5db8a0329c80",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-physical-camera-position-library.md",
+          "reading_note": "全量评估；分类交叉、模板兼容、数值角度与证据不足。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-sock-showcase-right-entry-three-shot",
+      "skill_name": "h3-sock-showcase-right-entry-three-shot",
+      "files": [
+        {
+          "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "301860e8a966da6ffa62327c6564bb3f0c392484477afac5606c747f776ab0a2",
+          "bytes": 4602,
+          "lines": 52,
+          "git_blob_sha": "f0df490b0ddd28d78f1eb1332c72a46248dd4654",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+          "reading_note": "全文读取：抽帧误判和阈值记录、右入/硬切策略、状态目录、源切点与4.4秒候选。"
+        },
+        {
+          "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "f7b91e3ccc47bb46bb39aae0171f25e0d9d4b572955183789cb4d257e96071d4",
+          "bytes": 8907,
+          "lines": 98,
+          "git_blob_sha": "a6ac7572bfd08806686680e60d0d21f333e574ca",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+          "reading_note": "全文读取：v2.0三段完整正文及装配表，确认真实边界是pose到跨步而非两侧都迈步。"
+        },
+        {
+          "path": "docs/casereview/2026-10-sock-showcase-right-entry-three-shot.md",
+          "local_path": "references/source-review.md",
+          "sha256": "1fe529068eab6f15b2a137bcc39e561a28141acd3e9d2d32d39fe79744b95a88",
+          "bytes": 5003,
+          "lines": 51,
+          "git_blob_sha": "69d36085ad92763992f83300af660b139d6fee20",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-sock-showcase-right-entry-three-shot.md",
+          "reading_note": "全文读取：切点机制冲突、可变属性例外、缺检测日志及短时长执行能力边界。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+      "skill_name": "h3-summer-pool-beach-waterline-mv-4-segment",
+      "files": [
+        {
+          "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "4a9382a4562c88bd25afc0d8debcc6d31a2a40c172f0581bea6d4c4ad65588e7",
+          "bytes": 11195,
+          "lines": 146,
+          "git_blob_sha": "9940c805eee0e4f208100593745353d4b2efb9ab",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+          "reading_note": "完整四段时间、身份分权、特殊视点与切镜/阶段说明、实际输出边界。"
+        },
+        {
+          "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "4ddcd492a10a451e124dba192db2c6608aae4a8e62ddbc601a424e5b46a303cd",
+          "bytes": 36790,
+          "lines": 283,
+          "git_blob_sha": "1c185e60e2e73a456369709fd0b302cac8fa3a5a",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+          "reading_note": "四段英文全文；场景动作接触、机位几何、音频、色调和衣物权限冲突。"
+        },
+        {
+          "path": "docs/casereview/2026-10-summer-pool-beach-waterline-mv-4-segment.md",
+          "local_path": "references/source-review.md",
+          "sha256": "be19e480fa2720c5085d825089a378adaebd0138b3273c093c14d1747ede5790",
+          "bytes": 5157,
+          "lines": 49,
+          "git_blob_sha": "fe0e20d65d31d54c7c38f9bdcbfcc4f6ef43b570",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-summer-pool-beach-waterline-mv-4-segment.md",
+          "reading_note": "全部评估；段内/段际计数、音乐证据不足和色调/服装/道具交接修复。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-waterfront-solo-dance-two-segment",
+      "skill_name": "h3-waterfront-solo-dance-two-segment",
+      "files": [
+        {
+          "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "67b089f4d560d388e0ceb7dcc7f9011b7456fec69aed0c73f1d70dd341470276",
+          "bytes": 3940,
+          "lines": 48,
+          "git_blob_sha": "bb9a28d25757e4d78d54d4e9dd517d12d063f6c4",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+          "reading_note": "输入、取证误报、单镜头复核、切段与动作接力方法。"
+        },
+        {
+          "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "5fac40dab9977ecf671bba747db25f4aee43ce892b796f230c319a8ad80da332",
+          "bytes": 8762,
+          "lines": 119,
+          "git_blob_sha": "539cebf0828ce83ad43d6b7381445c69c3b9f411",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md",
+          "reading_note": "两段完整提示词、拍点、动作链、原字段错误和终止/持续层冲突。"
+        },
+        {
+          "path": "docs/casereview/2026-10-waterfront-solo-dance-two-segment.md",
+          "local_path": "references/source-review.md",
+          "sha256": "0810ff8a158ff04b88211880c77ced21a8445462335060d9d193cb13db5c2a8f",
+          "bytes": 4991,
+          "lines": 49,
+          "git_blob_sha": "984d85b04e090558c9983d2e770ca85fd588735c",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-waterfront-solo-dance-two-segment.md",
+          "reading_note": "全量案例评估，指出相位、首帧、终止状态和证据缺口，指导工程修复。"
+        }
+      ]
+    },
+    {
+      "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+      "skill_name": "h3-xiashan-veiled-solo-twelve-segment",
+      "files": [
+        {
+          "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+          "local_path": "references/source-README.md",
+          "sha256": "58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+          "bytes": 7390,
+          "lines": 71,
+          "git_blob_sha": "7d2d18c1697928bed90d80361f5ac16997302d28",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+          "reading_note": "全篇阅读：双图授权、失败修订、穿戴物锁、歌词政策、全局规则丢失与错误总时间。"
+        },
+        {
+          "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+          "local_path": "references/source-prompt.md",
+          "sha256": "5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+          "bytes": 101257,
+          "lines": 743,
+          "git_blob_sha": "1db431d27a43f05da550ad1d96bf05bb1325bc05",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+          "reading_note": "全篇阅读743行：逐段动作、音频和相机、拍数窗口、标签／可见对象、静止和峰值接缝等冲突。"
+        },
+        {
+          "path": "docs/casereview/2026-10-xiashan-veiled-solo-twelve-segment.md",
+          "local_path": "references/source-review.md",
+          "sha256": "d1fc5fb6c1f793c2a512a4eb79ccbf53cecc8f518ffbf47883baf7d3966a5cf4",
+          "bytes": 5623,
+          "lines": 56,
+          "git_blob_sha": "8c5e01cc5ef39543a86216b2b3801e22c5a2f549",
+          "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/91a33376e9ae84d0b9b3a2c1a7f6991d5b9e358e/docs/casereview/2026-10-xiashan-veiled-solo-twelve-segment.md",
+          "reading_note": "全篇阅读：方法等级与缺SRT／manifest、拍数／模式／环境权威及版本冲突，作为修复依据。"
+        }
+      ]
+    }
+  ]
+}

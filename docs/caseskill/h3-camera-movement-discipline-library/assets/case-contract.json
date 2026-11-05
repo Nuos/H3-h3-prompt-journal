@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-camera-movement-discipline-library",
+  "skill_name": "h3-camera-movement-discipline-library",
+  "required_check_ids": [
+    "CMD01",
+    "CMD02",
+    "CMD03",
+    "CMD04",
+    "CMD05",
+    "CMD06",
+    "CMD07",
+    "CMD08"
+  ],
+  "checks": [
+    {
+      "id": "CMD01",
+      "rule": "每段先建立机位并选一个主要摄影机行为，微小身体重音不自动触发相机改向。",
+      "source": "case-studies/2026-10-camera-movement-discipline-library/README.md:14-24；case-studies/2026-10-camera-movement-discipline-library/prompt.md:151-157,203-218"
+    },
+    {
+      "id": "CMD02",
+      "rule": "共享时间轴不等于零响应延迟；提前到位、同动和延迟观察必须分别选择。",
+      "source": "case-studies/2026-10-camera-movement-discipline-library/prompt.md:11-12,88-125,159-167；docs/casereview/2026-10-camera-movement-discipline-library.md:28,38-45"
+    },
+    {
+      "id": "CMD03",
+      "rule": "相机响应模式与剪辑模式独立；收势切和旋转相位匹配切不能同时作为无条件禁令。",
+      "source": "case-studies/2026-10-camera-movement-discipline-library/prompt.md:36-41,64-77；docs/casereview/2026-10-camera-movement-discipline-library.md:30,46"
+    },
+    {
+      "id": "CMD04",
+      "rule": "每个相机块具备位置、几何、运动、触发、终点五字段；零移动显式写 none。",
+      "source": "case-studies/2026-10-camera-movement-discipline-library/prompt.md:191-201"
+    },
+    {
+      "id": "CMD05",
+      "rule": "物理变化写真实路径、光轴和到达关系；特殊机位才需要强化位置物件与透视，普通机位不强塞极端描述。",
+      "source": "case-studies/2026-10-camera-movement-discipline-library/prompt.md:50-62,135-148"
+    },
+    {
+      "id": "CMD06",
+      "rule": "延迟观察只影响摄影机，人物保持控制；每次过冲最终修正并重新找到主体。",
+      "source": "case-studies/2026-10-camera-movement-discipline-library/prompt.md:88-125"
+    },
+    {
+      "id": "CMD07",
+      "rule": "低机位、无俯拍、1.5秒驻留、提前1.5–2秒、固定快闪密度等均保留来源情境，不作为所有镜头硬限制。",
+      "source": "case-studies/2026-10-camera-movement-discipline-library/prompt.md:8-19,64-86；docs/casereview/2026-10-camera-movement-discipline-library.md:30-32"
+    },
+    {
+      "id": "CMD08",
+      "rule": "实测字样只能归为作者原文自述，未有模型参数和可重放证据时不宣称所有规则已证明稳定。",
+      "source": "docs/casereview/2026-10-camera-movement-discipline-library.md:32,47"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "规则选择表",
+      "content": "当前任务、camera_response、edit_policy、适用历史条目、未选条目及其冲突理由。"
+    },
+    {
+      "name": "五字段摄影机块",
+      "content": "位置、几何、路径、人物触发和终点；静机字段完整，单位与身体坐标一致。"
+    },
+    {
+      "name": "动作—相机时相表",
+      "content": "同一时间域下的人物起峰收、相机起到停、delta_t、测量/计划状态和可见性检查。"
+    },
+    {
+      "name": "可拼接提示词与审计",
+      "content": "将摄影机块和真实动作链合成段落；另外列规则例外、输入缺口、未做推理验证的范围。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

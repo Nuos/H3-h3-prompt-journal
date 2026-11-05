@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+  "skill_name": "h3-three-person-prank-freeze-gag-cos-swap",
+  "required_check_ids": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8"
+  ],
+  "checks": [
+    {
+      "id": "R1",
+      "rule": "画外持机者是本案第三个行动者；摄影视点不意味着中立观察。手、袖子、道具只在有连续证据时归并到同一主体，身份推断保留置信与缺证。",
+      "source": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md:16-18,24-43；docs/casereview/2026-09-three-person-prank-freeze-gag-cos-swap.md:17-21,29-33"
+    },
+    {
+      "id": "R2",
+      "rule": "每个喜剧结果必须有可见准备、干扰者先行动、接触及受力改变；源案面罩UP→第三人关DOWN→A自己开UP→第二轮保持UP的顺序不可在skin-only中改变。",
+      "source": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md:37-59,87"
+    },
+    {
+      "id": "R3",
+      "rule": "三次定格属于后期画面保持；用入点／持续帧数／叠层／恢复方式四项定义，演员表演层不写成所有人自行停住。三次和半秒是本案例选择，不是H3普遍要求。",
+      "source": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md:18,31,35-43；case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md:45-75,83"
+    },
+    {
+      "id": "R4",
+      "rule": "明确时间戳是否包含定格，并使总时长、帧率、定格区间可对账。原15.3秒与首0.6秒冲突必须记录；官方标准生成能力和后期延长成片分开描述。",
+      "source": "docs/casereview/2026-09-three-person-prank-freeze-gag-cos-swap.md:43-45；工程补齐：基片／输出双时间线与官方能力校验"
+    },
+    {
+      "id": "R5",
+      "rule": "仅换皮冻结行动者、因果、时点、摄影、定格和声音，只允许外观与其接触到的材料响应变化；功能性道具被删除或时间被移动即转为机制改编。",
+      "source": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md:33,49,55；case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md:83-95"
+    },
+    {
+      "id": "R6",
+      "rule": "现场声、后期SFX、配乐分列；没有音乐不等于全轨静音。RMS峰值或响声不能单独证明节拍、BPM或因果，未获取音轨不报告实测结果。",
+      "source": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md:24,31；case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md:93-95；case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md:97-105"
+    },
+    {
+      "id": "R7",
+      "rule": "所有杯瓶有稳定身份与拥有者；湿发、衣料、面罩水膜随事件累积，不因定格恢复或换皮重置。B的小瓶与蓝瓶描述差异应核实或显式裁决，不能暗中增删道具。",
+      "source": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md:17,27,65,77,89,91；工程补齐：道具身份与状态账本"
+    },
+    {
+      "id": "R8",
+      "rule": "分析来源与生成参考分离；本案T2VA无图输入，原视频逆向分析不自动变成Ref2VA。实际12字段和外部配套skill链接不构成额外官方强制规范或已验证实现。",
+      "source": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md:5-9,57,61-71；docs/casereview/2026-09-three-person-prank-freeze-gag-cos-swap.md:5-8,37,43"
+    }
+  ],
+  "output_contract": [
+    {
+      "name": "证据与因果表",
+      "content": "逐事件记录时间窗、观察到的画面／声音、竞争解释、最终选择及置信，主体操作权限、接触、结果和缺失素材分列。"
+    },
+    {
+      "name": "道具与身体状态账本",
+      "content": "每轮开始／结束的面罩开闭、杯瓶持有、头部朝向、湿润部位和画外手入口；每个改变附可见动作或明确待确认。"
+    },
+    {
+      "name": "H3正文与后期时间表",
+      "content": "符合当前输入模式的可用提示词，以及生成基片时长、成片时长、fps、freeze四元组、对白／现场声／SFX／音乐分层；工程计划不得冒充实测。"
+    },
+    {
+      "name": "仅换皮差异表与审校报告",
+      "content": "记录允许变化、保持字段、连带物理变化及合同破坏项；分别报告生成前计划审校和生成后待验证，不把相似结果证明为唯一源剧情。"
+    }
+  ],
+  "verification_scope": "Checks require actual human/agent semantic review; audit_plan verifies only recorded evidence and static structure."
+}

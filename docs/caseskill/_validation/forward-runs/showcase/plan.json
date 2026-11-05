@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.0",
+  "case_id": "2026-10-sock-showcase-right-entry-three-shot",
+  "delivery_kind": "prompts",
+  "status": "draft",
+  "assembly": "sequential",
+  "runtime": {
+    "profile": "official-2026-10-28",
+    "evidence": "Skill offline official snapshot only; actual deployment has not been verified."
+  },
+  "fps": 24,
+  "assets": [
+    {
+      "id": "PERSON_REF",
+      "kind": "image",
+      "locator": "",
+      "status": "missing",
+      "roles": [
+        "person_identity"
+      ]
+    },
+    {
+      "id": "LOOK_A_REF",
+      "kind": "image",
+      "locator": "",
+      "status": "missing",
+      "roles": [
+        "sock_state_A"
+      ]
+    },
+    {
+      "id": "LOOK_B_REF",
+      "kind": "image",
+      "locator": "",
+      "status": "missing",
+      "roles": [
+        "sock_state_B"
+      ]
+    },
+    {
+      "id": "LOOK_C_REF",
+      "kind": "image",
+      "locator": "",
+      "status": "missing",
+      "roles": [
+        "sock_state_C"
+      ]
+    },
+    {
+      "id": "MUSIC_MASTER",
+      "kind": "audio",
+      "locator": "",
+      "status": "missing",
+      "roles": [
+        "postproduction_continuous_music_track"
+      ]
+    }
+  ],
+  "references": [],
+  "segments": [
+    {
+      "id": "SEG_A",
+      "mode": "T2VA",
+      "duration_s": 4,
+      "frame_count": 96,
+      "global_start_s": 0,
+      "reference_labels": [],
+      "prompt_file": "prompts/A.txt",
+      "state_id": "A",
+      "edit_window_s": [
+        0,
+        3
+      ],
+      "edit_duration_s": 3,
+      "source_frame_window_exclusive": [
+        0,
+        72
+      ],
+      "global_edit_frame_window_exclusive": [
+        0,
+        90
+      ],
+      "entry_state": "Already wearing state A; one person already in a leftward stride at screen right, fully visible.",
+      "exit_state": "At the retained end just before 3 seconds, both feet grounded and the frontal sock-display pose held since 2 seconds.",
+      "audio_global_window_s": [
+        0,
+        3
+      ],
+      "shots": [
+        {
+          "id": 1,
+          "start_s": 0,
+          "end_s": 4,
+          "action": "State A from the first frame. 0–0.6 s right entry; 0.6–1.3 s settle; 1.3–2.0 s clear sock pose; 2–4 s hold.",
+          "camera": "Locked frontal full-body shot; no internal cut or camera move.",
+          "sound": "Explicit total silence: overall_soundscape N/A and non_diegetic_music N/A."
+        }
+      ]
+    },
+    {
+      "id": "SEG_B",
+      "mode": "T2VA",
+      "duration_s": 4,
+      "frame_count": 96,
+      "global_start_s": 3,
+      "reference_labels": [],
+      "prompt_file": "prompts/B.txt",
+      "state_id": "B",
+      "edit_window_s": [
+        0,
+        3
+      ],
+      "edit_duration_s": 3,
+      "source_frame_window_exclusive": [
+        0,
+        72
+      ],
+      "global_edit_frame_window_exclusive": [
+        90,
+        180
+      ],
+      "entry_state": "Already wearing state B; one person already in a leftward stride at screen right, fully visible.",
+      "exit_state": "At the retained end just before 3 seconds, both feet grounded and the frontal sock-display pose held since 2 seconds.",
+      "audio_global_window_s": [
+        3,
+        6
+      ],
+      "shots": [
+        {
+          "id": 1,
+          "start_s": 0,
+          "end_s": 4,
+          "action": "State B from the first frame. 0–0.6 s right entry; 0.6–1.3 s settle; 1.3–2.0 s clear sock pose; 2–4 s hold.",
+          "camera": "Locked frontal full-body shot; no internal cut or camera move.",
+          "sound": "Explicit total silence: overall_soundscape N/A and non_diegetic_music N/A."
+        }
+      ]
+    },
+    {
+      "id": "SEG_C",
+      "mode": "T2VA",
+      "duration_s": 4,
+      "frame_count": 96,
+      "global_start_s": 6,
+      "reference_labels": [],
+      "prompt_file": "prompts/C.txt",
+      "state_id": "C",
+      "edit_window_s": [
+        0,
+        3
+      ],
+      "edit_duration_s": 3,
+      "source_frame_window_exclusive": [
+        0,
+        72
+      ],
+      "global_edit_frame_window_exclusive": [
+        180,
+        270
+      ],
+      "entry_state": "Already wearing state C; one person already in a leftward stride at screen right, fully visible.",
+      "exit_state": "At the retained end just before 3 seconds, both feet grounded and the frontal sock-display pose held since 2 seconds.",
+      "audio_global_window_s": [
+        6,
+        9
+      ],
+      "shots": [
+        {
+          "id": 1,
+          "start_s": 0,
+          "end_s": 4,
+          "action": "State C from the first frame. 0–0.6 s right entry; 0.6–1.3 s settle; 1.3–2.0 s clear sock pose; 2–4 s hold.",
+          "camera": "Locked frontal full-body shot; no internal cut or camera move.",
+          "sound": "Explicit total silence: overall_soundscape N/A and non_diegetic_music N/A."
+        }
+      ]
+    }
+  ],
+  "handoffs": [
+    {
+      "from": "SEG_A",
+      "to": "SEG_B",
+      "type": "hard_cut",
+      "evidence": "Planned cut from retained A window end immediately before local 3.0 s: stationary centered display pose, arms down, no prop, fixed clothing/camera; to B local frame 0: same text-described person already striding in at screen right in sock state B. Only the specified sock state varies. The visible spatial/action reset is intentional. No media has been checked and no frame asset is passed between generations.",
+      "audio_strategy": "Continuous single music track across the cut; remove all generated audio; no crossfade or restart of the music."
+    },
+    {
+      "from": "SEG_B",
+      "to": "SEG_C",
+      "type": "hard_cut",
+      "evidence": "Planned cut from retained B window end immediately before local 3.0 s: stationary centered display pose, arms down, no prop, fixed clothing/camera; to C local frame 0: same text-described person already striding in at screen right in sock state C. Only the specified sock state varies. The visible spatial/action reset is intentional. No media has been checked and no frame asset is passed between generations.",
+      "audio_strategy": "Continuous single music track across the cut; remove all generated audio; no crossfade or restart of the music."
+    }
+  ],
+  "case_checks": [
+    {
+      "id": "SRE01",
+      "status": "unverified",
+      "evidence": "Plan and all three prompts specify one independent T2VA generation per state and right-entry stride from frame 0. No generated frames exist to verify execution."
+    },
+    {
+      "id": "SRE02",
+      "status": "unverified",
+      "evidence": "Retain [0,3) with hold from 2 s; hard cut to next clip entry stride. The pose-to-stride reset is deliberate. No actual seam has been inspected."
+    },
+    {
+      "id": "SRE03",
+      "status": "unverified",
+      "evidence": "Fixed descriptors are repeated verbatim except the sock catalogue. Real person/look references are absent; appearance consistency and future reference-retention exceptions are not verified."
+    },
+    {
+      "id": "SRE04",
+      "status": "unverified",
+      "evidence": "All prompts prohibit exit, empty interval, second person and in-shot state changes. Actual generated behavior remains unverified."
+    },
+    {
+      "id": "SRE05",
+      "status": "unverified",
+      "evidence": "Plan strips clip audio and lays one original music track across 0–9 s. No music file or rendered mix exists; actual audio reuse has not occurred."
+    },
+    {
+      "id": "SRE06",
+      "status": "not_applicable",
+      "evidence": "No source video, cut detector or candidate-cut analysis is used in this offline task. Historical thresholds and the historical 4.4-second candidate are not imported as evidence."
+    },
+    {
+      "id": "SRE07",
+      "status": "unverified",
+      "evidence": "Offline standard is 4–15 s at 24 fps. Each draft requests 4 s and plans a 3 s crop; 30 fps is editing output only. Actual deployment capability has not been checked."
+    },
+    {
+      "id": "SRE08",
+      "status": "pass",
+      "evidence": "Manual review of this plan: separate states and right entry follow this user task; text is an explicit provisional off setting. These are local creative choices and are not stated as universal H3 restrictions."
+    }
+  ],
+  "unresolved": [
+    "Actual person reference is missing. Repeating a T2VA person description does not establish identity consistency across independent generations.",
+    "All three actual sock-look references or exact specifications are missing. A/B/C are explicitly provisional designs.",
+    "Music file, actual duration, and chosen source in-point are missing; no beat or waveform analysis has been performed.",
+    "Actual H3 deployment duration/fps support remains unverified; the plan uses the skill offline standard 4-second minimum and 24 fps.",
+    "Aspect ratio, resolution, and actual main outfit/scene are unspecified. Studio, outfit, and 9:16 at 1080x1920 editing canvas are provisional choices.",
+    "No clips or final media exist. Identity, sock accuracy, right-entry motion, hold pose, frame-rate conversion, cuts, and final audio require later media inspection."
+  ],
+  "edit_fps": 30,
+  "final_duration_s": 9,
+  "final_frame_count": 270,
+  "scope": "Offline prompt-and-plan trial only; no model inference or media assembly.",
+  "provisional_designs": true,
+  "fixed_visuals": {
+    "person": "Fictional adult woman with medium-brown skin and dark hair in a low ponytail; temporary text-only design, not a verified user identity.",
+    "main_clothing": "Plain white crew-neck T-shirt, charcoal mid-thigh shorts, white low-top sneakers.",
+    "scene": "White seamless studio; soft frontal lighting.",
+    "camera": "Locked frontal full-body camera at waist height.",
+    "text": false,
+    "allowed_variation": "Sock material, color and pattern listed in the state catalogue only."
+  },
+  "state_catalogue": [
+    {
+      "id": "A",
+      "description": "米白细竖罗纹棉质中筒袜",
+      "source": "Explicit provisional text design; replace after user supplies actual look."
+    },
+    {
+      "id": "B",
+      "description": "深海军蓝细绞花针织中筒袜",
+      "source": "Explicit provisional text design; replace after user supplies actual look."
+    },
+    {
+      "id": "C",
+      "description": "酒红底奶油色小菱格细针织中筒袜",
+      "source": "Explicit provisional text design; replace after user supplies actual look."
+    }
+  ],
+  "audio_plan": {
+    "assembly": "One continuous supplied music file on the final editing timeline, never restarted at segment boundaries.",
+    "global_window_s": [
+      0,
+      9
+    ],
+    "source_in_s": null,
+    "beat_status": "Cuts at 3 and 6 seconds are user-specified planned boundaries, not measured musical beats.",
+    "generated_audio": "Discard every generated clip audio track.",
+    "verified": false
+  }
+}
