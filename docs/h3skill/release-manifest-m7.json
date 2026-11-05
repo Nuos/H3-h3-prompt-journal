@@ -1,0 +1,866 @@
+{
+  "kind": "M7ReleaseManifest",
+  "schema_version": "1.0.0",
+  "package": "h3-time-synchronization",
+  "package_version": "0.1.0",
+  "contract_version": "1.0.0",
+  "recorded_at_utc": "2026-11-05T17:23:01.195335+00:00",
+  "source_base_commit": "075fb72797fdca42bc47e38516cf3dbc16f4442d",
+  "source_base_tree": "f081458ae8354d6455d83440570e174ade24a640",
+  "scope": "M7 runtime, tests, documentation, validation records and README index update; frozen plans, case text, standards and M1-M6 runtime packages are protected.",
+  "runtime_file_count": 31,
+  "file_count": 120,
+  "total_bytes": 975573,
+  "hash_exclusions": [
+    {
+      "path": "docs/h3skill/release-manifest-m7.json",
+      "reason": "The manifest cannot include its own content hash."
+    },
+    {
+      "path": "docs/h3skill/validation/m7/release-check.json",
+      "reason": "Derived from the manifest; excluded to avoid a circular hash dependency. Both excluded files are still fixed by the publication Git tree."
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/h3skill/20261105-development-m7-v001.md",
+      "bytes": 19156,
+      "sha256": "64a47b364d6574bc93a1e8a1b22353e7a232a272f8d9c85bccac08b38e82b69f",
+      "git_blob_sha1": "c642715c46e94ed84c3bef33c4272c3bc3f5da35",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/README.md",
+      "bytes": 23652,
+      "sha256": "b3dc24117ea23c99c8cf9be5d04073b34e448da13a5cdea34afbb29196445f04",
+      "git_blob_sha1": "f7ac1f46176a8a955e3c7c7eb32d54412a2bf6be",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/SKILL.md",
+      "bytes": 9957,
+      "sha256": "a4f89d21e7edcec1ede9d00df47ed19b701c6773a9b8259b4864c1930b3087fe",
+      "git_blob_sha1": "a10254b956a32e3fd4c13f1758f37ec3abf76932",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/proposal-batch.json",
+      "bytes": 21856,
+      "sha256": "4e869d1613a855f270b0c2d080fa717854ffcc7d652a205fd086d2270cd0bf9e",
+      "git_blob_sha1": "691e265d52c969083575d6fc4f4c43a4f8145480",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/proposal-standalone-m7-1.json",
+      "bytes": 3113,
+      "sha256": "ccf4923134c19da7810d8fe4332d55540feda6e947d37bdd053b1f9e17ecc273",
+      "git_blob_sha1": "7450ece732ef4ebad51fd70735a14d1a77c58211",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/proposal-standalone-m7-2.json",
+      "bytes": 8230,
+      "sha256": "b52d4649a75e80c03b5f7a35dfa2aa8b38dc6123f4919c13c1ce6c7d3bf87329",
+      "git_blob_sha1": "3da17f5961917d5330ac9a2b451c17cb487243f3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/proposal-standalone-m7-3.json",
+      "bytes": 7515,
+      "sha256": "670bc4d44151d7849ad584ae401d54075dfd9048d0205500a199098404d04b7d",
+      "git_blob_sha1": "b5cb3d050176b7f7ce34f7b6c34fd38c441bd318",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/proposal-unknown-precision.json",
+      "bytes": 2841,
+      "sha256": "8fd49973be724fcad66a9377815663da021d2ce8f3f67793d0c3c9ce530f261c",
+      "git_blob_sha1": "42e222028403931552f6b3698021030357b12cf3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/pts-design.json",
+      "bytes": 39,
+      "sha256": "6a2b83d88f6d9803b9a947757bdd5b6f142a4095458be24f5e0eaff38896ac29",
+      "git_blob_sha1": "ee495117dbb37beebe448f617fa078456f9cc822",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/request-m7.json",
+      "bytes": 624,
+      "sha256": "831e0c86674fee743c481ebb244034ca9ba55bc5b0b24071a643211b35faf2f3",
+      "git_blob_sha1": "9af231ca191f77f0e86cf55939c0f5aea82d8a7f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/request-standalone-m7-1.json",
+      "bytes": 647,
+      "sha256": "eb91a4022bd3435f9bbcec3ed8ea38d1b5dd7cc76316cdfeed9c06d3ad8bd5da",
+      "git_blob_sha1": "506ed16415caf5c6c8993825112c9580a003ce33",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/request-standalone-m7-2.json",
+      "bytes": 4164,
+      "sha256": "8db63fa5cca80f3eb79c03d9842bb196db695f698a7e411e0347b7203613c6ee",
+      "git_blob_sha1": "d4b4988cbc6f3b7ab3a21dfffabcb1f53aea8614",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/request-standalone-m7-3.json",
+      "bytes": 4095,
+      "sha256": "3ffd567218711c778532d45a3ea606077bc9d54372cd8cd4eb0e985602f22bbf",
+      "git_blob_sha1": "728d9e1f8cbef551beb6cc2800ea8696e6c62114",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/request-unknown-precision.json",
+      "bytes": 1857,
+      "sha256": "770f4d4a8e823ae5e338a5d42957542577fdb2445284ce684dd53fb27c0c0d28",
+      "git_blob_sha1": "47d565d70ad1df8897178d495cdb18b50b6ed2ca",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/requests.json",
+      "bytes": 9588,
+      "sha256": "8d7c1d03dc1e2ac6ecaa9146fe2c59beb0105c4bf99527a5c8eda64abe912f8e",
+      "git_blob_sha1": "49fefbde6243cdf32aadb498772cd07d796c13ce",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/assets/state-empty.json",
+      "bytes": 1103,
+      "sha256": "f45959697130b00452bd993fa298b373e15d54603e984daa76ed4c6721b9d286",
+      "git_blob_sha1": "ec53276165e23eb8fb64d2d9eef273c41730a010",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/audit-and-handoff.md",
+      "bytes": 4944,
+      "sha256": "5e9f0ae805e5ddc87883885a1c69fc23d32497e5ad0dc7c5567381f0e1d03db6",
+      "git_blob_sha1": "877cbc61c48353adcff1382c885ae603d284cb4f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/case-evidence.md",
+      "bytes": 20089,
+      "sha256": "6cc2582f93f2f39b6339e296f87a9678fb43626fe2051d925ad859988b0199a9",
+      "git_blob_sha1": "cb6483d9d6bb491a156f9ec29aa88701ca87465b",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/case-index.json",
+      "bytes": 72240,
+      "sha256": "38a7059b5a9cbd6132b44a551a83acff65f681a19c85da7dff803b5fd060c56b",
+      "git_blob_sha1": "b21272b9d445d7fb5cb4944f55d558d84af5b85e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/case-source-LICENSE.txt",
+      "bytes": 1069,
+      "sha256": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+      "git_blob_sha1": "1edcc82393ad4bce49aca4ab0c074dc75fcc268e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/contract-guide.md",
+      "bytes": 20835,
+      "sha256": "8a73c6a979ef83442fdfd2a4cf03116866e95396e0111f2028167307dd97407f",
+      "git_blob_sha1": "e1559bf327636e78b687559340348caa315f4b92",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/contracts.json",
+      "bytes": 34224,
+      "sha256": "0e4b63a1301f6fc06fc275af8d4412fe3553bd902cd5340fd8c34e1e6c62fece",
+      "git_blob_sha1": "0aa1c648e7f5944abf70a6db0534f866fe66154d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/event-scheduling.md",
+      "bytes": 4906,
+      "sha256": "b8a6c8dccdd7612168c0b421f8108ac0802315793dcc5db926c42a9846a7d8b0",
+      "git_blob_sha1": "f12154c304b7cc6de89ace22f4301da4e3576105",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/h3-NOTICE.txt",
+      "bytes": 121,
+      "sha256": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+      "git_blob_sha1": "65d507740b0ae63baacdcc501b35ee1ffa5d1226",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/h3-base-official.txt",
+      "bytes": 15773,
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+      "git_blob_sha1": "40cf586a634d677d6b7107b367cf0ec9621be728",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/h3-label-mapping.md",
+      "bytes": 22252,
+      "sha256": "5000f1644bce95fd88bc19cd6363c2c9789739deefb807ff1d08e321bb9266bd",
+      "git_blob_sha1": "4246b90945859937628f7361a19a814c419f3559",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/h3-protocol-source.json",
+      "bytes": 31716,
+      "sha256": "a71572f5b9a54e426efd7b2a72962af0a191693ab70f0e0f29a1e6a7353befe4",
+      "git_blob_sha1": "976f4686edf11244275df9a790c6d446cbf9a36c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/h3-ref-official.txt",
+      "bytes": 23553,
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+      "git_blob_sha1": "7ae1b2d07d743fd2392258a96449be9e9e322d35",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/module-registry.json",
+      "bytes": 15275,
+      "sha256": "5ed57e384dac92d734e57644deeb23462150e4a542b167104b38238693ed609f",
+      "git_blob_sha1": "dbf882d47cd9c781b6b38a9b0060295a7d342f33",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/provenance-and-license.md",
+      "bytes": 6676,
+      "sha256": "0326fb305336888f7c85e98d23fdf52c66cdcbf39ff7730e42066b7c758bcb24",
+      "git_blob_sha1": "90a8ad3b044fb59f827329715ad9c9c1c923aab2",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/time-bases.md",
+      "bytes": 4807,
+      "sha256": "3b42e304b1ed31e3decd9f33bf0e60262ca942230f2eb9d05e376feca4ac9d90",
+      "git_blob_sha1": "d38bbacedcf00efd29569027b08fdbf8b50a0794",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/references/time-domain-mapping.md",
+      "bytes": 5715,
+      "sha256": "d076ac42040ca5147ce10d3e06f8e933995396b8e3e8d1462b3ce0d456a73a8e",
+      "git_blob_sha1": "4d02462a56f8c3faaf830248aba2f1eb7eb3e2c3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "bytes": 70415,
+      "sha256": "6cbd3561c093c6275bfe5116f4b3618b1ff70eb7d8ce34244ce5b8266741a1e7",
+      "git_blob_sha1": "a2a288a7149e28feacf21fd50d499e8b32163a1c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/tests/m7/test_m7_contract.py",
+      "bytes": 24440,
+      "sha256": "a0633ac0ce3ea0b9c5449dc46bede60d03e5d647bfd9ddf39517c14240dca314",
+      "git_blob_sha1": "94f73ea080c0c62cea4def1667f3c50958475d25",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/tests/m7_portability.py",
+      "bytes": 5418,
+      "sha256": "02f8b0e6d888f80c3d67bcd335e9a4d1343d874af6a7887eae946ea4545f0630",
+      "git_blob_sha1": "68c3a7ae2dbca405056f927d1f8af4c2385fa5cf",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/tools/verify_m7_release.py",
+      "bytes": 11129,
+      "sha256": "2f07ee6a34d5bd844f4393f7601eb7461eac61be00600bbf3ca4d41ded6da7eb",
+      "git_blob_sha1": "80c35fc5992667c6bc7d3491486498ee54b801c3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/behavior-tests.json",
+      "bytes": 6997,
+      "sha256": "f247a885903ff0ae98c3995885d3e7c2f13e59f9219b394e2c4da5c55e93e9ac",
+      "git_blob_sha1": "1b4a83e9c244b2e316ef93170e8c162f448455dd",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/01-help.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/01-help.stdout.txt",
+      "bytes": 1052,
+      "sha256": "79941acb3b2385f7cdab152b299ab0efb82bc3d5693d8d10264e9609e2dd3813",
+      "git_blob_sha1": "ad6c7e96e00e35d8d891bb39279a7b41d48dd5b2",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/02-route.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/02-route.stdout.txt",
+      "bytes": 6116,
+      "sha256": "e665ffd0b4274dd404c7fe05842b7bfdc78312ba0983840231ef7d8260151a12",
+      "git_blob_sha1": "fb55b3c0584217c3e553006c0ec55458c38d117c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/03-check.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/03-check.stdout.txt",
+      "bytes": 7382,
+      "sha256": "1c0fa29b3b31bdaf6312caf585608d8fd156a60058bc16057555ed13754f2e6c",
+      "git_blob_sha1": "f6c895ecc1c32c5776ad4d2e8a3f3c949e695c33",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/04-contact-source-work.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/04-contact-source-work.stdout.txt",
+      "bytes": 1663,
+      "sha256": "2b3b6999fb77fead516f67d99b370537fc5cc4ff982b4a1e00394e47a2539d4b",
+      "git_blob_sha1": "4638f82db2ac061fbf5bea78b3b27b0b1f56f266",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/05-contact-work-generation.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/05-contact-work-generation.stdout.txt",
+      "bytes": 1662,
+      "sha256": "e2ee0e69535882806bc56d39ba376c7601903413434b8e0ee12d40293b2499dd",
+      "git_blob_sha1": "f60829b801f215d1fca1114cb1b56ec3ef3818bc",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/06-contact-generation-edit.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/06-contact-generation-edit.stdout.txt",
+      "bytes": 1662,
+      "sha256": "f0852994441a0b6218cdc14688e31c75f5f5573c86dc8e54a5cd24a3a748f39b",
+      "git_blob_sha1": "1280e3270c1b628fb4e29fb5bb0a11a0ad9ee423",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/07-camera-source-work.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/07-camera-source-work.stdout.txt",
+      "bytes": 1661,
+      "sha256": "b75b5dd4567a2544b16f8ccd28246082b2e01780c79cac75310d3674f9579400",
+      "git_blob_sha1": "e0a0ac32c9f81db87214a37d7212781c58248e26",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/08-camera-work-generation.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/08-camera-work-generation.stdout.txt",
+      "bytes": 1660,
+      "sha256": "8df08ed9594e493fa73dd781e4e485f81dd7a11078bd2b91432d73e16efe333f",
+      "git_blob_sha1": "985e03d6f72fb9d1cdbd230dedbde558c25a9b79",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/09-camera-generation-edit.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/09-camera-generation-edit.stdout.txt",
+      "bytes": 1661,
+      "sha256": "02699ed77c272bb0f84fc3fe47c3b64bb9ee94d42d7c2ea35c603c4b1d45d269",
+      "git_blob_sha1": "d7b7552b3696a1e7b5c0eddcfc8623209647b117",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/10-cut-quantize.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/10-cut-quantize.stdout.txt",
+      "bytes": 1824,
+      "sha256": "28946480695b426a55ca2f18c5e015279578bc388e25003346aa7e28dcc3ae0e",
+      "git_blob_sha1": "c9ad49a13436b1834f4e1375001a6eed504c3486",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/11-contact-source-frame.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/11-contact-source-frame.stdout.txt",
+      "bytes": 1752,
+      "sha256": "fc8978c9ff326cf39111327e1a0ef0c0c6bc73087384454d0f0e2ff116c426b2",
+      "git_blob_sha1": "26e65a3cfe8d18b8b34d6fa2a35fb6894f91317a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/12-camera-source-frame.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/12-camera-source-frame.stdout.txt",
+      "bytes": 1752,
+      "sha256": "20ce265713d9dcb2329d9dd601449fdd5ce9697802329d11dea528b8fd1bb287",
+      "git_blob_sha1": "2ffb0338970d56072e052c697f4bb62ffac6a3dc",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/commands.json",
+      "bytes": 7372,
+      "sha256": "f17f9e2bf3e9e1838ec264f539edb29903dbb2e3941992a96828c5d7dee56ef2",
+      "git_blob_sha1": "746696c1befc89f8d0509e0267bf21499cc691b6",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/historical-guide-read.json",
+      "bytes": 605,
+      "sha256": "9b33c815e01c2a8c379bce5f3f2a8575ec1f80cf0b0cae1374eb1f8c7360a641",
+      "git_blob_sha1": "dc302dcd85bef6431ef0873b34eb197079a1e1f0",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/m11-handoff-reviewed.md",
+      "bytes": 2645,
+      "sha256": "3b9e9000cdf5376ce99db813c772040fb0a6cc6ec2231d856fc9fda307c2c631",
+      "git_blob_sha1": "4b61819ed5505baaa383807ca280b548e1070386",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/m11-handoff.md",
+      "bytes": 2642,
+      "sha256": "94991f1a16e23ccb46cb786b1be206850dce7ad2c0f84c5c4903dc5b2b14cc28",
+      "git_blob_sha1": "0bf7b5cff34f276ab9bdcd788bec7bf99a3d18a1",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/proposal.json",
+      "bytes": 9096,
+      "sha256": "5f31b3e7bc5554f90d9815f1002cd4cdceaeb12c359a4ba02f0c47f11c213a80",
+      "git_blob_sha1": "6c084d3b46eb2c815189def722c589cce261c8d9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/public-input-hashes.json",
+      "bytes": 1073,
+      "sha256": "015a01b47d40709840416bed05309c22909c3de9c904655d504d420d6165dba5",
+      "git_blob_sha1": "570dcd8fe2aee62686ea92654f7b19c6316789f9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/report.md",
+      "bytes": 5547,
+      "sha256": "135827cf8705311af28504bb551e5d0992cd48d399e6c78a57d62bdd2fb9d8dd",
+      "git_blob_sha1": "79eccd6c135d026b8d9a4dfec7b0194bcc1d5603",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/request.json",
+      "bytes": 5608,
+      "sha256": "1b8279d6f677988527b4f5244addf0e2a98beee63d5ef2c9e5b165ad203f593d",
+      "git_blob_sha1": "c9275396b71cd5450c899d056c6b92b899847deb",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/results.json",
+      "bytes": 2341,
+      "sha256": "72871b4d2a3e659a4e65fc8232844038128dc5610a5819d220a2d2cacadf4d40",
+      "git_blob_sha1": "fd3edcd68776c11c59400d8a4380f45588b61b8e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/run-validation.py",
+      "bytes": 7985,
+      "sha256": "58c2fd9bfb02635e6686c6954c217ca5f41d3c37c103385c90e5cba6201bdf0f",
+      "git_blob_sha1": "20d35b12a33c72676d785dadb6b13f63dbe90870",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping/task-copy.txt",
+      "bytes": 1497,
+      "sha256": "57033e73adb2eb73bcb7ff87370540ab0eceb7f1cb85730c85452b85ce9432aa",
+      "git_blob_sha1": "a9eaa601af8560a0c259b1334bb6d1882b0889da",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/mapping-task.txt",
+      "bytes": 1497,
+      "sha256": "57033e73adb2eb73bcb7ff87370540ab0eceb7f1cb85730c85452b85ce9432aa",
+      "git_blob_sha1": "a9eaa601af8560a0c259b1334bb6d1882b0889da",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/RESULTS.md",
+      "bytes": 5244,
+      "sha256": "a742c8ccbb91b608a2e7d7903f3e2ff8e778da64ebba379c5eb20ca2c6f5f2c2",
+      "git_blob_sha1": "f00f9c9a07c565cc834ebd0ab882299c9d9913af",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/check-help-observed.json",
+      "bytes": 719,
+      "sha256": "869d32596eb9a328e2d444f3a9c6a15ce0e555bbb88e331dda8c896a762d001f",
+      "git_blob_sha1": "d8be3ba18a42aa6d92151adef6e70a37400b18a7",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/initial-missing-guide-failure.json",
+      "bytes": 530,
+      "sha256": "69cfde35b977b29046091e23492db28c92658b2b79fd4b8c0ccc773ea7c0b378",
+      "git_blob_sha1": "681bfd045aab9673ba9870087a4b23730ae405f8",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/original-task.txt",
+      "bytes": 1254,
+      "sha256": "22c725ac4e0f1ab49c983361d6e7e25a27155908d9aab7aa7e05deb76db7e347",
+      "git_blob_sha1": "a6d31a80f17ce5e2f9f3943a863ba6f79e797726",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/read-and-help/01.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/read-and-help/01.stdout.txt",
+      "bytes": 19798,
+      "sha256": "cb6a6ca889237bb803c76ae4aae03f8938564cf64c91e66fa79ef9d14f8e9116",
+      "git_blob_sha1": "505e2b50623d193a0e3443166a0c0fc072155df7",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/read-and-help/02.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/read-and-help/02.stdout.txt",
+      "bytes": 1052,
+      "sha256": "79941acb3b2385f7cdab152b299ab0efb82bc3d5693d8d10264e9609e2dd3813",
+      "git_blob_sha1": "ad6c7e96e00e35d8d891bb39279a7b41d48dd5b2",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/read-and-help/03.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/read-and-help/03.stdout.txt",
+      "bytes": 4164,
+      "sha256": "8db63fa5cca80f3eb79c03d9842bb196db695f698a7e411e0347b7203613c6ee",
+      "git_blob_sha1": "d4b4988cbc6f3b7ab3a21dfffabcb1f53aea8614",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/read-and-help/04.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/read-and-help/04.stdout.txt",
+      "bytes": 8230,
+      "sha256": "b52d4649a75e80c03b5f7a35dfa2aa8b38dc6123f4919c13c1ce6c7d3bf87329",
+      "git_blob_sha1": "3da17f5961917d5330ac9a2b451c17cb487243f3",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/read-and-help/commands.json",
+      "bytes": 1350,
+      "sha256": "ccb8e4f5b6374b0bd54c843c191ffe2d5b49d2d8d638cf38e173a6a36305d781",
+      "git_blob_sha1": "ca85d1dee24f1d63666b670c6a67c4a3bb85b052",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/commands.json",
+      "bytes": 4971,
+      "sha256": "5a20b40643aff2e43a9186fa55b25b6edfc18afd7ae0f2bdc149aebf83f2a243",
+      "git_blob_sha1": "c4ac85975133810a43d8743abae9e61285bd9fe4",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/m7-1-check.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/m7-1-check.stdout.txt",
+      "bytes": 4605,
+      "sha256": "65eb5ceac8cd02cc6cfc08d5dcfed3bcca1cbb951bf98d0b9bc74d8cf2461283",
+      "git_blob_sha1": "7941c44cbda50b25c2ff86ef23bc6b5bed50416d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/m7-1-route.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/m7-1-route.stdout.txt",
+      "bytes": 2247,
+      "sha256": "e2aab19b4435b6eb2b123a1ff3920a890e4457a53a0798a7d8ad56aedf369543",
+      "git_blob_sha1": "6e1d2149d52915ff75eec0658015f2d9ef42af62",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/m7-2-check.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/m7-2-check.stdout.txt",
+      "bytes": 3611,
+      "sha256": "6762db577d489a5e4ed1c51a2d9ea11d6a1227828ee48fcb4151a1aaf5ca7f06",
+      "git_blob_sha1": "0b6463f09cdb15dd174b32353d3f61f624e24013",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/m7-2-route.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/m7-2-route.stdout.txt",
+      "bytes": 3593,
+      "sha256": "d15ac9c33a5c871ca2231a93ef6f5bda93a8e556f2ada92f86fa9a2f25962e9e",
+      "git_blob_sha1": "6ab5c6c1eb28c831fddb92cc0f445524aa3e8a17",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/proposal-m7-1.json",
+      "bytes": 3543,
+      "sha256": "190d8ec33d4fb86d4ec4da20ee81217af8ae163415fdcfe852a648583bc66104",
+      "git_blob_sha1": "0dd1cf1d1e261c90f130a627ea0c187917e2fdbd",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/proposal-m7-2.json",
+      "bytes": 9789,
+      "sha256": "cb6e864853702aec9bae90860c4a8bb00b72dedd1ea842c36ef08da8fc58f868",
+      "git_blob_sha1": "c7d85351ee7cca459fa5cc51e32d5f6d1fa1c980",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/request-m7-1.json",
+      "bytes": 885,
+      "sha256": "cbbd60a44affa6c1002918944e2352cdbfad30447252382b616012329da3a4c1",
+      "git_blob_sha1": "6848c0c98694931f29c95402fa591928c49a548b",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-001/request-m7-2.json",
+      "bytes": 5381,
+      "sha256": "0a5b7386500c28fb3239f40376c3a3ef8fe9ca8559f033146dc78837a8253eb5",
+      "git_blob_sha1": "a9bc2d2c6420a54e50161da374e01af62e98a5ac",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-002/commands.json",
+      "bytes": 2487,
+      "sha256": "73278cf003fb1b4ff9b704560165ee3cedb0a8fd17e658f8b62612aabb7606b7",
+      "git_blob_sha1": "0d7d9f8fdd57cb57ea7f8eaa56e76c3c730f13f6",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-002/m7-2-check.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-002/m7-2-check.stdout.txt",
+      "bytes": 9048,
+      "sha256": "e28a768d9bb7a0d567ae9d4dd05c6701e7018d724a53c2a9a799020f6dcd7f52",
+      "git_blob_sha1": "0d35a73e374df17e33b73a2ee3c96807735766f0",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-002/m7-2-route.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-002/m7-2-route.stdout.txt",
+      "bytes": 6130,
+      "sha256": "1ec7a9fb23286dcfc5e528d640861b71000bf2513b9dac76e8e709172efa70fc",
+      "git_blob_sha1": "a7f1ed2817f954d6e38e92aee9b23d274ebc9513",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-002/proposal-m7-2.json",
+      "bytes": 8536,
+      "sha256": "24d552eb65f9d61e4fe43f5e3511e95ba16ef018b512c0e395162ae64a0ad763",
+      "git_blob_sha1": "346549a2115eebc7ae703de7796f831afb398cfa",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-002/request-m7-2.json",
+      "bytes": 4128,
+      "sha256": "61e7f71a34bf38d2865a488fb0c4a6a420ff4b6626a6c837e737c645eee18588",
+      "git_blob_sha1": "11d4d19364cdcc46e2fde2003a4770c1a3ebb1e7",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-003/commands.json",
+      "bytes": 2487,
+      "sha256": "3aa632304d78e703f81e570b7d17d59420dbac72b22cb35654a322a679723bfa",
+      "git_blob_sha1": "0da30cbe5f50b257c2c0ccdbbc014a64c5f79859",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-003/m7-2-check.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-003/m7-2-check.stdout.txt",
+      "bytes": 7721,
+      "sha256": "ef660aeb2f9ef90d5b343ec1552ef7a1309ed97e48dc4360491137734e962951",
+      "git_blob_sha1": "2741d5eef173c82ceb873c104903e252434a439a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-003/m7-2-route.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-003/m7-2-route.stdout.txt",
+      "bytes": 6157,
+      "sha256": "d4692b6d38f3ad3b3fc288d896b1c92db91d0299f00790ca460234df974270f7",
+      "git_blob_sha1": "0a4fb44a1a82d6090353c12f594e666d60786a47",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-003/proposal-m7-2.json",
+      "bytes": 8544,
+      "sha256": "0d0c09cd6603f8d4f4e480d897fd751d5fad190a2ca7d8afa579ae2b29eb2599",
+      "git_blob_sha1": "2402bc6dabf31dc0ddb635e3f974be2099b0c698",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run-003/request-m7-2.json",
+      "bytes": 4132,
+      "sha256": "ac162b9b2ce284ad515c275266e5660c967c875db7b002ccdb20227a4a53f25c",
+      "git_blob_sha1": "47cb05822bc4d0c039070973fb5eef77ec425a73",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music/run_validation.py",
+      "bytes": 8242,
+      "sha256": "1d2ddd2841ed581451e35207878e381c3a177d972a0435758faeb341f83982d4",
+      "git_blob_sha1": "b8869cca64f0a9157794791f8213c8de140ee9d7",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/music-task.txt",
+      "bytes": 1254,
+      "sha256": "22c725ac4e0f1ab49c983361d6e7e25a27155908d9aab7aa7e05deb76db7e347",
+      "git_blob_sha1": "a6d31a80f17ce5e2f9f3943a863ba6f79e797726",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/forward-use/review.md",
+      "bytes": 3583,
+      "sha256": "e6fe40c8a6a157718641b627b730f5e1b48a7035c1f341e6f8f1e8018e8097ac",
+      "git_blob_sha1": "52f27ff839ac2dfcb4eaf412fddc51bfbcb837b0",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/official-format-check.json",
+      "bytes": 1501,
+      "sha256": "af785d6884dc980b70cf64a3ccdba6e026b895e848c247dfd219356bafd5503e",
+      "git_blob_sha1": "a60cb7a66867271f3f68e808960b794b45ecd01d",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/portability.json",
+      "bytes": 128632,
+      "sha256": "b0bcdebcaae2768a71986ddac9c02f98bd6bb390e04e6821b21072327e9278c2",
+      "git_blob_sha1": "9ccaa5b616659ac7629b4951ce28e6898e117f78",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/protected-baseline.json",
+      "bytes": 89162,
+      "sha256": "dc2156628d9a659f63a89a31c8cc2a3945a016d0eb8e72f5d597cb5a0e63267d",
+      "git_blob_sha1": "a6271584389ec603307ec9fe0813a908a1b28f1c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/h3skill/validation/m7/semantic-review.md",
+      "bytes": 4077,
+      "sha256": "b3766a543c354694c0bf67825a1c019db982ec1185a8ec4f3d6af6b287b69ecb",
+      "git_blob_sha1": "eacc9c75de5d87444efb273c26c6f03a4175db2c",
+      "mode": "100644"
+    }
+  ]
+}

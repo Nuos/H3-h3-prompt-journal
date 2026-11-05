@@ -1,0 +1,115 @@
+{
+  "kind": "M7ReleaseVerification",
+  "status": "pass",
+  "checks_passed": 13,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "check": "release_file_hashes",
+      "status": "pass",
+      "errors": [],
+      "count": 120
+    },
+    {
+      "check": "package_layout",
+      "status": "pass",
+      "errors": [],
+      "roots": [
+        "SKILL.md",
+        "assets",
+        "references",
+        "scripts"
+      ],
+      "note": "Optional resource folders are used by this skill, not mandatory for all Agent Skills."
+    },
+    {
+      "check": "frontmatter_and_entry_length",
+      "status": "pass",
+      "errors": [],
+      "lines": 90,
+      "description_chars": 266
+    },
+    {
+      "check": "relative_links",
+      "status": "pass",
+      "errors": [],
+      "count": 28,
+      "documented_asset_paths": 11
+    },
+    {
+      "check": "single_hop_reference_routes",
+      "status": "pass",
+      "errors": [],
+      "count": 16
+    },
+    {
+      "check": "complete_runtime_manifest",
+      "status": "pass",
+      "errors": [],
+      "count": 31
+    },
+    {
+      "check": "standard_library_runtime",
+      "status": "pass",
+      "errors": [],
+      "imports": [
+        "__future__",
+        "argparse",
+        "bisect",
+        "copy",
+        "datetime",
+        "fractions",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "re",
+        "sys",
+        "uuid"
+      ]
+    },
+    {
+      "check": "strict_json_resources",
+      "status": "pass",
+      "errors": [],
+      "count": 17
+    },
+    {
+      "check": "official_protocol_exact_bytes",
+      "status": "pass",
+      "errors": [],
+      "count": 2
+    },
+    {
+      "check": "official_field_mapping",
+      "status": "pass",
+      "errors": [],
+      "note": "Documented mapping, not an H3 compiler run."
+    },
+    {
+      "check": "case_text_identity_and_read_scope",
+      "status": "pass",
+      "errors": [],
+      "count": 98,
+      "note": "Recorded reading scope; indexing does not mean full-text or media evaluation."
+    },
+    {
+      "check": "frozen_plan",
+      "status": "pass",
+      "errors": [],
+      "count": 9
+    },
+    {
+      "check": "protected_sources",
+      "status": "pass",
+      "errors": [],
+      "count": 308,
+      "source_commit": "075fb72797fdca42bc47e38516cf3dbc16f4442d"
+    }
+  ],
+  "limits": [
+    "No H3 inference, audio/video decoding or media-quality certification.",
+    "Behavior and isolated-use tests are separately recorded.",
+    "The final publication diff must also be checked against the base commit."
+  ]
+}

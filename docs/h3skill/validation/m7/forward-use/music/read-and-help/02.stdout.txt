@@ -1,0 +1,21 @@
+usage: m7_contract.py [-h]
+                      {route,check,accept,impact,convert,quantize,map} ...
+
+Portable M7 TimingMap contract checker and exact time math. Python 3.10+,
+standard library, no network. Three independent child scopes. Never changes
+action/dialogue/camera/edit intent or certifies generated media.
+
+positional arguments:
+  {route,check,accept,impact,convert,quantize,map}
+    route               Return callable module routes; do not invoke agents
+    check               Check a public contract artifact
+    accept              Atomically return a new draft state; original requests
+                        required
+    impact              Compare changes with declared consumer read paths
+    convert             Exact unit arithmetic; beat origin is never inferred
+    quantize            Exact CFR/VFR sample quantization; nearest ties later
+    map                 Pure linear arithmetic d=d0+(s-s0)/v; does not grant
+                        edit authorization
+
+options:
+  -h, --help            show this help message and exit

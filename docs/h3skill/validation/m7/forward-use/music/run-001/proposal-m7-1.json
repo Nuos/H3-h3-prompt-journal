@@ -1,0 +1,116 @@
+{
+  "kind": "M7Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "forward_music_12s",
+  "base_version": 0,
+  "proposal_id": "music_proposal_m7-1",
+  "module_id": "M7.1",
+  "source_request_id": "music_req_m7-1",
+  "sources": {
+    "user_design": {
+      "kind": "user_requirement",
+      "locator": "docs/h3skill/validation/m7/forward-use/music-task.txt",
+      "version": "provided-task",
+      "excerpt": "12秒舞蹈MV；名义BPM100，无音频及首拍偏移；生成FPS未知，编辑计划30FPS；actionA生成局部0.5至2.5秒不可删除或缩短；后续动作未设计；固定摄影机观察12秒；单次12秒生成，无新增切镜要求。均为设计条件，非媒体实测。"
+    }
+  },
+  "context": {
+    "timebase_brief": "建立本次12秒生成的局部秒时钟及计划编辑时钟；100BPM只给出3/5秒拍间隔。首拍相位、生成FPS和编辑放置未知。所有条件来自任务设计。"
+  },
+  "changes": {
+    "timebase": {
+      "items": {
+        "generation_clock": {
+          "record_type": "clock",
+          "clock_id": "generation_clock",
+          "domain": "generation",
+          "domain_id": "generation_job1",
+          "rate_mode": "unknown",
+          "fps": {
+            "state": "unknown",
+            "reason": "生成FPS尚未确定，不能借用后期30FPS"
+          },
+          "origin": 0,
+          "extent": 12,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "user_design"
+            ]
+          },
+          "source_refs": [
+            "user_design"
+          ]
+        },
+        "edit_clock": {
+          "record_type": "clock",
+          "clock_id": "edit_clock",
+          "domain": "edit",
+          "domain_id": "edit_plan",
+          "rate_mode": "unknown",
+          "fps": 30,
+          "origin": {
+            "state": "unknown",
+            "reason": "编辑时间线的放置起点未提供"
+          },
+          "extent": {
+            "state": "unknown",
+            "reason": "尚无生成至编辑的映射及速度计划"
+          },
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "user_design"
+            ]
+          },
+          "source_refs": [
+            "user_design"
+          ]
+        },
+        "music_grid": {
+          "record_type": "beat_grid",
+          "grid_id": "music_grid",
+          "clock_id": "generation_clock",
+          "bpm": 100,
+          "first_beat": {
+            "state": "unknown",
+            "reason": "无音频、无首拍偏移；不能把生成局部0秒视为首拍"
+          },
+          "beat_index_origin": 0,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "user_design"
+            ]
+          },
+          "source_refs": [
+            "user_design"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [
+    {
+      "issue_id": "missing_phase",
+      "owner": "M7.1",
+      "status": "open",
+      "severity": "warning",
+      "message": "M2/M12向音乐责任方补首拍与节拍依据；M6确认音频及其相位后才能放置绝对拍点。",
+      "source_refs": [
+        "user_design"
+      ]
+    },
+    {
+      "issue_id": "missing_sampling",
+      "owner": "M7.1",
+      "status": "open",
+      "severity": "warning",
+      "message": "M11确认生成FPS及采样方式；M9确认编辑放置及映射。当前不做帧量化或跨域转换。",
+      "source_refs": [
+        "user_design"
+      ]
+    }
+  ],
+  "resolutions": []
+}

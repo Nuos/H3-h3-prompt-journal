@@ -1,0 +1,56 @@
+{
+  "kind": "M7State",
+  "contract_version": "1.0.0",
+  "work_id": "m7_design_demo",
+  "version": 0,
+  "owner": "M7",
+  "object_type": "TimingMap",
+  "status": "draft",
+  "sources": {},
+  "content": {
+    "timebase": {
+      "items": {}
+    },
+    "schedule": {
+      "items": {}
+    },
+    "mappings": {
+      "items": {}
+    }
+  },
+  "issues": {},
+  "accepted_proposals": {},
+  "consumers": {
+    "timeline_consumer": {
+      "module_id": "M8",
+      "result_version": 1,
+      "source_state_version": 0,
+      "read_paths": [
+        "/content/schedule"
+      ],
+      "status": "current"
+    },
+    "compiler_consumer": {
+      "module_id": "M11",
+      "result_version": 1,
+      "source_state_version": 0,
+      "read_paths": [
+        "/content/mappings",
+        "/content/timebase"
+      ],
+      "status": "current"
+    },
+    "title_consumer": {
+      "module_id": "M1",
+      "result_version": 1,
+      "source_state_version": 0,
+      "read_paths": [
+        "/display/title"
+      ],
+      "status": "current"
+    }
+  },
+  "display": {
+    "title": "M7 D类设计演示；非实测"
+  }
+}

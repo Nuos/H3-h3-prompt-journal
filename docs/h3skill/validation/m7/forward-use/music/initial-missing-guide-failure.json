@@ -1,0 +1,12 @@
+{
+  "phase": "initial-read-before-guide-landed",
+  "command": [
+    "cat",
+    "docs/h3skill/h3-time-synchronization/references/contract-guide.md"
+  ],
+  "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "cat: docs/h3skill/h3-time-synchronization/references/contract-guide.md: No such file or directory\n",
+  "record_note": "This preserves the actual earlier tool result, before the guide was subsequently supplied. The later successful reread is captured separately."
+}

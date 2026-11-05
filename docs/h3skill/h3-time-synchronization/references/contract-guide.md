@@ -1,0 +1,202 @@
+# M7 可独立运行合同与时间数学
+
+本文件、`contracts.json`、`module-registry.json`、运行脚本及 `assets/` 都是 **D 类工程实现**，不是新增 H3 原生字段、不是案例原文，也不是媒体实测。专业决策分别读取 `time-bases.md`、`event-scheduling.md`、`time-domain-mapping.md`；脚本负责确定性数值和合同核验，不替代这些判断。
+
+## 导航
+
+1. [安装与独立调用](#1-安装与独立调用)
+2. [版本化对象与字段所有权](#2-四种版本化对象与字段所有权)
+3. [M7.1 时间依据](#3-m71时间依据)
+4. [M7.2 事件和约束](#4-m72事件和约束)
+5. [M7.3 映射与量化](#5-m73映射与量化)
+6. [纯数学 CLI](#6-纯数学-cli)
+7. [父接受、重试与实际影响](#7-父接受重试与实际影响)
+
+## 1. 安装与独立调用
+
+整个 `h3-time-synchronization/` 目录可单独复制到任意工作目录。唯一执行依赖是 Python 3.10+ 标准库；脚本只从自身包内读取两个 JSON 资源，不需要仓库、其他 skill、媒体文件、网络、pip 包或上游模块运行结果。
+
+```bash
+python scripts/m7_contract.py route --request assets/request-m7.json
+python scripts/m7_contract.py route --request assets/request-standalone-m7-1.json
+python scripts/m7_contract.py check --proposal assets/proposal-standalone-m7-1.json --request assets/request-standalone-m7-1.json
+python scripts/m7_contract.py check --proposal assets/proposal-standalone-m7-2.json --request assets/request-standalone-m7-2.json
+python scripts/m7_contract.py check --proposal assets/proposal-standalone-m7-3.json --request assets/request-standalone-m7-3.json
+python scripts/m7_contract.py accept --state assets/state-empty.json --proposals assets/proposal-batch.json --requests assets/requests.json
+```
+
+`route` 只返回目标节点的公共入口、最少输入、写入分区及专业资源路径；不会自动执行 Agent 或上游。`check` 可核验 Request、Proposal、ProposalBatch 或 State。`accept` 的 `--requests` 必须是实际原始子请求数组；父请求不能替代子请求。接受结果的 `accepted` 是布尔值，新的父状态在 `.state`，由调用者保存。把整个 ToolResult 当 State 再输入会被拒绝。
+
+所有命令只输出 JSON，不改写输入文件。退出码：`0` 表示局部合同没有阻断错误，**可以仍然 unverified**；`1` 表示确定性核验拒绝；`2` 表示文件、JSON、参数或无法解析的算术输入错误。重复 JSON 键、NaN、Infinity、溢出成无穷的 JSON 数值一律拒绝。参数缺失由 argparse 输出帮助并退出 `2`。
+
+## 2. 四种版本化对象与字段所有权
+
+| 对象 | 必须保留的识别字段 | 用途 |
+| --- | --- | --- |
+| `M7Request` | `contract_version`, `work_id`, `base_version`, `request_id`, `target`, `sources`, `inputs` | 明确委托和不可改写的原始输入 |
+| `M7Proposal` | 上述 work/base、`proposal_id`, `module_id`, `source_request_id`, `sources`, `context`, `changes`, `issues`, `resolutions` | 子节点候选；`context` 必须逐值等于 Request.inputs |
+| `M7ProposalBatch` | `contract_version`, `work_id`, `base_version`, `batch_id`, `proposals` | 同一基线下原子接受的候选集合 |
+| `M7State` | `version`, `owner:"M7"`, `object_type:"TimingMap"`, `status:"draft"`, `sources`, `content`, `issues`, `accepted_proposals`, `consumers` | 父级唯一接受的草稿版本 |
+
+当前只接受合同 `1.0.0`，包版本 `0.1.0`。未知字段和不兼容版本不被静默忽略或转换。地图键和记录 ID 必须一致；布尔值不是整数或时间数值。
+
+| 节点 | 最少 Request.inputs | 唯一 changes 分区 | 允许记录 |
+| --- | --- | --- | --- |
+| M7 | `timing_brief` | 仅通过父接受生成状态 | 协调三个子合同 |
+| M7.1 | `timebase_brief` | `timebase` | Clock、BeatGrid |
+| M7.2 | `schedule_brief`, `timebase_context` | `schedule` | Event、Constraint |
+| M7.3 | `mapping_brief`, `timebase_context` | `mappings` | Mapping、Quantization |
+
+每个分区形如 `{"items":{"stable_id":record}}`。子模块一次只能替换自己的一个分区；不得删除父状态中已经接受的记录 ID。需要取消某事件时先回原内容所有者和父级设计迁移，不通过 M7 分区替换偷偷删除动作或对白。
+
+### 来源与外部输入
+
+`Sources` 中每条包含 `kind`, `locator`, `version`, `excerpt`。可用类型包括用户要求、批准计划、案例文本、外部输入、媒体观测、设计决定、官方文档和假设。类型是声明，不是来源真实性认证。一次接受不能把已有 source ID 重新绑定到另一份内容或版本；新来源修订使用新 source ID。
+
+外部上下文统一为：
+
+```json
+{
+  "owner": "M9",
+  "source_id": "edit_v2_input",
+  "source_version": "2",
+  "values": {"mappings": {"take1": {"mode": "linear"}}}
+}
+```
+
+`owner` 可为对应模块或 `external`。外部实现、用户直接提供的明确选择和已批准计划都可满足输入，不要求先运行 M4/M5/M6/M9。`source_id` 必须登记，版本必须相等。兼容的时间上下文既可直接用 `timebase_context:{"items":...}`，也可使用 `ExternalContext.values` **恰好装入对应 Timebase/Schedule/Mappings 分区合同**；后者经相同类型和数值核验。其他不符合本包分区形状的外部值保留原样，不被猜测成已知时钟。
+
+`ReadonlyRecord` 用于保留实际输入中的具体决定：`owner,source_id,source_version,path,value`。`path` 是相对于匹配 ExternalContext.values 的 JSON Pointer；匹配条件包括 owner、来源 ID 和来源版本。脚本核对该路径原值与 `value` 完全一致。`value` 中 opaque payload 的业务键不会被当作本包协议解析。数值 `2` 与字符串 `"2"` 在数学上相等，仍不允许在保真副本里擅自互换。
+
+父状态的 `readonly_projection` 另外使用 `path,source_version,value`，路径以 `/content`、`/sources` 或 `/issues` 起始，版本必须是请求的 base_version；父接受时与候选状态逐值比对。它不是任意文件路径。
+
+### 显式未知
+
+允许使用 `{"state":"unknown","reason":"具体缺少什么"}`，不能用空字符串、零、24 FPS 或首拍 0 代替未知。最少输入键仍须存在，可以取该未知对象。精确帧依赖未知时，`validation.numeric_precision` 为 `unverified`，派生帧号、帧时间和误差必须同样未知。局部合同通过只说明未知被诚实表达。
+
+## 3. M7.1：时间依据
+
+### Clock
+
+必须字段：`record_type:"clock"`, `clock_id`, `domain`, `domain_id`, `rate_mode`, `fps`, `origin`, `extent`, `evidence`, `source_refs`。可选 `pts`, `frame_count`。
+
+- `domain` 只能是 `source/work/generation/edit`；`domain_id` 标识具体素材、作品、生成任务或编辑版本。源 24 FPS、生成 24 FPS、编辑 30 FPS 是三个独立声明，绝不共用帧号或通过某一域推导其他域。
+- 所有时间、时长、offset、tolerance 统一以**该时钟的秒**表示。原始单位经 convert 转为秒；原始值和说明可保留在来源或只读 payload 中。
+- `origin` 是时钟覆盖起点；在 CFR 模型中也是零基第 0 个样本的时刻 `o`。`extent` 是从该起点起的覆盖时长，覆盖为 `[o,o+extent)`，不是绝对结束时刻。
+- `rate_mode` 为 `cfr/vfr/unknown`。精确数值可为 JSON 数字或十进制／有理数字符串，如 `"0.5"`, `"30000/1001"`；内部使用 Fraction，不先舍入成 29.97 或 30。FPS 必须大于 0。
+- CFR 样本 `n` 的时刻为 `o+n/fps`。若提供 `frame_count=N`，它是覆盖该段的**样本数**，不是最大帧号；在此简化 CFR 合同内严格检查 `extent=N/fps`。例如 124 帧、24 FPS、9 秒三项同时填写会触发 `frame_count_duration`。末样本是 `o+(N−1)/fps`，覆盖末端是 `o+N/fps`。
+- VFR 需要严格递增、处于覆盖内的 `pts` 数组进行精确样本定位；平均 FPS 不能替代。帧号是数组的零基位置。可选 frame_count 必须等于 PTS 条数。VFR 的末帧持续时间不能从平均 FPS 推算；覆盖时长仍须独立声明。
+
+`evidence` 包含 `basis` 和 `source_refs`。basis 为 `planned/reported_measurement/case_text/hypothesis/unknown`。报告实测还必须有 `observation:{asset_id,asset_version,method,observer,scope,locator}`，并引用至少一条 media_observation 来源；其余 basis 不允许冒带 observation。上述记录只证明字段齐备和自洽；媒体真实性仍 unverified。用户计划 FPS 可用于条件成立的计算，无需伪称已经读过媒体。
+
+### BeatGrid
+
+字段为 `record_type:"beat_grid"`, `grid_id`, `clock_id`, `bpm`, `first_beat`, `beat_index_origin`, `evidence`, `source_refs`。`beat_index_origin` 必须显式为 0 或 1。BPM 必须大于 0，首拍未知不影响计算相对拍长 `60/BPM`，但不能得到绝对拍点。
+
+无论 evidence 是否 reported_measurement，**BPM+first_beat 计算得到的恒速网格始终只是候选**。reported_measurement 只描述参数的报告来源，不证明每一个推算拍点均被测到。每拍实测不规则序列可以登记为 M7.2 的 `Event`：`extent_kind:"instant"`、独立 typed event_ref、实际时刻、`timing_basis:"reported_measurement"` 与 observation；不得把这些原值吸附到网格后仍称原始测量。
+
+## 4. M7.2：事件和约束
+
+### Event 与持续预算
+
+必须字段：`record_type:"event"`, `timing_id`, `event_ref`, `clock_id`, `start`, `end`, `extent_kind`, `timing_basis`, `binding`, `source_refs`。报告实测还需 observation。
+
+`event_ref` 是五个分量构成的完整引用：`owner,kind,id,domain,domain_id`。kind 为 action/camera/vocal/music/sound/state/cut/anchor。action 属于 M4，camera 属于 M5，vocal/music/sound 属于 M6，state 属于 M8，cut 属于 M9；也可通过 explicit external 输入。相同短 ID 的动作、对白和不同生成任务都不是同一个事件。其 domain/domain_id 必须与 clock 相同。
+
+interval 采用 `[start,end)` 且 start<end；instant 要求 start=end。事件不得超出已知时钟边界。边界锚点可位于连续覆盖末端，但该坐标不等于一个存在的帧样本；需要帧定位时走 M7.3 的 sample/boundary 区分。
+
+`binding.value` 的公共适配形状如下。payload 保留原动作、对白等语义，不由 M7 改写；event_ref 必须逐值相同。
+
+```json
+{
+  "event_ref": {"owner":"M4","kind":"action","id":"gesture","domain":"work","domain_id":"work_main"},
+  "payload": {"text":"完整完成两秒抬手动作。"},
+  "timing_requirements": {"minimum_duration":2}
+}
+```
+
+`timing_requirements` 可含以秒为单位的 `minimum_duration`、`maximum_duration`、`required_duration`（精确持续时间）。它们是只读的原始要求，逐项检查 `end-start`。把必保两秒动作排成 0.5 秒会阻断；不能靠删除该字段修改实际原始请求。未声明或未知的动作生理耗时不能自动发明；局部数值核验不证明真实动作可执行或对白可读完。
+
+### Constraint
+
+共同字段：`record_type:"constraint"`, `constraint_id`, `relation`, `event_refs`, `left_edge`, `right_edge`, `offset`, `tolerance`, `source_refs`。除 capacity、duration_budget 外恰好两个不同 typed 引用，且均已登记在同一时钟。跨域比较先做明确映射，不直接把两域相同秒数当成同步。容差非负；没有给定容差不意味着“随意差不多”。
+
+| relation | 确定性判据 |
+| --- | --- |
+| before | `A.end + offset <= B.start + tolerance`；offset 是非负最小间隔 |
+| meets | `abs((B.start−A.end)−offset)<=tolerance` |
+| overlap | 交集持续时间必须>0，并至少为 offset（含给定容差）；offset 不可负 |
+| sync | 指定 left/right_edge 的时差在容差内为 0；offset 必须为 0 |
+| offset | `abs((B.edge−A.edge)−offset)<=tolerance`；offset 可以有正负 |
+| capacity | 必须另给正整数 capacity；检查所列区间的峰值并发数量，端点相遇时先结束后开始。instant 不占有持续通道。offset/tolerance 必须为 0 |
+| duration_budget | 必须另给 `window:{clock_id,start,end}`；检查所列必需持续时间之和、所排持续时间之和都不超出窗口，事件都在窗口内。offset/tolerance 必须为 0 |
+
+**capacity 是并发容量，duration_budget 是总时长预算。** duration_budget 的每个事件应在只读 timing_requirements 中提供 required_duration 或 minimum_duration；未知保持未验证。预算本身不证明排列顺序或不重叠，串行要求应同时登记 before/meets，单通道应同时登记 capacity=1。
+
+涉及 camera 的 sync/offset 还必须提供 `policy_binding` 或显式 unknown。该只读记录属于 M5/external，value 为 `{"mode":"early|synchronous|late|fixed","offset":...}`；offset 定义为**相机相对另一事件的时间差**。early<0、late>0、synchronous=0，M7 核对给定策略和符号，不选新策略。fixed 的语义由 M5 保留，不能据此发明提前／延迟运镜；本运行器对其解释保留未验证。
+
+## 5. M7.3：映射与量化
+
+### Mapping
+
+字段为 `record_type:"mapping"`, `mapping_id`, `source_clock_id`, `target_clock_id`, `mode`, `source_start`, `source_end`, `target_start`, `target_end`, `speed`, `edit_binding`, `source_refs`。两个 clock ID 必须不同，source/target 范围均在相应时钟覆盖内。
+
+已知 linear/freeze 必须有 M9 或 external 的明确只读 edit_binding。其 value 必须包含并逐值匹配 source_clock_id、target_clock_id、mode 和上述五个数值字段。窗口、速度、定格来自实际输入；M7 不能通过更改这些值使时长算得通。
+
+- linear：v>0、s1>s0、d1>d0，且 `d1−d0=(s1−s0)/v`。点映射 `d=d0+(s−s0)/v`。v 是每一目标秒消耗的输入秒数，v=2 即两倍速。源窗末端是边界，不能作为窗内样本自动外推。
+- freeze：s0=s1、v=0、d1>d0；源时刻必须在源覆盖的半开区间内，不能取覆盖末端并称为已有源帧。正向结果是持续区间，不是唯一目标时刻，返回 `freeze_multivalued` 诊断。目标到源可解释为常值。纯 map 命令只实现正速度线性点运算；不会对 freeze 除以零。
+- unknown：没有足够编辑决定时保留未知草稿。反放、非线性速度坡度和无法唯一确定的复用路径不在当前精确点映射支持范围内。
+
+默认夹具包含 source 24 FPS/10秒 → 取 [2,8) 两倍速 → work [10,13) → generation [0,3) → edit [5,8) 30 FPS。它是可复算的 D 类条件设计；不表示已裁剪素材、已运行 M9 或已生成视频。每段保留独立 mapping_id，父级核验各时钟、窗口、版本和公式。跨多段路径的选择由调用者明确；运行器不自动选择重复素材路径或隐藏外推。
+
+### Quantization
+
+字段为 `record_type:"quantization"`, `quantization_id`, `clock_id`, `time`, `rule`, `frame_index`, `quantized_time`, `error_seconds`, `tolerance`, `requirement`, `source_refs`。可选 `position_kind` 为 sample/boundary，默认 sample。
+
+CFR：`x=(time−origin)×fps`，n 按 rule 取整数，`tq=origin+n/fps`，`error_seconds=tq−time`。rule 为 floor/ceil/nearest；nearest 的半帧平局取较晚帧，不使用隐含银行家舍入。VFR 使用明确 PTS 中的相邻样本，平局同样取较晚样本；不能超出已知 PTS 范围外推。
+
+- requirement=exact：误差必须为 0。
+- requirement=within_tolerance：绝对误差必须不超过已知 tolerance。
+- requirement=candidate：保留误差供选择，不宣称已满足精确要求。
+- sample：输入时间和量化后样本必须严格早于覆盖末端；把 3秒、24 FPS 的第72号零基位置当作已有样本会失败。
+- boundary：在当前 CFR 网格模型中明确表示连续时间边界，可以使用覆盖末端；这不是末帧 PTS，也不能直接替代 H3 尾帧有效时长协议。VFR 仍只在已给 PTS 范围内量化，不从 extent 推断末帧持续或虚构结束帧号；独立声明的结束边界可保留在 Clock／事件记录中，不强行赋予帧号。
+
+未知 FPS、未知原点、未知 sampling mode 或 VFR 缺 PTS 时，frame_index/quantized_time/error_seconds 必须全部显式 unknown；要求 exact 也只能得到 numeric_precision=unverified，不能编造一个整数帧后声称通过。
+
+交给 M11 的毫秒显示字符串不能替代 frame_index 和精确有理时刻，更不能再用该显示值做一次 ceil 并覆盖已接受帧号。格式化显示、权威编辑帧和原始精确时间应同时保留，显示精度造成的误差另算。
+
+## 6. 纯数学 CLI
+
+```bash
+python scripts/m7_contract.py convert --value 1500 --from-unit ms --to-unit s
+python scripts/m7_contract.py convert --value 30000 --from-unit frames --to-unit s --fps 30000/1001
+python scripts/m7_contract.py convert --value 2 --from-unit beats --to-unit s --bpm 120 --origin 0.25
+python scripts/m7_contract.py quantize --value 1 --fps 30000/1001 --rule nearest --tolerance 0.002
+python scripts/m7_contract.py quantize --value 11 --origin 10 --fps 24 --rule nearest --require-exact
+python scripts/m7_contract.py quantize --value 0.1 --rate-mode vfr --pts assets/pts-design.json --rule nearest
+python scripts/m7_contract.py map --value 5 --source-start 2 --source-end 8 --destination-start 10 --speed 2
+```
+
+convert 单位为 s/ms/frames/beats，亦接受 seconds/milliseconds/frame/beat 同义词。frames 是零基 CFR 数学坐标，必须显式提供 FPS；beats 是**从 0 起的相对拍序**，绝对转换必须显式给 BPM 和首拍 origin。若原输入采用第1拍，从拍号减1后输入。只有 BPM 时可另算相对拍长，但命令不默认首拍为0。
+
+quantize 的 `--origin` 默认值 0 仅定义此纯数学命令的零基坐标模型，并在输出注明规则；不能用这一默认值替代合同中未知的媒体原点。合同 Clock.origin 始终是必填数值或显式 unknown。所有数值结果用精确整数／分数字符串返回，另保留帧号、带符号误差、绝对误差和容差判断。
+
+`--fps unknown`、缺 BPM／首拍等返回 numeric_status=unverified 和非阻断缺项诊断，不产生伪结果。已知参数计算返回 numeric_status=calculated_conditionally，media_verified 始终 false。map 命令纯算术输出 edit_authorized=false；只有 Proposal 的源/版本/只读绑定检查可以确认计划输入的一致性，map 不授予裁剪或变速权限。
+
+## 7. 父接受、重试与实际影响
+
+父接受顺序：核对所有对象形状与版本 → 实际请求保真 → 子字段权限 → base/version 和来源一致 → 合并到副本 → 核验跨分区引用、数值与未决阻断项 → 写入回执和新版本 → 按实际 read_paths 标记 stale。任何一步失败都不返回半成品 state，也不改写原始输入。
+
+同一 proposal_id、摘要、module_id 和 source_request_id 的已接受重放返回相同状态和 `idempotent_replay`，不增加版本。复用旧 ID 却改内容会拒绝。不能混合重放与新提案；创作修订使用当前 base_version 和新的 request/proposal ID。
+
+问题由自己的 owner 提交；新问题必须 open，只有相同子 owner 可用有来源的 resolution 解决已有 open 问题。blocking 问题未解决时父接受拒绝。子模块不通过改写 M4/M5/M6/M9 对象消除冲突。
+
+`consumers` 显式登记 module_id、result_version、source_state_version、read_paths 和 current/stale。impact 只将 `/content`, `/sources`, `/issues`, `/display` 的实际变动与消费者读路径及其祖先/后代相交；原来 stale 的消费者保持 stale。全局版本递增不意味着所有人都失效，未登记的语义依赖仍需专业复审。
+
+```bash
+python scripts/m7_contract.py impact --before before-state.json --after after-state.json
+```
+
+ToolResult.trace 记录 call ID、请求 ID、输入和资源摘要、来源版本、schema/registry/route/package 版本、时间、实际副作用声明、重试状态和错误码。每次调用 ID 可变，业务状态的精确重放保持不变。所有正常返回的 overall 至多为 unverified；绝不把数学一致、实测记录格式、案例文本或合同通过升级成 H3 成片质量、口型或音画同步已验证。
+
+当前诊断可能重复列出同一未知，部分路径指向合并检查所用的分区视图。例如 M7.3 的 `/changes/timebase/items/...` 可能来自只读 `context.timebase_context`，不表示 M7.3 获准写入 timebase。定位时对照原 Request.inputs／Proposal.context 与 module_id 的写入分区。此类诊断路径不同于 ReadonlyRecord.path 和 readonly_projection.path；后两者用于真实取值，必须满足各自明确的路径合同。

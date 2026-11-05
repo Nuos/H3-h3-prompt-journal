@@ -1,0 +1,481 @@
+{
+  "registry_version": "1.0.0",
+  "route_version": "1.0.0",
+  "package_version": "0.1.0",
+  "parent_module": "M7",
+  "object_type": "TimingMap",
+  "contract_version": "1.0.0",
+  "principles": [
+    "high_cohesion",
+    "loose_coupling",
+    "modularity",
+    "information_routing"
+  ],
+  "modules": {
+    "M7.1": {
+      "module_id": "M7.1",
+      "name": "时间依据与单位归一",
+      "parent": "M7",
+      "visibility": "public",
+      "public": true,
+      "implementation_status": "implemented",
+      "implementation_version": "0.1.0",
+      "contract_version": "1.0.0",
+      "goal": "时间依据与单位归一",
+      "trigger": "Explicit M7.1 target or its professional scope in SKILL.md.",
+      "minimum_inputs": [
+        "timebase_brief"
+      ],
+      "required_dependencies": [
+        "M7 contract 1.0.0",
+        "Python >= 3.10 standard library for CLI"
+      ],
+      "optional_dependencies": [
+        "M7.2",
+        "M7.3",
+        "M11"
+      ],
+      "independent_call": true,
+      "write_scope": "/content/timebase",
+      "readonly_paths": [
+        "/inputs/timing_brief",
+        "/inputs/timebase_brief",
+        "/inputs/schedule_brief",
+        "/inputs/mapping_brief",
+        "/inputs/timebase_context",
+        "/inputs/schedule_context",
+        "/inputs/mapping_context",
+        "/inputs/task_context",
+        "/inputs/reference_context",
+        "/inputs/action_context",
+        "/inputs/camera_context",
+        "/inputs/sound_context",
+        "/inputs/state_context",
+        "/inputs/edit_context",
+        "/inputs/label_context",
+        "/inputs/event_context",
+        "/inputs/readonly_projection"
+      ],
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/time-bases.md"
+      ],
+      "conditional_resources": [
+        {
+          "path": "references/audit-and-handoff.md",
+          "when": "audit or repair routing"
+        },
+        {
+          "path": "references/h3-label-mapping.md",
+          "when": "H3-specific handoff"
+        },
+        {
+          "path": "references/case-evidence.md",
+          "when": "case evidence needed"
+        }
+      ],
+      "input_mapping": {
+        "required": [
+          "timebase_brief"
+        ],
+        "optional_or_readonly_projections": [
+          "timing_brief",
+          "timebase_brief",
+          "schedule_brief",
+          "mapping_brief",
+          "timebase_context",
+          "schedule_context",
+          "mapping_context",
+          "task_context",
+          "reference_context",
+          "action_context",
+          "camera_context",
+          "sound_context",
+          "state_context",
+          "edit_context",
+          "label_context",
+          "event_context",
+          "readonly_projection"
+        ],
+        "source_contract": "Sources plus source/version-bound ExternalContext; unknown must carry a reason."
+      },
+      "output": "M7Proposal",
+      "output_consumers": [
+        "M7.2",
+        "M7.3",
+        "M11"
+      ],
+      "return_to": "M7 parent acceptance or standalone caller",
+      "parent_child_boundary": "Only this child partition may be proposed; parent alone accepts. No rewrites of action, dialogue, camera or edit intent.",
+      "failure_return": {
+        "contract": "M7.1",
+        "action": "M4",
+        "camera_policy": "M5",
+        "sound_content": "M6",
+        "edit_intent": "M9",
+        "labels": "M11",
+        "media_observation": "M12"
+      },
+      "repair_target": "M7.1",
+      "retry_policy": "Pure checks repeat; byte-equivalent accepted proposal replay preserves state, changed proposal requires new ID and current base.",
+      "operation_effect": "Pure JSON output; no file/media mutation or hidden upstream invocation.",
+      "validation_status": "Definition only; execution evidence is recorded outside installed package."
+    },
+    "M7.2": {
+      "module_id": "M7.2",
+      "name": "事件排时与同步约束",
+      "parent": "M7",
+      "visibility": "public",
+      "public": true,
+      "implementation_status": "implemented",
+      "implementation_version": "0.1.0",
+      "contract_version": "1.0.0",
+      "goal": "事件排时与同步约束",
+      "trigger": "Explicit M7.2 target or its professional scope in SKILL.md.",
+      "minimum_inputs": [
+        "schedule_brief",
+        "timebase_context"
+      ],
+      "required_dependencies": [
+        "M7 contract 1.0.0",
+        "Python >= 3.10 standard library for CLI"
+      ],
+      "optional_dependencies": [
+        "M4",
+        "M5",
+        "M6",
+        "M8",
+        "M11"
+      ],
+      "independent_call": true,
+      "write_scope": "/content/schedule",
+      "readonly_paths": [
+        "/inputs/timing_brief",
+        "/inputs/timebase_brief",
+        "/inputs/schedule_brief",
+        "/inputs/mapping_brief",
+        "/inputs/timebase_context",
+        "/inputs/schedule_context",
+        "/inputs/mapping_context",
+        "/inputs/task_context",
+        "/inputs/reference_context",
+        "/inputs/action_context",
+        "/inputs/camera_context",
+        "/inputs/sound_context",
+        "/inputs/state_context",
+        "/inputs/edit_context",
+        "/inputs/label_context",
+        "/inputs/event_context",
+        "/inputs/readonly_projection"
+      ],
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/event-scheduling.md"
+      ],
+      "conditional_resources": [
+        {
+          "path": "references/audit-and-handoff.md",
+          "when": "audit or repair routing"
+        },
+        {
+          "path": "references/h3-label-mapping.md",
+          "when": "H3-specific handoff"
+        },
+        {
+          "path": "references/case-evidence.md",
+          "when": "case evidence needed"
+        }
+      ],
+      "input_mapping": {
+        "required": [
+          "schedule_brief",
+          "timebase_context"
+        ],
+        "optional_or_readonly_projections": [
+          "timing_brief",
+          "timebase_brief",
+          "schedule_brief",
+          "mapping_brief",
+          "timebase_context",
+          "schedule_context",
+          "mapping_context",
+          "task_context",
+          "reference_context",
+          "action_context",
+          "camera_context",
+          "sound_context",
+          "state_context",
+          "edit_context",
+          "label_context",
+          "event_context",
+          "readonly_projection"
+        ],
+        "source_contract": "Sources plus source/version-bound ExternalContext; unknown must carry a reason."
+      },
+      "output": "M7Proposal",
+      "output_consumers": [
+        "M4",
+        "M5",
+        "M6",
+        "M8",
+        "M11"
+      ],
+      "return_to": "M7 parent acceptance or standalone caller",
+      "parent_child_boundary": "Only this child partition may be proposed; parent alone accepts. No rewrites of action, dialogue, camera or edit intent.",
+      "failure_return": {
+        "contract": "M7.2",
+        "action": "M4",
+        "camera_policy": "M5",
+        "sound_content": "M6",
+        "edit_intent": "M9",
+        "labels": "M11",
+        "media_observation": "M12"
+      },
+      "repair_target": "M7.2",
+      "retry_policy": "Pure checks repeat; byte-equivalent accepted proposal replay preserves state, changed proposal requires new ID and current base.",
+      "operation_effect": "Pure JSON output; no file/media mutation or hidden upstream invocation.",
+      "validation_status": "Definition only; execution evidence is recorded outside installed package."
+    },
+    "M7.3": {
+      "module_id": "M7.3",
+      "name": "时间域映射与帧量化",
+      "parent": "M7",
+      "visibility": "public",
+      "public": true,
+      "implementation_status": "implemented",
+      "implementation_version": "0.1.0",
+      "contract_version": "1.0.0",
+      "goal": "时间域映射与帧量化",
+      "trigger": "Explicit M7.3 target or its professional scope in SKILL.md.",
+      "minimum_inputs": [
+        "mapping_brief",
+        "timebase_context"
+      ],
+      "required_dependencies": [
+        "M7 contract 1.0.0",
+        "Python >= 3.10 standard library for CLI"
+      ],
+      "optional_dependencies": [
+        "M8",
+        "M9",
+        "M11"
+      ],
+      "independent_call": true,
+      "write_scope": "/content/mappings",
+      "readonly_paths": [
+        "/inputs/timing_brief",
+        "/inputs/timebase_brief",
+        "/inputs/schedule_brief",
+        "/inputs/mapping_brief",
+        "/inputs/timebase_context",
+        "/inputs/schedule_context",
+        "/inputs/mapping_context",
+        "/inputs/task_context",
+        "/inputs/reference_context",
+        "/inputs/action_context",
+        "/inputs/camera_context",
+        "/inputs/sound_context",
+        "/inputs/state_context",
+        "/inputs/edit_context",
+        "/inputs/label_context",
+        "/inputs/event_context",
+        "/inputs/readonly_projection"
+      ],
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/time-domain-mapping.md"
+      ],
+      "conditional_resources": [
+        {
+          "path": "references/audit-and-handoff.md",
+          "when": "audit or repair routing"
+        },
+        {
+          "path": "references/h3-label-mapping.md",
+          "when": "H3-specific handoff"
+        },
+        {
+          "path": "references/case-evidence.md",
+          "when": "case evidence needed"
+        }
+      ],
+      "input_mapping": {
+        "required": [
+          "mapping_brief",
+          "timebase_context"
+        ],
+        "optional_or_readonly_projections": [
+          "timing_brief",
+          "timebase_brief",
+          "schedule_brief",
+          "mapping_brief",
+          "timebase_context",
+          "schedule_context",
+          "mapping_context",
+          "task_context",
+          "reference_context",
+          "action_context",
+          "camera_context",
+          "sound_context",
+          "state_context",
+          "edit_context",
+          "label_context",
+          "event_context",
+          "readonly_projection"
+        ],
+        "source_contract": "Sources plus source/version-bound ExternalContext; unknown must carry a reason."
+      },
+      "output": "M7Proposal",
+      "output_consumers": [
+        "M8",
+        "M9",
+        "M11"
+      ],
+      "return_to": "M7 parent acceptance or standalone caller",
+      "parent_child_boundary": "Only this child partition may be proposed; parent alone accepts. No rewrites of action, dialogue, camera or edit intent.",
+      "failure_return": {
+        "contract": "M7.3",
+        "action": "M4",
+        "camera_policy": "M5",
+        "sound_content": "M6",
+        "edit_intent": "M9",
+        "labels": "M11",
+        "media_observation": "M12"
+      },
+      "repair_target": "M7.3",
+      "retry_policy": "Pure checks repeat; byte-equivalent accepted proposal replay preserves state, changed proposal requires new ID and current base.",
+      "operation_effect": "Pure JSON output; no file/media mutation or hidden upstream invocation.",
+      "validation_status": "Definition only; execution evidence is recorded outside installed package."
+    },
+    "M7": {
+      "module_id": "M7",
+      "name": "时间同步",
+      "parent": null,
+      "visibility": "public",
+      "implementation_status": "implemented",
+      "minimum_inputs": [
+        "timing_brief"
+      ],
+      "accept_inputs": [
+        "M7State",
+        "M7ProposalBatch",
+        "actual original M7Request array"
+      ],
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/audit-and-handoff.md"
+      ],
+      "write_scope": "Parent atomic TimingMap acceptance only",
+      "independent_call": true,
+      "output": "M7ToolResult.state containing new M7State draft",
+      "return_to": "caller and registered consumers",
+      "parent_child_boundary": "Three child partitions; parent sole accepted state owner.",
+      "failure_return": "diagnostic repair_target; no partial acceptance",
+      "operation_effect": "Pure JSON output",
+      "output_consumers": [
+        "M8",
+        "M9",
+        "M11",
+        "M12"
+      ]
+    }
+  },
+  "field_ownership": {
+    "/content/timebase": "M7.1",
+    "/content/schedule": "M7.2",
+    "/content/mappings": "M7.3"
+  },
+  "compatibility": {
+    "accepted_contract_versions": [
+      "1.0.0"
+    ],
+    "package_version": "0.1.0",
+    "breaking_change_policy": "New contract version and explicit migration; never coerce incompatible upstream records.",
+    "alternative_producer": "Public ExternalContext or explicit unknown; no mandatory upstream execution.",
+    "deprecated_nodes": []
+  },
+  "architecture": {
+    "basis": "docs/skillplan/06-modularity-routing-principles.md frozen v0.1.2",
+    "clauses": [
+      "HC-01",
+      "HC-02",
+      "HC-03",
+      "LC-01",
+      "LC-02",
+      "LC-03",
+      "LC-04",
+      "LC-05",
+      "MD-01",
+      "MD-02",
+      "MD-03",
+      "MD-04",
+      "RT-01",
+      "RT-02",
+      "RT-03",
+      "RT-04",
+      "RT-05",
+      "RT-06"
+    ],
+    "authority_model": "M7.1–M7.3 propose; M7 alone accepts TimingMap.",
+    "domain_vs_backend": "M4 actions; M5 camera policy; M6 audio/content; M9 edit decisions; M11 labels; M12 media observations.",
+    "independent_installation": "One portable package; three independently callable public child nodes."
+  },
+  "runtime": {
+    "python": "3.10+",
+    "dependencies": "standard library only",
+    "entrypoint": "scripts/m7_contract.py",
+    "commands": [
+      "route",
+      "check",
+      "accept",
+      "impact",
+      "convert",
+      "quantize",
+      "map"
+    ],
+    "side_effects": "none",
+    "required_runtime_resources": [
+      "references/contracts.json",
+      "references/module-registry.json"
+    ],
+    "agent_role": "Read scoped professional references; route is not an agent or media run.",
+    "not_implemented": [
+      "media decoding",
+      "audio measurement",
+      "H3 inference",
+      "nonlinear speed ramps",
+      "reverse playback",
+      "actual generated-media certification"
+    ]
+  },
+  "route_policy": {
+    "dispatch": "Explicit request.target; parent returns three child routes without invoking them.",
+    "unknown": "Explicit unknown remains unverified, never coerced to zero or a default FPS.",
+    "failure_types": [
+      "shape_or_version",
+      "missing_input",
+      "unknown_or_unverified",
+      "request_fidelity",
+      "reference_conflict",
+      "timing_conflict",
+      "ownership",
+      "stale_base",
+      "idempotency_conflict"
+    ],
+    "retry": "Exact accepted replay idempotent; other revisions use new request/proposal and current base.",
+    "invalidation": "Actual changed paths intersect registered consumer read_paths; hidden dependencies unverified.",
+    "trace": "Call IDs, request/resource digests, source versions, route/schema versions and side-effect declaration."
+  }
+}

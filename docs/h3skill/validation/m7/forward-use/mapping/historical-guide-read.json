@@ -1,0 +1,14 @@
+{
+  "record_type": "historical_observation",
+  "reexecuted": false,
+  "command": [
+    "cat",
+    "docs/h3skill/h3-time-synchronization/references/contract-guide.md"
+  ],
+  "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "cat: docs/h3skill/h3-time-synchronization/references/contract-guide.md: No such file or directory\n",
+  "tool_chunk_id": "be0c74",
+  "resolution": "Guide later became available and was read; successful subsequent public-guide reads had tool chunk IDs 40ff85 and 35974d. Actual final CLI checks ran after availability."
+}

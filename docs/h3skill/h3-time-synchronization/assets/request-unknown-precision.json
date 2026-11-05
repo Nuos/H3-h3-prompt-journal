@@ -1,0 +1,65 @@
+{
+  "kind": "M7Request",
+  "contract_version": "1.0.0",
+  "work_id": "m7_design_demo",
+  "base_version": 0,
+  "request_id": "req_m7_unknown_precision",
+  "target": "M7.3",
+  "sources": {
+    "design": {
+      "kind": "design_decision",
+      "locator": "synthetic-design-fixture://m7/portable-timing-chain",
+      "version": "1",
+      "excerpt": "D类工程设计夹具，非案例原文、非媒体实测：source24fps10秒，取[2,8)两倍速进入work[10,13)，再映射generation[0,3)和edit[5,8)30fps。"
+    }
+  },
+  "inputs": {
+    "mapping_brief": "缺FPS时保留可复用草稿与未知精确帧。",
+    "timebase_context": {
+      "items": {
+        "generation_unknown": {
+          "record_type": "clock",
+          "clock_id": "generation_unknown",
+          "domain": "generation",
+          "domain_id": "generation_pending",
+          "rate_mode": "cfr",
+          "fps": {
+            "state": "unknown",
+            "reason": "没有提供生成FPS或首拍偏移，禁止补默认值。"
+          },
+          "origin": 0,
+          "extent": 5,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "design"
+            ]
+          },
+          "source_refs": [
+            "design"
+          ]
+        },
+        "unknown_beat": {
+          "record_type": "beat_grid",
+          "grid_id": "unknown_beat",
+          "clock_id": "generation_unknown",
+          "bpm": 120,
+          "first_beat": {
+            "state": "unknown",
+            "reason": "没有提供生成FPS或首拍偏移，禁止补默认值。"
+          },
+          "beat_index_origin": 0,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "design"
+            ]
+          },
+          "source_refs": [
+            "design"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,234 @@
+[
+  {
+    "label": "01-help",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "--help"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "01-help.stdout.txt",
+    "stderr": "01-help.stderr.txt"
+  },
+  {
+    "label": "02-route",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "route",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/validation/m7/forward-use/mapping/request.json"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "02-route.stdout.txt",
+    "stderr": "02-route.stderr.txt"
+  },
+  {
+    "label": "03-check",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "check",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/validation/m7/forward-use/mapping/proposal.json",
+      "--request",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/validation/m7/forward-use/mapping/request.json"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "03-check.stdout.txt",
+    "stderr": "03-check.stderr.txt"
+  },
+  {
+    "label": "04-contact-source-work",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "map",
+      "--value",
+      "33/8",
+      "--source-start",
+      "2",
+      "--source-end",
+      "8",
+      "--destination-start",
+      "10",
+      "--speed",
+      "2"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "04-contact-source-work.stdout.txt",
+    "stderr": "04-contact-source-work.stderr.txt"
+  },
+  {
+    "label": "05-contact-work-generation",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "map",
+      "--value",
+      "177/16",
+      "--source-start",
+      "10",
+      "--source-end",
+      "13",
+      "--destination-start",
+      "0",
+      "--speed",
+      "1"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "05-contact-work-generation.stdout.txt",
+    "stderr": "05-contact-work-generation.stderr.txt"
+  },
+  {
+    "label": "06-contact-generation-edit",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "map",
+      "--value",
+      "17/16",
+      "--source-start",
+      "0",
+      "--source-end",
+      "3",
+      "--destination-start",
+      "5",
+      "--speed",
+      "1"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "06-contact-generation-edit.stdout.txt",
+    "stderr": "06-contact-generation-edit.stderr.txt"
+  },
+  {
+    "label": "07-camera-source-work",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "map",
+      "--value",
+      "7/2",
+      "--source-start",
+      "2",
+      "--source-end",
+      "8",
+      "--destination-start",
+      "10",
+      "--speed",
+      "2"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "07-camera-source-work.stdout.txt",
+    "stderr": "07-camera-source-work.stderr.txt"
+  },
+  {
+    "label": "08-camera-work-generation",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "map",
+      "--value",
+      "43/4",
+      "--source-start",
+      "10",
+      "--source-end",
+      "13",
+      "--destination-start",
+      "0",
+      "--speed",
+      "1"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "08-camera-work-generation.stdout.txt",
+    "stderr": "08-camera-work-generation.stderr.txt"
+  },
+  {
+    "label": "09-camera-generation-edit",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "map",
+      "--value",
+      "3/4",
+      "--source-start",
+      "0",
+      "--source-end",
+      "3",
+      "--destination-start",
+      "5",
+      "--speed",
+      "1"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "09-camera-generation-edit.stdout.txt",
+    "stderr": "09-camera-generation-edit.stderr.txt"
+  },
+  {
+    "label": "10-cut-quantize",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "quantize",
+      "--value",
+      "97/16",
+      "--fps",
+      "30",
+      "--rule",
+      "ceil",
+      "--tolerance",
+      "1/200"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "10-cut-quantize.stdout.txt",
+    "stderr": "10-cut-quantize.stderr.txt"
+  },
+  {
+    "label": "11-contact-source-frame",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "convert",
+      "--value",
+      "33/8",
+      "--from-unit",
+      "s",
+      "--to-unit",
+      "frames",
+      "--fps",
+      "24"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "11-contact-source-frame.stdout.txt",
+    "stderr": "11-contact-source-frame.stderr.txt"
+  },
+  {
+    "label": "12-camera-source-frame",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization/scripts/m7_contract.py",
+      "convert",
+      "--value",
+      "7/2",
+      "--from-unit",
+      "s",
+      "--to-unit",
+      "frames",
+      "--fps",
+      "24"
+    ],
+    "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal",
+    "returncode": 0,
+    "stdout": "12-camera-source-frame.stdout.txt",
+    "stderr": "12-camera-source-frame.stderr.txt"
+  }
+]

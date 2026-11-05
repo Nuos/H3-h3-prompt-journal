@@ -1,0 +1,716 @@
+{
+  "kind": "M7ProposalBatch",
+  "contract_version": "1.0.0",
+  "work_id": "m7_design_demo",
+  "base_version": 0,
+  "batch_id": "batch_m7_demo",
+  "proposals": [
+    {
+      "kind": "M7Proposal",
+      "contract_version": "1.0.0",
+      "work_id": "m7_design_demo",
+      "base_version": 0,
+      "proposal_id": "proposal_m7_1",
+      "module_id": "M7.1",
+      "source_request_id": "req_m7_1",
+      "sources": {
+        "design": {
+          "kind": "design_decision",
+          "locator": "synthetic-design-fixture://m7/portable-timing-chain",
+          "version": "1",
+          "excerpt": "D类工程设计夹具，非案例原文、非媒体实测：source24fps10秒，取[2,8)两倍速进入work[10,13)，再映射generation[0,3)和edit[5,8)30fps。"
+        }
+      },
+      "context": {
+        "timebase_brief": "D类条件基准：独立区分源、作品、生成、编辑时钟；120 BPM 仅候选网格。"
+      },
+      "changes": {
+        "timebase": {
+          "items": {
+            "source_clock": {
+              "record_type": "clock",
+              "clock_id": "source_clock",
+              "domain": "source",
+              "domain_id": "source_clip_v1",
+              "rate_mode": "cfr",
+              "fps": 24,
+              "origin": 0,
+              "extent": 10,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "work_clock": {
+              "record_type": "clock",
+              "clock_id": "work_clock",
+              "domain": "work",
+              "domain_id": "work_main",
+              "rate_mode": "cfr",
+              "fps": 24,
+              "origin": 0,
+              "extent": 20,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "generation_clock": {
+              "record_type": "clock",
+              "clock_id": "generation_clock",
+              "domain": "generation",
+              "domain_id": "generation_job1",
+              "rate_mode": "cfr",
+              "fps": 24,
+              "origin": 0,
+              "extent": 3,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "edit_clock": {
+              "record_type": "clock",
+              "clock_id": "edit_clock",
+              "domain": "edit",
+              "domain_id": "edit_v1",
+              "rate_mode": "cfr",
+              "fps": 30,
+              "origin": 0,
+              "extent": 8,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "beat_candidates": {
+              "record_type": "beat_grid",
+              "grid_id": "beat_candidates",
+              "clock_id": "work_clock",
+              "bpm": 120,
+              "first_beat": "1/4",
+              "beat_index_origin": 0,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            }
+          }
+        }
+      },
+      "issues": [],
+      "resolutions": []
+    },
+    {
+      "kind": "M7Proposal",
+      "contract_version": "1.0.0",
+      "work_id": "m7_design_demo",
+      "base_version": 0,
+      "proposal_id": "proposal_m7_2",
+      "module_id": "M7.2",
+      "source_request_id": "req_m7_2",
+      "sources": {
+        "design": {
+          "kind": "design_decision",
+          "locator": "synthetic-design-fixture://m7/portable-timing-chain",
+          "version": "1",
+          "excerpt": "D类工程设计夹具，非案例原文、非媒体实测：source24fps10秒，取[2,8)两倍速进入work[10,13)，再映射generation[0,3)和edit[5,8)30fps。"
+        }
+      },
+      "context": {
+        "schedule_brief": "保留原动作与对白，检查3秒顺序预算。",
+        "timebase_context": {
+          "items": {
+            "source_clock": {
+              "record_type": "clock",
+              "clock_id": "source_clock",
+              "domain": "source",
+              "domain_id": "source_clip_v1",
+              "rate_mode": "cfr",
+              "fps": 24,
+              "origin": 0,
+              "extent": 10,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "work_clock": {
+              "record_type": "clock",
+              "clock_id": "work_clock",
+              "domain": "work",
+              "domain_id": "work_main",
+              "rate_mode": "cfr",
+              "fps": 24,
+              "origin": 0,
+              "extent": 20,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "generation_clock": {
+              "record_type": "clock",
+              "clock_id": "generation_clock",
+              "domain": "generation",
+              "domain_id": "generation_job1",
+              "rate_mode": "cfr",
+              "fps": 24,
+              "origin": 0,
+              "extent": 3,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "edit_clock": {
+              "record_type": "clock",
+              "clock_id": "edit_clock",
+              "domain": "edit",
+              "domain_id": "edit_v1",
+              "rate_mode": "cfr",
+              "fps": 30,
+              "origin": 0,
+              "extent": 8,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "beat_candidates": {
+              "record_type": "beat_grid",
+              "grid_id": "beat_candidates",
+              "clock_id": "work_clock",
+              "bpm": 120,
+              "first_beat": "1/4",
+              "beat_index_origin": 0,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            }
+          }
+        },
+        "action_context": {
+          "owner": "M4",
+          "source_id": "design",
+          "source_version": "1",
+          "values": {
+            "events": {
+              "gesture": {
+                "event_ref": {
+                  "owner": "M4",
+                  "kind": "action",
+                  "id": "gesture",
+                  "domain": "work",
+                  "domain_id": "work_main"
+                },
+                "payload": {
+                  "text": "完整完成两秒抬手动作；不得删除或缩短。"
+                },
+                "timing_requirements": {
+                  "minimum_duration": 2
+                }
+              }
+            }
+          }
+        },
+        "sound_context": {
+          "owner": "M6",
+          "source_id": "design",
+          "source_version": "1",
+          "values": {
+            "events": {
+              "line1": {
+                "event_ref": {
+                  "owner": "M6",
+                  "kind": "vocal",
+                  "id": "line1",
+                  "domain": "work",
+                  "domain_id": "work_main"
+                },
+                "payload": {
+                  "text": "保持这句对白。"
+                },
+                "timing_requirements": {
+                  "required_duration": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "changes": {
+        "schedule": {
+          "items": {
+            "gesture_timing": {
+              "record_type": "event",
+              "timing_id": "gesture_timing",
+              "event_ref": {
+                "owner": "M4",
+                "kind": "action",
+                "id": "gesture",
+                "domain": "work",
+                "domain_id": "work_main"
+              },
+              "clock_id": "work_clock",
+              "start": 10,
+              "end": 12,
+              "extent_kind": "interval",
+              "timing_basis": "planned",
+              "binding": {
+                "owner": "M4",
+                "source_id": "design",
+                "source_version": "1",
+                "path": "/events/gesture",
+                "value": {
+                  "event_ref": {
+                    "owner": "M4",
+                    "kind": "action",
+                    "id": "gesture",
+                    "domain": "work",
+                    "domain_id": "work_main"
+                  },
+                  "payload": {
+                    "text": "完整完成两秒抬手动作；不得删除或缩短。"
+                  },
+                  "timing_requirements": {
+                    "minimum_duration": 2
+                  }
+                }
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "line_timing": {
+              "record_type": "event",
+              "timing_id": "line_timing",
+              "event_ref": {
+                "owner": "M6",
+                "kind": "vocal",
+                "id": "line1",
+                "domain": "work",
+                "domain_id": "work_main"
+              },
+              "clock_id": "work_clock",
+              "start": 12,
+              "end": 13,
+              "extent_kind": "interval",
+              "timing_basis": "planned",
+              "binding": {
+                "owner": "M6",
+                "source_id": "design",
+                "source_version": "1",
+                "path": "/events/line1",
+                "value": {
+                  "event_ref": {
+                    "owner": "M6",
+                    "kind": "vocal",
+                    "id": "line1",
+                    "domain": "work",
+                    "domain_id": "work_main"
+                  },
+                  "payload": {
+                    "text": "保持这句对白。"
+                  },
+                  "timing_requirements": {
+                    "required_duration": 1
+                  }
+                }
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "after_gesture": {
+              "record_type": "constraint",
+              "constraint_id": "after_gesture",
+              "relation": "meets",
+              "event_refs": [
+                {
+                  "owner": "M4",
+                  "kind": "action",
+                  "id": "gesture",
+                  "domain": "work",
+                  "domain_id": "work_main"
+                },
+                {
+                  "owner": "M6",
+                  "kind": "vocal",
+                  "id": "line1",
+                  "domain": "work",
+                  "domain_id": "work_main"
+                }
+              ],
+              "left_edge": "end",
+              "right_edge": "start",
+              "offset": 0,
+              "tolerance": 0,
+              "source_refs": [
+                "design"
+              ]
+            },
+            "three_second_budget": {
+              "record_type": "constraint",
+              "constraint_id": "three_second_budget",
+              "relation": "duration_budget",
+              "event_refs": [
+                {
+                  "owner": "M4",
+                  "kind": "action",
+                  "id": "gesture",
+                  "domain": "work",
+                  "domain_id": "work_main"
+                },
+                {
+                  "owner": "M6",
+                  "kind": "vocal",
+                  "id": "line1",
+                  "domain": "work",
+                  "domain_id": "work_main"
+                }
+              ],
+              "left_edge": "start",
+              "right_edge": "end",
+              "offset": 0,
+              "tolerance": 0,
+              "window": {
+                "clock_id": "work_clock",
+                "start": 10,
+                "end": 13
+              },
+              "source_refs": [
+                "design"
+              ]
+            }
+          }
+        }
+      },
+      "issues": [],
+      "resolutions": []
+    },
+    {
+      "kind": "M7Proposal",
+      "contract_version": "1.0.0",
+      "work_id": "m7_design_demo",
+      "base_version": 0,
+      "proposal_id": "proposal_m7_3",
+      "module_id": "M7.3",
+      "source_request_id": "req_m7_3",
+      "sources": {
+        "design": {
+          "kind": "design_decision",
+          "locator": "synthetic-design-fixture://m7/portable-timing-chain",
+          "version": "1",
+          "excerpt": "D类工程设计夹具，非案例原文、非媒体实测：source24fps10秒，取[2,8)两倍速进入work[10,13)，再映射generation[0,3)和edit[5,8)30fps。"
+        }
+      },
+      "context": {
+        "mapping_brief": "仅核验明确的M9映射，编辑域6.5秒在30fps下量化。",
+        "timebase_context": {
+          "items": {
+            "source_clock": {
+              "record_type": "clock",
+              "clock_id": "source_clock",
+              "domain": "source",
+              "domain_id": "source_clip_v1",
+              "rate_mode": "cfr",
+              "fps": 24,
+              "origin": 0,
+              "extent": 10,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "work_clock": {
+              "record_type": "clock",
+              "clock_id": "work_clock",
+              "domain": "work",
+              "domain_id": "work_main",
+              "rate_mode": "cfr",
+              "fps": 24,
+              "origin": 0,
+              "extent": 20,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "generation_clock": {
+              "record_type": "clock",
+              "clock_id": "generation_clock",
+              "domain": "generation",
+              "domain_id": "generation_job1",
+              "rate_mode": "cfr",
+              "fps": 24,
+              "origin": 0,
+              "extent": 3,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "edit_clock": {
+              "record_type": "clock",
+              "clock_id": "edit_clock",
+              "domain": "edit",
+              "domain_id": "edit_v1",
+              "rate_mode": "cfr",
+              "fps": 30,
+              "origin": 0,
+              "extent": 8,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "beat_candidates": {
+              "record_type": "beat_grid",
+              "grid_id": "beat_candidates",
+              "clock_id": "work_clock",
+              "bpm": 120,
+              "first_beat": "1/4",
+              "beat_index_origin": 0,
+              "evidence": {
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "source_refs": [
+                "design"
+              ]
+            }
+          }
+        },
+        "edit_context": {
+          "owner": "M9",
+          "source_id": "design",
+          "source_version": "1",
+          "values": {
+            "mappings": {
+              "source_to_work": {
+                "source_clock_id": "source_clock",
+                "target_clock_id": "work_clock",
+                "mode": "linear",
+                "source_start": 2,
+                "source_end": 8,
+                "target_start": 10,
+                "target_end": 13,
+                "speed": 2
+              },
+              "work_to_generation": {
+                "source_clock_id": "work_clock",
+                "target_clock_id": "generation_clock",
+                "mode": "linear",
+                "source_start": 10,
+                "source_end": 13,
+                "target_start": 0,
+                "target_end": 3,
+                "speed": 1
+              },
+              "generation_to_edit": {
+                "source_clock_id": "generation_clock",
+                "target_clock_id": "edit_clock",
+                "mode": "linear",
+                "source_start": 0,
+                "source_end": 3,
+                "target_start": 5,
+                "target_end": 8,
+                "speed": 1
+              }
+            }
+          }
+        }
+      },
+      "changes": {
+        "mappings": {
+          "items": {
+            "source_to_work": {
+              "record_type": "mapping",
+              "mapping_id": "source_to_work",
+              "source_clock_id": "source_clock",
+              "target_clock_id": "work_clock",
+              "mode": "linear",
+              "source_start": 2,
+              "source_end": 8,
+              "target_start": 10,
+              "target_end": 13,
+              "speed": 2,
+              "edit_binding": {
+                "owner": "M9",
+                "source_id": "design",
+                "source_version": "1",
+                "path": "/mappings/source_to_work",
+                "value": {
+                  "source_clock_id": "source_clock",
+                  "target_clock_id": "work_clock",
+                  "mode": "linear",
+                  "source_start": 2,
+                  "source_end": 8,
+                  "target_start": 10,
+                  "target_end": 13,
+                  "speed": 2
+                }
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "work_to_generation": {
+              "record_type": "mapping",
+              "mapping_id": "work_to_generation",
+              "source_clock_id": "work_clock",
+              "target_clock_id": "generation_clock",
+              "mode": "linear",
+              "source_start": 10,
+              "source_end": 13,
+              "target_start": 0,
+              "target_end": 3,
+              "speed": 1,
+              "edit_binding": {
+                "owner": "M9",
+                "source_id": "design",
+                "source_version": "1",
+                "path": "/mappings/work_to_generation",
+                "value": {
+                  "source_clock_id": "work_clock",
+                  "target_clock_id": "generation_clock",
+                  "mode": "linear",
+                  "source_start": 10,
+                  "source_end": 13,
+                  "target_start": 0,
+                  "target_end": 3,
+                  "speed": 1
+                }
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "generation_to_edit": {
+              "record_type": "mapping",
+              "mapping_id": "generation_to_edit",
+              "source_clock_id": "generation_clock",
+              "target_clock_id": "edit_clock",
+              "mode": "linear",
+              "source_start": 0,
+              "source_end": 3,
+              "target_start": 5,
+              "target_end": 8,
+              "speed": 1,
+              "edit_binding": {
+                "owner": "M9",
+                "source_id": "design",
+                "source_version": "1",
+                "path": "/mappings/generation_to_edit",
+                "value": {
+                  "source_clock_id": "generation_clock",
+                  "target_clock_id": "edit_clock",
+                  "mode": "linear",
+                  "source_start": 0,
+                  "source_end": 3,
+                  "target_start": 5,
+                  "target_end": 8,
+                  "speed": 1
+                }
+              },
+              "source_refs": [
+                "design"
+              ]
+            },
+            "edit_anchor": {
+              "record_type": "quantization",
+              "quantization_id": "edit_anchor",
+              "clock_id": "edit_clock",
+              "time": "13/2",
+              "rule": "nearest",
+              "frame_index": 195,
+              "quantized_time": "13/2",
+              "error_seconds": 0,
+              "tolerance": 0,
+              "requirement": "exact",
+              "source_refs": [
+                "design"
+              ]
+            }
+          }
+        }
+      },
+      "issues": [],
+      "resolutions": []
+    }
+  ]
+}

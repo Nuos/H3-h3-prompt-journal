@@ -1,0 +1,226 @@
+{
+  "kind": "M7ToolResult",
+  "contract_version": "1.0.0",
+  "command": "check",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "numeric_precision": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "measurement_authenticity",
+      "actual_lip_sync",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "explicit_unknown",
+      "path": "/context/timebase_context/items/work_clock/fps",
+      "message": "任务未指定工作域帧率",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/context/timebase_context/items/work_clock/extent",
+      "message": "任务未指定完整工作域时长",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/context/timebase_context/items/generation_clock/fps",
+      "message": "任务未指定生成端帧率，禁止从其他域推断",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/context/timebase_context/items/edit_clock/extent",
+      "message": "任务只指定所用编辑区间，不代表完整编辑域时长",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/timebase_context/items/work_clock/fps",
+      "message": "任务未指定工作域帧率",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/timebase_context/items/work_clock/extent",
+      "message": "任务未指定完整工作域时长",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/timebase_context/items/generation_clock/fps",
+      "message": "任务未指定生成端帧率，禁止从其他域推断",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/timebase_context/items/edit_clock/extent",
+      "message": "任务只指定所用编辑区间，不代表完整编辑域时长",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/timebase_context/items/work_clock/fps",
+      "message": "任务未指定工作域帧率",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/timebase_context/items/work_clock/extent",
+      "message": "任务未指定完整工作域时长",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/timebase_context/items/generation_clock/fps",
+      "message": "任务未指定生成端帧率，禁止从其他域推断",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/request/inputs/timebase_context/items/edit_clock/extent",
+      "message": "任务只指定所用编辑区间，不代表完整编辑域时长",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.3"
+    },
+    {
+      "code": "rate_mode_unknown",
+      "path": "/request/inputs/timebase/items/work_clock",
+      "message": "Unknown sampling mode cannot support exact frame conversion",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "rate_mode_unknown",
+      "path": "/request/inputs/timebase/items/generation_clock",
+      "message": "Unknown sampling mode cannot support exact frame conversion",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "conditional_basis",
+      "path": "/request/inputs/timebase/items/source_clock",
+      "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "conditional_basis",
+      "path": "/request/inputs/timebase/items/work_clock",
+      "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "conditional_basis",
+      "path": "/request/inputs/timebase/items/generation_clock",
+      "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "conditional_basis",
+      "path": "/request/inputs/timebase/items/edit_clock",
+      "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "rate_mode_unknown",
+      "path": "/changes/timebase/items/work_clock",
+      "message": "Unknown sampling mode cannot support exact frame conversion",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "rate_mode_unknown",
+      "path": "/changes/timebase/items/generation_clock",
+      "message": "Unknown sampling mode cannot support exact frame conversion",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    }
+  ],
+  "trace": {
+    "call_id": "m7-04b742d50e0a49b29eeb2224e6080a45",
+    "parent_module": "M7",
+    "started_at": "2026-11-05T17:15:50.086517+00:00",
+    "finished_at": "2026-11-05T17:15:50.092402+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "artifact": "54239b5af38018dc9c6b60135fb44365cacd2d7af00650a135a1ae8bbf77f94f",
+      "request": "957395ca4e35ec840069d0ab1d28b3fc75fb15c5bf12f055ea5ff5ffe43d56c6"
+    },
+    "resources": {
+      "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+      "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "req_mapping"
+    ],
+    "input_versions": [
+      {
+        "request_id": "req_mapping",
+        "target": "M7.3",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "req_mapping": {
+        "task": "1"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "M7Request",
+  "contract_version": "1.0.0",
+  "work_id": "forward_music_12s",
+  "base_version": 0,
+  "request_id": "music_req_m7-1",
+  "target": "M7.1",
+  "sources": {
+    "user_design": {
+      "kind": "user_requirement",
+      "locator": "docs/h3skill/validation/m7/forward-use/music-task.txt",
+      "version": "provided-task",
+      "excerpt": "12秒舞蹈MV；名义BPM100，无音频及首拍偏移；生成FPS未知，编辑计划30FPS；actionA生成局部0.5至2.5秒不可删除或缩短；后续动作未设计；固定摄影机观察12秒；单次12秒生成，无新增切镜要求。均为设计条件，非媒体实测。"
+    }
+  },
+  "inputs": {
+    "timebase_brief": "建立本次12秒生成的局部秒时钟及计划编辑时钟；100BPM只给出3/5秒拍间隔。首拍相位、生成FPS和编辑放置未知。所有条件来自任务设计。"
+  }
+}

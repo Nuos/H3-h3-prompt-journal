@@ -1,0 +1,286 @@
+{
+  "kind": "M7Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "forward_music_12s",
+  "base_version": 0,
+  "proposal_id": "music_proposal_m7-2",
+  "module_id": "M7.2",
+  "source_request_id": "music_req_m7-2",
+  "sources": {
+    "user_design": {
+      "kind": "user_requirement",
+      "locator": "docs/h3skill/validation/m7/forward-use/music-task.txt",
+      "version": "provided-task",
+      "excerpt": "12秒舞蹈MV；名义BPM100，无音频及首拍偏移；生成FPS未知，编辑计划30FPS；actionA生成局部0.5至2.5秒不可删除或缩短；后续动作未设计；固定摄影机观察12秒；单次12秒生成，无新增切镜要求。均为设计条件，非媒体实测。"
+    }
+  },
+  "context": {
+    "schedule_brief": "只编排已有actionA[0.5,2.5)和固定摄影机[0,12)，互相独立；后续动作及节拍绝对同步保留未知，不新增切镜。",
+    "timebase_context": {
+      "items": {
+        "generation_clock": {
+          "record_type": "clock",
+          "clock_id": "generation_clock",
+          "domain": "generation",
+          "domain_id": "generation_job1",
+          "rate_mode": "unknown",
+          "fps": {
+            "state": "unknown",
+            "reason": "生成FPS尚未确定，不能借用后期30FPS"
+          },
+          "origin": 0,
+          "extent": 12,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "user_design"
+            ]
+          },
+          "source_refs": [
+            "user_design"
+          ]
+        },
+        "edit_clock": {
+          "record_type": "clock",
+          "clock_id": "edit_clock",
+          "domain": "edit",
+          "domain_id": "edit_plan",
+          "rate_mode": "unknown",
+          "fps": 30,
+          "origin": {
+            "state": "unknown",
+            "reason": "编辑时间线的放置起点未提供"
+          },
+          "extent": {
+            "state": "unknown",
+            "reason": "尚无生成至编辑的映射及速度计划"
+          },
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "user_design"
+            ]
+          },
+          "source_refs": [
+            "user_design"
+          ]
+        },
+        "music_grid": {
+          "record_type": "beat_grid",
+          "grid_id": "music_grid",
+          "clock_id": "generation_clock",
+          "bpm": 100,
+          "first_beat": {
+            "state": "unknown",
+            "reason": "无音频、无首拍偏移；不能把生成局部0秒视为首拍"
+          },
+          "beat_index_origin": 0,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "user_design"
+            ]
+          },
+          "source_refs": [
+            "user_design"
+          ]
+        }
+      }
+    },
+    "action_context": {
+      "owner": "M4",
+      "source_id": "user_design",
+      "source_version": "provided-task",
+      "values": {
+        "events": {
+          "actionA": {
+            "event_ref": {
+              "owner": "M4",
+              "kind": "action",
+              "id": "actionA",
+              "domain": "generation",
+              "domain_id": "generation_job1"
+            },
+            "payload": {
+              "text": "M4给定actionA不可删除或缩短；具体动作语义未提供，不补写。"
+            },
+            "timing_requirements": {
+              "required_duration": 2
+            }
+          }
+        }
+      }
+    },
+    "camera_context": {
+      "owner": "M5",
+      "source_id": "user_design",
+      "source_version": "provided-task",
+      "values": {
+        "events": {
+          "fixed_camera": {
+            "event_ref": {
+              "owner": "M5",
+              "kind": "camera",
+              "id": "fixed_camera",
+              "domain": "generation",
+              "domain_id": "generation_job1"
+            },
+            "payload": {
+              "text": "M5已选固定摄影机，观察整个12秒片段；无每拍重启要求。"
+            },
+            "timing_requirements": {
+              "required_duration": 12
+            }
+          }
+        }
+      }
+    }
+  },
+  "changes": {
+    "schedule": {
+      "items": {
+        "actionA_timing": {
+          "record_type": "event",
+          "timing_id": "actionA_timing",
+          "event_ref": {
+            "owner": "M4",
+            "kind": "action",
+            "id": "actionA",
+            "domain": "generation",
+            "domain_id": "generation_job1"
+          },
+          "clock_id": "generation_clock",
+          "start": "1/2",
+          "end": "5/2",
+          "extent_kind": "interval",
+          "timing_basis": "planned",
+          "binding": {
+            "owner": "M4",
+            "source_id": "user_design",
+            "source_version": "provided-task",
+            "path": "/events/actionA",
+            "value": {
+              "event_ref": {
+                "owner": "M4",
+                "kind": "action",
+                "id": "actionA",
+                "domain": "generation",
+                "domain_id": "generation_job1"
+              },
+              "payload": {
+                "text": "M4给定actionA不可删除或缩短；具体动作语义未提供，不补写。"
+              },
+              "timing_requirements": {
+                "required_duration": 2
+              }
+            }
+          },
+          "source_refs": [
+            "user_design"
+          ]
+        },
+        "fixed_camera_timing": {
+          "record_type": "event",
+          "timing_id": "fixed_camera_timing",
+          "event_ref": {
+            "owner": "M5",
+            "kind": "camera",
+            "id": "fixed_camera",
+            "domain": "generation",
+            "domain_id": "generation_job1"
+          },
+          "clock_id": "generation_clock",
+          "start": 0,
+          "end": 12,
+          "extent_kind": "interval",
+          "timing_basis": "planned",
+          "binding": {
+            "owner": "M5",
+            "source_id": "user_design",
+            "source_version": "provided-task",
+            "path": "/events/fixed_camera",
+            "value": {
+              "event_ref": {
+                "owner": "M5",
+                "kind": "camera",
+                "id": "fixed_camera",
+                "domain": "generation",
+                "domain_id": "generation_job1"
+              },
+              "payload": {
+                "text": "M5已选固定摄影机，观察整个12秒片段；无每拍重启要求。"
+              },
+              "timing_requirements": {
+                "required_duration": 12
+              }
+            }
+          },
+          "source_refs": [
+            "user_design"
+          ]
+        },
+        "camera_covers_action": {
+          "record_type": "constraint",
+          "constraint_id": "camera_covers_action",
+          "relation": "overlap",
+          "event_refs": [
+            {
+              "owner": "M4",
+              "kind": "action",
+              "id": "actionA",
+              "domain": "generation",
+              "domain_id": "generation_job1"
+            },
+            {
+              "owner": "M5",
+              "kind": "camera",
+              "id": "fixed_camera",
+              "domain": "generation",
+              "domain_id": "generation_job1"
+            }
+          ],
+          "left_edge": "start",
+          "right_edge": "start",
+          "offset": 2,
+          "tolerance": 0,
+          "source_refs": [
+            "user_design"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [
+    {
+      "issue_id": "remaining_actions",
+      "owner": "M7.2",
+      "status": "open",
+      "severity": "warning",
+      "message": "M4尚未设计后续动作；[0,0.5)及[2.5,12)无已知动作内容，不推断静止、空白或停顿。",
+      "source_refs": [
+        "user_design"
+      ]
+    },
+    {
+      "issue_id": "unknown_beat_alignment",
+      "owner": "M7.2",
+      "status": "open",
+      "severity": "warning",
+      "message": "首拍相位未知，actionA起点是否落拍无法验证；2秒持续时间必须保留，不为卡拍缩短。",
+      "source_refs": [
+        "user_design"
+      ]
+    },
+    {
+      "issue_id": "partial_only",
+      "owner": "M7.2",
+      "status": "open",
+      "severity": "warning",
+      "message": "只交付秒域局部排程；缺生成采样与跨域映射，尚不能形成完整TimingMap或验证H3效果。",
+      "source_refs": [
+        "user_design"
+      ]
+    }
+  ],
+  "resolutions": []
+}

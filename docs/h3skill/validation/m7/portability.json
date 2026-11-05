@@ -1,0 +1,3394 @@
+{
+  "kind": "M7PortabilityRun",
+  "started_at_utc": "2026-11-05T17:22:20.370320+00:00",
+  "finished_at_utc": "2026-11-05T17:22:21.652966+00:00",
+  "environment": "Only a temporary copy of the skill directory; python -I -S disables site packages and ambient import paths.",
+  "python": "3.12.14",
+  "status": "pass",
+  "invocations": 12,
+  "failures": [],
+  "inputs_unchanged": true,
+  "runtime_file_sha256": {
+    "SKILL.md": "a4f89d21e7edcec1ede9d00df47ed19b701c6773a9b8259b4864c1930b3087fe",
+    "assets/request-standalone-m7-1.json": "eb91a4022bd3435f9bbcec3ed8ea38d1b5dd7cc76316cdfeed9c06d3ad8bd5da",
+    "assets/pts-design.json": "6a2b83d88f6d9803b9a947757bdd5b6f142a4095458be24f5e0eaff38896ac29",
+    "assets/request-standalone-m7-3.json": "3ffd567218711c778532d45a3ea606077bc9d54372cd8cd4eb0e985602f22bbf",
+    "assets/request-unknown-precision.json": "770f4d4a8e823ae5e338a5d42957542577fdb2445284ce684dd53fb27c0c0d28",
+    "assets/proposal-standalone-m7-2.json": "b52d4649a75e80c03b5f7a35dfa2aa8b38dc6123f4919c13c1ce6c7d3bf87329",
+    "assets/request-standalone-m7-2.json": "8db63fa5cca80f3eb79c03d9842bb196db695f698a7e411e0347b7203613c6ee",
+    "assets/state-empty.json": "f45959697130b00452bd993fa298b373e15d54603e984daa76ed4c6721b9d286",
+    "assets/requests.json": "8d7c1d03dc1e2ac6ecaa9146fe2c59beb0105c4bf99527a5c8eda64abe912f8e",
+    "assets/request-m7.json": "831e0c86674fee743c481ebb244034ca9ba55bc5b0b24071a643211b35faf2f3",
+    "assets/proposal-unknown-precision.json": "8fd49973be724fcad66a9377815663da021d2ce8f3f67793d0c3c9ce530f261c",
+    "assets/proposal-standalone-m7-1.json": "ccf4923134c19da7810d8fe4332d55540feda6e947d37bdd053b1f9e17ecc273",
+    "assets/proposal-standalone-m7-3.json": "670bc4d44151d7849ad584ae401d54075dfd9048d0205500a199098404d04b7d",
+    "assets/proposal-batch.json": "4e869d1613a855f270b0c2d080fa717854ffcc7d652a205fd086d2270cd0bf9e",
+    "scripts/m7_contract.py": "6cbd3561c093c6275bfe5116f4b3618b1ff70eb7d8ce34244ce5b8266741a1e7",
+    "references/provenance-and-license.md": "0326fb305336888f7c85e98d23fdf52c66cdcbf39ff7730e42066b7c758bcb24",
+    "references/time-domain-mapping.md": "d076ac42040ca5147ce10d3e06f8e933995396b8e3e8d1462b3ce0d456a73a8e",
+    "references/case-index.json": "38a7059b5a9cbd6132b44a551a83acff65f681a19c85da7dff803b5fd060c56b",
+    "references/case-evidence.md": "6cc2582f93f2f39b6339e296f87a9678fb43626fe2051d925ad859988b0199a9",
+    "references/h3-base-official.txt": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+    "references/case-source-LICENSE.txt": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+    "references/h3-label-mapping.md": "5000f1644bce95fd88bc19cd6363c2c9789739deefb807ff1d08e321bb9266bd",
+    "references/event-scheduling.md": "b8a6c8dccdd7612168c0b421f8108ac0802315793dcc5db926c42a9846a7d8b0",
+    "references/h3-NOTICE.txt": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+    "references/audit-and-handoff.md": "5e9f0ae805e5ddc87883885a1c69fc23d32497e5ad0dc7c5567381f0e1d03db6",
+    "references/h3-ref-official.txt": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+    "references/h3-protocol-source.json": "a71572f5b9a54e426efd7b2a72962af0a191693ab70f0e0f29a1e6a7353befe4",
+    "references/contracts.json": "0e4b63a1301f6fc06fc275af8d4412fe3553bd902cd5340fd8c34e1e6c62fece",
+    "references/contract-guide.md": "8a73c6a979ef83442fdfd2a4cf03116866e95396e0111f2028167307dd97407f",
+    "references/time-bases.md": "3b42e304b1ed31e3decd9f33bf0e60262ca942230f2eb9d05e376feca4ac9d90",
+    "references/module-registry.json": "5ed57e384dac92d734e57644deeb23462150e4a542b167104b38238693ed609f"
+  },
+  "runs": [
+    {
+      "name": "standalone_route_M7.1",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "route",
+        "assets/request-standalone-m7-1.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "route",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "not_evaluated",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [],
+        "trace": {
+          "call_id": "m7-b255314d4e894f5a8049675a8ffd7f23",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:20.528331+00:00",
+          "finished_at": "2026-11-05T17:22:20.531643+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "request": "c191c3fd61880a80bcbe45c1136bc785e0bc5dacf40aec5d87fb4e03c83bc85f"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "req_m7_1"
+          ],
+          "input_versions": [
+            {
+              "request_id": "req_m7_1",
+              "target": "M7.1",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "req_m7_1": {
+              "design": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "routes": [
+          {
+            "module_id": "M7.1",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/time-bases.md"
+            ],
+            "write_scope": "/content/timebase",
+            "return_to": "M7",
+            "minimum_inputs": [
+              "timebase_brief"
+            ],
+            "repair_target": "M7.1"
+          }
+        ],
+        "route_status": "ready_for_call",
+        "invocation": "not_invoked"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_check_M7.1",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "check",
+        "assets/proposal-standalone-m7-1.json",
+        "--request",
+        "assets/request-standalone-m7-1.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "check",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "not_evaluated",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "beat_grid_candidate",
+            "path": "/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/changes/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/changes/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/changes/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/changes/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/changes/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          }
+        ],
+        "trace": {
+          "call_id": "m7-1f5f42c259ad4e848fc55236cc9dfc2a",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:20.640710+00:00",
+          "finished_at": "2026-11-05T17:22:20.644364+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "artifact": "0c287b2abd72255acc35e5f4f92de13acfaccc3f45b31423a90317ef32bcc3f2",
+            "request": "c191c3fd61880a80bcbe45c1136bc785e0bc5dacf40aec5d87fb4e03c83bc85f"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "req_m7_1"
+          ],
+          "input_versions": [
+            {
+              "request_id": "req_m7_1",
+              "target": "M7.1",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "req_m7_1": {
+              "design": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_route_M7.2",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "route",
+        "assets/request-standalone-m7-2.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "route",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "not_evaluated",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "beat_grid_candidate",
+            "path": "/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          }
+        ],
+        "trace": {
+          "call_id": "m7-e5ec4a94f43f4f7194cc9e19d445c416",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:20.718966+00:00",
+          "finished_at": "2026-11-05T17:22:20.720900+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "request": "654338bdf3c164852845f9ea95cc64f58c4d5de4c976701a5cda40270c53cbd2"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "req_m7_2"
+          ],
+          "input_versions": [
+            {
+              "request_id": "req_m7_2",
+              "target": "M7.2",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "req_m7_2": {
+              "design": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "routes": [
+          {
+            "module_id": "M7.2",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/event-scheduling.md"
+            ],
+            "write_scope": "/content/schedule",
+            "return_to": "M7",
+            "minimum_inputs": [
+              "schedule_brief",
+              "timebase_context"
+            ],
+            "repair_target": "M7.2"
+          }
+        ],
+        "route_status": "ready_with_unverified_inputs",
+        "invocation": "not_invoked"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_check_M7.2",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "check",
+        "assets/proposal-standalone-m7-2.json",
+        "--request",
+        "assets/request-standalone-m7-2.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "check",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "not_evaluated",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "beat_grid_candidate",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          }
+        ],
+        "trace": {
+          "call_id": "m7-0bcc0a043ceb409790dbc58964a8fc85",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:20.823121+00:00",
+          "finished_at": "2026-11-05T17:22:20.832126+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "artifact": "bcf422cf70984520e4efe356eb15b38629943a78a08593655017638459c64a47",
+            "request": "654338bdf3c164852845f9ea95cc64f58c4d5de4c976701a5cda40270c53cbd2"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "req_m7_2"
+          ],
+          "input_versions": [
+            {
+              "request_id": "req_m7_2",
+              "target": "M7.2",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "req_m7_2": {
+              "design": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_route_M7.3",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "route",
+        "assets/request-standalone-m7-3.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "route",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "not_evaluated",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "beat_grid_candidate",
+            "path": "/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          }
+        ],
+        "trace": {
+          "call_id": "m7-5a29136e1eaa4d7082e8f61b4507a2ab",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:21.007721+00:00",
+          "finished_at": "2026-11-05T17:22:21.010381+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "request": "ebbb8ee04e2b52f00218c3fa1ed8610fb286962c9437918d0885511238c24739"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "req_m7_3"
+          ],
+          "input_versions": [
+            {
+              "request_id": "req_m7_3",
+              "target": "M7.3",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "req_m7_3": {
+              "design": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "routes": [
+          {
+            "module_id": "M7.3",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/time-domain-mapping.md"
+            ],
+            "write_scope": "/content/mappings",
+            "return_to": "M7",
+            "minimum_inputs": [
+              "mapping_brief",
+              "timebase_context"
+            ],
+            "repair_target": "M7.3"
+          }
+        ],
+        "route_status": "ready_with_unverified_inputs",
+        "invocation": "not_invoked"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "standalone_check_M7.3",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "check",
+        "assets/proposal-standalone-m7-3.json",
+        "--request",
+        "assets/request-standalone-m7-3.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "check",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "calculated_conditionally",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "beat_grid_candidate",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          }
+        ],
+        "trace": {
+          "call_id": "m7-8f3a772dbe4247c8a913bf08db87ba81",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:21.084952+00:00",
+          "finished_at": "2026-11-05T17:22:21.090181+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "artifact": "471e60d18810b0125b903a146a3ebf051dcc4714a2432f82a2f24468551a2688",
+            "request": "ebbb8ee04e2b52f00218c3fa1ed8610fb286962c9437918d0885511238c24739"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "req_m7_3"
+          ],
+          "input_versions": [
+            {
+              "request_id": "req_m7_3",
+              "target": "M7.3",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "req_m7_3": {
+              "design": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "parent_route",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "route",
+        "assets/request-m7.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "route",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "not_evaluated",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [],
+        "trace": {
+          "call_id": "m7-4f3b2492cdaf4fd58d7e8638cd25e045",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:21.215282+00:00",
+          "finished_at": "2026-11-05T17:22:21.217984+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "request": "8dc367f7624a8c8d1c7861f4df9d3138eafcb9b5dee875ef1523a41388a93bd4"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "req_m7"
+          ],
+          "input_versions": [
+            {
+              "request_id": "req_m7",
+              "target": "M7",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "req_m7": {
+              "design": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "routes": [
+          {
+            "module_id": "M7.1",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/time-bases.md"
+            ],
+            "write_scope": "/content/timebase",
+            "return_to": "M7",
+            "minimum_inputs": [
+              "timebase_brief"
+            ],
+            "repair_target": "M7.1"
+          },
+          {
+            "module_id": "M7.2",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/event-scheduling.md"
+            ],
+            "write_scope": "/content/schedule",
+            "return_to": "M7",
+            "minimum_inputs": [
+              "schedule_brief",
+              "timebase_context"
+            ],
+            "repair_target": "M7.2"
+          },
+          {
+            "module_id": "M7.3",
+            "resources": [
+              "SKILL.md",
+              "references/contract-guide.md",
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/time-domain-mapping.md"
+            ],
+            "write_scope": "/content/mappings",
+            "return_to": "M7",
+            "minimum_inputs": [
+              "mapping_brief",
+              "timebase_context"
+            ],
+            "repair_target": "M7.3"
+          }
+        ],
+        "route_status": "ready_for_call",
+        "invocation": "not_invoked"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "combined_proposals",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "check",
+        "assets/proposal-batch.json",
+        "--requests",
+        "assets/requests.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "check",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "calculated_conditionally",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "beat_grid_candidate",
+            "path": "/requests/1/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/requests/2/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/proposals/0/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/proposals/0/changes/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/proposals/0/changes/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/proposals/0/changes/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/proposals/0/changes/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/proposals/0/changes/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/proposals/1/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/proposals/2/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          }
+        ],
+        "trace": {
+          "call_id": "m7-37428750af834976bc8b3b30908587e1",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:21.298046+00:00",
+          "finished_at": "2026-11-05T17:22:21.313571+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "artifact": "b39ed33b4aaa8d611029fc8e78a0101c69258462d8c1fc468d9b787879dea185",
+            "requests": "3f504e3e09508544ad11a23232b6af62b697eff2cc5d13f3f1969c69904eddf7"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [
+            "req_m7_1",
+            "req_m7_2",
+            "req_m7_3"
+          ],
+          "input_versions": [
+            {
+              "request_id": "req_m7_1",
+              "target": "M7.1",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "req_m7_2",
+              "target": "M7.2",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "req_m7_3",
+              "target": "M7.3",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "req_m7_1": {
+              "design": "1"
+            },
+            "req_m7_2": {
+              "design": "1"
+            },
+            "req_m7_3": {
+              "design": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "atomic_accept",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "accept",
+        "assets/state-empty.json",
+        "assets/proposal-batch.json",
+        "--requests",
+        "assets/requests.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "accept",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "calculated_conditionally",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "beat_grid_candidate",
+            "path": "/requests/1/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/requests/2/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/batch/proposals/0/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/batch/proposals/0/changes/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/batch/proposals/0/changes/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/batch/proposals/0/changes/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/batch/proposals/0/changes/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/batch/proposals/0/changes/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/batch/proposals/1/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/batch/proposals/2/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/content/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          }
+        ],
+        "trace": {
+          "call_id": "m7-c57102f6c92748219f1607638d11ce1a",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:21.378252+00:00",
+          "finished_at": "2026-11-05T17:22:21.389348+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "state": "ca0c2c6e056721b7942d10dcb731f3d4cdd3dd6e1669cb922d75c3c0c88c2735",
+            "batch": "b39ed33b4aaa8d611029fc8e78a0101c69258462d8c1fc468d9b787879dea185",
+            "requests": "3f504e3e09508544ad11a23232b6af62b697eff2cc5d13f3f1969c69904eddf7"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": "batch_m7_demo",
+          "revision": 1,
+          "request_ids": [
+            "req_m7_1",
+            "req_m7_2",
+            "req_m7_3"
+          ],
+          "input_versions": [
+            {
+              "request_id": "req_m7_1",
+              "target": "M7.1",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "req_m7_2",
+              "target": "M7.2",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "req_m7_3",
+              "target": "M7.3",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "req_m7_1": {
+              "design": "1"
+            },
+            "req_m7_2": {
+              "design": "1"
+            },
+            "req_m7_3": {
+              "design": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "accepted_draft",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "state": {
+          "kind": "M7State",
+          "contract_version": "1.0.0",
+          "work_id": "m7_design_demo",
+          "version": 1,
+          "owner": "M7",
+          "object_type": "TimingMap",
+          "status": "draft",
+          "sources": {
+            "design": {
+              "kind": "design_decision",
+              "locator": "synthetic-design-fixture://m7/portable-timing-chain",
+              "version": "1",
+              "excerpt": "D类工程设计夹具，非案例原文、非媒体实测：source24fps10秒，取[2,8)两倍速进入work[10,13)，再映射generation[0,3)和edit[5,8)30fps。"
+            }
+          },
+          "content": {
+            "timebase": {
+              "items": {
+                "source_clock": {
+                  "record_type": "clock",
+                  "clock_id": "source_clock",
+                  "domain": "source",
+                  "domain_id": "source_clip_v1",
+                  "rate_mode": "cfr",
+                  "fps": 24,
+                  "origin": 0,
+                  "extent": 10,
+                  "evidence": {
+                    "basis": "planned",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "work_clock": {
+                  "record_type": "clock",
+                  "clock_id": "work_clock",
+                  "domain": "work",
+                  "domain_id": "work_main",
+                  "rate_mode": "cfr",
+                  "fps": 24,
+                  "origin": 0,
+                  "extent": 20,
+                  "evidence": {
+                    "basis": "planned",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "generation_clock": {
+                  "record_type": "clock",
+                  "clock_id": "generation_clock",
+                  "domain": "generation",
+                  "domain_id": "generation_job1",
+                  "rate_mode": "cfr",
+                  "fps": 24,
+                  "origin": 0,
+                  "extent": 3,
+                  "evidence": {
+                    "basis": "planned",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "edit_clock": {
+                  "record_type": "clock",
+                  "clock_id": "edit_clock",
+                  "domain": "edit",
+                  "domain_id": "edit_v1",
+                  "rate_mode": "cfr",
+                  "fps": 30,
+                  "origin": 0,
+                  "extent": 8,
+                  "evidence": {
+                    "basis": "planned",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "beat_candidates": {
+                  "record_type": "beat_grid",
+                  "grid_id": "beat_candidates",
+                  "clock_id": "work_clock",
+                  "bpm": 120,
+                  "first_beat": "1/4",
+                  "beat_index_origin": 0,
+                  "evidence": {
+                    "basis": "planned",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                }
+              }
+            },
+            "schedule": {
+              "items": {
+                "gesture_timing": {
+                  "record_type": "event",
+                  "timing_id": "gesture_timing",
+                  "event_ref": {
+                    "owner": "M4",
+                    "kind": "action",
+                    "id": "gesture",
+                    "domain": "work",
+                    "domain_id": "work_main"
+                  },
+                  "clock_id": "work_clock",
+                  "start": 10,
+                  "end": 12,
+                  "extent_kind": "interval",
+                  "timing_basis": "planned",
+                  "binding": {
+                    "owner": "M4",
+                    "source_id": "design",
+                    "source_version": "1",
+                    "path": "/events/gesture",
+                    "value": {
+                      "event_ref": {
+                        "owner": "M4",
+                        "kind": "action",
+                        "id": "gesture",
+                        "domain": "work",
+                        "domain_id": "work_main"
+                      },
+                      "payload": {
+                        "text": "完整完成两秒抬手动作；不得删除或缩短。"
+                      },
+                      "timing_requirements": {
+                        "minimum_duration": 2
+                      }
+                    }
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "line_timing": {
+                  "record_type": "event",
+                  "timing_id": "line_timing",
+                  "event_ref": {
+                    "owner": "M6",
+                    "kind": "vocal",
+                    "id": "line1",
+                    "domain": "work",
+                    "domain_id": "work_main"
+                  },
+                  "clock_id": "work_clock",
+                  "start": 12,
+                  "end": 13,
+                  "extent_kind": "interval",
+                  "timing_basis": "planned",
+                  "binding": {
+                    "owner": "M6",
+                    "source_id": "design",
+                    "source_version": "1",
+                    "path": "/events/line1",
+                    "value": {
+                      "event_ref": {
+                        "owner": "M6",
+                        "kind": "vocal",
+                        "id": "line1",
+                        "domain": "work",
+                        "domain_id": "work_main"
+                      },
+                      "payload": {
+                        "text": "保持这句对白。"
+                      },
+                      "timing_requirements": {
+                        "required_duration": 1
+                      }
+                    }
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "after_gesture": {
+                  "record_type": "constraint",
+                  "constraint_id": "after_gesture",
+                  "relation": "meets",
+                  "event_refs": [
+                    {
+                      "owner": "M4",
+                      "kind": "action",
+                      "id": "gesture",
+                      "domain": "work",
+                      "domain_id": "work_main"
+                    },
+                    {
+                      "owner": "M6",
+                      "kind": "vocal",
+                      "id": "line1",
+                      "domain": "work",
+                      "domain_id": "work_main"
+                    }
+                  ],
+                  "left_edge": "end",
+                  "right_edge": "start",
+                  "offset": 0,
+                  "tolerance": 0,
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "three_second_budget": {
+                  "record_type": "constraint",
+                  "constraint_id": "three_second_budget",
+                  "relation": "duration_budget",
+                  "event_refs": [
+                    {
+                      "owner": "M4",
+                      "kind": "action",
+                      "id": "gesture",
+                      "domain": "work",
+                      "domain_id": "work_main"
+                    },
+                    {
+                      "owner": "M6",
+                      "kind": "vocal",
+                      "id": "line1",
+                      "domain": "work",
+                      "domain_id": "work_main"
+                    }
+                  ],
+                  "left_edge": "start",
+                  "right_edge": "end",
+                  "offset": 0,
+                  "tolerance": 0,
+                  "window": {
+                    "clock_id": "work_clock",
+                    "start": 10,
+                    "end": 13
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                }
+              }
+            },
+            "mappings": {
+              "items": {
+                "source_to_work": {
+                  "record_type": "mapping",
+                  "mapping_id": "source_to_work",
+                  "source_clock_id": "source_clock",
+                  "target_clock_id": "work_clock",
+                  "mode": "linear",
+                  "source_start": 2,
+                  "source_end": 8,
+                  "target_start": 10,
+                  "target_end": 13,
+                  "speed": 2,
+                  "edit_binding": {
+                    "owner": "M9",
+                    "source_id": "design",
+                    "source_version": "1",
+                    "path": "/mappings/source_to_work",
+                    "value": {
+                      "source_clock_id": "source_clock",
+                      "target_clock_id": "work_clock",
+                      "mode": "linear",
+                      "source_start": 2,
+                      "source_end": 8,
+                      "target_start": 10,
+                      "target_end": 13,
+                      "speed": 2
+                    }
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "work_to_generation": {
+                  "record_type": "mapping",
+                  "mapping_id": "work_to_generation",
+                  "source_clock_id": "work_clock",
+                  "target_clock_id": "generation_clock",
+                  "mode": "linear",
+                  "source_start": 10,
+                  "source_end": 13,
+                  "target_start": 0,
+                  "target_end": 3,
+                  "speed": 1,
+                  "edit_binding": {
+                    "owner": "M9",
+                    "source_id": "design",
+                    "source_version": "1",
+                    "path": "/mappings/work_to_generation",
+                    "value": {
+                      "source_clock_id": "work_clock",
+                      "target_clock_id": "generation_clock",
+                      "mode": "linear",
+                      "source_start": 10,
+                      "source_end": 13,
+                      "target_start": 0,
+                      "target_end": 3,
+                      "speed": 1
+                    }
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "generation_to_edit": {
+                  "record_type": "mapping",
+                  "mapping_id": "generation_to_edit",
+                  "source_clock_id": "generation_clock",
+                  "target_clock_id": "edit_clock",
+                  "mode": "linear",
+                  "source_start": 0,
+                  "source_end": 3,
+                  "target_start": 5,
+                  "target_end": 8,
+                  "speed": 1,
+                  "edit_binding": {
+                    "owner": "M9",
+                    "source_id": "design",
+                    "source_version": "1",
+                    "path": "/mappings/generation_to_edit",
+                    "value": {
+                      "source_clock_id": "generation_clock",
+                      "target_clock_id": "edit_clock",
+                      "mode": "linear",
+                      "source_start": 0,
+                      "source_end": 3,
+                      "target_start": 5,
+                      "target_end": 8,
+                      "speed": 1
+                    }
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "edit_anchor": {
+                  "record_type": "quantization",
+                  "quantization_id": "edit_anchor",
+                  "clock_id": "edit_clock",
+                  "time": "13/2",
+                  "rule": "nearest",
+                  "frame_index": 195,
+                  "quantized_time": "13/2",
+                  "error_seconds": 0,
+                  "tolerance": 0,
+                  "requirement": "exact",
+                  "source_refs": [
+                    "design"
+                  ]
+                }
+              }
+            }
+          },
+          "issues": {},
+          "accepted_proposals": {
+            "proposal_m7_1": {
+              "digest": "0c287b2abd72255acc35e5f4f92de13acfaccc3f45b31423a90317ef32bcc3f2",
+              "source_request_id": "req_m7_1",
+              "module_id": "M7.1",
+              "accepted_version": 1
+            },
+            "proposal_m7_2": {
+              "digest": "bcf422cf70984520e4efe356eb15b38629943a78a08593655017638459c64a47",
+              "source_request_id": "req_m7_2",
+              "module_id": "M7.2",
+              "accepted_version": 1
+            },
+            "proposal_m7_3": {
+              "digest": "471e60d18810b0125b903a146a3ebf051dcc4714a2432f82a2f24468551a2688",
+              "source_request_id": "req_m7_3",
+              "module_id": "M7.3",
+              "accepted_version": 1
+            }
+          },
+          "consumers": {
+            "timeline_consumer": {
+              "module_id": "M8",
+              "result_version": 1,
+              "source_state_version": 0,
+              "read_paths": [
+                "/content/schedule"
+              ],
+              "status": "stale"
+            },
+            "compiler_consumer": {
+              "module_id": "M11",
+              "result_version": 1,
+              "source_state_version": 0,
+              "read_paths": [
+                "/content/mappings",
+                "/content/timebase"
+              ],
+              "status": "stale"
+            },
+            "title_consumer": {
+              "module_id": "M1",
+              "result_version": 1,
+              "source_state_version": 0,
+              "read_paths": [
+                "/display/title"
+              ],
+              "status": "current"
+            }
+          },
+          "display": {
+            "title": "M7 D类设计演示；非实测"
+          }
+        },
+        "acceptance": "accepted_draft",
+        "impact": {
+          "changed_paths": [
+            "/content/mappings/items/edit_anchor",
+            "/content/mappings/items/generation_to_edit",
+            "/content/mappings/items/source_to_work",
+            "/content/mappings/items/work_to_generation",
+            "/content/schedule/items/after_gesture",
+            "/content/schedule/items/gesture_timing",
+            "/content/schedule/items/line_timing",
+            "/content/schedule/items/three_second_budget",
+            "/content/timebase/items/beat_candidates",
+            "/content/timebase/items/edit_clock",
+            "/content/timebase/items/generation_clock",
+            "/content/timebase/items/source_clock",
+            "/content/timebase/items/work_clock",
+            "/sources/design"
+          ],
+          "stale_consumers": {
+            "timeline_consumer": {
+              "module_id": "M8",
+              "changed_paths": [
+                "/content/schedule/items/after_gesture",
+                "/content/schedule/items/gesture_timing",
+                "/content/schedule/items/line_timing",
+                "/content/schedule/items/three_second_budget"
+              ],
+              "status": "stale",
+              "already_stale": false
+            },
+            "compiler_consumer": {
+              "module_id": "M11",
+              "changed_paths": [
+                "/content/mappings/items/edit_anchor",
+                "/content/mappings/items/generation_to_edit",
+                "/content/mappings/items/source_to_work",
+                "/content/mappings/items/work_to_generation",
+                "/content/timebase/items/beat_candidates",
+                "/content/timebase/items/edit_clock",
+                "/content/timebase/items/generation_clock",
+                "/content/timebase/items/source_clock",
+                "/content/timebase/items/work_clock"
+              ],
+              "status": "stale",
+              "already_stale": false
+            }
+          },
+          "scope": "declared read-path intersections only; hidden dependencies unverified"
+        },
+        "accepted": true
+      },
+      "stderr": ""
+    },
+    {
+      "name": "accepted_state_contract",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "check",
+        "accepted-state.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "check",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "calculated_conditionally",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "beat_grid_candidate",
+            "path": "/content/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          }
+        ],
+        "trace": {
+          "call_id": "m7-860e01ac164f4b1a8be6d946589410e0",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:21.454766+00:00",
+          "finished_at": "2026-11-05T17:22:21.458693+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "artifact": "308e02148cc4871bbccdc89705e502c7a4daf78288daf587a0fad668dfaca0e7"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [],
+          "input_versions": [],
+          "source_versions": {},
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "exact_accept_replay",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "accept",
+        "accepted-state.json",
+        "assets/proposal-batch.json",
+        "--requests",
+        "assets/requests.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "accept",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "calculated_conditionally",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "beat_grid_candidate",
+            "path": "/content/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/requests/1/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/1/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/requests/2/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/requests/2/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/batch/proposals/0/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/batch/proposals/0/changes/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/batch/proposals/0/changes/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/batch/proposals/0/changes/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/batch/proposals/0/changes/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/batch/proposals/0/changes/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/batch/proposals/1/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/request/inputs/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/batch/proposals/2/changes/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "beat_grid_candidate",
+            "path": "/content/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          }
+        ],
+        "trace": {
+          "call_id": "m7-655ddc2f462c4ad895f4d54b78f131f0",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:21.539129+00:00",
+          "finished_at": "2026-11-05T17:22:21.553534+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "state": "308e02148cc4871bbccdc89705e502c7a4daf78288daf587a0fad668dfaca0e7",
+            "batch": "b39ed33b4aaa8d611029fc8e78a0101c69258462d8c1fc468d9b787879dea185",
+            "requests": "3f504e3e09508544ad11a23232b6af62b697eff2cc5d13f3f1969c69904eddf7"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": "batch_m7_demo",
+          "revision": 1,
+          "request_ids": [
+            "req_m7_1",
+            "req_m7_2",
+            "req_m7_3"
+          ],
+          "input_versions": [
+            {
+              "request_id": "req_m7_1",
+              "target": "M7.1",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "req_m7_2",
+              "target": "M7.2",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            },
+            {
+              "request_id": "req_m7_3",
+              "target": "M7.3",
+              "base_version": 0,
+              "contract_version": "1.0.0"
+            }
+          ],
+          "source_versions": {
+            "req_m7_1": {
+              "design": "1"
+            },
+            "req_m7_2": {
+              "design": "1"
+            },
+            "req_m7_3": {
+              "design": "1"
+            }
+          },
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "idempotent_replay",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "state": {
+          "kind": "M7State",
+          "contract_version": "1.0.0",
+          "work_id": "m7_design_demo",
+          "version": 1,
+          "owner": "M7",
+          "object_type": "TimingMap",
+          "status": "draft",
+          "sources": {
+            "design": {
+              "kind": "design_decision",
+              "locator": "synthetic-design-fixture://m7/portable-timing-chain",
+              "version": "1",
+              "excerpt": "D类工程设计夹具，非案例原文、非媒体实测：source24fps10秒，取[2,8)两倍速进入work[10,13)，再映射generation[0,3)和edit[5,8)30fps。"
+            }
+          },
+          "content": {
+            "timebase": {
+              "items": {
+                "source_clock": {
+                  "record_type": "clock",
+                  "clock_id": "source_clock",
+                  "domain": "source",
+                  "domain_id": "source_clip_v1",
+                  "rate_mode": "cfr",
+                  "fps": 24,
+                  "origin": 0,
+                  "extent": 10,
+                  "evidence": {
+                    "basis": "planned",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "work_clock": {
+                  "record_type": "clock",
+                  "clock_id": "work_clock",
+                  "domain": "work",
+                  "domain_id": "work_main",
+                  "rate_mode": "cfr",
+                  "fps": 24,
+                  "origin": 0,
+                  "extent": 20,
+                  "evidence": {
+                    "basis": "planned",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "generation_clock": {
+                  "record_type": "clock",
+                  "clock_id": "generation_clock",
+                  "domain": "generation",
+                  "domain_id": "generation_job1",
+                  "rate_mode": "cfr",
+                  "fps": 24,
+                  "origin": 0,
+                  "extent": 3,
+                  "evidence": {
+                    "basis": "planned",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "edit_clock": {
+                  "record_type": "clock",
+                  "clock_id": "edit_clock",
+                  "domain": "edit",
+                  "domain_id": "edit_v1",
+                  "rate_mode": "cfr",
+                  "fps": 30,
+                  "origin": 0,
+                  "extent": 8,
+                  "evidence": {
+                    "basis": "planned",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "beat_candidates": {
+                  "record_type": "beat_grid",
+                  "grid_id": "beat_candidates",
+                  "clock_id": "work_clock",
+                  "bpm": 120,
+                  "first_beat": "1/4",
+                  "beat_index_origin": 0,
+                  "evidence": {
+                    "basis": "planned",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                }
+              }
+            },
+            "schedule": {
+              "items": {
+                "gesture_timing": {
+                  "record_type": "event",
+                  "timing_id": "gesture_timing",
+                  "event_ref": {
+                    "owner": "M4",
+                    "kind": "action",
+                    "id": "gesture",
+                    "domain": "work",
+                    "domain_id": "work_main"
+                  },
+                  "clock_id": "work_clock",
+                  "start": 10,
+                  "end": 12,
+                  "extent_kind": "interval",
+                  "timing_basis": "planned",
+                  "binding": {
+                    "owner": "M4",
+                    "source_id": "design",
+                    "source_version": "1",
+                    "path": "/events/gesture",
+                    "value": {
+                      "event_ref": {
+                        "owner": "M4",
+                        "kind": "action",
+                        "id": "gesture",
+                        "domain": "work",
+                        "domain_id": "work_main"
+                      },
+                      "payload": {
+                        "text": "完整完成两秒抬手动作；不得删除或缩短。"
+                      },
+                      "timing_requirements": {
+                        "minimum_duration": 2
+                      }
+                    }
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "line_timing": {
+                  "record_type": "event",
+                  "timing_id": "line_timing",
+                  "event_ref": {
+                    "owner": "M6",
+                    "kind": "vocal",
+                    "id": "line1",
+                    "domain": "work",
+                    "domain_id": "work_main"
+                  },
+                  "clock_id": "work_clock",
+                  "start": 12,
+                  "end": 13,
+                  "extent_kind": "interval",
+                  "timing_basis": "planned",
+                  "binding": {
+                    "owner": "M6",
+                    "source_id": "design",
+                    "source_version": "1",
+                    "path": "/events/line1",
+                    "value": {
+                      "event_ref": {
+                        "owner": "M6",
+                        "kind": "vocal",
+                        "id": "line1",
+                        "domain": "work",
+                        "domain_id": "work_main"
+                      },
+                      "payload": {
+                        "text": "保持这句对白。"
+                      },
+                      "timing_requirements": {
+                        "required_duration": 1
+                      }
+                    }
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "after_gesture": {
+                  "record_type": "constraint",
+                  "constraint_id": "after_gesture",
+                  "relation": "meets",
+                  "event_refs": [
+                    {
+                      "owner": "M4",
+                      "kind": "action",
+                      "id": "gesture",
+                      "domain": "work",
+                      "domain_id": "work_main"
+                    },
+                    {
+                      "owner": "M6",
+                      "kind": "vocal",
+                      "id": "line1",
+                      "domain": "work",
+                      "domain_id": "work_main"
+                    }
+                  ],
+                  "left_edge": "end",
+                  "right_edge": "start",
+                  "offset": 0,
+                  "tolerance": 0,
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "three_second_budget": {
+                  "record_type": "constraint",
+                  "constraint_id": "three_second_budget",
+                  "relation": "duration_budget",
+                  "event_refs": [
+                    {
+                      "owner": "M4",
+                      "kind": "action",
+                      "id": "gesture",
+                      "domain": "work",
+                      "domain_id": "work_main"
+                    },
+                    {
+                      "owner": "M6",
+                      "kind": "vocal",
+                      "id": "line1",
+                      "domain": "work",
+                      "domain_id": "work_main"
+                    }
+                  ],
+                  "left_edge": "start",
+                  "right_edge": "end",
+                  "offset": 0,
+                  "tolerance": 0,
+                  "window": {
+                    "clock_id": "work_clock",
+                    "start": 10,
+                    "end": 13
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                }
+              }
+            },
+            "mappings": {
+              "items": {
+                "source_to_work": {
+                  "record_type": "mapping",
+                  "mapping_id": "source_to_work",
+                  "source_clock_id": "source_clock",
+                  "target_clock_id": "work_clock",
+                  "mode": "linear",
+                  "source_start": 2,
+                  "source_end": 8,
+                  "target_start": 10,
+                  "target_end": 13,
+                  "speed": 2,
+                  "edit_binding": {
+                    "owner": "M9",
+                    "source_id": "design",
+                    "source_version": "1",
+                    "path": "/mappings/source_to_work",
+                    "value": {
+                      "source_clock_id": "source_clock",
+                      "target_clock_id": "work_clock",
+                      "mode": "linear",
+                      "source_start": 2,
+                      "source_end": 8,
+                      "target_start": 10,
+                      "target_end": 13,
+                      "speed": 2
+                    }
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "work_to_generation": {
+                  "record_type": "mapping",
+                  "mapping_id": "work_to_generation",
+                  "source_clock_id": "work_clock",
+                  "target_clock_id": "generation_clock",
+                  "mode": "linear",
+                  "source_start": 10,
+                  "source_end": 13,
+                  "target_start": 0,
+                  "target_end": 3,
+                  "speed": 1,
+                  "edit_binding": {
+                    "owner": "M9",
+                    "source_id": "design",
+                    "source_version": "1",
+                    "path": "/mappings/work_to_generation",
+                    "value": {
+                      "source_clock_id": "work_clock",
+                      "target_clock_id": "generation_clock",
+                      "mode": "linear",
+                      "source_start": 10,
+                      "source_end": 13,
+                      "target_start": 0,
+                      "target_end": 3,
+                      "speed": 1
+                    }
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "generation_to_edit": {
+                  "record_type": "mapping",
+                  "mapping_id": "generation_to_edit",
+                  "source_clock_id": "generation_clock",
+                  "target_clock_id": "edit_clock",
+                  "mode": "linear",
+                  "source_start": 0,
+                  "source_end": 3,
+                  "target_start": 5,
+                  "target_end": 8,
+                  "speed": 1,
+                  "edit_binding": {
+                    "owner": "M9",
+                    "source_id": "design",
+                    "source_version": "1",
+                    "path": "/mappings/generation_to_edit",
+                    "value": {
+                      "source_clock_id": "generation_clock",
+                      "target_clock_id": "edit_clock",
+                      "mode": "linear",
+                      "source_start": 0,
+                      "source_end": 3,
+                      "target_start": 5,
+                      "target_end": 8,
+                      "speed": 1
+                    }
+                  },
+                  "source_refs": [
+                    "design"
+                  ]
+                },
+                "edit_anchor": {
+                  "record_type": "quantization",
+                  "quantization_id": "edit_anchor",
+                  "clock_id": "edit_clock",
+                  "time": "13/2",
+                  "rule": "nearest",
+                  "frame_index": 195,
+                  "quantized_time": "13/2",
+                  "error_seconds": 0,
+                  "tolerance": 0,
+                  "requirement": "exact",
+                  "source_refs": [
+                    "design"
+                  ]
+                }
+              }
+            }
+          },
+          "issues": {},
+          "accepted_proposals": {
+            "proposal_m7_1": {
+              "digest": "0c287b2abd72255acc35e5f4f92de13acfaccc3f45b31423a90317ef32bcc3f2",
+              "source_request_id": "req_m7_1",
+              "module_id": "M7.1",
+              "accepted_version": 1
+            },
+            "proposal_m7_2": {
+              "digest": "bcf422cf70984520e4efe356eb15b38629943a78a08593655017638459c64a47",
+              "source_request_id": "req_m7_2",
+              "module_id": "M7.2",
+              "accepted_version": 1
+            },
+            "proposal_m7_3": {
+              "digest": "471e60d18810b0125b903a146a3ebf051dcc4714a2432f82a2f24468551a2688",
+              "source_request_id": "req_m7_3",
+              "module_id": "M7.3",
+              "accepted_version": 1
+            }
+          },
+          "consumers": {
+            "timeline_consumer": {
+              "module_id": "M8",
+              "result_version": 1,
+              "source_state_version": 0,
+              "read_paths": [
+                "/content/schedule"
+              ],
+              "status": "stale"
+            },
+            "compiler_consumer": {
+              "module_id": "M11",
+              "result_version": 1,
+              "source_state_version": 0,
+              "read_paths": [
+                "/content/mappings",
+                "/content/timebase"
+              ],
+              "status": "stale"
+            },
+            "title_consumer": {
+              "module_id": "M1",
+              "result_version": 1,
+              "source_state_version": 0,
+              "read_paths": [
+                "/display/title"
+              ],
+              "status": "current"
+            }
+          },
+          "display": {
+            "title": "M7 D类设计演示；非实测"
+          }
+        },
+        "acceptance": "idempotent_replay",
+        "impact": {
+          "changed_paths": [],
+          "stale_consumers": {
+            "timeline_consumer": {
+              "module_id": "M8",
+              "changed_paths": [],
+              "status": "stale",
+              "already_stale": true
+            },
+            "compiler_consumer": {
+              "module_id": "M11",
+              "changed_paths": [],
+              "status": "stale",
+              "already_stale": true
+            }
+          },
+          "scope": "declared read-path intersections only; hidden dependencies unverified"
+        },
+        "accepted": true
+      },
+      "stderr": ""
+    },
+    {
+      "name": "registered_impact",
+      "command": [
+        "python",
+        "-I",
+        "-S",
+        "scripts/m7_contract.py",
+        "impact",
+        "assets/state-empty.json",
+        "accepted-state.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "kind": "M7ToolResult",
+        "contract_version": "1.0.0",
+        "command": "impact",
+        "execution": "completed",
+        "disposition": "checked_draft",
+        "validation": {
+          "local_contract": "pass",
+          "overall": "unverified",
+          "numeric_precision": "calculated_conditionally",
+          "unverified": [
+            "semantic_intent",
+            "source_authenticity",
+            "measurement_authenticity",
+            "actual_lip_sync",
+            "generated_video_quality",
+            "global_G0_G4"
+          ]
+        },
+        "diagnostics": [
+          {
+            "code": "beat_grid_candidate",
+            "path": "/content/timebase/items/beat_candidates",
+            "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/source_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/work_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/generation_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/edit_clock",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          },
+          {
+            "code": "conditional_basis",
+            "path": "/content/timebase/items/beat_candidates",
+            "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+            "status": "unverified",
+            "blocking": false,
+            "repair_target": "M7.1"
+          }
+        ],
+        "trace": {
+          "call_id": "m7-8cf2cbadb4424de1ae3d9cf59afb801d",
+          "parent_module": "M7",
+          "started_at": "2026-11-05T17:22:21.636570+00:00",
+          "finished_at": "2026-11-05T17:22:21.640273+00:00",
+          "package_version": "0.1.0",
+          "schema_version": "1.0.0",
+          "route_version": "1.0.0",
+          "registry_version": "1.0.0",
+          "input_digests": {
+            "before": "ca0c2c6e056721b7942d10dcb731f3d4cdd3dd6e1669cb922d75c3c0c88c2735",
+            "after": "308e02148cc4871bbccdc89705e502c7a4daf78288daf587a0fad668dfaca0e7"
+          },
+          "resources": {
+            "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+            "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+          },
+          "side_effects": "none",
+          "operation_id": null,
+          "revision": null,
+          "request_ids": [],
+          "input_versions": [],
+          "source_versions": {},
+          "applicability": {
+            "local_contract": "pass",
+            "physical_and_media": "unverified"
+          },
+          "retry": "not_applicable",
+          "output_status": "pass",
+          "error_codes": []
+        },
+        "impact": {
+          "changed_paths": [
+            "/content/mappings/items/edit_anchor",
+            "/content/mappings/items/generation_to_edit",
+            "/content/mappings/items/source_to_work",
+            "/content/mappings/items/work_to_generation",
+            "/content/schedule/items/after_gesture",
+            "/content/schedule/items/gesture_timing",
+            "/content/schedule/items/line_timing",
+            "/content/schedule/items/three_second_budget",
+            "/content/timebase/items/beat_candidates",
+            "/content/timebase/items/edit_clock",
+            "/content/timebase/items/generation_clock",
+            "/content/timebase/items/source_clock",
+            "/content/timebase/items/work_clock",
+            "/sources/design"
+          ],
+          "stale_consumers": {
+            "timeline_consumer": {
+              "module_id": "M8",
+              "changed_paths": [
+                "/content/schedule/items/after_gesture",
+                "/content/schedule/items/gesture_timing",
+                "/content/schedule/items/line_timing",
+                "/content/schedule/items/three_second_budget"
+              ],
+              "status": "stale",
+              "already_stale": false
+            },
+            "compiler_consumer": {
+              "module_id": "M11",
+              "changed_paths": [
+                "/content/mappings/items/edit_anchor",
+                "/content/mappings/items/generation_to_edit",
+                "/content/mappings/items/source_to_work",
+                "/content/mappings/items/work_to_generation",
+                "/content/timebase/items/beat_candidates",
+                "/content/timebase/items/edit_clock",
+                "/content/timebase/items/generation_clock",
+                "/content/timebase/items/source_clock",
+                "/content/timebase/items/work_clock"
+              ],
+              "status": "stale",
+              "already_stale": false
+            }
+          },
+          "scope": "declared read-path intersections only; hidden dependencies unverified"
+        }
+      },
+      "stderr": ""
+    }
+  ],
+  "limits": [
+    "No H3 call, audio/video reading, synthesis, mixing, or media-quality claim.",
+    "Successful routing does not execute an Agent's professional timing-planning work."
+  ]
+}

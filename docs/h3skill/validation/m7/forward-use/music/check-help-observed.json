@@ -1,0 +1,8 @@
+{
+  "record_note": "Transcribed from the actual earlier tool result; this file does not represent a new invocation.",
+  "command": ["python", "-B", "scripts/m7_contract.py", "check", "--help"],
+  "cwd": "/workspace/scratch/355e8d0563de/H3-h3-prompt-journal/docs/h3skill/h3-time-synchronization",
+  "exit_code": 0,
+  "stdout": "usage: m7_contract.py check [-h] [--proposal PROPOSAL] [--state STATE]\n                            [--request REQUEST] [--requests REQUESTS]\n                            [artifact]\n\npositional arguments:\n  artifact\n\noptions:\n  -h, --help           show this help message and exit\n  --proposal PROPOSAL\n  --state STATE\n  --request REQUEST\n  --requests REQUESTS\n",
+  "stderr": ""
+}

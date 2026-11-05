@@ -1,0 +1,204 @@
+{
+  "kind": "M7Request",
+  "contract_version": "1.0.0",
+  "work_id": "forward_mapping",
+  "base_version": 0,
+  "request_id": "req_mapping",
+  "target": "M7.3",
+  "sources": {
+    "task": {
+      "kind": "user_requirement",
+      "locator": "docs/h3skill/validation/m7/forward-use/mapping-task.txt",
+      "version": "1",
+      "excerpt": "用户固定 sourceA CFR24、[2,8) 2x 到 workA[10,13)，gen02 局部 [0,3) 1x 到 editA[5,8) CFR30；contactA=4.125s，cameraReadyA=3.5s，至少提前0.2工作秒；选接触后的第一编辑帧，误差不超过0.005s。"
+    }
+  },
+  "inputs": {
+    "mapping_brief": "核验已确定的三段映射；推导 contactA 与 cameraReadyA 的 work/gen/edit 秒数；检查工作域提前0.2秒，并量化唯一已选切换至接触后的第一个30fps编辑帧，误差<=0.005秒。",
+    "timebase_context": {
+      "items": {
+        "source_clock": {
+          "record_type": "clock",
+          "clock_id": "source_clock",
+          "domain": "source",
+          "domain_id": "sourceA",
+          "rate_mode": "cfr",
+          "fps": 24,
+          "origin": 0,
+          "extent": 10,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "task"
+            ]
+          },
+          "source_refs": [
+            "task"
+          ]
+        },
+        "work_clock": {
+          "record_type": "clock",
+          "clock_id": "work_clock",
+          "domain": "work",
+          "domain_id": "workA",
+          "rate_mode": "unknown",
+          "fps": {
+            "state": "unknown",
+            "reason": "任务未指定工作域帧率"
+          },
+          "origin": 0,
+          "extent": {
+            "state": "unknown",
+            "reason": "任务未指定完整工作域时长"
+          },
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "task"
+            ]
+          },
+          "source_refs": [
+            "task"
+          ]
+        },
+        "generation_clock": {
+          "record_type": "clock",
+          "clock_id": "generation_clock",
+          "domain": "generation",
+          "domain_id": "gen02",
+          "rate_mode": "unknown",
+          "fps": {
+            "state": "unknown",
+            "reason": "任务未指定生成端帧率，禁止从其他域推断"
+          },
+          "origin": 0,
+          "extent": 3,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "task"
+            ]
+          },
+          "source_refs": [
+            "task"
+          ]
+        },
+        "edit_clock": {
+          "record_type": "clock",
+          "clock_id": "edit_clock",
+          "domain": "edit",
+          "domain_id": "editA",
+          "rate_mode": "cfr",
+          "fps": 30,
+          "origin": 0,
+          "extent": {
+            "state": "unknown",
+            "reason": "任务只指定所用编辑区间，不代表完整编辑域时长"
+          },
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "task"
+            ]
+          },
+          "source_refs": [
+            "task"
+          ]
+        }
+      }
+    },
+    "edit_context": {
+      "owner": "M9",
+      "source_id": "task",
+      "source_version": "1",
+      "values": {
+        "mappings": {
+          "source_to_work": {
+            "source_clock_id": "source_clock",
+            "target_clock_id": "work_clock",
+            "mode": "linear",
+            "source_start": 2,
+            "source_end": 8,
+            "target_start": 10,
+            "target_end": 13,
+            "speed": 2
+          },
+          "generation_to_edit": {
+            "source_clock_id": "generation_clock",
+            "target_clock_id": "edit_clock",
+            "mode": "linear",
+            "source_start": 0,
+            "source_end": 3,
+            "target_start": 5,
+            "target_end": 8,
+            "speed": 1
+          }
+        },
+        "cut_policy": {
+          "selected_visual_switch": "cutA",
+          "after": "contactA",
+          "rule": "ceil",
+          "tolerance_seconds": "1/200"
+        }
+      }
+    },
+    "task_context": {
+      "owner": "external",
+      "source_id": "task",
+      "source_version": "1",
+      "values": {
+        "mappings": {
+          "work_to_generation": {
+            "source_clock_id": "work_clock",
+            "target_clock_id": "generation_clock",
+            "mode": "linear",
+            "source_start": 10,
+            "source_end": 13,
+            "target_start": 0,
+            "target_end": 3,
+            "speed": 1
+          }
+        },
+        "generation_id": "gen02",
+        "work_start": 10,
+        "local_duration": 3
+      }
+    },
+    "action_context": {
+      "owner": "M4",
+      "source_id": "task",
+      "source_version": "1",
+      "values": {
+        "contactA": {
+          "event_ref": {
+            "owner": "M4",
+            "kind": "action",
+            "id": "contactA",
+            "domain": "source",
+            "domain_id": "sourceA"
+          },
+          "time": "33/8"
+        }
+      }
+    },
+    "camera_context": {
+      "owner": "M5",
+      "source_id": "task",
+      "source_version": "1",
+      "values": {
+        "cameraReadyA": {
+          "event_ref": {
+            "owner": "M5",
+            "kind": "camera",
+            "id": "cameraReadyA",
+            "domain": "source",
+            "domain_id": "sourceA"
+          },
+          "time": "7/2",
+          "meaning": "camera ready, not camera motion start"
+        },
+        "minimum_work_lead": "1/5"
+      }
+    }
+  }
+}

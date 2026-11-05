@@ -1,0 +1,19 @@
+{
+  "kind": "M7Request",
+  "contract_version": "1.0.0",
+  "work_id": "m7_design_demo",
+  "base_version": 0,
+  "request_id": "req_m7_1",
+  "target": "M7.1",
+  "sources": {
+    "design": {
+      "kind": "design_decision",
+      "locator": "synthetic-design-fixture://m7/portable-timing-chain",
+      "version": "1",
+      "excerpt": "D类工程设计夹具，非案例原文、非媒体实测：source24fps10秒，取[2,8)两倍速进入work[10,13)，再映射generation[0,3)和edit[5,8)30fps。"
+    }
+  },
+  "inputs": {
+    "timebase_brief": "D类条件基准：独立区分源、作品、生成、编辑时钟；120 BPM 仅候选网格。"
+  }
+}

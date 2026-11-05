@@ -1,0 +1,10 @@
+{
+  "docs/h3skill/h3-time-synchronization/SKILL.md": "a4f89d21e7edcec1ede9d00df47ed19b701c6773a9b8259b4864c1930b3087fe",
+  "docs/h3skill/h3-time-synchronization/references/contract-guide.md": "91e9d7891d04986a177d36bce0b11b0da829ca4bbe5a49726b550ffdcb3b4b7d",
+  "docs/h3skill/h3-time-synchronization/references/contracts.json": "0e4b63a1301f6fc06fc275af8d4412fe3553bd902cd5340fd8c34e1e6c62fece",
+  "docs/h3skill/h3-time-synchronization/references/module-registry.json": "5ed57e384dac92d734e57644deeb23462150e4a542b167104b38238693ed609f",
+  "docs/h3skill/h3-time-synchronization/scripts/m7_contract.py": "6cbd3561c093c6275bfe5116f4b3618b1ff70eb7d8ce34244ce5b8266741a1e7",
+  "docs/h3skill/validation/m7/forward-use/mapping/request.json": "1b8279d6f677988527b4f5244addf0e2a98beee63d5ef2c9e5b165ad203f593d",
+  "docs/h3skill/validation/m7/forward-use/mapping/proposal.json": "5f31b3e7bc5554f90d9815f1002cd4cdceaeb12c359a4ba02f0c47f11c213a80",
+  "docs/h3skill/validation/m7/forward-use/mapping/task-copy.txt": "57033e73adb2eb73bcb7ff87370540ab0eceb7f1cb85730c85452b85ce9432aa"
+}

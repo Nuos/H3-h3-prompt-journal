@@ -1,0 +1,121 @@
+{
+  "kind": "M7Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "m7_design_demo",
+  "base_version": 0,
+  "proposal_id": "proposal_m7_1",
+  "module_id": "M7.1",
+  "source_request_id": "req_m7_1",
+  "sources": {
+    "design": {
+      "kind": "design_decision",
+      "locator": "synthetic-design-fixture://m7/portable-timing-chain",
+      "version": "1",
+      "excerpt": "D类工程设计夹具，非案例原文、非媒体实测：source24fps10秒，取[2,8)两倍速进入work[10,13)，再映射generation[0,3)和edit[5,8)30fps。"
+    }
+  },
+  "context": {
+    "timebase_brief": "D类条件基准：独立区分源、作品、生成、编辑时钟；120 BPM 仅候选网格。"
+  },
+  "changes": {
+    "timebase": {
+      "items": {
+        "source_clock": {
+          "record_type": "clock",
+          "clock_id": "source_clock",
+          "domain": "source",
+          "domain_id": "source_clip_v1",
+          "rate_mode": "cfr",
+          "fps": 24,
+          "origin": 0,
+          "extent": 10,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "design"
+            ]
+          },
+          "source_refs": [
+            "design"
+          ]
+        },
+        "work_clock": {
+          "record_type": "clock",
+          "clock_id": "work_clock",
+          "domain": "work",
+          "domain_id": "work_main",
+          "rate_mode": "cfr",
+          "fps": 24,
+          "origin": 0,
+          "extent": 20,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "design"
+            ]
+          },
+          "source_refs": [
+            "design"
+          ]
+        },
+        "generation_clock": {
+          "record_type": "clock",
+          "clock_id": "generation_clock",
+          "domain": "generation",
+          "domain_id": "generation_job1",
+          "rate_mode": "cfr",
+          "fps": 24,
+          "origin": 0,
+          "extent": 3,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "design"
+            ]
+          },
+          "source_refs": [
+            "design"
+          ]
+        },
+        "edit_clock": {
+          "record_type": "clock",
+          "clock_id": "edit_clock",
+          "domain": "edit",
+          "domain_id": "edit_v1",
+          "rate_mode": "cfr",
+          "fps": 30,
+          "origin": 0,
+          "extent": 8,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "design"
+            ]
+          },
+          "source_refs": [
+            "design"
+          ]
+        },
+        "beat_candidates": {
+          "record_type": "beat_grid",
+          "grid_id": "beat_candidates",
+          "clock_id": "work_clock",
+          "bpm": 120,
+          "first_beat": "1/4",
+          "beat_index_origin": 0,
+          "evidence": {
+            "basis": "planned",
+            "source_refs": [
+              "design"
+            ]
+          },
+          "source_refs": [
+            "design"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

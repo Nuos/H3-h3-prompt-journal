@@ -1,0 +1,198 @@
+{
+  "kind": "M7ToolResult",
+  "contract_version": "1.0.0",
+  "command": "route",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "numeric_precision": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "measurement_authenticity",
+      "actual_lip_sync",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/timebase_context/items/generation_clock/fps",
+      "message": "生成FPS尚未确定，不能借用后期30FPS",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/timebase_context/items/edit_clock/origin",
+      "message": "编辑时间线的放置起点未提供",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/timebase_context/items/edit_clock/extent",
+      "message": "尚无生成至编辑的映射及速度计划",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/timebase_context/items/music_grid/first_beat",
+      "message": "无音频、无首拍偏移；不能把生成局部0秒视为首拍",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/timebase_context/items/generation_clock/fps",
+      "message": "生成FPS尚未确定，不能借用后期30FPS",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/timebase_context/items/edit_clock/origin",
+      "message": "编辑时间线的放置起点未提供",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/timebase_context/items/edit_clock/extent",
+      "message": "尚无生成至编辑的映射及速度计划",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.2"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/inputs/timebase_context/items/music_grid/first_beat",
+      "message": "无音频、无首拍偏移；不能把生成局部0秒视为首拍",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.2"
+    },
+    {
+      "code": "rate_mode_unknown",
+      "path": "/inputs/timebase/items/generation_clock",
+      "message": "Unknown sampling mode cannot support exact frame conversion",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "rate_mode_unknown",
+      "path": "/inputs/timebase/items/edit_clock",
+      "message": "Unknown sampling mode cannot support exact frame conversion",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "beat_grid_candidate",
+      "path": "/inputs/timebase/items/music_grid",
+      "message": "BPM gives a conditional grid; it does not establish measured beat timing",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "conditional_basis",
+      "path": "/inputs/timebase/items/generation_clock",
+      "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "conditional_basis",
+      "path": "/inputs/timebase/items/edit_clock",
+      "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    },
+    {
+      "code": "conditional_basis",
+      "path": "/inputs/timebase/items/music_grid",
+      "message": "Numeric results are conditional on planned inputs; source authenticity remains unverified",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7.1"
+    }
+  ],
+  "trace": {
+    "call_id": "m7-8bc15b1ea15947ca992ea87a9427aea9",
+    "parent_module": "M7",
+    "started_at": "2026-11-05T17:16:45.296014+00:00",
+    "finished_at": "2026-11-05T17:16:45.299574+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "request": "227e83d522b1aa9a937a39705e1ccc7eccbc5bc3af521cd1fabee56dfdccb338"
+    },
+    "resources": {
+      "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+      "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "music_req_m7-2"
+    ],
+    "input_versions": [
+      {
+        "request_id": "music_req_m7-2",
+        "target": "M7.2",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "music_req_m7-2": {
+        "user_design": "provided-task"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  },
+  "routes": [
+    {
+      "module_id": "M7.2",
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/event-scheduling.md"
+      ],
+      "write_scope": "/content/schedule",
+      "return_to": "M7",
+      "minimum_inputs": [
+        "schedule_brief",
+        "timebase_context"
+      ],
+      "repair_target": "M7.2"
+    }
+  ],
+  "route_status": "ready_with_unverified_inputs",
+  "invocation": "not_invoked"
+}

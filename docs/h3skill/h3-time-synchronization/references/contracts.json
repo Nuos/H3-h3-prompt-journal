@@ -1,0 +1,1566 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:h3skill:m7:contracts:1.0.0",
+  "title": "M7 TimingMap public contracts",
+  "description": "D-class engineering contract. All values remain plans or reported evidence, never media certification.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/M7Request"
+    },
+    {
+      "$ref": "#/$defs/M7Proposal"
+    },
+    {
+      "$ref": "#/$defs/M7ProposalBatch"
+    },
+    {
+      "$ref": "#/$defs/M7State"
+    }
+  ],
+  "$defs": {
+    "Unknown": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "unknown"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "NotApplicable": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "not_applicable"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "KnownFact": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "known"
+        },
+        "value": {},
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "state",
+        "value",
+        "source_refs"
+      ],
+      "additionalProperties": false,
+      "description": "An asserted planning fact, not measured or generated-media verification. Its value is an opaque JSON payload."
+    },
+    "Fact": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/KnownFact"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Brief": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "user_requirement",
+            "approved_plan",
+            "case_text",
+            "external_input",
+            "media_observation",
+            "design_decision",
+            "official_document",
+            "hypothesis"
+          ]
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "version",
+        "excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "Sources": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      }
+    },
+    "ExternalContext": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7",
+            "M8",
+            "M9",
+            "M10",
+            "M11",
+            "M12",
+            "M7.1",
+            "M7.2",
+            "M7.3",
+            "external"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "Projection": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/(content|sources|issues)(/|$)"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "value": {}
+      },
+      "required": [
+        "path",
+        "source_version",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "Issue": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "owner": {
+          "enum": [
+            "M7.1",
+            "M7.2",
+            "M7.3"
+          ]
+        },
+        "status": {
+          "enum": [
+            "open",
+            "resolved"
+          ]
+        },
+        "severity": {
+          "enum": [
+            "blocking",
+            "warning"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "resolution": {
+          "$ref": "#/$defs/KnownFact"
+        }
+      },
+      "required": [
+        "issue_id",
+        "owner",
+        "status",
+        "severity",
+        "message",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Resolution": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "issue_id",
+        "rationale",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "M7Request": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M7Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "target": {
+          "enum": [
+            "M7",
+            "M7.1",
+            "M7.2",
+            "M7.3"
+          ]
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "request_id",
+        "target",
+        "sources",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "M7Proposal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M7Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "proposal_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "module_id": {
+          "enum": [
+            "M7.1",
+            "M7.2",
+            "M7.3"
+          ]
+        },
+        "source_request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs"
+        },
+        "changes": {
+          "$ref": "#/$defs/Changes"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "minItems": 0
+        },
+        "resolutions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Resolution"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "sources",
+        "context",
+        "changes",
+        "issues",
+        "resolutions"
+      ],
+      "additionalProperties": false
+    },
+    "M7ProposalBatch": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M7ProposalBatch"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "batch_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/M7Proposal"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "batch_id",
+        "proposals"
+      ],
+      "additionalProperties": false
+    },
+    "Receipt": {
+      "type": "object",
+      "properties": {
+        "digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "module_id": {
+          "enum": [
+            "M7.1",
+            "M7.2",
+            "M7.3"
+          ]
+        },
+        "accepted_version": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "digest",
+        "source_request_id",
+        "module_id",
+        "accepted_version"
+      ],
+      "additionalProperties": false
+    },
+    "Consumer": {
+      "type": "object",
+      "properties": {
+        "module_id": {
+          "enum": [
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7",
+            "M8",
+            "M9",
+            "M10",
+            "M11",
+            "M12",
+            "M7.1",
+            "M7.2",
+            "M7.3"
+          ]
+        },
+        "result_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_state_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^/(content|sources|issues|display)(/|$)"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "status": {
+          "enum": [
+            "current",
+            "stale"
+          ]
+        }
+      },
+      "required": [
+        "module_id",
+        "result_version",
+        "source_state_version",
+        "read_paths",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "M7State": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M7State"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "owner": {
+          "const": "M7"
+        },
+        "object_type": {
+          "const": "TimingMap"
+        },
+        "status": {
+          "const": "draft"
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "content": {
+          "$ref": "#/$defs/Content"
+        },
+        "issues": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Issue"
+          }
+        },
+        "accepted_proposals": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Receipt"
+          }
+        },
+        "consumers": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Consumer"
+          }
+        },
+        "display": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "note": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "version",
+        "owner",
+        "object_type",
+        "status",
+        "sources",
+        "content",
+        "issues",
+        "accepted_proposals",
+        "consumers"
+      ],
+      "additionalProperties": false
+    },
+    "Rational": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string",
+          "pattern": "^[+-]?[0-9]+(?:/[0-9]+|\\.[0-9]+)?$"
+        }
+      ]
+    },
+    "Scalar": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Rational"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Observation": {
+      "type": "object",
+      "properties": {
+        "asset_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "asset_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "asset_id",
+        "asset_version",
+        "method",
+        "observer",
+        "scope",
+        "locator"
+      ],
+      "additionalProperties": false
+    },
+    "Evidence": {
+      "type": "object",
+      "properties": {
+        "basis": {
+          "enum": [
+            "planned",
+            "reported_measurement",
+            "case_text",
+            "hypothesis",
+            "unknown"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "observation": {
+          "$ref": "#/$defs/Observation"
+        }
+      },
+      "required": [
+        "basis",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "ReadonlyRecord": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7",
+            "M8",
+            "M9",
+            "M10",
+            "M11",
+            "M12",
+            "M7.1",
+            "M7.2",
+            "M7.3",
+            "external"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "value": {}
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "path",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "EventRef": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M4",
+            "M5",
+            "M6",
+            "M8",
+            "M9",
+            "external"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "action",
+            "camera",
+            "vocal",
+            "music",
+            "sound",
+            "state",
+            "cut",
+            "anchor"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "domain": {
+          "enum": [
+            "source",
+            "work",
+            "generation",
+            "edit"
+          ]
+        },
+        "domain_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        }
+      },
+      "required": [
+        "owner",
+        "kind",
+        "id",
+        "domain",
+        "domain_id"
+      ],
+      "additionalProperties": false
+    },
+    "Clock": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "clock"
+        },
+        "clock_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "domain": {
+          "enum": [
+            "source",
+            "work",
+            "generation",
+            "edit"
+          ]
+        },
+        "domain_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "rate_mode": {
+          "enum": [
+            "cfr",
+            "vfr",
+            "unknown"
+          ]
+        },
+        "fps": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "origin": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "extent": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "pts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Rational"
+          },
+          "minItems": 1
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "frame_count": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        }
+      },
+      "required": [
+        "record_type",
+        "clock_id",
+        "domain",
+        "domain_id",
+        "rate_mode",
+        "fps",
+        "origin",
+        "extent",
+        "evidence",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "BeatGrid": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "beat_grid"
+        },
+        "grid_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "clock_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "bpm": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "first_beat": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "beat_index_origin": {
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "record_type",
+        "grid_id",
+        "clock_id",
+        "bpm",
+        "first_beat",
+        "beat_index_origin",
+        "evidence",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Event": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "event"
+        },
+        "timing_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "event_ref": {
+          "$ref": "#/$defs/EventRef"
+        },
+        "clock_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "start": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "end": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "extent_kind": {
+          "enum": [
+            "interval",
+            "instant"
+          ]
+        },
+        "timing_basis": {
+          "enum": [
+            "planned",
+            "reported_measurement",
+            "unknown"
+          ]
+        },
+        "binding": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ReadonlyRecord"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "observation": {
+          "$ref": "#/$defs/Observation"
+        }
+      },
+      "required": [
+        "record_type",
+        "timing_id",
+        "event_ref",
+        "clock_id",
+        "start",
+        "end",
+        "extent_kind",
+        "timing_basis",
+        "binding",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Constraint": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "constraint"
+        },
+        "constraint_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "relation": {
+          "enum": [
+            "before",
+            "meets",
+            "overlap",
+            "sync",
+            "offset",
+            "capacity",
+            "duration_budget"
+          ]
+        },
+        "event_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/EventRef"
+          },
+          "minItems": 1
+        },
+        "left_edge": {
+          "enum": [
+            "start",
+            "end"
+          ]
+        },
+        "right_edge": {
+          "enum": [
+            "start",
+            "end"
+          ]
+        },
+        "offset": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "tolerance": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "capacity": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "policy_binding": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ReadonlyRecord"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "window": {
+          "type": "object",
+          "properties": {
+            "clock_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+            },
+            "start": {
+              "$ref": "#/$defs/Scalar"
+            },
+            "end": {
+              "$ref": "#/$defs/Scalar"
+            }
+          },
+          "required": [
+            "clock_id",
+            "start",
+            "end"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "record_type",
+        "constraint_id",
+        "relation",
+        "event_refs",
+        "left_edge",
+        "right_edge",
+        "offset",
+        "tolerance",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Mapping": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "mapping"
+        },
+        "mapping_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "source_clock_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "target_clock_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "mode": {
+          "enum": [
+            "linear",
+            "freeze",
+            "unknown"
+          ]
+        },
+        "source_start": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "source_end": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "target_start": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "target_end": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "speed": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "edit_binding": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ReadonlyRecord"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "record_type",
+        "mapping_id",
+        "source_clock_id",
+        "target_clock_id",
+        "mode",
+        "source_start",
+        "source_end",
+        "target_start",
+        "target_end",
+        "speed",
+        "edit_binding",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Quantization": {
+      "type": "object",
+      "properties": {
+        "record_type": {
+          "const": "quantization"
+        },
+        "quantization_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "clock_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "time": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "rule": {
+          "enum": [
+            "floor",
+            "ceil",
+            "nearest"
+          ]
+        },
+        "frame_index": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "quantized_time": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "error_seconds": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "tolerance": {
+          "$ref": "#/$defs/Scalar"
+        },
+        "requirement": {
+          "enum": [
+            "exact",
+            "within_tolerance",
+            "candidate"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "position_kind": {
+          "enum": [
+            "sample",
+            "boundary"
+          ]
+        }
+      },
+      "required": [
+        "record_type",
+        "quantization_id",
+        "clock_id",
+        "time",
+        "rule",
+        "frame_index",
+        "quantized_time",
+        "error_seconds",
+        "tolerance",
+        "requirement",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Timebase": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/Clock"
+              },
+              {
+                "$ref": "#/$defs/BeatGrid"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "Schedule": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/Event"
+              },
+              {
+                "$ref": "#/$defs/Constraint"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "Mappings": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/Mapping"
+              },
+              {
+                "$ref": "#/$defs/Quantization"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs": {
+      "type": "object",
+      "properties": {
+        "timing_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "timebase_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "schedule_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "mapping_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "timebase_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Timebase"
+            },
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "schedule_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Schedule"
+            },
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "mapping_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Mappings"
+            },
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "task_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "reference_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "action_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "camera_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "sound_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "state_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "edit_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "label_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "event_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "readonly_projection": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Projection"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "Changes": {
+      "type": "object",
+      "properties": {
+        "timebase": {
+          "$ref": "#/$defs/Timebase"
+        },
+        "schedule": {
+          "$ref": "#/$defs/Schedule"
+        },
+        "mappings": {
+          "$ref": "#/$defs/Mappings"
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "minProperties": 1
+    },
+    "Content": {
+      "type": "object",
+      "properties": {
+        "timebase": {
+          "$ref": "#/$defs/Timebase"
+        },
+        "schedule": {
+          "$ref": "#/$defs/Schedule"
+        },
+        "mappings": {
+          "$ref": "#/$defs/Mappings"
+        }
+      },
+      "required": [
+        "timebase",
+        "schedule",
+        "mappings"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

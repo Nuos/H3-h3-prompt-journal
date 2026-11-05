@@ -1,0 +1,59 @@
+{
+  "kind": "M7ToolResult",
+  "contract_version": "1.0.0",
+  "command": "convert",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "numeric_precision": "not_evaluated",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "measurement_authenticity",
+      "actual_lip_sync",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [],
+  "trace": {
+    "call_id": "m7-a707fb289a424357a571986de15e11f7",
+    "parent_module": "M7",
+    "started_at": "2026-11-05T17:15:50.585830+00:00",
+    "finished_at": "2026-11-05T17:15:50.586466+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "math_arguments": "d6543175a2ee8620451925e2353245d6ae7a01c013b05430a6ab627c8e1afaaf"
+    },
+    "resources": {
+      "references/contracts.json": "da5046f7d4887aeca488ca66c5e2f250f859fc027fa55937ceec35eada644b9a",
+      "references/module-registry.json": "3c99c361fe0337b6879a5a2b6d6f842772e8a5dc506041a85aadf2da3a5c2c1f"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [],
+    "input_versions": [],
+    "source_versions": {},
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  },
+  "numeric_status": "calculated_conditionally",
+  "value": "99",
+  "unit": "frames",
+  "assumptions": [
+    "frame coordinates are zero-based CFR",
+    "beat indices are zero-based and need explicit origin"
+  ],
+  "media_verified": false
+}
