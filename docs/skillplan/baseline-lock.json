@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "baseline_id": "skillplan-v0.1.2-608813b",
+  "plan_version": "0.1.2",
+  "status": "frozen",
+  "freeze_date": "2026-11-04",
+  "timezone": "America/Los_Angeles",
+  "authorization": {
+    "source": "Current user instruction in this project conversation",
+    "text": "锁定以上开发文档全部内容。"
+  },
+  "repository": "Nuos/H3-h3-prompt-journal",
+  "scope_path": "docs/skillplan",
+  "baseline_commit": "608813b6e51531ac47f860bc384a454a504fe9ff",
+  "repository_tree_sha": "09e11ceaedfb143f03c24c8aecbced52caaf6047",
+  "baseline_scope_tree_sha": "f9fe14edefcd42079ec5b458aecc3956eede0897",
+  "canonical_snapshot_url": "https://github.com/Nuos/H3-h3-prompt-journal/tree/608813b6e51531ac47f860bc384a454a504fe9ff/docs/skillplan",
+  "coverage": {
+    "files": 9,
+    "markdown_files": 8,
+    "json_files": 1,
+    "total_bytes": 325714,
+    "total_lines": 3788,
+    "extent": "All original file bytes, including prose, tables, Mermaid source, references, dates, historical records, and the original validation record."
+  },
+  "files": [
+    {
+      "path": "docs/skillplan/00-analysis-full.md",
+      "mode": "100644",
+      "git_blob_sha": "bf72a13b58bcd9c24a59edef372162772bbfec17",
+      "bytes": 35675,
+      "lines": 562,
+      "sha256": "e877dc9b5fc82d02eab9c86276f5844c003bad8b96336ffa8951eec6e90df1da"
+    },
+    {
+      "path": "docs/skillplan/01-core-framework.md",
+      "mode": "100644",
+      "git_blob_sha": "03699c33a24286ad6d8409ce136261405774aa04",
+      "bytes": 46993,
+      "lines": 554,
+      "sha256": "518e183f3ef2ac5abac3159f8c4c994dafff3e6e94997f08b689f21fe649d9e7"
+    },
+    {
+      "path": "docs/skillplan/02-development-roadmap.md",
+      "mode": "100644",
+      "git_blob_sha": "348b9211f257ed3aa94919170743d79d15797a23",
+      "bytes": 45488,
+      "lines": 441,
+      "sha256": "94d0a333514998aba1d179dd78433160100bf7444be52b1f23b4419e56a3db28"
+    },
+    {
+      "path": "docs/skillplan/03-source-evidence.md",
+      "mode": "100644",
+      "git_blob_sha": "f4efba61f8abe3cbd643c9142b7882170061a1e3",
+      "bytes": 51372,
+      "lines": 423,
+      "sha256": "986598996e1e5bbfd41e1e5ade5007003e47e08a3462f9b15304accc8f05f45b"
+    },
+    {
+      "path": "docs/skillplan/04-framework-confirmation-full.md",
+      "mode": "100644",
+      "git_blob_sha": "0b81d61745c2bf2019a9edb222c7f64d6b04a526",
+      "bytes": 20647,
+      "lines": 252,
+      "sha256": "fdfa3736eb768543e9a71e209cf35d2de01f0b301303ab1da320893b2272cb8f"
+    },
+    {
+      "path": "docs/skillplan/05-workflow-routing.md",
+      "mode": "100644",
+      "git_blob_sha": "2b6e10942cf1802708d3710734a13ace5639c093",
+      "bytes": 50540,
+      "lines": 424,
+      "sha256": "a80703c4d01c1bddab43a947872724e96c710a74bdfa6f08b92e8211491f7270"
+    },
+    {
+      "path": "docs/skillplan/06-modularity-routing-principles.md",
+      "mode": "100644",
+      "git_blob_sha": "e5b1479e0a8fe3af4e6e6e7b2debf26473f29325",
+      "bytes": 32566,
+      "lines": 301,
+      "sha256": "316ede58a536f8b2580c1c9d7fa6b37fe7b4637cbea311838927295b39d9d334"
+    },
+    {
+      "path": "docs/skillplan/README.md",
+      "mode": "100644",
+      "git_blob_sha": "0c4127a37031f5005ba3d20cc214b381bca13793",
+      "bytes": 23029,
+      "lines": 248,
+      "sha256": "3e819a61d72d3cb7de8aff97ae9d5ee294fe79c9687a6a34479a17d9b5dcba35"
+    },
+    {
+      "path": "docs/skillplan/validation-record.json",
+      "mode": "100644",
+      "git_blob_sha": "95fd6d11a48125ceaa670de2fddf51ccf50875b8",
+      "bytes": 19404,
+      "lines": 583,
+      "sha256": "c54af9d36ed6c26cb2df260e09e95671404756e4c245b92df5d5dccd6509ac92"
+    }
+  ],
+  "inventory_sha256": "3609544b3714f4d49013f314a80a79ffdcbd702fe78120bdf90d43355bbf09cc",
+  "inventory_digest_format": "SHA-256 of UTF-8 JSON serialization of the files array, with object keys sorted, ensure_ascii=false, separators=(',', ':').",
+  "control_files": [
+    {
+      "path": "docs/skillplan/AGENTS.md",
+      "bytes": 2843,
+      "lines": 30,
+      "sha256": "595d99bf93b257adbe1cdb8103a2c702d402b0584ff3365c10ca274d9c8e8b44",
+      "git_blob_sha": "96591503c1cf27c3df92b3b12d0be823ce7a2d93"
+    },
+    {
+      "path": "docs/skillplan/LOCK.md",
+      "bytes": 5615,
+      "lines": 68,
+      "sha256": "91ed9d148773ff7608853b1a21c9bf3d2f906ec54b5148b9cec2064d3142dd40",
+      "git_blob_sha": "fc15141096ea27a49cfecc45cea3bfa2baa9350b"
+    }
+  ],
+  "control_integrity_scope": "LOCK.md and AGENTS.md hashes are separate from the nine frozen baseline members. This manifest does not hash itself; its exact bytes are fixed by the Git commit containing it.",
+  "change_policy": {
+    "original_members_unchanged_on_freeze": true,
+    "freeze_controls": "AGENTS.md and LOCK.md",
+    "preserve_fixed_baseline_history": true,
+    "later_explicit_user_change_is_authorization": true,
+    "do_not_repeat_confirmation_for_already_authorized_changes": true,
+    "compatible_authorized_implementation_may_continue": true,
+    "routine_design_choices_within_explicit_baseline_latitude_may_be_recorded_separately": true,
+    "baseline_changes_require_new_version_and_change_record": true,
+    "no_silent_override_via_additional_documents": true,
+    "mismatch_handling": "Preserve current files, inspect differences and authorization; do not silently recompute this inventory to accept drift or overwrite later user edits.",
+    "implementation_status": "planned; freezing does not convert the initial 41-submodule design or unexecuted checks into implemented capabilities."
+  },
+  "verification": {
+    "status": "pass",
+    "fixed_commit_member_count": 9,
+    "working_files_byte_equal_to_fixed_commit": true,
+    "sha256_and_bytes_computed_from_fixed_git_content": true,
+    "pinned_remote_git_blobs_match_local_inventory": true,
+    "prior_validation_record_status": "pass",
+    "prior_validation_record_preserved": true,
+    "prior_markdown_hashes_checked": 8,
+    "control_hashes_computed": true,
+    "scope": "Content identity and freeze metadata only. Staging and publication are checked separately after these records are generated."
+  },
+  "enforcement": "Version/content baseline and scoped change-control instructions; no GitHub server-side write lock, branch protection, or filesystem permission change was configured.",
+  "not_performed": [
+    "Module implementation",
+    "Runtime routing execution",
+    "H3 inference",
+    "Media quality verification",
+    "External website content freezing"
+  ]
+}
