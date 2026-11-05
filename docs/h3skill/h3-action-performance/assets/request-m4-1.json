@@ -1,0 +1,19 @@
+{
+  "kind": "M4Request",
+  "contract_version": "1.0.0",
+  "request_id": "d_request_m4_1",
+  "target": "M4.1",
+  "work_id": "d_cup_transfer",
+  "base_version": 0,
+  "sources": {
+    "fixture_d": {
+      "kind": "design_decision",
+      "locator": "design-fixture://h3-action-performance/transfer/v1",
+      "version": "D-1",
+      "excerpt": "D 类合成设计夹具：角色从桌面取起同一只杯子，随后举至胸前；仅测试数据合同，不是 case-studies 案例、媒体观察或物理证据。"
+    }
+  },
+  "inputs": {
+    "action_brief": "D 设计夹具：取起杯子，并将同一只杯子举至胸前。"
+  }
+}

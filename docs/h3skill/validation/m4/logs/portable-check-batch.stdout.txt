@@ -1,0 +1,109 @@
+{
+  "kind": "M4ToolResult",
+  "contract_version": "1.0.0",
+  "command": "check",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "physical_feasibility",
+      "media_observation",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "coverage_unavailable",
+      "path": "/proposals/0/changes/mechanics",
+      "message": "Entry/process/result coverage is not complete",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M4.2"
+    },
+    {
+      "code": "coverage_unavailable",
+      "path": "/proposals/0/changes/outcomes",
+      "message": "Entry/process/result coverage is not complete",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M4.3"
+    },
+    {
+      "code": "coverage_unavailable",
+      "path": "/proposals/1/changes/outcomes",
+      "message": "Entry/process/result coverage is not complete",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M4.3"
+    }
+  ],
+  "trace": {
+    "call_id": "m4-bae55f3243a94ffc9aa6a04457e7dfe3",
+    "parent_module": "M4",
+    "started_at": "2026-11-05T11:08:12.048555+00:00",
+    "finished_at": "2026-11-05T11:08:12.057304+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "artifact": "2c93b4455adb35f8817d0f3a3413e3d4054534fcf54dc44f050b052343457e85",
+      "requests": "e346c8ab4f3330dd8422fe902a85322af82fc25b687ade073164b2be8ebee97e"
+    },
+    "resources": {
+      "references/contracts.json": "e6a1dac15a056365ab42799b0475b79c1049dbe82963b8eddfd02dd333c9c26e",
+      "references/module-registry.json": "0c9ae839740f7ddd82f46fd13e64d680451b22441bc0f5edbe70183d30a993a0"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "d_request_m4_1",
+      "d_request_m4_2",
+      "d_request_m4_3"
+    ],
+    "input_versions": [
+      {
+        "request_id": "d_request_m4_1",
+        "target": "M4.1",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      },
+      {
+        "request_id": "d_request_m4_2",
+        "target": "M4.2",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      },
+      {
+        "request_id": "d_request_m4_3",
+        "target": "M4.3",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "d_request_m4_1": {
+        "fixture_d": "D-1"
+      },
+      "d_request_m4_2": {
+        "fixture_d": "D-1"
+      },
+      "d_request_m4_3": {
+        "fixture_d": "D-1"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  }
+}

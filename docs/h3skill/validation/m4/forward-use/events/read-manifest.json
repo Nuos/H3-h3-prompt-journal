@@ -1,0 +1,170 @@
+{
+  "reads": [
+    {
+      "path": "docs/h3skill/h3-action-performance/SKILL.md",
+      "sha256": "c5e43b4763edf0499907d0de0f561c049cb7631d94cb5546b48834c40b77e2e7",
+      "read": "full",
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/validation/m4/forward-use/events/input.md",
+      "sha256": "f3e1f3a95c3b877045336cf7b6e74e765aa2f8447d5e3d084cc468acfc248e50",
+      "read": "full",
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/SKILL.md",
+      "sha256": "c5e43b4763edf0499907d0de0f561c049cb7631d94cb5546b48834c40b77e2e7",
+      "read": "lines",
+      "line_start": 36,
+      "line_end": 73,
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/performance-events.md",
+      "sha256": "fca8067f809bc24f738389ff3f3c92df2c65ecf40852f3f29422ef6820fbafe2",
+      "read": "full",
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/contract-guide.md",
+      "sha256": "255c30b23b0ffb2445ff56d20a7d04a04aa57781a1bc4f3426e3f41f8ccf3a5a",
+      "read": "full",
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/contract-guide.md",
+      "sha256": "255c30b23b0ffb2445ff56d20a7d04a04aa57781a1bc4f3426e3f41f8ccf3a5a",
+      "read": {
+        "start_line": 1,
+        "end_line": 78
+      },
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/contracts.json",
+      "sha256": "5561fd66ae2d2ad37ffd980cf677af29e0939325e45d528ca5208a76b13067bd",
+      "read": "full",
+      "note": "Parsed all JSON; displayed schema index before selecting M4.1 definitions.",
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/contracts.json",
+      "sha256": "5561fd66ae2d2ad37ffd980cf677af29e0939325e45d528ca5208a76b13067bd",
+      "read": "full",
+      "note": "Parsed full JSON and displayed M4.1 schema definitions.",
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/contracts.json",
+      "sha256": "5561fd66ae2d2ad37ffd980cf677af29e0939325e45d528ca5208a76b13067bd",
+      "read": "full",
+      "note": "Parsed full JSON and displayed request/proposal/input/change/issue definitions.",
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/validation/m4/forward-use/events/input.md",
+      "sha256": "f3e1f3a95c3b877045336cf7b6e74e765aa2f8447d5e3d084cc468acfc248e50",
+      "read": "full",
+      "note": "Read task input again to preserve its exact text as the request source and action brief.",
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/scripts/m4_contract.py",
+      "sha256": "7993ee1edbbcc275b2b3449b9759113ee453c54feb98993e4d30913d0db77f5f",
+      "read": "full",
+      "note": "Execution fingerprint: script bytes hashed before invoking the CLI; source text not displayed to the trial agent.",
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/validation/m4/forward-use/events/check.stdout.json",
+      "sha256": "998eaf0c9e46b3ecb047097098a5c8bf43df9eb7314c0691c7512bbde85ff4cd",
+      "read": "full",
+      "note": "Read generated execution record to report the actual result.",
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/validation/m4/forward-use/events/check-run.json",
+      "sha256": "8df27c6e5318dd147555be1cd75a5656bf71e51fcf11f33a6db1ce8dd5c18666",
+      "read": "full",
+      "note": "Read generated execution record to report the actual result.",
+      "hash_scope": "raw_file_bytes"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/contracts.json",
+      "sha256": "5561fd66ae2d2ad37ffd980cf677af29e0939325e45d528ca5208a76b13067bd",
+      "read": "full",
+      "read_via": "post-check byte fingerprint",
+      "note": "File read after check for its raw-byte SHA256; CLI trace uses a separate normalized JSON digest. Its recomputed digest matches the executed content.",
+      "hash_scope": "raw_file_bytes",
+      "cli_reported_digest": {
+        "sha256": "e6a1dac15a056365ab42799b0475b79c1049dbe82963b8eddfd02dd333c9c26e",
+        "hash_scope": "canonical_json_sorted_compact_utf8",
+        "recomputed_matches": true
+      }
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/module-registry.json",
+      "sha256": "17a6ac5cfec08432a6bebd769d490c5b032e59dd84df400fcaf5e77c77ef2be9",
+      "read": "full",
+      "read_via": "post-check byte fingerprint",
+      "note": "File read after check for its raw-byte SHA256; CLI trace uses a separate normalized JSON digest. Its recomputed digest matches the executed content.",
+      "hash_scope": "raw_file_bytes",
+      "cli_reported_digest": {
+        "sha256": "0c9ae839740f7ddd82f46fd13e64d680451b22441bc0f5edbe70183d30a993a0",
+        "hash_scope": "canonical_json_sorted_compact_utf8",
+        "recomputed_matches": true
+      }
+    },
+    {
+      "path": "docs/h3skill/validation/m4/forward-use/events/proposal.json",
+      "sha256": "f643ebcd475c0700de027580e5246bc8a9fdc4f949ea3e0622bce23613d92ef4",
+      "read": "full",
+      "read_via": "post-check byte fingerprint",
+      "note": "File read after check for its raw-byte SHA256; CLI trace uses a separate normalized JSON digest. Its recomputed digest matches the executed content.",
+      "hash_scope": "raw_file_bytes",
+      "cli_reported_digest": {
+        "sha256": "d0594eb3432efe1e6ef4adc8dfcd7a3bdd21c9471586fe420eb998b29e95c053",
+        "hash_scope": "canonical_json_sorted_compact_utf8",
+        "recomputed_matches": true
+      }
+    },
+    {
+      "path": "docs/h3skill/validation/m4/forward-use/events/request.json",
+      "sha256": "adda3e3e755938d8710e35ddcba064c91417e4e4c6b5fa3a2a3394fb24bd4dd9",
+      "read": "full",
+      "read_via": "post-check byte fingerprint",
+      "note": "File read after check for its raw-byte SHA256; CLI trace uses a separate normalized JSON digest. Its recomputed digest matches the executed content.",
+      "hash_scope": "raw_file_bytes",
+      "cli_reported_digest": {
+        "sha256": "a6a5e51510b2d8d9c261dcfeec2d6d367ca5b60de79e0e38ce05802ed14dd5a4",
+        "hash_scope": "canonical_json_sorted_compact_utf8",
+        "recomputed_matches": true
+      }
+    },
+    {
+      "path": "docs/h3skill/validation/m4/forward-use/events/output.md",
+      "sha256": "1dc1859d52d4b7067bdd04884809b6831b8762219e584b72beba662cdf192559",
+      "hash_scope": "raw_file_bytes",
+      "read": "full",
+      "note": "Read first report to correct an invalid comparison between raw-byte and canonical-JSON digests. Original report preserved as output.initial.md."
+    },
+    {
+      "path": "docs/h3skill/validation/m4/forward-use/events/output.md",
+      "sha256": "1dc1859d52d4b7067bdd04884809b6831b8762219e584b72beba662cdf192559",
+      "hash_scope": "raw_file_bytes",
+      "read": "full",
+      "note": "Read the initial report for the recorded hash-scope correction; final report replaces the invalid version-drift claim."
+    }
+  ],
+  "scope_note": "Source content reads, whole-file JSON parses, execution fingerprints, generated execution-record reads, and post-check byte fingerprints are listed. Partial displays retain their recorded line ranges. The manifest itself is read only for bookkeeping and excluded to avoid recursive self-reference. CLI trace digests are canonical JSON and are separately labelled; every main sha256 field is the raw file-byte digest at the recorded read. No tests/m4, other forward-use directories, review/expected-answer files, original case text, network resources, or media were read in this trial.",
+  "corrections": [
+    {
+      "description": "Initial report and manifest incorrectly compared CLI canonical-JSON digests with raw file-byte digests and inferred resource drift. Corrected hash scopes, fingerprinted current raw bytes, and verified each canonical digest matches the unchanged CLI output. The initial files are preserved.",
+      "preserved_files": [
+        "output.initial.md",
+        "read-manifest.initial.json"
+      ]
+    }
+  ]
+}

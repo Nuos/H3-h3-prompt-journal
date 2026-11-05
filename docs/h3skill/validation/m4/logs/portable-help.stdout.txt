@@ -1,0 +1,16 @@
+usage: m4_contract.py [-h] {route,check,accept,impact} ...
+
+Portable M4 contract checker. Python 3.10+, standard library, no network.
+Checks data contracts and explicit graph/token relations. It does not create a
+prompt, judge acting, solve physics, inspect media, or certify H3 generations.
+
+positional arguments:
+  {route,check,accept,impact}
+    route               Return callable module routes; do not invoke agents
+    check               Check a public contract artifact
+    accept              Atomically return a new draft state; original requests
+                        required
+    impact              Compare changes with declared consumer read paths
+
+options:
+  -h, --help            show this help message and exit

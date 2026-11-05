@@ -1,0 +1,59 @@
+test_accepted_requirement_cannot_be_deleted (test_contract.PublicContractTests.test_accepted_requirement_cannot_be_deleted) ... ok
+test_accepted_requirement_coverage_cannot_be_shrunk (test_contract.PublicContractTests.test_accepted_requirement_coverage_cannot_be_shrunk) ... ok
+test_actual_request_cannot_be_replaced_by_proposal_context (test_contract.PublicContractTests.test_actual_request_cannot_be_replaced_by_proposal_context) ... ok
+test_another_actor_can_be_a_gaze_object (test_contract.PublicContractTests.test_another_actor_can_be_a_gaze_object) ... ok
+test_asset_contracts_are_valid_json_schema_if_validator_available (test_contract.PublicContractTests.test_asset_contracts_are_valid_json_schema_if_validator_available) ... skipped 'Optional jsonschema absent; bundled standard-library validator is exercised above'
+test_atomic_composition_preserves_inputs (test_contract.PublicContractTests.test_atomic_composition_preserves_inputs) ... ok
+test_boolean_is_not_version (test_contract.PublicContractTests.test_boolean_is_not_version) ... ok
+test_boolean_to_number_change_in_readonly_payload_is_rejected (test_contract.PublicContractTests.test_boolean_to_number_change_in_readonly_payload_is_rejected) ... ok
+test_changed_reused_proposal_id_rejected (test_contract.PublicContractTests.test_changed_reused_proposal_id_rejected) ... ok
+test_child_cannot_resolve_other_owner_issue (test_contract.PublicContractTests.test_child_cannot_resolve_other_owner_issue) ... ok
+test_child_cannot_write_foreign_partition (test_contract.PublicContractTests.test_child_cannot_write_foreign_partition) ... ok
+test_child_target_must_match_original (test_contract.PublicContractTests.test_child_target_must_match_original) ... ok
+test_cli_malformed_source_preserves_contract_diagnostic (test_contract.PublicContractTests.test_cli_malformed_source_preserves_contract_diagnostic) ... ok
+test_contact_requires_declared_participants (test_contract.PublicContractTests.test_contact_requires_declared_participants) ... ok
+test_dangling_event_dependency (test_contract.PublicContractTests.test_dangling_event_dependency) ... ok
+test_display_change_does_not_stale_data_consumer (test_contract.PublicContractTests.test_display_change_does_not_stale_data_consumer) ... ok
+test_duplicate_keys_and_non_finite_numbers_rejected (test_contract.PublicContractTests.test_duplicate_keys_and_non_finite_numbers_rejected) ... ok
+test_duplicate_partition_writes_rejected (test_contract.PublicContractTests.test_duplicate_partition_writes_rejected) ... ok
+test_event_dependency_cycle (test_contract.PublicContractTests.test_event_dependency_cycle) ... ok
+test_exact_replay_keeps_state_and_version (test_contract.PublicContractTests.test_exact_replay_keeps_state_and_version) ... ok
+test_expression_can_have_no_body_motion_or_contact (test_contract.PublicContractTests.test_expression_can_have_no_body_motion_or_contact) ... ok
+test_external_unknown_minimum_needs_no_sources (test_contract.PublicContractTests.test_external_unknown_minimum_needs_no_sources) ... ok
+test_handoff_ownership_checked_with_unknown_events (test_contract.PublicContractTests.test_handoff_ownership_checked_with_unknown_events) ... ok
+test_impact_tracks_declared_m9_m11_m12_readers (test_contract.PublicContractTests.test_impact_tracks_declared_m9_m11_m12_readers) ... ok
+test_large_integer_version_does_not_overflow (test_contract.PublicContractTests.test_large_integer_version_does_not_overflow) ... ok
+test_m8_request_remains_proposal_and_owner_is_checked (test_contract.PublicContractTests.test_m8_request_remains_proposal_and_owner_is_checked) ... ok
+test_missing_inheritance_is_unverified (test_contract.PublicContractTests.test_missing_inheritance_is_unverified) ... ok
+test_missing_minimum_is_not_silent_unknown (test_contract.PublicContractTests.test_missing_minimum_is_not_silent_unknown) ... ok
+test_mixed_replay_and_new_proposal_rejected (test_contract.PublicContractTests.test_mixed_replay_and_new_proposal_rejected) ... ok
+test_next_event_requires_dependency_link (test_contract.PublicContractTests.test_next_event_requires_dependency_link) ... ok
+test_no_absolute_schedule_or_authoritative_state_field (test_contract.PublicContractTests.test_no_absolute_schedule_or_authoritative_state_field) ... ok
+test_nonadjacent_dependency_does_not_force_state_equality (test_contract.PublicContractTests.test_nonadjacent_dependency_does_not_force_state_equality) ... ok
+test_not_applicable_requires_reason (test_contract.PublicContractTests.test_not_applicable_requires_reason) ... ok
+test_opaque_external_payload_does_not_become_protocol (test_contract.PublicContractTests.test_opaque_external_payload_does_not_become_protocol) ... ok
+test_opaque_projection_payload_does_not_become_protocol (test_contract.PublicContractTests.test_opaque_projection_payload_does_not_become_protocol) ... ok
+test_open_blocker_rejects_entire_batch (test_contract.PublicContractTests.test_open_blocker_rejects_entire_batch) ... ok
+test_original_requests_required (test_contract.PublicContractTests.test_original_requests_required) ... ok
+test_owned_existing_issue_can_be_resolved (test_contract.PublicContractTests.test_owned_existing_issue_can_be_resolved) ... ok
+test_partial_event_acceptance_is_explicitly_unverified (test_contract.PublicContractTests.test_partial_event_acceptance_is_explicitly_unverified) ... ok
+test_portable_copy_runs_without_repo_or_siblings (test_contract.PublicContractTests.test_portable_copy_runs_without_repo_or_siblings) ... ok
+test_projection_version_and_json_pointer_are_precise (test_contract.PublicContractTests.test_projection_version_and_json_pointer_are_precise) ... ok
+test_proposal_cannot_invent_source (test_contract.PublicContractTests.test_proposal_cannot_invent_source) ... ok
+test_readonly_events_cannot_be_installed_by_mechanics (test_contract.PublicContractTests.test_readonly_events_cannot_be_installed_by_mechanics) ... ok
+test_readonly_projection_is_checked_on_candidate (test_contract.PublicContractTests.test_readonly_projection_is_checked_on_candidate) ... ok
+test_result_inheritance_conflict (test_contract.PublicContractTests.test_result_inheritance_conflict) ... ok
+test_route_does_not_invoke_agent_and_check_never_certifies_media (test_contract.PublicContractTests.test_route_does_not_invoke_agent_and_check_never_certifies_media) ... ok
+test_source_id_cannot_be_rebound_after_acceptance (test_contract.PublicContractTests.test_source_id_cannot_be_rebound_after_acceptance) ... ok
+test_stable_prop_identity_cannot_be_repurposed (test_contract.PublicContractTests.test_stable_prop_identity_cannot_be_repurposed) ... ok
+test_stale_new_proposal_rejected (test_contract.PublicContractTests.test_stale_new_proposal_rejected) ... ok
+test_terminal_action_segment_can_have_causal_dependents (test_contract.PublicContractTests.test_terminal_action_segment_can_have_causal_dependents) ... ok
+test_three_children_independently_check (test_contract.PublicContractTests.test_three_children_independently_check) ... ok
+test_unknown_fact_is_allowed_without_fake_source (test_contract.PublicContractTests.test_unknown_fact_is_allowed_without_fake_source) ... ok
+test_unresolved_source_is_blocking (test_contract.PublicContractTests.test_unresolved_source_is_blocking) ... ok
+test_unsupported_contract_rejected (test_contract.PublicContractTests.test_unsupported_contract_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 54 tests in 0.541s
+
+OK (skipped=1)

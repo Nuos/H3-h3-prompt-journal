@@ -1,0 +1,807 @@
+{
+  "kind": "M4ProposalBatch",
+  "contract_version": "1.0.0",
+  "batch_id": "d_batch_1",
+  "work_id": "d_cup_transfer",
+  "base_version": 0,
+  "proposals": [
+    {
+      "kind": "M4Proposal",
+      "contract_version": "1.0.0",
+      "proposal_id": "d_proposal_m4_1",
+      "module_id": "M4.1",
+      "work_id": "d_cup_transfer",
+      "base_version": 0,
+      "source_request_id": "d_request_m4_1",
+      "sources": {
+        "fixture_d": {
+          "kind": "design_decision",
+          "locator": "design-fixture://h3-action-performance/transfer/v1",
+          "version": "D-1",
+          "excerpt": "D 类合成设计夹具：角色从桌面取起同一只杯子，随后举至胸前；仅测试数据合同，不是 case-studies 案例、媒体观察或物理证据。"
+        }
+      },
+      "context": {
+        "action_brief": "D 设计夹具：取起杯子，并将同一只杯子举至胸前。"
+      },
+      "changes": {
+        "events": {
+          "entities": {
+            "actor_a": {
+              "kind": "actor",
+              "label": "D 夹具角色甲",
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "cup_1": {
+              "kind": "prop",
+              "label": "D 夹具同一只杯",
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "table_1": {
+              "kind": "environment",
+              "label": "D 夹具桌面",
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          },
+          "requirements": {
+            "req_take_raise": {
+              "text": "取起杯子，并将同一只杯子举至胸前。",
+              "event_ids": [
+                "take_cup",
+                "raise_cup"
+              ],
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          },
+          "items": {
+            "take_cup": {
+              "performance_kind": "prop_interaction",
+              "actor_ids": [
+                "actor_a"
+              ],
+              "object_ids": [
+                "cup_1",
+                "table_1"
+              ],
+              "goal": {
+                "state": "known",
+                "value": "建立角色对同一只杯子的持物关系。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "preconditions": [
+                {
+                  "state": "known",
+                  "value": "杯子起初置于桌面，角色能够接近。",
+                  "source_refs": [
+                    "fixture_d"
+                  ]
+                }
+              ],
+              "depends_on": [],
+              "entry_state": {
+                "state": "known",
+                "values": {
+                  "actor_a": {
+                    "hand": "empty"
+                  },
+                  "cup_1": {
+                    "holder": "table_1"
+                  }
+                },
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "raise_cup": {
+              "performance_kind": "prop_interaction",
+              "actor_ids": [
+                "actor_a"
+              ],
+              "object_ids": [
+                "cup_1"
+              ],
+              "goal": {
+                "state": "known",
+                "value": "持杯举至胸前。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "preconditions": [
+                {
+                  "state": "known",
+                  "value": "前一事件已形成持杯关系。",
+                  "source_refs": [
+                    "fixture_d"
+                  ]
+                }
+              ],
+              "depends_on": [
+                "take_cup"
+              ],
+              "entry_state": {
+                "state": "known",
+                "values": {
+                  "actor_a": {
+                    "hand": "holds_cup_1"
+                  },
+                  "cup_1": {
+                    "holder": "actor_a"
+                  }
+                },
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          }
+        }
+      },
+      "issues": [],
+      "resolutions": []
+    },
+    {
+      "kind": "M4Proposal",
+      "contract_version": "1.0.0",
+      "proposal_id": "d_proposal_m4_2",
+      "module_id": "M4.2",
+      "work_id": "d_cup_transfer",
+      "base_version": 0,
+      "source_request_id": "d_request_m4_2",
+      "sources": {
+        "fixture_d": {
+          "kind": "design_decision",
+          "locator": "design-fixture://h3-action-performance/transfer/v1",
+          "version": "D-1",
+          "excerpt": "D 类合成设计夹具：角色从桌面取起同一只杯子，随后举至胸前；仅测试数据合同，不是 case-studies 案例、媒体观察或物理证据。"
+        }
+      },
+      "context": {
+        "event_context": {
+          "entities": {
+            "actor_a": {
+              "kind": "actor",
+              "label": "D 夹具角色甲",
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "cup_1": {
+              "kind": "prop",
+              "label": "D 夹具同一只杯",
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "table_1": {
+              "kind": "environment",
+              "label": "D 夹具桌面",
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          },
+          "requirements": {
+            "req_take_raise": {
+              "text": "取起杯子，并将同一只杯子举至胸前。",
+              "event_ids": [
+                "take_cup",
+                "raise_cup"
+              ],
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          },
+          "items": {
+            "take_cup": {
+              "performance_kind": "prop_interaction",
+              "actor_ids": [
+                "actor_a"
+              ],
+              "object_ids": [
+                "cup_1",
+                "table_1"
+              ],
+              "goal": {
+                "state": "known",
+                "value": "建立角色对同一只杯子的持物关系。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "preconditions": [
+                {
+                  "state": "known",
+                  "value": "杯子起初置于桌面，角色能够接近。",
+                  "source_refs": [
+                    "fixture_d"
+                  ]
+                }
+              ],
+              "depends_on": [],
+              "entry_state": {
+                "state": "known",
+                "values": {
+                  "actor_a": {
+                    "hand": "empty"
+                  },
+                  "cup_1": {
+                    "holder": "table_1"
+                  }
+                },
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "raise_cup": {
+              "performance_kind": "prop_interaction",
+              "actor_ids": [
+                "actor_a"
+              ],
+              "object_ids": [
+                "cup_1"
+              ],
+              "goal": {
+                "state": "known",
+                "value": "持杯举至胸前。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "preconditions": [
+                {
+                  "state": "known",
+                  "value": "前一事件已形成持杯关系。",
+                  "source_refs": [
+                    "fixture_d"
+                  ]
+                }
+              ],
+              "depends_on": [
+                "take_cup"
+              ],
+              "entry_state": {
+                "state": "known",
+                "values": {
+                  "actor_a": {
+                    "hand": "holds_cup_1"
+                  },
+                  "cup_1": {
+                    "holder": "actor_a"
+                  }
+                },
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          }
+        },
+        "mechanics_brief": "D 设计夹具：描述握持、离桌和持续举杯过程。"
+      },
+      "changes": {
+        "mechanics": {
+          "items": {
+            "mechanism_take": {
+              "event_id": "take_cup",
+              "process": {
+                "state": "known",
+                "steps": [
+                  {
+                    "state": "known",
+                    "value": "手接近杯身并建立握持。",
+                    "source_refs": [
+                      "fixture_d"
+                    ]
+                  },
+                  {
+                    "state": "known",
+                    "value": "握持持续时，杯子离开桌面。",
+                    "source_refs": [
+                      "fixture_d"
+                    ]
+                  }
+                ]
+              },
+              "support": {
+                "state": "known",
+                "value": "角色保持可用支撑；杯子在离桌后由握持支撑。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "force": {
+                "state": "known",
+                "value": "手部施加提起杯子的作用。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "motion": {
+                "state": "known",
+                "value": "杯子从桌面抬起。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "contact": {
+                "state": "known",
+                "participants": [
+                  "actor_a",
+                  "cup_1"
+                ],
+                "description": "手与杯身保持握持接触。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "mechanism_raise": {
+              "event_id": "raise_cup",
+              "process": {
+                "state": "known",
+                "steps": [
+                  {
+                    "state": "known",
+                    "value": "维持持杯关系，将杯子从已离桌位置举至胸前。",
+                    "source_refs": [
+                      "fixture_d"
+                    ]
+                  }
+                ]
+              },
+              "support": {
+                "state": "known",
+                "value": "保持站立支撑和持杯关系。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "force": {
+                "state": "known",
+                "value": "持杯手随手臂抬起。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "motion": {
+                "state": "known",
+                "value": "杯子向胸前移动。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "contact": {
+                "state": "known",
+                "participants": [
+                  "actor_a",
+                  "cup_1"
+                ],
+                "description": "同一角色持续握持同一杯子。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          }
+        }
+      },
+      "issues": [],
+      "resolutions": []
+    },
+    {
+      "kind": "M4Proposal",
+      "contract_version": "1.0.0",
+      "proposal_id": "d_proposal_m4_3",
+      "module_id": "M4.3",
+      "work_id": "d_cup_transfer",
+      "base_version": 0,
+      "source_request_id": "d_request_m4_3",
+      "sources": {
+        "fixture_d": {
+          "kind": "design_decision",
+          "locator": "design-fixture://h3-action-performance/transfer/v1",
+          "version": "D-1",
+          "excerpt": "D 类合成设计夹具：角色从桌面取起同一只杯子，随后举至胸前；仅测试数据合同，不是 case-studies 案例、媒体观察或物理证据。"
+        }
+      },
+      "context": {
+        "event_context": {
+          "entities": {
+            "actor_a": {
+              "kind": "actor",
+              "label": "D 夹具角色甲",
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "cup_1": {
+              "kind": "prop",
+              "label": "D 夹具同一只杯",
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "table_1": {
+              "kind": "environment",
+              "label": "D 夹具桌面",
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          },
+          "requirements": {
+            "req_take_raise": {
+              "text": "取起杯子，并将同一只杯子举至胸前。",
+              "event_ids": [
+                "take_cup",
+                "raise_cup"
+              ],
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          },
+          "items": {
+            "take_cup": {
+              "performance_kind": "prop_interaction",
+              "actor_ids": [
+                "actor_a"
+              ],
+              "object_ids": [
+                "cup_1",
+                "table_1"
+              ],
+              "goal": {
+                "state": "known",
+                "value": "建立角色对同一只杯子的持物关系。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "preconditions": [
+                {
+                  "state": "known",
+                  "value": "杯子起初置于桌面，角色能够接近。",
+                  "source_refs": [
+                    "fixture_d"
+                  ]
+                }
+              ],
+              "depends_on": [],
+              "entry_state": {
+                "state": "known",
+                "values": {
+                  "actor_a": {
+                    "hand": "empty"
+                  },
+                  "cup_1": {
+                    "holder": "table_1"
+                  }
+                },
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "raise_cup": {
+              "performance_kind": "prop_interaction",
+              "actor_ids": [
+                "actor_a"
+              ],
+              "object_ids": [
+                "cup_1"
+              ],
+              "goal": {
+                "state": "known",
+                "value": "持杯举至胸前。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "preconditions": [
+                {
+                  "state": "known",
+                  "value": "前一事件已形成持杯关系。",
+                  "source_refs": [
+                    "fixture_d"
+                  ]
+                }
+              ],
+              "depends_on": [
+                "take_cup"
+              ],
+              "entry_state": {
+                "state": "known",
+                "values": {
+                  "actor_a": {
+                    "hand": "holds_cup_1"
+                  },
+                  "cup_1": {
+                    "holder": "actor_a"
+                  }
+                },
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          }
+        },
+        "mechanics_context": {
+          "items": {
+            "mechanism_take": {
+              "event_id": "take_cup",
+              "process": {
+                "state": "known",
+                "steps": [
+                  {
+                    "state": "known",
+                    "value": "手接近杯身并建立握持。",
+                    "source_refs": [
+                      "fixture_d"
+                    ]
+                  },
+                  {
+                    "state": "known",
+                    "value": "握持持续时，杯子离开桌面。",
+                    "source_refs": [
+                      "fixture_d"
+                    ]
+                  }
+                ]
+              },
+              "support": {
+                "state": "known",
+                "value": "角色保持可用支撑；杯子在离桌后由握持支撑。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "force": {
+                "state": "known",
+                "value": "手部施加提起杯子的作用。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "motion": {
+                "state": "known",
+                "value": "杯子从桌面抬起。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "contact": {
+                "state": "known",
+                "participants": [
+                  "actor_a",
+                  "cup_1"
+                ],
+                "description": "手与杯身保持握持接触。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "mechanism_raise": {
+              "event_id": "raise_cup",
+              "process": {
+                "state": "known",
+                "steps": [
+                  {
+                    "state": "known",
+                    "value": "维持持杯关系，将杯子从已离桌位置举至胸前。",
+                    "source_refs": [
+                      "fixture_d"
+                    ]
+                  }
+                ]
+              },
+              "support": {
+                "state": "known",
+                "value": "保持站立支撑和持杯关系。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "force": {
+                "state": "known",
+                "value": "持杯手随手臂抬起。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "motion": {
+                "state": "known",
+                "value": "杯子向胸前移动。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "contact": {
+                "state": "known",
+                "participants": [
+                  "actor_a",
+                  "cup_1"
+                ],
+                "description": "同一角色持续握持同一杯子。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          }
+        },
+        "outcome_brief": "D 设计夹具：给出取杯与举杯结果及接续，并向 M8 提案。"
+      },
+      "changes": {
+        "outcomes": {
+          "items": {
+            "result_take": {
+              "event_id": "take_cup",
+              "visible_result": {
+                "state": "known",
+                "value": "杯子已离开桌面并被角色握持。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "end_state": {
+                "state": "known",
+                "values": {
+                  "actor_a": {
+                    "hand": "holds_cup_1"
+                  },
+                  "cup_1": {
+                    "holder": "actor_a"
+                  }
+                },
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "continuation": {
+                "state": "next",
+                "event_ids": [
+                  "raise_cup"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "result_raise": {
+              "event_id": "raise_cup",
+              "visible_result": {
+                "state": "known",
+                "value": "角色保持握持，杯子到达胸前。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "end_state": {
+                "state": "known",
+                "values": {
+                  "actor_a": {
+                    "hand": "holds_cup_1"
+                  },
+                  "cup_1": {
+                    "holder": "actor_a",
+                    "level": "chest"
+                  }
+                },
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "continuation": {
+                "state": "terminal",
+                "reason": "D 夹具需求已到达末事件。"
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          },
+          "change_requests": {
+            "state_raise": {
+              "target_module": "M8",
+              "request_kind": "state_change_request",
+              "event_ids": [
+                "raise_cup"
+              ],
+              "description": {
+                "state": "known",
+                "value": "请 M8 审核并接纳持杯及胸前位置变化；此记录不是权威状态。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "proposed_state": {
+                "state": "known",
+                "values": {
+                  "actor_a": {
+                    "hand": "holds_cup_1"
+                  },
+                  "cup_1": {
+                    "holder": "actor_a",
+                    "level": "chest"
+                  }
+                },
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            },
+            "visibility_take": {
+              "target_module": "M5",
+              "request_kind": "visibility_need",
+              "event_ids": [
+                "take_cup"
+              ],
+              "description": {
+                "state": "known",
+                "value": "需要可见地呈现握持建立与杯子离桌。",
+                "source_refs": [
+                  "fixture_d"
+                ]
+              },
+              "source_refs": [
+                "fixture_d"
+              ]
+            }
+          }
+        }
+      },
+      "issues": [],
+      "resolutions": []
+    }
+  ]
+}

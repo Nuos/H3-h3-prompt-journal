@@ -1,0 +1,1326 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:h3-action-performance:contracts:1.0.0",
+  "title": "M4 ActionPlan offline contract",
+  "description": "Structural contracts only. No semantic, physical, media or generation certification. D fixtures are design examples.",
+  "$defs": {
+    "Unknown": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "unknown"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "NotApplicable": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "not_applicable"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "KnownFact": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "known"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "state",
+        "value",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Fact": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/KnownFact"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "MechanismFact": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/KnownFact"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        },
+        {
+          "$ref": "#/$defs/NotApplicable"
+        }
+      ]
+    },
+    "Brief": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "KnownState": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "known"
+        },
+        "values": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+            },
+            "additionalProperties": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minProperties": 1
+          },
+          "minProperties": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "state",
+        "values",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "StateObservation": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/KnownState"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Entity": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "actor",
+            "prop",
+            "environment"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "label",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Requirement": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "event_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "text",
+        "event_ids",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Event": {
+      "type": "object",
+      "properties": {
+        "performance_kind": {
+          "enum": [
+            "body_action",
+            "expression",
+            "gaze",
+            "speech_action",
+            "prop_interaction",
+            "mixed"
+          ]
+        },
+        "actor_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "object_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "goal": {
+          "$ref": "#/$defs/Fact"
+        },
+        "preconditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Fact"
+          },
+          "minItems": 0
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "entry_state": {
+          "$ref": "#/$defs/StateObservation"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "performance_kind",
+        "actor_ids",
+        "object_ids",
+        "goal",
+        "preconditions",
+        "depends_on",
+        "entry_state",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Events": {
+      "type": "object",
+      "properties": {
+        "entities": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Entity"
+          }
+        },
+        "requirements": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Requirement"
+          }
+        },
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Event"
+          }
+        }
+      },
+      "required": [
+        "entities",
+        "requirements",
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "KnownProcess": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "known"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Fact"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "state",
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "Process": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/KnownProcess"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "KnownContact": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "known"
+        },
+        "participants": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 2,
+          "uniqueItems": true
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "state",
+        "participants",
+        "description",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Contact": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/KnownContact"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        },
+        {
+          "$ref": "#/$defs/NotApplicable"
+        }
+      ]
+    },
+    "Mechanic": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "process": {
+          "$ref": "#/$defs/Process"
+        },
+        "support": {
+          "$ref": "#/$defs/MechanismFact"
+        },
+        "force": {
+          "$ref": "#/$defs/MechanismFact"
+        },
+        "motion": {
+          "$ref": "#/$defs/MechanismFact"
+        },
+        "contact": {
+          "$ref": "#/$defs/Contact"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "event_id",
+        "process",
+        "support",
+        "force",
+        "motion",
+        "contact",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Mechanics": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Mechanic"
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "Terminal": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "terminal"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "Next": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "next"
+        },
+        "event_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "state",
+        "event_ids"
+      ],
+      "additionalProperties": false
+    },
+    "Continuation": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Terminal"
+        },
+        {
+          "$ref": "#/$defs/Next"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Outcome": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "visible_result": {
+          "$ref": "#/$defs/Fact"
+        },
+        "end_state": {
+          "$ref": "#/$defs/StateObservation"
+        },
+        "continuation": {
+          "$ref": "#/$defs/Continuation"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "event_id",
+        "visible_result",
+        "end_state",
+        "continuation",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "ChangeRequest": {
+      "type": "object",
+      "properties": {
+        "target_module": {
+          "enum": [
+            "M3",
+            "M5",
+            "M6",
+            "M7",
+            "M8"
+          ]
+        },
+        "request_kind": {
+          "enum": [
+            "space_change",
+            "visibility_need",
+            "sound_candidate",
+            "relative_dependency",
+            "state_change_request"
+          ]
+        },
+        "event_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "description": {
+          "$ref": "#/$defs/Fact"
+        },
+        "proposed_state": {
+          "$ref": "#/$defs/StateObservation"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "target_module",
+        "request_kind",
+        "event_ids",
+        "description",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Outcomes": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Outcome"
+          }
+        },
+        "change_requests": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/ChangeRequest"
+          }
+        }
+      },
+      "required": [
+        "items",
+        "change_requests"
+      ],
+      "additionalProperties": false
+    },
+    "Source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "user_requirement",
+            "approved_plan",
+            "case_text",
+            "external_input",
+            "media_observation",
+            "design_decision",
+            "official_document",
+            "hypothesis"
+          ]
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "version",
+        "excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "Sources": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      }
+    },
+    "ExternalContext": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M1",
+            "M2",
+            "M3",
+            "M8"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "Projection": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/(content|sources|issues)(/|$)"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "value": {}
+      },
+      "required": [
+        "path",
+        "source_version",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs": {
+      "type": "object",
+      "properties": {
+        "action_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "event_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Events"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "mechanics_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "mechanics_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Mechanics"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "outcome_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "task_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "reference_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "space_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "state_context": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ExternalContext"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "readonly_projection": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Projection"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "Issue": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "owner": {
+          "enum": [
+            "M4.1",
+            "M4.2",
+            "M4.3"
+          ]
+        },
+        "status": {
+          "enum": [
+            "open",
+            "resolved"
+          ]
+        },
+        "severity": {
+          "enum": [
+            "blocking",
+            "warning"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "resolution": {
+          "$ref": "#/$defs/KnownFact"
+        }
+      },
+      "required": [
+        "issue_id",
+        "owner",
+        "status",
+        "severity",
+        "message",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Resolution": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "issue_id",
+        "rationale",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "M4Request": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M4Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "target": {
+          "enum": [
+            "M4",
+            "M4.1",
+            "M4.2",
+            "M4.3"
+          ]
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "request_id",
+        "target",
+        "sources",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "Changes": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "events": {
+              "$ref": "#/$defs/Events"
+            }
+          },
+          "required": [
+            "events"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "mechanics": {
+              "$ref": "#/$defs/Mechanics"
+            }
+          },
+          "required": [
+            "mechanics"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "outcomes": {
+              "$ref": "#/$defs/Outcomes"
+            }
+          },
+          "required": [
+            "outcomes"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "M4Proposal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M4Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "proposal_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "module_id": {
+          "enum": [
+            "M4.1",
+            "M4.2",
+            "M4.3"
+          ]
+        },
+        "source_request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs"
+        },
+        "changes": {
+          "$ref": "#/$defs/Changes"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "minItems": 0
+        },
+        "resolutions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Resolution"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "sources",
+        "context",
+        "changes",
+        "issues",
+        "resolutions"
+      ],
+      "additionalProperties": false
+    },
+    "M4ProposalBatch": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M4ProposalBatch"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "batch_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/M4Proposal"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "batch_id",
+        "proposals"
+      ],
+      "additionalProperties": false
+    },
+    "Receipt": {
+      "type": "object",
+      "properties": {
+        "digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "module_id": {
+          "enum": [
+            "M4.1",
+            "M4.2",
+            "M4.3"
+          ]
+        },
+        "accepted_version": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "digest",
+        "source_request_id",
+        "module_id",
+        "accepted_version"
+      ],
+      "additionalProperties": false
+    },
+    "Consumer": {
+      "type": "object",
+      "properties": {
+        "module_id": {
+          "enum": [
+            "M3",
+            "M5",
+            "M6",
+            "M7",
+            "M8",
+            "M9",
+            "M11",
+            "M12"
+          ]
+        },
+        "result_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_state_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^/(content|sources|issues|display)(/|$)"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "status": {
+          "enum": [
+            "current",
+            "stale"
+          ]
+        }
+      },
+      "required": [
+        "module_id",
+        "result_version",
+        "source_state_version",
+        "read_paths",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "Content": {
+      "type": "object",
+      "properties": {
+        "events": {
+          "$ref": "#/$defs/Events"
+        },
+        "mechanics": {
+          "$ref": "#/$defs/Mechanics"
+        },
+        "outcomes": {
+          "$ref": "#/$defs/Outcomes"
+        }
+      },
+      "required": [
+        "events",
+        "mechanics",
+        "outcomes"
+      ],
+      "additionalProperties": false
+    },
+    "M4State": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M4State"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "owner": {
+          "const": "M4"
+        },
+        "object_type": {
+          "const": "ActionPlan"
+        },
+        "status": {
+          "const": "draft"
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "content": {
+          "$ref": "#/$defs/Content"
+        },
+        "issues": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Issue"
+          }
+        },
+        "accepted_proposals": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Receipt"
+          }
+        },
+        "consumers": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Consumer"
+          }
+        },
+        "display": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "note": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "version",
+        "owner",
+        "object_type",
+        "status",
+        "sources",
+        "content",
+        "issues",
+        "accepted_proposals",
+        "consumers"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/M4Request"
+    },
+    {
+      "$ref": "#/$defs/M4Proposal"
+    },
+    {
+      "$ref": "#/$defs/M4ProposalBatch"
+    },
+    {
+      "$ref": "#/$defs/M4State"
+    }
+  ]
+}

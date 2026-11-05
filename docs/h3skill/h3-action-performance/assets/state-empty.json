@@ -1,0 +1,27 @@
+{
+  "kind": "M4State",
+  "contract_version": "1.0.0",
+  "work_id": "d_cup_transfer",
+  "version": 0,
+  "owner": "M4",
+  "object_type": "ActionPlan",
+  "status": "draft",
+  "sources": {},
+  "content": {
+    "events": {
+      "entities": {},
+      "requirements": {},
+      "items": {}
+    },
+    "mechanics": {
+      "items": {}
+    },
+    "outcomes": {
+      "items": {},
+      "change_requests": {}
+    }
+  },
+  "issues": {},
+  "accepted_proposals": {},
+  "consumers": {}
+}

@@ -1,0 +1,97 @@
+{
+  "kind": "M4ToolResult",
+  "contract_version": "1.0.0",
+  "command": "check",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "physical_feasibility",
+      "media_observation",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/events/items/hold_sock/preconditions/1",
+      "message": "用户未指定最终由解剖左手还是解剖右手持袜；不能由双手脱袜推断，需补充持袜手左右。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M4.1"
+    },
+    {
+      "code": "explicit_unknown",
+      "path": "/changes/events/items/inspect_sock/preconditions/1",
+      "message": "用户未指定最终由解剖左手还是解剖右手持袜；不能由双手脱袜推断，需补充持袜手左右。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M4.1"
+    },
+    {
+      "code": "coverage_unavailable",
+      "path": "/changes/mechanics",
+      "message": "Entry/process/result coverage is not complete",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M4.2"
+    },
+    {
+      "code": "coverage_unavailable",
+      "path": "/changes/outcomes",
+      "message": "Entry/process/result coverage is not complete",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M4.3"
+    }
+  ],
+  "trace": {
+    "call_id": "m4-8122e973017749e5af249dfd3e336056",
+    "parent_module": "M4",
+    "started_at": "2026-11-05T11:04:08.174133+00:00",
+    "finished_at": "2026-11-05T11:04:08.177825+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "artifact": "d0594eb3432efe1e6ef4adc8dfcd7a3bdd21c9471586fe420eb998b29e95c053",
+      "request": "a6a5e51510b2d8d9c261dcfeec2d6d367ca5b60de79e0e38ce05802ed14dd5a4"
+    },
+    "resources": {
+      "references/contracts.json": "e6a1dac15a056365ab42799b0475b79c1049dbe82963b8eddfd02dd333c9c26e",
+      "references/module-registry.json": "0c9ae839740f7ddd82f46fd13e64d680451b22441bc0f5edbe70183d30a993a0"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "sock_opening_events_request"
+    ],
+    "input_versions": [
+      {
+        "request_id": "sock_opening_events_request",
+        "target": "M4.1",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "sock_opening_events_request": {
+        "task_input": "sha256:f3e1f3a95c3b877045336cf7b6e74e765aa2f8447d5e3d084cc468acfc248e50"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  }
+}

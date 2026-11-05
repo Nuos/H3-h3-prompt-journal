@@ -1,0 +1,993 @@
+{
+  "registry_version": "1.0.0",
+  "route_version": "1.0.0",
+  "parent": "M4",
+  "package": "h3-action-performance",
+  "public_children": [
+    "M4.1",
+    "M4.2",
+    "M4.3"
+  ],
+  "domain_libraries_are_public_nodes": false,
+  "modules": {
+    "M4": {
+      "id": "M4",
+      "module_id": "M4",
+      "parent": null,
+      "name": "人物表演、动作链与物理因果",
+      "public": true,
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "goal": "聚合并接受三个子模块的动作语义提案，保持原请求、职责边界与结果可追溯。",
+      "scope": "ActionPlan 父接受、版本及公开路由；不另写与子模块竞争的专业值。",
+      "non_goals": [
+        "绝对排时 M7",
+        "权威状态 M8",
+        "空间 M3",
+        "摄影 M5",
+        "模型标签编译 M11",
+        "生成媒体审计 M12"
+      ],
+      "minimum_inputs": [
+        "action_brief"
+      ],
+      "readonly_inputs": [
+        "compatible external context or explicit unknown"
+      ],
+      "write_scope": [
+        "parent version/receipts/issues/source union; child partitions only through validated proposals"
+      ],
+      "output": "M4State draft",
+      "return_to": "caller",
+      "acceptance": "accept STATE BATCH --requests ORIGINAL_REQUEST_ARRAY",
+      "completion": "已实现的本地合同通过；语义/物理/媒体/全局门槛仍未验证",
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md"
+      ],
+      "route": {
+        "in": "M4Request.target=M4",
+        "out": "M4.1/M4.2/M4.3 route descriptions; agents are not invoked",
+        "on_failure": "M4",
+        "parent_may_route": true
+      },
+      "consumers": [
+        "M5",
+        "M6",
+        "M7",
+        "M8",
+        "M9",
+        "M11",
+        "M12"
+      ],
+      "tests": [
+        "docs/h3skill/tests/m4/test_contract.py",
+        "docs/h3skill/tests/m4/test-results.json"
+      ],
+      "mandatory_rules": {
+        "HC-01": {
+          "rule": "专业职责一致",
+          "implementation": "ActionPlan 父接受、版本及公开路由；不另写与子模块竞争的专业值。"
+        },
+        "HC-02": {
+          "rule": "变化原因一致",
+          "implementation": "父节点负责聚合/版本/拒绝；子节点仅因本分区动作语义改变而修订；领域策略与后端编译分离。"
+        },
+        "HC-03": {
+          "rule": "合理拆分粒度",
+          "implementation": "仅三个公开子模块；舞蹈、剑舞、搏斗、表情、视线、持物作为领域策略，不另造公共节点。"
+        },
+        "LC-01": {
+          "rule": "公开最小合同",
+          "implementation": {
+            "minimum_inputs": [
+              "action_brief"
+            ],
+            "schema": "references/contracts.json",
+            "version": "1.0.0",
+            "unknown": "缺字段失败；显式 unknown 保留未验证"
+          }
+        },
+        "LC-02": {
+          "rule": "共享记录按需读取",
+          "implementation": "事件/机制上下文与带基准版本的 readonly_projection，只读保真；唯一分区写入。"
+        },
+        "LC-03": {
+          "rule": "数据来源可替代",
+          "implementation": "合同兼容的用户/项目/外部资料可直接供给，不要求安装或执行 M1/M2/M3；不把来源声明变成已验证事实。"
+        },
+        "LC-04": {
+          "rule": "依赖显式且可隔离",
+          "implementation": "必需字段和 unknown 行为公开；impact 只沿登记 read_paths 标记 stale；局部失败返回所属模块。"
+        },
+        "LC-05": {
+          "rule": "后端与领域分离",
+          "implementation": "ActionPlan 不含 H3 API、绝对秒数、模型提示词标签或摄影命令；M11 编译，M7 排时。"
+        },
+        "MD-01": {
+          "rule": "独立职责合同",
+          "implementation": {
+            "node": "M4",
+            "parent": null,
+            "minimum_inputs": [
+              "action_brief"
+            ],
+            "output": "M4State draft",
+            "check": "scripts/m4_contract.py check",
+            "resources": [
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/contract-guide.md",
+              "references/audit-and-handoff.md",
+              "references/h3-label-mapping.md"
+            ]
+          }
+        },
+        "MD-02": {
+          "rule": "可组合与可替换",
+          "implementation": "可从兼容公开输入独立返回提案；父接受按字段/来源/版本合同比较，D 夹具不认证真实生成质量。"
+        },
+        "MD-03": {
+          "rule": "唯一字段责任",
+          "implementation": {
+            "writes": [
+              "parent version/receipts/issues/source union; child partitions only through validated proposals"
+            ],
+            "commit_path": "M4.accept",
+            "foreign_change": "仅向责任方发请求，父聚合不重写专业值"
+          }
+        },
+        "MD-04": {
+          "rule": "资源与兼容边界",
+          "implementation": "Python 3.10+ 标准库、所有运行资源随包，不导入兄弟包；破坏性变化改合同版本并显式迁移。"
+        },
+        "RT-01": {
+          "rule": "路由信息完整",
+          "implementation": {
+            "in": "M4Request.target=M4",
+            "out": "M4.1/M4.2/M4.3 route descriptions; agents are not invoked",
+            "on_failure": "M4",
+            "parent_may_route": true
+          }
+        },
+        "RT-02": {
+          "rule": "调度与专业决定分开",
+          "implementation": "route 只定位目标/输入/资源；不生成或删改事件、台词、参考权限。"
+        },
+        "RT-03": {
+          "rule": "信息与资源按需传递",
+          "implementation": "每次 route 只返回目标子模块资源；trace 单列实际读取的 schema/registry 摘要和实际原请求版本。"
+        },
+        "RT-04": {
+          "rule": "失败与修复显式",
+          "implementation": "diagnostics 指定 blocking/status/repair_target；不自动重试创作，不隐式递归或无限回退。"
+        },
+        "RT-05": {
+          "rule": "重试匹配操作效果",
+          "implementation": "只读检查可重试；父接受按提案 ID+规范化摘要精确幂等；创作修订用新 ID 和当前版本。"
+        },
+        "RT-06": {
+          "rule": "调用与变更可追溯",
+          "implementation": "call_id、operation_id、request_ids、输入/资源摘要、版本、适用性、时间、结果/错误/幂等记录；read_paths 驱动 stale。"
+        }
+      },
+      "runtime_trace": {
+        "identity": [
+          "call_id",
+          "parent_module",
+          "operation_id",
+          "request_ids"
+        ],
+        "versions": [
+          "schema_version",
+          "package_version",
+          "route_version",
+          "registry_version",
+          "input_versions",
+          "source_versions",
+          "revision"
+        ],
+        "evidence": [
+          "input_digests",
+          "resources",
+          "started_at",
+          "finished_at",
+          "applicability"
+        ],
+        "result": [
+          "output_status",
+          "error_codes",
+          "retry",
+          "side_effects"
+        ]
+      }
+    },
+    "M4.1": {
+      "id": "M4.1",
+      "parent": "M4",
+      "name": "表演事件与前提",
+      "public": true,
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "goal": "表演事件、目标、可见前提、参与者与稳定道具 ID、事件依赖；不写机制和结果。",
+      "scope": "表演事件、目标、可见前提、参与者与稳定道具 ID、事件依赖；不写机制和结果。",
+      "non_goals": [
+        "绝对时间排程归 M7",
+        "权威状态账本归 M8",
+        "空间布局归 M3",
+        "摄影/镜头归 M5",
+        "不执行 H3、物理求解或媒体质量认证"
+      ],
+      "route": {
+        "in": "M4Request.target=M4.1",
+        "out": "M4Proposal -> M4 parent accept",
+        "on_failure": "M4.1",
+        "parent_may_route": true
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/performance-events.md",
+        "references/audit-and-handoff.md"
+      ],
+      "runtime_trace": {
+        "identity": [
+          "call_id",
+          "parent_module",
+          "operation_id",
+          "request_ids"
+        ],
+        "versions": [
+          "schema_version",
+          "package_version",
+          "route_version",
+          "registry_version",
+          "input_versions",
+          "source_versions",
+          "revision"
+        ],
+        "evidence": [
+          "input_digests",
+          "resources",
+          "started_at",
+          "finished_at",
+          "applicability"
+        ],
+        "result": [
+          "output_status",
+          "error_codes",
+          "retry",
+          "side_effects"
+        ]
+      },
+      "tests": [
+        "docs/h3skill/tests/m4/test_contract.py",
+        "docs/h3skill/tests/m4/test-results.json"
+      ],
+      "consumers": [
+        "M4",
+        "M5",
+        "M6",
+        "M7",
+        "M8",
+        "M9",
+        "M11",
+        "M12"
+      ],
+      "module_id": "M4.1",
+      "contract_details": {
+        "minimum_inputs": {
+          "minimum_inputs": [
+            "action_brief"
+          ],
+          "unknown": "缺少字段会失败；明确 {state:unknown,reason:...} 可保留为 unverified；不得补造来源"
+        },
+        "output": {
+          "output": "M4Proposal",
+          "partition": "events",
+          "units": "事件/参与者为稳定 ID；相对依赖为有向无环图；状态为显式字符串属性值，不是坐标或秒数"
+        },
+        "ownership_and_sources": {
+          "readonly_inputs": [
+            "M1 goals",
+            "M2 approved reference roles",
+            "M3 readonly space",
+            "M8 readonly starting state"
+          ],
+          "write_scope": [
+            "/content/events"
+          ],
+          "source_version": "原请求 base_version、sources.version 与 readonly_projection.source_version"
+        },
+        "completion": {
+          "completion": "结构检查通过且必需信息已给出或明确 unknown；父接受仍返回 draft/unverified",
+          "unverified": [
+            "语义意图覆盖",
+            "物理可行性",
+            "媒体观察",
+            "生成质量",
+            "G0-G4"
+          ]
+        },
+        "parent_acceptance": {
+          "parent_acceptance": "实际原请求完全保真、所有权、原子合并、来源 ID 不可覆写、版本非过期、只读投影一致、无开放阻断项"
+        },
+        "failure_return": {
+          "failure_return": "所属子模块修复；跨分区矛盾退回 M4 协调；不得静默删除已接受需求"
+        },
+        "compatibility": {
+          "compatibility": "只接受 contract_version=1.0.0；不隐式迁移旧版本；更新须新请求/提案 ID 和当前 base_version"
+        },
+        "effects_and_retry": {
+          "side_effects": "仅 stdout；不改文件、不联网、不调用模型",
+          "idempotency": "提案规范化 JSON SHA256；同 ID 同摘要精确重放不增版本；同 ID 不同摘要拒绝"
+        }
+      },
+      "minimum_inputs": [
+        "action_brief"
+      ],
+      "write_scope": [
+        "/content/events"
+      ],
+      "output": "M4Proposal changes.events",
+      "return_to": "M4.accept",
+      "acceptance": "actual original request + current parent version + atomic candidate validation",
+      "mandatory_rules": {
+        "HC-01": {
+          "rule": "专业职责一致",
+          "implementation": "表演事件、目标、可见前提、参与者与稳定道具 ID、事件依赖；不写机制和结果。"
+        },
+        "HC-02": {
+          "rule": "变化原因一致",
+          "implementation": "父节点负责聚合/版本/拒绝；子节点仅因本分区动作语义改变而修订；领域策略与后端编译分离。"
+        },
+        "HC-03": {
+          "rule": "合理拆分粒度",
+          "implementation": "仅三个公开子模块；舞蹈、剑舞、搏斗、表情、视线、持物作为领域策略，不另造公共节点。"
+        },
+        "LC-01": {
+          "rule": "公开最小合同",
+          "implementation": {
+            "minimum_inputs": [
+              "action_brief"
+            ],
+            "schema": "references/contracts.json",
+            "version": "1.0.0",
+            "unknown": "缺字段失败；显式 unknown 保留未验证"
+          }
+        },
+        "LC-02": {
+          "rule": "共享记录按需读取",
+          "implementation": "事件/机制上下文与带基准版本的 readonly_projection，只读保真；唯一分区写入。"
+        },
+        "LC-03": {
+          "rule": "数据来源可替代",
+          "implementation": "合同兼容的用户/项目/外部资料可直接供给，不要求安装或执行 M1/M2/M3；不把来源声明变成已验证事实。"
+        },
+        "LC-04": {
+          "rule": "依赖显式且可隔离",
+          "implementation": "必需字段和 unknown 行为公开；impact 只沿登记 read_paths 标记 stale；局部失败返回所属模块。"
+        },
+        "LC-05": {
+          "rule": "后端与领域分离",
+          "implementation": "ActionPlan 不含 H3 API、绝对秒数、模型提示词标签或摄影命令；M11 编译，M7 排时。"
+        },
+        "MD-01": {
+          "rule": "独立职责合同",
+          "implementation": {
+            "node": "M4.1",
+            "parent": "M4",
+            "minimum_inputs": [
+              "action_brief"
+            ],
+            "output": "M4Proposal changes.events",
+            "check": "scripts/m4_contract.py check",
+            "resources": [
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/contract-guide.md",
+              "references/performance-events.md",
+              "references/audit-and-handoff.md"
+            ]
+          }
+        },
+        "MD-02": {
+          "rule": "可组合与可替换",
+          "implementation": "可从兼容公开输入独立返回提案；父接受按字段/来源/版本合同比较，D 夹具不认证真实生成质量。"
+        },
+        "MD-03": {
+          "rule": "唯一字段责任",
+          "implementation": {
+            "writes": [
+              "/content/events"
+            ],
+            "commit_path": "M4.accept",
+            "foreign_change": "仅向责任方发请求，父聚合不重写专业值"
+          }
+        },
+        "MD-04": {
+          "rule": "资源与兼容边界",
+          "implementation": "Python 3.10+ 标准库、所有运行资源随包，不导入兄弟包；破坏性变化改合同版本并显式迁移。"
+        },
+        "RT-01": {
+          "rule": "路由信息完整",
+          "implementation": {
+            "in": "M4Request.target=M4.1",
+            "out": "M4Proposal -> M4 parent accept",
+            "on_failure": "M4.1",
+            "parent_may_route": true
+          }
+        },
+        "RT-02": {
+          "rule": "调度与专业决定分开",
+          "implementation": "route 只定位目标/输入/资源；不生成或删改事件、台词、参考权限。"
+        },
+        "RT-03": {
+          "rule": "信息与资源按需传递",
+          "implementation": "每次 route 只返回目标子模块资源；trace 单列实际读取的 schema/registry 摘要和实际原请求版本。"
+        },
+        "RT-04": {
+          "rule": "失败与修复显式",
+          "implementation": "diagnostics 指定 blocking/status/repair_target；不自动重试创作，不隐式递归或无限回退。"
+        },
+        "RT-05": {
+          "rule": "重试匹配操作效果",
+          "implementation": "只读检查可重试；父接受按提案 ID+规范化摘要精确幂等；创作修订用新 ID 和当前版本。"
+        },
+        "RT-06": {
+          "rule": "调用与变更可追溯",
+          "implementation": "call_id、operation_id、request_ids、输入/资源摘要、版本、适用性、时间、结果/错误/幂等记录；read_paths 驱动 stale。"
+        }
+      }
+    },
+    "M4.2": {
+      "id": "M4.2",
+      "parent": "M4",
+      "name": "动作机制与交互过程",
+      "public": true,
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "goal": "动作过程、支撑、发力、路径与接触；表情/视线允许有理由的不适用。",
+      "scope": "动作过程、支撑、发力、路径与接触；表情/视线允许有理由的不适用。",
+      "non_goals": [
+        "绝对时间排程归 M7",
+        "权威状态账本归 M8",
+        "空间布局归 M3",
+        "摄影/镜头归 M5",
+        "不执行 H3、物理求解或媒体质量认证"
+      ],
+      "route": {
+        "in": "M4Request.target=M4.2",
+        "out": "M4Proposal -> M4 parent accept",
+        "on_failure": "M4.2",
+        "parent_may_route": true
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/action-mechanics.md",
+        "references/audit-and-handoff.md"
+      ],
+      "runtime_trace": {
+        "identity": [
+          "call_id",
+          "parent_module",
+          "operation_id",
+          "request_ids"
+        ],
+        "versions": [
+          "schema_version",
+          "package_version",
+          "route_version",
+          "registry_version",
+          "input_versions",
+          "source_versions",
+          "revision"
+        ],
+        "evidence": [
+          "input_digests",
+          "resources",
+          "started_at",
+          "finished_at",
+          "applicability"
+        ],
+        "result": [
+          "output_status",
+          "error_codes",
+          "retry",
+          "side_effects"
+        ]
+      },
+      "tests": [
+        "docs/h3skill/tests/m4/test_contract.py",
+        "docs/h3skill/tests/m4/test-results.json"
+      ],
+      "consumers": [
+        "M4",
+        "M5",
+        "M6",
+        "M7",
+        "M8",
+        "M9",
+        "M11",
+        "M12"
+      ],
+      "module_id": "M4.2",
+      "contract_details": {
+        "minimum_inputs": {
+          "minimum_inputs": [
+            "event_context",
+            "mechanics_brief"
+          ],
+          "unknown": "缺少字段会失败；明确 {state:unknown,reason:...} 可保留为 unverified；不得补造来源"
+        },
+        "output": {
+          "output": "M4Proposal",
+          "partition": "mechanics",
+          "units": "事件/参与者为稳定 ID；相对依赖为有向无环图；状态为显式字符串属性值，不是坐标或秒数"
+        },
+        "ownership_and_sources": {
+          "readonly_inputs": [
+            "M4.1 event projection",
+            "M2 permitted mechanism reference",
+            "M3 readonly contact space"
+          ],
+          "write_scope": [
+            "/content/mechanics"
+          ],
+          "source_version": "原请求 base_version、sources.version 与 readonly_projection.source_version"
+        },
+        "completion": {
+          "completion": "结构检查通过且必需信息已给出或明确 unknown；父接受仍返回 draft/unverified",
+          "unverified": [
+            "语义意图覆盖",
+            "物理可行性",
+            "媒体观察",
+            "生成质量",
+            "G0-G4"
+          ]
+        },
+        "parent_acceptance": {
+          "parent_acceptance": "实际原请求完全保真、所有权、原子合并、来源 ID 不可覆写、版本非过期、只读投影一致、无开放阻断项"
+        },
+        "failure_return": {
+          "failure_return": "所属子模块修复；跨分区矛盾退回 M4 协调；不得静默删除已接受需求"
+        },
+        "compatibility": {
+          "compatibility": "只接受 contract_version=1.0.0；不隐式迁移旧版本；更新须新请求/提案 ID 和当前 base_version"
+        },
+        "effects_and_retry": {
+          "side_effects": "仅 stdout；不改文件、不联网、不调用模型",
+          "idempotency": "提案规范化 JSON SHA256；同 ID 同摘要精确重放不增版本；同 ID 不同摘要拒绝"
+        }
+      },
+      "minimum_inputs": [
+        "event_context",
+        "mechanics_brief"
+      ],
+      "write_scope": [
+        "/content/mechanics"
+      ],
+      "output": "M4Proposal changes.mechanics",
+      "return_to": "M4.accept",
+      "acceptance": "actual original request + current parent version + atomic candidate validation",
+      "mandatory_rules": {
+        "HC-01": {
+          "rule": "专业职责一致",
+          "implementation": "动作过程、支撑、发力、路径与接触；表情/视线允许有理由的不适用。"
+        },
+        "HC-02": {
+          "rule": "变化原因一致",
+          "implementation": "父节点负责聚合/版本/拒绝；子节点仅因本分区动作语义改变而修订；领域策略与后端编译分离。"
+        },
+        "HC-03": {
+          "rule": "合理拆分粒度",
+          "implementation": "仅三个公开子模块；舞蹈、剑舞、搏斗、表情、视线、持物作为领域策略，不另造公共节点。"
+        },
+        "LC-01": {
+          "rule": "公开最小合同",
+          "implementation": {
+            "minimum_inputs": [
+              "event_context",
+              "mechanics_brief"
+            ],
+            "schema": "references/contracts.json",
+            "version": "1.0.0",
+            "unknown": "缺字段失败；显式 unknown 保留未验证"
+          }
+        },
+        "LC-02": {
+          "rule": "共享记录按需读取",
+          "implementation": "事件/机制上下文与带基准版本的 readonly_projection，只读保真；唯一分区写入。"
+        },
+        "LC-03": {
+          "rule": "数据来源可替代",
+          "implementation": "合同兼容的用户/项目/外部资料可直接供给，不要求安装或执行 M1/M2/M3；不把来源声明变成已验证事实。"
+        },
+        "LC-04": {
+          "rule": "依赖显式且可隔离",
+          "implementation": "必需字段和 unknown 行为公开；impact 只沿登记 read_paths 标记 stale；局部失败返回所属模块。"
+        },
+        "LC-05": {
+          "rule": "后端与领域分离",
+          "implementation": "ActionPlan 不含 H3 API、绝对秒数、模型提示词标签或摄影命令；M11 编译，M7 排时。"
+        },
+        "MD-01": {
+          "rule": "独立职责合同",
+          "implementation": {
+            "node": "M4.2",
+            "parent": "M4",
+            "minimum_inputs": [
+              "event_context",
+              "mechanics_brief"
+            ],
+            "output": "M4Proposal changes.mechanics",
+            "check": "scripts/m4_contract.py check",
+            "resources": [
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/contract-guide.md",
+              "references/action-mechanics.md",
+              "references/audit-and-handoff.md"
+            ]
+          }
+        },
+        "MD-02": {
+          "rule": "可组合与可替换",
+          "implementation": "可从兼容公开输入独立返回提案；父接受按字段/来源/版本合同比较，D 夹具不认证真实生成质量。"
+        },
+        "MD-03": {
+          "rule": "唯一字段责任",
+          "implementation": {
+            "writes": [
+              "/content/mechanics"
+            ],
+            "commit_path": "M4.accept",
+            "foreign_change": "仅向责任方发请求，父聚合不重写专业值"
+          }
+        },
+        "MD-04": {
+          "rule": "资源与兼容边界",
+          "implementation": "Python 3.10+ 标准库、所有运行资源随包，不导入兄弟包；破坏性变化改合同版本并显式迁移。"
+        },
+        "RT-01": {
+          "rule": "路由信息完整",
+          "implementation": {
+            "in": "M4Request.target=M4.2",
+            "out": "M4Proposal -> M4 parent accept",
+            "on_failure": "M4.2",
+            "parent_may_route": true
+          }
+        },
+        "RT-02": {
+          "rule": "调度与专业决定分开",
+          "implementation": "route 只定位目标/输入/资源；不生成或删改事件、台词、参考权限。"
+        },
+        "RT-03": {
+          "rule": "信息与资源按需传递",
+          "implementation": "每次 route 只返回目标子模块资源；trace 单列实际读取的 schema/registry 摘要和实际原请求版本。"
+        },
+        "RT-04": {
+          "rule": "失败与修复显式",
+          "implementation": "diagnostics 指定 blocking/status/repair_target；不自动重试创作，不隐式递归或无限回退。"
+        },
+        "RT-05": {
+          "rule": "重试匹配操作效果",
+          "implementation": "只读检查可重试；父接受按提案 ID+规范化摘要精确幂等；创作修订用新 ID 和当前版本。"
+        },
+        "RT-06": {
+          "rule": "调用与变更可追溯",
+          "implementation": "call_id、operation_id、request_ids、输入/资源摘要、版本、适用性、时间、结果/错误/幂等记录；read_paths 驱动 stale。"
+        }
+      }
+    },
+    "M4.3": {
+      "id": "M4.3",
+      "parent": "M4",
+      "name": "结果与动作接续",
+      "public": true,
+      "contract_version": "1.0.0",
+      "implementation_version": "0.1.0",
+      "goal": "可见结果、出态、结果继承与接续、向其他所有者发出请求。",
+      "scope": "可见结果、出态、结果继承与接续、向其他所有者发出请求。",
+      "non_goals": [
+        "绝对时间排程归 M7",
+        "权威状态账本归 M8",
+        "空间布局归 M3",
+        "摄影/镜头归 M5",
+        "不执行 H3、物理求解或媒体质量认证"
+      ],
+      "route": {
+        "in": "M4Request.target=M4.3",
+        "out": "M4Proposal -> M4 parent accept",
+        "on_failure": "M4.3",
+        "parent_may_route": true
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/outcomes-and-continuation.md",
+        "references/audit-and-handoff.md"
+      ],
+      "runtime_trace": {
+        "identity": [
+          "call_id",
+          "parent_module",
+          "operation_id",
+          "request_ids"
+        ],
+        "versions": [
+          "schema_version",
+          "package_version",
+          "route_version",
+          "registry_version",
+          "input_versions",
+          "source_versions",
+          "revision"
+        ],
+        "evidence": [
+          "input_digests",
+          "resources",
+          "started_at",
+          "finished_at",
+          "applicability"
+        ],
+        "result": [
+          "output_status",
+          "error_codes",
+          "retry",
+          "side_effects"
+        ]
+      },
+      "tests": [
+        "docs/h3skill/tests/m4/test_contract.py",
+        "docs/h3skill/tests/m4/test-results.json"
+      ],
+      "consumers": [
+        "M4",
+        "M5",
+        "M6",
+        "M7",
+        "M8",
+        "M9",
+        "M11",
+        "M12"
+      ],
+      "module_id": "M4.3",
+      "contract_details": {
+        "minimum_inputs": {
+          "minimum_inputs": [
+            "event_context",
+            "mechanics_context",
+            "outcome_brief"
+          ],
+          "unknown": "缺少字段会失败；明确 {state:unknown,reason:...} 可保留为 unverified；不得补造来源"
+        },
+        "output": {
+          "output": "M4Proposal",
+          "partition": "outcomes",
+          "units": "事件/参与者为稳定 ID；相对依赖为有向无环图；状态为显式字符串属性值，不是坐标或秒数"
+        },
+        "ownership_and_sources": {
+          "readonly_inputs": [
+            "M4.1 event projection",
+            "M4.2 mechanism projection",
+            "M8 readonly state"
+          ],
+          "write_scope": [
+            "/content/outcomes"
+          ],
+          "source_version": "原请求 base_version、sources.version 与 readonly_projection.source_version"
+        },
+        "completion": {
+          "completion": "结构检查通过且必需信息已给出或明确 unknown；父接受仍返回 draft/unverified",
+          "unverified": [
+            "语义意图覆盖",
+            "物理可行性",
+            "媒体观察",
+            "生成质量",
+            "G0-G4"
+          ]
+        },
+        "parent_acceptance": {
+          "parent_acceptance": "实际原请求完全保真、所有权、原子合并、来源 ID 不可覆写、版本非过期、只读投影一致、无开放阻断项"
+        },
+        "failure_return": {
+          "failure_return": "所属子模块修复；跨分区矛盾退回 M4 协调；不得静默删除已接受需求"
+        },
+        "compatibility": {
+          "compatibility": "只接受 contract_version=1.0.0；不隐式迁移旧版本；更新须新请求/提案 ID 和当前 base_version"
+        },
+        "effects_and_retry": {
+          "side_effects": "仅 stdout；不改文件、不联网、不调用模型",
+          "idempotency": "提案规范化 JSON SHA256；同 ID 同摘要精确重放不增版本；同 ID 不同摘要拒绝"
+        }
+      },
+      "minimum_inputs": [
+        "event_context",
+        "mechanics_context",
+        "outcome_brief"
+      ],
+      "write_scope": [
+        "/content/outcomes"
+      ],
+      "output": "M4Proposal changes.outcomes",
+      "return_to": "M4.accept",
+      "acceptance": "actual original request + current parent version + atomic candidate validation",
+      "mandatory_rules": {
+        "HC-01": {
+          "rule": "专业职责一致",
+          "implementation": "可见结果、出态、结果继承与接续、向其他所有者发出请求。"
+        },
+        "HC-02": {
+          "rule": "变化原因一致",
+          "implementation": "父节点负责聚合/版本/拒绝；子节点仅因本分区动作语义改变而修订；领域策略与后端编译分离。"
+        },
+        "HC-03": {
+          "rule": "合理拆分粒度",
+          "implementation": "仅三个公开子模块；舞蹈、剑舞、搏斗、表情、视线、持物作为领域策略，不另造公共节点。"
+        },
+        "LC-01": {
+          "rule": "公开最小合同",
+          "implementation": {
+            "minimum_inputs": [
+              "event_context",
+              "mechanics_context",
+              "outcome_brief"
+            ],
+            "schema": "references/contracts.json",
+            "version": "1.0.0",
+            "unknown": "缺字段失败；显式 unknown 保留未验证"
+          }
+        },
+        "LC-02": {
+          "rule": "共享记录按需读取",
+          "implementation": "事件/机制上下文与带基准版本的 readonly_projection，只读保真；唯一分区写入。"
+        },
+        "LC-03": {
+          "rule": "数据来源可替代",
+          "implementation": "合同兼容的用户/项目/外部资料可直接供给，不要求安装或执行 M1/M2/M3；不把来源声明变成已验证事实。"
+        },
+        "LC-04": {
+          "rule": "依赖显式且可隔离",
+          "implementation": "必需字段和 unknown 行为公开；impact 只沿登记 read_paths 标记 stale；局部失败返回所属模块。"
+        },
+        "LC-05": {
+          "rule": "后端与领域分离",
+          "implementation": "ActionPlan 不含 H3 API、绝对秒数、模型提示词标签或摄影命令；M11 编译，M7 排时。"
+        },
+        "MD-01": {
+          "rule": "独立职责合同",
+          "implementation": {
+            "node": "M4.3",
+            "parent": "M4",
+            "minimum_inputs": [
+              "event_context",
+              "mechanics_context",
+              "outcome_brief"
+            ],
+            "output": "M4Proposal changes.outcomes",
+            "check": "scripts/m4_contract.py check",
+            "resources": [
+              "references/contracts.json",
+              "references/module-registry.json",
+              "references/contract-guide.md",
+              "references/outcomes-and-continuation.md",
+              "references/audit-and-handoff.md"
+            ]
+          }
+        },
+        "MD-02": {
+          "rule": "可组合与可替换",
+          "implementation": "可从兼容公开输入独立返回提案；父接受按字段/来源/版本合同比较，D 夹具不认证真实生成质量。"
+        },
+        "MD-03": {
+          "rule": "唯一字段责任",
+          "implementation": {
+            "writes": [
+              "/content/outcomes"
+            ],
+            "commit_path": "M4.accept",
+            "foreign_change": "仅向责任方发请求，父聚合不重写专业值"
+          }
+        },
+        "MD-04": {
+          "rule": "资源与兼容边界",
+          "implementation": "Python 3.10+ 标准库、所有运行资源随包，不导入兄弟包；破坏性变化改合同版本并显式迁移。"
+        },
+        "RT-01": {
+          "rule": "路由信息完整",
+          "implementation": {
+            "in": "M4Request.target=M4.3",
+            "out": "M4Proposal -> M4 parent accept",
+            "on_failure": "M4.3",
+            "parent_may_route": true
+          }
+        },
+        "RT-02": {
+          "rule": "调度与专业决定分开",
+          "implementation": "route 只定位目标/输入/资源；不生成或删改事件、台词、参考权限。"
+        },
+        "RT-03": {
+          "rule": "信息与资源按需传递",
+          "implementation": "每次 route 只返回目标子模块资源；trace 单列实际读取的 schema/registry 摘要和实际原请求版本。"
+        },
+        "RT-04": {
+          "rule": "失败与修复显式",
+          "implementation": "diagnostics 指定 blocking/status/repair_target；不自动重试创作，不隐式递归或无限回退。"
+        },
+        "RT-05": {
+          "rule": "重试匹配操作效果",
+          "implementation": "只读检查可重试；父接受按提案 ID+规范化摘要精确幂等；创作修订用新 ID 和当前版本。"
+        },
+        "RT-06": {
+          "rule": "调用与变更可追溯",
+          "implementation": "call_id、operation_id、request_ids、输入/资源摘要、版本、适用性、时间、结果/错误/幂等记录；read_paths 驱动 stale。"
+        }
+      }
+    }
+  },
+  "status_model": {
+    "validation": [
+      "pass",
+      "fail",
+      "unverified",
+      "not_applicable",
+      "stale"
+    ],
+    "execution": [
+      "completed",
+      "error",
+      "not_invoked"
+    ]
+  },
+  "M9_handoff": "M9 receives action boundaries and indivisible process constraints via the textual audit/handoff report. No structured ChangeRequest to M9 in contract 1.0.0; consumers can register M9 read paths.",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "classification": "D: repository implementation design, not an official API, case observation or physics model",
+  "commit_mode": "child-proposal-parent-accept",
+  "state_owner": "M4",
+  "object_type": "ActionPlan",
+  "state_status": "draft",
+  "resources": {
+    "contracts": [
+      "scripts/m4_contract.py",
+      "references/contracts.json",
+      "references/module-registry.json",
+      "references/contract-guide.md"
+    ],
+    "domain": [
+      "references/performance-events.md",
+      "references/action-mechanics.md",
+      "references/outcomes-and-continuation.md"
+    ],
+    "protocol": [
+      "references/h3-label-mapping.md",
+      "references/h3-base-official.txt",
+      "references/h3-ref-official.txt",
+      "references/h3-protocol-source.json"
+    ],
+    "audit": [
+      "references/audit-and-handoff.md",
+      "references/case-evidence.md",
+      "references/case-index.json",
+      "references/provenance-and-license.md"
+    ]
+  },
+  "versions": {
+    "compatibility": "Exact contract_version 1.0.0 only. New writes require current base_version.",
+    "breaking_change": "Use a new contract version and an explicit caller-reviewed migration; no silent conversion."
+  },
+  "effects": {
+    "filesystem": "Read JSON and bundled definitions; emit only stdout.",
+    "network": "none",
+    "generation": "none",
+    "retry": "Exact accepted proposal ID and digest is an idempotent replay. Revisions require a new ID and current version."
+  }
+}

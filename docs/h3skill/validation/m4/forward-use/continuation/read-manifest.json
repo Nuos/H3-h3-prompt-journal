@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "task": "m4_forward_use_continuation",
+  "repository_root": "/workspace/scratch/429498da5425/H3-h3-prompt-journal",
+  "requested_case_revision": "545a99015cfa00a6f07ee05d1d0f21e09d89d46c",
+  "hash_algorithm": "SHA256",
+  "hash_scope": "complete source-file bytes, not excerpt-only bytes",
+  "files": [
+    {
+      "path": "docs/h3skill/h3-action-performance/SKILL.md",
+      "source": "working_tree",
+      "sha256": "c5e43b4763edf0499907d0de0f561c049cb7631d94cb5546b48834c40b77e2e7",
+      "size_bytes": 10521,
+      "read_scope": {
+        "kind": "full"
+      },
+      "note": "完整文件字节已读取；较长工具输出出现过展示截断，不声称每次展示均完整。"
+    },
+    {
+      "path": "docs/h3skill/validation/m4/forward-use/continuation/input.md",
+      "source": "working_tree",
+      "sha256": "6609954d6c84e301c3640de43ed784c684ffd736e8c1b262a774a96e18826978",
+      "size_bytes": 2241,
+      "read_scope": {
+        "kind": "full"
+      },
+      "note": "完整文件字节已读取；较长工具输出出现过展示截断，不声称每次展示均完整。"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/contract-guide.md",
+      "source": "working_tree",
+      "sha256": "255c30b23b0ffb2445ff56d20a7d04a04aa57781a1bc4f3426e3f41f8ccf3a5a",
+      "size_bytes": 12796,
+      "read_scope": {
+        "kind": "full"
+      },
+      "note": "完整文件字节已读取；较长工具输出出现过展示截断，不声称每次展示均完整。"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/outcomes-and-continuation.md",
+      "source": "working_tree",
+      "sha256": "6cacc006d4c0fa889f50096213383c0fb87617ac4f07945124d54825fa7bb6a3",
+      "size_bytes": 6461,
+      "read_scope": {
+        "kind": "full"
+      },
+      "note": "完整文件字节已读取；较长工具输出出现过展示截断，不声称每次展示均完整。"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/audit-and-handoff.md",
+      "source": "working_tree",
+      "sha256": "0123dc0cfba256887467484855c76dc5536b803df6b3c8575fdc92e3a66cee3f",
+      "size_bytes": 11559,
+      "read_scope": {
+        "kind": "full"
+      },
+      "note": "完整文件字节已读取；较长工具输出出现过展示截断，不声称每次展示均完整。"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/h3-label-mapping.md",
+      "source": "working_tree",
+      "sha256": "370cb61fd45d3debdd8ea2409edfc22447af421379d3bfde6bf3cc51f37d7c2c",
+      "size_bytes": 14738,
+      "read_scope": {
+        "kind": "full"
+      },
+      "note": "完整文件字节已读取；较长工具输出出现过展示截断，不声称每次展示均完整。"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/performance-events.md",
+      "source": "working_tree",
+      "sha256": "fca8067f809bc24f738389ff3f3c92df2c65ecf40852f3f29422ef6820fbafe2",
+      "size_bytes": 7543,
+      "read_scope": {
+        "kind": "full"
+      },
+      "note": "完整文件字节已读取；较长工具输出出现过展示截断，不声称每次展示均完整。"
+    },
+    {
+      "path": "docs/h3skill/h3-action-performance/references/action-mechanics.md",
+      "source": "working_tree",
+      "sha256": "254a481e59ad26dfa4ff51780f0969eae83aba1c036450b903cdb86bb2b29999",
+      "size_bytes": 7471,
+      "read_scope": {
+        "kind": "full"
+      },
+      "note": "完整文件字节已读取；较长工具输出出现过展示截断，不声称每次展示均完整。"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "source": "git_blob",
+      "revision": "545a99015cfa00a6f07ee05d1d0f21e09d89d46c",
+      "sha256": "1b7dcf449f3536b5f3af859351baeb394c3663624648e8ae92a5f5a4b54983a1",
+      "size_bytes": 22179,
+      "read_scope": {
+        "kind": "excerpts",
+        "line_numbering": "1-based inclusive",
+        "selected_line_ranges": [
+          [
+            1,
+            11
+          ],
+          [
+            17,
+            26
+          ],
+          [
+            33,
+            36
+          ],
+          [
+            62,
+            67
+          ],
+          [
+            90,
+            93
+          ],
+          [
+            100,
+            103
+          ],
+          [
+            108,
+            111
+          ],
+          [
+            115,
+            118
+          ],
+          [
+            125,
+            128
+          ],
+          [
+            131,
+            138
+          ],
+          [
+            140,
+            172
+          ],
+          [
+            195,
+            203
+          ],
+          [
+            212,
+            218
+          ],
+          [
+            234,
+            245
+          ],
+          [
+            253,
+            256
+          ],
+          [
+            258,
+            261
+          ],
+          [
+            272,
+            276
+          ],
+          [
+            280,
+            283
+          ],
+          [
+            286,
+            294
+          ],
+          [
+            296,
+            299
+          ],
+          [
+            302,
+            305
+          ],
+          [
+            307,
+            312
+          ],
+          [
+            329,
+            332
+          ],
+          [
+            335,
+            338
+          ],
+          [
+            345,
+            346
+          ]
+        ]
+      },
+      "byte_access": "Full blob read for SHA256 and line-keyword scan; selected excerpts returned for semantic review.",
+      "note": "上述范围是工具实际选取输出的行范围；工具结果发生展示截断，因此不声称所有选取行均被完整审阅。结论仅使用已显示的来源内容。"
+    }
+  ],
+  "notes": [
+    "清单记录本次实际读取的输入、技能和案例来源；生成的 output.md 与本清单不是来源文件。",
+    "完整读取指文件字节读取范围；语义论证不超出实际可见内容。案例文件单独列出选取的片段范围和展示截断限制。",
+    "未联网，未读取 tests 或其他试用输出，未运行 H3 或媒体审计，未修改技能或其他仓库文件。"
+  ]
+}

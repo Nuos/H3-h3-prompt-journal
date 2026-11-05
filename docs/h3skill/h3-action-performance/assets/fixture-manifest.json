@@ -1,0 +1,24 @@
+{
+  "classification": "D — synthetic design fixtures",
+  "not_evidence": [
+    "case-studies observation",
+    "official MiniMax example",
+    "media verification",
+    "physical feasibility"
+  ],
+  "source_policy": "All known sample assertions explicitly reference fixture_d. Minimal unknown request has no fabricated source.",
+  "files": [
+    "request-m4-1.json",
+    "request-m4-2.json",
+    "request-m4-3.json",
+    "proposal-m4-1.json",
+    "proposal-m4-2.json",
+    "proposal-m4-3.json",
+    "requests.json",
+    "proposal-batch.json",
+    "state-empty.json",
+    "request-minimal-m4-2.json",
+    "request-m4.json"
+  ],
+  "intent": "Exercise public contracts only; do not treat sample motion as a validated physical strategy."
+}

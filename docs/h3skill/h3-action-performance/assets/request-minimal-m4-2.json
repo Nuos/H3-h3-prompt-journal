@@ -1,0 +1,19 @@
+{
+  "kind": "M4Request",
+  "contract_version": "1.0.0",
+  "request_id": "d_minimal_external",
+  "target": "M4.2",
+  "work_id": "d_external",
+  "base_version": 0,
+  "sources": {},
+  "inputs": {
+    "event_context": {
+      "state": "unknown",
+      "reason": "外部调用尚未提供事件表。"
+    },
+    "mechanics_brief": {
+      "state": "unknown",
+      "reason": "仅检查最小信封，不推断动作内容。"
+    }
+  }
+}

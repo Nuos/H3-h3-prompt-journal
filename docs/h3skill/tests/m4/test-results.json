@@ -1,0 +1,60 @@
+{
+  "classification": "D design fixtures; local deterministic implementation tests",
+  "started_at": "2026-11-05T10:56:59.624711+00:00",
+  "finished_at": "2026-11-05T10:57:00.209623+00:00",
+  "duration_seconds": 0.5845,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "command": "python docs/h3skill/tests/m4/run_tests.py",
+  "tests_run": 54,
+  "failures": 0,
+  "errors": 0,
+  "skips": [
+    {
+      "test": "test_asset_contracts_are_valid_json_schema_if_validator_available (test_contract.PublicContractTests.test_asset_contracts_are_valid_json_schema_if_validator_available)",
+      "reason": "Optional jsonschema absent; bundled standard-library validator is exercised above"
+    }
+  ],
+  "status": "pass",
+  "scope": [
+    "standalone children",
+    "atomic composition",
+    "actual-request fidelity",
+    "ownership",
+    "unknown/not_applicable",
+    "event DAG",
+    "contact IDs",
+    "state-token inheritance",
+    "idempotency",
+    "nondeletion",
+    "impact",
+    "portable copy",
+    "strict JSON"
+  ],
+  "not_verified": [
+    "natural-language intent",
+    "physical feasibility",
+    "media observations",
+    "H3 execution",
+    "G0-G4"
+  ],
+  "file_sha256": {
+    "h3-action-performance/scripts/m4_contract.py": "7993ee1edbbcc275b2b3449b9759113ee453c54feb98993e4d30913d0db77f5f",
+    "h3-action-performance/references/contracts.json": "5561fd66ae2d2ad37ffd980cf677af29e0939325e45d528ca5208a76b13067bd",
+    "h3-action-performance/references/module-registry.json": "17a6ac5cfec08432a6bebd769d490c5b032e59dd84df400fcaf5e77c77ef2be9",
+    "h3-action-performance/references/contract-guide.md": "255c30b23b0ffb2445ff56d20a7d04a04aa57781a1bc4f3426e3f41f8ccf3a5a",
+    "tests/m4/test_contract.py": "5927c5876dea618eeba905b2e972d7561b8391d6cc84444b382cd77da778e2f8",
+    "tests/m4/run_tests.py": "247be0f189bca57b46343c091a1d557db724a7423ef3b94e64e3e611848df794",
+    "h3-action-performance/assets/fixture-manifest.json": "c28612398a07e326adcac65a650fe32116a8820bef7eb937501df89c4fe97356",
+    "h3-action-performance/assets/proposal-batch.json": "faf94fd09b417abb18edead56f476722e303ff091ce9dac1e73443e76c3fa074",
+    "h3-action-performance/assets/proposal-m4-1.json": "2a156805466ad6c296c67fc1f78aded8780483f949cdaba14e7137c8caed0851",
+    "h3-action-performance/assets/proposal-m4-2.json": "56f824e4a7b6b7bd011958571d8db747d249f4e65368e2c09848e05f3d23172a",
+    "h3-action-performance/assets/proposal-m4-3.json": "ca960fc3a1b9b809fdc2f239cd87261ca7dfeb24dcbcaad9118e1691bb0b8f13",
+    "h3-action-performance/assets/request-m4-1.json": "82c928c970f87f5a4f274e523a54bd2803d6b69be4f8e3b64c6a2e3ab0510a71",
+    "h3-action-performance/assets/request-m4-2.json": "e40849466a989f00ec89d3eb2350c2d208b49721d9ffb51558f0b6c327aae328",
+    "h3-action-performance/assets/request-m4-3.json": "c342b950ab08dba102c09ec5372d3cc2bc1a2db92c26ecf17b71afee5c6db7eb",
+    "h3-action-performance/assets/request-m4.json": "3a66d6088967f50678b9cf28bcef58d15a8c9ed454485ed0b80a22cdbc76ae33",
+    "h3-action-performance/assets/request-minimal-m4-2.json": "148aa281271fa677497d18b1dd9800c00daf16308c6dfdd12fd58d6b0fda955f",
+    "h3-action-performance/assets/requests.json": "7e5dfdac189aaa6dad604b6bdf983efb46bb59f532591cd8f8dc3ae86c0ac815",
+    "h3-action-performance/assets/state-empty.json": "200a8dba4179999fb22ad47db621c082b18cef060b92244cdbb94e2f00db3a3b"
+  }
+}

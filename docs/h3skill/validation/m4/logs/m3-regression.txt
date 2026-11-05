@@ -1,0 +1,36 @@
+test_actual_request_fidelity_and_sources (test_m3_contract.M3Contracts.test_actual_request_fidelity_and_sources) ... ok
+test_all_public_inputs_and_standalone_children (test_m3_contract.M3Contracts.test_all_public_inputs_and_standalone_children) ... ok
+test_atomic_combination_and_no_input_mutation (test_m3_contract.M3Contracts.test_atomic_combination_and_no_input_mutation) ... ok
+test_batch_check_rejects_nonrequest_in_original_request_array (test_m3_contract.M3Contracts.test_batch_check_rejects_nonrequest_in_original_request_array) ... ok
+test_candidate_projection_mutation_is_rejected (test_m3_contract.M3Contracts.test_candidate_projection_mutation_is_rejected) ... ok
+test_copy_has_no_sibling_or_repository_dependency (test_m3_contract.M3Contracts.test_copy_has_no_sibling_or_repository_dependency) ... ok
+test_distinct_scopes_shared_regions_and_scaled_directions (test_m3_contract.M3Contracts.test_distinct_scopes_shared_regions_and_scaled_directions) ... ok
+test_entity_projection_cannot_be_rewritten (test_m3_contract.M3Contracts.test_entity_projection_cannot_be_rewritten) ... ok
+test_explicit_region_exclusion_and_occlusion_conflicts (test_m3_contract.M3Contracts.test_explicit_region_exclusion_and_occlusion_conflicts) ... ok
+test_impact_only_actual_scoped_reads (test_m3_contract.M3Contracts.test_impact_only_actual_scoped_reads) ... ok
+test_interaction_route_entity_region_and_scope (test_m3_contract.M3Contracts.test_interaction_route_entity_region_and_scope) ... ok
+test_issue_owner_and_open_blocker (test_m3_contract.M3Contracts.test_issue_owner_and_open_blocker) ... ok
+test_large_integer_and_nonfinite_vectors (test_m3_contract.M3Contracts.test_large_integer_and_nonfinite_vectors) ... ok
+test_missing_minimum_and_unknown_brief (test_m3_contract.M3Contracts.test_missing_minimum_and_unknown_brief) ... ok
+test_new_issue_cannot_be_immediately_resolved_by_same_proposal (test_m3_contract.M3Contracts.test_new_issue_cannot_be_immediately_resolved_by_same_proposal) ... ok
+test_occlusion_targets_keep_parts_and_directions_separate (test_m3_contract.M3Contracts.test_occlusion_targets_keep_parts_and_directions_separate) ... ok
+test_optional_full_schema_cross_check (test_m3_contract.M3Contracts.test_optional_full_schema_cross_check) ... skipped 'jsonschema is not installed; standard-library checks are the required runtime.'
+test_owner_boundary_and_duplicate_partition (test_m3_contract.M3Contracts.test_owner_boundary_and_duplicate_partition) ... ok
+test_path_connectivity_direction_and_closed_region (test_m3_contract.M3Contracts.test_path_connectivity_direction_and_closed_region) ... ok
+test_registry_routing_all_targets_and_flags (test_m3_contract.M3Contracts.test_registry_routing_all_targets_and_flags) ... ok
+test_route_can_revisit_a_region (test_m3_contract.M3Contracts.test_route_can_revisit_a_region) ... ok
+test_same_phase_conflicts_are_order_independent (test_m3_contract.M3Contracts.test_same_phase_conflicts_are_order_independent) ... ok
+test_scene_only_and_static_no_routes (test_m3_contract.M3Contracts.test_scene_only_and_static_no_routes) ... ok
+test_screen_frame_view_and_body_anchor (test_m3_contract.M3Contracts.test_screen_frame_view_and_body_anchor) ... ok
+test_source_immutability_and_accepted_id_retention (test_m3_contract.M3Contracts.test_source_immutability_and_accepted_id_retention) ... ok
+test_standalone_dependencies_cannot_disappear_at_acceptance (test_m3_contract.M3Contracts.test_standalone_dependencies_cannot_disappear_at_acceptance) ... ok
+test_strict_json_loader (test_m3_contract.M3Contracts.test_strict_json_loader) ... ok
+test_unknown_fields_bad_ids_and_boolean_integer_rejected (test_m3_contract.M3Contracts.test_unknown_fields_bad_ids_and_boolean_integer_rejected) ... ok
+test_unknown_frame_region_entity_and_source (test_m3_contract.M3Contracts.test_unknown_frame_region_entity_and_source) ... ok
+test_unknown_interaction_timing_is_not_hard_failure (test_m3_contract.M3Contracts.test_unknown_interaction_timing_is_not_hard_failure) ... ok
+test_version_replay_id_reuse_and_stale_revision (test_m3_contract.M3Contracts.test_version_replay_id_reuse_and_stale_revision) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.651s
+
+OK (skipped=1)

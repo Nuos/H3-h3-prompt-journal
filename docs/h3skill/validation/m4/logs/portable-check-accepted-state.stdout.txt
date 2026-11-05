@@ -1,0 +1,50 @@
+{
+  "kind": "M4ToolResult",
+  "contract_version": "1.0.0",
+  "command": "check",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "physical_feasibility",
+      "media_observation",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [],
+  "trace": {
+    "call_id": "m4-65481bde707b4fc19c5677173478aaca",
+    "parent_module": "M4",
+    "started_at": "2026-11-05T11:08:12.304845+00:00",
+    "finished_at": "2026-11-05T11:08:12.310564+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "artifact": "f8cd4ff9f7206e8d37c8deb2534bfc57450e79e7f60ca664564bc6b7ffd338b2"
+    },
+    "resources": {
+      "references/contracts.json": "e6a1dac15a056365ab42799b0475b79c1049dbe82963b8eddfd02dd333c9c26e",
+      "references/module-registry.json": "0c9ae839740f7ddd82f46fd13e64d680451b22441bc0f5edbe70183d30a993a0"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [],
+    "input_versions": [],
+    "source_versions": {},
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  }
+}

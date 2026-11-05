@@ -1,0 +1,296 @@
+{
+  "kind": "M4Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "sock_opening_events",
+  "base_version": 0,
+  "proposal_id": "sock_opening_events_proposal",
+  "module_id": "M4.1",
+  "source_request_id": "sock_opening_events_request",
+  "sources": {
+    "task_input": {
+      "kind": "user_requirement",
+      "locator": "docs/h3skill/validation/m4/forward-use/events/input.md",
+      "version": "sha256:f3e1f3a95c3b877045336cf7b6e74e765aa2f8447d5e3d084cc468acfc248e50",
+      "excerpt": "# 任务：只整理动作事件与前提\n\n使用 `h3-action-performance`，只完成 M4.1。请把下述任务转为这个技能公开合同能接受的 request.json 和 proposal.json，运行实际 check 命令并保存原始输出，再用简短中文说明本次产物与仍需补充的条件。\n\n本任务是依据仓库案例文字构造的受控设计任务，没有提供或观看图片、音频和视频。不要联网，也不要读取其他试用输出或测试答案。不要编辑技能包。\n\n来源：`case-studies/2026-09-action-chain-sock-fan-comedy/README.md`，固定仓库提交 `545a99015cfa00a6f07ee05d1d0f21e09d89d46c`。可读取该文件核对原文；以下选取的是原案例开场的一小段，不要求完成原作 25 个状态。\n\n已知任务条件：\n\n- 一个表演者，解剖学左脚赤脚支撑在地，解剖学右脚抬起、穿白袜、没有鞋。\n- 只登记三个事件：双手协作从右脚脱下同一只白袜；脱袜完成后白袜由其中一只手持有、另一只手空出；表演者转头并聚焦白袜，将白袜抬到能检查的位置。\n- 第一事件期间右脚保持抬起、左脚持续支撑；后两事件右脚已赤脚但仍悬空。具体由哪只解剖学手最终持袜尚未指定。\n- 这三个事件必须保留先后关系和同一表演者、同一白袜的身份；不能把未知的最终持袜手默认为左手或右手。\n- 当前没有实际音频、拍点或时长数据；本次也不排绝对秒数。\n- 这是文字方案，原案例作者的成片评价不能当成本次观测。\n\n只交付 M4.1 的事件与前提，不为完成模板而代写 M4.2 动作机制、M4.3 结果分区、M7 权威时刻或 M8 状态账本。若合同要求的必要信息仍有缺口，明确说明哪些部分可完成和哪些仍未知。\n"
+    }
+  },
+  "context": {
+    "action_brief": "# 任务：只整理动作事件与前提\n\n使用 `h3-action-performance`，只完成 M4.1。请把下述任务转为这个技能公开合同能接受的 request.json 和 proposal.json，运行实际 check 命令并保存原始输出，再用简短中文说明本次产物与仍需补充的条件。\n\n本任务是依据仓库案例文字构造的受控设计任务，没有提供或观看图片、音频和视频。不要联网，也不要读取其他试用输出或测试答案。不要编辑技能包。\n\n来源：`case-studies/2026-09-action-chain-sock-fan-comedy/README.md`，固定仓库提交 `545a99015cfa00a6f07ee05d1d0f21e09d89d46c`。可读取该文件核对原文；以下选取的是原案例开场的一小段，不要求完成原作 25 个状态。\n\n已知任务条件：\n\n- 一个表演者，解剖学左脚赤脚支撑在地，解剖学右脚抬起、穿白袜、没有鞋。\n- 只登记三个事件：双手协作从右脚脱下同一只白袜；脱袜完成后白袜由其中一只手持有、另一只手空出；表演者转头并聚焦白袜，将白袜抬到能检查的位置。\n- 第一事件期间右脚保持抬起、左脚持续支撑；后两事件右脚已赤脚但仍悬空。具体由哪只解剖学手最终持袜尚未指定。\n- 这三个事件必须保留先后关系和同一表演者、同一白袜的身份；不能把未知的最终持袜手默认为左手或右手。\n- 当前没有实际音频、拍点或时长数据；本次也不排绝对秒数。\n- 这是文字方案，原案例作者的成片评价不能当成本次观测。\n\n只交付 M4.1 的事件与前提，不为完成模板而代写 M4.2 动作机制、M4.3 结果分区、M7 权威时刻或 M8 状态账本。若合同要求的必要信息仍有缺口，明确说明哪些部分可完成和哪些仍未知。\n"
+  },
+  "changes": {
+    "events": {
+      "entities": {
+        "performer": {
+          "kind": "actor",
+          "label": "同一名表演者",
+          "source_refs": [
+            "task_input"
+          ]
+        },
+        "white_sock": {
+          "kind": "prop",
+          "label": "从表演者解剖右脚脱下的同一只白袜",
+          "source_refs": [
+            "task_input"
+          ]
+        }
+      },
+      "requirements": {
+        "same_actor_and_sock": {
+          "text": "全段仅一名表演者；三个事件保持同一人物与同一只白袜身份。",
+          "event_ids": [
+            "remove_sock",
+            "hold_sock",
+            "inspect_sock"
+          ],
+          "source_refs": [
+            "task_input"
+          ]
+        },
+        "left_foot_support": {
+          "text": "解剖左脚赤脚着地支撑；脱袜过程中保持左脚持续支撑。",
+          "event_ids": [
+            "remove_sock"
+          ],
+          "source_refs": [
+            "task_input"
+          ]
+        },
+        "both_hands_remove": {
+          "text": "起始解剖右脚抬起、穿白袜且无鞋；双手配合从右脚脱下同一只白袜；脱袜期间右脚保持抬起。",
+          "event_ids": [
+            "remove_sock"
+          ],
+          "source_refs": [
+            "task_input"
+          ]
+        },
+        "hold_and_free": {
+          "text": "脱袜完成后，一只手持白袜，另一只手空出。",
+          "event_ids": [
+            "hold_sock"
+          ],
+          "source_refs": [
+            "task_input"
+          ]
+        },
+        "right_foot_bare_suspended": {
+          "text": "第二、第三事件期间，解剖右脚赤裸并保持悬空。",
+          "event_ids": [
+            "hold_sock",
+            "inspect_sock"
+          ],
+          "source_refs": [
+            "task_input"
+          ]
+        },
+        "inspect_action": {
+          "text": "表演者转头看向同一只白袜，并把白袜举起查看。",
+          "event_ids": [
+            "inspect_sock"
+          ],
+          "source_refs": [
+            "task_input"
+          ]
+        },
+        "event_order": {
+          "text": "保持双手脱袜、单手持袜并空出另一手、转头看袜并举起查看的事件顺序。",
+          "event_ids": [
+            "remove_sock",
+            "hold_sock",
+            "inspect_sock"
+          ],
+          "source_refs": [
+            "task_input"
+          ]
+        },
+        "holding_hand_unresolved": {
+          "text": "最终持袜手的解剖左右未指定，必须保留未知，不默认左手或右手。",
+          "event_ids": [
+            "hold_sock",
+            "inspect_sock"
+          ],
+          "source_refs": [
+            "task_input"
+          ]
+        },
+        "no_absolute_time": {
+          "text": "没有音频、节拍或时长信息，不建立绝对秒数。",
+          "event_ids": [
+            "remove_sock",
+            "hold_sock",
+            "inspect_sock"
+          ],
+          "source_refs": [
+            "task_input"
+          ]
+        }
+      },
+      "items": {
+        "remove_sock": {
+          "performance_kind": "prop_interaction",
+          "actor_ids": [
+            "performer"
+          ],
+          "object_ids": [
+            "white_sock"
+          ],
+          "goal": {
+            "state": "known",
+            "value": "表演者双手配合，从抬起的解剖右脚脱下同一只白袜；全过程右脚保持抬起，赤裸的解剖左脚持续着地支撑。",
+            "source_refs": [
+              "task_input"
+            ]
+          },
+          "preconditions": [
+            {
+              "state": "known",
+              "value": "解剖左脚赤裸并着地支撑；解剖右脚抬起、穿白袜、没有鞋。",
+              "source_refs": [
+                "task_input"
+              ]
+            },
+            {
+              "state": "known",
+              "value": "此事件由同一表演者的双手配合脱袜。",
+              "source_refs": [
+                "task_input"
+              ]
+            }
+          ],
+          "depends_on": [],
+          "entry_state": {
+            "state": "known",
+            "values": {
+              "performer": {
+                "left_foot": "解剖左脚赤裸，着地支撑",
+                "right_foot": "解剖右脚抬起，穿白袜，无鞋"
+              },
+              "white_sock": {
+                "location": "同一只白袜穿在表演者解剖右脚上"
+              }
+            },
+            "source_refs": [
+              "task_input"
+            ]
+          },
+          "source_refs": [
+            "task_input"
+          ]
+        },
+        "hold_sock": {
+          "performance_kind": "prop_interaction",
+          "actor_ids": [
+            "performer"
+          ],
+          "object_ids": [
+            "white_sock"
+          ],
+          "goal": {
+            "state": "known",
+            "value": "脱袜完成后，表演者用一只手持同一只白袜，另一只手空出；解剖右脚赤裸并保持悬空。",
+            "source_refs": [
+              "task_input"
+            ]
+          },
+          "preconditions": [
+            {
+              "state": "known",
+              "value": "前一事件已完成从解剖右脚脱下同一只白袜，右脚赤裸且仍悬空。",
+              "source_refs": [
+                "task_input"
+              ]
+            },
+            {
+              "state": "unknown",
+              "reason": "用户未指定最终由解剖左手还是解剖右手持袜；不能由双手脱袜推断，需补充持袜手左右。"
+            }
+          ],
+          "depends_on": [
+            "remove_sock"
+          ],
+          "entry_state": {
+            "state": "known",
+            "values": {
+              "performer": {
+                "right_foot": "解剖右脚赤裸，保持悬空"
+              },
+              "white_sock": {
+                "location": "同一只白袜已从解剖右脚脱离"
+              }
+            },
+            "source_refs": [
+              "task_input"
+            ]
+          },
+          "source_refs": [
+            "task_input"
+          ]
+        },
+        "inspect_sock": {
+          "performance_kind": "mixed",
+          "actor_ids": [
+            "performer"
+          ],
+          "object_ids": [
+            "white_sock"
+          ],
+          "goal": {
+            "state": "known",
+            "value": "表演者转头看向手中同一只白袜，把白袜举起查看；解剖右脚保持赤裸悬空。",
+            "source_refs": [
+              "task_input"
+            ]
+          },
+          "preconditions": [
+            {
+              "state": "known",
+              "value": "前一事件已建立一只手持同一只白袜、另一只手空出的状态；解剖右脚赤裸悬空。",
+              "source_refs": [
+                "task_input"
+              ]
+            },
+            {
+              "state": "unknown",
+              "reason": "用户未指定最终由解剖左手还是解剖右手持袜；不能由双手脱袜推断，需补充持袜手左右。"
+            }
+          ],
+          "depends_on": [
+            "hold_sock"
+          ],
+          "entry_state": {
+            "state": "known",
+            "values": {
+              "performer": {
+                "hands": "一只手持同一只白袜，另一只手空出；持袜手的解剖左右未指定",
+                "right_foot": "解剖右脚赤裸，保持悬空"
+              },
+              "white_sock": {
+                "location": "同一只白袜位于表演者某一只手中，持袜手左右未指定"
+              }
+            },
+            "source_refs": [
+              "task_input"
+            ]
+          },
+          "source_refs": [
+            "task_input"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [
+    {
+      "issue_id": "holding_hand_unknown",
+      "owner": "M4.1",
+      "status": "open",
+      "severity": "warning",
+      "message": "最终持袜手的解剖左右没有用户依据，保留 unknown；需要用户补充解剖左手或解剖右手后才能确定。",
+      "source_refs": [
+        "task_input"
+      ]
+    }
+  ],
+  "resolutions": []
+}

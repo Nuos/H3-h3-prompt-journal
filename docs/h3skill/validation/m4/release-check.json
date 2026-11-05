@@ -1,0 +1,164 @@
+{
+  "kind": "M4ReleaseVerification",
+  "repository_base": "545a99015cfa00a6f07ee05d1d0f21e09d89d46c",
+  "checks": [
+    {
+      "check": "required_release_scopes_and_documents_exist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "minimal_name_description_frontmatter",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry_below_recommended_500_lines",
+      "passed": true,
+      "detail": 92
+    },
+    {
+      "check": "only_declared_runtime_roots",
+      "passed": true,
+      "detail": [
+        "SKILL.md",
+        "assets",
+        "references",
+        "scripts"
+      ]
+    },
+    {
+      "check": "runtime_has_no_symlink_dependencies",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "runtime_links_exist",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "no_sibling_runtime_links",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "every_reference_routed_from_entry",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "json_and_python_parse",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "parent_and_three_public_children",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "registered_resources_available",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "frozen_plan_and_controls_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "h3-work-intent_byte_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "h3-asset-reference_byte_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "h3-scene-blocking_byte_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "only_authorized_m4_release_paths_changed",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "case_text_hashes_match_sources",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "case_inventory_covers_current_text_corpus",
+      "passed": true,
+      "detail": {
+        "files": 98,
+        "cases": 29
+      }
+    },
+    {
+      "check": "immutable_official_h3-base-official.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "immutable_official_h3-ref-official.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "official_standard_snapshots_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "current_anthropic_creator_snapshot_matches_record",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "recorded_delivery_checks_pass_and_match_runtime",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "long_reference_documents_have_navigation",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "recorded_m4_tests_match_tested_inputs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "human_readable_review_record_present",
+      "passed": true,
+      "detail": "Presence only; this check does not certify the review conclusions."
+    },
+    {
+      "check": "release_manifest_matches_exact_deliverables",
+      "passed": true,
+      "detail": {
+        "files": 84
+      }
+    }
+  ],
+  "passed": 27,
+  "total": 27,
+  "ok": true,
+  "scope": "Structure, source integrity, frozen baseline, change scope and release inventory only.",
+  "not_certified": [
+    "action semantic correctness",
+    "body dynamics and physical contact",
+    "actual visibility",
+    "M7 timing",
+    "H3 inference",
+    "generated media",
+    "G2-G4 full gates"
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "kind": "M4DeliveryChecks",
+  "started_at": "2026-11-05T11:08:11.265550+00:00",
+  "finished_at": "2026-11-05T11:08:12.323062+00:00",
+  "python": "3.12.14",
+  "checks": [
+    {
+      "check": "anthropic-format",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/429498da5425/H3-h3-prompt-journal/docs/h3skill/_standards/anthropics-quick-validate.py",
+        "/workspace/scratch/429498da5425/H3-h3-prompt-journal/docs/h3skill/h3-action-performance"
+      ],
+      "cwd": "/workspace/scratch/429498da5425/H3-h3-prompt-journal/docs/h3skill",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "runtime_imports_are_standard_library",
+      "passed": true,
+      "imports": [
+        "__future__",
+        "argparse",
+        "copy",
+        "datetime",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "re",
+        "sys",
+        "uuid"
+      ],
+      "external_imports": []
+    },
+    {
+      "check": "portable-help",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "--help"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-route-request-m4",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "route",
+        "assets/request-m4.json"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-route-request-m4-1",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "route",
+        "assets/request-m4-1.json"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-route-request-m4-2",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "route",
+        "assets/request-m4-2.json"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-route-request-m4-3",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "route",
+        "assets/request-m4-3.json"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-check-proposal-m4-1",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "check",
+        "assets/proposal-m4-1.json",
+        "--request",
+        "assets/request-m4-1.json"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-check-proposal-m4-2",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "check",
+        "assets/proposal-m4-2.json",
+        "--request",
+        "assets/request-m4-2.json"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-check-proposal-m4-3",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "check",
+        "assets/proposal-m4-3.json",
+        "--request",
+        "assets/request-m4-3.json"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-check-batch",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "check",
+        "assets/proposal-batch.json",
+        "--requests",
+        "assets/requests.json"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-check-empty-state",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "check",
+        "assets/state-empty.json"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "portable-accept",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "accept",
+        "assets/state-empty.json",
+        "assets/proposal-batch.json",
+        "--requests",
+        "assets/requests.json"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "accepted_output_is_separate_state",
+      "passed": true
+    },
+    {
+      "check": "portable-check-accepted-state",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/tmp/m4-standalone-vlqnhvvc/h3-action-performance/scripts/m4_contract.py",
+        "check",
+        "accepted-state.json"
+      ],
+      "cwd": "/tmp/m4-standalone-vlqnhvvc/h3-action-performance",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "check": "acceptance_does_not_claim_overall_semantic_or_media_pass",
+      "passed": true,
+      "validation": {
+        "local_contract": "pass",
+        "overall": "unverified",
+        "unverified": [
+          "semantic_intent",
+          "source_authenticity",
+          "physical_feasibility",
+          "media_observation",
+          "generated_video_quality",
+          "global_G0_G4"
+        ]
+      }
+    }
+  ],
+  "passed": 16,
+  "total": 16,
+  "ok": true,
+  "file_sha256": {
+    "h3-action-performance/SKILL.md": "c5e43b4763edf0499907d0de0f561c049cb7631d94cb5546b48834c40b77e2e7",
+    "h3-action-performance/assets/fixture-manifest.json": "c28612398a07e326adcac65a650fe32116a8820bef7eb937501df89c4fe97356",
+    "h3-action-performance/assets/proposal-batch.json": "faf94fd09b417abb18edead56f476722e303ff091ce9dac1e73443e76c3fa074",
+    "h3-action-performance/assets/proposal-m4-1.json": "2a156805466ad6c296c67fc1f78aded8780483f949cdaba14e7137c8caed0851",
+    "h3-action-performance/assets/proposal-m4-2.json": "56f824e4a7b6b7bd011958571d8db747d249f4e65368e2c09848e05f3d23172a",
+    "h3-action-performance/assets/proposal-m4-3.json": "ca960fc3a1b9b809fdc2f239cd87261ca7dfeb24dcbcaad9118e1691bb0b8f13",
+    "h3-action-performance/assets/request-m4-1.json": "82c928c970f87f5a4f274e523a54bd2803d6b69be4f8e3b64c6a2e3ab0510a71",
+    "h3-action-performance/assets/request-m4-2.json": "e40849466a989f00ec89d3eb2350c2d208b49721d9ffb51558f0b6c327aae328",
+    "h3-action-performance/assets/request-m4-3.json": "c342b950ab08dba102c09ec5372d3cc2bc1a2db92c26ecf17b71afee5c6db7eb",
+    "h3-action-performance/assets/request-m4.json": "3a66d6088967f50678b9cf28bcef58d15a8c9ed454485ed0b80a22cdbc76ae33",
+    "h3-action-performance/assets/request-minimal-m4-2.json": "148aa281271fa677497d18b1dd9800c00daf16308c6dfdd12fd58d6b0fda955f",
+    "h3-action-performance/assets/requests.json": "7e5dfdac189aaa6dad604b6bdf983efb46bb59f532591cd8f8dc3ae86c0ac815",
+    "h3-action-performance/assets/state-empty.json": "200a8dba4179999fb22ad47db621c082b18cef060b92244cdbb94e2f00db3a3b",
+    "h3-action-performance/references/action-mechanics.md": "254a481e59ad26dfa4ff51780f0969eae83aba1c036450b903cdb86bb2b29999",
+    "h3-action-performance/references/audit-and-handoff.md": "0123dc0cfba256887467484855c76dc5536b803df6b3c8575fdc92e3a66cee3f",
+    "h3-action-performance/references/case-evidence.md": "d04b4d752745231be0387947525256a0c63f358b38f8bcda46202e29d55c3859",
+    "h3-action-performance/references/case-index.json": "d50858a88768a6f113f74abfc0795cdcfbbb021b44e026e93016dae1bdc93b33",
+    "h3-action-performance/references/case-source-LICENSE.txt": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+    "h3-action-performance/references/contract-guide.md": "255c30b23b0ffb2445ff56d20a7d04a04aa57781a1bc4f3426e3f41f8ccf3a5a",
+    "h3-action-performance/references/contracts.json": "5561fd66ae2d2ad37ffd980cf677af29e0939325e45d528ca5208a76b13067bd",
+    "h3-action-performance/references/h3-NOTICE.txt": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+    "h3-action-performance/references/h3-base-official.txt": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+    "h3-action-performance/references/h3-label-mapping.md": "370cb61fd45d3debdd8ea2409edfc22447af421379d3bfde6bf3cc51f37d7c2c",
+    "h3-action-performance/references/h3-protocol-source.json": "6ff5b7e2a36f7ce4fdc4d061a286ac9f5ae0fa792e332b34f266e60d0743171d",
+    "h3-action-performance/references/h3-ref-official.txt": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+    "h3-action-performance/references/module-registry.json": "17a6ac5cfec08432a6bebd769d490c5b032e59dd84df400fcaf5e77c77ef2be9",
+    "h3-action-performance/references/outcomes-and-continuation.md": "6cacc006d4c0fa889f50096213383c0fb87617ac4f07945124d54825fa7bb6a3",
+    "h3-action-performance/references/performance-events.md": "fca8067f809bc24f738389ff3f3c92df2c65ecf40852f3f29422ef6820fbafe2",
+    "h3-action-performance/references/provenance-and-license.md": "d17e48bc0df7cb7a9922ab5f0fd3920ccc666f14b160e43b47e8023d324fd8e6",
+    "h3-action-performance/scripts/m4_contract.py": "7993ee1edbbcc275b2b3449b9759113ee453c54feb98993e4d30913d0db77f5f"
+  },
+  "not_certified": [
+    "natural-language quality",
+    "source authenticity",
+    "body dynamics",
+    "physical contact",
+    "camera visibility",
+    "actual timing",
+    "H3 inference",
+    "generated media",
+    "complete G0-G4 gates"
+  ]
+}

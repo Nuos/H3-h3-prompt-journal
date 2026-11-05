@@ -1,0 +1,118 @@
+{
+  "kind": "M4ToolResult",
+  "contract_version": "1.0.0",
+  "command": "route",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "physical_feasibility",
+      "media_observation",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [],
+  "trace": {
+    "call_id": "m4-6a3e946e8636465cbd2386bef4e9a9d8",
+    "parent_module": "M4",
+    "started_at": "2026-11-05T11:08:11.494247+00:00",
+    "finished_at": "2026-11-05T11:08:11.496656+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "request": "20c9226c2382f63fb57881874b9f2e2d77f8b7fb108d35e5229b5a8d61a1afbd"
+    },
+    "resources": {
+      "references/contracts.json": "e6a1dac15a056365ab42799b0475b79c1049dbe82963b8eddfd02dd333c9c26e",
+      "references/module-registry.json": "0c9ae839740f7ddd82f46fd13e64d680451b22441bc0f5edbe70183d30a993a0"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "d_request_m4"
+    ],
+    "input_versions": [
+      {
+        "request_id": "d_request_m4",
+        "target": "M4",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "d_request_m4": {
+        "fixture_d": "D-1"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  },
+  "routes": [
+    {
+      "module_id": "M4.1",
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/performance-events.md",
+        "references/audit-and-handoff.md"
+      ],
+      "write_scope": "/content/events",
+      "return_to": "M4",
+      "minimum_inputs": [
+        "action_brief"
+      ],
+      "repair_target": "M4.1"
+    },
+    {
+      "module_id": "M4.2",
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/action-mechanics.md",
+        "references/audit-and-handoff.md"
+      ],
+      "write_scope": "/content/mechanics",
+      "return_to": "M4",
+      "minimum_inputs": [
+        "event_context",
+        "mechanics_brief"
+      ],
+      "repair_target": "M4.2"
+    },
+    {
+      "module_id": "M4.3",
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/outcomes-and-continuation.md",
+        "references/audit-and-handoff.md"
+      ],
+      "write_scope": "/content/outcomes",
+      "return_to": "M4",
+      "minimum_inputs": [
+        "event_context",
+        "mechanics_context",
+        "outcome_brief"
+      ],
+      "repair_target": "M4.3"
+    }
+  ],
+  "route_status": "ready_for_call",
+  "invocation": "not_invoked"
+}

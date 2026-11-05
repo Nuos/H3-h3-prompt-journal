@@ -1,0 +1,83 @@
+{
+  "kind": "M4ToolResult",
+  "contract_version": "1.0.0",
+  "command": "route",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "semantic_intent",
+      "source_authenticity",
+      "physical_feasibility",
+      "media_observation",
+      "generated_video_quality",
+      "global_G0_G4"
+    ]
+  },
+  "diagnostics": [],
+  "trace": {
+    "call_id": "m4-d0d50f72ee75487ea2aa03c69d0c89af",
+    "parent_module": "M4",
+    "started_at": "2026-11-05T11:08:11.581566+00:00",
+    "finished_at": "2026-11-05T11:08:11.584742+00:00",
+    "package_version": "0.1.0",
+    "schema_version": "1.0.0",
+    "route_version": "1.0.0",
+    "registry_version": "1.0.0",
+    "input_digests": {
+      "request": "4e6f6573db862470a401aa2b8c53decdfee2f2a7058c80376119e8c50e2b6291"
+    },
+    "resources": {
+      "references/contracts.json": "e6a1dac15a056365ab42799b0475b79c1049dbe82963b8eddfd02dd333c9c26e",
+      "references/module-registry.json": "0c9ae839740f7ddd82f46fd13e64d680451b22441bc0f5edbe70183d30a993a0"
+    },
+    "side_effects": "none",
+    "operation_id": null,
+    "revision": null,
+    "request_ids": [
+      "d_request_m4_1"
+    ],
+    "input_versions": [
+      {
+        "request_id": "d_request_m4_1",
+        "target": "M4.1",
+        "base_version": 0,
+        "contract_version": "1.0.0"
+      }
+    ],
+    "source_versions": {
+      "d_request_m4_1": {
+        "fixture_d": "D-1"
+      }
+    },
+    "applicability": {
+      "local_contract": "pass",
+      "physical_and_media": "unverified"
+    },
+    "retry": "not_applicable",
+    "output_status": "pass",
+    "error_codes": []
+  },
+  "routes": [
+    {
+      "module_id": "M4.1",
+      "resources": [
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/contract-guide.md",
+        "references/performance-events.md",
+        "references/audit-and-handoff.md"
+      ],
+      "write_scope": "/content/events",
+      "return_to": "M4",
+      "minimum_inputs": [
+        "action_brief"
+      ],
+      "repair_target": "M4.1"
+    }
+  ],
+  "route_status": "ready_for_call",
+  "invocation": "not_invoked"
+}

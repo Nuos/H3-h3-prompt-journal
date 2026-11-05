@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "docs/h3skill/h3-action-performance/scripts/m4_contract.py",
+    "check",
+    "docs/h3skill/validation/m4/forward-use/events/proposal.json",
+    "--request",
+    "docs/h3skill/validation/m4/forward-use/events/request.json"
+  ],
+  "cwd": "/workspace/scratch/429498da5425/H3-h3-prompt-journal",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "started_at": "2026-11-05T11:04:08.113703+00:00",
+  "finished_at": "2026-11-05T11:04:08.184722+00:00",
+  "exit_code": 0,
+  "stdout_file": "check.stdout.json",
+  "stderr_file": "check.stderr.txt",
+  "attempt": 1
+}
