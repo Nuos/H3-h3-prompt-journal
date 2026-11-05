@@ -1,0 +1,34 @@
+{
+  "repository": "anthropics/skills",
+  "commit": "ca45fc496a3436251f191354091d557da31c15b5",
+  "commit_date": "2026-10-28T19:20:38Z",
+  "files": [
+    {
+      "path": "template/SKILL.md",
+      "sha": "50a4f9b104357d96361e257adb70454604cd15c0"
+    },
+    {
+      "path": "skills/skill-creator/SKILL.md",
+      "sha": "65b3a402dbd09b8e83f9d637c6b553875189085c"
+    },
+    {
+      "path": "skills/skill-creator/scripts/quick_validate.py",
+      "sha": "ed8e1dddce77b16af13c6f36b3fe86c4ac7c590c"
+    }
+  ],
+  "recorded_at_utc": "2026-11-05T17:38:09.128001+00:00",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "docs/h3skill/_standards/anthropics-quick-validate.py",
+    "docs/h3skill/h3-state-continuity"
+  ],
+  "exit_code": 0,
+  "status": "pass",
+  "validator_sha256": "67cf5703402013936c8fb75ad6a1afecd8841d45cc5e606b634eb05825fde365",
+  "local_validator": "docs/h3skill/_standards/anthropics-quick-validate.py",
+  "scope": "Official frontmatter validator only. Directory/name agreement, nonempty metadata, resource links, source integrity and runtime behavior checked separately.",
+  "stdout": "official-format.stdout.txt",
+  "stderr": "official-format.stderr.txt",
+  "user_destination": "docs/h3skill/h3-state-continuity",
+  "installation": "Repository package; no personal-skill installation performed."
+}

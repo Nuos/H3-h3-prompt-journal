@@ -1,0 +1,117 @@
+{
+  "kind": "M8ExecutedValidation",
+  "recorded_at_utc": "2026-11-05T18:12:25.535491+00:00",
+  "python_version": "3.12.14",
+  "checks": [
+    {
+      "name": "behavior",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "docs/h3skill/tests/m8",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "repository root",
+      "started_at_utc": "2026-11-05T18:12:24.093056+00:00",
+      "finished_at_utc": "2026-11-05T18:12:24.852925+00:00",
+      "exit_code": 0,
+      "status": "pass",
+      "stdout": "behavior.stdout.txt",
+      "stderr": "behavior.stderr.txt",
+      "test_count": 43
+    },
+    {
+      "name": "portability",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "docs/h3skill/tests/m8_portability.py"
+      ],
+      "cwd": "repository root",
+      "started_at_utc": "2026-11-05T18:12:24.853185+00:00",
+      "finished_at_utc": "2026-11-05T18:12:25.486789+00:00",
+      "exit_code": 0,
+      "status": "pass",
+      "stdout": "portability.stdout.txt",
+      "stderr": "portability.stderr.txt"
+    },
+    {
+      "name": "official-format-final",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "docs/h3skill/_standards/anthropics-quick-validate.py",
+        "docs/h3skill/h3-state-continuity"
+      ],
+      "cwd": "repository root",
+      "started_at_utc": "2026-11-05T18:12:25.486834+00:00",
+      "finished_at_utc": "2026-11-05T18:12:25.522587+00:00",
+      "exit_code": 0,
+      "status": "pass",
+      "stdout": "official-format-final.stdout.txt",
+      "stderr": "official-format-final.stderr.txt"
+    },
+    {
+      "name": "whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "HEAD"
+      ],
+      "cwd": "repository root",
+      "started_at_utc": "2026-11-05T18:12:25.522630+00:00",
+      "finished_at_utc": "2026-11-05T18:12:25.533453+00:00",
+      "exit_code": 0,
+      "status": "pass",
+      "stdout": "whitespace.stdout.txt",
+      "stderr": "whitespace.stderr.txt"
+    }
+  ],
+  "source_hashes": {
+    "docs/h3skill/h3-state-continuity/SKILL.md": "d074d41addcf731456802c92d8be463f271f19dcb80f62a74588a3cc6605f398",
+    "docs/h3skill/h3-state-continuity/assets/proposal-batch.json": "dad6fd4b8552af5a614da1e8c9be2be36c8baea2c0f32e783108f5d52b04a553",
+    "docs/h3skill/h3-state-continuity/assets/proposal-standalone-m8-1.json": "5fb3b3bbd7e306e8739e765b369e755d295a2bb4c32c85228c8b4a55b07f9195",
+    "docs/h3skill/h3-state-continuity/assets/proposal-standalone-m8-2.json": "efba8fcf58bd5fe42d1b39cbc443c908c3b6ff382d1d7125c3fec58e0497c4cc",
+    "docs/h3skill/h3-state-continuity/assets/proposal-standalone-m8-3.json": "c8c724735cf59b549c5987e030c4589c2c94c8a84f6afb18cd97e97137711bb9",
+    "docs/h3skill/h3-state-continuity/assets/request-standalone-m8-1.json": "980748f814ca578f0b41dd57429acb3d3d3d48860cde4b827bf8b0cb2e55bcb2",
+    "docs/h3skill/h3-state-continuity/assets/request-standalone-m8-2.json": "d83812bc6a37f4371f022f9941f8356da2d7d30890a165d79b5c8d983dec07db",
+    "docs/h3skill/h3-state-continuity/assets/request-standalone-m8-3.json": "dbd364208a08354889ad9e3b4d776dd6dd7974c5bea4ae73dc875eb15987cfc4",
+    "docs/h3skill/h3-state-continuity/assets/requests.json": "a3f5e70c3f4d7e8dd78ad819091ed9f00a758698bd53b3605ab4a063f3078a59",
+    "docs/h3skill/h3-state-continuity/assets/state-empty.json": "24bc0d3e83b429429f01edba591a540c644522eba3357e86fa3fe1d16a491f88",
+    "docs/h3skill/h3-state-continuity/references/audit-and-handoff.md": "4e55cfd122d3f495afcac534244a722dfb387b780670ef64ceda5a78571534bb",
+    "docs/h3skill/h3-state-continuity/references/boundary-handoff.md": "88d3c2761f58e288dd369b1bb9a25b94582a6776e7f30379e47e965552d83c8a",
+    "docs/h3skill/h3-state-continuity/references/case-evidence.md": "c16a93c6fb1478494dfd9df690f829531a468ba82e4e19510a23b2189bf403da",
+    "docs/h3skill/h3-state-continuity/references/case-index.json": "0c50ed1df0ba7839186e660aa3b7ae23b55b1e1797243d301d24bcb5c2017c69",
+    "docs/h3skill/h3-state-continuity/references/case-source-LICENSE.txt": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+    "docs/h3skill/h3-state-continuity/references/continuity-policy.md": "bd6c7f336904c72803015f7d605d5bc7e2c353c970145060777f30dbb762c74d",
+    "docs/h3skill/h3-state-continuity/references/contract-guide.md": "495bd2950b67e27833c8e845ce84ec30180d2b33b9496b825b50c69c8c863c2a",
+    "docs/h3skill/h3-state-continuity/references/contracts.json": "08d28d23b7944208425c870ff378ac915552ff617e080adbc06df5f1978b8571",
+    "docs/h3skill/h3-state-continuity/references/h3-NOTICE.txt": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+    "docs/h3skill/h3-state-continuity/references/h3-base-official.txt": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+    "docs/h3skill/h3-state-continuity/references/h3-label-mapping.md": "7a9e1b7aef2e1873fe02abdca3c28785f3d7376702e4c9d7b32193131f5e11ce",
+    "docs/h3skill/h3-state-continuity/references/h3-protocol-source.json": "1b0bfaaaaae588777b3a905c523c720d320bf277fdd01082313766f63d37d225",
+    "docs/h3skill/h3-state-continuity/references/h3-ref-official.txt": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+    "docs/h3skill/h3-state-continuity/references/module-registry.json": "82b12b0a1a06e7fbe5186ec043e1bc47cdcc90c84c1ac95a6373eecc44b76f9f",
+    "docs/h3skill/h3-state-continuity/references/planned-state-ledger.md": "e9f4f642b1d1fbfefb5cd28e2e54a8bd0e3b77311ade85d4acdbd05e63ac2871",
+    "docs/h3skill/h3-state-continuity/references/provenance-and-license.md": "8d0eb3b9505373a4dc845b11914d0e5ac85a12fbc186d9955a6ea486f90d7c6c",
+    "docs/h3skill/h3-state-continuity/scripts/_schema.py": "fea0f17a9fa76bac2fdc12fc97ddcb7ca21f2bbc3def6ea795e487ca4a346cdc",
+    "docs/h3skill/h3-state-continuity/scripts/m8_contract.py": "c94125a0d293df1a7e378bb553c302cd1fbf4726aef4bd208bd9db8f93e06a7e",
+    "docs/h3skill/tests/m8/run_tests.py": "c7ba8788e410057208c7c83540bd2bfebb871e1747c7a94706ced1234be0f783",
+    "docs/h3skill/tests/m8/test_m8_contract.py": "c2e568b6c35ad8f9534aaf8677f2ba3097115008f71f74d6fe89e8b058b7ebbc",
+    "docs/h3skill/tests/m8_portability.py": "1a1386e52c94b812e753c1772d16c5ce107db03ba3baef6d8189b34f842f5311"
+  },
+  "unchanged_during_execution": true,
+  "status": "pass",
+  "limits": [
+    "Contract and declared state relationships only; independent text review is a separate record.",
+    "No H3 inference, media decoding, media truth verification, or G3/G4 acceptance.",
+    "Publication integrity verification is recorded separately after manifest creation."
+  ]
+}

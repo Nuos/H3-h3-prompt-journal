@@ -1,0 +1,103 @@
+{
+  "suite": "m8-portability",
+  "timestamp_utc": "2026-11-05T18:12:25.477728+00:00",
+  "status": "passed",
+  "checks_run": 13,
+  "checks": [
+    {
+      "name": "standalone_route_m8_1",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "diagnostics": [],
+      "stderr": ""
+    },
+    {
+      "name": "standalone_check_m8_1",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "diagnostics": [],
+      "stderr": ""
+    },
+    {
+      "name": "standalone_route_m8_2",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "diagnostics": [],
+      "stderr": ""
+    },
+    {
+      "name": "standalone_check_m8_2",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "diagnostics": [],
+      "stderr": ""
+    },
+    {
+      "name": "standalone_route_m8_3",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "diagnostics": [],
+      "stderr": ""
+    },
+    {
+      "name": "standalone_check_m8_3",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "diagnostics": [],
+      "stderr": ""
+    },
+    {
+      "name": "atomic_parent_accept",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "diagnostics": [],
+      "stderr": ""
+    },
+    {
+      "name": "accepted_state_check",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "diagnostics": [],
+      "stderr": ""
+    },
+    {
+      "name": "idempotent_parent_replay",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "diagnostics": [],
+      "stderr": ""
+    },
+    {
+      "name": "replay_preserves_state",
+      "passed": true
+    },
+    {
+      "name": "registered_consumer_impact",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "diagnostics": [],
+      "stderr": ""
+    },
+    {
+      "name": "installed_package_unchanged",
+      "passed": true
+    },
+    {
+      "name": "repository_unavailable_in_detached_root",
+      "passed": true
+    }
+  ],
+  "copied_files": 28,
+  "dependencies": "Python standard library; one copied skill; no upstream invocation",
+  "media_verification": "not_performed"
+}

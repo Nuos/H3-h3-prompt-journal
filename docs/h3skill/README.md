@@ -1,42 +1,43 @@
 # H3 通用核心技能
 
-**当前新增模块：** M7 `h3-time-synchronization` v0.1.0。
+**当前新增模块：** M8 `h3-state-continuity` v0.1.0。
 
-**模块合同：** M1—M7 各自为 `1.0.0`；不表示全部共享对象已冻结。
+**模块合同：** M1—M8 各自为 `1.0.0`；不表示全部共享对象已冻结。
 
 **更新日期：** 2026-11-05（America/Los_Angeles）。
 
-**开发基线：** `skillplan-v0.1.2-608813b`；M7 本轮读取仓库 `075fb72797fdca42bc47e38516cf3dbc16f4442d`。
+**开发基线：** `skillplan-v0.1.2-608813b`；M8 本轮读取仓库 `f1456793d21bfb411d36eea13cee2916c3bd20c5`。
 
 ## 核心摘要
 
-依据冻结的十二模块方案，已交付 M1—M6，本轮新增 **M7 统一时间轴与动作—镜头—声音协同**，技能名为 `h3-time-synchronization`。M7 包含时间依据与单位归一、事件排时与同步约束、时间域映射与帧量化三个可独立调用的子模块，输出版本化 `TimingMap`。各包可独立复制使用其声明的文字编排与离线检查能力。
+依据冻结的十二模块方案，已交付 M1—M7，本轮新增 **M8 主体、道具、场景与跨镜状态连续性**，技能名为 `h3-state-continuity`。M8 包含连续性策略与变化许可、计划状态与转换登记、边界交接与接续检查三个可独立调用的子模块，维护版本化 `ContinuityPolicy`、`StateLedger` 和边界检查结果。各包可独立复制使用其声明的文字编排与离线检查能力。
 
 领域方法限定为 `case-studies/` 文本，重点为 10 月案例。Anthropic 资料规定技能结构与创建方式，MiniMax 官方资料规定输入协议。自动媒体分析、真实拍点测量、音频合成、剪辑执行、H3 模型调用及真实媒体质量不因本轮交付而变为已验证能力。
 
 ## 关键结论
 
-1. M7 为动作、摄影、声音和编辑事件提供统一时间依据；事件语义、摄影策略、声音内容和编辑选择仍由原责任模块决定。
-2. 三个子模块可独立接受兼容输入；子提案只写自身分区，父模块对照真实原请求与基版本唯一接受。
-3. 源素材、作品、生成局部和成片时间分开；源／生成／编辑帧率分别登记，换算保留取整策略、误差和容差。
-4. BPM 推算的候选网格与实测拍点分开；相机提前、同步、滞后与固定观察是显式策略，不默认全部零延迟。
-5. 容量冲突返回动作／声音／编辑责任方，不能通过擅自删动作、改台词或增加运镜掩盖问题。
-6. M1—M6 运行包、原案例及冻结方案保持原字节；测试与实际试用记录在包外，旧报告保留历史含义。
+1. M8 按实体、属性和范围明确持续项与允许变化，区分外观参考、当前计划状态和实际媒体观察。
+2. M8.1／M8.2／M8.3 可直接接收兼容外部输入；子提案仅涉及自身分区，父 M8 对照真实原请求与基版本唯一接受。
+3. 同镜、连续接续、动作匹配、蒙太奇和时空省略分别检查，既识别未解释的状态重置，也保留获准的变化。
+4. 前镜末态、交接表、后镜初态需要三方核对；交接表不能单独证明正文存在某个动作或特写。
+5. 实际偏差引用 M12 观察，修订建立新计划版本；不倒改旧计划或观察记录制造通过。
+6. M1—M7 运行包、原案例及冻结方案保持原字节；测试与实际试用记录在包外，旧报告保留历史含义。
 
-**关键词：** M1—M7、TimingMap、时间域、首拍偏移、事件同步、帧率、帧量化、容差、H3 Label、独立调用。
+**关键词：** M1—M8、ContinuityPolicy、StateLedger、状态转换、道具连续性、边界交接、计划与观察、H3 Label、独立调用。
 
 ## 目录导航
 
 1. 模块入口
-2. M7 时间方案与 H3 交接
-3. M6 声音方案与 H3 交接
-4. M5 摄影方案与 H3 交接
-5. M4 动作计划与 H3 交接
-6. M3 空间计划与 H3 交接
-7. 既有 M2 与 H3 的对应
-8. 调用与文件组织
-9. 验证入口和完成边界
-10. 基线与历史记录
+2. M8 连续性方案与 H3 交接
+3. M7 时间方案与 H3 交接
+4. M6 声音方案与 H3 交接
+5. M5 摄影方案与 H3 交接
+6. M4 动作计划与 H3 交接
+7. M3 空间计划与 H3 交接
+8. 既有 M2 与 H3 的对应
+9. 调用与文件组织
+10. 验证入口和完成边界
+11. 基线与历史记录
 
 ## 1. 模块入口
 
@@ -49,7 +50,8 @@
 | M5 摄影机、景别、构图与焦点 | [h3-camera-visibility/SKILL.md](h3-camera-visibility/SKILL.md) | M5.1 观察机位；M5.2 取景可见；M5.3 焦点景深；M5.4 运动触发 | 文字工作流、独立合同、引用／版本／固定观察检查、父接受和交接 |
 | M6 声音、音乐、对白与歌词关系 | [h3-sound-music-dialogue/SKILL.md](h3-sound-music-dialogue/SKILL.md) | M6.1 声源绑定；M6.2 发声事件；M6.3 音轨策略；M6.4 环境动作声 | 文字工作流、独立合同、声音关系／引用／版本检查、父接受和交接 |
 | M7 统一时间轴与动作—镜头—声音协同 | [h3-time-synchronization/SKILL.md](h3-time-synchronization/SKILL.md) | M7.1 时间依据；M7.2 事件排时；M7.3 时间域映射与帧量化 | 文字工作流、独立合同、时间数值检查、父接受和交接 |
-| M8—M12 | 冻结方案中的后续职责 | 依已锁定职责推进 | 未因本轮交付而标为实现 |
+| M8 主体、道具、场景与跨镜状态连续性 | [h3-state-continuity/SKILL.md](h3-state-continuity/SKILL.md) | M8.1 策略许可；M8.2 计划账本；M8.3 边界交接 | 文字工作流、独立合同、状态关系／来源／版本检查、父接受和交接 |
+| M9—M12 | 冻结方案中的后续职责 | 依已锁定职责推进 | 未因本轮交付而标为实现 |
 
 ### M2 的三个产物
 
@@ -61,7 +63,21 @@
 
 三对象在 `M2State.content` 中分别为 `asset_registry`、`entity_registry`、`reference_map`。M2State 是本包的组合记录，不替代全部 ProjectPlan。
 
-## 2. M7 时间方案与 H3 交接
+## 2. M8 连续性方案与 H3 交接
+
+| 子模块 | 权威职责 | 主要产物与审计 |
+| --- | --- | --- |
+| M8.1 连续性策略与变化许可 | ContinuityPolicy | 持续范围、不变项、允许变化、来源和边界规则 |
+| M8.2 计划状态与转换登记 | StateLedger | 初态、转换依据、终态、来源版本；计划与观察分开 |
+| M8.3 边界交接与接续检查 | 只读状态形成交接结果 | 前镜末态／交接表／后镜初态，接缝要求与责任回传 |
+
+基础四模式的状态与变化事件进入 `integrated_multimodal_description`；I2VA／FL2VA／L2VA 分别遵守实际首帧／首尾帧／尾帧约束。Ref2VA 的身份与外观依据、参考保留与允许变化分别交接到官方分析字段，逐镜状态过程进入 `detailed_description`，声音持续由 `overall_soundscape`／`non_diegetic_music` 承接。
+
+`<Subject N>`、`<Picture N>`、`<Video N>`、`<Audio N>` 保持各自获准的素材角色；不能从参考图片静默继承不合本段计划的姿态或道具状态，也不能用文字绕过实际首帧约束。模型字段和最终 Label 编号归 M11；内部账本不是新增 H3 原生字段。
+
+M8.3 不改写 M8.2 状态，实际媒体观察仍归 M12。完整五模式／Label 编排与审计见 [M8 映射](h3-state-continuity/references/h3-label-mapping.md)，独立调用见 [M8 合同](h3-state-continuity/references/contract-guide.md)，专业问题回传见 [M8 审计](h3-state-continuity/references/audit-and-handoff.md)。
+
+## 3. M7 时间方案与 H3 交接
 
 | 子模块 | TimingMap 分区 | 主要产物与审计 |
 | --- | --- | --- |
@@ -73,7 +89,7 @@
 
 `[Shot N]` 代表真实镜头，第一镜不加切点时间戳；后续切点使用局部 `At MM:SS.mmm`。`<Picture N>`、`<Video N>`、`<Audio N>` 的时间角色不能混用，`<Subject N>` 不承担时间域标识。`TimingMap` 是项目内部对象，未新增 H3 原生字段。完整五模式／Label 编排与审计见 [M7 映射](h3-time-synchronization/references/h3-label-mapping.md)。
 
-## 3. M6 声音方案与 H3 交接
+## 4. M6 声音方案与 H3 交接
 
 | 子模块 | SoundPlan 分区 | 主要产物与审计 |
 | --- | --- | --- |
@@ -88,7 +104,7 @@ M6 适用 T2VA、I2VA、FL2VA、L2VA、Ref2VA。基础四模式的逐镜声音�
 
 完整编排与审计见 [M6 H3 映射](h3-sound-music-dialogue/references/h3-label-mapping.md)、[M6 合同](h3-sound-music-dialogue/references/contract-guide.md)、[M6 审计交接](h3-sound-music-dialogue/references/audit-and-handoff.md)。
 
-## 4. M5 摄影方案与 H3 交接
+## 5. M5 摄影方案与 H3 交接
 
 | 子模块 | CameraPlan 分区 | 主要产物与审计 |
 | --- | --- | --- |
@@ -103,7 +119,7 @@ M5 对应 T2VA、I2VA、FL2VA、L2VA、Ref2VA。基础四模式的摄影内容�
 
 完整逐项编排与审计见 [M5 H3 映射](h3-camera-visibility/references/h3-label-mapping.md)，独立输入与父接受见 [M5 合同指南](h3-camera-visibility/references/contract-guide.md)，具体检查与责任回传见 [M5 审计交接](h3-camera-visibility/references/audit-and-handoff.md)。
 
-## 5. M4 动作计划与 H3 交接
+## 6. M4 动作计划与 H3 交接
 
 | 子模块 | ActionPlan 分区 | 主要产物与审计 |
 | --- | --- | --- |
@@ -115,7 +131,7 @@ M4 适用于 T2VA、I2VA、FL2VA、L2VA、Ref2VA。基础四模式动作正文�
 
 完整逐字段、逐 Label 编排与审计见 [M4 H3 映射](h3-action-performance/references/h3-label-mapping.md)；独立输入、三分区、版本、未知项与工具用法见 [M4 合同指南](h3-action-performance/references/contract-guide.md)；专业检查和责任回传见 [M4 审计交接](h3-action-performance/references/audit-and-handoff.md)。
 
-## 6. M3 空间计划与 H3 交接
+## 7. M3 空间计划与 H3 交接
 
 | 子模块 | SpatialPlan 分区 | 主要产物与审计 |
 |---|---|---|
@@ -127,7 +143,7 @@ M3 适用于五种 H3 输入模式。T2VA 从文字组织空间；I2VA 从首帧
 
 完整逐字段、逐 Label 编排／审计说明见 [M3 H3 映射](h3-scene-blocking/references/h3-label-mapping.md)。公开调用与 JSON 示例见 [M3 合同指南](h3-scene-blocking/references/contract-guide.md)，领域规则和来源由技能入口按需路由。
 
-## 7. 既有 M2 与 H3 的对应
+## 8. 既有 M2 与 H3 的对应
 
 | 输入模式 | M2 交接重点 | 官方字段/Label 去向 |
 |---|---|---|
@@ -139,7 +155,18 @@ M3 适用于五种 H3 输入模式。T2VA 从文字组织空间；I2VA 从首帧
 
 完整逐项编排与审计见 [H3 模式与 Label 映射](h3-asset-reference/references/h3-label-mapping.md)。M2 的稳定 ID 与 H3 编号分别管理；音轨参考、原信号复制、画内角色和实际说话者不混用。
 
-## 8. 调用与文件组织
+## 9. 调用与文件组织
+
+M8 示例：
+
+```bash
+cd docs/h3skill/h3-state-continuity
+python scripts/m8_contract.py route assets/request-standalone-m8-3.json
+python scripts/m8_contract.py check assets/proposal-standalone-m8-3.json --request assets/request-standalone-m8-3.json
+python scripts/m8_contract.py accept assets/state-empty.json assets/proposal-batch.json --requests assets/requests.json
+```
+
+M8 的 `accept` 返回 `.state` 内的新草稿；M8.3 独立读取兼容策略与状态即可检查边界，无需先运行其他模块。合同或明确状态关系通过不等于自由文字语义或实际媒体已通过；精确字段与可运行示例见 [M8 合同指南](h3-state-continuity/references/contract-guide.md)。
 
 M7 示例：
 
@@ -208,7 +235,11 @@ python scripts/m2_contract.py accept assets/state-empty.json assets/proposal-bat
 
 独立调用最小输入、数据类型、范围语义、未知处理和版本规则分别见 [M3 合同指南](h3-scene-blocking/references/contract-guide.md)与 [M2 合同指南](h3-asset-reference/references/contract-guide.md)。示例资产均为文字示例，不能当作已提供媒体。
 
-## 9. 验证入口和完成边界
+## 10. 验证入口和完成边界
+
+- [M8 开发与验收记录](20261105-development-m8-v001.md)：职责、H3 映射、案例依据、实际验证与完成边界。
+- [M8 行为测试](tests/m8/)与[实际验证记录](validation/m8/)：独立／组合调用、合法变化、冲突、来源保真、便携运行与 Agent 文字试用。
+- [M8 发布清单](release-manifest-m8.json)与[核验工具](tools/verify_m8_release.py)：文件、来源、协议、冻结基线及原模块保护范围。
 
 - [M7 开发与验收记录](20261105-development-m7-v001.md)：职责、来源、实现、验证与完成边界。
 - [M7 行为测试](tests/m7/)与[实际验证记录](validation/m7/)：时间数学、负例、独立调用与文字试用。
@@ -239,7 +270,7 @@ python scripts/m2_contract.py accept assets/state-empty.json assets/proposal-bat
 
 M3 核验器应在其对应的历史发布提交中执行。确定性工具始终保留专业语义/媒体未验证，实际 Agent 文字试用另有记录；没有 H3 推理、真实生成质量、宿主自动触发率或全流程完成声明。
 
-## 10. 基线与历史记录
+## 11. 基线与历史记录
 
 `release-manifest.json`、`tools/verify_release.py` 及原 `validation/` 下的 M1 报告对应首模块发布快照 `faa8edc3`。其中旧核验器覆盖当时整个 h3skill 目录，不能作为扩展目录后的全局核验器；M2 的 `release-manifest-m2.json` 与 `verify_m2_release.py` 对应 `91e6ed0b` 发布快照，其中的 README 哈希也具有历史范围。M3 发布使用独立清单和核验器，并核对 M1、M2 运行包字节未变。历史记录不重写为本轮结果。
 
@@ -265,8 +296,14 @@ M5 的清单、README 哈希与验证记录对应 M5 的历史发布。M6 单独
 
 - [M6 来源与许可记录](h3-sound-music-dialogue/references/provenance-and-license.md)；[M6 案例读取基线](https://github.com/Nuos/H3-h3-prompt-journal/tree/780a8729cca22e13d4fa44f031f8824056a5deee/case-studies)。
 
-M7 使用独立清单与核验器，保护 M1—M6 运行包、案例文本、冻结开发与控制文件及既有标准快照。M6 清单中的 README 哈希保留 M6 发布时含义，不能用于否决本次经授权的索引更新。M8—M12 仍未实现。
+M7 使用独立清单与核验器，保护 M1—M6 运行包、案例文本、冻结开发与控制文件及既有标准快照。M6 清单中的 README 哈希保留 M6 发布时含义，不能用于否决本次经授权的索引更新。M7 发布时 M8—M12 仍未实现，该历史范围不改变。
 
-从仓库根运行 `python docs/h3skill/tools/verify_m7_release.py` 可复查 M7 当前发布完整性。合同、数值关系、文字试用与真实媒体的完成范围分别见 M7 开发记录。
+在 M7 对应历史发布提交中，从仓库根运行 `python docs/h3skill/tools/verify_m7_release.py` 可复查 M7 发布完整性。合同、数值关系、文字试用与真实媒体的完成范围分别见 M7 开发记录。
 
 - [M7 来源与许可记录](h3-time-synchronization/references/provenance-and-license.md)；[M7 案例读取基线](https://github.com/Nuos/H3-h3-prompt-journal/tree/075fb72797fdca42bc47e38516cf3dbc16f4442d/case-studies)。
+
+M8 使用独立发布清单与核验器，核对 339 个保护文件（原案例文本、冻结方案及控制记录、标准快照和 M1—M7 运行包）。M7 清单中的 README 哈希保留历史发布含义，不能用于否决本次经授权的索引更新。M9—M12 未因本轮实现而改变开发状态。
+
+从仓库根运行 `python docs/h3skill/tools/verify_m8_release.py` 可复查 M8 发布完整性；行为、文字试用和未执行的媒体层检查分别见 M8 开发记录。
+
+- [M8 来源与许可记录](h3-state-continuity/references/provenance-and-license.md)；[M8 案例读取基线](https://github.com/Nuos/H3-h3-prompt-journal/tree/f1456793d21bfb411d36eea13cee2916c3bd20c5/case-studies)。

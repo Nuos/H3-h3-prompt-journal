@@ -1,0 +1,48 @@
+test_accept_atomic_and_precise_invalidation (test_m8_contract.ContractTests.test_accept_atomic_and_precise_invalidation) ... ok
+test_accepted_history_is_append_only (test_m8_contract.ContractTests.test_accepted_history_is_append_only) ... ok
+test_actual_consistent_metadata_never_certifies_media (test_m8_contract.ContractTests.test_actual_consistent_metadata_never_certifies_media) ... ok
+test_actual_deviation_cannot_silently_use_planned_end (test_m8_contract.ContractTests.test_actual_deviation_cannot_silently_use_planned_end) ... ok
+test_actual_plan_digest_tamper_rejected (test_m8_contract.ContractTests.test_actual_plan_digest_tamper_rejected) ... ok
+test_actual_process_binding_and_unrelated_action_rejection (test_m8_contract.ContractTests.test_actual_process_binding_and_unrelated_action_rejection) ... ok
+test_actual_replan_is_explicit_pending_and_observation_immutable (test_m8_contract.ContractTests.test_actual_replan_is_explicit_pending_and_observation_immutable) ... ok
+test_actual_unsafe_continue_is_rejected (test_m8_contract.ContractTests.test_actual_unsafe_continue_is_rejected) ... ok
+test_authorized_ellipsis_and_unknown_cue (test_m8_contract.ContractTests.test_authorized_ellipsis_and_unknown_cue) ... ok
+test_authorized_montage_is_not_all_attribute_equality (test_m8_contract.ContractTests.test_authorized_montage_is_not_all_attribute_equality) ... ok
+test_blocker_rejects_atomic_acceptance (test_m8_contract.ContractTests.test_blocker_rejects_atomic_acceptance) ... ok
+test_chinese_spans_are_codepoints_not_utf8_bytes (test_m8_contract.ContractTests.test_chinese_spans_are_codepoints_not_utf8_bytes) ... ok
+test_continuous_holding_reset_rejected_even_with_permission (test_m8_contract.ContractTests.test_continuous_holding_reset_rejected_even_with_permission) ... ok
+test_display_change_only_invalidates_title_reader (test_m8_contract.ContractTests.test_display_change_only_invalidates_title_reader) ... ok
+test_duplicate_json_nonfinite_and_version_rejected (test_m8_contract.ContractTests.test_duplicate_json_nonfinite_and_version_rejected) ... ok
+test_exact_replay_preserves_version (test_m8_contract.ContractTests.test_exact_replay_preserves_version) ... ok
+test_explicit_unresolved_policy_rejected_for_every_transition_mode (test_m8_contract.ContractTests.test_explicit_unresolved_policy_rejected_for_every_transition_mode) ... ok
+test_handoff_table_cannot_override_ledger (test_m8_contract.ContractTests.test_handoff_table_cannot_override_ledger) ... ok
+test_hypothesis_cannot_be_known_or_authority (test_m8_contract.ContractTests.test_hypothesis_cannot_be_known_or_authority) ... ok
+test_identity_reference_does_not_authorize_pose (test_m8_contract.ContractTests.test_identity_reference_does_not_authorize_pose) ... ok
+test_interval_n_plus_one_and_clock_unit (test_m8_contract.ContractTests.test_interval_n_plus_one_and_clock_unit) ... ok
+test_intervals_cannot_gap_overlap (test_m8_contract.ContractTests.test_intervals_cannot_gap_overlap) ... ok
+test_match_cut_only_selected_attributes_must_match (test_m8_contract.ContractTests.test_match_cut_only_selected_attributes_must_match) ... ok
+test_missing_minimum_input_is_not_ready (test_m8_contract.ContractTests.test_missing_minimum_input_is_not_ready) ... ok
+test_missing_source_and_context_version (test_m8_contract.ContractTests.test_missing_source_and_context_version) ... ok
+test_mutated_operation_id_rejected (test_m8_contract.ContractTests.test_mutated_operation_id_rejected) ... ok
+test_original_projection_must_match_real_parent (test_m8_contract.ContractTests.test_original_projection_must_match_real_parent) ... ok
+test_original_request_required (test_m8_contract.ContractTests.test_original_request_required) ... ok
+test_owner_cannot_write_planned_ledger_from_m83 (test_m8_contract.ContractTests.test_owner_cannot_write_planned_ledger_from_m83) ... ok
+test_palm_closeup_cannot_be_table_only (test_m8_contract.ContractTests.test_palm_closeup_cannot_be_table_only) ... ok
+test_parent_context_must_match_candidate_not_only_request (test_m8_contract.ContractTests.test_parent_context_must_match_candidate_not_only_request) ... ok
+test_parent_route_marks_missing_child_inputs (test_m8_contract.ContractTests.test_parent_route_marks_missing_child_inputs) ... ok
+test_policy_cannot_invent_m9_change_permission (test_m8_contract.ContractTests.test_policy_cannot_invent_m9_change_permission) ... ok
+test_proposal_cannot_forge_original_context (test_m8_contract.ContractTests.test_proposal_cannot_forge_original_context) ... ok
+test_proposal_cannot_forge_sources (test_m8_contract.ContractTests.test_proposal_cannot_forge_sources) ... ok
+test_readonly_context_changes_invalidate_registered_reader (test_m8_contract.ContractTests.test_readonly_context_changes_invalidate_registered_reader) ... ok
+test_repeated_state_value_is_valid (test_m8_contract.ContractTests.test_repeated_state_value_is_valid) ... ok
+test_snapshots_do_not_claim_interval_coverage (test_m8_contract.ContractTests.test_snapshots_do_not_claim_interval_coverage) ... ok
+test_source_id_cannot_rebind_on_new_revision (test_m8_contract.ContractTests.test_source_id_cannot_rebind_on_new_revision) ... ok
+test_stale_base_rejected (test_m8_contract.ContractTests.test_stale_base_rejected) ... ok
+test_three_standalone_children_and_routes (test_m8_contract.ContractTests.test_three_standalone_children_and_routes) ... ok
+test_transition_cannot_borrow_another_shots_policy (test_m8_contract.ContractTests.test_transition_cannot_borrow_another_shots_policy) ... ok
+test_unknown_remains_unverified_and_never_zero (test_m8_contract.ContractTests.test_unknown_remains_unverified_and_never_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 0.697s
+
+OK

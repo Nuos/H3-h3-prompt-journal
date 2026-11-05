@@ -1,0 +1,1615 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:h3skill:m8:contracts:1.0.0",
+  "title": "M8 state continuity public contracts",
+  "description": "Closed wire shapes; semantic ownership, provenance, boundary rules and readonly request fidelity are checked by scripts/m8_contract.py. Known means declared planned value, never verified generated media.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/M8Request"
+    },
+    {
+      "$ref": "#/$defs/M8Proposal"
+    },
+    {
+      "$ref": "#/$defs/M8ProposalBatch"
+    },
+    {
+      "$ref": "#/$defs/M8State"
+    }
+  ],
+  "$defs": {
+    "Id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+    },
+    "Unknown": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "unknown"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "SourceRefs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Id"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "KnownFact": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "known"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        }
+      },
+      "required": [
+        "state",
+        "value",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Fact": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/KnownFact"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Brief": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Attributes": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/Id"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Fact"
+      }
+    },
+    "Source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "user_requirement",
+            "approved_plan",
+            "case_text",
+            "external_input",
+            "media_observation",
+            "design_decision",
+            "official_document",
+            "hypothesis"
+          ]
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "version",
+        "excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "Sources": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/Id"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      }
+    },
+    "Context": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7",
+            "M8",
+            "M9",
+            "M10",
+            "M11",
+            "M12",
+            "M8.1",
+            "M8.2",
+            "M8.3",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "Binding": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7",
+            "M8",
+            "M9",
+            "M10",
+            "M11",
+            "M12",
+            "M8.1",
+            "M8.2",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^(/|$)"
+        },
+        "value": {}
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "path",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "Projection": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^/(content|sources|issues)(/|$)"
+        },
+        "source_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "value": {}
+      },
+      "required": [
+        "path",
+        "source_version",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "BoundaryType": {
+      "enum": [
+        "continuous_shot",
+        "continuous_action_cut",
+        "match_cut",
+        "montage",
+        "ellipsis"
+      ]
+    },
+    "ChangePermission": {
+      "type": "object",
+      "properties": {
+        "attribute": {
+          "$ref": "#/$defs/Id"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        }
+      },
+      "required": [
+        "attribute",
+        "reason",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Policy": {
+      "type": "object",
+      "properties": {
+        "policy_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "boundary_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "boundary_type": {
+          "$ref": "#/$defs/BoundaryType"
+        },
+        "from_shot": {
+          "$ref": "#/$defs/Id"
+        },
+        "to_shot": {
+          "$ref": "#/$defs/Id"
+        },
+        "invariants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "match_attributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "allowed_changes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ChangePermission"
+          },
+          "minItems": 0
+        },
+        "cue": {
+          "$ref": "#/$defs/Fact"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        }
+      },
+      "required": [
+        "policy_id",
+        "boundary_id",
+        "boundary_type",
+        "from_shot",
+        "to_shot",
+        "invariants",
+        "match_attributes",
+        "allowed_changes",
+        "cue",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "ContinuityPolicy": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Policy"
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "ReferenceUse": {
+      "type": "object",
+      "properties": {
+        "reference_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "attributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "reference_id",
+        "attributes"
+      ],
+      "additionalProperties": false
+    },
+    "PlannedState": {
+      "type": "object",
+      "properties": {
+        "state_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "shot_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "phase": {
+          "enum": [
+            "initial",
+            "intermediate",
+            "final"
+          ]
+        },
+        "basis": {
+          "const": "planned"
+        },
+        "attributes": {
+          "$ref": "#/$defs/Attributes"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        },
+        "reference_uses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ReferenceUse"
+          },
+          "minItems": 0
+        },
+        "bindings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Binding"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "state_id",
+        "shot_id",
+        "phase",
+        "basis",
+        "attributes",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Transition": {
+      "type": "object",
+      "properties": {
+        "transition_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "from_state": {
+          "$ref": "#/$defs/Id"
+        },
+        "to_state": {
+          "$ref": "#/$defs/Id"
+        },
+        "mode": {
+          "enum": [
+            "process",
+            "boundary",
+            "hold"
+          ]
+        },
+        "changed_attributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "cause": {
+          "$ref": "#/$defs/Fact"
+        },
+        "policy_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "action_binding": {
+          "$ref": "#/$defs/Binding"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        }
+      },
+      "required": [
+        "transition_id",
+        "from_state",
+        "to_state",
+        "mode",
+        "changed_attributes",
+        "cause",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Interval": {
+      "type": "object",
+      "properties": {
+        "interval_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "state_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "start": {
+          "type": "number"
+        },
+        "end": {
+          "type": "number"
+        },
+        "unit": {
+          "const": "seconds"
+        },
+        "clock_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        }
+      },
+      "required": [
+        "interval_id",
+        "state_id",
+        "start",
+        "end",
+        "unit",
+        "clock_id",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Chain": {
+      "type": "object",
+      "properties": {
+        "chain_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "coverage": {
+          "enum": [
+            "complete_continuous",
+            "snapshots"
+          ]
+        },
+        "state_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 1
+        },
+        "transition_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "intervals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Interval"
+          },
+          "minItems": 0
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        }
+      },
+      "required": [
+        "chain_id",
+        "coverage",
+        "state_ids",
+        "transition_ids",
+        "intervals",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "StateLedger": {
+      "type": "object",
+      "properties": {
+        "states": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/PlannedState"
+          }
+        },
+        "transitions": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Transition"
+          }
+        },
+        "chains": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Chain"
+          }
+        }
+      },
+      "required": [
+        "states",
+        "transitions",
+        "chains"
+      ],
+      "additionalProperties": false
+    },
+    "PromptEndpoint": {
+      "type": "object",
+      "properties": {
+        "document_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "declaration_id": {
+          "$ref": "#/$defs/Id"
+        }
+      },
+      "required": [
+        "document_id",
+        "declaration_id"
+      ],
+      "additionalProperties": false
+    },
+    "Continuation": {
+      "type": "object",
+      "properties": {
+        "decision": {
+          "enum": [
+            "planned_only",
+            "continue_from_observed",
+            "regenerate",
+            "replan",
+            "await_observation"
+          ]
+        },
+        "observation_id": {
+          "$ref": "#/$defs/Id"
+        }
+      },
+      "required": [
+        "decision"
+      ],
+      "additionalProperties": false
+    },
+    "Handoff": {
+      "type": "object",
+      "properties": {
+        "handoff_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "policy_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "from_state": {
+          "$ref": "#/$defs/Id"
+        },
+        "to_state": {
+          "$ref": "#/$defs/Id"
+        },
+        "table": {
+          "type": "object",
+          "properties": {
+            "from": {
+              "$ref": "#/$defs/Attributes"
+            },
+            "to": {
+              "$ref": "#/$defs/Attributes"
+            }
+          },
+          "required": [
+            "from",
+            "to"
+          ],
+          "additionalProperties": false
+        },
+        "previous_prompt": {
+          "$ref": "#/$defs/PromptEndpoint"
+        },
+        "next_prompt": {
+          "$ref": "#/$defs/PromptEndpoint"
+        },
+        "continuation": {
+          "$ref": "#/$defs/Continuation"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        }
+      },
+      "required": [
+        "handoff_id",
+        "policy_id",
+        "from_state",
+        "to_state",
+        "table",
+        "previous_prompt",
+        "next_prompt",
+        "continuation",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "ContinuityHandoffs": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Handoff"
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "EditBoundary": {
+      "type": "object",
+      "properties": {
+        "boundary_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "boundary_type": {
+          "$ref": "#/$defs/BoundaryType"
+        },
+        "from_shot": {
+          "$ref": "#/$defs/Id"
+        },
+        "to_shot": {
+          "$ref": "#/$defs/Id"
+        },
+        "invariants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "match_attributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "approved_changes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "cue": {
+          "$ref": "#/$defs/Fact"
+        }
+      },
+      "required": [
+        "boundary_id",
+        "boundary_type",
+        "from_shot",
+        "to_shot",
+        "invariants",
+        "match_attributes",
+        "approved_changes",
+        "cue"
+      ],
+      "additionalProperties": false
+    },
+    "EditValues": {
+      "type": "object",
+      "properties": {
+        "boundaries": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/EditBoundary"
+          }
+        }
+      },
+      "required": [
+        "boundaries"
+      ],
+      "additionalProperties": false
+    },
+    "Span": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "quote"
+      ],
+      "additionalProperties": false
+    },
+    "Declaration": {
+      "type": "object",
+      "properties": {
+        "declaration_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "edge": {
+          "enum": [
+            "initial",
+            "final"
+          ]
+        },
+        "state_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "method": {
+          "const": "literal_state_declaration"
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attributes": {
+          "$ref": "#/$defs/Attributes"
+        },
+        "spans": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Span"
+          }
+        }
+      },
+      "required": [
+        "declaration_id",
+        "edge",
+        "state_id",
+        "method",
+        "reviewer",
+        "attributes",
+        "spans"
+      ],
+      "additionalProperties": false
+    },
+    "PromptDocument": {
+      "type": "object",
+      "properties": {
+        "document_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "shot_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "declarations": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Declaration"
+          }
+        }
+      },
+      "required": [
+        "document_id",
+        "shot_id",
+        "version",
+        "text",
+        "declarations"
+      ],
+      "additionalProperties": false
+    },
+    "PromptValues": {
+      "type": "object",
+      "properties": {
+        "documents": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/PromptDocument"
+          }
+        }
+      },
+      "required": [
+        "documents"
+      ],
+      "additionalProperties": false
+    },
+    "Reference": {
+      "type": "object",
+      "properties": {
+        "reference_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "role": {
+          "enum": [
+            "identity",
+            "appearance",
+            "scene",
+            "first_frame",
+            "final_frame",
+            "action",
+            "audio",
+            "other"
+          ]
+        },
+        "allowed_attributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "denied_attributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "reference_id",
+        "role",
+        "allowed_attributes",
+        "denied_attributes"
+      ],
+      "additionalProperties": false
+    },
+    "ReferenceValues": {
+      "type": "object",
+      "properties": {
+        "references": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Reference"
+          }
+        }
+      },
+      "required": [
+        "references"
+      ],
+      "additionalProperties": false
+    },
+    "Observation": {
+      "type": "object",
+      "properties": {
+        "observation_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "media_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "media_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "plan_work_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "plan_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "state_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "attributes": {
+          "$ref": "#/$defs/Attributes"
+        },
+        "verdict": {
+          "enum": [
+            "consistent",
+            "deviation",
+            "unknown"
+          ]
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coverage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        },
+        "plan_state_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "observation_id",
+        "media_id",
+        "media_version",
+        "plan_work_id",
+        "plan_version",
+        "state_id",
+        "attributes",
+        "verdict",
+        "method",
+        "coverage",
+        "locator",
+        "source_refs",
+        "plan_state_digest"
+      ],
+      "additionalProperties": false
+    },
+    "ActualValues": {
+      "type": "object",
+      "properties": {
+        "observations": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Observation"
+          }
+        }
+      },
+      "required": [
+        "observations"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs": {
+      "type": "object",
+      "properties": {
+        "continuity_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "policy_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "ledger_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "handoff_brief": {
+          "$ref": "#/$defs/Brief"
+        },
+        "policy_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "ledger_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "task_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "reference_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "spatial_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "action_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "camera_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "sound_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "timing_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "edit_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "prompt_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "actual_context": {
+          "$ref": "#/$defs/Context"
+        },
+        "readonly_projection": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Projection"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "Content": {
+      "type": "object",
+      "properties": {
+        "ContinuityPolicy": {
+          "$ref": "#/$defs/ContinuityPolicy"
+        },
+        "StateLedger": {
+          "$ref": "#/$defs/StateLedger"
+        },
+        "ContinuityHandoffs": {
+          "$ref": "#/$defs/ContinuityHandoffs"
+        }
+      },
+      "required": [
+        "ContinuityPolicy",
+        "StateLedger",
+        "ContinuityHandoffs"
+      ],
+      "additionalProperties": false
+    },
+    "Changes": {
+      "type": "object",
+      "properties": {
+        "ContinuityPolicy": {
+          "$ref": "#/$defs/ContinuityPolicy"
+        },
+        "StateLedger": {
+          "$ref": "#/$defs/StateLedger"
+        },
+        "ContinuityHandoffs": {
+          "$ref": "#/$defs/ContinuityHandoffs"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "Issue": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "owner": {
+          "enum": [
+            "M8.1",
+            "M8.2",
+            "M8.3"
+          ]
+        },
+        "severity": {
+          "enum": [
+            "blocking",
+            "advisory"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "open",
+            "resolved"
+          ]
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        },
+        "resolution": {
+          "$ref": "#/$defs/KnownFact"
+        }
+      },
+      "required": [
+        "issue_id",
+        "owner",
+        "severity",
+        "message",
+        "status",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Resolution": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        }
+      },
+      "required": [
+        "issue_id",
+        "rationale",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "M8Request": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M8Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "request_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "target": {
+          "enum": [
+            "M8",
+            "M8.1",
+            "M8.2",
+            "M8.3"
+          ]
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "request_id",
+        "target",
+        "sources",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "M8Proposal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M8Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "module_id": {
+          "enum": [
+            "M8.1",
+            "M8.2",
+            "M8.3"
+          ]
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs"
+        },
+        "changes": {
+          "$ref": "#/$defs/Changes"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "minItems": 0
+        },
+        "resolutions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Resolution"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "sources",
+        "context",
+        "changes",
+        "issues",
+        "resolutions"
+      ],
+      "additionalProperties": false
+    },
+    "M8ProposalBatch": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M8ProposalBatch"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/M8Proposal"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "proposals"
+      ],
+      "additionalProperties": false
+    },
+    "Receipt": {
+      "type": "object",
+      "properties": {
+        "digest": {
+          "type": "string",
+          "minLength": 1
+        },
+        "request_digest": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "module_id": {
+          "enum": [
+            "M8.1",
+            "M8.2",
+            "M8.3"
+          ]
+        },
+        "accepted_version": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "digest",
+        "request_digest",
+        "source_request_id",
+        "module_id",
+        "accepted_version"
+      ],
+      "additionalProperties": false
+    },
+    "Consumer": {
+      "type": "object",
+      "properties": {
+        "module_id": {
+          "enum": [
+            "M1",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7",
+            "M8",
+            "M9",
+            "M10",
+            "M11",
+            "M12",
+            "M8.1",
+            "M8.2",
+            "M8.3"
+          ]
+        },
+        "result_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_state_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^/(content|sources|contexts|issues|display)(/|$)"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "status": {
+          "enum": [
+            "current",
+            "stale"
+          ]
+        }
+      },
+      "required": [
+        "module_id",
+        "result_version",
+        "source_state_version",
+        "read_paths",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "M8State": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M8State"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "owner": {
+          "const": "M8"
+        },
+        "object_type": {
+          "const": "StateContinuity"
+        },
+        "status": {
+          "const": "draft"
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "content": {
+          "$ref": "#/$defs/Content"
+        },
+        "contexts": {
+          "type": "object",
+          "properties": {
+            "M8.1": {
+              "$ref": "#/$defs/Inputs"
+            },
+            "M8.2": {
+              "$ref": "#/$defs/Inputs"
+            },
+            "M8.3": {
+              "$ref": "#/$defs/Inputs"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "issues": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Issue"
+          }
+        },
+        "accepted_proposals": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Receipt"
+          }
+        },
+        "consumers": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Id"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Consumer"
+          }
+        },
+        "display": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "title"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "version",
+        "owner",
+        "object_type",
+        "status",
+        "sources",
+        "content",
+        "contexts",
+        "issues",
+        "accepted_proposals",
+        "consumers",
+        "display"
+      ],
+      "additionalProperties": false
+    },
+    "ActionAdapter": {
+      "type": "object",
+      "properties": {
+        "action_id": {
+          "$ref": "#/$defs/Id"
+        },
+        "from_state": {
+          "$ref": "#/$defs/Id"
+        },
+        "to_state": {
+          "$ref": "#/$defs/Id"
+        },
+        "changed_attributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Id"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2
+        },
+        "source_refs": {
+          "$ref": "#/$defs/SourceRefs"
+        }
+      },
+      "required": [
+        "action_id",
+        "from_state",
+        "to_state",
+        "changed_attributes",
+        "steps",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

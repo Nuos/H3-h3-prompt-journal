@@ -1,0 +1,59 @@
+{
+  "kind": "M8State",
+  "contract_version": "1.0.0",
+  "work_id": "m8_design_demo",
+  "version": 0,
+  "owner": "M8",
+  "object_type": "StateContinuity",
+  "status": "draft",
+  "sources": {},
+  "content": {
+    "ContinuityPolicy": {
+      "items": {}
+    },
+    "StateLedger": {
+      "states": {},
+      "transitions": {},
+      "chains": {}
+    },
+    "ContinuityHandoffs": {
+      "items": {}
+    }
+  },
+  "contexts": {},
+  "issues": {},
+  "accepted_proposals": {},
+  "consumers": {
+    "compiler": {
+      "module_id": "M11",
+      "result_version": 1,
+      "source_state_version": 0,
+      "read_paths": [
+        "/content/StateLedger",
+        "/content/ContinuityHandoffs"
+      ],
+      "status": "current"
+    },
+    "editor": {
+      "module_id": "M9",
+      "result_version": 1,
+      "source_state_version": 0,
+      "read_paths": [
+        "/content/ContinuityPolicy"
+      ],
+      "status": "current"
+    },
+    "title": {
+      "module_id": "M1",
+      "result_version": 1,
+      "source_state_version": 0,
+      "read_paths": [
+        "/display/title"
+      ],
+      "status": "current"
+    }
+  },
+  "display": {
+    "title": "M8 D类计划设计演示；非实测"
+  }
+}

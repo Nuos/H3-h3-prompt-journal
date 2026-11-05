@@ -1,0 +1,117 @@
+{
+  "kind": "M8Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "m8_design_demo",
+  "base_version": 0,
+  "proposal_id": "proposal_m8_1",
+  "module_id": "M8.1",
+  "source_request_id": "req_m8_1",
+  "sources": {
+    "case018": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+      "version": "case-baseline-35658d3615d02c6aa6e4221fb223d73b86aa6875",
+      "excerpt": "案例018要求触地硬切时保持支撑腿、脚位、躯干及髋部，仅切换长袜；触地、切换、保持、稳定、再抬腿分别成立。此处只援引提示词约束，不把案例叙述转成媒体实测。"
+    },
+    "case019": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "version": "case-baseline-35658d3615d02c6aa6e4221fb223d73b86aa6875",
+      "excerpt": "案例019将PICTURE1限制为脸部身份，排除姿态、身体朝向、构图；未完成动作在切镜后接续。"
+    },
+    "design": {
+      "kind": "design_decision",
+      "locator": "synthetic-design-fixture://m8/contact-boundary",
+      "version": "1",
+      "excerpt": "D类工程设计夹具。两镜状态、0至2秒区间、正文与适配器均为本次合同演示编写；案例018/019仅提供约束来源。不是原案例逐字提示词，不是视频观察或生成结果。"
+    }
+  },
+  "context": {
+    "policy_brief": "案例018约束的D类触地切袜策略演示。",
+    "edit_context": {
+      "owner": "M9",
+      "source_id": "design",
+      "source_version": "1",
+      "values": {
+        "boundaries": {
+          "cut_1": {
+            "boundary_id": "cut_1",
+            "boundary_type": "continuous_action_cut",
+            "from_shot": "shot_1",
+            "to_shot": "shot_2",
+            "invariants": [
+              "person.identity",
+              "person.support",
+              "person.contact",
+              "person.holding",
+              "person.facing",
+              "person.direction",
+              "person.action_phase",
+              "scene.location",
+              "camera.framing"
+            ],
+            "match_attributes": [],
+            "cue": {
+              "state": "known",
+              "value": "触地硬切后保持",
+              "source_refs": [
+                "design"
+              ]
+            },
+            "approved_changes": [
+              "person.stocking"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "changes": {
+    "ContinuityPolicy": {
+      "items": {
+        "p_contact": {
+          "policy_id": "p_contact",
+          "boundary_id": "cut_1",
+          "boundary_type": "continuous_action_cut",
+          "from_shot": "shot_1",
+          "to_shot": "shot_2",
+          "invariants": [
+            "person.identity",
+            "person.support",
+            "person.contact",
+            "person.holding",
+            "person.facing",
+            "person.direction",
+            "person.action_phase",
+            "scene.location",
+            "camera.framing"
+          ],
+          "match_attributes": [],
+          "allowed_changes": [
+            {
+              "attribute": "person.stocking",
+              "reason": "触地切换只允许长袜变化；身体支撑与接触保持。",
+              "source_refs": [
+                "case018",
+                "design"
+              ]
+            }
+          ],
+          "cue": {
+            "state": "known",
+            "value": "触地硬切后保持",
+            "source_refs": [
+              "design"
+            ]
+          },
+          "source_refs": [
+            "case018",
+            "design"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

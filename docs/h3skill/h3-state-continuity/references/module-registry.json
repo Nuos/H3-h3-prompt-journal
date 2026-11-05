@@ -1,0 +1,480 @@
+{
+  "registry_version": "1.0.0",
+  "route_version": "1.0.0",
+  "package_version": "0.1.0",
+  "parent_module": "M8",
+  "object_type": "StateContinuity",
+  "contract_version": "1.0.0",
+  "principles": [
+    "high_cohesion",
+    "loose_coupling",
+    "modularity",
+    "information_routing"
+  ],
+  "modules": {
+    "M8.1": {
+      "module_id": "M8.1",
+      "name": "连续性策略与变化许可",
+      "parent": "M8",
+      "visibility": "public",
+      "public": true,
+      "implementation_status": "implemented",
+      "implementation_version": "0.1.0",
+      "contract_version": "1.0.0",
+      "goal": "连续性策略与变化许可",
+      "trigger": "Explicit request.target=M8.1",
+      "minimum_inputs": [
+        "policy_brief",
+        "edit_context"
+      ],
+      "required_dependencies": [
+        "M8 contract 1.0.0",
+        "Python >= 3.10 standard library for CLI"
+      ],
+      "optional_dependencies": [
+        "compatible source/version-bound contexts; no upstream execution required"
+      ],
+      "independent_call": true,
+      "write_scope": "/content/ContinuityPolicy",
+      "readonly_paths": [
+        "/inputs/policy_context",
+        "/inputs/ledger_context",
+        "/inputs/task_context",
+        "/inputs/reference_context",
+        "/inputs/spatial_context",
+        "/inputs/action_context",
+        "/inputs/camera_context",
+        "/inputs/sound_context",
+        "/inputs/timing_context",
+        "/inputs/edit_context",
+        "/inputs/prompt_context",
+        "/inputs/actual_context",
+        "/inputs/readonly_projection"
+      ],
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/continuity-policy.md"
+      ],
+      "conditional_resources": [
+        {
+          "path": "references/audit-and-handoff.md",
+          "when": "audit or repair"
+        },
+        {
+          "path": "references/h3-label-mapping.md",
+          "when": "H3 prompt compilation"
+        },
+        {
+          "path": "references/case-evidence.md",
+          "when": "case interpretation"
+        }
+      ],
+      "input_mapping": {
+        "required": [
+          "policy_brief",
+          "edit_context"
+        ],
+        "optional_or_readonly_projections": [
+          "policy_context",
+          "ledger_context",
+          "task_context",
+          "reference_context",
+          "spatial_context",
+          "action_context",
+          "camera_context",
+          "sound_context",
+          "timing_context",
+          "edit_context",
+          "prompt_context",
+          "actual_context",
+          "readonly_projection"
+        ],
+        "source_contract": "Exact original source/version-bound inputs. Parent acceptance checks owned contexts against candidate partitions."
+      },
+      "output": "M8Proposal",
+      "output_consumers": [
+        "M8.2",
+        "M8.3",
+        "M9",
+        "M11",
+        "M12"
+      ],
+      "return_to": "M8 parent or standalone caller",
+      "parent_child_boundary": "Only ContinuityPolicy may be proposed; parent alone accepts. M8.3 reads StateLedger and returns corrections to M8.2.",
+      "failure_return": {
+        "policy": "M8.1",
+        "planned_state": "M8.2",
+        "handoff": "M8.3",
+        "reference": "M2",
+        "spatial": "M3",
+        "action": "M4",
+        "camera": "M5",
+        "sound": "M6",
+        "timing": "M7",
+        "edit_intent": "M9",
+        "prompt_body": "M11",
+        "actual_observation": "M12"
+      },
+      "repair_target": "M8.1",
+      "retry_policy": "Exact accepted request/proposal replay preserves version; revisions use new IDs and current base. No automatic retry or hidden rebase.",
+      "operation_effect": "Pure JSON output; no files/media/upstream mutation",
+      "validation_status": "See package-external tests/m8 and tests/m8_portability.py; installed package carries no generated test report."
+    },
+    "M8.2": {
+      "module_id": "M8.2",
+      "name": "计划状态与转换",
+      "parent": "M8",
+      "visibility": "public",
+      "public": true,
+      "implementation_status": "implemented",
+      "implementation_version": "0.1.0",
+      "contract_version": "1.0.0",
+      "goal": "计划状态与转换",
+      "trigger": "Explicit request.target=M8.2",
+      "minimum_inputs": [
+        "ledger_brief",
+        "policy_context"
+      ],
+      "required_dependencies": [
+        "M8 contract 1.0.0",
+        "Python >= 3.10 standard library for CLI"
+      ],
+      "optional_dependencies": [
+        "compatible source/version-bound contexts; no upstream execution required"
+      ],
+      "independent_call": true,
+      "write_scope": "/content/StateLedger",
+      "readonly_paths": [
+        "/inputs/policy_context",
+        "/inputs/ledger_context",
+        "/inputs/task_context",
+        "/inputs/reference_context",
+        "/inputs/spatial_context",
+        "/inputs/action_context",
+        "/inputs/camera_context",
+        "/inputs/sound_context",
+        "/inputs/timing_context",
+        "/inputs/edit_context",
+        "/inputs/prompt_context",
+        "/inputs/actual_context",
+        "/inputs/readonly_projection"
+      ],
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/planned-state-ledger.md"
+      ],
+      "conditional_resources": [
+        {
+          "path": "references/audit-and-handoff.md",
+          "when": "audit or repair"
+        },
+        {
+          "path": "references/h3-label-mapping.md",
+          "when": "H3 prompt compilation"
+        },
+        {
+          "path": "references/case-evidence.md",
+          "when": "case interpretation"
+        }
+      ],
+      "input_mapping": {
+        "required": [
+          "ledger_brief",
+          "policy_context"
+        ],
+        "optional_or_readonly_projections": [
+          "policy_context",
+          "ledger_context",
+          "task_context",
+          "reference_context",
+          "spatial_context",
+          "action_context",
+          "camera_context",
+          "sound_context",
+          "timing_context",
+          "edit_context",
+          "prompt_context",
+          "actual_context",
+          "readonly_projection"
+        ],
+        "source_contract": "Exact original source/version-bound inputs. Parent acceptance checks owned contexts against candidate partitions."
+      },
+      "output": "M8Proposal",
+      "output_consumers": [
+        "M8.2",
+        "M8.3",
+        "M9",
+        "M11",
+        "M12"
+      ],
+      "return_to": "M8 parent or standalone caller",
+      "parent_child_boundary": "Only StateLedger may be proposed; parent alone accepts. M8.3 reads StateLedger and returns corrections to M8.2.",
+      "failure_return": {
+        "policy": "M8.1",
+        "planned_state": "M8.2",
+        "handoff": "M8.3",
+        "reference": "M2",
+        "spatial": "M3",
+        "action": "M4",
+        "camera": "M5",
+        "sound": "M6",
+        "timing": "M7",
+        "edit_intent": "M9",
+        "prompt_body": "M11",
+        "actual_observation": "M12"
+      },
+      "repair_target": "M8.2",
+      "retry_policy": "Exact accepted request/proposal replay preserves version; revisions use new IDs and current base. No automatic retry or hidden rebase.",
+      "operation_effect": "Pure JSON output; no files/media/upstream mutation",
+      "validation_status": "See package-external tests/m8 and tests/m8_portability.py; installed package carries no generated test report."
+    },
+    "M8.3": {
+      "module_id": "M8.3",
+      "name": "边界交接与接续检查",
+      "parent": "M8",
+      "visibility": "public",
+      "public": true,
+      "implementation_status": "implemented",
+      "implementation_version": "0.1.0",
+      "contract_version": "1.0.0",
+      "goal": "边界交接与接续检查",
+      "trigger": "Explicit request.target=M8.3",
+      "minimum_inputs": [
+        "handoff_brief",
+        "policy_context",
+        "ledger_context",
+        "prompt_context"
+      ],
+      "required_dependencies": [
+        "M8 contract 1.0.0",
+        "Python >= 3.10 standard library for CLI"
+      ],
+      "optional_dependencies": [
+        "compatible source/version-bound contexts; no upstream execution required"
+      ],
+      "independent_call": true,
+      "write_scope": "/content/ContinuityHandoffs",
+      "readonly_paths": [
+        "/inputs/policy_context",
+        "/inputs/ledger_context",
+        "/inputs/task_context",
+        "/inputs/reference_context",
+        "/inputs/spatial_context",
+        "/inputs/action_context",
+        "/inputs/camera_context",
+        "/inputs/sound_context",
+        "/inputs/timing_context",
+        "/inputs/edit_context",
+        "/inputs/prompt_context",
+        "/inputs/actual_context",
+        "/inputs/readonly_projection"
+      ],
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/boundary-handoff.md"
+      ],
+      "conditional_resources": [
+        {
+          "path": "references/audit-and-handoff.md",
+          "when": "audit or repair"
+        },
+        {
+          "path": "references/h3-label-mapping.md",
+          "when": "H3 prompt compilation"
+        },
+        {
+          "path": "references/case-evidence.md",
+          "when": "case interpretation"
+        }
+      ],
+      "input_mapping": {
+        "required": [
+          "handoff_brief",
+          "policy_context",
+          "ledger_context",
+          "prompt_context"
+        ],
+        "optional_or_readonly_projections": [
+          "policy_context",
+          "ledger_context",
+          "task_context",
+          "reference_context",
+          "spatial_context",
+          "action_context",
+          "camera_context",
+          "sound_context",
+          "timing_context",
+          "edit_context",
+          "prompt_context",
+          "actual_context",
+          "readonly_projection"
+        ],
+        "source_contract": "Exact original source/version-bound inputs. Parent acceptance checks owned contexts against candidate partitions."
+      },
+      "output": "M8Proposal",
+      "output_consumers": [
+        "M8.2",
+        "M8.3",
+        "M9",
+        "M11",
+        "M12"
+      ],
+      "return_to": "M8 parent or standalone caller",
+      "parent_child_boundary": "Only ContinuityHandoffs may be proposed; parent alone accepts. M8.3 reads StateLedger and returns corrections to M8.2.",
+      "failure_return": {
+        "policy": "M8.1",
+        "planned_state": "M8.2",
+        "handoff": "M8.3",
+        "reference": "M2",
+        "spatial": "M3",
+        "action": "M4",
+        "camera": "M5",
+        "sound": "M6",
+        "timing": "M7",
+        "edit_intent": "M9",
+        "prompt_body": "M11",
+        "actual_observation": "M12"
+      },
+      "repair_target": "M8.3",
+      "retry_policy": "Exact accepted request/proposal replay preserves version; revisions use new IDs and current base. No automatic retry or hidden rebase.",
+      "operation_effect": "Pure JSON output; no files/media/upstream mutation",
+      "validation_status": "See package-external tests/m8 and tests/m8_portability.py; installed package carries no generated test report."
+    },
+    "M8": {
+      "module_id": "M8",
+      "name": "状态连续性",
+      "parent": null,
+      "visibility": "public",
+      "public": true,
+      "implementation_status": "implemented",
+      "implementation_version": "0.1.0",
+      "contract_version": "1.0.0",
+      "minimum_inputs": [
+        "continuity_brief"
+      ],
+      "accept_inputs": [
+        "M8State",
+        "M8ProposalBatch",
+        "actual original M8Request array"
+      ],
+      "resources": [
+        "SKILL.md",
+        "references/contract-guide.md",
+        "references/contracts.json",
+        "references/module-registry.json",
+        "references/audit-and-handoff.md"
+      ],
+      "write_scope": "Atomic parent acceptance only",
+      "independent_call": true,
+      "output": "M8ToolResult.state containing a new M8State draft",
+      "return_to": "caller and registered consumers",
+      "parent_child_boundary": "Children propose disjoint partitions; parent alone accepts",
+      "failure_return": "diagnostic repair_target; failed acceptance emits no candidate state",
+      "operation_effect": "Pure JSON output",
+      "output_consumers": [
+        "M3",
+        "M4",
+        "M5",
+        "M6",
+        "M7",
+        "M9",
+        "M11",
+        "M12"
+      ]
+    }
+  },
+  "field_ownership": {
+    "/content/ContinuityPolicy": "M8.1",
+    "/content/StateLedger": "M8.2",
+    "/content/ContinuityHandoffs": "M8.3"
+  },
+  "compatibility": {
+    "accepted_contract_versions": [
+      "1.0.0"
+    ],
+    "package_version": "0.1.0",
+    "breaking_change_policy": "New contract version and explicit migration; never coerce an incompatible source",
+    "alternative_producer": "Source/version-bound public contexts; standalone check requires no installed upstream skill",
+    "deprecated_nodes": []
+  },
+  "architecture": {
+    "basis": "docs/skillplan/06-modularity-routing-principles.md frozen v0.1.2",
+    "clauses": [
+      "HC-01",
+      "HC-02",
+      "HC-03",
+      "LC-01",
+      "LC-02",
+      "LC-03",
+      "LC-04",
+      "LC-05",
+      "MD-01",
+      "MD-02",
+      "MD-03",
+      "MD-04",
+      "RT-01",
+      "RT-02",
+      "RT-03",
+      "RT-04",
+      "RT-05",
+      "RT-06"
+    ],
+    "authority_model": "M8.1–M8.3 propose; M8 alone accepts. M12 observations are readonly links, never M8 output writes.",
+    "domain_vs_backend": "M8 planned states; M3 space, M4 process, M5 visibility, M6 sound, M7 time, M9 boundaries, M11 prompt syntax, M12 observations",
+    "independent_installation": "One portable package with three independently callable child contracts"
+  },
+  "runtime": {
+    "python": "3.10+",
+    "dependencies": "standard library only",
+    "entrypoint": "scripts/m8_contract.py",
+    "commands": [
+      "route",
+      "check",
+      "accept",
+      "impact"
+    ],
+    "side_effects": "none",
+    "required_runtime_resources": [
+      "references/contracts.json",
+      "references/module-registry.json"
+    ],
+    "agent_role": "Read professional references, declare states and text spans; CLI does not understand natural language or inspect media",
+    "not_implemented": [
+      "media decoding or verification",
+      "H3 generation",
+      "NLP extraction/negation/synonym reasoning",
+      "automatic contact physics",
+      "M7 clock conversion or frame measurement",
+      "automatic upstream invocation",
+      "full G1/G2 task outcome certification"
+    ]
+  },
+  "route_policy": {
+    "dispatch": "Explicit target; parent lists children and their missing_inputs/call_ready without executing them",
+    "unknown": "Explicit unknown with reason; never blank/zero substitution",
+    "failure_types": [
+      "shape_or_version",
+      "missing_input",
+      "unknown_or_unverified",
+      "request_fidelity",
+      "readonly_conflict",
+      "ownership",
+      "permission",
+      "continuity",
+      "stale_base",
+      "idempotency_conflict"
+    ],
+    "retry": "Exact accepted replay only; a revision requires new identity and current base",
+    "invalidation": "Changed content/source/context/issue/display paths intersect registered read_paths; hidden dependencies unverified",
+    "trace": "Original JSON digests, source bindings, route/contract versions, timestamp and pure-output effect"
+  }
+}

@@ -1,0 +1,813 @@
+{
+  "kind": "M8Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "m8_design_demo",
+  "base_version": 0,
+  "proposal_id": "proposal_m8_3",
+  "module_id": "M8.3",
+  "source_request_id": "req_m8_3",
+  "sources": {
+    "case018": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+      "version": "case-baseline-35658d3615d02c6aa6e4221fb223d73b86aa6875",
+      "excerpt": "案例018要求触地硬切时保持支撑腿、脚位、躯干及髋部，仅切换长袜；触地、切换、保持、稳定、再抬腿分别成立。此处只援引提示词约束，不把案例叙述转成媒体实测。"
+    },
+    "case019": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "version": "case-baseline-35658d3615d02c6aa6e4221fb223d73b86aa6875",
+      "excerpt": "案例019将PICTURE1限制为脸部身份，排除姿态、身体朝向、构图；未完成动作在切镜后接续。"
+    },
+    "design": {
+      "kind": "design_decision",
+      "locator": "synthetic-design-fixture://m8/contact-boundary",
+      "version": "1",
+      "excerpt": "D类工程设计夹具。两镜状态、0至2秒区间、正文与适配器均为本次合同演示编写；案例018/019仅提供约束来源。不是原案例逐字提示词，不是视频观察或生成结果。"
+    }
+  },
+  "context": {
+    "handoff_brief": "核对前镜正文末态、交接表和后镜正文初态。",
+    "policy_context": {
+      "owner": "M8.1",
+      "source_id": "design",
+      "source_version": "1",
+      "values": {
+        "items": {
+          "p_contact": {
+            "policy_id": "p_contact",
+            "boundary_id": "cut_1",
+            "boundary_type": "continuous_action_cut",
+            "from_shot": "shot_1",
+            "to_shot": "shot_2",
+            "invariants": [
+              "person.identity",
+              "person.support",
+              "person.contact",
+              "person.holding",
+              "person.facing",
+              "person.direction",
+              "person.action_phase",
+              "scene.location",
+              "camera.framing"
+            ],
+            "match_attributes": [],
+            "allowed_changes": [
+              {
+                "attribute": "person.stocking",
+                "reason": "触地切换只允许长袜变化；身体支撑与接触保持。",
+                "source_refs": [
+                  "case018",
+                  "design"
+                ]
+              }
+            ],
+            "cue": {
+              "state": "known",
+              "value": "触地硬切后保持",
+              "source_refs": [
+                "design"
+              ]
+            },
+            "source_refs": [
+              "case018",
+              "design"
+            ]
+          }
+        }
+      }
+    },
+    "ledger_context": {
+      "owner": "M8.2",
+      "source_id": "design",
+      "source_version": "1",
+      "values": {
+        "states": {
+          "state_before": {
+            "state_id": "state_before",
+            "shot_id": "shot_1",
+            "phase": "final",
+            "basis": "planned",
+            "attributes": {
+              "person.identity": {
+                "state": "known",
+                "value": "同一角色",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.support": {
+                "state": "known",
+                "value": "后侧腿支撑",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.contact": {
+                "state": "known",
+                "value": "近侧脚掌接触石面",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.holding": {
+                "state": "known",
+                "value": "双手未持物",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.facing": {
+                "state": "known",
+                "value": "面向镜头",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.direction": {
+                "state": "known",
+                "value": "抬落腿运动延续",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.action_phase": {
+                "state": "known",
+                "value": "触地后稳定保持",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.stocking": {
+                "state": "known",
+                "value": "白色底袜",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "scene.location": {
+                "state": "known",
+                "value": "同一石面场景",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "camera.framing": {
+                "state": "known",
+                "value": "半身画面",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            },
+            "source_refs": [
+              "design"
+            ],
+            "reference_uses": [
+              {
+                "reference_id": "picture_identity",
+                "attributes": [
+                  "person.identity"
+                ]
+              }
+            ]
+          },
+          "state_after": {
+            "state_id": "state_after",
+            "shot_id": "shot_2",
+            "phase": "initial",
+            "basis": "planned",
+            "attributes": {
+              "person.identity": {
+                "state": "known",
+                "value": "同一角色",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.support": {
+                "state": "known",
+                "value": "后侧腿支撑",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.contact": {
+                "state": "known",
+                "value": "近侧脚掌接触石面",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.holding": {
+                "state": "known",
+                "value": "双手未持物",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.facing": {
+                "state": "known",
+                "value": "面向镜头",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.direction": {
+                "state": "known",
+                "value": "抬落腿运动延续",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.action_phase": {
+                "state": "known",
+                "value": "触地后稳定保持",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.stocking": {
+                "state": "known",
+                "value": "黑色蕾丝长袜",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "scene.location": {
+                "state": "known",
+                "value": "同一石面场景",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "camera.framing": {
+                "state": "known",
+                "value": "半身画面",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            },
+            "source_refs": [
+              "design"
+            ],
+            "reference_uses": [
+              {
+                "reference_id": "picture_identity",
+                "attributes": [
+                  "person.identity"
+                ]
+              }
+            ]
+          }
+        },
+        "transitions": {
+          "t_cut": {
+            "transition_id": "t_cut",
+            "from_state": "state_before",
+            "to_state": "state_after",
+            "mode": "boundary",
+            "changed_attributes": [
+              "person.stocking"
+            ],
+            "cause": {
+              "state": "known",
+              "value": "落脚接触触发长袜硬切；接触后保持",
+              "source_refs": [
+                "design"
+              ]
+            },
+            "policy_id": "p_contact",
+            "source_refs": [
+              "case018",
+              "design"
+            ]
+          }
+        },
+        "chains": {
+          "contact_chain": {
+            "chain_id": "contact_chain",
+            "coverage": "complete_continuous",
+            "state_ids": [
+              "state_before",
+              "state_after"
+            ],
+            "transition_ids": [
+              "t_cut"
+            ],
+            "intervals": [
+              {
+                "interval_id": "i_before",
+                "state_id": "state_before",
+                "start": 0,
+                "end": 1,
+                "unit": "seconds",
+                "clock_id": "design_clock",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "interval_id": "i_after",
+                "state_id": "state_after",
+                "start": 1,
+                "end": 2,
+                "unit": "seconds",
+                "clock_id": "design_clock",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "source_refs": [
+              "design"
+            ]
+          }
+        }
+      }
+    },
+    "reference_context": {
+      "owner": "M2",
+      "source_id": "design",
+      "source_version": "1",
+      "values": {
+        "references": {
+          "picture_identity": {
+            "reference_id": "picture_identity",
+            "role": "identity",
+            "allowed_attributes": [
+              "person.identity"
+            ],
+            "denied_attributes": [
+              "person.support",
+              "person.facing",
+              "camera.framing"
+            ]
+          }
+        }
+      }
+    },
+    "prompt_context": {
+      "owner": "M11",
+      "source_id": "design",
+      "source_version": "1",
+      "values": {
+        "documents": {
+          "prompt_previous": {
+            "document_id": "prompt_previous",
+            "shot_id": "shot_1",
+            "version": "1",
+            "text": "设计提示词：镜头末态。同一角色；后侧腿支撑；近侧脚掌接触石面；双手未持物；面向镜头；抬落腿运动延续；触地后稳定保持；白色底袜；同一石面场景；半身画面。",
+            "declarations": {
+              "decl_previous": {
+                "declaration_id": "decl_previous",
+                "edge": "final",
+                "state_id": "state_before",
+                "method": "literal_state_declaration",
+                "reviewer": "design-fixture-author; no NLP/media review",
+                "attributes": {
+                  "person.identity": {
+                    "state": "known",
+                    "value": "同一角色",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.support": {
+                    "state": "known",
+                    "value": "后侧腿支撑",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.contact": {
+                    "state": "known",
+                    "value": "近侧脚掌接触石面",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.holding": {
+                    "state": "known",
+                    "value": "双手未持物",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.facing": {
+                    "state": "known",
+                    "value": "面向镜头",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.direction": {
+                    "state": "known",
+                    "value": "抬落腿运动延续",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.action_phase": {
+                    "state": "known",
+                    "value": "触地后稳定保持",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.stocking": {
+                    "state": "known",
+                    "value": "白色底袜",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "scene.location": {
+                    "state": "known",
+                    "value": "同一石面场景",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "camera.framing": {
+                    "state": "known",
+                    "value": "半身画面",
+                    "source_refs": [
+                      "design"
+                    ]
+                  }
+                },
+                "spans": {
+                  "person.identity": {
+                    "start": 11,
+                    "end": 15,
+                    "quote": "同一角色"
+                  },
+                  "person.support": {
+                    "start": 16,
+                    "end": 21,
+                    "quote": "后侧腿支撑"
+                  },
+                  "person.contact": {
+                    "start": 22,
+                    "end": 30,
+                    "quote": "近侧脚掌接触石面"
+                  },
+                  "person.holding": {
+                    "start": 31,
+                    "end": 36,
+                    "quote": "双手未持物"
+                  },
+                  "person.facing": {
+                    "start": 37,
+                    "end": 41,
+                    "quote": "面向镜头"
+                  },
+                  "person.direction": {
+                    "start": 42,
+                    "end": 49,
+                    "quote": "抬落腿运动延续"
+                  },
+                  "person.action_phase": {
+                    "start": 50,
+                    "end": 57,
+                    "quote": "触地后稳定保持"
+                  },
+                  "person.stocking": {
+                    "start": 58,
+                    "end": 62,
+                    "quote": "白色底袜"
+                  },
+                  "scene.location": {
+                    "start": 63,
+                    "end": 69,
+                    "quote": "同一石面场景"
+                  },
+                  "camera.framing": {
+                    "start": 70,
+                    "end": 74,
+                    "quote": "半身画面"
+                  }
+                }
+              }
+            }
+          },
+          "prompt_next": {
+            "document_id": "prompt_next",
+            "shot_id": "shot_2",
+            "version": "1",
+            "text": "设计提示词：镜头初态。同一角色；后侧腿支撑；近侧脚掌接触石面；双手未持物；面向镜头；抬落腿运动延续；触地后稳定保持；黑色蕾丝长袜；同一石面场景；半身画面。",
+            "declarations": {
+              "decl_next": {
+                "declaration_id": "decl_next",
+                "edge": "initial",
+                "state_id": "state_after",
+                "method": "literal_state_declaration",
+                "reviewer": "design-fixture-author; no NLP/media review",
+                "attributes": {
+                  "person.identity": {
+                    "state": "known",
+                    "value": "同一角色",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.support": {
+                    "state": "known",
+                    "value": "后侧腿支撑",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.contact": {
+                    "state": "known",
+                    "value": "近侧脚掌接触石面",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.holding": {
+                    "state": "known",
+                    "value": "双手未持物",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.facing": {
+                    "state": "known",
+                    "value": "面向镜头",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.direction": {
+                    "state": "known",
+                    "value": "抬落腿运动延续",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.action_phase": {
+                    "state": "known",
+                    "value": "触地后稳定保持",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "person.stocking": {
+                    "state": "known",
+                    "value": "黑色蕾丝长袜",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "scene.location": {
+                    "state": "known",
+                    "value": "同一石面场景",
+                    "source_refs": [
+                      "design"
+                    ]
+                  },
+                  "camera.framing": {
+                    "state": "known",
+                    "value": "半身画面",
+                    "source_refs": [
+                      "design"
+                    ]
+                  }
+                },
+                "spans": {
+                  "person.identity": {
+                    "start": 11,
+                    "end": 15,
+                    "quote": "同一角色"
+                  },
+                  "person.support": {
+                    "start": 16,
+                    "end": 21,
+                    "quote": "后侧腿支撑"
+                  },
+                  "person.contact": {
+                    "start": 22,
+                    "end": 30,
+                    "quote": "近侧脚掌接触石面"
+                  },
+                  "person.holding": {
+                    "start": 31,
+                    "end": 36,
+                    "quote": "双手未持物"
+                  },
+                  "person.facing": {
+                    "start": 37,
+                    "end": 41,
+                    "quote": "面向镜头"
+                  },
+                  "person.direction": {
+                    "start": 42,
+                    "end": 49,
+                    "quote": "抬落腿运动延续"
+                  },
+                  "person.action_phase": {
+                    "start": 50,
+                    "end": 57,
+                    "quote": "触地后稳定保持"
+                  },
+                  "person.stocking": {
+                    "start": 58,
+                    "end": 64,
+                    "quote": "黑色蕾丝长袜"
+                  },
+                  "scene.location": {
+                    "start": 65,
+                    "end": 71,
+                    "quote": "同一石面场景"
+                  },
+                  "camera.framing": {
+                    "start": 72,
+                    "end": 76,
+                    "quote": "半身画面"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "changes": {
+    "ContinuityHandoffs": {
+      "items": {
+        "handoff_contact": {
+          "handoff_id": "handoff_contact",
+          "policy_id": "p_contact",
+          "from_state": "state_before",
+          "to_state": "state_after",
+          "table": {
+            "from": {
+              "person.identity": {
+                "state": "known",
+                "value": "同一角色",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.support": {
+                "state": "known",
+                "value": "后侧腿支撑",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.contact": {
+                "state": "known",
+                "value": "近侧脚掌接触石面",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.holding": {
+                "state": "known",
+                "value": "双手未持物",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.facing": {
+                "state": "known",
+                "value": "面向镜头",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.direction": {
+                "state": "known",
+                "value": "抬落腿运动延续",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.action_phase": {
+                "state": "known",
+                "value": "触地后稳定保持",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.stocking": {
+                "state": "known",
+                "value": "白色底袜",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "scene.location": {
+                "state": "known",
+                "value": "同一石面场景",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "camera.framing": {
+                "state": "known",
+                "value": "半身画面",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            },
+            "to": {
+              "person.identity": {
+                "state": "known",
+                "value": "同一角色",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.support": {
+                "state": "known",
+                "value": "后侧腿支撑",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.contact": {
+                "state": "known",
+                "value": "近侧脚掌接触石面",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.holding": {
+                "state": "known",
+                "value": "双手未持物",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.facing": {
+                "state": "known",
+                "value": "面向镜头",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.direction": {
+                "state": "known",
+                "value": "抬落腿运动延续",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.action_phase": {
+                "state": "known",
+                "value": "触地后稳定保持",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "person.stocking": {
+                "state": "known",
+                "value": "黑色蕾丝长袜",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "scene.location": {
+                "state": "known",
+                "value": "同一石面场景",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              "camera.framing": {
+                "state": "known",
+                "value": "半身画面",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            }
+          },
+          "previous_prompt": {
+            "document_id": "prompt_previous",
+            "declaration_id": "decl_previous"
+          },
+          "next_prompt": {
+            "document_id": "prompt_next",
+            "declaration_id": "decl_next"
+          },
+          "continuation": {
+            "decision": "planned_only"
+          },
+          "source_refs": [
+            "design"
+          ]
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

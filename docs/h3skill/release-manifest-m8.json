@@ -1,0 +1,301 @@
+{
+  "kind": "M8ReleaseManifest",
+  "schema_version": "1.0.0",
+  "package": "h3-state-continuity",
+  "package_version": "0.1.0",
+  "contract_version": "1.0.0",
+  "recorded_at_utc": "2026-11-05T18:14:23.756653+00:00",
+  "source_base_commit": "f1456793d21bfb411d36eea13cee2916c3bd20c5",
+  "source_base_tree": "9daf4d31efb79f3d23c8a4649905b2b0d00054bb",
+  "scope": "M8 runtime, tests, documentation, validation records and README index update. Frozen plans, case text, standards and M1-M7 runtime packages are protected.",
+  "runtime_file_count": 28,
+  "file_count": 55,
+  "total_bytes": 715086,
+  "hash_exclusions": [
+    {
+      "path": "docs/h3skill/release-manifest-m8.json",
+      "reason": "No self-referential content hash; fixed by the publication Git tree."
+    },
+    {
+      "path": "docs/h3skill/validation/m8/release-check.json",
+      "reason": "Derived from this manifest; excluded to avoid a circular dependency, fixed by the publication Git tree."
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/h3skill/20261105-development-m8-v001.md",
+      "bytes": 18340,
+      "sha256": "cfe6ba7bead7a45f7290af7c1383515c123756c4df5acdc170bb9854e4f3712f"
+    },
+    {
+      "path": "docs/h3skill/README.md",
+      "bytes": 27449,
+      "sha256": "20d31505527061b5c44604e945e423e5af0f5232bae208b09634a38eeb6dee31"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/SKILL.md",
+      "bytes": 10323,
+      "sha256": "d074d41addcf731456802c92d8be463f271f19dcb80f62a74588a3cc6605f398"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/assets/proposal-batch.json",
+      "bytes": 45341,
+      "sha256": "dad6fd4b8552af5a614da1e8c9be2be36c8baea2c0f32e783108f5d52b04a553"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/assets/proposal-standalone-m8-1.json",
+      "bytes": 3761,
+      "sha256": "5fb3b3bbd7e306e8739e765b369e755d295a2bb4c32c85228c8b4a55b07f9195"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/assets/proposal-standalone-m8-2.json",
+      "bytes": 10644,
+      "sha256": "efba8fcf58bd5fe42d1b39cbc443c908c3b6ff382d1d7125c3fec58e0497c4cc"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/assets/proposal-standalone-m8-3.json",
+      "bytes": 25569,
+      "sha256": "c8c724735cf59b549c5987e030c4589c2c94c8a84f6afb18cd97e97137711bb9"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/assets/request-standalone-m8-1.json",
+      "bytes": 2465,
+      "sha256": "980748f814ca578f0b41dd57429acb3d3d3d48860cde4b827bf8b0cb2e55bcb2"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/assets/request-standalone-m8-2.json",
+      "bytes": 4038,
+      "sha256": "d83812bc6a37f4371f022f9941f8356da2d7d30890a165d79b5c8d983dec07db"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/assets/request-standalone-m8-3.json",
+      "bytes": 20523,
+      "sha256": "dbd364208a08354889ad9e3b4d776dd6dd7974c5bea4ae73dc875eb15987cfc4"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/assets/requests.json",
+      "bytes": 28698,
+      "sha256": "a3f5e70c3f4d7e8dd78ad819091ed9f00a758698bd53b3605ab4a063f3078a59"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/assets/state-empty.json",
+      "bytes": 1192,
+      "sha256": "24bc0d3e83b429429f01edba591a540c644522eba3357e86fa3fe1d16a491f88"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/audit-and-handoff.md",
+      "bytes": 5366,
+      "sha256": "4e55cfd122d3f495afcac534244a722dfb387b780670ef64ceda5a78571534bb"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/boundary-handoff.md",
+      "bytes": 4275,
+      "sha256": "88d3c2761f58e288dd369b1bb9a25b94582a6776e7f30379e47e965552d83c8a"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/case-evidence.md",
+      "bytes": 12575,
+      "sha256": "c16a93c6fb1478494dfd9df690f829531a468ba82e4e19510a23b2189bf403da"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/case-index.json",
+      "bytes": 68576,
+      "sha256": "0c50ed1df0ba7839186e660aa3b7ae23b55b1e1797243d301d24bcb5c2017c69"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/case-source-LICENSE.txt",
+      "bytes": 1069,
+      "sha256": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/continuity-policy.md",
+      "bytes": 4286,
+      "sha256": "bd6c7f336904c72803015f7d605d5bc7e2c353c970145060777f30dbb762c74d"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/contract-guide.md",
+      "bytes": 13790,
+      "sha256": "495bd2950b67e27833c8e845ce84ec30180d2b33b9496b825b50c69c8c863c2a"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/contracts.json",
+      "bytes": 34648,
+      "sha256": "08d28d23b7944208425c870ff378ac915552ff617e080adbc06df5f1978b8571"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/h3-NOTICE.txt",
+      "bytes": 121,
+      "sha256": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/h3-base-official.txt",
+      "bytes": 15773,
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/h3-label-mapping.md",
+      "bytes": 11484,
+      "sha256": "7a9e1b7aef2e1873fe02abdca3c28785f3d7376702e4c9d7b32193131f5e11ce"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/h3-protocol-source.json",
+      "bytes": 32551,
+      "sha256": "1b0bfaaaaae588777b3a905c523c720d320bf277fdd01082313766f63d37d225"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/h3-ref-official.txt",
+      "bytes": 23553,
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/module-registry.json",
+      "bytes": 15646,
+      "sha256": "82b12b0a1a06e7fbe5186ec043e1bc47cdcc90c84c1ac95a6373eecc44b76f9f"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/planned-state-ledger.md",
+      "bytes": 4165,
+      "sha256": "e9f4f642b1d1fbfefb5cd28e2e54a8bd0e3b77311ade85d4acdbd05e63ac2871"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/references/provenance-and-license.md",
+      "bytes": 6511,
+      "sha256": "8d0eb3b9505373a4dc845b11914d0e5ac85a12fbc186d9955a6ea486f90d7c6c"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/scripts/_schema.py",
+      "bytes": 3751,
+      "sha256": "fea0f17a9fa76bac2fdc12fc97ddcb7ca21f2bbc3def6ea795e487ca4a346cdc"
+    },
+    {
+      "path": "docs/h3skill/h3-state-continuity/scripts/m8_contract.py",
+      "bytes": 46314,
+      "sha256": "c94125a0d293df1a7e378bb553c302cd1fbf4726aef4bd208bd9db8f93e06a7e"
+    },
+    {
+      "path": "docs/h3skill/tests/m8/portability-results.json",
+      "bytes": 2207,
+      "sha256": "4ebce58204b59f6ffa0466d551fd210b53ce5d8029c2d1c2a1f31aedf21eaf9d"
+    },
+    {
+      "path": "docs/h3skill/tests/m8/run_tests.py",
+      "bytes": 1124,
+      "sha256": "c7ba8788e410057208c7c83540bd2bfebb871e1747c7a94706ced1234be0f783"
+    },
+    {
+      "path": "docs/h3skill/tests/m8/test-results.json",
+      "bytes": 260,
+      "sha256": "d7ca31c058a2c6854375962e354e1284a24b0981bd0b1540e980018ed58cc5f7"
+    },
+    {
+      "path": "docs/h3skill/tests/m8/test_m8_contract.py",
+      "bytes": 26795,
+      "sha256": "c2e568b6c35ad8f9534aaf8677f2ba3097115008f71f74d6fe89e8b058b7ebbc"
+    },
+    {
+      "path": "docs/h3skill/tests/m8/unittest-output.txt",
+      "bytes": 5739,
+      "sha256": "0d2ba2919fd24c23fff3114b2c78a1267dafaf2d793c9b3ff241be2feeea7a3b"
+    },
+    {
+      "path": "docs/h3skill/tests/m8_portability.py",
+      "bytes": 4137,
+      "sha256": "1a1386e52c94b812e753c1772d16c5ce107db03ba3baef6d8189b34f842f5311"
+    },
+    {
+      "path": "docs/h3skill/tools/verify_m8_release.py",
+      "bytes": 11359,
+      "sha256": "d63d84fc6e13737047e6f4c98c8bea85406a9edf5301d5c3b490d7065ffc4d71"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/behavior.stderr.txt",
+      "bytes": 5739,
+      "sha256": "060d71b70f107efc3b4a690c91f962fcad13d9f5e42c28de6d2967aaa6be606c"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/behavior.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/forward-use/execution.json",
+      "bytes": 14239,
+      "sha256": "c650fde9f828d81ba83f305526f0a79b1f32c4911965db7dab1ba7ae96e77c6f"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/forward-use/request.md",
+      "bytes": 2714,
+      "sha256": "8e6788127b799b45119bbbddef1b74f938a0e222f6717fc3a761bce3c7ce4386"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/forward-use/result.md",
+      "bytes": 22835,
+      "sha256": "8ba56219ddf5e6ec66b511780092630825e29623557e5e4d01dd0877ba6583fe"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/implementation-review.md",
+      "bytes": 3871,
+      "sha256": "9d9b9ec46222da250d3d8b037e54d83b049d63599866e98878496605ff373c8d"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/official-format-check.json",
+      "bytes": 1363,
+      "sha256": "58f40551e04d39d7b0f7301792728b9bddaed9b8b32dc61e129ae7c9ec770e93"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/official-format-final.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/official-format-final.stdout.txt",
+      "bytes": 16,
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/official-format.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/official-format.stdout.txt",
+      "bytes": 16,
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/portability.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/portability.stdout.txt",
+      "bytes": 2207,
+      "sha256": "4ebce58204b59f6ffa0466d551fd210b53ce5d8029c2d1c2a1f31aedf21eaf9d"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/protected-baseline.json",
+      "bytes": 98218,
+      "sha256": "0c41fd2010707a1806b3e4aba056c83aac4709d28407b422515e7baeee4ac49e"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/semantic-review.md",
+      "bytes": 2613,
+      "sha256": "e48cf6fcc8b5da7e69aa192e08a9fd5dffe4ee1f45d99f5bf19a746daaff2e66"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/validation-results.json",
+      "bytes": 6837,
+      "sha256": "8af5407231ac4d0809a4f9d7a6e5f41340f061907a1b6573b8261f5699bfe4c3"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/whitespace.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/h3skill/validation/m8/whitespace.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

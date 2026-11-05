@@ -1,0 +1,10 @@
+{
+  "suite": "m8-contract",
+  "timestamp_utc": "2026-11-05T18:12:09.488290+00:00",
+  "tests_run": 43,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "media_execution": "none; M12 records in tests are synthetic contract test doubles"
+}

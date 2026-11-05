@@ -1,0 +1,260 @@
+{
+  "record_type": "local_text_review_execution_record",
+  "schema_note": "本次任务的人工审查执行记录，不是 H3 载荷或技能机读合同。",
+  "work_id": "m8-forward-text-01",
+  "reviewed_plan_version": 1,
+  "agent": "/root/m8_forward_use",
+  "started_at_utc": "2026-11-05T17:40:34.743Z",
+  "ended_at_utc": "2026-11-05T18:00:27.853Z",
+  "scope": "仅针对 request.md 两组计划和后续转述，使用实际可读取的专业文字指引完成审查。",
+  "inputs_read": [
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/SKILL.md",
+      "sha256": "122d98e2123c024a4535db48f2302d60b808a469b4b162ed02a2f04b5ce8d612",
+      "bytes": 10050,
+      "role": "initial_skill_version",
+      "actually_read": true
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/validation/m8/forward-use/request.md",
+      "sha256": "8e6788127b799b45119bbbddef1b74f938a0e222f6717fc3a761bce3c7ce4386",
+      "bytes": 2714,
+      "role": "review_source",
+      "actually_read": true
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/continuity-policy.md",
+      "sha256": "bd6c7f336904c72803015f7d605d5bc7e2c353c970145060777f30dbb762c74d",
+      "bytes": 4286,
+      "role": "review_source",
+      "actually_read": true
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/planned-state-ledger.md",
+      "sha256": "e9f4f642b1d1fbfefb5cd28e2e54a8bd0e3b77311ade85d4acdbd05e63ac2871",
+      "bytes": 4165,
+      "role": "review_source",
+      "actually_read": true
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/boundary-handoff.md",
+      "sha256": "88d3c2761f58e288dd369b1bb9a25b94582a6776e7f30379e47e965552d83c8a",
+      "bytes": 4275,
+      "role": "review_source",
+      "actually_read": true
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/audit-and-handoff.md",
+      "sha256": "4e55cfd122d3f495afcac534244a722dfb387b780670ef64ceda5a78571534bb",
+      "bytes": 5366,
+      "role": "review_source",
+      "actually_read": true
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/SKILL.md",
+      "sha256": "d074d41addcf731456802c92d8be463f271f19dcb80f62a74588a3cc6605f398",
+      "bytes": 10323,
+      "role": "final_governing_skill_version",
+      "actually_read": true,
+      "note": "入口更新后完整重读；最终 H3 交接采用本版本四类参考 Label 定义。"
+    }
+  ],
+  "input_version_notes": {
+    "unique_readable_source_file_count": 6,
+    "skill_versions_read": 2,
+    "final_governing_skill_sha256": "d074d41addcf731456802c92d8be463f271f19dcb80f62a74588a3cc6605f398",
+    "per_read_timestamps": "未保存逐次读取时间，不补造；以上记录实际读取的两个技能版本，结束前再次核对当前源文件哈希。",
+    "concurrent_development": "技能入口由其他并行工作更新，本代理未修改技能；缺失引用清单只反映本代理当时的检查结果。"
+  },
+  "unread_referenced_resources": [
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/contract-guide.md",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/contracts.json",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/module-registry.json",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/case-evidence.md",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/case-index.json",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/h3-label-mapping.md",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/h3-base-official.txt",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/h3-ref-official.txt",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/h3-protocol-source.json",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/provenance-and-license.md",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/case-source-LICENSE.txt",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/h3-NOTICE.txt",
+      "exists": false,
+      "actually_read": false,
+      "sha256": null,
+      "status": "not_present_at_earlier_inspection",
+      "note": "并行开发中的读取时点记录；未读取、未等待、未以其他资料代替。未宣称最终开发状态仍缺失。"
+    }
+  ],
+  "work_performed": [
+    "读取创作材料、技能入口和四份专业指引，区分工程设计材料、参考外观、计划状态、修订建议和媒体未知。",
+    "为 A 组形成连续性策略、必要状态账本、前段正文／交接表／后段正文比较、责任归属和 Ref2VA 交接建议。",
+    "识别 A 的外观参考被扩大成整姿态、重复拔剑、全身镜头与特写登记冲突；保留正确的独立时钟到作品时间映射。",
+    "为 B 组形成主题蒙太奇策略、状态账本、边界结论、责任归属和条件式 H3 交接；不将授权换装、换景和姿态跳变判为错误。",
+    "将未描述道具、未决定群众及其他缺项保留为未知；不继承 A 的模式或时间映射给 B。",
+    "评估未核验左手持剑转述，列出媒体观察记录、版本保留、重生成／选窗／新计划路径及依赖影响范围。",
+    "重读更新后的 SKILL.md 并核对 Subject／Picture／Video／Audio 的不同职责。",
+    "使用通用文件 I/O 和 SHA256 计算读取、记录并核对源文件；写入并回读 result.md，生成 execution.json。"
+  ],
+  "work_not_performed": [
+    "未执行技能项目 CLI、m8_contract.py、运行器、route、check、accept、impact 或其他领域脚本。",
+    "未运行 H3 编译、推理、视频生成、音频生成或剪辑。",
+    "未查看实际图片、视频或音频，未创建 M12 已核验媒体观察。",
+    "未声称合同接受、完整编译、官方载荷语法核验、生成结果通过或成片验收。",
+    "未改写全部提示词，未修改原计划版本 1、request.md、技能文件、代码或其他目录。",
+    "未扩展案例研究、读取原案例或等待尚未提供的引用资源；未使用网络补证。",
+    "未替创作者决定道具或背景群众，未重新设计动作、对白或音轨。",
+    "未执行 Git 提交，未向外部人员发送消息。"
+  ],
+  "findings": {
+    "group_A": "现有文字需修订；已确认动作重置／重复拔剑及镜头登记冲突。",
+    "group_B": "已知文字符合获准主题蒙太奇策略；实际媒体与部分输入未验证。",
+    "reported_left_hand": "未核验线索，不得倒改旧计划并将旧边界标为通过。"
+  },
+  "limitations": [
+    "未提供真实媒体，因此仅能形成文字层计划判断。",
+    "本次只使用列出的六个可读取源文件；合同、案例与官方协议等引用未读取，不据此认证机读格式或案例效果。",
+    "没有完整依赖登记，影响范围为有依据的专业判断，不能声称脚本已经证明其余所有任务安全。"
+  ],
+  "verification": {
+    "type": "轻量文件与内容核对，非领域测试或合同门禁",
+    "source_hashes_checked_at_completion": [
+      {
+        "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/validation/m8/forward-use/request.md",
+        "sha256": "8e6788127b799b45119bbbddef1b74f938a0e222f6717fc3a761bce3c7ce4386",
+        "bytes": 2714,
+        "matches_reviewed_version": true
+      },
+      {
+        "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/continuity-policy.md",
+        "sha256": "bd6c7f336904c72803015f7d605d5bc7e2c353c970145060777f30dbb762c74d",
+        "bytes": 4286,
+        "matches_reviewed_version": true
+      },
+      {
+        "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/planned-state-ledger.md",
+        "sha256": "e9f4f642b1d1fbfefb5cd28e2e54a8bd0e3b77311ade85d4acdbd05e63ac2871",
+        "bytes": 4165,
+        "matches_reviewed_version": true
+      },
+      {
+        "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/boundary-handoff.md",
+        "sha256": "88d3c2761f58e288dd369b1bb9a25b94582a6776e7f30379e47e965552d83c8a",
+        "bytes": 4275,
+        "matches_reviewed_version": true
+      },
+      {
+        "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/references/audit-and-handoff.md",
+        "sha256": "4e55cfd122d3f495afcac534244a722dfb387b780670ef64ceda5a78571534bb",
+        "bytes": 5366,
+        "matches_reviewed_version": true
+      },
+      {
+        "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/h3-state-continuity/SKILL.md",
+        "sha256": "d074d41addcf731456802c92d8be463f271f19dcb80f62a74588a3cc6605f398",
+        "bytes": 10323,
+        "matches_reviewed_version": true
+      }
+    ],
+    "report_readback_bytes_equal": true,
+    "required_sections_and_four_labels_present": true,
+    "execution_json": "最终记录写入前完成 JSON 字节解析；该记录也曾读回用于同步报告哈希，自记录文件不嵌入自身递归哈希。",
+    "label_rendering": "四类 Label 用 Markdown 行内代码保留字面显示，避免被解释为 HTML。"
+  },
+  "outputs": [
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/validation/m8/forward-use/result.md",
+      "sha256": "8ba56219ddf5e6ec66b511780092630825e29623557e5e4d01dd0877ba6583fe",
+      "bytes": 22835,
+      "written_and_read_back": true
+    },
+    {
+      "path": "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/validation/m8/forward-use/execution.json",
+      "sha256": null,
+      "self_hash_note": "自记录文件不嵌入自身哈希，避免递归；内容已作 JSON 解析校验。",
+      "read_for_final_update": true
+    }
+  ],
+  "writes_by_this_agent": [
+    "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/validation/m8/forward-use/result.md",
+    "/workspace/scratch/53bb761a5de1/H3-h3-prompt-journal/docs/h3skill/validation/m8/forward-use/execution.json"
+  ]
+}
