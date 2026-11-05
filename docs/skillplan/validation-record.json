@@ -1,16 +1,17 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "document_package": "docs/skillplan",
-  "plan_version": "0.1.0",
+  "plan_version": "0.1.1",
   "review_date": "2026-11-04",
   "timezone": "America/Los_Angeles",
-  "base_commit": "35658d3615d02c6aa6e4221fb223d73b86aa6875",
-  "validation_kind": "documentation_consistency_and_source_reference_checks",
+  "base_commit": "196ebed12d74505f18146a75d82480a5b5f06ed4",
+  "case_source_baseline": "35658d3615d02c6aa6e4221fb223d73b86aa6875",
+  "validation_kind": "selected_answer_completeness_and_workflow_documentation_checks",
   "status": "pass",
   "errors": [],
   "checks": {
-    "module_contracts": {
-      "expected": [
+    "module_three_dimension_table": {
+      "module_ids": [
         "M1",
         "M2",
         "M3",
@@ -24,94 +25,328 @@
         "M11",
         "M12"
       ],
-      "framework": [
-        "M1",
-        "M2",
-        "M3",
-        "M4",
-        "M5",
-        "M6",
-        "M7",
-        "M8",
-        "M9",
-        "M10",
-        "M11",
-        "M12"
-      ],
-      "archive": [
-        "M1",
-        "M2",
-        "M3",
-        "M4",
-        "M5",
-        "M6",
-        "M7",
-        "M8",
-        "M9",
-        "M10",
-        "M11",
-        "M12"
-      ]
+      "content_cells": 36,
+      "readme_matches_archive_exactly_after_markdown_emphasis_removal": true,
+      "rows_sha256": "ccff761ed5d97097a13b1896956a19da73e72cada888bcabed4554fb665ed554"
     },
-    "full_analysis_archive": {
+    "archived_answer_structure": {
       "major_sections": [
-        "一、建议提炼的 12 个通用核心模块",
-        "二、各模块应该提炼到什么程度",
-        "三、这些模块怎样真正联动",
-        "四、影视剧与 MV 怎样使用同一套核心",
-        "五、提炼时需要保留的规则边界",
-        "六、怎样承接已经完成的 29 个案例技能"
+        "一、通用核心模块的完整框架结构",
+        "二、让这些模块能够协作的共享结构",
+        "三、影视剧与音乐 MV 如何共用这套核心",
+        "四、持续审计：五个关卡与修复闭环",
+        "五、完整开发提炼路线",
+        "六、已提交的完整文档"
       ],
-      "module_sections": 12,
-      "numbered_source_groups": 14
+      "table_rows": {
+        "shared_objects": 9,
+        "genre_comparison": 6,
+        "audit_gates": 5,
+        "development_phases": 10,
+        "historical_delivery_files": 6
+      },
+      "responsibility_boundaries": 5,
+      "historical_verification_bullets": 4,
+      "archive_body_sha256": "89dc76275615416c7ce1c7512c34c0a6db8da036e29063aa4ff345e3d732eaa8"
     },
-    "source_ids": [
-      "S01",
-      "S02",
-      "S03",
-      "S04",
-      "S05",
-      "S06",
-      "S07",
-      "S08",
-      "S09",
-      "S10",
-      "S11",
-      "S12",
-      "S13",
-      "S14",
-      "S15",
-      "S16",
-      "S17",
-      "S18",
-      "S19"
-    ],
-    "audit_gates": {
-      "ids": [
-        "G0",
-        "G1",
-        "G2",
-        "G3",
-        "G4"
+    "original_workflow_graph": {
+      "nodes": {
+        "A": "原创创作需求",
+        "C": "总编排入口",
+        "B": "源片解析结果与素材",
+        "L": "29 个案例配方",
+        "D": "M1 作品意图、M2 参考权限",
+        "E": "M3 空间、M4 表演动作",
+        "F": "M5 摄影、M6 声音、M10 风格",
+        "G": "M7 统一时间、M8 状态连续性",
+        "H": "M9 分镜、剪辑与生成分段",
+        "I": "M11 模型协议编译",
+        "J": "生成、选片与合成",
+        "K": "M12 持续审计与证据"
+      },
+      "edges": [
+        [
+          "A",
+          "C",
+          "-->",
+          null
+        ],
+        [
+          "B",
+          "C",
+          "-->",
+          null
+        ],
+        [
+          "L",
+          "C",
+          "-.->",
+          null
+        ],
+        [
+          "C",
+          "D",
+          "-->",
+          null
+        ],
+        [
+          "D",
+          "E",
+          "-->",
+          null
+        ],
+        [
+          "D",
+          "F",
+          "-->",
+          null
+        ],
+        [
+          "E",
+          "G",
+          "-->",
+          null
+        ],
+        [
+          "F",
+          "G",
+          "-->",
+          null
+        ],
+        [
+          "G",
+          "H",
+          "-->",
+          null
+        ],
+        [
+          "H",
+          "I",
+          "-->",
+          null
+        ],
+        [
+          "I",
+          "J",
+          "-->",
+          null
+        ],
+        [
+          "K",
+          "D",
+          "-.->",
+          null
+        ],
+        [
+          "K",
+          "G",
+          "-.->",
+          null
+        ],
+        [
+          "K",
+          "I",
+          "-.->",
+          null
+        ],
+        [
+          "J",
+          "K",
+          "-->",
+          null
+        ],
+        [
+          "K",
+          "C",
+          "-->",
+          "定位问题并回传修复"
+        ]
       ],
-      "consistent_in": [
-        "README.md",
-        "01-core-framework.md",
-        "02-development-roadmap.md"
+      "node_count": 12,
+      "directed_edge_count": 16,
+      "dashed_edge_count": 4,
+      "readme_matches_archive": true
+    },
+    "link_checks": {
+      "relative_targets": 25,
+      "project_targets": 99,
+      "external_link_occurrences": 10,
+      "scope": "Relative filesystem targets and locally available Git objects/line anchors; no fresh external HTTP or rendered-anchor check."
+    },
+    "preserved_existing_documents": [
+      "00-analysis-full.md",
+      "01-core-framework.md",
+      "02-development-roadmap.md",
+      "03-source-evidence.md"
+    ],
+    "routing_supplement": {
+      "table_rows": {
+        "entry_routes": 6,
+        "trunk_steps": 11,
+        "module_routes": 12,
+        "shared_partitions": 4,
+        "time_domains": 4,
+        "continuity_boundaries": 5,
+        "genre_routes": 6,
+        "specialized_branches": 8,
+        "audit_gate_routes": 5,
+        "defect_return_routes": 12,
+        "change_dependency_routes": 8,
+        "recipe_examples": 4,
+        "development_mapping": 10
+      },
+      "canonical_module_names_match_archive": true,
+      "design_status": "planned; runtime routes and gate contracts have not been executed",
+      "editorial_review": "Root read the complete supplement, including responsibility, applicability, gate, repair, and version boundaries. Ambiguous G3 re-review wording was corrected to permit a new check of the same media when plan, method, or scope changes; prior evidence is retained."
+    },
+    "independent_quote_review": {
+      "reviewer": "independent quote_coverage_review agent",
+      "q01_q16": "all covered",
+      "automated_checks": {
+        "module_ids": 12,
+        "module_content_cells": 36,
+        "mermaid_nodes": 12,
+        "mermaid_directed_edges": 16,
+        "mermaid_dashed_edges": 4,
+        "mermaid_repair_edge_label": "定位问题并回传修复",
+        "result": "exact match against independently transcribed expectations"
+      },
+      "structural_and_editorial_checks": {
+        "shared_object_rows": 9,
+        "boundaries": 5,
+        "genre_comparison_rows": 6,
+        "audit_gate_rows": 5,
+        "development_phase_rows": 10,
+        "historical_delivery_file_rows": 6,
+        "historical_verification_bullets": 4
+      },
+      "manual_review": "Full archived answer reviewed against the selected source; no substantive omission or wording drift found.",
+      "limitations": [
+        "No automated whole-body character comparison",
+        "No H3 inference",
+        "No generated-media quality assessment"
       ]
     },
-    "development_phases": [
-      "P0",
-      "P1",
-      "P2",
-      "P3",
-      "P4",
-      "P5",
-      "P6",
-      "P7",
-      "P8",
-      "P9"
-    ],
+    "selected_content_coverage": [
+      {
+        "id": "Q01",
+        "content": "总体组成完整结构句",
+        "archive_section": "一",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q02",
+        "content": "镜头执行方案的问题与证据",
+        "archive_section": "一.1",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q03",
+        "content": "全部 Mermaid 节点、边、线型和标签",
+        "archive_section": "一.1",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q04",
+        "content": "箭头含义、联合调整和检查更新",
+        "archive_section": "一.1",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q05",
+        "content": "模块与 Skill 打包区别及四个拆包因素",
+        "archive_section": "一.1",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q06",
+        "content": "十二模块三维表的 36 个正文单元格",
+        "archive_section": "一.2",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q07",
+        "content": "四条模块职责区别",
+        "archive_section": "一.2",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q08",
+        "content": "九类共享对象及表达内容",
+        "archive_section": "二.1",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q09",
+        "content": "五条责任边界及全部例子",
+        "archive_section": "二.2",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q10",
+        "content": "影视剧与音乐 MV 六行比较",
+        "archive_section": "三",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q11",
+        "content": "规则作用域与影视剧补样缺口",
+        "archive_section": "三",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q12",
+        "content": "G0–G4 检查对象和结论范围",
+        "archive_section": "四",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q13",
+        "content": "完整修复闭环、文字与媒体边界",
+        "archive_section": "四",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q14",
+        "content": "P0–P9 建设内容与阶段成果",
+        "archive_section": "五",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q15",
+        "content": "工程顺序理由和接口复用",
+        "archive_section": "五",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      },
+      {
+        "id": "Q16",
+        "content": "历史六文件表、四项核验和引用链接",
+        "archive_section": "六",
+        "result": "covered",
+        "method": "independent editorial review; table and graph items additionally compared automatically"
+      }
+    ]
+  },
+  "previous_validation": {
+    "commit": "196ebed12d74505f18146a75d82480a5b5f06ed4",
+    "path": "docs/skillplan/validation-record.json",
+    "sha256": "164316f15e8bec2dde939752be8be250a66e11563f61922dd316fa3df1962f05",
+    "status": "pass",
     "source_reading_coverage": {
       "case_count": 15,
       "specified_file_count": 31,
@@ -137,26 +372,7 @@
       "workflow_json_included": false,
       "media_observed": false
     },
-    "links": {
-      "relative_targets_checked": 9,
-      "pinned_project_targets_checked": 87,
-      "project_line_anchors_checked": 60,
-      "pinned_upstream_reference_occurrences": 10,
-      "upstream_scope": "Pinned URL structure and existing provenance only; no claim of individually refreshed HTTP checks."
-    },
-    "original_case_baseline_unchanged": true,
-    "editorial_review": {
-      "performed": true,
-      "scope": "Root read all five documents; independent agent reviewed README, original analysis archive, and roadmap for consistency. This is document review, not generated-media validation.",
-      "resolved_items": [
-        "Continuous-chain invariant scoped to declared continuity, with parallel events handled separately.",
-        "State-transition counting uses time intervals, allowing repeated state values.",
-        "Explicit common grasping during object handoff remains legal.",
-        "M9 edit intent/selection and M7 authoritative time mapping have separate ownership.",
-        "Action, camera and sound events use one ID namespace but retain distinct event IDs.",
-        "Standalone case packages retain complete required dependencies."
-      ]
-    }
+    "scope": "Historical review and counts retained from the fixed previous record; the unchanged source files were not semantically reread in this update."
   },
   "files": [
     {
@@ -184,19 +400,34 @@
       "sha256": "986598996e1e5bbfd41e1e5ade5007003e47e08a3462f9b15304accc8f05f45b"
     },
     {
+      "path": "docs/skillplan/04-framework-confirmation-full.md",
+      "bytes": 20647,
+      "lines": 252,
+      "sha256": "fdfa3736eb768543e9a71e209cf35d2de01f0b301303ab1da320893b2272cb8f"
+    },
+    {
+      "path": "docs/skillplan/05-workflow-routing.md",
+      "bytes": 44783,
+      "lines": 384,
+      "sha256": "623e96b0b47baf875d18ad92aa7e309d0b0c6dba49b5e3189d99228edd1d7171"
+    },
+    {
       "path": "docs/skillplan/README.md",
-      "bytes": 13222,
-      "lines": 178,
-      "sha256": "6e694c1c68353cdc15951128618d5468d61e7f4f8bc88e0bc423c8683cf4d3cf"
+      "bytes": 19829,
+      "lines": 226,
+      "sha256": "ad213e316d0b2ce8be5a3c17f88bc5aac8923743f12b63ca1625045a9a874e61"
     }
   ],
   "not_performed": [
+    "Automated whole-answer character comparison",
     "New core skill implementation",
+    "Runtime route execution",
     "New domain regression execution",
     "H3 inference",
     "Original workflow execution",
     "Media observation or measurements",
-    "Rendered Mermaid visual QA"
+    "Rendered Mermaid visual QA",
+    "Fresh external source HTTP checks"
   ],
-  "record_scope": "Hashes cover the five Markdown documents; this record does not hash itself. Git staging/publication checks are reported separately after execution."
+  "record_scope": "Hashes cover seven Markdown documents, not this record itself. Git staging and remote publication are checked separately after this record is generated."
 }
