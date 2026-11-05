@@ -1,0 +1,1025 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:h3-asset-reference:contracts:1.0.0",
+  "title": "M2 assets, entities and reference permissions",
+  "description": "Bundled named contracts. The CLI implements this fixed shape vocabulary plus deterministic reference, authority, version and overlap checks; semantic truth and media quality are not established.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/M2Request"
+    },
+    {
+      "$ref": "#/$defs/M2Proposal"
+    },
+    {
+      "$ref": "#/$defs/M2ProposalBatch"
+    },
+    {
+      "$ref": "#/$defs/M2State"
+    }
+  ],
+  "$defs": {
+    "ID": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+    },
+    "Text": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "Version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "Seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "Unknown": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "unknown"
+        },
+        "reason": {
+          "$ref": "#/$defs/Text"
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "TextOrUnknown": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Text"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Refs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ID"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "OptionalRefs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ID"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "Source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "user_requirement",
+            "approved_plan",
+            "case_text",
+            "external_input",
+            "media_observation",
+            "design_decision",
+            "official_document",
+            "hypothesis"
+          ]
+        },
+        "locator": {
+          "$ref": "#/$defs/Text"
+        },
+        "version": {
+          "$ref": "#/$defs/Text"
+        },
+        "excerpt": {
+          "$ref": "#/$defs/Text"
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "version",
+        "excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "SourceMap": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/ID"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      }
+    },
+    "RequiredSourceMap": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/ID"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      },
+      "minProperties": 1
+    },
+    "Asset": {
+      "type": "object",
+      "properties": {
+        "media_type": {
+          "enum": [
+            "image",
+            "video",
+            "audio",
+            "text"
+          ]
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "visual",
+              "audio",
+              "text"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "locator": {
+          "$ref": "#/$defs/TextOrUnknown"
+        },
+        "source_version": {
+          "$ref": "#/$defs/TextOrUnknown"
+        },
+        "description": {
+          "$ref": "#/$defs/Text"
+        },
+        "availability": {
+          "enum": [
+            "provided",
+            "pending",
+            "unavailable"
+          ]
+        },
+        "access_state": {
+          "enum": [
+            "accessible",
+            "not_checked",
+            "inaccessible"
+          ]
+        },
+        "observation_state": {
+          "enum": [
+            "unobserved",
+            "description_only",
+            "observed"
+          ]
+        },
+        "observation_refs": {
+          "$ref": "#/$defs/OptionalRefs"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "observation_scope": {
+          "$ref": "#/$defs/Text"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "duration_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "derived_from": {
+          "$ref": "#/$defs/ID"
+        }
+      },
+      "required": [
+        "media_type",
+        "channels",
+        "locator",
+        "source_version",
+        "description",
+        "availability",
+        "access_state",
+        "observation_state",
+        "observation_refs",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "AssetRegistry": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/ID"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Asset"
+      }
+    },
+    "Entity": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "person",
+            "animal",
+            "object",
+            "scene",
+            "motion",
+            "style",
+            "voice",
+            "soundtrack",
+            "other"
+          ]
+        },
+        "description": {
+          "$ref": "#/$defs/Text"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "kind",
+        "description",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Binding": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "asset_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "channel": {
+          "enum": [
+            "visual",
+            "audio",
+            "text"
+          ]
+        },
+        "source_selector": {
+          "$ref": "#/$defs/TextOrUnknown"
+        },
+        "state": {
+          "enum": [
+            "confirmed",
+            "candidate",
+            "unknown"
+          ]
+        },
+        "authority_refs": {
+          "$ref": "#/$defs/OptionalRefs"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "shared_selection_reason": {
+          "$ref": "#/$defs/Text"
+        }
+      },
+      "required": [
+        "entity_id",
+        "asset_id",
+        "channel",
+        "source_selector",
+        "state",
+        "authority_refs",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "EntityRegistry": {
+      "type": "object",
+      "properties": {
+        "entities": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Entity"
+          }
+        },
+        "bindings": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Binding"
+          }
+        }
+      },
+      "required": [
+        "entities",
+        "bindings"
+      ],
+      "additionalProperties": false
+    },
+    "Scope": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "work"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "shots"
+            },
+            "shot_ids": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ID"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "kind",
+            "shot_ids"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "time"
+            },
+            "domain": {
+              "enum": [
+                "work",
+                "generation"
+              ]
+            },
+            "timeline_id": {
+              "$ref": "#/$defs/ID"
+            },
+            "start_seconds": {
+              "$ref": "#/$defs/Seconds"
+            },
+            "end_seconds": {
+              "$ref": "#/$defs/Seconds"
+            }
+          },
+          "required": [
+            "kind",
+            "domain",
+            "timeline_id",
+            "start_seconds",
+            "end_seconds"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "unknown"
+            },
+            "reason": {
+              "$ref": "#/$defs/Text"
+            }
+          },
+          "required": [
+            "kind",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "SourceWindow": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "const": "source"
+        },
+        "unit": {
+          "const": "seconds"
+        },
+        "start_seconds": {
+          "$ref": "#/$defs/Seconds"
+        },
+        "end_seconds": {
+          "$ref": "#/$defs/Seconds"
+        }
+      },
+      "required": [
+        "domain",
+        "unit",
+        "start_seconds",
+        "end_seconds"
+      ],
+      "additionalProperties": false
+    },
+    "Permission": {
+      "type": "object",
+      "properties": {
+        "binding_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "attribute": {
+          "enum": [
+            "identity",
+            "appearance",
+            "clothing",
+            "pose",
+            "expression",
+            "scene",
+            "spatial_layout",
+            "motion",
+            "camera",
+            "style",
+            "lighting",
+            "color",
+            "voice",
+            "audio_content",
+            "audio_timing",
+            "first_frame",
+            "last_frame",
+            "keyframe"
+          ]
+        },
+        "decision": {
+          "enum": [
+            "allow",
+            "forbid",
+            "unknown"
+          ]
+        },
+        "use": {
+          "enum": [
+            "reference",
+            "copy",
+            "anchor"
+          ]
+        },
+        "scope": {
+          "$ref": "#/$defs/Scope"
+        },
+        "authority_refs": {
+          "$ref": "#/$defs/OptionalRefs"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "reason": {
+          "$ref": "#/$defs/Text"
+        },
+        "source_window": {
+          "$ref": "#/$defs/SourceWindow"
+        }
+      },
+      "required": [
+        "binding_id",
+        "attribute",
+        "decision",
+        "use",
+        "scope",
+        "authority_refs",
+        "source_refs",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "Decision": {
+      "type": "object",
+      "properties": {
+        "permission_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 2,
+          "uniqueItems": true
+        },
+        "reason": {
+          "$ref": "#/$defs/Text"
+        },
+        "authority_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "strategy": {
+          "enum": [
+            "select",
+            "combine"
+          ]
+        },
+        "selected_permission_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "permission_ids",
+        "strategy",
+        "selected_permission_ids",
+        "reason",
+        "authority_refs",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "ReferenceMap": {
+      "type": "object",
+      "properties": {
+        "permissions": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Permission"
+          }
+        },
+        "decisions": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Decision"
+          }
+        }
+      },
+      "required": [
+        "permissions",
+        "decisions"
+      ],
+      "additionalProperties": false
+    },
+    "Content": {
+      "type": "object",
+      "properties": {
+        "asset_registry": {
+          "$ref": "#/$defs/AssetRegistry"
+        },
+        "entity_registry": {
+          "$ref": "#/$defs/EntityRegistry"
+        },
+        "reference_map": {
+          "$ref": "#/$defs/ReferenceMap"
+        }
+      },
+      "required": [
+        "asset_registry",
+        "entity_registry",
+        "reference_map"
+      ],
+      "additionalProperties": false
+    },
+    "Changes": {
+      "type": "object",
+      "properties": {
+        "asset_registry": {
+          "$ref": "#/$defs/AssetRegistry"
+        },
+        "entity_registry": {
+          "$ref": "#/$defs/EntityRegistry"
+        },
+        "reference_map": {
+          "$ref": "#/$defs/ReferenceMap"
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "minProperties": 1
+    },
+    "Context": {
+      "type": "object",
+      "properties": {
+        "asset_registry": {
+          "$ref": "#/$defs/AssetRegistry"
+        },
+        "entity_registry": {
+          "$ref": "#/$defs/EntityRegistry"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "Resolution": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "reason": {
+          "$ref": "#/$defs/Text"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "issue_id",
+        "reason",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Issue": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "owner": {
+          "enum": [
+            "user",
+            "M1",
+            "M2",
+            "M2.1",
+            "M2.2",
+            "M2.3",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7",
+            "M8",
+            "M9",
+            "M10",
+            "M11",
+            "M12"
+          ]
+        },
+        "state": {
+          "enum": [
+            "open",
+            "resolved"
+          ]
+        },
+        "blocking": {
+          "type": "boolean"
+        },
+        "description": {
+          "$ref": "#/$defs/Text"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "resolution": {
+          "$ref": "#/$defs/Resolution"
+        }
+      },
+      "required": [
+        "issue_id",
+        "owner",
+        "state",
+        "blocking",
+        "description",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Consumer": {
+      "type": "object",
+      "properties": {
+        "module_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "result_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_state_version": {
+          "$ref": "#/$defs/Version"
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^/(content|sources|issues|display)(/.*)?$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "module_id",
+        "result_version",
+        "source_state_version",
+        "read_paths"
+      ],
+      "additionalProperties": false
+    },
+    "History": {
+      "type": "object",
+      "properties": {
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "enum": [
+            "M2.1",
+            "M2.2",
+            "M2.3"
+          ]
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "from_version": {
+          "$ref": "#/$defs/Version"
+        },
+        "to_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "changed_partition": {
+          "enum": [
+            "asset_registry",
+            "entity_registry",
+            "reference_map"
+          ]
+        }
+      },
+      "required": [
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "from_version",
+        "to_version",
+        "changed_partition"
+      ],
+      "additionalProperties": false
+    },
+    "RequestInputs": {
+      "type": "object",
+      "properties": {
+        "material_brief": {
+          "$ref": "#/$defs/TextOrUnknown"
+        },
+        "asset_context": {
+          "$ref": "#/$defs/AssetRegistry"
+        },
+        "binding_brief": {
+          "$ref": "#/$defs/TextOrUnknown"
+        },
+        "entity_context": {
+          "$ref": "#/$defs/EntityRegistry"
+        },
+        "permission_brief": {
+          "$ref": "#/$defs/TextOrUnknown"
+        },
+        "intent_context": {
+          "$ref": "#/$defs/TextOrUnknown"
+        },
+        "capability_context": {
+          "$ref": "#/$defs/TextOrUnknown"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "M2Request": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M2Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target": {
+          "enum": [
+            "M2",
+            "M2.1",
+            "M2.2",
+            "M2.3"
+          ]
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "$ref": "#/$defs/Version"
+        },
+        "sources": {
+          "$ref": "#/$defs/RequiredSourceMap"
+        },
+        "inputs": {
+          "$ref": "#/$defs/RequestInputs"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "request_id",
+        "target",
+        "work_id",
+        "base_version",
+        "sources",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "M2Proposal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M2Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "enum": [
+            "M2.1",
+            "M2.2",
+            "M2.3"
+          ]
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "$ref": "#/$defs/Version"
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "sources": {
+          "$ref": "#/$defs/RequiredSourceMap"
+        },
+        "context": {
+          "$ref": "#/$defs/Context"
+        },
+        "changes": {
+          "$ref": "#/$defs/Changes"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "minItems": 0
+        },
+        "resolutions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Resolution"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "proposal_id",
+        "module_id",
+        "work_id",
+        "base_version",
+        "source_request_id",
+        "sources",
+        "context",
+        "changes",
+        "issues",
+        "resolutions"
+      ],
+      "additionalProperties": false
+    },
+    "M2ProposalBatch": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M2ProposalBatch"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/M2Proposal"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "proposals"
+      ],
+      "additionalProperties": false
+    },
+    "M2State": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M2State"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "owner_module": {
+          "const": "M2"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "version": {
+          "$ref": "#/$defs/Version"
+        },
+        "status": {
+          "const": "draft"
+        },
+        "sources": {
+          "$ref": "#/$defs/SourceMap"
+        },
+        "content": {
+          "$ref": "#/$defs/Content"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "minItems": 0
+        },
+        "accepted_proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/History"
+          },
+          "minItems": 0
+        },
+        "consumers": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Consumer"
+          }
+        },
+        "display": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "$ref": "#/$defs/Text"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "owner_module",
+        "work_id",
+        "version",
+        "status",
+        "sources",
+        "content",
+        "issues",
+        "accepted_proposals",
+        "consumers",
+        "display"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

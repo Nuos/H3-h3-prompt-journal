@@ -1,0 +1,2606 @@
+{
+  "index_version": "1.0.0",
+  "module_id": "M2",
+  "purpose": "Immutable text-source inventory and truthful reading coverage; not a media-validation or runtime-success record.",
+  "source": {
+    "repository": "Nuos/H3-h3-prompt-journal",
+    "commit": "faa8edc311589d68d37e93524c7cb8e553fff857",
+    "case_tree_oid": "70a8a2a632d633f5d532db23cad99c772dc23026",
+    "captured_date": "2026-11-05",
+    "timezone": "America/Los_Angeles",
+    "directory": "case-studies"
+  },
+  "coverage": {
+    "case_directories": 29,
+    "october_case_directories": 15,
+    "case_directory_text_files": 97,
+    "shared_index_text_files": 1,
+    "total_text_files": 98,
+    "total_utf8_bytes": 2507574,
+    "total_lines": 45614,
+    "tracked_media_files_excluded": 29,
+    "all_tracked_text_files_available": true,
+    "all_text_bytes_read_and_hashed": true,
+    "all_texts_semantically_reviewed_in_full": false,
+    "semantic_review_modes": {
+      "full_text_read": 33,
+      "keyword_index_only": 56,
+      "selected_matching_lines_read": 1,
+      "selected_passages_read": 7,
+      "json_parse_node_inventory_and_selected_link_trace": 1
+    },
+    "media_observations_performed": 0,
+    "h3_or_comfyui_executions_performed": 0
+  },
+  "evidence_semantics": {
+    "F": "The fixed source text states this; author-reported observations/results are not independently remeasured facts.",
+    "D": "M2 design rule derived from specified case text; conditional scope is retained.",
+    "full_text_read": "Full text was semantically read for this task; no assertion that every source claim is correct.",
+    "selected_passages_read": "Listed ranges or matching lines were semantically inspected; other prose only has machine coverage.",
+    "keyword_index_only": "Full bytes were decoded, hashed and searched; matching excerpts supported retrieval, not comprehensive semantic review.",
+    "json_parse_node_inventory_and_selected_link_trace": "The JSON parsed; node inventory and named connections were inspected statically. No node implementation or pipeline was run.",
+    "translations": "Translations and vocabulary expansions are derivative explanations, not additional independent experiments."
+  },
+  "retrieval": {
+    "keyword_pattern": "(?:referenc\\w*|identity|asset\\w*|source\\w*|autho\\w*|Picture\\s+\\d|Audio\\s+\\d|Video\\s+\\d|Subject\\s+\\d|输入|素材|权限|参考|首帧|身份|音轨|未提供|不公开|不随|本地|口型)",
+    "flags": [
+      "IGNORECASE"
+    ],
+    "media_policy": "Images, audio and video are excluded from reading, parsing and effect validation. Sparse-checkout absence does not establish remote absence."
+  },
+  "cases": [
+    {
+      "case_id": "2026-08-cinematic-character-reveal-two-part",
+      "month": "2026-08",
+      "text_file_count": 5,
+      "evidence_group": null,
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-08-dual-subject-speed-contrast",
+      "month": "2026-08",
+      "text_file_count": 4,
+      "evidence_group": null,
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-08-first-person-finger-controlled-dance",
+      "month": "2026-08",
+      "text_file_count": 5,
+      "evidence_group": null,
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-08-furina-windsurfing-fashion-mv",
+      "month": "2026-08",
+      "text_file_count": 5,
+      "evidence_group": "E09",
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-08-single-subject-three-pose",
+      "month": "2026-08",
+      "text_file_count": 5,
+      "evidence_group": "E10",
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-08-sticker-character-kitchen-comedy",
+      "month": "2026-08",
+      "text_file_count": 5,
+      "evidence_group": null,
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-08-three-person-orbital-long-take",
+      "month": "2026-08",
+      "text_file_count": 5,
+      "evidence_group": null,
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-08-water-obstacle-variety-show",
+      "month": "2026-08",
+      "text_file_count": 5,
+      "evidence_group": "E17",
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-09-action-chain-sock-fan-comedy",
+      "month": "2026-09",
+      "text_file_count": 4,
+      "evidence_group": null,
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "month": "2026-09",
+      "text_file_count": 6,
+      "evidence_group": "E12",
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-09-purple-veil-dance-seven-segment",
+      "month": "2026-09",
+      "text_file_count": 2,
+      "evidence_group": "E11",
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-09-snap-lock-editorial-reveal",
+      "month": "2026-09",
+      "text_file_count": 4,
+      "evidence_group": null,
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-09-song-style-classical-dance-six-segment",
+      "month": "2026-09",
+      "text_file_count": 4,
+      "evidence_group": "E15",
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+      "month": "2026-09",
+      "text_file_count": 5,
+      "evidence_group": "E14",
+      "focus": "supporting_case",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-advanced-camera-combinations",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": null,
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": null,
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-camera-movement-discipline-library",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": null,
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "month": "2026-10",
+      "text_file_count": 3,
+      "evidence_group": "E16",
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-dance-motion-chain-library",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": null,
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-four-subject-formation-choreography",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": "E02",
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-h3-motion-transfer",
+      "month": "2026-10",
+      "text_file_count": 3,
+      "evidence_group": "E04",
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-identity-only-half-body-dance-six-segment",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": "E01",
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "month": "2026-10",
+      "text_file_count": 3,
+      "evidence_group": "E05",
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-leg-lift-contact-cut-stocking-six-look",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": "E13",
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-physical-camera-position-library",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": null,
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-sock-showcase-right-entry-three-shot",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": "E08",
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": "E06",
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-waterfront-solo-dance-two-segment",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": "E07",
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    },
+    {
+      "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+      "month": "2026-10",
+      "text_file_count": 2,
+      "evidence_group": "E03",
+      "focus": "october_priority",
+      "readme_full_text_read": true
+    }
+  ],
+  "files": [
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.md",
+      "case_id": "2026-08-cinematic-character-reveal-two-part",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "72c4bfeedf2eb966d05e44515128b620a219b5e1",
+      "sha256": "26f2a637765712b3456c1bb94aabbf53b3c6bc05c8f359a2b752967a5be008f8",
+      "bytes": 8973,
+      "lines": 109,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 16
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md",
+      "case_id": "2026-08-cinematic-character-reveal-two-part",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "6a77d28f7032e60ee8bc7ae192d99c02e47655e1",
+      "sha256": "59e6653d0a5be8f978d09ea3c657089a4fff6aa0591024758623fe749b852ea5",
+      "bytes": 26476,
+      "lines": 415,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 32
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md",
+      "case_id": "2026-08-cinematic-character-reveal-two-part",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": null,
+      "git_blob_oid": "5cb92433398250390c00dad804bbc3804550e897",
+      "sha256": "662a755d3abb0f985ee5c273aac6a9943c559cac13bc8d4d6ec11be559d8c226",
+      "bytes": 18328,
+      "lines": 653,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 33
+      },
+      "semantic_review": {
+        "mode": "selected_matching_lines_read",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified",
+        "selection": "Reference declarations, identity separation, pose-library and continuity matches; not all intervening prose."
+      }
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md",
+      "case_id": "2026-08-cinematic-character-reveal-two-part",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "e39931e9262ed9599d84fddbccf3155f6ca75e29",
+      "sha256": "7acbdc272d9d7f01b0f1baaab693198c6fb04e20a5cfd79401f4fee451b476f6",
+      "bytes": 71417,
+      "lines": 1869,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 77
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-08-cinematic-character-reveal-two-part",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "b44081b88877ae7d8f97ce6424bf92c92c13f17c",
+      "sha256": "c523ba2fa3ff1ee8cc79e4b75d4cce7fc9c66abe553552aa8d3498d17e3ddea5",
+      "bytes": 13734,
+      "lines": 127,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 8
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/README.md",
+      "case_id": "2026-08-dual-subject-speed-contrast",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "4672e2c8969cf78cc7ae9c84f4060d5ce293b6eb",
+      "sha256": "03a82e79d8479c6ebc80ded8347f8522a96a64cb8f56e0a76c1a129f44e5bc25",
+      "bytes": 3642,
+      "lines": 70,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 3
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md",
+      "case_id": "2026-08-dual-subject-speed-contrast",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "883bccae513bb798c4fb868bf19aabdc12a1380a",
+      "sha256": "e2ddd770ce690d4561b71cfd8f48d62b3b62924008705a15ad3b3f1ae6b25513",
+      "bytes": 12645,
+      "lines": 247,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 9
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/prompt.md",
+      "case_id": "2026-08-dual-subject-speed-contrast",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": null,
+      "git_blob_oid": "5643ee691a8e81250057e3a04ca564c8f4c28971",
+      "sha256": "60461d26bbfc22ddf6aad4e75ecfae1f75a8ed674460a13189b22f72db6eafe3",
+      "bytes": 2653,
+      "lines": 171,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 2
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-08-dual-subject-speed-contrast",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "9242adcb39f1b9c837ea8ce3be3491eadee83c3b",
+      "sha256": "97e486a8dbaf52c0025317f2aaa8e4f26bd249c5dda63e587413463ac9e30b1e",
+      "bytes": 12760,
+      "lines": 109,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 8
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.md",
+      "case_id": "2026-08-first-person-finger-controlled-dance",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "eb24f9095c1512b03d423354161c7db656dd7bff",
+      "sha256": "ba7ef1911f9d93901318f2784b9ca7c8fa0fb0141536933c16ccb4dd7b9b71b5",
+      "bytes": 7128,
+      "lines": 109,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 6
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md",
+      "case_id": "2026-08-first-person-finger-controlled-dance",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "8510ce889dd55118aa65ad8ae78562d71ece5aae",
+      "sha256": "85e125d85f8a0ab0303611a459f8d6890453d8608889f2fce1fd738d91aaf790",
+      "bytes": 19743,
+      "lines": 334,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 15
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md",
+      "case_id": "2026-08-first-person-finger-controlled-dance",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": null,
+      "git_blob_oid": "b60d367e04180dbf99976c451223c57a6fc58f5f",
+      "sha256": "68769f007f1ceaf0b3c5d20be07c4298d2c1ea827b59913e1fe6d2904613b1c2",
+      "bytes": 6580,
+      "lines": 67,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 7
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md",
+      "case_id": "2026-08-first-person-finger-controlled-dance",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "1bea74520f7c00446f2c3059c77b8fe54356f75b",
+      "sha256": "4abfdbb588760ddf6896a0af277b85827157058815f04d326aa4cc07be483f65",
+      "bytes": 18406,
+      "lines": 302,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 10
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-08-first-person-finger-controlled-dance",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "531b7e9a5ecd744adb443cde1d0426029bed441d",
+      "sha256": "68a5945faff4822892e725bf8c07f9cc08cf2c60dafb853010f1def84c775b6f",
+      "bytes": 11341,
+      "lines": 103,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 5
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.md",
+      "case_id": "2026-08-furina-windsurfing-fashion-mv",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E09",
+      "git_blob_oid": "fb114c0db8112ad8d72616f8d92a7e0f8c7dbb27",
+      "sha256": "9ea0ed0ef4f10175296003c30c9965da8713e03d7c422a641da5e9a0e720c09a",
+      "bytes": 8448,
+      "lines": 140,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 33
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md",
+      "case_id": "2026-08-furina-windsurfing-fashion-mv",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E09",
+      "git_blob_oid": "1908c33251798ce7dba748b2545e36be5269b0dd",
+      "sha256": "395bdf407961cf9e2a2ec907d8c1b7829e369e2dd66505d43e5a3fa005c541ae",
+      "bytes": 19937,
+      "lines": 397,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 57
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md",
+      "case_id": "2026-08-furina-windsurfing-fashion-mv",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E09",
+      "git_blob_oid": "d70f7a2d8f6af02914d9bb0b9344173da8cb4b84",
+      "sha256": "615805834349a4446429ac9422222272b03e418133dc7528f46f30a8756a7bc6",
+      "bytes": 26514,
+      "lines": 1465,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 71
+      },
+      "semantic_review": {
+        "mode": "selected_passages_read",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified",
+        "line_ranges": [
+          [
+            55,
+            165
+          ]
+        ]
+      }
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md",
+      "case_id": "2026-08-furina-windsurfing-fashion-mv",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E09",
+      "git_blob_oid": "456aaec92703f8ef4e4034db690d45457be4ab8b",
+      "sha256": "d0187e9ebb881642343c610fae823285cb4165867fc4826a0874096d35fa4eac",
+      "bytes": 43730,
+      "lines": 869,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 66
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-08-furina-windsurfing-fashion-mv",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E09",
+      "git_blob_oid": "768687db0a705a353c6a3a1c2823919a6c217061",
+      "sha256": "faffb0713e48175301ae5656bbed1103b1beffa163963b7f2a27d67e3e778252",
+      "bytes": 11567,
+      "lines": 107,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 21
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/README.md",
+      "case_id": "2026-08-single-subject-three-pose",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E10",
+      "git_blob_oid": "a397a5e0e672904eb80e370ae6ac560a5e5133cd",
+      "sha256": "fd9275b829033318e3a444b0e16fcd984f9f394bf1776ce2b7c7aee50f869421",
+      "bytes": 4954,
+      "lines": 85,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 16
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/README.zh-CN.md",
+      "case_id": "2026-08-single-subject-three-pose",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E10",
+      "git_blob_oid": "8d974ae50506cfe61b707a97199ea1f3cdde99cc",
+      "sha256": "1f496302d0813d94415b32f9f18d354fc69c58f6553cab47bdf21a004f88647c",
+      "bytes": 14281,
+      "lines": 266,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 28
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/prompt.md",
+      "case_id": "2026-08-single-subject-three-pose",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E10",
+      "git_blob_oid": "500cf634e40a302ef36ac505d7fa2500f0cc5630",
+      "sha256": "d7a0ec8cfb9cd2e4d241774852d064cabe3254bb56ccf9afc6ecdf1429334615",
+      "bytes": 16750,
+      "lines": 879,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 48
+      },
+      "semantic_review": {
+        "mode": "selected_passages_read",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified",
+        "line_ranges": [
+          [
+            1,
+            120
+          ]
+        ]
+      }
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md",
+      "case_id": "2026-08-single-subject-three-pose",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E10",
+      "git_blob_oid": "28e6cc42c0510fdf352dbdea31cd33629277da07",
+      "sha256": "8083f69d66398fceb847ecd83074dfeba6977de1db3edc50a2c1b6c18942b19e",
+      "bytes": 47909,
+      "lines": 1178,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 81
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-08-single-subject-three-pose",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E10",
+      "git_blob_oid": "ca42d3b76e2c8493c535c22ed507554b3a980b92",
+      "sha256": "58081c91e536f3c502dd9694bc9e083c69c11cb97129f26f4ef04d3eb48af5e7",
+      "bytes": 11916,
+      "lines": 107,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 14
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+      "case_id": "2026-08-sticker-character-kitchen-comedy",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "07ccc6cada79700019656c65000e1ff185ab1ccb",
+      "sha256": "88e8bbec07a740b63e7f68417bb1e555031e3c33dacada45c625732b9a5a0907",
+      "bytes": 5869,
+      "lines": 93,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 9
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md",
+      "case_id": "2026-08-sticker-character-kitchen-comedy",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "5290ad33edc00bea3e1ae24e3305ae1b2601e869",
+      "sha256": "e96affe636ae6fee6dad25daadbe1906ec36d097bc8ef4858b634c8eac4137da",
+      "bytes": 15559,
+      "lines": 287,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 17
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+      "case_id": "2026-08-sticker-character-kitchen-comedy",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": null,
+      "git_blob_oid": "07719668193e6b82226f1380399f0e576c831273",
+      "sha256": "cb0dd901e8162ecb1bfbd89475df2648dcbe8eeb34821cdb9726228d1c09f46e",
+      "bytes": 4666,
+      "lines": 109,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 18
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md",
+      "case_id": "2026-08-sticker-character-kitchen-comedy",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "c56419699287a9e074debad5ddfc7242df73f5d9",
+      "sha256": "27301d4d415043c298487e5c6f6cbcbda5eb9de98e841acdf683956f3e249764",
+      "bytes": 13742,
+      "lines": 369,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 33
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-08-sticker-character-kitchen-comedy",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "bca11db0afd44a9a12e1b32b08c833d2a67d08f1",
+      "sha256": "557648e76f7319cd4dae52878bb62f5b30055a9bdeb66f5e04b78c316a5505a1",
+      "bytes": 11158,
+      "lines": 107,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 7
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/README.md",
+      "case_id": "2026-08-three-person-orbital-long-take",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "be69aaa3305c0a7859548f5dd6ee2729fe32866b",
+      "sha256": "1d6bc8411a168725010f7a6d93b194398e3e0df276a04afb00554815c2cd8abb",
+      "bytes": 3603,
+      "lines": 74,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 7
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/README.zh-CN.md",
+      "case_id": "2026-08-three-person-orbital-long-take",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "2c78fa8d8c1dff078a32f656ba0d52ed5a4a425d",
+      "sha256": "c97b7bbcb94fc5788b6875da4469b60caac4ad6a25ff4dec21b293eff379e673",
+      "bytes": 8760,
+      "lines": 194,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 13
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/prompt.md",
+      "case_id": "2026-08-three-person-orbital-long-take",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": null,
+      "git_blob_oid": "85cd5ebdbb4ce5979ade026607b00822c949d3fc",
+      "sha256": "262915229f84cd187353174c68806c04949168b6c686efa36931cb6340c8faaf",
+      "bytes": 29240,
+      "lines": 1413,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 35
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/prompt.zh-CN.md",
+      "case_id": "2026-08-three-person-orbital-long-take",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "2c55a4c1372c8350da7d744a05a07cc857edef9a",
+      "sha256": "c5d810b8f46b626753f101e164e8436e2ae6f093ba89ab7d1072ffc4202b5192",
+      "bytes": 71063,
+      "lines": 1599,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 72
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-08-three-person-orbital-long-take",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "bbf05f5f51abe140d2c6de8402138225d821156d",
+      "sha256": "58feeb800f1450064240f920270b86cf8526631c6d1e9d9565c72d4a925dd58f",
+      "bytes": 12116,
+      "lines": 107,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 9
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.md",
+      "case_id": "2026-08-water-obstacle-variety-show",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E17",
+      "git_blob_oid": "090d9f52cd0c979167b7f3db1927549729cfbc17",
+      "sha256": "5777d39d3c21ef0666296ff4ad2ff2544306f9a9989b45d8cca8358b4f840c93",
+      "bytes": 6295,
+      "lines": 95,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 5
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md",
+      "case_id": "2026-08-water-obstacle-variety-show",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E17",
+      "git_blob_oid": "5d05a80c26ed684a4307d16c826422680f538568",
+      "sha256": "915b57fe603b1d4033f49bd429ec0d8c2657a86cf33b79d6ceeb38c5fdd1fb87",
+      "bytes": 15364,
+      "lines": 278,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 9
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+      "case_id": "2026-08-water-obstacle-variety-show",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E17",
+      "git_blob_oid": "ae572459f259615b45f88b300eeedc6c804cfc35",
+      "sha256": "a7eb42a7967a1b1f28a61dce224fe2e1fb3182a16f40e7a6969cc52c3eaba266",
+      "bytes": 7374,
+      "lines": 165,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 18
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md",
+      "case_id": "2026-08-water-obstacle-variety-show",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E17",
+      "git_blob_oid": "1bb82da7b81205a4dde66fea5a7ab1eec1a539f5",
+      "sha256": "3c29a4562f09a9b05510a06f87ab6b095fbfc899a496b56c0840bc595a452a08",
+      "bytes": 21315,
+      "lines": 515,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 31
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-08-water-obstacle-variety-show",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E17",
+      "git_blob_oid": "876c670bb25057112d32084e914eb3ca9ee9440e",
+      "sha256": "ae0e874951cbd4b33825d92234db538dbb86f3a6d111902718e75752a0bdb156",
+      "bytes": 11165,
+      "lines": 105,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 3
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/README.md",
+      "case_id": "2026-09-action-chain-sock-fan-comedy",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "9fc55df75cc6f0d0fdcee1812ae36bd8ffc46ac3",
+      "sha256": "c2d6041235ad743caf143c8e0cdeb9487a65a9b35bf4a9dbc472aed6d1b11a7a",
+      "bytes": 12441,
+      "lines": 128,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 14
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt",
+      "case_id": "2026-09-action-chain-sock-fan-comedy",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": null,
+      "git_blob_oid": "14d6577a94976b6fea29266c827d0f27ba0b4996",
+      "sha256": "93acf96bbfc304a7d8fb7d8cf35dbef9780867ff03d9a1da5e1dd8a02b7808c9",
+      "bytes": 30627,
+      "lines": 624,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 16
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt",
+      "case_id": "2026-09-action-chain-sock-fan-comedy",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "2c480eba7377db6c36d26cba2b8c66f3ef46f92b",
+      "sha256": "2b8623fabbff40976378af0a5ebb287704243f5bc9ee28714a28a20a64fba5c0",
+      "bytes": 30831,
+      "lines": 463,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 20
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-09-action-chain-sock-fan-comedy",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "a991cc33afbf28ef65f819ac18bba8dbb8b6cfdf",
+      "sha256": "fc1fb02f894e2eb314b62295871bb7de732fdc72b5d72d6b615443fc4443be07",
+      "bytes": 12096,
+      "lines": 111,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 8
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E12",
+      "git_blob_oid": "820f293466c621b83008067f2ba57dce4b88927e",
+      "sha256": "e30609f323379c5495ea1d3c46c03d948f1692407b74a2aa3a5bac4286427290",
+      "bytes": 13205,
+      "lines": 115,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 5
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt",
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E12",
+      "git_blob_oid": "4da9e6df67e2adbb33d569cb830cde800b7878f8",
+      "sha256": "da58a065f3c2f7b825e1958717f4cbe97dfd9fa60a816e054b2f55ce4243f032",
+      "bytes": 26943,
+      "lines": 1306,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 9
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt",
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E12",
+      "git_blob_oid": "f9c13e974868d922acd8f49a725e6d4f88f2c12f",
+      "sha256": "1013cd7615d245d9e0127e4004a5091479fe09fda746c042b1a96f5814d75b54",
+      "bytes": 27451,
+      "lines": 370,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 7
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt",
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E12",
+      "git_blob_oid": "b4863def7914a1dcbaca6695330c8b548b184377",
+      "sha256": "0a5d2c13f1c0718c09be689feab290bf85cc87a9b204c1d95d74e7ed012108d6",
+      "bytes": 27900,
+      "lines": 1234,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 9
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt",
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E12",
+      "git_blob_oid": "22fefc9744dadf16edd24039071ed7eed0ed24c5",
+      "sha256": "90fc1572bbb9f11fdd7f40e019cec893ad47e9d412280d8f301f88e89ad78597",
+      "bytes": 27319,
+      "lines": 355,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 8
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E12",
+      "git_blob_oid": "73f3a15ffddc95437e8632d458e522ab00730899",
+      "sha256": "b35ad6664669769fc3074266071435db82c39ad5aeac9d45c4f19dd3f40d421a",
+      "bytes": 19149,
+      "lines": 176,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 8
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-purple-veil-dance-seven-segment/README.md",
+      "case_id": "2026-09-purple-veil-dance-seven-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E11",
+      "git_blob_oid": "8b7c6f9b7480b4e613abeb1d766795064510203d",
+      "sha256": "a37ccb539941f0f3bbfcbd1a9e4a9f78ef4c267f7f17f3d9413345e8d6de3134",
+      "bytes": 8262,
+      "lines": 99,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 8
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-purple-veil-dance-seven-segment/prompt.md",
+      "case_id": "2026-09-purple-veil-dance-seven-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E11",
+      "git_blob_oid": "8befb4ec85eb720efa6b4ee432b9e48787b7801e",
+      "sha256": "3a9e822fce663198ae0c0446bdfa13c00f095a4b7628e9b0c4ab85f7475bcfd8",
+      "bytes": 37639,
+      "lines": 786,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 40
+      },
+      "semantic_review": {
+        "mode": "selected_passages_read",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified",
+        "line_ranges": [
+          [
+            1,
+            90
+          ]
+        ]
+      }
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/README.md",
+      "case_id": "2026-09-snap-lock-editorial-reveal",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "75fa100fd4a1e954789545920279ba9f1c56b000",
+      "sha256": "4dbe8f75fdb88738af500927d5fce3501b27d5de269faa36fd1aac9ce0b728b2",
+      "bytes": 9740,
+      "lines": 132,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 18
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md",
+      "case_id": "2026-09-snap-lock-editorial-reveal",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": null,
+      "git_blob_oid": "d92b6d24ebdf9ca88e48421fd349c0d905c97302",
+      "sha256": "fc2c5eea24fe28a714d921ad3a7ef77931911147641088e7079816cfcfb6edf6",
+      "bytes": 20295,
+      "lines": 571,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 55
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md",
+      "case_id": "2026-09-snap-lock-editorial-reveal",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "9af61b2d1f043927c61ae390add95847731bd8b5",
+      "sha256": "2db644dfd0e9a2d7f4ae963cd59ec03c1396271716af8f1292fb09f0b9f2cb56",
+      "bytes": 13761,
+      "lines": 278,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 13
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-09-snap-lock-editorial-reveal",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": null,
+      "git_blob_oid": "35c9c1232d988f92c4145e6359876bc2ba05972f",
+      "sha256": "aee1575e8a8140ef0e92dac02e972c48d13d1d975989fe6b487e1bae788ad1bf",
+      "bytes": 10852,
+      "lines": 107,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 5
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/README.md",
+      "case_id": "2026-09-song-style-classical-dance-six-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E15",
+      "git_blob_oid": "9c82e8c71cf560609789fadde850be9ab8436446",
+      "sha256": "6b506f0c45ddc7ecf5ba5ee266b99e163e34e6d7d49827efb44d3bd4a3ab8264",
+      "bytes": 12527,
+      "lines": 142,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 20
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md",
+      "case_id": "2026-09-song-style-classical-dance-six-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E15",
+      "git_blob_oid": "c1b73a7a879bd5994b59100c5ae041fc457a85ec",
+      "sha256": "010f5d1db16cfb5dd9dfe3c8b765050c01571949ca8cca4442437dc5b4bd4626",
+      "bytes": 134285,
+      "lines": 2939,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 68
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md",
+      "case_id": "2026-09-song-style-classical-dance-six-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E15",
+      "git_blob_oid": "b0d7bb62373528713b6731309f1a9fe7e5b18604",
+      "sha256": "57065a52ed353280752c676f6b862d84b99667ded3ea66dae57e2c5bc5fabed9",
+      "bytes": 87307,
+      "lines": 1100,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 25
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-09-song-style-classical-dance-six-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E15",
+      "git_blob_oid": "f0fc45a5eb2026e9cbd06fc5b9a55ff3b20d264c",
+      "sha256": "ffdfaf289f5158cdddd0107535fe832b083f15e7fea415d376ed4407b2995681",
+      "bytes": 21002,
+      "lines": 200,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 12
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md",
+      "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E14",
+      "git_blob_oid": "9f42cf388a5b8e3d84a5b2160b5aab445733d829",
+      "sha256": "00b141391037d6173c13721474d8f36ec73b6ea17c3f7429a07955ac8dcc3de6",
+      "bytes": 6844,
+      "lines": 91,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 5
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md",
+      "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E14",
+      "git_blob_oid": "0b28c91a167e20b593b2131bbb18ec9440dabbb4",
+      "sha256": "b06317bdb5059cd2a01a95bfe763e306ef095c37a59dd9c3c595dec632d21781",
+      "bytes": 17909,
+      "lines": 305,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 8
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md",
+      "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E14",
+      "git_blob_oid": "5134e8fe1a15e2c381e2546ae700754596380c6f",
+      "sha256": "da7562b149ee4c72e7813ae6320b50a29e26caafacab9159263b09c023d35a71",
+      "bytes": 15041,
+      "lines": 95,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 7
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md",
+      "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E14",
+      "git_blob_oid": "01c8289ffeb1639b225c35b986406f9d5405f0e1",
+      "sha256": "cd27eb33e16c39c26773ba53956886039eeedccd7ea1dbd0639783d1a08951d8",
+      "bytes": 42551,
+      "lines": 628,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 17
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md",
+      "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+      "scope_kind": "case_directory_text",
+      "source_role": "translation_or_glossary_annotation",
+      "evidence_group": "E14",
+      "git_blob_oid": "de577943cdfcafa3046d019dfda86129583926cc",
+      "sha256": "82ec632d7f0e7dca5c38481361f12bd97fff53d113465e65cc142b43fe9a7492",
+      "bytes": 11110,
+      "lines": 109,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 2
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-advanced-camera-combinations/README.md",
+      "case_id": "2026-10-advanced-camera-combinations",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "6248882c17cc0841012bd538825849ce9b27a53c",
+      "sha256": "833804acf934a109dfc8991a0f42bafe0f9b96ee71967d503af5cc888d8595fd",
+      "bytes": 4900,
+      "lines": 57,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 1
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-advanced-camera-combinations/prompt.md",
+      "case_id": "2026-10-advanced-camera-combinations",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": null,
+      "git_blob_oid": "329cc1d8327759900ad9ee2495c0945ffb8f88dd",
+      "sha256": "6dbc877637aff70c1340de1b4eb4a4c221ca2f25926003801f55b574ada32ffa",
+      "bytes": 18459,
+      "lines": 328,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 3
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md",
+      "case_id": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "7ead89d1d75c434c1ab69aab841c53c1e3a23481",
+      "sha256": "61f167bb5c9707afaee638d3185d58dfaba100f3016dedb55203ecacdfe1bcd5",
+      "bytes": 12008,
+      "lines": 155,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 10
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md",
+      "case_id": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": null,
+      "git_blob_oid": "4508141604349c6aab29a86a88cc35965b646714",
+      "sha256": "842fac7e188ff164a60cce1baa6a65844cad2eb7440cf401df63d1b636f3fdba",
+      "bytes": 56000,
+      "lines": 475,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 39
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/README.md",
+      "case_id": "2026-10-camera-movement-discipline-library",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "dae6601f45b9f4d0ae3cec10114eb102a0f500db",
+      "sha256": "51179fb7c3fd71729a939d287f6dad624dcf5bf719fe4532c16399929e84e179",
+      "bytes": 5545,
+      "lines": 93,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 1
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/prompt.md",
+      "case_id": "2026-10-camera-movement-discipline-library",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": null,
+      "git_blob_oid": "6437e5a26f84f34aa5dc803b1dbc5c79f9dcab13",
+      "sha256": "c70294287fc4155e691de6e7d50a09bb08f8d2bcd9bc18620f49c47c3a0d3053",
+      "bytes": 15365,
+      "lines": 234,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 1
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/README.md",
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E16",
+      "git_blob_oid": "6bc13ac4af04d59ff036e50bdf55e662a6cb7b79",
+      "sha256": "e054bd15bedd75cd384c9e5e0e35c9ca17a1ad8685d041b12964876ab872e53c",
+      "bytes": 7765,
+      "lines": 83,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 14
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "methodology",
+      "evidence_group": "E16",
+      "git_blob_oid": "5a6760efa52e3a0f2ef14073e9cbd8a5c93923a8",
+      "sha256": "24707ce3ca43b3696b97bf634d3fc87b3568116c33e3a31635a0ea01974ec1d8",
+      "bytes": 16996,
+      "lines": 199,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 18
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md",
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E16",
+      "git_blob_oid": "13b0cfedb1e8ba8c92ed13c7d4adcee9f43edf03",
+      "sha256": "40ca025fbdab770c72c25a0f259a4319f45725313b3a92bac5bcfee10ca8cd9d",
+      "bytes": 84646,
+      "lines": 543,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 103
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/README.md",
+      "case_id": "2026-10-dance-motion-chain-library",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "d196d84601fd33a2cc9a4be93d35aa969494bb6e",
+      "sha256": "ce47520bafe4d3fd129f20068452199eb4c3fda0219b2537f34f6fbf31866a90",
+      "bytes": 4031,
+      "lines": 41,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 2
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md",
+      "case_id": "2026-10-dance-motion-chain-library",
+      "scope_kind": "case_directory_text",
+      "source_role": "action_reference_library",
+      "evidence_group": null,
+      "git_blob_oid": "53a0bfadbfa128998aaa5fcfc4d015f0e0e41e30",
+      "sha256": "69caa314ae11942dfff9cca14ba4a88ecf6187a336e3569f512f7c1f07d7a37b",
+      "bytes": 265991,
+      "lines": 2767,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 117
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/README.md",
+      "case_id": "2026-10-four-subject-formation-choreography",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E02",
+      "git_blob_oid": "13b9d82944302e6e9d1c3ed33da1738c3d5bf065",
+      "sha256": "fcdd6a8bea055e2a357007d0024381c7c23dccf1ca2f74eceabb2de26e2fe1c7",
+      "bytes": 9119,
+      "lines": 164,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 19
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "case_id": "2026-10-four-subject-formation-choreography",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E02",
+      "git_blob_oid": "2ceabb516af03c306d58b2a74474838f37dfcdbc",
+      "sha256": "2fdcf5cab127dbe3fdcf2a4991386b3bd31a2b08db04a0753f3715794d8ab481",
+      "bytes": 16205,
+      "lines": 148,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 36
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/README.md",
+      "case_id": "2026-10-h3-motion-transfer",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E04",
+      "git_blob_oid": "90e326cd2f2eeb13f1b3bb82a4997969df1884fe",
+      "sha256": "091c7f3efd88dd609375d22c4afb110306d2d1ee85c7d1363128d6dfa9379a6b",
+      "bytes": 3875,
+      "lines": 54,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 17
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+      "case_id": "2026-10-h3-motion-transfer",
+      "scope_kind": "case_directory_text",
+      "source_role": "workflow_configuration",
+      "evidence_group": "E04",
+      "git_blob_oid": "827fe8500e9b67ad068d9fee566f276f0caa8a2f",
+      "sha256": "152b3df9c83e5677e2df46756a122eb64a3e05b0e15ff63e3f2ebadcea41b659",
+      "bytes": 107172,
+      "lines": 4982,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 6
+      },
+      "semantic_review": {
+        "mode": "json_parse_node_inventory_and_selected_link_trace",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified",
+        "selection": {
+          "top_level_keys": [
+            "id",
+            "revision",
+            "last_node_id",
+            "last_link_id",
+            "nodes",
+            "links",
+            "groups",
+            "config",
+            "extra",
+            "version"
+          ],
+          "all_node_inventory_read": true,
+          "traced_node_ids": [
+            131,
+            132,
+            136,
+            155,
+            188,
+            191
+          ],
+          "traced_link_ids": [
+            261,
+            275,
+            276,
+            277,
+            308,
+            372,
+            387,
+            391,
+            392,
+            393
+          ]
+        },
+        "executed": false
+      }
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/prompt.md",
+      "case_id": "2026-10-h3-motion-transfer",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E04",
+      "git_blob_oid": "d2832c361a34e9e441d2dcba8e207e684b97fef6",
+      "sha256": "884616f829c22f00dc2f210e57621927bcb0ab58c28055f648bce2c2c2fa9915",
+      "bytes": 13165,
+      "lines": 586,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 132
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "case_id": "2026-10-identity-only-half-body-dance-six-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E01",
+      "git_blob_oid": "80383594744c1caefadf9feb941d853953813338",
+      "sha256": "c3726c8d92958ba60393b5f0b7c07b6ebd3c9f1152095e0f66423ab871c92695",
+      "bytes": 5248,
+      "lines": 54,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 12
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "case_id": "2026-10-identity-only-half-body-dance-six-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E01",
+      "git_blob_oid": "b4e12f5932869ecff50fa75cfc5c963766d4f076",
+      "sha256": "e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+      "bytes": 34220,
+      "lines": 1524,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 61
+      },
+      "semantic_review": {
+        "mode": "selected_passages_read",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified",
+        "line_ranges": [
+          [
+            1,
+            260
+          ]
+        ]
+      }
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md",
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E05",
+      "git_blob_oid": "858a611c88260f27eccf3751aaee75009981ae4e",
+      "sha256": "02820d3b4652b25993a1efd9ace4d3a024b6bd979f61460b7276fb793a4b4eb9",
+      "bytes": 11856,
+      "lines": 115,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 16
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "methodology",
+      "evidence_group": "E05",
+      "git_blob_oid": "89d84013643a50dfcd796f1397f7fc0cadc199c1",
+      "sha256": "1b7dcf449f3536b5f3af859351baeb394c3663624648e8ae92a5f5a4b54983a1",
+      "bytes": 22179,
+      "lines": 346,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 29
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md",
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E05",
+      "git_blob_oid": "8aae663ded62e74b33248443b36111d9e2630aa9",
+      "sha256": "1ec6d47a864a889cd050065be227ead4be82e2211003f00c796934e8f57588f5",
+      "bytes": 194131,
+      "lines": 1186,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 229
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+      "case_id": "2026-10-leg-lift-contact-cut-stocking-six-look",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E13",
+      "git_blob_oid": "d5787b1e34ad1ae88ed33f7441633a51a222f510",
+      "sha256": "e8b79275bdebce7596df0b6625c5a5a9bf1ef2c05c18e1abf1f29fb498f4a506",
+      "bytes": 4094,
+      "lines": 58,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 6
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+      "case_id": "2026-10-leg-lift-contact-cut-stocking-six-look",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E13",
+      "git_blob_oid": "356034cad0dbf6e7b3e0f14b76debb325b8163f6",
+      "sha256": "5bcea5bf820f4a1432bb6427ed2bd6fad85d26cccad891d2975153ea96dca0ed",
+      "bytes": 19122,
+      "lines": 759,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 19
+      },
+      "semantic_review": {
+        "mode": "selected_passages_read",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified",
+        "line_ranges": [
+          [
+            1,
+            75
+          ]
+        ]
+      }
+    },
+    {
+      "path": "case-studies/2026-10-physical-camera-position-library/README.md",
+      "case_id": "2026-10-physical-camera-position-library",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": null,
+      "git_blob_oid": "6dbea940341fd033a59c475b443bf14cdd2380f9",
+      "sha256": "cd03402caed497e0f2f93e10b1c42d2dd07842df602cb7ea42615c55c570387b",
+      "bytes": 4235,
+      "lines": 61,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 1
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-physical-camera-position-library/prompt.md",
+      "case_id": "2026-10-physical-camera-position-library",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": null,
+      "git_blob_oid": "29931724c56332b3c4cb8f15c9e7b39187f3f6e5",
+      "sha256": "3cdfb65af35d87bdb587c0246d1eeda06129a4c33f6142c1f3817907d111bf1b",
+      "bytes": 25066,
+      "lines": 795,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 41
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+      "case_id": "2026-10-sock-showcase-right-entry-three-shot",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E08",
+      "git_blob_oid": "f0df490b0ddd28d78f1eb1332c72a46248dd4654",
+      "sha256": "301860e8a966da6ffa62327c6564bb3f0c392484477afac5606c747f776ab0a2",
+      "bytes": 4602,
+      "lines": 52,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 7
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+      "case_id": "2026-10-sock-showcase-right-entry-three-shot",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E08",
+      "git_blob_oid": "a6ac7572bfd08806686680e60d0d21f333e574ca",
+      "sha256": "f7b91e3ccc47bb46bb39aae0171f25e0d9d4b572955183789cb4d257e96071d4",
+      "bytes": 8907,
+      "lines": 98,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 28
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "case_id": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E06",
+      "git_blob_oid": "9940c805eee0e4f208100593745353d4b2efb9ab",
+      "sha256": "4a9382a4562c88bd25afc0d8debcc6d31a2a40c172f0581bea6d4c4ad65588e7",
+      "bytes": 11195,
+      "lines": 146,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 13
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+      "case_id": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E06",
+      "git_blob_oid": "1c185e60e2e73a456369709fd0b302cac8fa3a5a",
+      "sha256": "4ddcd492a10a451e124dba192db2c6608aae4a8e62ddbc601a424e5b46a303cd",
+      "bytes": 36790,
+      "lines": 283,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 52
+      },
+      "semantic_review": {
+        "mode": "selected_passages_read",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified",
+        "line_ranges": [
+          [
+            14,
+            60
+          ]
+        ]
+      }
+    },
+    {
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+      "case_id": "2026-10-waterfront-solo-dance-two-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E07",
+      "git_blob_oid": "bb9a28d25757e4d78d54d4e9dd517d12d063f6c4",
+      "sha256": "67b089f4d560d388e0ceb7dcc7f9011b7456fec69aed0c73f1d70dd341470276",
+      "bytes": 3940,
+      "lines": 48,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 8
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md",
+      "case_id": "2026-10-waterfront-solo-dance-two-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E07",
+      "git_blob_oid": "539cebf0828ce83ad43d6b7381445c69c3b9f411",
+      "sha256": "5fac40dab9977ecf671bba747db25f4aee43ce892b796f230c319a8ad80da332",
+      "bytes": 8762,
+      "lines": 119,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 24
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "case_summary",
+      "evidence_group": "E03",
+      "git_blob_oid": "7d2d18c1697928bed90d80361f5ac16997302d28",
+      "sha256": "58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+      "bytes": 7390,
+      "lines": 71,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 12
+      },
+      "semantic_review": {
+        "mode": "full_text_read",
+        "full_semantic_review": true,
+        "claim_verification": "not_independently_verified"
+      }
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+      "scope_kind": "case_directory_text",
+      "source_role": "prompt_or_production_document",
+      "evidence_group": "E03",
+      "git_blob_oid": "1db431d27a43f05da550ad1d96bf05bb1325bc05",
+      "sha256": "5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "bytes": 101257,
+      "lines": 743,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 124
+      },
+      "semantic_review": {
+        "mode": "selected_passages_read",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified",
+        "line_ranges": [
+          [
+            1,
+            73
+          ]
+        ]
+      }
+    },
+    {
+      "path": "case-studies/VOCABULARY-EXPANSION.zh-CN.md",
+      "case_id": null,
+      "scope_kind": "shared_index_text",
+      "source_role": "shared_glossary_index",
+      "evidence_group": null,
+      "git_blob_oid": "67eabcf0dfe631dcfdd54b8ee78acb8af38bc9db",
+      "sha256": "4f2bbe9d8df761913cdf1a5ca5167357e053eaf746f17b21379cfdd536b5f4ed",
+      "bytes": 9130,
+      "lines": 95,
+      "machine_read": {
+        "full_utf8_bytes_read": true,
+        "keyword_indexed": true,
+        "matching_line_count": 2
+      },
+      "semantic_review": {
+        "mode": "keyword_index_only",
+        "full_semantic_review": false,
+        "claim_verification": "not_independently_verified"
+      }
+    }
+  ],
+  "excluded_media": [
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/picture-1-additional-poses.png",
+      "git_blob_oid": "58838e19495f4dcbda2f112e257a43ab73baa329",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/picture-1-pose-library.png",
+      "git_blob_oid": "9a02bc57dd97f53604fcd3c3a3f470e212d7d42b",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/picture-1-supplementary-poses.png",
+      "git_blob_oid": "6b9438355e03a85a0ebe8a459b5ae815e021720c",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/picture-2-face-identity.png",
+      "git_blob_oid": "1a646e90f81175e072639063f75a7649f3eeda62",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/reference-bgm-tokyo-drifter.wav",
+      "git_blob_oid": "afa13e5435aefbdd4ec5bba71478bd06ac4fda1c",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/reference-motion-sample.mp4",
+      "git_blob_oid": "1de080ecbe549778ae340b40c32f6b4eb29f8803",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/reference-dance-demo.mp4",
+      "git_blob_oid": "a853180ff39eb393c625c70f0570391c3021eee1",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/picture-1-character-key-visual.png",
+      "git_blob_oid": "56c263bc469d244cdd9394461acb6ca369626b56",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/picture-2-turnaround-equipment.png",
+      "git_blob_oid": "aa354374e48bd89b679553c9d52503f62d51fb1b",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/picture-3-segment1-cinematography-guide.png",
+      "git_blob_oid": "bc1be0996a2c5510708843e326caa06462ee2a36",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/picture-3-segment2-cinematography-guide.png",
+      "git_blob_oid": "4d7720b875c3b11e9dbe5b4e82aeb38453da7a24",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/result-video.mp4",
+      "git_blob_oid": "9413add98f850b50a2074b34245e9e6f752e8f88",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/picture-1-sticker-character.png",
+      "git_blob_oid": "a33e3137d045784642bc96d7c9ad18d7157b7881",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/reference-video.mp4",
+      "git_blob_oid": "06b96a106eb135d1d1d5ed5fcc77363f936bc9ed",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/result-video.mp4",
+      "git_blob_oid": "6aaecdfac2c61a9a2c53b87e6d531c663b30585f",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-advanced-camera-combinations/cover.png",
+      "git_blob_oid": "568bc092dc600593b5b78201a4dd61b1aa7e2526",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/cover.png",
+      "git_blob_oid": "e6d60c29a15eb1253bd4fa2eedb64b2112d0d7fa",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/cover.png",
+      "git_blob_oid": "0aeb64dc7eb1e2eaecc311d1dd83462432a97408",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/cover.png",
+      "git_blob_oid": "d9c8c12b21064fbe1e1a5974bfcb2a5cde699d51",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/assets/demo_segment10.mp4",
+      "git_blob_oid": "922596ab79a40f8e3f2814625671e95225966b3a",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/assets/frame_1.5s.png",
+      "git_blob_oid": "e91c90ddd46233e22ed020b4baf2223ef0dffd0c",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/assets/frame_12.5s.png",
+      "git_blob_oid": "3340a0b9f1b265fce5e6a82d4ca458b1cfdf493c",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/assets/frame_5.5s.png",
+      "git_blob_oid": "6deb8e3dfd64745e1aae9041d54e2731d0d9ea19",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/assets/frame_9.0s.png",
+      "git_blob_oid": "308e43e73e5ff4df173f8d4d17894de9fc4bafd6",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/cover.png",
+      "git_blob_oid": "0bb393e7ce92e101291c69a84fdc4ef30d852699",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/result-video.mp4",
+      "git_blob_oid": "b4cbc98a975adbc6fa4e5d1dbfe91ae2b45b2651",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/cover-saint-arms-open.png",
+      "git_blob_oid": "036f92e4e2bedf74029b4a94db287defb5b4e836",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-physical-camera-position-library/cover.png",
+      "git_blob_oid": "3c14705631ec3a66cc4ce849b942e8f4da38f756",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    },
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/cover.png",
+      "git_blob_oid": "bcc97b26b806dbf7cf2ae052bb9c7aaa9ddf1b3d",
+      "reason": "media_outside_text_review_scope",
+      "content_read": false
+    }
+  ],
+  "limitations": [
+    "This inventory does not certify natural-language trigger behavior, permission-conflict resolution, source factual accuracy, H3 protocol compliance or generated media quality.",
+    "No original media was opened or analyzed; author-reported frames, durations, cut detections and beat analyses retain their attribution.",
+    "A referenced local Windows path, filename or ComfyUI loader widget is not proof that the asset was provided to the current task.",
+    "Rules and source disagreements are summarized in case-evidence.md; future user decisions must retain source and version instead of silently rewriting evidence."
+  ]
+}

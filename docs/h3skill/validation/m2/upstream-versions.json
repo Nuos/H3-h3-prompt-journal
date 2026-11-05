@@ -1,0 +1,24 @@
+{
+  "kind": "UpstreamVersionRecheck",
+  "date": "2026-11-05",
+  "timezone": "America/Los_Angeles",
+  "purpose": "Read-only recheck of currently published branch heads; fixed snapshots remain the implementation authority.",
+  "sources": [
+    {
+      "ref": "refs/heads/main",
+      "url": "https://api.github.com/repos/MiniMax-AI/MiniMax-H3/git/refs/heads/main",
+      "commit": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+    },
+    {
+      "ref": "refs/heads/main",
+      "url": "https://api.github.com/repos/anthropics/skills/git/refs/heads/main",
+      "commit": "ca45fc496a3436251f191354091d557da31c15b5"
+    }
+  ],
+  "matches_bundled_baselines": true,
+  "not_performed": [
+    "Model inference",
+    "Media observation",
+    "Legal compliance evaluation"
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "order": 1,
+    "recorded_after_fact": true,
+    "timestamp": null,
+    "command": "cat docs/h3skill/h3-asset-reference/references/contract-guide.md",
+    "exit_code": 1,
+    "stderr": "cat: docs/h3skill/h3-asset-reference/references/contract-guide.md: No such file or directory",
+    "revision": "文件随后由其他工作落盘；重新读取成功并记录于原始 source-manifest.json；没有为绕过规则自行创建该依赖。"
+  },
+  {
+    "order": 2,
+    "recorded_after_fact": true,
+    "timestamp": null,
+    "command": "rg --files docs/h3skill/h3-asset-reference docs/h3skill/validation/m2/forward-use",
+    "exit_code": 2,
+    "stderr": "rg: docs/h3skill/validation/m2/forward-use: No such file or directory (os error 2)",
+    "revision": "随后在用户允许的目录建立验证目录并保存快照。"
+  }
+]

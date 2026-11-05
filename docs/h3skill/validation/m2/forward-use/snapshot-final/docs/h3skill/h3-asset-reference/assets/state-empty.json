@@ -1,0 +1,26 @@
+{
+  "kind": "M2State",
+  "contract_version": "1.0.0",
+  "owner_module": "M2",
+  "work_id": "WORK-IDENTITY-DEMO",
+  "version": 0,
+  "status": "draft",
+  "sources": {},
+  "content": {
+    "asset_registry": {},
+    "entity_registry": {
+      "entities": {},
+      "bindings": {}
+    },
+    "reference_map": {
+      "permissions": {},
+      "decisions": {}
+    }
+  },
+  "issues": [],
+  "accepted_proposals": [],
+  "consumers": {},
+  "display": {
+    "title": "受控示例的空状态；不代表实际素材或已完成权限。"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "M1RegressionDuringM2Development",
+  "date": "2026-11-05",
+  "timezone": "America/Los_Angeles",
+  "source_commit": "faa8edc311589d68d37e93524c7cb8e553fff857",
+  "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s docs/h3skill/tests -p test_m1_contract.py",
+  "exit_code": 0,
+  "tests_run": 52,
+  "failures": 0,
+  "errors": 0,
+  "captured_summary": "Ran 52 tests in 0.459s\nOK",
+  "scope": "Existing M1 deterministic contract tests, executed against unchanged M1 runtime during M2 integration. No semantic or media certification.",
+  "historical_reports_modified": false
+}

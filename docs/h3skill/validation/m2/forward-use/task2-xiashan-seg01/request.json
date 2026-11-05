@@ -1,0 +1,221 @@
+{
+  "kind": "M2Request",
+  "contract_version": "1.0.0",
+  "request_id": "REQ-TASK2-XIASHAN-SEG01",
+  "target": "M2.3",
+  "work_id": "WORK-FORWARD-XIASHAN",
+  "base_version": 0,
+  "sources": {
+    "SRC-TASK": {
+      "kind": "user_requirement",
+      "locator": "current-task:forward-use/task-2",
+      "version": "2026-11-05",
+      "excerpt": "基于 xiashan-veiled-solo-twelve-segment 的 README.md 与 prompt.md，处理 SEG01 的参考资产和音频策略；忠实保留原始要求，没有授权删改矛盾要求。给出可完成部分、缺项与实际需要的决定。只有案例文字，没有实际图片、视频、音频；不改源文件、不调用模型/媒体服务。"
+    },
+    "SRC-README": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "version": "sha256:58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+      "excerpt": "# Case Study 015 — 下山2 · 面纱独舞十二段（XiaShan 2 · Veiled Solo Dance · Twelve Segments）\n\n> 一支 141.845 秒的古风独舞(BPM 134.0,40 句唱词),切成 12 段分别生成再拼接。**双图分权参考**:PICTURE 1 = 正面全身照(**无头部信息**,只管正面服装)、PICTURE 2 = 三视图(只管脸部+背部,人物佩戴**只遮口鼻的半纱面纱**);分段 AUDIO 1 锁节拍网格(BPM 134.0 / beat 0.4478s / 首拍 0.441s)。编舞全部用**链记法**(入态→拍数→出态),段间用**特写续动转场**(每段 SHOT 01 = 上段结尾仍在运动的身体部位),Hero ×4 + 地面技术套件 + 运镜双模式(稳定/醉酒)。**本案例最大教训:一切规则拼进每一段,不存在全局段。**\n\n## Inputs(输入)\n\n- **PICTURE 1(正面全身照,无头部信息)**:唯一负责**正面服装与身体**—— outfit construction、layers、accessories 的正面视角;提示词零服装描写。\n- **PICTURE 2(三视图)**:唯一负责**脸部**(五官/眉眼/发型)+ **背部**服装结构;并声明**半纱面纱只遮口鼻**(眼眉全露)与**安全裤设计**(仅一句)。\n- **AUDIO 1(分段提供)**:BPM 134.0、beat 0.4478s、bar 1.7910s、首拍 0.441s;歌词原句按本地时间引作**对口型/节奏辅助锚点**(不做整段对口型)。\n- **无视频参考**:参考动作全部经动链库文字转写(借姿势不借画面)。\n- 十二段可直接粘贴的提示词全文:[`prompt.md`](./prompt.md)。\n\n## The problem(实际踩过的坑)\n\n1. **全局规则压底**:初版把 GLOBAL EXECUTION NOTE 放在文件最后——12 段都生成完才发现约束没生效。用户定规矩:**禁止全局段,不怕重复,一切规则拼接进每一段**;\n2. **背景人物渗入**:场景词 \"banquet / the host's side / a raised dais\" 本身是人物磁铁;歌词锚「**有人**含笑频频举盏」的\"有人\"二字被模型直接画成宾客。修复 = 场景改写\"人散后的空帐\"+ 每段引文加负句 `the quoted lines never add people, guests or objects to the picture`;\n3. **面纱被摘**:C4 链写成 \"the veil slides aside\"(主语就是面纱)——模型把穿戴面纱当道具摘下,且该\"摘\"无身体参与、不像舞蹈动作。修复 = **袖/纱词汇切分**(袖 = 舞蹈衣件、面纱 = 锁死穿戴物,袖过脸永不触碰面纱)+ C4 重写为完整身体动作(袖斜下扫 + 躯干螺旋上步 + 后点步);\n4. **运镜只有推拉**:12 段相机全是 push/pull/pedestal。引入 **E7 弧形运镜**(arc tracking / snap zoom punch 卡重拍 / roll+荷兰角≤25° 瞬时 / 慢 orbit 仅旋转镜头)与 **E8 醉酒式镜头**;\n5. **醉酒模式滥用风险**:第一视角失衡运镜若全片使用会失去质感——**只给 S03/S10/S11 三个情绪漂移段**(母规则全文内联进这三段),其余 9 段精确稳定相机,**稳定与失醇的对比**才让醉意被读出来;\n6. **歌词政策反复**:初版全禁引用 → 澄清为三层结构:歌词原句+时间作锚点(可辅助对口型)/情绪弧线/面纱句,内容永不描述、永不演绎;\n7. **低视角形容词被平均**:\"camera tilted up 10-15°\" 生成不出仰拍——特殊机位一律**物理化**(机位=场景里一件有位置的东西,见动链库 E5)。\n\n## The breakthrough(写死的事)\n\n### 1. 双图分权:每张图只管一件事\n\n| 图 | 职责 | 明确不管 |\n|---|---|---|\n| PICTURE 1(正面全身,无头部) | 正面服装/身体 | 脸、背、环境 |\n| PICTURE 2(三视图) | 脸(五官/眉眼/发型)、背部结构、半纱只遮口鼻、安全裤一句 | 环境、光线、姿势、构图、相机 |\n\n配套 **VEIL_LOCK ×12**:面纱第一帧起全程佩戴,只遮口鼻,never removed / lifted / parted / made transparent,**No lyric ever causes it to disappear**;表达全部由眼、眉、头部角度承担。\n\n### 2. 特写续动转场链(复用紫纱亭机制 + 切点原因)\n\n每段 SHOT 01 = 上段结尾仍在运动的身体部位的特写,帧一即舞;段尾 TRANSITION 块写全**动作钩子 + Cut point(切点原因)+ 下段续动**。12 段特写接力:袖摆→上行袖→收腰手→展开手→翻转掌→折入肘→定形发→收拢手→下落袖→推帘手→腰间展手。\n\n### 3. 链记法编舞:入态→拍数→出态\n\n每段 = SUSTAINED LAYER(C1 提沉引擎每拍不断,holds 内也不停)+ 逐链【入态(承接上一链出态)→ 相对拍数分解 → 出态】+ 乐句尾镜头 pose + 至少一处**明写静止**(\"one full beat of absolute stillness\")。密度按快板古风标准;旋转事件全片 2 次(S02 回身甩发 / S09 连环平转)。\n\n### 4. Hero ×4 + 地面套件\n\nH1 = S04 沉跪即起·High-Release Lock(30%);H2 = S07 掩口 Point&Lock mini(55%);H3 = S09 连环平转·Point&Lock(74%,全片高潮,裙摆开花+余烬光弧);H4 = S12 High-Release LINE Lock(9"
+    },
+    "SRC-ROLES": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "version": "sha256:5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "excerpt": "subject_definitions:\n<Subject 1> is the exact same person shown in <Picture 1> and <Picture 2>. <Picture 1> (front full-body photo) shows the body WITHOUT head information: it is the sole authority for the FRONT view of the costume and body — outfit construction, layers and accessories as seen from the front. <Picture 2> (three-view sheet) is the sole authority for the FACE — facial identity, eyes, brows and hairstyle — and for the back view of the outfit; it shows the character wearing a half veil of translucent gauze covering ONLY the mouth and nose, the eyes and brows fully visible. No verbal redefinition of appearance; no costume description is given or needed. The costume and the veil never change in any segment — not per lyric, not per palette.\nVEIL_LOCK: the veil is part of the locked costume. Worn from the first frame, it stays on in every frame of the dance: it covers only the mouth and nose, and is never removed, never lifted, never parted, never made transparent. No lyric ever causes it to disappear or thin. Expression is carried by the eyes, brows and head angle alone. DISTINCTION: the gauze veil ON her face is worn costume and never moves; the SLEEVES are separate garment pieces used in choreography — a sleeve passing in front of the face never touches or moves the worn veil.\n<Subject 2> is the environment: an elevated stone terrace over a dark sea at night, a swirling sea of scattered stars filling the sky above, thin wind moving the fabric. The scene contains no other people anywhere — completely empty of human figures; every frame shows her alone. The scene evolves from the previous segment, carried by the dancer's motion and the camera — never a hard jump, never a location swap."
+    },
+    "SRC-RHYTHM": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "version": "sha256:5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "excerpt": "<Audio 1> is the song track, referenced only for rhythm: BPM 134.0, beat 0.4478 s, bar 1.7910 s, first downbeat 0.441 s.\nLyric onsets in this segment: 0.766 / 4.433 / 8.116.\nLyric lines are quoted in LYRIC_RELATION as timing and sync anchors only — their content is never described, displayed or acted out; under the veil the mouth and breath move subtly with the phrasing, never full lip-sync rendering. The COSTUME and the veil never change. No signal copy."
+    },
+    "SRC-COPY": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "version": "sha256:5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "excerpt": "summary:\n[reference generation + audio reuse] Segment 01 of one continuous 141.845-second ancient-style solo dance (12 segments). Vertical 3:4, one continuous dance with motivated internal cuts; total runtime 11.116 seconds; opens on a local close-up continuing the previous segment's ending motion — the dance is already active at frame one. <Audio 1> is reused 1:1 as the complete final audio track.\n\nretention_analysis:\n<Subject 1>: fully_preserved — front costume and body from <Picture 1> (no head information in it); face, hairstyle, back view and the half veil (mouth and nose only) from <Picture 2>; the outfit includes built-in safety shorts, covered through every pose; the veil stays on for the entire dance.\n<Audio 1>: fully_copy — reused 1:1 as the complete final audio track; do not regenerate or alter the music."
+    },
+    "SRC-COLOR": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "version": "sha256:5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "excerpt": "COLOR & ATMOSPHERE (authorized environment language, from <Picture 1>): low-saturation cinematic warm-cool separation, constant across all evolving scenes. Soft directional amber lantern light shapes the dancer from one side; a cool teal-black and deep blue-gray environment fills the shadows; dark wood browns and muted brick reds build the architecture, texture kept inside the shadows — deep blacks that are never pure black. Skin stays natural warm beige: creamy-ivory highlights, warm apricot midtones, a faint warm flush, brown-gray shadows — never porcelain, never pink blush, never orange. Whites render as warm ivory, cool fabrics take a muted grey cast, reds press to dark coral, gold to antique champagne. Low contrast, soft highlight roll-off, gentle bloom around the lanterns, fine grain, slight soft focus, shallow depth of field with warm bokeh — real photography, not CG. The costume comes solely from <Picture 1> and never changes; the palette applies to light and environment only."
+    },
+    "SRC-POSE": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "version": "sha256:5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "excerpt": "CHAIN C1 提沉起势 (4拍) — 入态: <Picture 1> standing pose."
+    },
+    "SRC-FIELDS": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "version": "sha256:5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "excerpt": "integrated_multimodal_description:\n\noverall_soundscape: N/A — the reused <Audio 1> is the complete final audio track.\n\nnon_diegetic_music: N/A — <Audio 1> is directly reused 1:1 as the complete final audio track."
+    }
+  },
+  "inputs": {
+    "asset_context": {
+      "IMG-FRONT": {
+        "media_type": "image",
+        "channels": [
+          "visual"
+        ],
+        "locator": {
+          "state": "unknown",
+          "reason": "实际媒体没有提供；案例中的标签或旧机器路径不等于可访问文件。"
+        },
+        "source_version": {
+          "state": "unknown",
+          "reason": "没有取得实际媒体，不能记录其版本或哈希。"
+        },
+        "description": "案例称 Picture 1 为无头部信息的正面全身图；实际图像未提供。",
+        "availability": "pending",
+        "access_state": "not_checked",
+        "observation_state": "description_only",
+        "observation_refs": [],
+        "source_refs": [
+          "SRC-TASK",
+          "SRC-ROLES"
+        ]
+      },
+      "IMG-THREE-VIEW": {
+        "media_type": "image",
+        "channels": [
+          "visual"
+        ],
+        "locator": {
+          "state": "unknown",
+          "reason": "实际媒体没有提供；案例中的标签或旧机器路径不等于可访问文件。"
+        },
+        "source_version": {
+          "state": "unknown",
+          "reason": "没有取得实际媒体，不能记录其版本或哈希。"
+        },
+        "description": "案例称 Picture 2 为脸部、背部与口鼻半纱面纱的三视图；实际图像未提供。",
+        "availability": "pending",
+        "access_state": "not_checked",
+        "observation_state": "description_only",
+        "observation_refs": [],
+        "source_refs": [
+          "SRC-TASK",
+          "SRC-ROLES"
+        ]
+      },
+      "AUDIO-SEG01": {
+        "media_type": "audio",
+        "channels": [
+          "audio"
+        ],
+        "locator": {
+          "state": "unknown",
+          "reason": "实际媒体没有提供；案例中的标签或旧机器路径不等于可访问文件。"
+        },
+        "source_version": {
+          "state": "unknown",
+          "reason": "没有取得实际媒体，不能记录其版本或哈希。"
+        },
+        "description": "案例指称 Audio 1；旧本地路径只作文字记录，不视为已挂载。段内音频与源窗口未取得。",
+        "availability": "pending",
+        "access_state": "not_checked",
+        "observation_state": "description_only",
+        "observation_refs": [],
+        "source_refs": [
+          "SRC-TASK",
+          "SRC-RHYTHM",
+          "SRC-COPY"
+        ]
+      }
+    },
+    "entity_context": {
+      "entities": {
+        "DANCER": {
+          "kind": "person",
+          "description": "SEG01 的唯一目标舞者；相同人物为文字绑定要求，未观察核验。",
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-ROLES"
+          ]
+        },
+        "ENVIRONMENT": {
+          "kind": "scene",
+          "description": "文字要求星海高台夜景且无其他人物；并非实图场景观察。",
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-ROLES"
+          ]
+        },
+        "SOUNDTRACK": {
+          "kind": "soundtrack",
+          "description": "SEG01 指定歌曲音轨；不自动授权角色音色模仿。",
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-RHYTHM",
+            "SRC-COPY"
+          ]
+        }
+      },
+      "bindings": {
+        "FRONT": {
+          "entity_id": "DANCER",
+          "asset_id": "IMG-FRONT",
+          "channel": "visual",
+          "source_selector": "正面身体与服装部分，不含头部；文字用途确认。",
+          "state": "confirmed",
+          "authority_refs": [
+            "SRC-TASK"
+          ],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-ROLES"
+          ]
+        },
+        "FACE-BACK": {
+          "entity_id": "DANCER",
+          "asset_id": "IMG-THREE-VIEW",
+          "channel": "visual",
+          "source_selector": "三视图中的脸、发型、背面服装与半面纱部分；文字用途确认。",
+          "state": "confirmed",
+          "authority_refs": [
+            "SRC-TASK"
+          ],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-ROLES"
+          ]
+        },
+        "ENV-LOOK": {
+          "entity_id": "ENVIRONMENT",
+          "asset_id": "IMG-FRONT",
+          "channel": "visual",
+          "source_selector": "原文 COLOR & ATMOSPHERE 声称来自 Picture 1 的环境语言，待实际图像验证。",
+          "state": "confirmed",
+          "authority_refs": [
+            "SRC-TASK"
+          ],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-COLOR"
+          ]
+        },
+        "MUSIC": {
+          "entity_id": "SOUNDTRACK",
+          "asset_id": "AUDIO-SEG01",
+          "channel": "audio",
+          "source_selector": "SEG01 所称 Audio 1；具体媒体与源时间窗口未提供。",
+          "state": "confirmed",
+          "authority_refs": [
+            "SRC-TASK"
+          ],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-RHYTHM",
+            "SRC-COPY"
+          ]
+        }
+      }
+    },
+    "permission_brief": "仅处理 SEG01。忠实保存双图属性分工、C1 的图1站姿入态与半纱面纱要求。把仅参考节奏/禁止信号复制和完整音轨1:1复制同时建模；decisions 留空，用户尚未授权选择。不要把0秒fully referenced直接改成首帧锚定。"
+  }
+}

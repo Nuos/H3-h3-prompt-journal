@@ -1,0 +1,31 @@
+{
+  "kind": "M2Request",
+  "contract_version": "1.0.0",
+  "request_id": "REQ-IDENTITY-M2",
+  "target": "M2",
+  "work_id": "WORK-IDENTITY-DEMO",
+  "base_version": 0,
+  "sources": {
+    "SRC-CASE-019": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md#the-breakthrough--split-the-two-pictures-down-to-the-feature-level-then-demote-the-pose-entirely",
+      "version": "faa8edc311589d68d37e93524c7cb8e553fff857",
+      "excerpt": "Picture 1 分配面部身份；Picture 2 分配体型、服饰和环境；两图的静态姿势不作为编舞起点；Audio 1 按段复用。这里仅使用案例文字，不声称查看媒体。"
+    },
+    "SRC-EXAMPLE-REQUEST": {
+      "kind": "user_requirement",
+      "locator": "controlled-example:identity-reference-request",
+      "version": "0.1.0",
+      "excerpt": "受控文字示例任务：按 CASE-019 的参考分权登记素材和用途；尚未提供实际图像或音频。该示例授权只对 WORK-IDENTITY-DEMO 有效，不是用户新项目的授权。"
+    },
+    "SRC-DESIGN": {
+      "kind": "design_decision",
+      "locator": "controlled-example:m2-contract-projection",
+      "version": "0.1.0",
+      "excerpt": "本实现将案例文字转为稳定 ID、源选择、按属性权限和三子模块提案；这些结构与名字是 D 类工程细化，不是案例原始输出。"
+    }
+  },
+  "inputs": {
+    "material_brief": "依据 CASE-019 登记两张参考图和一份独立音乐输入，明确实际媒体待提供，不观察图片或音频。"
+  }
+}

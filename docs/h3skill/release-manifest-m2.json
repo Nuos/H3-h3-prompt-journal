@@ -1,0 +1,844 @@
+{
+  "kind": "M2ReleaseManifest",
+  "version": "1.0.0",
+  "package": "h3-asset-reference",
+  "package_version": "0.1.0",
+  "repository_base": "faa8edc311589d68d37e93524c7cb8e553fff857",
+  "scope": [
+    "h3-asset-reference",
+    "tests/m2",
+    "validation/m2",
+    "README.md",
+    "20261105-development-m2-v001.md",
+    "tools/verify_m2_release.py"
+  ],
+  "self_hash_policy": "Manifest fixed by Git commit; no self hash.",
+  "excluded_report": [
+    "validation/m2/release-check.json"
+  ],
+  "exclusion_reason": "Avoid a report/manifest self-reference cycle; report is committed separately.",
+  "files": [
+    {
+      "path": "20261105-development-m2-v001.md",
+      "bytes": 17620,
+      "sha256": "83a07f2a77ce7b6bc4bf8f5c369471bc7ffbfdd723ff6861bee3d54f8665e6c9",
+      "git_blob_sha": "bd3d529cf35828200ff248a3194da1947030541f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6779,
+      "sha256": "daa541e17e70bb22d833ee326cf976c85376dbb9b140e7dec905a22d86a3c167",
+      "git_blob_sha": "a0fac2838a2b614a35f981b3ec698dae189076cd"
+    },
+    {
+      "path": "h3-asset-reference/SKILL.md",
+      "bytes": 9560,
+      "sha256": "0515fd25fa248430f553e5cce8ff54c448ed4ef1aaf8d430a4452372a81abd6b",
+      "git_blob_sha": "17e7fce1c5997c2c20e7836dd9a4e2af64b88f29"
+    },
+    {
+      "path": "h3-asset-reference/assets/proposal-batch.json",
+      "bytes": 23724,
+      "sha256": "153bc2f029256c150edd2d740845ac26e7e5488a2681c0dc97266ff8c88a6752",
+      "git_blob_sha": "dd032ee1457bc464f4a08aca04b18b36447a86d4"
+    },
+    {
+      "path": "h3-asset-reference/assets/proposal-m2-1.json",
+      "bytes": 3882,
+      "sha256": "abd56ec3da028dc2eadd0cedf0f20e7c06eadf433ff8d5c0aeaa2d4ab5d10ff5",
+      "git_blob_sha": "5941cfd9b18305cef9ca1f5a951eb01551dae307"
+    },
+    {
+      "path": "h3-asset-reference/assets/proposal-m2-2.json",
+      "bytes": 6616,
+      "sha256": "de3acbc05006b49727666c98142d5619d78dd3fe1d4b2d8d444d9fa579d25aa2",
+      "git_blob_sha": "c3d2881daf48a4c81ee8acbc28b801da3df90b0b"
+    },
+    {
+      "path": "h3-asset-reference/assets/proposal-m2-3.json",
+      "bytes": 10555,
+      "sha256": "d84bab9f7ebc51870ad2048940f571052684b96d289860e3dd95f532085d0b2c",
+      "git_blob_sha": "1b3ad9372fa5aa50c3cce38a23ffb651d3ec4c53"
+    },
+    {
+      "path": "h3-asset-reference/assets/request-m2-1.json",
+      "bytes": 1593,
+      "sha256": "66f502176785623ff2b443637caa7d6a379ddc751ef7546ab36bea2f70a2bede",
+      "git_blob_sha": "7f298610b5cc3ce55294c5650fc0ba24559ce17b"
+    },
+    {
+      "path": "h3-asset-reference/assets/request-m2-2.json",
+      "bytes": 3921,
+      "sha256": "90f7cc8be96b5d8cee843972643b9a0a53032420e3f22a7d70471586415aff9f",
+      "git_blob_sha": "d61d539356e536c1486e26a14248092ff22d3ace"
+    },
+    {
+      "path": "h3-asset-reference/assets/request-m2-3.json",
+      "bytes": 6682,
+      "sha256": "30cd6bba5c86fc52919246df246ca2fd82c3a7b931dd3e52faa840fbf5eb0b50",
+      "git_blob_sha": "4798b2ecfa7856f678b2ba944fdbe4520dd1b9d0"
+    },
+    {
+      "path": "h3-asset-reference/assets/request-m2.json",
+      "bytes": 1589,
+      "sha256": "60b0b87ea6b60f77bfdc51f58d5cf3d5bbdf5bc5d365728523886ef7ed07d5d6",
+      "git_blob_sha": "aea65fe01fecea79951560e499f5db258be4619c"
+    },
+    {
+      "path": "h3-asset-reference/assets/state-empty.json",
+      "bytes": 533,
+      "sha256": "0dc4716b01f02536795f2ec4c86b4ca324779648a5b3ec5cb91cdc033961896a",
+      "git_blob_sha": "16efd69b7c354c1d43fa3bf89eaff8765fd89497"
+    },
+    {
+      "path": "h3-asset-reference/references/asset-registration.md",
+      "bytes": 4200,
+      "sha256": "7b56448871580e6386ff96897ded839b98727a63e2ed4115362020e5e22878e4",
+      "git_blob_sha": "2b93c35579296597af53672c511f8e5f6a9fc9b9"
+    },
+    {
+      "path": "h3-asset-reference/references/audit-and-handoff.md",
+      "bytes": 5562,
+      "sha256": "5f0cabde183387d6878ad4684d06b215e09b4b953a12a2d7f7d34b1aad530f45",
+      "git_blob_sha": "ec4b95fc7dfb3f199ba7d39c13b69670c473b6eb"
+    },
+    {
+      "path": "h3-asset-reference/references/case-evidence.md",
+      "bytes": 19723,
+      "sha256": "9227fc46b481e7b0c04968e59bcae710f5ca0fc74a888e3c38c90c3b0b4f7d89",
+      "git_blob_sha": "19010062771a669afd55c70da457868beeca2113"
+    },
+    {
+      "path": "h3-asset-reference/references/case-index.json",
+      "bytes": 95513,
+      "sha256": "c372d0c0447157f613e1fe46444c629b181e752673833dfc3ccd8d517fd13f4d",
+      "git_blob_sha": "31509fb463e41b884733964ebca48a01de660a86"
+    },
+    {
+      "path": "h3-asset-reference/references/case-source-LICENSE.txt",
+      "bytes": 1069,
+      "sha256": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+      "git_blob_sha": "1edcc82393ad4bce49aca4ab0c074dc75fcc268e"
+    },
+    {
+      "path": "h3-asset-reference/references/contract-guide.md",
+      "bytes": 19049,
+      "sha256": "f992e7050ffe413208a2688f620760054c9acc736543f4a0c9338ea5b0ccba2f",
+      "git_blob_sha": "c8bd5020c9d792ba5ecafeec01784c062766c132"
+    },
+    {
+      "path": "h3-asset-reference/references/contracts.json",
+      "bytes": 22195,
+      "sha256": "292d0c81f7d2a7bf70d2268b18e0bc49a5bc4e62d0d081b9de171ba07df38740",
+      "git_blob_sha": "86f1906c525ddcd17828fa9c9878364eff0f9114"
+    },
+    {
+      "path": "h3-asset-reference/references/entity-binding.md",
+      "bytes": 3835,
+      "sha256": "92aeb8e4cf1885f7ce8682353f703eb61c2dc786b3ee73fae7c13c471e2aeeb2",
+      "git_blob_sha": "9fba94696c911b8514a8e6f7c8ae79c0f82a0c6c"
+    },
+    {
+      "path": "h3-asset-reference/references/h3-NOTICE.txt",
+      "bytes": 121,
+      "sha256": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+      "git_blob_sha": "65d507740b0ae63baacdcc501b35ee1ffa5d1226"
+    },
+    {
+      "path": "h3-asset-reference/references/h3-base-official.txt",
+      "bytes": 15773,
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+      "git_blob_sha": "40cf586a634d677d6b7107b367cf0ec9621be728"
+    },
+    {
+      "path": "h3-asset-reference/references/h3-label-mapping.md",
+      "bytes": 16655,
+      "sha256": "0e7727e22c167b1a5978ff16f9132e121262314220ce92f66380d1035a5bfa19",
+      "git_blob_sha": "25904f3147c44a456c3998f2017ddd1d2b6c0e78"
+    },
+    {
+      "path": "h3-asset-reference/references/h3-protocol-source.json",
+      "bytes": 32925,
+      "sha256": "8b98325a703b8564af80da4804167bc4f9a26dab410b3a49ade1feda299fd910",
+      "git_blob_sha": "dabd4795a89a270bb6df9fe4ae5791a635412e68"
+    },
+    {
+      "path": "h3-asset-reference/references/h3-ref-official.txt",
+      "bytes": 23553,
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+      "git_blob_sha": "7ae1b2d07d743fd2392258a96449be9e9e322d35"
+    },
+    {
+      "path": "h3-asset-reference/references/module-registry.json",
+      "bytes": 15518,
+      "sha256": "8bfc341327c02783023380b1bc95dcb0dfe47c15a25c1f7ce83952513b436407",
+      "git_blob_sha": "a6566d95d8548ec6b5fb0ea9d97c5d794f5a454b"
+    },
+    {
+      "path": "h3-asset-reference/references/provenance-and-license.md",
+      "bytes": 4478,
+      "sha256": "2d2c6b7e2e742f88dc219abfc65be7a3a29ee0c1f0ad2f31f6564ed2de7ace88",
+      "git_blob_sha": "bc40029bf26d396544123312c2bf5468730159d3"
+    },
+    {
+      "path": "h3-asset-reference/references/reference-permissions.md",
+      "bytes": 6055,
+      "sha256": "c030f7a54c82b2e87861eca129f2f8a24d58cc23738ea2de901c728ddbefc296",
+      "git_blob_sha": "61defab1b1be05aefca8c6ab878f4bc66dc69649"
+    },
+    {
+      "path": "h3-asset-reference/scripts/m2_contract.py",
+      "bytes": 46226,
+      "sha256": "8241bb99f396c51e5c56c8ff21bb7930b45b8b9f644ca51bdbca8fda2b2e255a",
+      "git_blob_sha": "d15ecdddf0a62a609035a4a9417eb37fb6d237ad"
+    },
+    {
+      "path": "tests/m2/run_tests.py",
+      "bytes": 2774,
+      "sha256": "be3d6a3df5cc0decd3ab923ac0d8c171a80043a248ba08fb8aabf30950fc3329",
+      "git_blob_sha": "2515447cfa9482c723a6abe8fe03b6d806f39de0"
+    },
+    {
+      "path": "tests/m2/test-results.json",
+      "bytes": 2927,
+      "sha256": "c5c8eec98cf4bfb1dd3c274f4cd04fd4fdb5e2881bf1ed7b00d08dea60efb865",
+      "git_blob_sha": "92cb69de4294441e17b682d4e41602a6a5c1b5ed"
+    },
+    {
+      "path": "tests/m2/test_m2_contract.py",
+      "bytes": 31627,
+      "sha256": "941d1c291ed7269e585a2942e5e1ccf63bbe1c601c10d37521468e087a616d48",
+      "git_blob_sha": "6b9a02bdcd67bcbf9410c59eb9217559080c02d3"
+    },
+    {
+      "path": "tests/m2/unittest-output.txt",
+      "bytes": 9607,
+      "sha256": "f5cd83c5590a92b97fd9d90e6c671d9a8a98f378d343fc054449b7d1b2a25556",
+      "git_blob_sha": "3efb43f8887abe743cc44ee8d5c618742e407b57"
+    },
+    {
+      "path": "tools/verify_m2_release.py",
+      "bytes": 11882,
+      "sha256": "744f02443c1e5cd8df6e12165f8378a9a99145e2e5a0f4f4bef478d59395769f",
+      "git_blob_sha": "40066aee1dd52f2e87c7fae3679569768645abb9"
+    },
+    {
+      "path": "validation/m2/final-review.json",
+      "bytes": 4172,
+      "sha256": "7419c7b549a0edee69661ea3559624ba36ddaf4d3391a1a0390a1751a8b31cca",
+      "git_blob_sha": "8405a8caa614115371825fb43a4cd41ed2ceabbf"
+    },
+    {
+      "path": "validation/m2/forward-use/RESULTS.md",
+      "bytes": 4697,
+      "sha256": "fb06febf711598cdadc149f6823d3fd600503ce783c8129c88174d16434b6104",
+      "git_blob_sha": "7568650d469e05f2532ea3671cc2fe52bf41d024"
+    },
+    {
+      "path": "validation/m2/forward-use/build_forward_use.py",
+      "bytes": 17312,
+      "sha256": "7c7a18a33dbc64a4aace65f27ec9f0303aacbd4d2ea45284a388c6edf981f056",
+      "git_blob_sha": "ad618fb8bb64d0e8f9c949cef146e8fff5d8b1cf"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/final-run-console.txt",
+      "bytes": 26134,
+      "sha256": "86973cbdb634f025effce59f6adea0915c884a68fe218951326d3aba2d514cda",
+      "git_blob_sha": "b3d7054e3c44863fb4343ffa8179db19c3187c4e"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot/commands.md",
+      "bytes": 2908,
+      "sha256": "ed093be32240d0c379d6c13184f61b9154315a68f70935696853f7650521c5eb",
+      "git_blob_sha": "0d9547c3153d0580499765541c8cfb134b0eed44"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot/task1-identity--proposal-check.json",
+      "bytes": 4808,
+      "sha256": "09bcd2c597792d9abd849dd1676bf790e7895ea0129556cc89323c51a061b7ff",
+      "git_blob_sha": "9861ac25642db5fb642419db19e7d04d68eb6602"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot/task1-identity--request-check.json",
+      "bytes": 3116,
+      "sha256": "dd7a29e39b1a9e970a2a8526c017df1924ef72f11a7de4ecd9310f969a5a926c",
+      "git_blob_sha": "a3fd37d257a1b012fe1ade6f3b5f4c1e14f8540c"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot/task1-identity--route.json",
+      "bytes": 7860,
+      "sha256": "23523e8d72fb98b811d03f4f04a629ba97995ce0867b68b568b6e8f02038c0a4",
+      "git_blob_sha": "39a8e06201359cd9f6386d06f8f2d4f98cb2331f"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot/task2-xiashan-seg01--proposal-check.json",
+      "bytes": 7657,
+      "sha256": "e64ff6d2902c8b2f4dd3752b85224c2a7bd50cbceb4a8263a4e1cfd8c34b36a1",
+      "git_blob_sha": "c1e3b473e93eaab51774d4a0717acf2d5711203d"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot/task2-xiashan-seg01--request-check.json",
+      "bytes": 3462,
+      "sha256": "f62e18ee57bd4ab4a814bc7ff87f35126526209b3ad22c04756599e22caedba9",
+      "git_blob_sha": "ef9a1aff19d779027be1f7943bf1221964f12b7f"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot/task2-xiashan-seg01--route.json",
+      "bytes": 10069,
+      "sha256": "192bcc3ec2051a34ac84aea68d8120896bad06f7212da2cb58f57533d58ca571",
+      "git_blob_sha": "bd975d885773e9ae9348acdb25c8c309fc576ded"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot-final-run/commands.md",
+      "bytes": 3598,
+      "sha256": "ba10612bc13dd3bd9605323366f3d2c662c4baf8485c9d0ecc8f4049016196b0",
+      "git_blob_sha": "80aea7bb7cc016a5be62785c108433275f254f38"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot-final-run/task1-identity--proposal-check.json",
+      "bytes": 4828,
+      "sha256": "2ec99e14c734e28a22167056c36d2781f0e086583a9da4908a4a4f7e5a480cbf",
+      "git_blob_sha": "6b9a2a503786b88ea3ac48bea428f48d3d0bcb8e"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot-final-run/task1-identity--request-check.json",
+      "bytes": 3136,
+      "sha256": "e9c7f69ce71fa317a5ead58ad909454a2134a425fd8d3e98520b7beff8b1fd8c",
+      "git_blob_sha": "39f6066e02b9cb5d6497ed3eb31d39b33a316446"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot-final-run/task1-identity--route.json",
+      "bytes": 7880,
+      "sha256": "0d6f1ec44a7a4e735db1ba404b03dd6b84e55b910699319d2b35cde10ee2e936",
+      "git_blob_sha": "2319a501b82e10bbe39909b8c58afbb4d7d15dc4"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot-final-run/task2-xiashan-seg01--proposal-check.json",
+      "bytes": 7357,
+      "sha256": "7f33ed3e4aef857e68879ded2a2bf0f6acc0077513a581bf8c6f872178cc062a",
+      "git_blob_sha": "8e237b0fc9de4bb03a061080a89f371f46c6b2d9"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot-final-run/task2-xiashan-seg01--proposal-revised-check.json",
+      "bytes": 7842,
+      "sha256": "8e888dbe2ebcee03fbf3d17394b27d25c290b88a789c432f7942082d424b9f91",
+      "git_blob_sha": "4ad65f37076f653959183d5130ad2ee962fb8115"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot-final-run/task2-xiashan-seg01--request-check.json",
+      "bytes": 3482,
+      "sha256": "c50e268799be37dbc1fc2408e3ab58c48d844dc46560fa43754d67b6558d93f7",
+      "git_blob_sha": "341ba5aa4e87561bde1d77986ed3e253d257dc06"
+    },
+    {
+      "path": "validation/m2/forward-use/execution/snapshot-final-run/task2-xiashan-seg01--route.json",
+      "bytes": 10089,
+      "sha256": "9b7a2e7f95c8db0a4cb8bf1a92d11027828623861237fcf7649340001a1e24cf",
+      "git_blob_sha": "6d1fff7db17054050f05b51e43b78de1c87b6a32"
+    },
+    {
+      "path": "validation/m2/forward-use/final-run-source-manifest.json",
+      "bytes": 6275,
+      "sha256": "49e47616376b3b80c37286ae7eab6d4d57d1d4918feb1d8f04e0c00285485b2f",
+      "git_blob_sha": "d08d69f5cd5866d30f06177ef286b7e08f0d8b60"
+    },
+    {
+      "path": "validation/m2/forward-use/final-source-manifest.json",
+      "bytes": 6110,
+      "sha256": "2bde7543f78a3b04e4ba8db9a791f6925aa6053cb1111941fcc44cda7d4398fe",
+      "git_blob_sha": "8f10a4bd959ac8d064a6db0ccc7c4bca87a90bc4"
+    },
+    {
+      "path": "validation/m2/forward-use/finalize_report.py",
+      "bytes": 19392,
+      "sha256": "b0e317262a570f090ead2180a661011ad68feda4367c47d56fa96444a674f8b2",
+      "git_blob_sha": "5e00c5e4ad0d9e410ac20c36487b9a7df8b0a238"
+    },
+    {
+      "path": "validation/m2/forward-use/initial-errors.json",
+      "bytes": 843,
+      "sha256": "2f606ee9b0f64a5613192d1c81764c266038ee2a39929d8040168ff94c208537",
+      "git_blob_sha": "1c3f536765c1ed0fa2355becf44370ea56a3e0f5"
+    },
+    {
+      "path": "validation/m2/forward-use/revision-log.md",
+      "bytes": 2052,
+      "sha256": "222b5c0666a15b57977df6a3794ad1d684de8363e418b1a31b545af1c76cd4d0",
+      "git_blob_sha": "0ea680f65e70bb97493a0fd308710ec853724896"
+    },
+    {
+      "path": "validation/m2/forward-use/run_cli.py",
+      "bytes": 2134,
+      "sha256": "3ff905033a5291b0fc54e3d111a97841fb8dba6503e114d4b3fded0f576205ea",
+      "git_blob_sha": "7be2627c9a51368d06bb7ef1604bc4a8497306e4"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "bytes": 5248,
+      "sha256": "c3726c8d92958ba60393b5f0b7c07b6ebd3c9f1152095e0f66423ab871c92695",
+      "git_blob_sha": "80383594744c1caefadf9feb941d853953813338"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "bytes": 34220,
+      "sha256": "e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+      "git_blob_sha": "b4e12f5932869ecff50fa75cfc5c963766d4f076"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "bytes": 7390,
+      "sha256": "58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+      "git_blob_sha": "7d2d18c1697928bed90d80361f5ac16997302d28"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "bytes": 101257,
+      "sha256": "5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "git_blob_sha": "1db431d27a43f05da550ad1d96bf05bb1325bc05"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/SKILL.md",
+      "bytes": 9560,
+      "sha256": "0515fd25fa248430f553e5cce8ff54c448ed4ef1aaf8d430a4452372a81abd6b",
+      "git_blob_sha": "17e7fce1c5997c2c20e7836dd9a4e2af64b88f29"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/assets/proposal-m2-3.json",
+      "bytes": 10555,
+      "sha256": "d84bab9f7ebc51870ad2048940f571052684b96d289860e3dd95f532085d0b2c",
+      "git_blob_sha": "1b3ad9372fa5aa50c3cce38a23ffb651d3ec4c53"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/assets/request-m2-3.json",
+      "bytes": 6682,
+      "sha256": "30cd6bba5c86fc52919246df246ca2fd82c3a7b931dd3e52faa840fbf5eb0b50",
+      "git_blob_sha": "4798b2ecfa7856f678b2ba944fdbe4520dd1b9d0"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/assets/state-empty.json",
+      "bytes": 533,
+      "sha256": "0dc4716b01f02536795f2ec4c86b4ca324779648a5b3ec5cb91cdc033961896a",
+      "git_blob_sha": "16efd69b7c354c1d43fa3bf89eaff8765fd89497"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/references/asset-registration.md",
+      "bytes": 4200,
+      "sha256": "7b56448871580e6386ff96897ded839b98727a63e2ed4115362020e5e22878e4",
+      "git_blob_sha": "2b93c35579296597af53672c511f8e5f6a9fc9b9"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/references/audit-and-handoff.md",
+      "bytes": 5444,
+      "sha256": "b597a1c33bd90ab4901d468d0702ea9beabc9dcb6efea84aa78d4b91d2ea5ffc",
+      "git_blob_sha": "f5a3bdb2d9118e21449c7905044a94bcc1b68c65"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/references/contract-guide.md",
+      "bytes": 17095,
+      "sha256": "03bfcfbcddd72f781d579ef3bc03b0821baebad21e77c08cd2612325b26e8921",
+      "git_blob_sha": "145d387baa6d32cd88985a35f854eae3ed143537"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/references/contracts.json",
+      "bytes": 22195,
+      "sha256": "292d0c81f7d2a7bf70d2268b18e0bc49a5bc4e62d0d081b9de171ba07df38740",
+      "git_blob_sha": "86f1906c525ddcd17828fa9c9878364eff0f9114"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/references/entity-binding.md",
+      "bytes": 3835,
+      "sha256": "92aeb8e4cf1885f7ce8682353f703eb61c2dc786b3ee73fae7c13c471e2aeeb2",
+      "git_blob_sha": "9fba94696c911b8514a8e6f7c8ae79c0f82a0c6c"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/references/h3-base-official.txt",
+      "bytes": 15773,
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+      "git_blob_sha": "40cf586a634d677d6b7107b367cf0ec9621be728"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/references/h3-ref-official.txt",
+      "bytes": 23553,
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+      "git_blob_sha": "7ae1b2d07d743fd2392258a96449be9e9e322d35"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/references/module-registry.json",
+      "bytes": 15414,
+      "sha256": "77cb6ee4c7d8fdd56ae69b722cfbf68d2a7392620f4a28f93fc233bfebe2ca17",
+      "git_blob_sha": "01721fe4b332e8a0a6c2362f29c118489e909580"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/references/reference-permissions.md",
+      "bytes": 5236,
+      "sha256": "2527f999281d74cccdc1150979d60151efee8fd05b251046ff11e7d4da534036",
+      "git_blob_sha": "d11c2a8845485d8596d089a48a97b32c97fac363"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot/docs/h3skill/h3-asset-reference/scripts/m2_contract.py",
+      "bytes": 45317,
+      "sha256": "4c2ecf956373ca82841fbf594763f52a323f4acfab5fa64b874b87bb9d79d0cf",
+      "git_blob_sha": "c4c83f2bbee7fa9f6a2b4ee0fedba669927696ae"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "bytes": 5248,
+      "sha256": "c3726c8d92958ba60393b5f0b7c07b6ebd3c9f1152095e0f66423ab871c92695",
+      "git_blob_sha": "80383594744c1caefadf9feb941d853953813338"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "bytes": 34220,
+      "sha256": "e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+      "git_blob_sha": "b4e12f5932869ecff50fa75cfc5c963766d4f076"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "bytes": 7390,
+      "sha256": "58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+      "git_blob_sha": "7d2d18c1697928bed90d80361f5ac16997302d28"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "bytes": 101257,
+      "sha256": "5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "git_blob_sha": "1db431d27a43f05da550ad1d96bf05bb1325bc05"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/SKILL.md",
+      "bytes": 9560,
+      "sha256": "0515fd25fa248430f553e5cce8ff54c448ed4ef1aaf8d430a4452372a81abd6b",
+      "git_blob_sha": "17e7fce1c5997c2c20e7836dd9a4e2af64b88f29"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/assets/proposal-m2-3.json",
+      "bytes": 10555,
+      "sha256": "d84bab9f7ebc51870ad2048940f571052684b96d289860e3dd95f532085d0b2c",
+      "git_blob_sha": "1b3ad9372fa5aa50c3cce38a23ffb651d3ec4c53"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/assets/request-m2-3.json",
+      "bytes": 6682,
+      "sha256": "30cd6bba5c86fc52919246df246ca2fd82c3a7b931dd3e52faa840fbf5eb0b50",
+      "git_blob_sha": "4798b2ecfa7856f678b2ba944fdbe4520dd1b9d0"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/assets/state-empty.json",
+      "bytes": 533,
+      "sha256": "0dc4716b01f02536795f2ec4c86b4ca324779648a5b3ec5cb91cdc033961896a",
+      "git_blob_sha": "16efd69b7c354c1d43fa3bf89eaff8765fd89497"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/references/asset-registration.md",
+      "bytes": 4200,
+      "sha256": "7b56448871580e6386ff96897ded839b98727a63e2ed4115362020e5e22878e4",
+      "git_blob_sha": "2b93c35579296597af53672c511f8e5f6a9fc9b9"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/references/audit-and-handoff.md",
+      "bytes": 5562,
+      "sha256": "5f0cabde183387d6878ad4684d06b215e09b4b953a12a2d7f7d34b1aad530f45",
+      "git_blob_sha": "ec4b95fc7dfb3f199ba7d39c13b69670c473b6eb"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/references/contract-guide.md",
+      "bytes": 18119,
+      "sha256": "a6f78ccc1dddfd7a94b4693b8b301e52857d5cdfd8c6466706f2d0ec0c2782b5",
+      "git_blob_sha": "32d21aec9aba03b91c5bfc24cd4666e2aa9c2cac"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/references/contracts.json",
+      "bytes": 22195,
+      "sha256": "292d0c81f7d2a7bf70d2268b18e0bc49a5bc4e62d0d081b9de171ba07df38740",
+      "git_blob_sha": "86f1906c525ddcd17828fa9c9878364eff0f9114"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/references/entity-binding.md",
+      "bytes": 3835,
+      "sha256": "92aeb8e4cf1885f7ce8682353f703eb61c2dc786b3ee73fae7c13c471e2aeeb2",
+      "git_blob_sha": "9fba94696c911b8514a8e6f7c8ae79c0f82a0c6c"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/references/h3-base-official.txt",
+      "bytes": 15773,
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+      "git_blob_sha": "40cf586a634d677d6b7107b367cf0ec9621be728"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/references/h3-label-mapping.md",
+      "bytes": 16655,
+      "sha256": "0e7727e22c167b1a5978ff16f9132e121262314220ce92f66380d1035a5bfa19",
+      "git_blob_sha": "25904f3147c44a456c3998f2017ddd1d2b6c0e78"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/references/h3-protocol-source.json",
+      "bytes": 32925,
+      "sha256": "8b98325a703b8564af80da4804167bc4f9a26dab410b3a49ade1feda299fd910",
+      "git_blob_sha": "dabd4795a89a270bb6df9fe4ae5791a635412e68"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/references/h3-ref-official.txt",
+      "bytes": 23553,
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+      "git_blob_sha": "7ae1b2d07d743fd2392258a96449be9e9e322d35"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/references/module-registry.json",
+      "bytes": 15414,
+      "sha256": "77cb6ee4c7d8fdd56ae69b722cfbf68d2a7392620f4a28f93fc233bfebe2ca17",
+      "git_blob_sha": "01721fe4b332e8a0a6c2362f29c118489e909580"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/references/reference-permissions.md",
+      "bytes": 5738,
+      "sha256": "4d1045f00461aead5aeec98d04d993603dedc2f37456ddab5e685e6089d86d16",
+      "git_blob_sha": "3d624ee6aed1f0a8f3a70ae56f32b5b248d45283"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final/docs/h3skill/h3-asset-reference/scripts/m2_contract.py",
+      "bytes": 46058,
+      "sha256": "467564962d829f64a34bba4fd520b8ed33fd8f1ae3dbd37089853fc806d79232",
+      "git_blob_sha": "89b25577bea765772498307f96b732b91192065d"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "bytes": 5248,
+      "sha256": "c3726c8d92958ba60393b5f0b7c07b6ebd3c9f1152095e0f66423ab871c92695",
+      "git_blob_sha": "80383594744c1caefadf9feb941d853953813338"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "bytes": 34220,
+      "sha256": "e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+      "git_blob_sha": "b4e12f5932869ecff50fa75cfc5c963766d4f076"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "bytes": 7390,
+      "sha256": "58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+      "git_blob_sha": "7d2d18c1697928bed90d80361f5ac16997302d28"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "bytes": 101257,
+      "sha256": "5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "git_blob_sha": "1db431d27a43f05da550ad1d96bf05bb1325bc05"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/SKILL.md",
+      "bytes": 9560,
+      "sha256": "0515fd25fa248430f553e5cce8ff54c448ed4ef1aaf8d430a4452372a81abd6b",
+      "git_blob_sha": "17e7fce1c5997c2c20e7836dd9a4e2af64b88f29"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/assets/proposal-m2-3.json",
+      "bytes": 10555,
+      "sha256": "d84bab9f7ebc51870ad2048940f571052684b96d289860e3dd95f532085d0b2c",
+      "git_blob_sha": "1b3ad9372fa5aa50c3cce38a23ffb651d3ec4c53"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/assets/request-m2-3.json",
+      "bytes": 6682,
+      "sha256": "30cd6bba5c86fc52919246df246ca2fd82c3a7b931dd3e52faa840fbf5eb0b50",
+      "git_blob_sha": "4798b2ecfa7856f678b2ba944fdbe4520dd1b9d0"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/assets/state-empty.json",
+      "bytes": 533,
+      "sha256": "0dc4716b01f02536795f2ec4c86b4ca324779648a5b3ec5cb91cdc033961896a",
+      "git_blob_sha": "16efd69b7c354c1d43fa3bf89eaff8765fd89497"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/references/asset-registration.md",
+      "bytes": 4200,
+      "sha256": "7b56448871580e6386ff96897ded839b98727a63e2ed4115362020e5e22878e4",
+      "git_blob_sha": "2b93c35579296597af53672c511f8e5f6a9fc9b9"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/references/audit-and-handoff.md",
+      "bytes": 5562,
+      "sha256": "5f0cabde183387d6878ad4684d06b215e09b4b953a12a2d7f7d34b1aad530f45",
+      "git_blob_sha": "ec4b95fc7dfb3f199ba7d39c13b69670c473b6eb"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/references/contract-guide.md",
+      "bytes": 18588,
+      "sha256": "11ca02243e400c6916c8b3fb677b1aa91e8650bc2aaacaca3926d097fc8a61da",
+      "git_blob_sha": "98ebb7d67feb095657368a141321d8f2e63ca7f6"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/references/contracts.json",
+      "bytes": 22195,
+      "sha256": "292d0c81f7d2a7bf70d2268b18e0bc49a5bc4e62d0d081b9de171ba07df38740",
+      "git_blob_sha": "86f1906c525ddcd17828fa9c9878364eff0f9114"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/references/entity-binding.md",
+      "bytes": 3835,
+      "sha256": "92aeb8e4cf1885f7ce8682353f703eb61c2dc786b3ee73fae7c13c471e2aeeb2",
+      "git_blob_sha": "9fba94696c911b8514a8e6f7c8ae79c0f82a0c6c"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/references/h3-base-official.txt",
+      "bytes": 15773,
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+      "git_blob_sha": "40cf586a634d677d6b7107b367cf0ec9621be728"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/references/h3-label-mapping.md",
+      "bytes": 16655,
+      "sha256": "0e7727e22c167b1a5978ff16f9132e121262314220ce92f66380d1035a5bfa19",
+      "git_blob_sha": "25904f3147c44a456c3998f2017ddd1d2b6c0e78"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/references/h3-protocol-source.json",
+      "bytes": 32925,
+      "sha256": "8b98325a703b8564af80da4804167bc4f9a26dab410b3a49ade1feda299fd910",
+      "git_blob_sha": "dabd4795a89a270bb6df9fe4ae5791a635412e68"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/references/h3-ref-official.txt",
+      "bytes": 23553,
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+      "git_blob_sha": "7ae1b2d07d743fd2392258a96449be9e9e322d35"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/references/module-registry.json",
+      "bytes": 15518,
+      "sha256": "8bfc341327c02783023380b1bc95dcb0dfe47c15a25c1f7ce83952513b436407",
+      "git_blob_sha": "a6566d95d8548ec6b5fb0ea9d97c5d794f5a454b"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/references/reference-permissions.md",
+      "bytes": 5738,
+      "sha256": "4d1045f00461aead5aeec98d04d993603dedc2f37456ddab5e685e6089d86d16",
+      "git_blob_sha": "3d624ee6aed1f0a8f3a70ae56f32b5b248d45283"
+    },
+    {
+      "path": "validation/m2/forward-use/snapshot-final-run/docs/h3skill/h3-asset-reference/scripts/m2_contract.py",
+      "bytes": 46226,
+      "sha256": "8241bb99f396c51e5c56c8ff21bb7930b45b8b9f644ca51bdbca8fda2b2e255a",
+      "git_blob_sha": "d15ecdddf0a62a609035a4a9417eb37fb6d237ad"
+    },
+    {
+      "path": "validation/m2/forward-use/source-manifest.json",
+      "bytes": 5375,
+      "sha256": "efb0a6e4772689b620a24e75dc8b0fbd281890a809d08d46de17236808ba0402",
+      "git_blob_sha": "5cae73a823fd581ffd60ab9d8f4f56f6cffa48cc"
+    },
+    {
+      "path": "validation/m2/forward-use/task1-identity/actual-input.md",
+      "bytes": 4128,
+      "sha256": "8c3264bcad9af1c2836f8efdb5ce4139ed31af4c05dd0f77a4e559cd932911d9",
+      "git_blob_sha": "f90979a3210b96655732cd2e01f0bde0682a4265"
+    },
+    {
+      "path": "validation/m2/forward-use/task1-identity/handoff.md",
+      "bytes": 3556,
+      "sha256": "fc33bbe43a3b10d21d0b1018b49b48f5beb5153676ff83be9c54a07431e89a59",
+      "git_blob_sha": "6f5f34fd29bd951f5d3ae68fcd68b8301247c07d"
+    },
+    {
+      "path": "validation/m2/forward-use/task1-identity/permissions.md",
+      "bytes": 1524,
+      "sha256": "4ff73a5209b17ffa894b4b0c82425df1bce42a253727d2b6ee4c792dd7d0a64a",
+      "git_blob_sha": "f9dc4cf680a251d7aa8776c2285cb1f3075d67bb"
+    },
+    {
+      "path": "validation/m2/forward-use/task1-identity/proposal.json",
+      "bytes": 16533,
+      "sha256": "ae43ba60cf40c3ebb3369016c1b66ab2ef8db4f480491c1b83889f89749d377f",
+      "git_blob_sha": "d552bb12a5557c6e5384ea28a9a7aee856570a53"
+    },
+    {
+      "path": "validation/m2/forward-use/task1-identity/request.json",
+      "bytes": 10178,
+      "sha256": "ee7bd397a367c9e9b05e7b2a8c8fac7ba21a120e3c138a747400a924335d8de1",
+      "git_blob_sha": "b461d1e52abf6c71ed025798f874fa09f6adf051"
+    },
+    {
+      "path": "validation/m2/forward-use/task2-xiashan-seg01/actual-input.md",
+      "bytes": 9023,
+      "sha256": "572b506da3aeced80bb8451ca503ee310d0e98657c7f72d21e929d059e4eceac",
+      "git_blob_sha": "221e0e455743bc8c09ef77cd148ef376e5b9bbea"
+    },
+    {
+      "path": "validation/m2/forward-use/task2-xiashan-seg01/handoff-and-decisions.md",
+      "bytes": 5304,
+      "sha256": "a3efcddcdccee34b5fcb38989dc0b2ba1de874eda0df1cf7378cf6786eb67866",
+      "git_blob_sha": "34d4eafe2f765e1eb29ff085c661b8f6d98f3db2"
+    },
+    {
+      "path": "validation/m2/forward-use/task2-xiashan-seg01/permissions.md",
+      "bytes": 2135,
+      "sha256": "6909b3c3b867bd82a7b8273cf8176f2bef635491286873ea8b7c1bce439486f8",
+      "git_blob_sha": "eb44aa018c6103dd6214e1bc2bbb9ede3e06b186"
+    },
+    {
+      "path": "validation/m2/forward-use/task2-xiashan-seg01/permissions.revised.md",
+      "bytes": 2080,
+      "sha256": "20cac15fc59768f727109725256ae50d19eb881f33ce76ea49e13ae108dea883",
+      "git_blob_sha": "c763dae6d539d2f81633d5fcc6b92b5c95ffb618"
+    },
+    {
+      "path": "validation/m2/forward-use/task2-xiashan-seg01/proposal.json",
+      "bytes": 26651,
+      "sha256": "4d683d80ee5c13894f9fff4b3200919b23309bf097795a226541a376c96d05c1",
+      "git_blob_sha": "6d5f2926add63ac7f7e4309a1fd314a3b3d10f0c"
+    },
+    {
+      "path": "validation/m2/forward-use/task2-xiashan-seg01/proposal.revised.json",
+      "bytes": 27061,
+      "sha256": "c47b23310811115a28bbd498362185d6e691b6adc0b264899628c78296b03ba1",
+      "git_blob_sha": "131b8419dd77a582aea425674dd4f07cf0fb3110"
+    },
+    {
+      "path": "validation/m2/forward-use/task2-xiashan-seg01/request.json",
+      "bytes": 17055,
+      "sha256": "25e25d4fe5fa2373e10c89c7e819e8a0772e07309dc425e595c3a7c22751abb3",
+      "git_blob_sha": "db0bba5862d02ad8fdaa311dcd29fb007132f77a"
+    },
+    {
+      "path": "validation/m2/m1-handoff/execution.json",
+      "bytes": 871,
+      "sha256": "d043d7a12604e47469a6912c47ead02faee06522974e0793087eaa0e2fc6056b",
+      "git_blob_sha": "bb915ddc1d9688e9cd77d60f15fd5c5b4f61e961"
+    },
+    {
+      "path": "validation/m2/m1-handoff/m1-accept-result.json",
+      "bytes": 5763,
+      "sha256": "c5e2a56e7b2e1749706f8c9bc831f3d3ac507cb281d30425018bc902d977c957",
+      "git_blob_sha": "a548c9596bf2b934968ed38720dac9e568c8b758"
+    },
+    {
+      "path": "validation/m2/m1-handoff/m2-route-result.json",
+      "bytes": 3612,
+      "sha256": "f2c6e0cb580cae6a52a750195b8f75871f94df39526425cc3d9621f0375f9492",
+      "git_blob_sha": "dc9676e4bab05a6c6aa9b6e325f6b7f15d590180"
+    },
+    {
+      "path": "validation/m2/m1-handoff/request-m2-1.json",
+      "bytes": 2746,
+      "sha256": "a33ffbec504d7fcb7b58a0a902d20bd248ef2fa0e7536ea35f431578cda66eed",
+      "git_blob_sha": "16c0aecde379c7f6a5b3cf639920d0c7ace66a81"
+    },
+    {
+      "path": "validation/m2/m1-handoff/workbrief-projection.json",
+      "bytes": 2377,
+      "sha256": "02750c62eb9a675510f5a2951c2bb157e59bc2a52ba093355ac437376bdffa3b",
+      "git_blob_sha": "3e0158281fae4c984691e6a318055e6db2e38c34"
+    },
+    {
+      "path": "validation/m2/m1-regression.json",
+      "bytes": 601,
+      "sha256": "92caa26f79ce0ab80222564a308beb46b9bcbf3fbd6c675e8aff11d7f44dabed",
+      "git_blob_sha": "7170e8f6bb91081713f111037283925b2ebd96ff"
+    },
+    {
+      "path": "validation/m2/upstream-versions.json",
+      "bytes": 766,
+      "sha256": "0c3888ad23681c51dba7a78d91eee1b2b00aaa1dc45f05f89c97ef5cdd0cb6a5",
+      "git_blob_sha": "361695811f5c63995c6f834415f0a84ca06bb096"
+    }
+  ]
+}

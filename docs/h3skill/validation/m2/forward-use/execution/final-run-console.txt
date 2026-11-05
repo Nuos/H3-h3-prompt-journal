@@ -1,0 +1,775 @@
+task1-identity route exit 0
+{
+  "kind": "M2ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "route",
+  "execution_status": "completed",
+  "outcome": "completed",
+  "audit": {
+    "deterministic": "pass",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/inputs/asset_context/IMG-FACE",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/inputs/asset_context/IMG-BODY-SCENE",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    }
+  ],
+  "execution": {
+    "call_id": "CALL-a46e8b3cd1ab4c8ab5ce4ca79e26490c",
+    "started_utc": "2026-11-05T08:50:45.904931+00:00",
+    "finished_utc": "2026-11-05T08:50:45.907348+00:00",
+    "input_sha256": [
+      "3b29835f6d13a667a8d3253cf55fc8d251fc98fa0bb8c48d5cfd9565798b7c8d"
+    ],
+    "contract_version": "1.0.0",
+    "operation": "read_only_calculation",
+    "retries": 0,
+    "read_resources": [
+      "references/contracts.json",
+      "references/module-registry.json"
+    ]
+  },
+  "limitations": [
+    "No media or network was read.",
+    "Source truth and natural-language fidelity need Agent/human review.",
+    "No H3 mode, label, prompt, model inference or downstream invocation was executed."
+  ],
+  "dispatch": {
+    "target": "M2.3",
+    "route_id": "route-m2-3",
+    "route_version": "1.0.0",
+    "input_projection": {
+      "asset_context": {
+        "IMG-FACE": {
+          "media_type": "image",
+          "channels": [
+            "visual"
+          ],
+          "locator": {
+            "state": "unknown",
+            "reason": "实际媒体没有提供；案例中的标签或旧机器路径不等于可访问文件。"
+          },
+          "source_version": {
+            "state": "unknown",
+            "reason": "没有取得实际媒体，不能记录其版本或哈希。"
+          },
+          "description": "案例指称的 Picture 1：面部身份用途。没有看到实际图像。",
+          "availability": "pending",
+          "access_state": "not_checked",
+          "observation_state": "description_only",
+          "observation_refs": [],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-PROMPT"
+          ]
+        },
+        "IMG-BODY-SCENE": {
+          "media_type": "image",
+          "channels": [
+            "visual"
+          ],
+          "locator": {
+            "state": "unknown",
+            "reason": "实际媒体没有提供；案例中的标签或旧机器路径不等于可访问文件。"
+          },
+          "source_version": {
+            "state": "unknown",
+            "reason": "没有取得实际媒体，不能记录其版本或哈希。"
+          },
+          "description": "案例指称的 Picture 2：身体外观、服装、环境用途。没有看到实际图像。",
+          "availability": "pending",
+          "access_state": "not_checked",
+          "observation_state": "description_only",
+          "observation_refs": [],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-PROMPT"
+          ]
+        }
+      },
+      "entity_context": {
+        "entities": {
+          "PERFORMER": {
+            "kind": "person",
+            "description": "按文字要求绑定的唯一表演者；未核验跨图身份。",
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-PROMPT"
+            ]
+          },
+          "ENVIRONMENT": {
+            "kind": "scene",
+            "description": "文字指定由 Picture 2 提供的环境部分；空间实况未知。",
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-PROMPT"
+            ]
+          }
+        },
+        "bindings": {
+          "FACE": {
+            "entity_id": "PERFORMER",
+            "asset_id": "IMG-FACE",
+            "channel": "visual",
+            "source_selector": "文字指定的面部身份区域；实际区域未观察。",
+            "state": "confirmed",
+            "authority_refs": [
+              "SRC-TASK"
+            ],
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-PROMPT"
+            ]
+          },
+          "BODY": {
+            "entity_id": "PERFORMER",
+            "asset_id": "IMG-BODY-SCENE",
+            "channel": "visual",
+            "source_selector": "文字指定的表演者身体、服装、饰品及发型区域。",
+            "state": "confirmed",
+            "authority_refs": [
+              "SRC-TASK"
+            ],
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-PROMPT"
+            ]
+          },
+          "SCENE": {
+            "entity_id": "ENVIRONMENT",
+            "asset_id": "IMG-BODY-SCENE",
+            "channel": "visual",
+            "source_selector": "文字指定的环境、建筑、背景区域，排除人物姿态。",
+            "state": "confirmed",
+            "authority_refs": [
+              "SRC-TASK"
+            ],
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-PROMPT"
+            ]
+          }
+        }
+      },
+      "permission_brief": "独立运行 M2.3：输入已包含文字依据下的素材/实体上下文；以面部身份、身体服装、环境分权，排除两图姿态/编舞/静态首帧。半身机位按文字交 M5。音乐仅作为范围外的待补交接，不因本提案登记图片而视为取得音频。"
+    },
+    "resources": [
+      "references/contract-guide.md",
+      "references/reference-permissions.md",
+      "references/audit-and-handoff.md"
+    ],
+    "return_to": "M2.accept_or_independent_caller",
+    "semantic_execution": "not_started"
+  }
+}
+
+task1-identity request-check exit 0
+{
+  "kind": "M2ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "check",
+  "execution_status": "completed",
+  "outcome": "completed",
+  "audit": {
+    "deterministic": "pass",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/inputs/asset_context/IMG-FACE",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/inputs/asset_context/IMG-BODY-SCENE",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    }
+  ],
+  "execution": {
+    "call_id": "CALL-c794bbcaac8d4010a085218e199aeac8",
+    "started_utc": "2026-11-05T08:50:45.996669+00:00",
+    "finished_utc": "2026-11-05T08:50:45.998205+00:00",
+    "input_sha256": [
+      "3b29835f6d13a667a8d3253cf55fc8d251fc98fa0bb8c48d5cfd9565798b7c8d"
+    ],
+    "contract_version": "1.0.0",
+    "operation": "read_only_calculation",
+    "retries": 0,
+    "read_resources": [
+      "references/contracts.json"
+    ]
+  },
+  "limitations": [
+    "No media or network was read.",
+    "Source truth and natural-language fidelity need Agent/human review.",
+    "No H3 mode, label, prompt, model inference or downstream invocation was executed."
+  ],
+  "checked_kind": "M2Request",
+  "request_match_checked": false
+}
+
+task1-identity proposal-check exit 0
+{
+  "kind": "M2ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "check",
+  "execution_status": "completed",
+  "outcome": "completed",
+  "audit": {
+    "deterministic": "pass",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/context/asset_registry/IMG-FACE",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/context/asset_registry/IMG-BODY-SCENE",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "declared_open_issue",
+      "path": "/issues/MEDIA-MISSING",
+      "message": "文字层权限可整理；实际图像未提供，必须在生成前补齐并核验区域/跨图身份。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "user"
+    },
+    {
+      "code": "declared_open_issue",
+      "path": "/issues/H3-MAPPING",
+      "message": "Ref2VA 是候选路由；实际模式、上传对象、官方标签及字段编译尚未执行。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M11"
+    },
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/request/inputs/asset_context/IMG-FACE",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/request/inputs/asset_context/IMG-BODY-SCENE",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    }
+  ],
+  "execution": {
+    "call_id": "CALL-d7a23ee5ba964cb3b94d4716e837d4dc",
+    "started_utc": "2026-11-05T08:50:46.088074+00:00",
+    "finished_utc": "2026-11-05T08:50:46.092040+00:00",
+    "input_sha256": [
+      "b869d127c91e82510c08ae05611cffdada75b246170feebabf47d4c5f11c9057",
+      "3b29835f6d13a667a8d3253cf55fc8d251fc98fa0bb8c48d5cfd9565798b7c8d"
+    ],
+    "contract_version": "1.0.0",
+    "operation": "read_only_calculation",
+    "retries": 0,
+    "read_resources": [
+      "references/contracts.json"
+    ]
+  },
+  "limitations": [
+    "No media or network was read.",
+    "Source truth and natural-language fidelity need Agent/human review.",
+    "No H3 mode, label, prompt, model inference or downstream invocation was executed."
+  ],
+  "checked_kind": "M2Proposal",
+  "request_match_checked": true
+}
+
+task2-xiashan-seg01 route exit 0
+{
+  "kind": "M2ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "route",
+  "execution_status": "completed",
+  "outcome": "completed",
+  "audit": {
+    "deterministic": "pass",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/inputs/asset_context/IMG-FRONT",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/inputs/asset_context/IMG-THREE-VIEW",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/inputs/asset_context/AUDIO-SEG01",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    }
+  ],
+  "execution": {
+    "call_id": "CALL-4f79765cd4e34f808e0bced8317b3673",
+    "started_utc": "2026-11-05T08:50:46.185323+00:00",
+    "finished_utc": "2026-11-05T08:50:46.187536+00:00",
+    "input_sha256": [
+      "05f6e9c66fac259b1b08318629bbf0513cbe5e4f3372a5ba468f0c04f3db61b0"
+    ],
+    "contract_version": "1.0.0",
+    "operation": "read_only_calculation",
+    "retries": 0,
+    "read_resources": [
+      "references/contracts.json",
+      "references/module-registry.json"
+    ]
+  },
+  "limitations": [
+    "No media or network was read.",
+    "Source truth and natural-language fidelity need Agent/human review.",
+    "No H3 mode, label, prompt, model inference or downstream invocation was executed."
+  ],
+  "dispatch": {
+    "target": "M2.3",
+    "route_id": "route-m2-3",
+    "route_version": "1.0.0",
+    "input_projection": {
+      "asset_context": {
+        "IMG-FRONT": {
+          "media_type": "image",
+          "channels": [
+            "visual"
+          ],
+          "locator": {
+            "state": "unknown",
+            "reason": "实际媒体没有提供；案例中的标签或旧机器路径不等于可访问文件。"
+          },
+          "source_version": {
+            "state": "unknown",
+            "reason": "没有取得实际媒体，不能记录其版本或哈希。"
+          },
+          "description": "案例称 Picture 1 为无头部信息的正面全身图；实际图像未提供。",
+          "availability": "pending",
+          "access_state": "not_checked",
+          "observation_state": "description_only",
+          "observation_refs": [],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-ROLES"
+          ]
+        },
+        "IMG-THREE-VIEW": {
+          "media_type": "image",
+          "channels": [
+            "visual"
+          ],
+          "locator": {
+            "state": "unknown",
+            "reason": "实际媒体没有提供；案例中的标签或旧机器路径不等于可访问文件。"
+          },
+          "source_version": {
+            "state": "unknown",
+            "reason": "没有取得实际媒体，不能记录其版本或哈希。"
+          },
+          "description": "案例称 Picture 2 为脸部、背部与口鼻半纱面纱的三视图；实际图像未提供。",
+          "availability": "pending",
+          "access_state": "not_checked",
+          "observation_state": "description_only",
+          "observation_refs": [],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-ROLES"
+          ]
+        },
+        "AUDIO-SEG01": {
+          "media_type": "audio",
+          "channels": [
+            "audio"
+          ],
+          "locator": {
+            "state": "unknown",
+            "reason": "实际媒体没有提供；案例中的标签或旧机器路径不等于可访问文件。"
+          },
+          "source_version": {
+            "state": "unknown",
+            "reason": "没有取得实际媒体，不能记录其版本或哈希。"
+          },
+          "description": "案例指称 Audio 1；旧本地路径只作文字记录，不视为已挂载。段内音频与源窗口未取得。",
+          "availability": "pending",
+          "access_state": "not_checked",
+          "observation_state": "description_only",
+          "observation_refs": [],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-RHYTHM",
+            "SRC-COPY"
+          ]
+        }
+      },
+      "entity_context": {
+        "entities": {
+          "DANCER": {
+            "kind": "person",
+            "description": "SEG01 的唯一目标舞者；相同人物为文字绑定要求，未观察核验。",
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-ROLES"
+            ]
+          },
+          "ENVIRONMENT": {
+            "kind": "scene",
+            "description": "文字要求星海高台夜景且无其他人物；并非实图场景观察。",
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-ROLES"
+            ]
+          },
+          "SOUNDTRACK": {
+            "kind": "soundtrack",
+            "description": "SEG01 指定歌曲音轨；不自动授权角色音色模仿。",
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-RHYTHM",
+              "SRC-COPY"
+            ]
+          }
+        },
+        "bindings": {
+          "FRONT": {
+            "entity_id": "DANCER",
+            "asset_id": "IMG-FRONT",
+            "channel": "visual",
+            "source_selector": "正面身体与服装部分，不含头部；文字用途确认。",
+            "state": "confirmed",
+            "authority_refs": [
+              "SRC-TASK"
+            ],
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-ROLES"
+            ]
+          },
+          "FACE-BACK": {
+            "entity_id": "DANCER",
+            "asset_id": "IMG-THREE-VIEW",
+            "channel": "visual",
+            "source_selector": "三视图中的脸、发型、背面服装与半面纱部分；文字用途确认。",
+            "state": "confirmed",
+            "authority_refs": [
+              "SRC-TASK"
+            ],
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-ROLES"
+            ]
+          },
+          "ENV-LOOK": {
+            "entity_id": "ENVIRONMENT",
+            "asset_id": "IMG-FRONT",
+            "channel": "visual",
+            "source_selector": "原文 COLOR & ATMOSPHERE 声称来自 Picture 1 的环境语言，待实际图像验证。",
+            "state": "confirmed",
+            "authority_refs": [
+              "SRC-TASK"
+            ],
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-COLOR"
+            ]
+          },
+          "MUSIC": {
+            "entity_id": "SOUNDTRACK",
+            "asset_id": "AUDIO-SEG01",
+            "channel": "audio",
+            "source_selector": "SEG01 所称 Audio 1；具体媒体与源时间窗口未提供。",
+            "state": "confirmed",
+            "authority_refs": [
+              "SRC-TASK"
+            ],
+            "source_refs": [
+              "SRC-TASK",
+              "SRC-RHYTHM",
+              "SRC-COPY"
+            ]
+          }
+        }
+      },
+      "permission_brief": "仅处理 SEG01。忠实保存双图属性分工、C1 的图1站姿入态与半纱面纱要求。把仅参考节奏/禁止信号复制和完整音轨1:1复制同时建模；decisions 留空，用户尚未授权选择。不要把0秒fully referenced直接改成首帧锚定。"
+    },
+    "resources": [
+      "references/contract-guide.md",
+      "references/reference-permissions.md",
+      "references/audit-and-handoff.md"
+    ],
+    "return_to": "M2.accept_or_independent_caller",
+    "semantic_execution": "not_started"
+  }
+}
+
+task2-xiashan-seg01 request-check exit 0
+{
+  "kind": "M2ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "check",
+  "execution_status": "completed",
+  "outcome": "completed",
+  "audit": {
+    "deterministic": "pass",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/inputs/asset_context/IMG-FRONT",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/inputs/asset_context/IMG-THREE-VIEW",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/inputs/asset_context/AUDIO-SEG01",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    }
+  ],
+  "execution": {
+    "call_id": "CALL-b7ee3154b6c34b7c94e5ca5c2415cdf0",
+    "started_utc": "2026-11-05T08:50:46.236906+00:00",
+    "finished_utc": "2026-11-05T08:50:46.238229+00:00",
+    "input_sha256": [
+      "05f6e9c66fac259b1b08318629bbf0513cbe5e4f3372a5ba468f0c04f3db61b0"
+    ],
+    "contract_version": "1.0.0",
+    "operation": "read_only_calculation",
+    "retries": 0,
+    "read_resources": [
+      "references/contracts.json"
+    ]
+  },
+  "limitations": [
+    "No media or network was read.",
+    "Source truth and natural-language fidelity need Agent/human review.",
+    "No H3 mode, label, prompt, model inference or downstream invocation was executed."
+  ],
+  "checked_kind": "M2Request",
+  "request_match_checked": false
+}
+
+task2-xiashan-seg01 proposal-check exit 1
+{
+  "kind": "M2ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "check",
+  "execution_status": "completed",
+  "outcome": "rejected",
+  "audit": {
+    "deterministic": "fail",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "fail"
+  },
+  "diagnostics": [
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/context/asset_registry/IMG-FRONT",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/context/asset_registry/IMG-THREE-VIEW",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "asset_not_fully_observed",
+      "path": "/context/asset_registry/AUDIO-SEG01",
+      "message": "Access/observation remains limited; registration does not inspect media or confirm readiness.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.1"
+    },
+    {
+      "code": "undecided_permission",
+      "path": "/changes/reference_map/permissions/FRONT-ANCHOR",
+      "message": "Unspecified inheritance remains undecided.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2.3"
+    },
+    {
+      "code": "competing_reference_sources",
+      "path": "/changes/reference_map/permissions/FACE-HAIR",
+      "message": "Conflicts with FRONT-BODY; resolve or split the exact scope explicitly.",
+      "status": "fail",
+      "blocking": true,
+      "repair_target": "M2.3"
+    },
+    {
+      "code": "competing_reference_sources",
+      "path": "/changes/reference_map/permissions/BACK-VEIL",
+      "message": "Conflicts with FRONT-CLOTHES; resolve or split the exact scope explicitly.",
+      "status": "fail",
+      "blocking": true,
+      "repair_target": "M2.3"
+    },
+    {
+      "code": "permission_conflict",
+      "path": "/changes/reference_map/permissions/COLOR-EXCLUSIVE",
+      "message": "Conflicts with BACK-VEIL; resolve or split the exact scope explicitly.",
+      "status": "fail",
+      "blocking": true,
+      "repair_target": "M2.3"
+    },
+    {
+      "code": "permission_conflict",
+      "path": "/changes/reference_map/permissions/AUDIO-EXACT-COPY",
+      "message": "Conflicts with AUDIO-NO-COPY; resolve or split the exact scope explicitly.",
+      "status": "fail",
+      "blocking": true,
+      "repair_target": "M2.3"
+    },
+    {
+      "code": "declared_open_issue",
+      "path": "/issues/AUDIO-POLICY-CONFLICT",
+      "message": "同一 MUSIC/SEG01/audio_content/copy 同时 forbid 与 allow；需要原需求权威明确音频政策。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "user"
+    },
+    {
+      "code": "declared_open_issue",
+      "path": "/issues/COSTUME-SOURCE-CONFLICT",
+      "message": "图2的背面服装/面纱权威与 COLOR 中全服装只来自图1不能同时按字面执行。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "user"
+    },
+    {
+      "code": "declared_open_issue",
+      "path": "/issues/MISSING-MEDIA",
+      "message": "双图和 SEG01 实际音频未提供；文字登记可完成，媒体身份、区域、时长与内容不可验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "user"
+    },
+    {
+      "code": "declared_open_issue",
+      "path": "/issues/SOURCE-WINDOW",
+      "message": "prompt SEG01 为0.000–11.116；README切段表起始区间另有12.860秒等记录；必须明确本段音频、版本及源窗口。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7"
+    },
+    {
+      "code": "declared_open_issue",
+      "path": "/issues/PREVIOUS-SEGMENT",
+      "message": "SEG01声称延续上段，但未给前段资产或状态；不虚构续接。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M9"
+    },
+    {
+      "code": "declared_open_issue",
+      "path": "/issues/H3-FIELD-MIX",
+      "message": "原案把 Ref2VA 字段与 integrated_multimodal_description 并用；只交接迁移建议，不改写源案例。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M11"
+    }
+  ],
+  "execution": {
+    "call_id": "CALL-d17fd2f2b3b746a7847b209dcd9f7be6",
+    "started_utc": "2026-11-05T08:50:46.286390+00:00",
+    "finished_utc": "2026-11-05T08:50:46.288553+00:00",
+    "input_sha256": [
+      "1c74dd574e60f632b0c7dd17bb995a001375e1c738445ce77e14007b02894c03"
+    ],
+    "contract_version": "1.0.0",
+    "operation": "read_only_calculation",
+    "retries": 0,
+    "read_resources": [
+      "references/contracts.json"
+    ]
+  },
+  "limitations": [
+    "No media or network was read.",
+    "Source truth and natural-language fidelity need Agent/human review.",
+    "No H3 mode, label, prompt, model inference or downstream invocation was executed."
+  ],
+  "checked_kind": "M2Proposal",
+  "request_match_checked": false
+}
+

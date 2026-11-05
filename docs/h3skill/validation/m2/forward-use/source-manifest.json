@@ -1,0 +1,114 @@
+{
+  "captured_at": "2026-11-05T08:32:52.847265+00:00",
+  "basis": "Existing files captured atomically per file; not an atomic repository snapshot. Actual media absent.",
+  "files": [
+    {
+      "path": "docs/h3skill/h3-asset-reference/SKILL.md",
+      "sha256": "0515fd25fa248430f553e5cce8ff54c448ed4ef1aaf8d430a4452372a81abd6b",
+      "bytes": 9560,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/SKILL.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/contracts.json",
+      "sha256": "292d0c81f7d2a7bf70d2268b18e0bc49a5bc4e62d0d081b9de171ba07df38740",
+      "bytes": 22195,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/references/contracts.json"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/module-registry.json",
+      "sha256": "77cb6ee4c7d8fdd56ae69b722cfbf68d2a7392620f4a28f93fc233bfebe2ca17",
+      "bytes": 15414,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/references/module-registry.json"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/contract-guide.md",
+      "sha256": "03bfcfbcddd72f781d579ef3bc03b0821baebad21e77c08cd2612325b26e8921",
+      "bytes": 17095,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/references/contract-guide.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/reference-permissions.md",
+      "sha256": "2527f999281d74cccdc1150979d60151efee8fd05b251046ff11e7d4da534036",
+      "bytes": 5236,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/references/reference-permissions.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/audit-and-handoff.md",
+      "sha256": "b597a1c33bd90ab4901d468d0702ea9beabc9dcb6efea84aa78d4b91d2ea5ffc",
+      "bytes": 5444,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/references/audit-and-handoff.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/asset-registration.md",
+      "sha256": "7b56448871580e6386ff96897ded839b98727a63e2ed4115362020e5e22878e4",
+      "bytes": 4200,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/references/asset-registration.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/entity-binding.md",
+      "sha256": "92aeb8e4cf1885f7ce8682353f703eb61c2dc786b3ee73fae7c13c471e2aeeb2",
+      "bytes": 3835,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/references/entity-binding.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/h3-base-official.txt",
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+      "bytes": 15773,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/references/h3-base-official.txt"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/h3-ref-official.txt",
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+      "bytes": 23553,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/references/h3-ref-official.txt"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/scripts/m2_contract.py",
+      "sha256": "4c2ecf956373ca82841fbf594763f52a323f4acfab5fa64b874b87bb9d79d0cf",
+      "bytes": 45317,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/scripts/m2_contract.py"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/request-m2-3.json",
+      "sha256": "30cd6bba5c86fc52919246df246ca2fd82c3a7b931dd3e52faa840fbf5eb0b50",
+      "bytes": 6682,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/assets/request-m2-3.json"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/proposal-m2-3.json",
+      "sha256": "d84bab9f7ebc51870ad2048940f571052684b96d289860e3dd95f532085d0b2c",
+      "bytes": 10555,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/assets/proposal-m2-3.json"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/state-empty.json",
+      "sha256": "0dc4716b01f02536795f2ec4c86b4ca324779648a5b3ec5cb91cdc033961896a",
+      "bytes": 533,
+      "snapshot": "snapshot/docs/h3skill/h3-asset-reference/assets/state-empty.json"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "sha256": "c3726c8d92958ba60393b5f0b7c07b6ebd3c9f1152095e0f66423ab871c92695",
+      "bytes": 5248,
+      "snapshot": "snapshot/case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "sha256": "e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+      "bytes": 34220,
+      "snapshot": "snapshot/case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "sha256": "58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+      "bytes": 7390,
+      "snapshot": "snapshot/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "sha256": "5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "bytes": 101257,
+      "snapshot": "snapshot/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md"
+    }
+  ]
+}

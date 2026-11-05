@@ -1,0 +1,86 @@
+{
+  "kind": "M2FinalReviewRecord",
+  "recorded_utc": "2026-11-05T08:53:09.070116+00:00",
+  "scope": "Targeted text/contract review and executed deterministic regressions; not an exhaustive proof or media evaluation.",
+  "independent_review": {
+    "read": [
+      "SKILL.md",
+      "references/contract-guide.md",
+      "references/contracts.json",
+      "scripts/m2_contract.py"
+    ],
+    "additional_scope": "Relevant tests and frozen independent-input, ownership, version and audit requirements.",
+    "independently_confirmed_test_summary": false,
+    "reason": "The reviewing agent reported truncated test output and did not claim an observed independent pass.",
+    "unverified_suspicions_followed_up_by_root": [
+      "parent request projections",
+      "overlapping source windows"
+    ]
+  },
+  "findings": [
+    {
+      "id": "M2-REVIEW-01",
+      "issue": "Request source text could be redefined while preserving source_request_id and source ID.",
+      "status": "fixed_and_regression_tested",
+      "change": "Compare every original request source record; reject redefinition or omission.",
+      "tests": [
+        "test_source_authority_cannot_drift_while_request_id_stays_the_same",
+        "test_request_sources_are_preserved_but_new_evidence_can_be_added"
+      ]
+    },
+    {
+      "id": "M2-REVIEW-02",
+      "issue": "Reference permission and original-signal copy prohibition were incorrectly treated as the same use; a mixed-use decision could discard an independent prohibition.",
+      "status": "fixed_and_regression_tested",
+      "before_observed": {
+        "failed": true,
+        "diagnostic": "permission_conflict",
+        "scenario": "Same audio_content: reference allow + copy forbid."
+      },
+      "change": "Use-sensitive ordinary conflicts, competition and decision grouping; retain cross-attribute frame-anchor checks.",
+      "tests": [
+        "test_audio_words_reference_can_coexist_with_signal_copy_forbidden",
+        "test_audio_same_use_allow_and_forbid_still_conflict",
+        "test_different_audio_sources_with_different_uses_are_not_automatic_competitors",
+        "test_resolution_cannot_discard_distinct_use_permissions"
+      ]
+    },
+    {
+      "id": "M2-REVIEW-03",
+      "issue": "An exact window identity comparison missed a selected-content copy prohibition overlapping a narrower allowed source window.",
+      "status": "fixed_and_regression_tested",
+      "before_observed": {
+        "failed": false,
+        "scenario": "Whole selected source copy forbidden; seconds 1–2 of the same source copy allowed."
+      },
+      "change": "Separate source selection from source-time window intersection; absent window does not narrow the selected content.",
+      "tests": [
+        "test_source_wide_prohibition_applies_to_a_selected_subwindow",
+        "test_overlapping_source_windows_do_not_hide_same_use_contradiction",
+        "test_disjoint_or_adjacent_source_windows_are_not_a_copy_contradiction"
+      ]
+    },
+    {
+      "id": "M2-REVIEW-04",
+      "issue": "A full M2 request incorrectly required M2.1 to duplicate asset_context that it does not read.",
+      "status": "fixed_and_regression_tested",
+      "before_observed": {
+        "failed": true,
+        "diagnostic": "request_projection_mismatch",
+        "scenario": "Valid M2.1 proposal checked against complete M2 request carrying sibling asset context."
+      },
+      "change": "Compare only the specific child’s declared read-only projections, while preserving equality checks for genuine reads; document complete parent optional inputs.",
+      "tests": [
+        "test_parent_request_checks_only_each_childs_declared_read_projections"
+      ]
+    }
+  ],
+  "behavioral_test_report": "../../tests/m2/test-results.json",
+  "runtime_sha256": "8241bb99f396c51e5c56c8ff21bb7930b45b8b9f644ca51bdbca8fda2b2e255a",
+  "limitations": [
+    "Natural-language fidelity requires separate review.",
+    "Source declarations do not prove real authority or observation.",
+    "No source-media inspection or H3 inference was performed.",
+    "Unknown scope and unresolved semantic issues remain unverified; no global gate completion is asserted."
+  ]
+}

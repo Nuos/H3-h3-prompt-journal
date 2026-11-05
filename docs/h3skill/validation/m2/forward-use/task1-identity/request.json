@@ -1,0 +1,149 @@
+{
+  "kind": "M2Request",
+  "contract_version": "1.0.0",
+  "request_id": "REQ-TASK1-IDENTITY",
+  "target": "M2.3",
+  "work_id": "WORK-FORWARD-IDENTITY",
+  "base_version": 0,
+  "sources": {
+    "SRC-TASK": {
+      "kind": "user_requirement",
+      "locator": "current-task:forward-use/task-1",
+      "version": "2026-11-05",
+      "excerpt": "基于 identity-only-half-body-dance-six-segment 的 README.md 与 prompt.md，把当前双图用途整理为可直接独立调用 M2.3 的请求和提案，并给人可读权限表及 H3 模式/字段交接。只拿到了案例文字，图片/视频/音频没有提供；不改技能、案例、冻结计划，不调用模型/媒体服务或远程写入。"
+    },
+    "SRC-README": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "version": "sha256:c3726c8d92958ba60393b5f0b7c07b6ebd3c9f1152095e0f66423ab871c92695",
+      "excerpt": "# 019 · Identity-Only Half-Body Portrait Dance, Six Segments (111 BPM)\n\n![cover](./cover-saint-arms-open.png)\n\n- **Date:** 2026-10\n- **Format:** six self-contained segments, 111 BPM (beat 0.5405s / bar 2.1622s), total ≈ 73.4s\n- **Input contract:** `<Picture 1>` = face crop · `<Picture 2>` = full-body appearance + environment · `<Audio 1>` = music, reused 1:1 per segment\n- **Prompt:** see [prompt.md](./prompt.md)\n\n## The problem\n\nThe performer kept opening the video by **recreating the static pose of the reference image**. H3 treats reference images as holistic truth: whatever posture the woman has in the picture leaks into frame one, and the dance only starts after a frozen \"cosplay moment\" of the reference. Telling the model \"don't copy the pose\" inside a global rule block did not survive generation.\n\n## The breakthrough — split the two pictures down to the feature level, then demote the pose entirely\n\nInstead of one rule block, the authority split is **written into every segment as explicit grant/deny lists**:\n\n| Reference | Grants (preserve) | Denies (never copy) |\n|---|---|---|\n| `<Picture 1>` | facial identity, facial structure, eyes, brows, nose, mouth, jawline, skin, facial proportions | pose, body position, head angle, hands, arms, orientation, stance, composition — \"NOT a pose / body-position / choreography / opening-frame reference\" |\n| `<Picture 2>` | body proportions, body scale, clothing, accessories, hair, environment, architecture, lighting direction, exposure, spatial depth, photographic realism | its exact standing posture, its use as a choreography starting pose |\n\nAnd the subjective requirement \"the video should feel like Picture 1's half-body portrait\" is **demoted to camera/lens language only**: intimate close-up / bust / half-body / medium-close framing, a real handheld operator who may anticipate or lag, brief physical lowering for meaningful footwork. The sentence explicitly states it \"does not copy the pose, head angle, hand placement, body orientation, or composition of Picture 1\".\n\nThe killer sentence repeated in every segment: **\"Begin directly with the first choreographed movement specified below. Do not begin from either reference i"
+    },
+    "SRC-PROMPT": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "version": "sha256:e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+      "excerpt": "<Picture 1> is ONLY the facial identity reference for the performer.\n\nUse <Picture 1> only to preserve:\nfacial identity,\nfacial structure,\neyes,\neyebrows,\nnose,\nmouth,\njawline,\nskin appearance,\nand recognizable facial proportions.\n\n<Picture 1> is NOT a pose reference.\n<Picture 1> is NOT a body-position reference.\n<Picture 1> is NOT a choreography reference.\n<Picture 1> is NOT an opening-frame reference.\nDo not reproduce the head angle, hand position, arm position, body orientation, stance, or static composition of <Picture 1>.\n\n<Picture 2> is the full-body appearance and environment reference.\n\nUse <Picture 2> to preserve:\nbody proportions,\noverall body scale,\nclothing,\naccessories,\nhair as visible in the full-body reference,\nenvironment,\narchitecture,\nbackground,\nlighting direction,\nexposure,\nspatial depth,\nand realistic photographic appearance.\n\n<Picture 2> is NOT a choreography reference.\nDo not reproduce the exact standing posture shown in <Picture 2>.\nDo not begin the video by copying the static pose from <Picture 2>.\n\nThere is exactly one performer.\nNo duplicate performer, clone, additional person, or invented background figure.\n\n<Audio 1> is the exact audio for this segment and must be reused 1:1 as the final audio track.\n\nSegment duration: 11.033 seconds.\nTempo: 111 BPM.\nBeat: 0.5405 seconds.\nBar: 2.1622 seconds.\nPhrase: 4.3243 seconds.\n\nThis is ONE continuous dance performance from the first frame to the exact audio endpoint.\nThe dancer never stops for a camera change, Motion Cut, portrait shot, Hero Action shot, or framing change.\n\nBegin directly with the first choreographed movement specified below.\nDo not begin from either reference image's static pose."
+    },
+    "SRC-CAMERA": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "version": "sha256:e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+      "excerpt": "## CAMERA / LENS LANGUAGE\n\nUse intimate premium portrait photography inspired by the half-body photographic distance of <Picture 1>.\n\nThis is a CAMERA / LENS LANGUAGE instruction only.\nIt does not copy the pose, head angle, hand placement, body orientation, or composition of <Picture 1>.\n\nDefault framing:\nclose-up,\nbust,\nhalf-body,\nmedium-close.\n\nThe performer occupies most of the available resolution.\nPrioritize face, shoulders, torso, and hands.\n\nUse a real physically operated handheld camera.\nThe operator may subtly anticipate the dancer, slightly lag behind the movement, or hold briefly while the dancer moves into the frame.\nDo not mechanically track every limb.\n\nWhen meaningful footwork occurs, physically lower or retreat slightly to reveal the active feet for a brief moment, then immediately return to the intimate half-body relationship.\nDo not remain in a long full-body shot."
+    }
+  },
+  "inputs": {
+    "asset_context": {
+      "IMG-FACE": {
+        "media_type": "image",
+        "channels": [
+          "visual"
+        ],
+        "locator": {
+          "state": "unknown",
+          "reason": "实际媒体没有提供；案例中的标签或旧机器路径不等于可访问文件。"
+        },
+        "source_version": {
+          "state": "unknown",
+          "reason": "没有取得实际媒体，不能记录其版本或哈希。"
+        },
+        "description": "案例指称的 Picture 1：面部身份用途。没有看到实际图像。",
+        "availability": "pending",
+        "access_state": "not_checked",
+        "observation_state": "description_only",
+        "observation_refs": [],
+        "source_refs": [
+          "SRC-TASK",
+          "SRC-PROMPT"
+        ]
+      },
+      "IMG-BODY-SCENE": {
+        "media_type": "image",
+        "channels": [
+          "visual"
+        ],
+        "locator": {
+          "state": "unknown",
+          "reason": "实际媒体没有提供；案例中的标签或旧机器路径不等于可访问文件。"
+        },
+        "source_version": {
+          "state": "unknown",
+          "reason": "没有取得实际媒体，不能记录其版本或哈希。"
+        },
+        "description": "案例指称的 Picture 2：身体外观、服装、环境用途。没有看到实际图像。",
+        "availability": "pending",
+        "access_state": "not_checked",
+        "observation_state": "description_only",
+        "observation_refs": [],
+        "source_refs": [
+          "SRC-TASK",
+          "SRC-PROMPT"
+        ]
+      }
+    },
+    "entity_context": {
+      "entities": {
+        "PERFORMER": {
+          "kind": "person",
+          "description": "按文字要求绑定的唯一表演者；未核验跨图身份。",
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-PROMPT"
+          ]
+        },
+        "ENVIRONMENT": {
+          "kind": "scene",
+          "description": "文字指定由 Picture 2 提供的环境部分；空间实况未知。",
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-PROMPT"
+          ]
+        }
+      },
+      "bindings": {
+        "FACE": {
+          "entity_id": "PERFORMER",
+          "asset_id": "IMG-FACE",
+          "channel": "visual",
+          "source_selector": "文字指定的面部身份区域；实际区域未观察。",
+          "state": "confirmed",
+          "authority_refs": [
+            "SRC-TASK"
+          ],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-PROMPT"
+          ]
+        },
+        "BODY": {
+          "entity_id": "PERFORMER",
+          "asset_id": "IMG-BODY-SCENE",
+          "channel": "visual",
+          "source_selector": "文字指定的表演者身体、服装、饰品及发型区域。",
+          "state": "confirmed",
+          "authority_refs": [
+            "SRC-TASK"
+          ],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-PROMPT"
+          ]
+        },
+        "SCENE": {
+          "entity_id": "ENVIRONMENT",
+          "asset_id": "IMG-BODY-SCENE",
+          "channel": "visual",
+          "source_selector": "文字指定的环境、建筑、背景区域，排除人物姿态。",
+          "state": "confirmed",
+          "authority_refs": [
+            "SRC-TASK"
+          ],
+          "source_refs": [
+            "SRC-TASK",
+            "SRC-PROMPT"
+          ]
+        }
+      }
+    },
+    "permission_brief": "独立运行 M2.3：输入已包含文字依据下的素材/实体上下文；以面部身份、身体服装、环境分权，排除两图姿态/编舞/静态首帧。半身机位按文字交 M5。音乐仅作为范围外的待补交接，不因本提案登记图片而视为取得音频。"
+  }
+}

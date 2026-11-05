@@ -1,0 +1,174 @@
+{
+  "kind": "M2ReleaseIntegrityCheck",
+  "recorded_at": "2026-11-05T08:56:49.975345+00:00",
+  "repository_base": "faa8edc311589d68d37e93524c7cb8e553fff857",
+  "skill_entry_sha256": "0515fd25fa248430f553e5cce8ff54c448ed4ef1aaf8d430a4452372a81abd6b",
+  "passed": true,
+  "checks": [
+    {
+      "check": "minimal_name_description_frontmatter",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entry_below_recommended_500_lines",
+      "passed": true,
+      "detail": 94
+    },
+    {
+      "check": "only_required_runtime_roots",
+      "passed": true,
+      "detail": [
+        "SKILL.md",
+        "assets",
+        "references",
+        "scripts"
+      ]
+    },
+    {
+      "check": "runtime_links_exist",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "no_sibling_runtime_links",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "every_reference_discoverable_from_entry",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "json_python_parse",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "four_public_nodes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "route_resources_available",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "frozen_plan_and_controls_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "m1_runtime_byte_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "case_inventory_29_cases_98_texts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "case_texts_match_pinned_hashes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "case_media_not_claimed_observed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "exact_official_snapshot_h3-base-official.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "exact_official_snapshot_h3-ref-official.txt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "official_standard_snapshot_hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tested_m2_runtime_and_examples_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "m2_behavioral_tests_no_failures",
+      "passed": true,
+      "detail": {
+        "tests_run": 61,
+        "passed": 60,
+        "skipped": [
+          {
+            "test": "test_schema_and_named_shape_checks_agree_on_public_examples (test_m2_contract.M2BehaviorTests.test_schema_and_named_shape_checks_agree_on_public_examples)",
+            "reason": "Optional development-only jsonschema is unavailable."
+          }
+        ]
+      }
+    },
+    {
+      "check": "forward_use_recorded_snapshots_match",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "forward_use_final_executable_resources_match_release",
+      "passed": true,
+      "detail": [
+        "scripts/m2_contract.py",
+        "references/contracts.json",
+        "references/module-registry.json"
+      ]
+    },
+    {
+      "check": "forward_use_13_logged_calls_preserve_inputs_and_outcomes",
+      "passed": true,
+      "detail": {
+        "calls": 13,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "anthropic_official_quick_validate",
+      "passed": true,
+      "detail": {
+        "exit_code": 0,
+        "stdout": "Skill is valid!\n",
+        "stderr": ""
+      }
+    },
+    {
+      "check": "isolated_directory_acceptance",
+      "passed": true,
+      "detail": {
+        "exit_code": 0,
+        "outcome": "accepted_draft",
+        "stderr": ""
+      }
+    },
+    {
+      "check": "portable_result_does_not_certify_media",
+      "passed": true,
+      "detail": {
+        "deterministic": "pass",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "unverified"
+      }
+    },
+    {
+      "check": "m2_release_manifest_matches_files",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "scope_limit": "Structure, integrity and isolated deterministic execution only; semantic/media require separate evidence."
+}

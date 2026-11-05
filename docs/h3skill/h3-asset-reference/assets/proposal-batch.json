@@ -1,0 +1,652 @@
+{
+  "kind": "M2ProposalBatch",
+  "contract_version": "1.0.0",
+  "proposals": [
+    {
+      "kind": "M2Proposal",
+      "contract_version": "1.0.0",
+      "proposal_id": "PROP-IDENTITY-M2-1",
+      "module_id": "M2.1",
+      "work_id": "WORK-IDENTITY-DEMO",
+      "base_version": 0,
+      "source_request_id": "REQ-IDENTITY-M2-1",
+      "sources": {
+        "SRC-CASE-019": {
+          "kind": "case_text",
+          "locator": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md#the-breakthrough--split-the-two-pictures-down-to-the-feature-level-then-demote-the-pose-entirely",
+          "version": "faa8edc311589d68d37e93524c7cb8e553fff857",
+          "excerpt": "Picture 1 分配面部身份；Picture 2 分配体型、服饰和环境；两图的静态姿势不作为编舞起点；Audio 1 按段复用。这里仅使用案例文字，不声称查看媒体。"
+        },
+        "SRC-EXAMPLE-REQUEST": {
+          "kind": "user_requirement",
+          "locator": "controlled-example:identity-reference-request",
+          "version": "0.1.0",
+          "excerpt": "受控文字示例任务：按 CASE-019 的参考分权登记素材和用途；尚未提供实际图像或音频。该示例授权只对 WORK-IDENTITY-DEMO 有效，不是用户新项目的授权。"
+        },
+        "SRC-DESIGN": {
+          "kind": "design_decision",
+          "locator": "controlled-example:m2-contract-projection",
+          "version": "0.1.0",
+          "excerpt": "本实现将案例文字转为稳定 ID、源选择、按属性权限和三子模块提案；这些结构与名字是 D 类工程细化，不是案例原始输出。"
+        }
+      },
+      "context": {},
+      "changes": {
+        "asset_registry": {
+          "ASSET-FACE": {
+            "media_type": "image",
+            "channels": [
+              "visual"
+            ],
+            "locator": {
+              "state": "unknown",
+              "reason": "受控示例未提供实际媒体。"
+            },
+            "source_version": {
+              "state": "unknown",
+              "reason": "文件尚未取得，无法记录具体媒体版本。"
+            },
+            "description": "案例文字中的面部身份参考图，实际文件待提供。",
+            "availability": "pending",
+            "access_state": "not_checked",
+            "observation_state": "description_only",
+            "observation_refs": [
+              "SRC-CASE-019"
+            ],
+            "source_refs": [
+              "SRC-CASE-019",
+              "SRC-EXAMPLE-REQUEST"
+            ]
+          },
+          "ASSET-BODY-SCENE": {
+            "media_type": "image",
+            "channels": [
+              "visual"
+            ],
+            "locator": {
+              "state": "unknown",
+              "reason": "受控示例未提供实际媒体。"
+            },
+            "source_version": {
+              "state": "unknown",
+              "reason": "文件尚未取得，无法记录具体媒体版本。"
+            },
+            "description": "案例文字中的全身体型、服饰与环境参考图，实际文件待提供。",
+            "availability": "pending",
+            "access_state": "not_checked",
+            "observation_state": "description_only",
+            "observation_refs": [
+              "SRC-CASE-019"
+            ],
+            "source_refs": [
+              "SRC-CASE-019",
+              "SRC-EXAMPLE-REQUEST"
+            ]
+          },
+          "ASSET-MUSIC": {
+            "media_type": "audio",
+            "channels": [
+              "audio"
+            ],
+            "locator": {
+              "state": "unknown",
+              "reason": "受控示例未提供实际媒体。"
+            },
+            "source_version": {
+              "state": "unknown",
+              "reason": "文件尚未取得，无法记录具体媒体版本。"
+            },
+            "description": "案例文字中的音乐输入，实际音频及各任务源区间待提供。",
+            "availability": "pending",
+            "access_state": "not_checked",
+            "observation_state": "description_only",
+            "observation_refs": [
+              "SRC-CASE-019"
+            ],
+            "source_refs": [
+              "SRC-CASE-019",
+              "SRC-EXAMPLE-REQUEST"
+            ]
+          }
+        }
+      },
+      "issues": [],
+      "resolutions": []
+    },
+    {
+      "kind": "M2Proposal",
+      "contract_version": "1.0.0",
+      "proposal_id": "PROP-IDENTITY-M2-2",
+      "module_id": "M2.2",
+      "work_id": "WORK-IDENTITY-DEMO",
+      "base_version": 0,
+      "source_request_id": "REQ-IDENTITY-M2-2",
+      "sources": {
+        "SRC-CASE-019": {
+          "kind": "case_text",
+          "locator": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md#the-breakthrough--split-the-two-pictures-down-to-the-feature-level-then-demote-the-pose-entirely",
+          "version": "faa8edc311589d68d37e93524c7cb8e553fff857",
+          "excerpt": "Picture 1 分配面部身份；Picture 2 分配体型、服饰和环境；两图的静态姿势不作为编舞起点；Audio 1 按段复用。这里仅使用案例文字，不声称查看媒体。"
+        },
+        "SRC-EXAMPLE-REQUEST": {
+          "kind": "user_requirement",
+          "locator": "controlled-example:identity-reference-request",
+          "version": "0.1.0",
+          "excerpt": "受控文字示例任务：按 CASE-019 的参考分权登记素材和用途；尚未提供实际图像或音频。该示例授权只对 WORK-IDENTITY-DEMO 有效，不是用户新项目的授权。"
+        },
+        "SRC-DESIGN": {
+          "kind": "design_decision",
+          "locator": "controlled-example:m2-contract-projection",
+          "version": "0.1.0",
+          "excerpt": "本实现将案例文字转为稳定 ID、源选择、按属性权限和三子模块提案；这些结构与名字是 D 类工程细化，不是案例原始输出。"
+        }
+      },
+      "context": {
+        "asset_registry": {
+          "ASSET-FACE": {
+            "media_type": "image",
+            "channels": [
+              "visual"
+            ],
+            "locator": {
+              "state": "unknown",
+              "reason": "受控示例未提供实际媒体。"
+            },
+            "source_version": {
+              "state": "unknown",
+              "reason": "文件尚未取得，无法记录具体媒体版本。"
+            },
+            "description": "案例文字中的面部身份参考图，实际文件待提供。",
+            "availability": "pending",
+            "access_state": "not_checked",
+            "observation_state": "description_only",
+            "observation_refs": [
+              "SRC-CASE-019"
+            ],
+            "source_refs": [
+              "SRC-CASE-019",
+              "SRC-EXAMPLE-REQUEST"
+            ]
+          },
+          "ASSET-BODY-SCENE": {
+            "media_type": "image",
+            "channels": [
+              "visual"
+            ],
+            "locator": {
+              "state": "unknown",
+              "reason": "受控示例未提供实际媒体。"
+            },
+            "source_version": {
+              "state": "unknown",
+              "reason": "文件尚未取得，无法记录具体媒体版本。"
+            },
+            "description": "案例文字中的全身体型、服饰与环境参考图，实际文件待提供。",
+            "availability": "pending",
+            "access_state": "not_checked",
+            "observation_state": "description_only",
+            "observation_refs": [
+              "SRC-CASE-019"
+            ],
+            "source_refs": [
+              "SRC-CASE-019",
+              "SRC-EXAMPLE-REQUEST"
+            ]
+          },
+          "ASSET-MUSIC": {
+            "media_type": "audio",
+            "channels": [
+              "audio"
+            ],
+            "locator": {
+              "state": "unknown",
+              "reason": "受控示例未提供实际媒体。"
+            },
+            "source_version": {
+              "state": "unknown",
+              "reason": "文件尚未取得，无法记录具体媒体版本。"
+            },
+            "description": "案例文字中的音乐输入，实际音频及各任务源区间待提供。",
+            "availability": "pending",
+            "access_state": "not_checked",
+            "observation_state": "description_only",
+            "observation_refs": [
+              "SRC-CASE-019"
+            ],
+            "source_refs": [
+              "SRC-CASE-019",
+              "SRC-EXAMPLE-REQUEST"
+            ]
+          }
+        }
+      },
+      "changes": {
+        "entity_registry": {
+          "entities": {
+            "ENTITY-PERFORMER": {
+              "kind": "person",
+              "description": "本示例目标表演者；身份来自待提供的面部参考，身体与服饰来自另图。",
+              "source_refs": [
+                "SRC-EXAMPLE-REQUEST",
+                "SRC-CASE-019"
+              ]
+            },
+            "ENTITY-SCENE": {
+              "kind": "scene",
+              "description": "全身参考图中所指的场景内容；实际空间几何未观察。",
+              "source_refs": [
+                "SRC-CASE-019"
+              ]
+            },
+            "ENTITY-MUSIC": {
+              "kind": "soundtrack",
+              "description": "本示例指定音乐内容，不自动绑定为人物音色。",
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ]
+            }
+          },
+          "bindings": {
+            "BIND-FACE": {
+              "entity_id": "ENTITY-PERFORMER",
+              "asset_id": "ASSET-FACE",
+              "channel": "visual",
+              "source_selector": "计划面部裁剪图中的唯一指定表演者；这是源内容选择，不是目标机位。",
+              "state": "confirmed",
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ]
+            },
+            "BIND-BODY": {
+              "entity_id": "ENTITY-PERFORMER",
+              "asset_id": "ASSET-BODY-SCENE",
+              "channel": "visual",
+              "source_selector": "计划全身图中指定表演者的体型与服饰部分。",
+              "state": "confirmed",
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ]
+            },
+            "BIND-SCENE": {
+              "entity_id": "ENTITY-SCENE",
+              "asset_id": "ASSET-BODY-SCENE",
+              "channel": "visual",
+              "source_selector": "计划全身图中的环境与建筑部分，不含表演者姿态。",
+              "state": "confirmed",
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ]
+            },
+            "BIND-MUSIC": {
+              "entity_id": "ENTITY-MUSIC",
+              "asset_id": "ASSET-MUSIC",
+              "channel": "audio",
+              "source_selector": "待提供的独立音乐输入；具体源窗口需在真实任务中填写。",
+              "state": "confirmed",
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ]
+            }
+          }
+        }
+      },
+      "issues": [],
+      "resolutions": []
+    },
+    {
+      "kind": "M2Proposal",
+      "contract_version": "1.0.0",
+      "proposal_id": "PROP-IDENTITY-M2-3",
+      "module_id": "M2.3",
+      "work_id": "WORK-IDENTITY-DEMO",
+      "base_version": 0,
+      "source_request_id": "REQ-IDENTITY-M2-3",
+      "sources": {
+        "SRC-CASE-019": {
+          "kind": "case_text",
+          "locator": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md#the-breakthrough--split-the-two-pictures-down-to-the-feature-level-then-demote-the-pose-entirely",
+          "version": "faa8edc311589d68d37e93524c7cb8e553fff857",
+          "excerpt": "Picture 1 分配面部身份；Picture 2 分配体型、服饰和环境；两图的静态姿势不作为编舞起点；Audio 1 按段复用。这里仅使用案例文字，不声称查看媒体。"
+        },
+        "SRC-EXAMPLE-REQUEST": {
+          "kind": "user_requirement",
+          "locator": "controlled-example:identity-reference-request",
+          "version": "0.1.0",
+          "excerpt": "受控文字示例任务：按 CASE-019 的参考分权登记素材和用途；尚未提供实际图像或音频。该示例授权只对 WORK-IDENTITY-DEMO 有效，不是用户新项目的授权。"
+        },
+        "SRC-DESIGN": {
+          "kind": "design_decision",
+          "locator": "controlled-example:m2-contract-projection",
+          "version": "0.1.0",
+          "excerpt": "本实现将案例文字转为稳定 ID、源选择、按属性权限和三子模块提案；这些结构与名字是 D 类工程细化，不是案例原始输出。"
+        }
+      },
+      "context": {
+        "asset_registry": {
+          "ASSET-FACE": {
+            "media_type": "image",
+            "channels": [
+              "visual"
+            ],
+            "locator": {
+              "state": "unknown",
+              "reason": "受控示例未提供实际媒体。"
+            },
+            "source_version": {
+              "state": "unknown",
+              "reason": "文件尚未取得，无法记录具体媒体版本。"
+            },
+            "description": "案例文字中的面部身份参考图，实际文件待提供。",
+            "availability": "pending",
+            "access_state": "not_checked",
+            "observation_state": "description_only",
+            "observation_refs": [
+              "SRC-CASE-019"
+            ],
+            "source_refs": [
+              "SRC-CASE-019",
+              "SRC-EXAMPLE-REQUEST"
+            ]
+          },
+          "ASSET-BODY-SCENE": {
+            "media_type": "image",
+            "channels": [
+              "visual"
+            ],
+            "locator": {
+              "state": "unknown",
+              "reason": "受控示例未提供实际媒体。"
+            },
+            "source_version": {
+              "state": "unknown",
+              "reason": "文件尚未取得，无法记录具体媒体版本。"
+            },
+            "description": "案例文字中的全身体型、服饰与环境参考图，实际文件待提供。",
+            "availability": "pending",
+            "access_state": "not_checked",
+            "observation_state": "description_only",
+            "observation_refs": [
+              "SRC-CASE-019"
+            ],
+            "source_refs": [
+              "SRC-CASE-019",
+              "SRC-EXAMPLE-REQUEST"
+            ]
+          },
+          "ASSET-MUSIC": {
+            "media_type": "audio",
+            "channels": [
+              "audio"
+            ],
+            "locator": {
+              "state": "unknown",
+              "reason": "受控示例未提供实际媒体。"
+            },
+            "source_version": {
+              "state": "unknown",
+              "reason": "文件尚未取得，无法记录具体媒体版本。"
+            },
+            "description": "案例文字中的音乐输入，实际音频及各任务源区间待提供。",
+            "availability": "pending",
+            "access_state": "not_checked",
+            "observation_state": "description_only",
+            "observation_refs": [
+              "SRC-CASE-019"
+            ],
+            "source_refs": [
+              "SRC-CASE-019",
+              "SRC-EXAMPLE-REQUEST"
+            ]
+          }
+        },
+        "entity_registry": {
+          "entities": {
+            "ENTITY-PERFORMER": {
+              "kind": "person",
+              "description": "本示例目标表演者；身份来自待提供的面部参考，身体与服饰来自另图。",
+              "source_refs": [
+                "SRC-EXAMPLE-REQUEST",
+                "SRC-CASE-019"
+              ]
+            },
+            "ENTITY-SCENE": {
+              "kind": "scene",
+              "description": "全身参考图中所指的场景内容；实际空间几何未观察。",
+              "source_refs": [
+                "SRC-CASE-019"
+              ]
+            },
+            "ENTITY-MUSIC": {
+              "kind": "soundtrack",
+              "description": "本示例指定音乐内容，不自动绑定为人物音色。",
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ]
+            }
+          },
+          "bindings": {
+            "BIND-FACE": {
+              "entity_id": "ENTITY-PERFORMER",
+              "asset_id": "ASSET-FACE",
+              "channel": "visual",
+              "source_selector": "计划面部裁剪图中的唯一指定表演者；这是源内容选择，不是目标机位。",
+              "state": "confirmed",
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ]
+            },
+            "BIND-BODY": {
+              "entity_id": "ENTITY-PERFORMER",
+              "asset_id": "ASSET-BODY-SCENE",
+              "channel": "visual",
+              "source_selector": "计划全身图中指定表演者的体型与服饰部分。",
+              "state": "confirmed",
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ]
+            },
+            "BIND-SCENE": {
+              "entity_id": "ENTITY-SCENE",
+              "asset_id": "ASSET-BODY-SCENE",
+              "channel": "visual",
+              "source_selector": "计划全身图中的环境与建筑部分，不含表演者姿态。",
+              "state": "confirmed",
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ]
+            },
+            "BIND-MUSIC": {
+              "entity_id": "ENTITY-MUSIC",
+              "asset_id": "ASSET-MUSIC",
+              "channel": "audio",
+              "source_selector": "待提供的独立音乐输入；具体源窗口需在真实任务中填写。",
+              "state": "confirmed",
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ]
+            }
+          }
+        }
+      },
+      "changes": {
+        "reference_map": {
+          "permissions": {
+            "PERM-FACE-ID": {
+              "binding_id": "BIND-FACE",
+              "attribute": "identity",
+              "decision": "allow",
+              "use": "reference",
+              "scope": {
+                "kind": "work"
+              },
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "reason": "仅借用面部身份。"
+            },
+            "PERM-FACE-POSE": {
+              "binding_id": "BIND-FACE",
+              "attribute": "pose",
+              "decision": "forbid",
+              "use": "reference",
+              "scope": {
+                "kind": "work"
+              },
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "reason": "面部图不决定开场姿态或手部位置。"
+            },
+            "PERM-FACE-FIRST": {
+              "binding_id": "BIND-FACE",
+              "attribute": "first_frame",
+              "decision": "forbid",
+              "use": "anchor",
+              "scope": {
+                "kind": "work"
+              },
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "reason": "身份图未被指定为实际首帧锚图。"
+            },
+            "PERM-BODY-LOOK": {
+              "binding_id": "BIND-BODY",
+              "attribute": "appearance",
+              "decision": "allow",
+              "use": "reference",
+              "scope": {
+                "kind": "work"
+              },
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "reason": "体型与身体比例来自全身图。"
+            },
+            "PERM-BODY-CLOTHES": {
+              "binding_id": "BIND-BODY",
+              "attribute": "clothing",
+              "decision": "allow",
+              "use": "reference",
+              "scope": {
+                "kind": "work"
+              },
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "reason": "服装与配饰来自全身图。"
+            },
+            "PERM-BODY-POSE": {
+              "binding_id": "BIND-BODY",
+              "attribute": "pose",
+              "decision": "forbid",
+              "use": "reference",
+              "scope": {
+                "kind": "work"
+              },
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "reason": "不复制该图静止站姿；新动作归 M4。"
+            },
+            "PERM-SCENE": {
+              "binding_id": "BIND-SCENE",
+              "attribute": "scene",
+              "decision": "allow",
+              "use": "reference",
+              "scope": {
+                "kind": "work"
+              },
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "reason": "场景用途来自明确授权，不因此编造空间测量。"
+            },
+            "PERM-MUSIC": {
+              "binding_id": "BIND-MUSIC",
+              "attribute": "audio_content",
+              "decision": "allow",
+              "use": "copy",
+              "scope": {
+                "kind": "work"
+              },
+              "authority_refs": [
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "source_refs": [
+                "SRC-CASE-019",
+                "SRC-EXAMPLE-REQUEST"
+              ],
+              "reason": "只记录逐段音乐复制的语义，真实源音频与范围待 M6/M7/M11 核对。"
+            }
+          },
+          "decisions": {}
+        }
+      },
+      "issues": [],
+      "resolutions": []
+    }
+  ]
+}

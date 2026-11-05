@@ -1,0 +1,19 @@
+{
+  "kind": "M1M2ContractHandoff",
+  "m1_exit_code": 0,
+  "m2_exit_code": 0,
+  "m1_contract_version": "1.0.0",
+  "m1_work_version": 1,
+  "m2_target": "M2.1",
+  "input_files": {
+    "m1_script_sha256": "4ec812dfbd7e1d7f4c0a3acd240c76126f541fb8697dfee2808c4e71668f9e1e",
+    "m2_script_sha256": "4c2ecf956373ca82841fbf594763f52a323f4acfab5fa64b874b87bb9d79d0cf"
+  },
+  "commands": [
+    "python h3-work-intent/scripts/m1_contract.py accept h3-work-intent/assets/workbrief-empty.json h3-work-intent/assets/proposal-m1-1.json",
+    "python h3-asset-reference/scripts/m2_contract.py route validation/m2/m1-handoff/request-m2-1.json"
+  ],
+  "scope": "Actual M1 draft acceptance followed by an explicit, caller-created public projection into M2.1 routing. Domain/media not executed; neither script auto-invokes the other.",
+  "semantic": "unverified",
+  "media": "unverified"
+}

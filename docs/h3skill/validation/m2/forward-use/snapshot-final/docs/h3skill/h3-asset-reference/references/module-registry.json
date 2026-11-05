@@ -1,0 +1,368 @@
+{
+  "kind": "M2ModuleRegistry",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "plan_baseline": "skillplan-v0.1.2-608813b",
+  "implementation_basis": "D: repository implementation of the frozen architecture; no claim that case authors implemented this machinery.",
+  "parent_child_policy": "child_proposal_parent_acceptance",
+  "nodes": {
+    "M2": {
+      "id": "M2",
+      "parent_id": null,
+      "name": "素材解析、资产绑定与参考权限",
+      "call_scope": "public",
+      "contract_version": "1.0.0",
+      "implementation_status": "implemented_text_and_deterministic_scope",
+      "responsibility": "接受子模块提案，保持三对象一致版本和唯一权威写入路径；不重写专业决定。",
+      "owned_partitions": [
+        "asset_registry",
+        "entity_registry",
+        "reference_map"
+      ],
+      "authority": "parent_acceptance",
+      "not_owned": [
+        "WorkBrief",
+        "SpatialPlan",
+        "ActionPlan",
+        "CameraPlan",
+        "SoundPlan",
+        "TimingMap",
+        "StateLedger",
+        "ShotEditGenerationPlan",
+        "LookPlan",
+        "H3 labels and request serialization",
+        "actual generated-media observation"
+      ],
+      "minimum_input": [
+        "material_brief"
+      ],
+      "optional_inputs": [
+        "intent_context",
+        "capability_context"
+      ],
+      "read_only": [
+        "M2Request.inputs",
+        "M2Request.sources",
+        "M2Request.work_id",
+        "M2Request.base_version",
+        "explicit candidate/current-state projections"
+      ],
+      "input_mapping": {
+        "material_brief": "M2Request.inputs.material_brief"
+      },
+      "unknown_policy": "Explicit unknown remains unverified; absent input has a diagnostic; no silent global-scope or inheritance default.",
+      "route_id": "route-m2",
+      "route_version": "1.0.0",
+      "entrypoint": "python scripts/m2_contract.py route REQUEST.json",
+      "trigger": "Agent has identified the stated asset/binding/permission task and explicit target; CLI does not classify natural language.",
+      "preconditions": "Required projection keys and compatible contract/source versions are supplied; missing media may remain pending.",
+      "resources": [
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/audit-and-handoff.md"
+      ],
+      "output": "M2State after parent acceptance",
+      "return_to": "caller_or_G0_M2_scope",
+      "failure_routes": {
+        "missing_input": "user_or_calling_module",
+        "incompatible_contract": "caller",
+        "asset_or_observation": "M2.1",
+        "identity_or_selector": "M2.2",
+        "rights_or_conflict": "M2.3",
+        "timeline_mapping": "M7/M9",
+        "backend_mode_or_labels": "M11",
+        "target_intent": "M1_or_user"
+      },
+      "repair": "Return explicit object, base version, evidence, expected correction and recheck scope to the owning node.",
+      "effect": "read_only_calculation_and_returned_draft; no in-place file mutation, media generation, network or uploads",
+      "retry": "Read-only computation is repeatable; semantic changes need a new version; accepted proposal IDs prevent blind repeat acceptance.",
+      "required_dependencies": [
+        "Bundled contracts.json",
+        "Bundled module-registry.json",
+        "Python 3.10+ standard library for CLI"
+      ],
+      "optional_dependencies": [
+        "Caller-provided compatible M1 WorkBrief text projection",
+        "Versioned M11 CapabilityProfile excerpt",
+        "Actual media/observations supplied by authorized caller"
+      ],
+      "compatibility": "Exact public contract 1.0.0; breaking changes require a new version and migration.",
+      "checks": [
+        "shape and provenance references",
+        "unique field ownership and source identity",
+        "explicit scopes and channel semantics",
+        "dependency/base version",
+        "semantic and media remain unverified"
+      ],
+      "evidence": "Development tests are outside this runtime directory; execution records accompany each CLI output."
+    },
+    "M2.1": {
+      "id": "M2.1",
+      "parent_id": "M2",
+      "name": "资产登记与来源状态",
+      "call_scope": "public",
+      "contract_version": "1.0.0",
+      "implementation_status": "implemented_text_and_deterministic_scope",
+      "responsibility": "登记实际/待提供资产、来源、可访问性和观察记录，不执行未实现的完整源片逆向。",
+      "owned_partitions": [
+        "asset_registry"
+      ],
+      "authority": "proposal_only",
+      "not_owned": [
+        "WorkBrief",
+        "SpatialPlan",
+        "ActionPlan",
+        "CameraPlan",
+        "SoundPlan",
+        "TimingMap",
+        "StateLedger",
+        "ShotEditGenerationPlan",
+        "LookPlan",
+        "H3 labels and request serialization",
+        "actual generated-media observation"
+      ],
+      "minimum_input": [
+        "material_brief"
+      ],
+      "optional_inputs": [
+        "intent_context",
+        "capability_context"
+      ],
+      "read_only": [
+        "M2Request.inputs",
+        "M2Request.sources",
+        "M2Request.work_id",
+        "M2Request.base_version",
+        "explicit candidate/current-state projections"
+      ],
+      "input_mapping": {
+        "material_brief": "M2Request.inputs.material_brief"
+      },
+      "unknown_policy": "Explicit unknown remains unverified; absent input has a diagnostic; no silent global-scope or inheritance default.",
+      "route_id": "route-m2-1",
+      "route_version": "1.0.0",
+      "entrypoint": "python scripts/m2_contract.py route REQUEST.json",
+      "trigger": "Agent has identified the stated asset/binding/permission task and explicit target; CLI does not classify natural language.",
+      "preconditions": "Required projection keys and compatible contract/source versions are supplied; missing media may remain pending.",
+      "resources": [
+        "references/contract-guide.md",
+        "references/asset-registration.md"
+      ],
+      "output": "M2Proposal",
+      "return_to": "M2.accept_or_independent_caller",
+      "failure_routes": {
+        "missing_input": "user_or_calling_module",
+        "incompatible_contract": "caller",
+        "asset_or_observation": "M2.1",
+        "identity_or_selector": "M2.2",
+        "rights_or_conflict": "M2.3",
+        "timeline_mapping": "M7/M9",
+        "backend_mode_or_labels": "M11",
+        "target_intent": "M1_or_user"
+      },
+      "repair": "Return explicit object, base version, evidence, expected correction and recheck scope to the owning node.",
+      "effect": "read_only_calculation_and_returned_draft; no in-place file mutation, media generation, network or uploads",
+      "retry": "Read-only computation is repeatable; semantic changes need a new version; accepted proposal IDs prevent blind repeat acceptance.",
+      "required_dependencies": [
+        "Bundled contracts.json",
+        "Bundled module-registry.json",
+        "Python 3.10+ standard library for CLI"
+      ],
+      "optional_dependencies": [
+        "Caller-provided compatible M1 WorkBrief text projection",
+        "Versioned M11 CapabilityProfile excerpt",
+        "Actual media/observations supplied by authorized caller"
+      ],
+      "compatibility": "Exact public contract 1.0.0; breaking changes require a new version and migration.",
+      "checks": [
+        "shape and provenance references",
+        "unique field ownership and source identity",
+        "explicit scopes and channel semantics",
+        "dependency/base version",
+        "semantic and media remain unverified"
+      ],
+      "evidence": "Development tests are outside this runtime directory; execution records accompany each CLI output."
+    },
+    "M2.2": {
+      "id": "M2.2",
+      "parent_id": "M2",
+      "name": "主体身份与资产绑定",
+      "call_scope": "public",
+      "contract_version": "1.0.0",
+      "implementation_status": "implemented_text_and_deterministic_scope",
+      "responsibility": "为人物、道具、场景、动作、风格和声音等内容建立稳定实体及显式源选择；不生成后端编号。",
+      "owned_partitions": [
+        "entity_registry"
+      ],
+      "authority": "proposal_only",
+      "not_owned": [
+        "WorkBrief",
+        "SpatialPlan",
+        "ActionPlan",
+        "CameraPlan",
+        "SoundPlan",
+        "TimingMap",
+        "StateLedger",
+        "ShotEditGenerationPlan",
+        "LookPlan",
+        "H3 labels and request serialization",
+        "actual generated-media observation"
+      ],
+      "minimum_input": [
+        "asset_context",
+        "binding_brief"
+      ],
+      "optional_inputs": [
+        "intent_context",
+        "capability_context"
+      ],
+      "read_only": [
+        "M2Request.inputs",
+        "M2Request.sources",
+        "M2Request.work_id",
+        "M2Request.base_version",
+        "explicit candidate/current-state projections"
+      ],
+      "input_mapping": {
+        "asset_context": "M2Request.inputs.asset_context",
+        "binding_brief": "M2Request.inputs.binding_brief"
+      },
+      "unknown_policy": "Explicit unknown remains unverified; absent input has a diagnostic; no silent global-scope or inheritance default.",
+      "route_id": "route-m2-2",
+      "route_version": "1.0.0",
+      "entrypoint": "python scripts/m2_contract.py route REQUEST.json",
+      "trigger": "Agent has identified the stated asset/binding/permission task and explicit target; CLI does not classify natural language.",
+      "preconditions": "Required projection keys and compatible contract/source versions are supplied; missing media may remain pending.",
+      "resources": [
+        "references/contract-guide.md",
+        "references/entity-binding.md"
+      ],
+      "output": "M2Proposal",
+      "return_to": "M2.accept_or_independent_caller",
+      "failure_routes": {
+        "missing_input": "user_or_calling_module",
+        "incompatible_contract": "caller",
+        "asset_or_observation": "M2.1",
+        "identity_or_selector": "M2.2",
+        "rights_or_conflict": "M2.3",
+        "timeline_mapping": "M7/M9",
+        "backend_mode_or_labels": "M11",
+        "target_intent": "M1_or_user"
+      },
+      "repair": "Return explicit object, base version, evidence, expected correction and recheck scope to the owning node.",
+      "effect": "read_only_calculation_and_returned_draft; no in-place file mutation, media generation, network or uploads",
+      "retry": "Read-only computation is repeatable; semantic changes need a new version; accepted proposal IDs prevent blind repeat acceptance.",
+      "required_dependencies": [
+        "Bundled contracts.json",
+        "Bundled module-registry.json",
+        "Python 3.10+ standard library for CLI"
+      ],
+      "optional_dependencies": [
+        "Caller-provided compatible M1 WorkBrief text projection",
+        "Versioned M11 CapabilityProfile excerpt",
+        "Actual media/observations supplied by authorized caller"
+      ],
+      "compatibility": "Exact public contract 1.0.0; breaking changes require a new version and migration.",
+      "checks": [
+        "shape and provenance references",
+        "unique field ownership and source identity",
+        "explicit scopes and channel semantics",
+        "dependency/base version",
+        "semantic and media remain unverified"
+      ],
+      "evidence": "Development tests are outside this runtime directory; execution records accompany each CLI output."
+    },
+    "M2.3": {
+      "id": "M2.3",
+      "parent_id": "M2",
+      "name": "属性权限与引用范围",
+      "call_scope": "public",
+      "contract_version": "1.0.0",
+      "implementation_status": "implemented_text_and_deterministic_scope",
+      "responsibility": "为具体源选择、目标实体和属性分配允许/禁止/未定权限，确定生效范围及冲突决定。",
+      "owned_partitions": [
+        "reference_map"
+      ],
+      "authority": "proposal_only",
+      "not_owned": [
+        "WorkBrief",
+        "SpatialPlan",
+        "ActionPlan",
+        "CameraPlan",
+        "SoundPlan",
+        "TimingMap",
+        "StateLedger",
+        "ShotEditGenerationPlan",
+        "LookPlan",
+        "H3 labels and request serialization",
+        "actual generated-media observation"
+      ],
+      "minimum_input": [
+        "asset_context",
+        "entity_context",
+        "permission_brief"
+      ],
+      "optional_inputs": [
+        "intent_context",
+        "capability_context"
+      ],
+      "read_only": [
+        "M2Request.inputs",
+        "M2Request.sources",
+        "M2Request.work_id",
+        "M2Request.base_version",
+        "explicit candidate/current-state projections"
+      ],
+      "input_mapping": {
+        "asset_context": "M2Request.inputs.asset_context",
+        "entity_context": "M2Request.inputs.entity_context",
+        "permission_brief": "M2Request.inputs.permission_brief"
+      },
+      "unknown_policy": "Explicit unknown remains unverified; absent input has a diagnostic; no silent global-scope or inheritance default.",
+      "route_id": "route-m2-3",
+      "route_version": "1.0.0",
+      "entrypoint": "python scripts/m2_contract.py route REQUEST.json",
+      "trigger": "Agent has identified the stated asset/binding/permission task and explicit target; CLI does not classify natural language.",
+      "preconditions": "Required projection keys and compatible contract/source versions are supplied; missing media may remain pending.",
+      "resources": [
+        "references/contract-guide.md",
+        "references/reference-permissions.md",
+        "references/audit-and-handoff.md"
+      ],
+      "output": "M2Proposal",
+      "return_to": "M2.accept_or_independent_caller",
+      "failure_routes": {
+        "missing_input": "user_or_calling_module",
+        "incompatible_contract": "caller",
+        "asset_or_observation": "M2.1",
+        "identity_or_selector": "M2.2",
+        "rights_or_conflict": "M2.3",
+        "timeline_mapping": "M7/M9",
+        "backend_mode_or_labels": "M11",
+        "target_intent": "M1_or_user"
+      },
+      "repair": "Return explicit object, base version, evidence, expected correction and recheck scope to the owning node.",
+      "effect": "read_only_calculation_and_returned_draft; no in-place file mutation, media generation, network or uploads",
+      "retry": "Read-only computation is repeatable; semantic changes need a new version; accepted proposal IDs prevent blind repeat acceptance.",
+      "required_dependencies": [
+        "Bundled contracts.json",
+        "Bundled module-registry.json",
+        "Python 3.10+ standard library for CLI"
+      ],
+      "optional_dependencies": [
+        "Caller-provided compatible M1 WorkBrief text projection",
+        "Versioned M11 CapabilityProfile excerpt",
+        "Actual media/observations supplied by authorized caller"
+      ],
+      "compatibility": "Exact public contract 1.0.0; breaking changes require a new version and migration.",
+      "checks": [
+        "shape and provenance references",
+        "unique field ownership and source identity",
+        "explicit scopes and channel semantics",
+        "dependency/base version",
+        "semantic and media remain unverified"
+      ],
+      "evidence": "Development tests are outside this runtime directory; execution records accompany each CLI output."
+    }
+  }
+}

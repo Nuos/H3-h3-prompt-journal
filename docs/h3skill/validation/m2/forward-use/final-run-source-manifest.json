@@ -1,0 +1,127 @@
+{
+  "captured_at": "2026-11-05T08:50:45.760897+00:00",
+  "basis": "Final runtime snapshot captured after parent reported release files stable. Earlier snapshots and all first-run results remain preserved. Per-file capture, not an atomic repository snapshot.",
+  "files": [
+    {
+      "path": "docs/h3skill/h3-asset-reference/SKILL.md",
+      "sha256": "0515fd25fa248430f553e5cce8ff54c448ed4ef1aaf8d430a4452372a81abd6b",
+      "bytes": 9560,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/SKILL.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/contracts.json",
+      "sha256": "292d0c81f7d2a7bf70d2268b18e0bc49a5bc4e62d0d081b9de171ba07df38740",
+      "bytes": 22195,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/references/contracts.json"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/module-registry.json",
+      "sha256": "8bfc341327c02783023380b1bc95dcb0dfe47c15a25c1f7ce83952513b436407",
+      "bytes": 15518,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/references/module-registry.json"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/contract-guide.md",
+      "sha256": "11ca02243e400c6916c8b3fb677b1aa91e8650bc2aaacaca3926d097fc8a61da",
+      "bytes": 18588,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/references/contract-guide.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/reference-permissions.md",
+      "sha256": "4d1045f00461aead5aeec98d04d993603dedc2f37456ddab5e685e6089d86d16",
+      "bytes": 5738,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/references/reference-permissions.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/audit-and-handoff.md",
+      "sha256": "5f0cabde183387d6878ad4684d06b215e09b4b953a12a2d7f7d34b1aad530f45",
+      "bytes": 5562,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/references/audit-and-handoff.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/asset-registration.md",
+      "sha256": "7b56448871580e6386ff96897ded839b98727a63e2ed4115362020e5e22878e4",
+      "bytes": 4200,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/references/asset-registration.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/entity-binding.md",
+      "sha256": "92aeb8e4cf1885f7ce8682353f703eb61c2dc786b3ee73fae7c13c471e2aeeb2",
+      "bytes": 3835,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/references/entity-binding.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/h3-base-official.txt",
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+      "bytes": 15773,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/references/h3-base-official.txt"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/h3-ref-official.txt",
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+      "bytes": 23553,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/references/h3-ref-official.txt"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/scripts/m2_contract.py",
+      "sha256": "8241bb99f396c51e5c56c8ff21bb7930b45b8b9f644ca51bdbca8fda2b2e255a",
+      "bytes": 46226,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/scripts/m2_contract.py"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/request-m2-3.json",
+      "sha256": "30cd6bba5c86fc52919246df246ca2fd82c3a7b931dd3e52faa840fbf5eb0b50",
+      "bytes": 6682,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/assets/request-m2-3.json"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/proposal-m2-3.json",
+      "sha256": "d84bab9f7ebc51870ad2048940f571052684b96d289860e3dd95f532085d0b2c",
+      "bytes": 10555,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/assets/proposal-m2-3.json"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/assets/state-empty.json",
+      "sha256": "0dc4716b01f02536795f2ec4c86b4ca324779648a5b3ec5cb91cdc033961896a",
+      "bytes": 533,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/assets/state-empty.json"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "sha256": "c3726c8d92958ba60393b5f0b7c07b6ebd3c9f1152095e0f66423ab871c92695",
+      "bytes": 5248,
+      "snapshot": "snapshot-final-run/case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "sha256": "e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+      "bytes": 34220,
+      "snapshot": "snapshot-final-run/case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "sha256": "58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+      "bytes": 7390,
+      "snapshot": "snapshot-final-run/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "sha256": "5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "bytes": 101257,
+      "snapshot": "snapshot-final-run/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/h3-label-mapping.md",
+      "sha256": "0e7727e22c167b1a5978ff16f9132e121262314220ce92f66380d1035a5bfa19",
+      "bytes": 16655,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/references/h3-label-mapping.md"
+    },
+    {
+      "path": "docs/h3skill/h3-asset-reference/references/h3-protocol-source.json",
+      "sha256": "8b98325a703b8564af80da4804167bc4f9a26dab410b3a49ade1feda299fd910",
+      "bytes": 32925,
+      "snapshot": "snapshot-final-run/docs/h3skill/h3-asset-reference/references/h3-protocol-source.json"
+    }
+  ],
+  "unreadable": []
+}
