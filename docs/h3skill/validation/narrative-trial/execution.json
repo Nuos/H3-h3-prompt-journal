@@ -1,0 +1,32 @@
+[
+  {
+    "name": "route",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/scripts/m1_contract.py",
+      "route",
+      "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/validation/narrative-trial/M1Request.json"
+    ],
+    "started_at_utc": "2026-11-05T07:15:09.359554+00:00",
+    "exit_code": 0,
+    "stdout_file": "route-result.json",
+    "stderr": ""
+  },
+  {
+    "name": "check",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-B",
+      "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/scripts/m1_contract.py",
+      "check",
+      "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/validation/narrative-trial/M1Proposal.json",
+      "--request",
+      "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/validation/narrative-trial/M1Request.json"
+    ],
+    "started_at_utc": "2026-11-05T07:15:09.416788+00:00",
+    "exit_code": 0,
+    "stdout_file": "check-result.json",
+    "stderr": ""
+  }
+]

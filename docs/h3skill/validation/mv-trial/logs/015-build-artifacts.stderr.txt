@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/validation/mv-trial/build_artifacts.py", line 21, in <module>
+    assert ban and cross, 'Exact conflict evidence must be retained'
+           ^^^^^^^^^^^^^
+AssertionError: Exact conflict evidence must be retained

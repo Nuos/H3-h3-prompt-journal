@@ -1,0 +1,114 @@
+{
+  "kind": "M1Proposal",
+  "contract_version": "1.0.0",
+  "proposal_id": "PROP-WATER-M1-1",
+  "module_id": "M1.1",
+  "work_id": "WORK-WATER-001",
+  "base_version": 0,
+  "source_request_id": "REQ-WATER-001",
+  "sources": {
+    "SRC-WATER-CASE": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-water-obstacle-variety-show/prompt.md#L9-L13,L37-L55,L59-L159",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "滚筒成功 → Fishbone 摔倒 → 起身继续 → 高墙抓住 → 机关侧面击飞 → 落水 → 湿发表情结尾"
+    },
+    "SRC-WATER-PROJECTION": {
+      "kind": "design_decision",
+      "locator": "fixture:water-obstacle-m1-projection-v1",
+      "version": "0.1.0",
+      "excerpt": "本例把原案七个剧情锚点整理为三个功能段落。分组、信息表述和情绪解释为受控文字示例，未经媒体审阅，不代表原案只有三个镜头。"
+    }
+  },
+  "changes": {
+    "intent": {
+      "work_type": "drama",
+      "creative_goal": "保留水上闯关案例从顺利过关、受挫恢复到终点前意外落水的剧情锚点。",
+      "audience_takeaway": "观众能理解主角持续争取完成挑战，且最后的落水由前面的接近成功形成反转。",
+      "delivery_use": "水上闯关综艺案例的作品意图与段落功能文字整理。",
+      "source_refs": [
+        "SRC-WATER-CASE",
+        "SRC-WATER-PROJECTION"
+      ],
+      "target_duration": {
+        "seconds": 20,
+        "domain": "final_work",
+        "basis": "requested",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      }
+    },
+    "constraints": {
+      "C-ANCHORS": {
+        "text": "七个剧情锚点及前后因果方向必须保留。",
+        "priority": "must",
+        "scope": {
+          "kind": "work",
+          "paragraph_ids": []
+        },
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "C-DETAIL-FREEDOM": {
+        "text": "具体躲避动作、摄影和观众反应仍可由对应模块设计，本模块只记录故事目的。",
+        "priority": "may",
+        "scope": {
+          "kind": "work",
+          "paragraph_ids": []
+        },
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ]
+      }
+    },
+    "must_keep_events": {
+      "KEEP-1": {
+        "description": "主角成功通过滚筒障碍。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-2": {
+        "description": "主角在 Fishbone Reverse 失去平衡摔倒。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-3": {
+        "description": "主角起身继续前往终点。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-4": {
+        "description": "主角双手抓住最终高墙边缘，接近成功。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-5": {
+        "description": "侧面机关击中主角，导致主角脱手。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-6": {
+        "description": "主角落入同一赛道末端的水池。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-7": {
+        "description": "主角湿发出水，以表情反应收束。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

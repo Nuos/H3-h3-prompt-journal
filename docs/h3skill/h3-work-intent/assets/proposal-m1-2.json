@@ -1,0 +1,102 @@
+{
+  "kind": "M1Proposal",
+  "contract_version": "1.0.0",
+  "proposal_id": "PROP-WATER-M1-2",
+  "module_id": "M1.2",
+  "work_id": "WORK-WATER-001",
+  "base_version": 0,
+  "source_request_id": "REQ-WATER-001",
+  "sources": {
+    "SRC-WATER-CASE": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-water-obstacle-variety-show/prompt.md#L9-L13,L37-L55,L59-L159",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "滚筒成功 → Fishbone 摔倒 → 起身继续 → 高墙抓住 → 机关侧面击飞 → 落水 → 湿发表情结尾"
+    },
+    "SRC-WATER-PROJECTION": {
+      "kind": "design_decision",
+      "locator": "fixture:water-obstacle-m1-projection-v1",
+      "version": "0.1.0",
+      "excerpt": "本例把原案七个剧情锚点整理为三个功能段落。分组、信息表述和情绪解释为受控文字示例，未经媒体审阅，不代表原案只有三个镜头。"
+    }
+  },
+  "changes": {
+    "paragraphs": {
+      "P01": {
+        "order": 1,
+        "function": "建立挑战目标并用首个障碍成功过关形成进展。",
+        "audience_information_before": [],
+        "audience_information_after": [
+          "主角要完成水上闯关。",
+          "首个滚筒障碍已通过。"
+        ],
+        "must_keep_event_ids": [
+          "KEEP-1"
+        ],
+        "information_predecessors": [],
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ],
+        "character_objectives": {
+          "原案主角": "持续向终点前进。"
+        }
+      },
+      "P02": {
+        "order": 2,
+        "function": "以 Fishbone 失误与恢复，让继续挑战具有可见阻力。",
+        "audience_information_before": [
+          "主角已通过首个障碍。"
+        ],
+        "audience_information_after": [
+          "主角在 Fishbone 摔倒。",
+          "主角恢复并继续挑战。"
+        ],
+        "must_keep_event_ids": [
+          "KEEP-2",
+          "KEEP-3"
+        ],
+        "information_predecessors": [
+          "P01"
+        ],
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ],
+        "character_objectives": {
+          "原案主角": "失误后继续争取完成挑战。"
+        }
+      },
+      "P03": {
+        "order": 3,
+        "function": "以临近成功、侧击脱手、落水和湿发表情完成反转与收束。",
+        "audience_information_before": [
+          "主角已经恢复并继续前往终点。"
+        ],
+        "audience_information_after": [
+          "主角抓住了最终高墙。",
+          "机关导致主角失去抓握并落水。",
+          "出水表情完成综艺式结尾。"
+        ],
+        "must_keep_event_ids": [
+          "KEEP-4",
+          "KEEP-5",
+          "KEEP-6",
+          "KEEP-7"
+        ],
+        "information_predecessors": [
+          "P02"
+        ],
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ],
+        "character_objectives": {
+          "原案主角": "争取完成最后的高墙挑战。"
+        }
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

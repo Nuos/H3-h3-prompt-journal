@@ -1,0 +1,116 @@
+{
+  "kind": "M1DeliveryValidationRecord",
+  "package": "h3-work-intent",
+  "package_version": "0.1.0",
+  "contract_version": "1.0.0",
+  "recorded_at_utc": "2026-11-05T07:26:36.737945+00:00",
+  "source_commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+  "frozen_plan": "skillplan-v0.1.2-608813b",
+  "implementation_state": "implemented_text_scope",
+  "validation_scope": "M1 standalone skill structure, deterministic contracts, case-grounded supervised text trials and source integrity. Not complete H3 system acceptance.",
+  "official_format": {
+    "exit_code": 0,
+    "stdout": "Skill is valid!",
+    "record": "official-format-check.json"
+  },
+  "contracts": {
+    "schema_local_references": 50,
+    "references_resolved": true,
+    "generic_json_schema_validator": "not_executed",
+    "record": "schema-reference-check.json"
+  },
+  "behavior_tests": {
+    "tests_run": 52,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "unit_tests_successful": true,
+    "normal_cli_examples": 9,
+    "normal_cli_examples_successful": true,
+    "python": "3.12.14",
+    "record": "../tests/test-results.json",
+    "raw_test_output": "../tests/unittest-output.txt"
+  },
+  "text_trials": [
+    {
+      "trial": "narrative-trial",
+      "scope": "M1.2 only; sticker kitchen comedy",
+      "executor": "Separate agent not involved in authoring; scope guidance supplied by integration agent",
+      "paragraphs": 3,
+      "route_outcome": "routed",
+      "check_outcome": "structurally_valid",
+      "request_match_checked": true,
+      "check_audit": {
+        "structure": "pass",
+        "deterministic": "unverified",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "unverified"
+      },
+      "nonblocking_keep_context_unverified": 6,
+      "acceptance": "not_run_by_design",
+      "semantic_review": "pass_in_reviewed_text_scope; formal event partition remains unverified",
+      "record": "narrative-trial/README.md",
+      "source_record": "narrative-source-check.json"
+    },
+    {
+      "trial": "mv-trial",
+      "scope": "M1 plus its three child proposal partitions, SEG10 only",
+      "executor": "Separate agent not involved in authoring; same executor constructs all three child proposals",
+      "paragraphs": 4,
+      "child_proposals": 3,
+      "trial_status": "blocked",
+      "parent_outcome": "rejected",
+      "acceptance_exit_code": 1,
+      "parent_audit": {
+        "structure": "pass",
+        "deterministic": "fail",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "fail"
+      },
+      "blocking_issue_ids": [
+        "ISS_CENTERLINE"
+      ],
+      "current_workbrief_version": 0,
+      "candidate_accepted": false,
+      "semantic_review": "source conflict preserved; no-lip-sync weakening corrected; no media verdict",
+      "review_correction": {
+        "field": "/content/constraints/C_AUDIO",
+        "before": "不要求对口型",
+        "after": "禁止对口型",
+        "snapshots": "review-before/",
+        "rechecked": [
+          "M1.1 proposal",
+          "batch",
+          "parent acceptance"
+        ]
+      },
+      "record": "mv-trial/trial-summary.json",
+      "source_record": "mv-source-check.json"
+    }
+  ],
+  "semantic_review_record": "semantic-review.md",
+  "structure_and_sources_record": "structure-and-source-check.json",
+  "source_evidence": {
+    "cases_registered": 29,
+    "text_files_hashed": 98,
+    "case_rules": 12,
+    "source_excerpt_count": 38,
+    "reading_scope": "The case index records the extraction-stage reading; each trial records its additional reading separately."
+  },
+  "reproduction_commands": [
+    "python3 docs/h3skill/_standards/anthropics-quick-validate.py docs/h3skill/h3-work-intent",
+    "PYTHONDONTWRITEBYTECODE=1 python3 docs/h3skill/tests/run_tests.py",
+    "python3 docs/h3skill/tools/verify_release.py"
+  ],
+  "limits": [
+    "No blind or no-skill baseline comparison was executed.",
+    "Formal skills-ref and a generic JSON Schema interpreter were not run.",
+    "Only Python 3.12.14 was executed; declared minimum is Python 3.10+.",
+    "No H3 inference, image/audio/video observation or G3/G4 media acceptance was performed.",
+    "M2-M12 remain handoff targets, not implemented modules in this package.",
+    "The blocked MV trial is retained as a correct rejection of declared conflicting inputs, not a passed production brief.",
+    "Runtime CLI semantic/media verdicts are not replaced by the integration text review."
+  ]
+}

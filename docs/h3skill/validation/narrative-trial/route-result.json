@@ -1,0 +1,53 @@
+{
+  "kind": "M1ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "route",
+  "execution_status": "completed",
+  "outcome": "routed",
+  "audit": {
+    "structure": "pass",
+    "deterministic": "pass",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [],
+  "limitations": [
+    "No natural-language meaning, H3 execution, media, or undeclared dependency was verified."
+  ],
+  "dispatch": {
+    "route_id": "route-m1-2",
+    "route_version": "1.0.0",
+    "request_id": "REQ-WORK-TRIAL-STICKER-M1-2",
+    "target": "M1.2",
+    "work_id": "WORK-TRIAL-STICKER",
+    "base_version": 0,
+    "input_projection": {
+      "work_type": "drama",
+      "intent_context": "用户已给定作品意图：真实厨房中的平面贴纸实施倒盐恶作剧，真人手回应，后果回到贴纸角色，再以夸张卡通反应收尾。保留角色身份、真实厨房与平面角色的对照，以及原文人物分工；不重新决定意图。",
+      "paragraph_material": "唯一内容依据为所列 README.md 与 prompt.md。按原文顺序保留以下事件（这是本次请求的文本事件索引，并非已接受的 must_keep_events 分区）：\nKEEP01：真实厨房内，真人手持续料理锅内食物，平面贴纸角色坐在灶边小木凳上；保留真实环境与平面角色的媒介对照。\nKEEP02：贴纸角色亲自双手拿起始终敞口、无盖的透明玻璃盐罐，倾倒大量白盐入同一口锅，完成后露出恶作剧表情。倒盐阶段真人手继续翻炒，不接触或操作盐罐。\nKEEP03：倒盐结束后，真人手从贴纸角色手中收走盐罐。\nKEEP04：另一只真人手用锅铲轻敲贴纸角色头顶；角色弹跳，头上暂时冒红色卡通肿包并捂头。\nKEEP05：贴纸角色捂头、转圈眼、张嘴并喷蓝色卡通眼泪；真人手从刚才被倒盐的同一口锅中舀食物喂给角色，角色吃下后嘴部卡通式鼓胀。\nKEEP06：角色先僵住、身体绷直并短暂颤抖，眼睛变成 X，从小凳向后跌倒，跌落时四肢短暂朝上；头上绕星，身旁出现小白色卡通灵魂，以夸张卡通倒地画面收尾。",
+      "delivery_use": "仅交付给 M1 审查的 M1.2 段落功能与观众信息提案；本次不执行 accept，不生成 H3 提示词或媒体。",
+      "notes": "仅 M1.2。源文 4 个镜头按语义整理为 3 段，不改写镜头、秒点、画幅或执行参数。无对白、角色语音、演唱、口播与配乐；原文厨房环境声和料理声保留为约束，不另作声音设计。倒盐时真人手不碰盐罐，倒盐后收走盐罐。未提供图片/视频，因此不能确认参考形象、生成效果或稳定性。"
+    },
+    "requested_fields": [
+      "paragraphs"
+    ],
+    "resources": [
+      "references/contracts.json",
+      "references/paragraph-information.md",
+      "references/audit-and-handoff.md"
+    ],
+    "return_to": "M1.accept",
+    "semantic_execution": "not_started",
+    "eligible_children": [],
+    "child_inputs_verified": false
+  },
+  "execution": {
+    "invocation_id": "m1tool-ed1757b444b44c009224e267968e4675",
+    "started_at": "2026-11-05T07:15:09.411118+00:00",
+    "finished_at": "2026-11-05T07:15:09.411993+00:00",
+    "operation_effect": "read_inputs_and_emit_new_result",
+    "input_files_modified": false
+  }
+}

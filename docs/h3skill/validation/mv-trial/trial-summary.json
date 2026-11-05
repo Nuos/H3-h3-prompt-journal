@@ -1,0 +1,47 @@
+{
+  "work_id": "WORK-TRIAL-FOUR",
+  "source_version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+  "trial_status": "blocked",
+  "parent_outcome": "rejected",
+  "canonical_workbrief": "workbrief.json",
+  "canonical_version": 0,
+  "canonical_content_accepted": false,
+  "review_only_candidate": "workbrief-proposed.json",
+  "candidate_must_not_be_consumed_as_accepted": true,
+  "semantic_paragraph_count": 4,
+  "child_proposal_count": 3,
+  "blocking_issue_ids": [
+    "ISS_CENTERLINE"
+  ],
+  "unverified_media": true,
+  "request_checks": {
+    "M1.1": true,
+    "M1.2": true,
+    "M1.3": true
+  },
+  "ownership": "same agent constructed separate owned partitions; no independent subagent runtime was invoked",
+  "results": {
+    "route-result.json": "018-route-m1",
+    "check-m1-1-result.json": "028-check-m1-1-after-review",
+    "check-m1-2-result.json": "020-check-m1-2",
+    "check-m1-3-result.json": "021-check-m1-3",
+    "check-batch-result.json": "029-check-batch-after-review",
+    "check-workbrief-result.json": "023-check-canonical",
+    "parent-acceptance-result.json": "030-accept-after-review"
+  },
+  "build_failure_retained": "logs/015-build-artifacts.stderr.txt",
+  "inputs_match_source_version": true,
+  "review_correction": {
+    "field": "/content/constraints/C_AUDIO",
+    "before": "不要求对口型",
+    "after": "禁止对口型",
+    "snapshots": "review-before/",
+    "rechecked": [
+      "M1.1 proposal",
+      "batch",
+      "parent acceptance"
+    ]
+  },
+  "subject_labels": "S1-S4 abbreviate source Subject 1-4 only; no official speaker Sx IDs assigned",
+  "canonical_state_note": "The only current WorkBrief remains empty version 0; workbrief-proposed.json is an unaccepted preview."
+}

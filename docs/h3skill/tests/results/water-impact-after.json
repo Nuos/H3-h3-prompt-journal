@@ -1,0 +1,304 @@
+{
+  "kind": "WorkBrief",
+  "contract_version": "1.0.0",
+  "work_id": "WORK-WATER-001",
+  "version": 2,
+  "owner_module": "M1",
+  "status": "draft",
+  "display": {
+    "title": "水上闯关：M1受控文字示例（仅展示名称变更）"
+  },
+  "sources": {
+    "SRC-WATER-CASE": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-water-obstacle-variety-show/prompt.md#L9-L13,L37-L55,L59-L159",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "滚筒成功 → Fishbone 摔倒 → 起身继续 → 高墙抓住 → 机关侧面击飞 → 落水 → 湿发表情结尾"
+    },
+    "SRC-WATER-PROJECTION": {
+      "kind": "design_decision",
+      "locator": "fixture:water-obstacle-m1-projection-v1",
+      "version": "0.1.0",
+      "excerpt": "本例把原案七个剧情锚点整理为三个功能段落。分组、信息表述和情绪解释为受控文字示例，未经媒体审阅，不代表原案只有三个镜头。"
+    }
+  },
+  "content": {
+    "intent": {
+      "work_type": "drama",
+      "creative_goal": "保留水上闯关案例从顺利过关、受挫恢复到终点前意外落水的剧情锚点。",
+      "audience_takeaway": "观众能理解主角持续争取完成挑战，且最后的落水由前面的接近成功形成反转。",
+      "delivery_use": "水上闯关综艺案例的作品意图与段落功能文字整理。",
+      "source_refs": [
+        "SRC-WATER-CASE",
+        "SRC-WATER-PROJECTION"
+      ],
+      "target_duration": {
+        "seconds": 20,
+        "domain": "final_work",
+        "basis": "requested",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      }
+    },
+    "constraints": {
+      "C-ANCHORS": {
+        "text": "七个剧情锚点及前后因果方向必须保留。",
+        "priority": "must",
+        "scope": {
+          "kind": "work",
+          "paragraph_ids": []
+        },
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "C-DETAIL-FREEDOM": {
+        "text": "具体躲避动作、摄影和观众反应仍可由对应模块设计，本模块只记录故事目的。",
+        "priority": "may",
+        "scope": {
+          "kind": "work",
+          "paragraph_ids": []
+        },
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ]
+      }
+    },
+    "must_keep_events": {
+      "KEEP-1": {
+        "description": "主角成功通过滚筒障碍。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-2": {
+        "description": "主角在 Fishbone Reverse 失去平衡摔倒。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-3": {
+        "description": "主角起身继续前往终点。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-4": {
+        "description": "主角双手抓住最终高墙边缘，接近成功。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-5": {
+        "description": "侧面机关击中主角，导致主角脱手。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-6": {
+        "description": "主角落入同一赛道末端的水池。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      },
+      "KEEP-7": {
+        "description": "主角湿发出水，以表情反应收束。",
+        "source_refs": [
+          "SRC-WATER-CASE"
+        ]
+      }
+    },
+    "paragraphs": {
+      "P01": {
+        "order": 1,
+        "function": "建立挑战目标并用首个障碍成功过关形成进展。",
+        "audience_information_before": [],
+        "audience_information_after": [
+          "主角要完成水上闯关。",
+          "首个滚筒障碍已通过。"
+        ],
+        "must_keep_event_ids": [
+          "KEEP-1"
+        ],
+        "information_predecessors": [],
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ],
+        "character_objectives": {
+          "原案主角": "持续向终点前进。"
+        }
+      },
+      "P02": {
+        "order": 2,
+        "function": "以 Fishbone 失误与恢复，让继续挑战具有可见阻力。",
+        "audience_information_before": [
+          "主角已通过首个障碍。"
+        ],
+        "audience_information_after": [
+          "主角在 Fishbone 摔倒。",
+          "主角恢复并继续挑战。"
+        ],
+        "must_keep_event_ids": [
+          "KEEP-2",
+          "KEEP-3"
+        ],
+        "information_predecessors": [
+          "P01"
+        ],
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ],
+        "character_objectives": {
+          "原案主角": "失误后继续争取完成挑战。"
+        }
+      },
+      "P03": {
+        "order": 3,
+        "function": "以临近成功、侧击脱手、落水和湿发表情完成反转与收束。",
+        "audience_information_before": [
+          "主角已经恢复并继续前往终点。"
+        ],
+        "audience_information_after": [
+          "主角抓住了最终高墙。",
+          "机关导致主角失去抓握并落水。",
+          "出水表情完成综艺式结尾。"
+        ],
+        "must_keep_event_ids": [
+          "KEEP-4",
+          "KEEP-5",
+          "KEEP-6",
+          "KEEP-7"
+        ],
+        "information_predecessors": [
+          "P02"
+        ],
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ],
+        "character_objectives": {
+          "原案主角": "争取完成最后的高墙挑战。"
+        }
+      }
+    },
+    "emotion_energy": {
+      "P01": {
+        "emotion_start": "期待",
+        "emotion_end": "初步自信",
+        "energy_intent": "借顺利完成首个障碍建立挑战进展感。",
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ]
+      },
+      "P02": {
+        "emotion_start": "突遇失误",
+        "emotion_end": "恢复挑战意愿",
+        "energy_intent": "把摔倒与继续推进形成一次有因果的起伏。",
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ]
+      },
+      "P03": {
+        "emotion_start": "接近成功的兴奋",
+        "emotion_end": "落水后的喜剧反应",
+        "energy_intent": "保留期待被意外打断的反转，最后让表情完成收束。",
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ]
+      }
+    },
+    "motifs": {
+      "MOTIF-PROGRESS": {
+        "description": "持续向终点推进。",
+        "paragraph_ids": [
+          "P01",
+          "P02",
+          "P03"
+        ],
+        "development": "由顺利前进，经失误恢复，到终点前的意外反转。",
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ]
+      }
+    }
+  },
+  "issues": [],
+  "accepted_proposals": [
+    {
+      "proposal_id": "PROP-WATER-M1-1",
+      "module_id": "M1.1",
+      "source_request_id": "REQ-WATER-001",
+      "from_version": 0,
+      "to_version": 1,
+      "changed_fields": [
+        "constraints",
+        "intent",
+        "must_keep_events"
+      ],
+      "source_ids": [
+        "SRC-WATER-CASE",
+        "SRC-WATER-PROJECTION"
+      ],
+      "resolved_issues": []
+    },
+    {
+      "proposal_id": "PROP-WATER-M1-2",
+      "module_id": "M1.2",
+      "source_request_id": "REQ-WATER-001",
+      "from_version": 0,
+      "to_version": 1,
+      "changed_fields": [
+        "paragraphs"
+      ],
+      "source_ids": [
+        "SRC-WATER-CASE",
+        "SRC-WATER-PROJECTION"
+      ],
+      "resolved_issues": []
+    },
+    {
+      "proposal_id": "PROP-WATER-M1-3",
+      "module_id": "M1.3",
+      "source_request_id": "REQ-WATER-001",
+      "from_version": 0,
+      "to_version": 1,
+      "changed_fields": [
+        "emotion_energy",
+        "motifs"
+      ],
+      "source_ids": [
+        "SRC-WATER-CASE",
+        "SRC-WATER-PROJECTION"
+      ],
+      "resolved_issues": []
+    }
+  ],
+  "consumers": [
+    {
+      "consumer_id": "M1-PARAGRAPHS",
+      "module_id": "M1.2",
+      "version": 1,
+      "source_work_version": 1,
+      "read_paths": [
+        "/content/intent"
+      ]
+    },
+    {
+      "consumer_id": "M4-P01",
+      "module_id": "M4",
+      "version": 1,
+      "source_work_version": 1,
+      "read_paths": [
+        "/content/paragraphs/P01"
+      ]
+    }
+  ]
+}

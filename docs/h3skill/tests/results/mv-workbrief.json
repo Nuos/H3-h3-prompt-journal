@@ -1,0 +1,212 @@
+{
+  "kind": "WorkBrief",
+  "contract_version": "1.0.0",
+  "work_id": "WORK-MV-EXCERPT",
+  "version": 1,
+  "owner_module": "M1",
+  "status": "draft",
+  "display": {
+    "title": "古典武侠舞前两段：M1文字对照"
+  },
+  "sources": {
+    "SRC-MV-CASE": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md#L7-L44,L49-L84",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "Segment 01 — Cold Mountain Blade-Line; Segment 02 — Rounded Arm Lines, Grounded Footwork"
+    },
+    "SRC-MV-METHOD": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md#L19-L29,L146-L151",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "这一段在整支作品中承担什么功能？"
+    },
+    "SRC-MV-PROJECTION": {
+      "kind": "design_decision",
+      "locator": "fixture:classical-wuxia-first-two-segments-m1-v1",
+      "version": "0.1.0",
+      "excerpt": "仅取原案第1、2段做M1文字对照。下列段落功能及能量解释属于本例整理；没有新测音频，没有代写机位、拍点或新增剧情实体。"
+    }
+  },
+  "content": {
+    "intent": {
+      "work_type": "mv",
+      "creative_goal": "整理原案前两段中斜线武侠气质与圆弧手臂、脚步流动的作品功能。",
+      "audience_takeaway": "观众能辨认两段不同的舞蹈重心与连续表演意图。",
+      "delivery_use": "古典武侠舞13段案例前两段的M1文字级对照，未作全曲或媒体验收。",
+      "source_refs": [
+        "SRC-MV-CASE",
+        "SRC-MV-METHOD",
+        "SRC-MV-PROJECTION"
+      ]
+    },
+    "constraints": {
+      "C-NO-LITERAL-LYRICS": {
+        "text": "歌词意象不自动授权添加道具、服装、人物或场景；具体资产权限交M2核对。",
+        "priority": "must",
+        "scope": {
+          "kind": "work",
+          "paragraph_ids": []
+        },
+        "source_refs": [
+          "SRC-MV-METHOD"
+        ]
+      }
+    },
+    "must_keep_events": {
+      "KEEP-MV-1": {
+        "description": "保留第一段手腕引导的斜线展开及结束时仍有动作余韵的表演意图。",
+        "source_refs": [
+          "SRC-MV-CASE",
+          "SRC-MV-METHOD",
+          "SRC-MV-PROJECTION"
+        ]
+      },
+      "KEEP-MV-2": {
+        "description": "保留第二段圆弧手臂、脚步与躯干衔接的表演重心。",
+        "source_refs": [
+          "SRC-MV-CASE",
+          "SRC-MV-METHOD",
+          "SRC-MV-PROJECTION"
+        ]
+      }
+    },
+    "paragraphs": {
+      "P01": {
+        "order": 1,
+        "function": "以斜线展开建立古典武侠舞气质，并保留动态延续。",
+        "audience_information_before": [],
+        "audience_information_after": [
+          "第一段以受控斜线动作建立表演气质。"
+        ],
+        "must_keep_event_ids": [
+          "KEEP-MV-1"
+        ],
+        "information_predecessors": [],
+        "source_refs": [
+          "SRC-MV-CASE",
+          "SRC-MV-METHOD",
+          "SRC-MV-PROJECTION"
+        ],
+        "performance_focus": "手腕启动到身体斜线的观看目标，动作机制交M4。"
+      },
+      "P02": {
+        "order": 2,
+        "function": "以圆弧手臂和脚步流动形成相邻段落的可辨认变化。",
+        "audience_information_before": [
+          "已看到第一段的斜线展开。"
+        ],
+        "audience_information_after": [
+          "第二段重点转到圆弧与脚下连接。"
+        ],
+        "must_keep_event_ids": [
+          "KEEP-MV-2"
+        ],
+        "information_predecessors": [
+          "P01"
+        ],
+        "source_refs": [
+          "SRC-MV-CASE",
+          "SRC-MV-METHOD",
+          "SRC-MV-PROJECTION"
+        ],
+        "performance_focus": "圆弧手臂与脚下支撑之间的连贯关系。"
+      }
+    },
+    "emotion_energy": {
+      "P01": {
+        "emotion_start": "克制与专注",
+        "emotion_end": "斜线展开后的延续",
+        "energy_intent": {
+          "state": "unknown",
+          "reason": "未读取实际音频；需以实际音乐复核乐段能量，不从案例BPM复制精确节拍。"
+        },
+        "source_refs": [
+          "SRC-MV-CASE",
+          "SRC-MV-METHOD",
+          "SRC-MV-PROJECTION"
+        ]
+      },
+      "P02": {
+        "emotion_start": "延续表演",
+        "emotion_end": "圆弧余韵",
+        "energy_intent": "以圆弧变化对照上一段的斜线重心；只是文字层设计意图。",
+        "source_refs": [
+          "SRC-MV-CASE",
+          "SRC-MV-METHOD",
+          "SRC-MV-PROJECTION"
+        ]
+      }
+    },
+    "motifs": {
+      "MOTIF-LINE": {
+        "description": "同一表演中的线条变化。",
+        "paragraph_ids": [
+          "P01",
+          "P02"
+        ],
+        "development": "从斜线展开转到圆弧衔接，不追加歌词具象实体。",
+        "source_refs": [
+          "SRC-MV-CASE",
+          "SRC-MV-METHOD",
+          "SRC-MV-PROJECTION"
+        ]
+      }
+    }
+  },
+  "issues": [],
+  "accepted_proposals": [
+    {
+      "proposal_id": "PROP-MV-M1-1",
+      "module_id": "M1.1",
+      "source_request_id": "REQ-MV-001",
+      "from_version": 0,
+      "to_version": 1,
+      "changed_fields": [
+        "constraints",
+        "intent",
+        "must_keep_events"
+      ],
+      "source_ids": [
+        "SRC-MV-CASE",
+        "SRC-MV-METHOD",
+        "SRC-MV-PROJECTION"
+      ],
+      "resolved_issues": []
+    },
+    {
+      "proposal_id": "PROP-MV-M1-2",
+      "module_id": "M1.2",
+      "source_request_id": "REQ-MV-001",
+      "from_version": 0,
+      "to_version": 1,
+      "changed_fields": [
+        "paragraphs"
+      ],
+      "source_ids": [
+        "SRC-MV-CASE",
+        "SRC-MV-METHOD",
+        "SRC-MV-PROJECTION"
+      ],
+      "resolved_issues": []
+    },
+    {
+      "proposal_id": "PROP-MV-M1-3",
+      "module_id": "M1.3",
+      "source_request_id": "REQ-MV-001",
+      "from_version": 0,
+      "to_version": 1,
+      "changed_fields": [
+        "emotion_energy",
+        "motifs"
+      ],
+      "source_ids": [
+        "SRC-MV-CASE",
+        "SRC-MV-METHOD",
+        "SRC-MV-PROJECTION"
+      ],
+      "resolved_issues": []
+    }
+  ],
+  "consumers": []
+}

@@ -1,0 +1,1 @@
+{"complete": true, "status": "blocked", "accept": "rejected", "canonical_version": 0, "paragraphs": 4, "proposals": 3, "review_fix": "no lip-sync preserved", "runner_cwd": "/workspace/scratch/80b796f55683/h3-work"}

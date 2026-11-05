@@ -1,0 +1,1178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:h3-work-intent:contracts:1.0.0",
+  "title": "M1 WorkBrief and proposal contracts",
+  "description": "Public shape contract 1.0.0. scripts/m1_contract.py implements explicit named validators, not a general JSON Schema interpreter. Reference resolution, ownership, base versions, source immutability, information dependencies and event coverage are additional deterministic checks. No semantic or media validation is implied.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/M1Request"
+    },
+    {
+      "$ref": "#/$defs/M1Proposal"
+    },
+    {
+      "$ref": "#/$defs/M1ProposalBatch"
+    },
+    {
+      "$ref": "#/$defs/WorkBrief"
+    }
+  ],
+  "$defs": {
+    "Unknown": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "unknown"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "Source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "user_requirement",
+            "case_text",
+            "design_decision",
+            "external_input",
+            "official_document",
+            "hypothesis"
+          ]
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "version",
+        "excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "SourceMap": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      }
+    },
+    "WorkType": {
+      "anyOf": [
+        {
+          "enum": [
+            "drama",
+            "mv",
+            "hybrid"
+          ]
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Scope": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "work",
+            "paragraph"
+          ]
+        },
+        "paragraph_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "paragraph_ids"
+      ],
+      "additionalProperties": false
+    },
+    "TargetDuration": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Unknown"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "seconds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "domain": {
+              "enum": [
+                "final_work",
+                "generation_request"
+              ]
+            },
+            "basis": {
+              "const": "requested"
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            }
+          },
+          "required": [
+            "seconds",
+            "domain",
+            "basis",
+            "source_refs"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "Intent": {
+      "type": "object",
+      "properties": {
+        "work_type": {
+          "$ref": "#/$defs/WorkType"
+        },
+        "creative_goal": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "audience_takeaway": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "delivery_use": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "target_duration": {
+          "$ref": "#/$defs/TargetDuration"
+        }
+      },
+      "required": [
+        "work_type",
+        "creative_goal",
+        "audience_takeaway",
+        "delivery_use",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Constraint": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "priority": {
+          "enum": [
+            "must",
+            "should",
+            "may"
+          ]
+        },
+        "scope": {
+          "$ref": "#/$defs/Scope"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "text",
+        "priority",
+        "scope",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "MustKeepEvent": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "description",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Paragraph": {
+      "type": "object",
+      "properties": {
+        "order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "function": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "audience_information_before": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "audience_information_after": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "must_keep_event_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true
+        },
+        "information_predecessors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "character_objectives": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              {
+                "$ref": "#/$defs/Unknown"
+              }
+            ]
+          }
+        },
+        "performance_focus": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        }
+      },
+      "required": [
+        "order",
+        "function",
+        "audience_information_before",
+        "audience_information_after",
+        "must_keep_event_ids",
+        "information_predecessors",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "EmotionEnergy": {
+      "type": "object",
+      "properties": {
+        "emotion_start": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "emotion_end": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "energy_intent": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "emotion_start",
+        "emotion_end",
+        "energy_intent",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Motif": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "paragraph_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "development": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "description",
+        "paragraph_ids",
+        "development",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Issue": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "status": {
+          "enum": [
+            "fail",
+            "unverified",
+            "conflict"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "owner_module": {
+          "enum": [
+            "user",
+            "M1",
+            "M1.1",
+            "M1.2",
+            "M1.3",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7",
+            "M8",
+            "M9",
+            "M10",
+            "M11",
+            "M12"
+          ]
+        },
+        "field": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "blocking": {
+          "type": "boolean"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "code",
+        "status",
+        "message",
+        "owner_module",
+        "field",
+        "blocking",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Resolution": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "issue_id",
+        "reason",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "ResolvedIssue": {
+      "type": "object",
+      "properties": {
+        "issue": {
+          "$ref": "#/$defs/Issue"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "issue",
+        "reason",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Consumer": {
+      "type": "object",
+      "properties": {
+        "consumer_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "module_id": {
+          "enum": [
+            "M1",
+            "M1.1",
+            "M1.2",
+            "M1.3",
+            "M2",
+            "M3",
+            "M4",
+            "M5",
+            "M6",
+            "M7",
+            "M8",
+            "M9",
+            "M10",
+            "M11",
+            "M12"
+          ]
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_work_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^/(content|sources|issues)(/.*)?$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "consumer_id",
+        "module_id",
+        "version",
+        "source_work_version",
+        "read_paths"
+      ],
+      "additionalProperties": false
+    },
+    "AcceptedProposal": {
+      "type": "object",
+      "properties": {
+        "proposal_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "module_id": {
+          "enum": [
+            "M1.1",
+            "M1.2",
+            "M1.3"
+          ]
+        },
+        "source_request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "from_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "to_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "changed_fields": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "intent",
+              "constraints",
+              "must_keep_events",
+              "paragraphs",
+              "emotion_energy",
+              "motifs"
+            ]
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "resolved_issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ResolvedIssue"
+          }
+        }
+      },
+      "required": [
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "from_version",
+        "to_version",
+        "changed_fields",
+        "source_ids",
+        "resolved_issues"
+      ],
+      "additionalProperties": false
+    },
+    "Content": {
+      "type": "object",
+      "properties": {
+        "intent": {
+          "$ref": "#/$defs/Intent"
+        },
+        "constraints": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Constraint"
+          }
+        },
+        "must_keep_events": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/MustKeepEvent"
+          }
+        },
+        "paragraphs": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Paragraph"
+          }
+        },
+        "emotion_energy": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/EmotionEnergy"
+          }
+        },
+        "motifs": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Motif"
+          }
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "RequestInputs": {
+      "type": "object",
+      "properties": {
+        "work_type": {
+          "$ref": "#/$defs/WorkType"
+        },
+        "creative_request": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "intent_context": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "paragraph_material": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "emotion_material": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "delivery_use": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "M1Request": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M1Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "target": {
+          "enum": [
+            "M1",
+            "M1.1",
+            "M1.2",
+            "M1.3"
+          ]
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/SourceMap",
+          "minProperties": 1
+        },
+        "inputs": {
+          "$ref": "#/$defs/RequestInputs"
+        },
+        "requested_fields": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "intent",
+              "constraints",
+              "must_keep_events",
+              "paragraphs",
+              "emotion_energy",
+              "motifs"
+            ]
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "request_id",
+        "target",
+        "work_id",
+        "base_version",
+        "sources",
+        "inputs"
+      ],
+      "additionalProperties": false,
+      "description": "The shape permits incomplete inputs so route can return missing_input/unknown_input. The target-specific minimum input is declared in module-registry.json and enforced explicitly by the CLI."
+    },
+    "M1Proposal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M1Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "proposal_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "module_id": {
+          "enum": [
+            "M1.1",
+            "M1.2",
+            "M1.3"
+          ]
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "sources": {
+          "$ref": "#/$defs/SourceMap",
+          "minProperties": 1
+        },
+        "changes": {
+          "$ref": "#/$defs/Content",
+          "minProperties": 1
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          }
+        },
+        "resolutions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Resolution"
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "proposal_id",
+        "module_id",
+        "work_id",
+        "base_version",
+        "source_request_id",
+        "sources",
+        "changes",
+        "issues",
+        "resolutions"
+      ],
+      "additionalProperties": false
+    },
+    "M1ProposalBatch": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M1ProposalBatch"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "proposals": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/M1Proposal"
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "proposals"
+      ],
+      "additionalProperties": false
+    },
+    "WorkBrief": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "WorkBrief"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "owner_module": {
+          "const": "M1"
+        },
+        "status": {
+          "const": "draft"
+        },
+        "display": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "sources": {
+          "$ref": "#/$defs/SourceMap"
+        },
+        "content": {
+          "$ref": "#/$defs/Content"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          }
+        },
+        "accepted_proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AcceptedProposal"
+          }
+        },
+        "consumers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Consumer"
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "version",
+        "owner_module",
+        "status",
+        "display",
+        "sources",
+        "content",
+        "issues",
+        "accepted_proposals",
+        "consumers"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "x-semantics": {
+    "domain": "Only M1 work intent; paragraphs are semantic sections, not shots, storyboard cells, generation requests or timing intervals.",
+    "authoritative_owner": "M1",
+    "child_ownership": {
+      "M1.1": [
+        "intent",
+        "constraints",
+        "must_keep_events"
+      ],
+      "M1.2": [
+        "paragraphs"
+      ],
+      "M1.3": [
+        "emotion_energy",
+        "motifs"
+      ]
+    },
+    "patch_semantics": "Each named changes partition is an explicit replacement; unrelated partitions are retained. Partial field updates inside a partition are not inferred.",
+    "source_refs": "Resolve against immutable sources within the artifact. Changing a source's content or version requires a new source ID.",
+    "paragraph_order": "Positive unique ordinal for intended information order, not a timestamp, frame index or mandatory cut.",
+    "must_keep_event_ids": "M1 requirement identifiers, not the action-event IDs owned by M4.",
+    "unknown": "Only {state:'unknown',reason:...}; omission does not become not_applicable.",
+    "target_duration": "Requested duration only. No backend parameter, measured beat or authoritative TimingMap is produced.",
+    "acceptance": "Only M1 accepts child proposals; base versions must match. Conflicting writes are rejected atomically.",
+    "resolutions": "A child may resolve only a current issue whose owner_module equals that child, with reason and source_refs. Parent, sibling, user and external blockers cannot be self-cleared.",
+    "validation_status": "Structural/deterministic results are separate from semantic/media results. Tools always leave semantic and media unverified.",
+    "impact": "Uses registered previous-snapshot read_paths only; no invented consumers or transitive discovery.",
+    "request_fidelity": "check --request rejects rebinding an existing request source ID and a declared work_type mismatch. Unused request sources may be omitted; new versioned design-decision sources may be added."
+  }
+}

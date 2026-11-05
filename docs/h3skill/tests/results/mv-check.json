@@ -1,0 +1,38 @@
+{
+  "kind": "M1ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "check",
+  "execution_status": "completed",
+  "outcome": "structurally_valid",
+  "audit": {
+    "structure": "pass",
+    "deterministic": "unverified",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [
+    {
+      "code": "unknown_value",
+      "path": "/content/emotion_energy/P01/energy_intent",
+      "message": "Explicitly unknown; not treated as not applicable.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M1",
+      "recheck": "Resubmit the corrected input to the same command."
+    }
+  ],
+  "limitations": [
+    "No natural-language meaning, H3 execution, media, or undeclared dependency was verified."
+  ],
+  "checked_kind": "WorkBrief",
+  "request_match_checked": false,
+  "execution": {
+    "invocation_id": "m1tool-5cfdfd57f86f4313900fc7bad4cdf24e",
+    "started_at": "2026-11-05T06:58:49.801471+00:00",
+    "finished_at": "2026-11-05T06:58:49.801830+00:00",
+    "operation_effect": "read_inputs_and_emit_new_result",
+    "input_files_modified": false
+  }
+}

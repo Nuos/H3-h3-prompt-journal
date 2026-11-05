@@ -1,0 +1,76 @@
+{
+  "work_id": "WORK-TRIAL-FOUR",
+  "source_version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+  "scope": "SEG10 only; 14-segment complete work is contextual",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/case-studies/2026-10-four-subject-formation-choreography/README.md",
+      "snapshot": "inputs/README.md",
+      "sha256": "fcdd6a8bea055e2a357007d0024381c7c23dccf1ca2f74eceabb2de26e2fe1c7",
+      "git_source": {
+        "exit_code": 0,
+        "sha256": "fcdd6a8bea055e2a357007d0024381c7c23dccf1ca2f74eceabb2de26e2fe1c7",
+        "matches_worktree": true
+      }
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "snapshot": "inputs/prompt.md",
+      "sha256": "2fdcf5cab127dbe3fdcf2a4991386b3bd31a2b08db04a0753f3715794d8ab481",
+      "git_source": {
+        "exit_code": 0,
+        "sha256": "2fdcf5cab127dbe3fdcf2a4991386b3bd31a2b08db04a0753f3715794d8ab481",
+        "matches_worktree": true
+      }
+    }
+  ],
+  "read_skill_resources": [
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/SKILL.md",
+      "sha256": "072e39c88670a836979d04931649042e57e82f7fbf63f13d58521e92ae1ae464",
+      "read_extent": "complete or selected spans as recorded in invocation logs; script selected spans only"
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/contracts.json",
+      "sha256": "3e2fbeaa55c51365330777151834f60ae3f8c54d0f74298dc6c9ba9f95f419ed",
+      "read_extent": "complete or selected spans as recorded in invocation logs; script selected spans only"
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/contract-guide.md",
+      "sha256": "bfc702e6a77d52643f2d4481547c92d4f4796b6162179443f2e26968c9c95a47",
+      "read_extent": "complete or selected spans as recorded in invocation logs; script selected spans only"
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/intent-constraints.md",
+      "sha256": "b551a09d1e52004b00ef502679f7151139a29120fd58be030e94d32de7d01ab0",
+      "read_extent": "complete or selected spans as recorded in invocation logs; script selected spans only"
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/paragraph-information.md",
+      "sha256": "4ff38dedd65dd3100129952a9a82bbc62c16b084f0043e666d2ee8eee0fd2523",
+      "read_extent": "complete or selected spans as recorded in invocation logs; script selected spans only"
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/emotion-motif.md",
+      "sha256": "aa55df11cf5ed3e44723961f214bd07d1d3f8a554bdd8b72116b2211c3ba27d4",
+      "read_extent": "complete or selected spans as recorded in invocation logs; script selected spans only"
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/audit-and-handoff.md",
+      "sha256": "5809803bb2bb73cbfc2176943792d2dc477f680885ec5df4f82335f28451f30d",
+      "read_extent": "complete or selected spans as recorded in invocation logs; script selected spans only"
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/scripts/m1_contract.py",
+      "sha256": "4ec812dfbd7e1d7f4c0a3acd240c76126f541fb8697dfee2808c4e71668f9e1e",
+      "read_extent": "complete or selected spans as recorded in invocation logs; script selected spans only"
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/assets/workbrief-empty.json",
+      "sha256": "402d083f6904fd92d1545e6b280c9be8b27e39f3124679be6a39fda8fcc37631",
+      "read_extent": "complete or selected spans as recorded in invocation logs; script selected spans only"
+    }
+  ],
+  "log_note": "Early calls are explicitly retrospective in logs/prior-tool-invocations-retrospective.json; later exact argv, stdout, stderr and exit codes are retained by run_trial.py. No image/audio/video or actual generation was inspected.",
+  "official_protocol_validation": "not performed in this trial"
+}

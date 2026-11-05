@@ -1,0 +1,119 @@
+{
+  "kind": "M1ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "check",
+  "execution_status": "completed",
+  "outcome": "invalid",
+  "audit": {
+    "structure": "pass",
+    "deterministic": "fail",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "fail"
+  },
+  "diagnostics": [
+    {
+      "code": "paragraph_context_unverified",
+      "path": "/proposals/0/changes",
+      "message": "Paragraph references need an M1.2 projection at acceptance.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M1.2",
+      "recheck": "Resubmit the corrected input to the same command."
+    },
+    {
+      "code": "keep_context_unverified",
+      "path": "/proposals/1/changes/paragraphs/P1/must_keep_event_ids",
+      "message": "Resolve this reference against M1.1's required events.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M1.1",
+      "recheck": "Resubmit the corrected input to the same command."
+    },
+    {
+      "code": "keep_context_unverified",
+      "path": "/proposals/1/changes/paragraphs/P2/must_keep_event_ids",
+      "message": "Resolve this reference against M1.1's required events.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M1.1",
+      "recheck": "Resubmit the corrected input to the same command."
+    },
+    {
+      "code": "keep_context_unverified",
+      "path": "/proposals/1/changes/paragraphs/P3/must_keep_event_ids",
+      "message": "Resolve this reference against M1.1's required events.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M1.1",
+      "recheck": "Resubmit the corrected input to the same command."
+    },
+    {
+      "code": "keep_context_unverified",
+      "path": "/proposals/1/changes/paragraphs/P4/must_keep_event_ids",
+      "message": "Resolve this reference against M1.1's required events.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M1.1",
+      "recheck": "Resubmit the corrected input to the same command."
+    },
+    {
+      "code": "paragraph_context_unverified",
+      "path": "/proposals/2/changes",
+      "message": "Paragraph references need an M1.2 projection at acceptance.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M1.2",
+      "recheck": "Resubmit the corrected input to the same command."
+    },
+    {
+      "code": "declared_issue",
+      "path": "/content/constraints/C_CENTERLINE",
+      "message": "README 要求各自象限且不越中心线；SEG10 要求交叉行进、中心会合与前后换层。现有文本未定义可兼容的中心线/路径，不能同时确认全部要求成立，也未获授权删改任一条。须由需求所有者明确优先级或提供可同时满足的路径定义。",
+      "status": "conflict",
+      "blocking": true,
+      "repair_target": "user",
+      "recheck": "Resubmit the corrected input to the same command."
+    },
+    {
+      "code": "declared_issue",
+      "path": "/content/intent",
+      "message": "Picture 1、Audio 1、生成视频与相邻段素材均未提供；四人识别、锚图外观、节拍同步、音轨保真及交接连续性不可验证。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M2",
+      "recheck": "Resubmit the corrected input to the same command."
+    },
+    {
+      "code": "declared_issue",
+      "path": "/content/constraints/C_CAMERA",
+      "message": "源文同时出现 operator backpedal front-side parallax 和禁止通过退镜揭示队形；需 M5 判定局部跟随与退镜限制的边界。此项不替代已明确保留的中心线来源冲突。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M5",
+      "recheck": "Resubmit the corrected input to the same command."
+    },
+    {
+      "code": "declared_issue",
+      "path": "/content/emotion_energy",
+      "message": "13.767 秒、93.75 BPM、绝对音轨区间和 beat cells 均为源文本声明；cuts_manifest.json 与音频缺失，未测量或核实。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7",
+      "recheck": "Resubmit the corrected input to the same command."
+    }
+  ],
+  "limitations": [
+    "No natural-language meaning, H3 execution, media, or undeclared dependency was verified."
+  ],
+  "checked_kind": "M1ProposalBatch",
+  "request_match_checked": false,
+  "execution": {
+    "invocation_id": "m1tool-c464e3ec40a64b9d8353a5fe0e3c52dd",
+    "started_at": "2026-11-05T07:22:44.593579+00:00",
+    "finished_at": "2026-11-05T07:22:44.594630+00:00",
+    "operation_effect": "read_inputs_and_emit_new_result",
+    "input_files_modified": false
+  }
+}

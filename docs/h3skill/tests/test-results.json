@@ -1,0 +1,472 @@
+{
+  "kind": "M1DevelopmentTestRecord",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "scope": "Structure, deterministic invariants, routing, versioned acceptance and explicit dependency impact only.",
+  "semantic_assessment": "not_executed_by_these_programs",
+  "h3_generation": "not_executed",
+  "media_quality": "unverified",
+  "source_corpus_commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+  "command": "python docs/h3skill/tests/run_tests.py",
+  "python": "3.12.14",
+  "started_at_utc": "2026-11-05T06:58:49.042418+00:00",
+  "finished_at_utc": "2026-11-05T06:58:49.807286+00:00",
+  "tests_run": 52,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "unit_tests_successful": true,
+  "cli_examples_successful": true,
+  "cli_example_failure": null,
+  "case_examples": [
+    {
+      "case": "2026-08-water-obstacle-variety-show",
+      "scope": "Seven source anchors, regrouped into three semantic paragraphs for this example."
+    },
+    {
+      "case": "2026-10-classical-wuxia-dance-13-segment",
+      "scope": "First two source segments only; actual audio energy remains explicitly unknown."
+    }
+  ],
+  "tests": [
+    {
+      "test": "test_m1_contract.M1ContractTests.test_accept_does_not_mutate_input_objects",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_all_four_nodes_route_independently",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_batch_acceptance_preserves_all_child_partitions",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_child_cannot_clear_external_parent_or_sibling_blocker",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_child_cannot_write_sibling_partition",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_cli_result_wrapper_is_not_mistaken_for_workbrief",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_combined_parent_result_checks_against_parent_request",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_competing_partition_writes_are_atomic_rejection",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_conflict_cannot_be_downgraded_with_nonblocking_flag",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_copied_skill_runs_without_repository_siblings",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_cross_module_plan_and_h3_fields_are_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_declared_conflict_is_not_swallowed_by_aggregation",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_display_rename_does_not_invalidate_semantic_consumers",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_duplicate_json_keys_and_nonfinite_numbers_are_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_duplicate_proposals_do_not_apply_twice",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_each_child_proposal_checks_against_its_request",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_empty_workbrief_is_explicitly_partial",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_impact_marks_only_declared_overlapping_dependencies",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_information_cycle_is_reported",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_information_order_violation_is_reported",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_internal_child_dependencies_are_registered_and_invalidated",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_invalid_dependency_pointer_is_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_known_request_work_type_cannot_be_lost_as_unknown",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_known_request_work_type_cannot_be_switched",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_malformed_field_types_return_diagnostics",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_minimum_input_is_enough_without_unrelated_upstream",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_missing_input_is_returned_to_user",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_mv_fixture_preserves_unknown_audio_and_has_no_new_story",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_new_design_source_is_allowed_with_request",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_nonblocking_unknown_issue_is_retained_in_draft",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_old_dependency_baseline_is_unverified",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_owner_resolution_keeps_historical_issue_and_evidence",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_parent_request_checks_each_child_source",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_parent_route_does_not_certify_child_inputs",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_partial_request_does_not_allow_extra_owned_writes",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_public_registry_matches_implemented_permissions",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_repair_of_existing_consistency_failure_returns_to_owner",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_request_and_output_identity_are_checked",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_request_source_id_cannot_be_rebound",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_required_event_coverage_is_checked",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_resolution_requires_a_real_existing_issue",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_sequential_acceptance_preserves_siblings",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_source_ids_are_immutable",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_stale_version_does_not_silently_rebase",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_undeclared_consumers_are_not_invented",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_unknown_input_does_not_become_not_applicable",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_unknown_motif_paragraph_is_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_unknown_required_event_id_is_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_unresolved_source_reference_is_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_unused_request_sources_can_be_omitted",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_work_id_mismatch_is_rejected",
+      "status": "pass"
+    },
+    {
+      "test": "test_m1_contract.M1ContractTests.test_wrong_node_id_and_version_are_rejected",
+      "status": "pass"
+    }
+  ],
+  "cli_executions": [
+    {
+      "command": "route",
+      "inputs": [
+        "h3-work-intent/assets/request-m1.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "outcome": "routed",
+      "audit": {
+        "structure": "pass",
+        "deterministic": "pass",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "unverified"
+      },
+      "execution": {
+        "invocation_id": "m1tool-1c5ea35113c141a580ff96de3cda1c3a",
+        "started_at": "2026-11-05T06:58:49.444442+00:00",
+        "finished_at": "2026-11-05T06:58:49.444890+00:00",
+        "operation_effect": "read_inputs_and_emit_new_result",
+        "input_files_modified": false
+      }
+    },
+    {
+      "command": "route",
+      "inputs": [
+        "h3-work-intent/assets/request-m1-1.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "outcome": "routed",
+      "audit": {
+        "structure": "pass",
+        "deterministic": "pass",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "unverified"
+      },
+      "execution": {
+        "invocation_id": "m1tool-d1f07db93f9f474cb2eb78ff20ef0128",
+        "started_at": "2026-11-05T06:58:49.488909+00:00",
+        "finished_at": "2026-11-05T06:58:49.489417+00:00",
+        "operation_effect": "read_inputs_and_emit_new_result",
+        "input_files_modified": false
+      }
+    },
+    {
+      "command": "route",
+      "inputs": [
+        "h3-work-intent/assets/request-m1-2.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "outcome": "routed",
+      "audit": {
+        "structure": "pass",
+        "deterministic": "pass",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "unverified"
+      },
+      "execution": {
+        "invocation_id": "m1tool-b3687c1926b74635b10a7ad38551ddbf",
+        "started_at": "2026-11-05T06:58:49.535564+00:00",
+        "finished_at": "2026-11-05T06:58:49.535887+00:00",
+        "operation_effect": "read_inputs_and_emit_new_result",
+        "input_files_modified": false
+      }
+    },
+    {
+      "command": "route",
+      "inputs": [
+        "h3-work-intent/assets/request-m1-3.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "outcome": "routed",
+      "audit": {
+        "structure": "pass",
+        "deterministic": "pass",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "unverified"
+      },
+      "execution": {
+        "invocation_id": "m1tool-dd42ecd1a4764fc5b427650862c300f1",
+        "started_at": "2026-11-05T06:58:49.579721+00:00",
+        "finished_at": "2026-11-05T06:58:49.580118+00:00",
+        "operation_effect": "read_inputs_and_emit_new_result",
+        "input_files_modified": false
+      }
+    },
+    {
+      "command": "accept",
+      "inputs": [
+        "h3-work-intent/assets/workbrief-empty.json",
+        "tests/fixtures/water-batch.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "outcome": "accepted",
+      "audit": {
+        "structure": "pass",
+        "deterministic": "pass",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "unverified"
+      },
+      "execution": {
+        "invocation_id": "m1tool-4088251eef354fb6ae4fc53328baf993",
+        "started_at": "2026-11-05T06:58:49.620568+00:00",
+        "finished_at": "2026-11-05T06:58:49.621334+00:00",
+        "operation_effect": "read_inputs_and_emit_new_result",
+        "input_files_modified": false
+      }
+    },
+    {
+      "command": "check",
+      "inputs": [
+        "tests/results/water-workbrief.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "outcome": "structurally_valid",
+      "audit": {
+        "structure": "pass",
+        "deterministic": "pass",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "unverified"
+      },
+      "execution": {
+        "invocation_id": "m1tool-fc8ea48617da4cc79b8c584a6ca4e498",
+        "started_at": "2026-11-05T06:58:49.668446+00:00",
+        "finished_at": "2026-11-05T06:58:49.668861+00:00",
+        "operation_effect": "read_inputs_and_emit_new_result",
+        "input_files_modified": false
+      }
+    },
+    {
+      "command": "impact",
+      "inputs": [
+        "tests/results/water-impact-before.json",
+        "tests/results/water-impact-after.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "outcome": "impact_reported",
+      "audit": {
+        "structure": "pass",
+        "deterministic": "pass",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "unverified"
+      },
+      "execution": {
+        "invocation_id": "m1tool-4522fb1e52e549e29501bcacf859a51a",
+        "started_at": "2026-11-05T06:58:49.714170+00:00",
+        "finished_at": "2026-11-05T06:58:49.716768+00:00",
+        "operation_effect": "read_inputs_and_emit_new_result",
+        "input_files_modified": false
+      }
+    },
+    {
+      "command": "accept",
+      "inputs": [
+        "tests/fixtures/mv-empty.json",
+        "tests/fixtures/mv-batch.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "outcome": "accepted",
+      "audit": {
+        "structure": "pass",
+        "deterministic": "unverified",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "unverified"
+      },
+      "execution": {
+        "invocation_id": "m1tool-b66b73ee84994d31b8e022d1c5218d97",
+        "started_at": "2026-11-05T06:58:49.755614+00:00",
+        "finished_at": "2026-11-05T06:58:49.756609+00:00",
+        "operation_effect": "read_inputs_and_emit_new_result",
+        "input_files_modified": false
+      }
+    },
+    {
+      "command": "check",
+      "inputs": [
+        "tests/results/mv-workbrief.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "outcome": "structurally_valid",
+      "audit": {
+        "structure": "pass",
+        "deterministic": "unverified",
+        "semantic": "unverified",
+        "media": "unverified",
+        "overall": "unverified"
+      },
+      "execution": {
+        "invocation_id": "m1tool-5cfdfd57f86f4313900fc7bad4cdf24e",
+        "started_at": "2026-11-05T06:58:49.801471+00:00",
+        "finished_at": "2026-11-05T06:58:49.801830+00:00",
+        "operation_effect": "read_inputs_and_emit_new_result",
+        "input_files_modified": false
+      }
+    }
+  ],
+  "tested_file_sha256": {
+    "h3-work-intent/scripts/m1_contract.py": "4ec812dfbd7e1d7f4c0a3acd240c76126f541fb8697dfee2808c4e71668f9e1e",
+    "h3-work-intent/references/contracts.json": "3e2fbeaa55c51365330777151834f60ae3f8c54d0f74298dc6c9ba9f95f419ed",
+    "h3-work-intent/references/module-registry.json": "b6f2bfd9fe9efc80b54b577ac78f8de66134116aa5e4ee44a11bce93cf4078b9",
+    "tests/test_m1_contract.py": "7a1731fbcf2505fd07b51b01da31c5ac68846bb59b8e4a7b5ed1ebfada6921d2",
+    "tests/run_tests.py": "f5d527ceb7c6b99ed56d21b4948969691e24701e2edabd29625742b0488d853f",
+    "h3-work-intent/assets/proposal-m1-1.json": "03d31be8f578aa2894f797411ab8207beb37b628fe1671a91d717a7bde9f2b32",
+    "h3-work-intent/assets/proposal-m1-2.json": "297ef54540f505990cf43b94d0bbab795f7232a446402893401baa5a9958d881",
+    "h3-work-intent/assets/proposal-m1-3.json": "e1749e8a92bcd27caa00005220800a829e084bd9ca356210dd0c47a8a285d18b",
+    "h3-work-intent/assets/request-m1-1.json": "8352591a6d5eb100730927979e5dcfcc872cbd272fd664e78c5ea161f9127dbd",
+    "h3-work-intent/assets/request-m1-2.json": "52b565fc29f7c56678d37b5606492e7940ba17e6c29936b270677591494cbfc8",
+    "h3-work-intent/assets/request-m1-3.json": "5b4b55e5f7586a140b719d7a493af92346fa79a041b43589d163c0a46675a39c",
+    "h3-work-intent/assets/request-m1.json": "dd03bea3af18fdc031c9a6d87a3e462b08dccd172fc5a3c0fb05465b8274050a",
+    "h3-work-intent/assets/workbrief-empty.json": "402d083f6904fd92d1545e6b280c9be8b27e39f3124679be6a39fda8fcc37631",
+    "tests/fixtures/mv-batch.json": "83d727485ac17ff8bec0acc22c17f3c38ed22ff113fda14c3d8a7ae08f7030da",
+    "tests/fixtures/mv-empty.json": "0bd393c484ed2e80d3b00fa289d29849b8dd192c1f1f9e036e4e89693d6f0478",
+    "tests/fixtures/mv-request.json": "063fdf4a223cce56f3915e80f0ccfd559518ab43c81e0c39878d1b6c5e1e7728",
+    "tests/fixtures/water-batch.json": "1bd976eed2a8a03eaadca0b883fd075cf84d53d12eb691f10b574c9a787b97cb"
+  }
+}

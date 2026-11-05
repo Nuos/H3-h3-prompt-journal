@@ -1,0 +1,17 @@
+{
+  "kind": "OfficialSkillFormatValidation",
+  "started_at_utc": "2026-11-05T07:05:21.912939+00:00",
+  "finished_at_utc": "2026-11-05T07:05:22.010353+00:00",
+  "command": [
+    "python3",
+    "docs/h3skill/_standards/anthropics-quick-validate.py",
+    "docs/h3skill/h3-work-intent"
+  ],
+  "exit_code": 0,
+  "stdout": "Skill is valid!\n",
+  "stderr": "",
+  "scope": "Official Anthropic quick_validate format checks only; no semantic or media verdict.",
+  "source_commit": "ca45fc496a3436251f191354091d557da31c15b5",
+  "validator_sha256": "67cf5703402013936c8fb75ad6a1afecd8841d45cc5e606b634eb05825fde365",
+  "skill_entry_sha256": "072e39c88670a836979d04931649042e57e82f7fbf63f13d58521e92ae1ae464"
+}

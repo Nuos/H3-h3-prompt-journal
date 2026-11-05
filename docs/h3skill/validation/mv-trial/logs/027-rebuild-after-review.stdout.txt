@@ -1,0 +1,1 @@
+{"created": ["request-m1.json", "request-m1-1.json", "request-m1-2.json", "request-m1-3.json", "proposal-m1-1.json", "proposal-m1-2.json", "proposal-m1-3.json", "proposal-batch.json", "workbrief.json", "workbrief-proposed.json", "input-version-summary.json"], "blocking_issue": "ISS_CENTERLINE", "canonical_version": 0}

@@ -1,0 +1,3 @@
+TOP ['$schema', '$id', 'title', 'description', 'oneOf', '$defs', 'x-semantics']
+DEFS ['Unknown', 'Source', 'SourceMap', 'WorkType', 'Scope', 'TargetDuration', 'Intent', 'Constraint', 'MustKeepEvent', 'Paragraph', 'EmotionEnergy', 'Motif', 'Issue', 'Resolution', 'ResolvedIssue', 'Consumer', 'AcceptedProposal', 'Content', 'RequestInputs', 'M1Request', 'M1Proposal', 'M1ProposalBatch', 'WorkBrief']
+SCHEMAS []

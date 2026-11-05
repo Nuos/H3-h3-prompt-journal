@@ -1,0 +1,32 @@
+{
+  "kind": "M1Request",
+  "contract_version": "1.0.0",
+  "request_id": "REQ-MV-001",
+  "target": "M1",
+  "work_id": "WORK-MV-EXCERPT",
+  "base_version": 0,
+  "sources": {
+    "SRC-MV-CASE": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md#L7-L44,L49-L84",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "Segment 01 — Cold Mountain Blade-Line; Segment 02 — Rounded Arm Lines, Grounded Footwork"
+    },
+    "SRC-MV-METHOD": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md#L19-L29,L146-L151",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "这一段在整支作品中承担什么功能？"
+    },
+    "SRC-MV-PROJECTION": {
+      "kind": "design_decision",
+      "locator": "fixture:classical-wuxia-first-two-segments-m1-v1",
+      "version": "0.1.0",
+      "excerpt": "仅取原案第1、2段做M1文字对照。下列段落功能及能量解释属于本例整理；没有新测音频，没有代写机位、拍点或新增剧情实体。"
+    }
+  },
+  "inputs": {
+    "work_type": "mv",
+    "creative_request": "基于古典武侠舞13段案例前两段，整理两段功能差异、必保表演意图和情绪母题；没有实际音频，不生成测量结论。"
+  }
+}

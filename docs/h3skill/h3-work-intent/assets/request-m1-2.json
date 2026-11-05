@@ -1,0 +1,27 @@
+{
+  "kind": "M1Request",
+  "contract_version": "1.0.0",
+  "request_id": "REQ-WATER-001",
+  "target": "M1.2",
+  "work_id": "WORK-WATER-001",
+  "base_version": 0,
+  "sources": {
+    "SRC-WATER-CASE": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-water-obstacle-variety-show/prompt.md#L9-L13,L37-L55,L59-L159",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "滚筒成功 → Fishbone 摔倒 → 起身继续 → 高墙抓住 → 机关侧面击飞 → 落水 → 湿发表情结尾"
+    },
+    "SRC-WATER-PROJECTION": {
+      "kind": "design_decision",
+      "locator": "fixture:water-obstacle-m1-projection-v1",
+      "version": "0.1.0",
+      "excerpt": "本例把原案七个剧情锚点整理为三个功能段落。分组、信息表述和情绪解释为受控文字示例，未经媒体审阅，不代表原案只有三个镜头。"
+    }
+  },
+  "inputs": {
+    "work_type": "drama",
+    "intent_context": "保留原案主角持续挑战以及最终意外落水的剧情锚点。",
+    "paragraph_material": "滚筒成功；Fishbone摔倒后起身继续；高墙抓住后被侧击脱手落水，以湿发出水表情结尾。整理为功能段落，不分配镜头或秒数。"
+  }
+}

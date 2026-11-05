@@ -1,0 +1,342 @@
+{
+  "kind": "H3ProtocolSourceRecord",
+  "record_version": "1.0.0",
+  "navigation": {
+    "source_snapshots": "/sources",
+    "canonical_modes_fields_and_labels": "/protocol",
+    "m1_scope_and_ownership": "/m1_mapping",
+    "license_attribution_and_text": "/license",
+    "derivative_discovery_pointer": "/discovery_pointer"
+  },
+  "purpose": "M1 作品意图与官方提示词协议的映射依据；不增加案例创作范围，不表示已实现下游编译或已核验媒体。",
+  "authority": {
+    "organization": "MiniMax-AI",
+    "repository": "MiniMax-AI/MiniMax-H3",
+    "commit": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+    "version_policy": "Immutable commit snapshot; not a claim about future or latest revisions."
+  },
+  "sources": [
+    {
+      "repository": "MiniMax-AI/MiniMax-H3",
+      "commit": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+      "source_path": "skills/h3-prompt-writing/SKILL.md",
+      "url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/SKILL.md",
+      "git_blob_sha": "b6d9b2839384a588763a9c24315225dd8ce19d56",
+      "sha256": "a7000443588ca3f145e3b3fd8900f14e0325dc460bd811268fac89a9dc8e56d0",
+      "line_count": 40,
+      "offline_snapshot": null,
+      "record_only": "Source metadata recorded; source is not bundled in this skill package."
+    },
+    {
+      "repository": "MiniMax-AI/MiniMax-H3",
+      "commit": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+      "source_path": "skills/h3-prompt-writing/references/base-en.txt",
+      "url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/base-en.txt",
+      "git_blob_sha": "40cf586a634d677d6b7107b367cf0ec9621be728",
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+      "line_count": 222,
+      "offline_snapshot": "h3-base-official.txt",
+      "snapshot_integrity": "exact bytes; no added header, attribution or navigation"
+    },
+    {
+      "repository": "MiniMax-AI/MiniMax-H3",
+      "commit": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+      "source_path": "skills/h3-prompt-writing/references/ref-en.txt",
+      "url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/ref-en.txt",
+      "git_blob_sha": "7ae1b2d07d743fd2392258a96449be9e9e322d35",
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+      "line_count": 341,
+      "offline_snapshot": "h3-ref-official.txt",
+      "snapshot_integrity": "exact bytes; no added header, attribution or navigation"
+    },
+    {
+      "repository": "MiniMax-AI/MiniMax-H3",
+      "commit": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+      "source_path": "README.md",
+      "url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/README.md",
+      "git_blob_sha": "e4d2f4351b1ed64f14c6249d71393ac69a47abdf",
+      "sha256": "c2110b3754d927b1eaf7cfe7decb522b187a0bc44e659080bc65fc23260bd0c9",
+      "line_count": 452,
+      "offline_snapshot": null,
+      "record_only": "Source metadata recorded; source is not bundled in this skill package."
+    }
+  ],
+  "protocol": {
+    "base_title": "Video Prompt Writing Guide (T2VA / I2VA / FL2VA / L2VA)",
+    "reference_title": "Full-Reference Mode Rewrite Output Format Guide",
+    "line_numbering": "1-based original source-file lines; B=base-en.txt, R=ref-en.txt, S=official SKILL.md",
+    "base_fields": [
+      "integrated_multimodal_description",
+      "overall_soundscape",
+      "non_diegetic_music"
+    ],
+    "reference_fields": [
+      "subject_definitions",
+      "summary",
+      "retention_analysis",
+      "detailed_description",
+      "overall_soundscape",
+      "non_diegetic_music"
+    ],
+    "modes": [
+      {
+        "name": "T2VA",
+        "field_set": "base_fields",
+        "image_alignment_instruction": null,
+        "evidence": [
+          "B:L5",
+          "B:L14",
+          "B:L36-L48"
+        ]
+      },
+      {
+        "name": "I2VA",
+        "field_set": "base_fields",
+        "image_alignment_instruction": "For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.",
+        "evidence": [
+          "B:L6",
+          "B:L16-L20",
+          "B:L54-L56"
+        ]
+      },
+      {
+        "name": "FL2VA",
+        "field_set": "base_fields",
+        "image_alignment_instruction": "How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot N) aligns with the S.SS-second mark of the target video.",
+        "evidence": [
+          "B:L7",
+          "B:L22-L26",
+          "B:L60-L64"
+        ]
+      },
+      {
+        "name": "L2VA",
+        "field_set": "base_fields",
+        "image_alignment_instruction": "How the reference pictures align with the target video — <Picture 1> (from [Shot N]) aligns with the S.SS-second mark of the target video.",
+        "evidence": [
+          "B:L8",
+          "B:L28-L34",
+          "B:L68-L70"
+        ]
+      },
+      {
+        "name": "Ref2VA",
+        "field_set": "reference_fields",
+        "image_alignment_instruction": null,
+        "evidence": [
+          "S:L3",
+          "S:L27",
+          "R:L13-L37"
+        ],
+        "note": "Full-reference roles, definitions, retention and actual frame alignment are serialized within the six-field format."
+      }
+    ],
+    "reference_labels": [
+      {
+        "syntax": "<Subject N>",
+        "role": "Reusable visible content unit, not a source-file identifier.",
+        "evidence": [
+          "R:L41-L58"
+        ]
+      },
+      {
+        "syntax": "<Picture N>",
+        "role": "Concrete target frame, composition or shot-planning anchor; appearance-only provenance does not require a standalone picture definition.",
+        "evidence": [
+          "R:L62-L73"
+        ]
+      },
+      {
+        "syntax": "<Video N>",
+        "role": "Editing source, continuation starting point or whole-video temporal structure.",
+        "evidence": [
+          "R:L78-L88"
+        ]
+      },
+      {
+        "syntax": "<Audio N>",
+        "role": "Copied or referenced standalone audio or enabled synchronized audio track; file sound does not imply enabled audio.",
+        "evidence": [
+          "R:L92-L118"
+        ]
+      }
+    ],
+    "summary_task_types": [
+      "keyframe completion",
+      "reference generation",
+      "video editing",
+      "video continuation",
+      "audio reuse",
+      "audio reference"
+    ],
+    "summary_task_type_evidence": [
+      "R:L132-L153"
+    ],
+    "visual_retention_values": [
+      "fully_preserved",
+      "partially_preserved",
+      "attribute_transfer",
+      "weak_reference"
+    ],
+    "audio_retention_values": [
+      "fully_copy",
+      "partially_copy",
+      "reference",
+      "weak_reference"
+    ],
+    "retention_evidence": [
+      "R:L161-L207"
+    ],
+    "other_notation": [
+      {
+        "syntax": "[Shot N]",
+        "purpose": "Shot label; not a paragraph ID.",
+        "evidence": [
+          "B:L86-L92",
+          "R:L215-L223"
+        ]
+      },
+      {
+        "syntax": "At MM:SS.mmm",
+        "purpose": "Cut time for later shots; first shot is not timestamped.",
+        "evidence": [
+          "B:L86-L89",
+          "R:L218"
+        ]
+      },
+      {
+        "syntax": "(Sx)",
+        "purpose": "Actual global speaker identity; independent from Subject N and Audio N.",
+        "evidence": [
+          "B:L127-L129",
+          "R:L260-L278"
+        ]
+      },
+      {
+        "syntax": "(S1,S2)",
+        "purpose": "Already-numbered speakers speaking or singing together.",
+        "evidence": [
+          "B:L127-L134"
+        ]
+      },
+      {
+        "syntax": "<d>...</d>",
+        "purpose": "Language tag and actual dialogue or lyric content; delivery and identity remain outside.",
+        "evidence": [
+          "B:L129-L142",
+          "R:L274-L278"
+        ]
+      },
+      {
+        "syntax": "<scenetrans>",
+        "purpose": "A line continues across a cut, with explicit audio continuity.",
+        "evidence": [
+          "B:L142",
+          "R:L221"
+        ]
+      },
+      {
+        "syntax": "<cutoff>",
+        "purpose": "Speech is truncated by the end of the video.",
+        "evidence": [
+          "B:L142",
+          "R:L221"
+        ]
+      }
+    ],
+    "verified_format_differences": [
+      {
+        "difference": "FL2VA's prescribed first line omits angle/square brackets around Picture/Shot; I2VA and L2VA use them.",
+        "evidence": [
+          "B:L16-L34"
+        ]
+      },
+      {
+        "difference": "Base style/composition begins inside Shot 1; Ref2VA starts with one or two overall style/type sentences before Shot 1.",
+        "evidence": [
+          "B:L78-L82",
+          "R:L227-L232"
+        ]
+      },
+      {
+        "difference": "Base preserves user words and punctuation verbatim; Ref2VA reference-audio reuse/reperformance preserves words and language but specifies basic punctuation normalization and [unclear] for unintelligible spans.",
+        "evidence": [
+          "B:L129",
+          "R:L274-L276"
+        ]
+      },
+      {
+        "difference": "Video and Audio indices are independent; a source video containing sound does not by itself enable an Audio reference.",
+        "evidence": [
+          "R:L110-L118"
+        ]
+      }
+    ]
+  },
+  "m1_mapping": {
+    "output": "WorkBrief",
+    "model_independent": true,
+    "parent_owner": "M1",
+    "child_ownership": {
+      "M1.1": [
+        "content.intent",
+        "content.constraints",
+        "content.must_keep_events"
+      ],
+      "M1.2": [
+        "content.paragraphs"
+      ],
+      "M1.3": [
+        "content.emotion_energy",
+        "content.motifs"
+      ]
+    },
+    "contribution": "Traceable semantic constraints; no final H3 field ownership or protocol serialization.",
+    "planned_final_compiler": "M11",
+    "m11_implemented_by_this_package": false,
+    "not_owned": [
+      "final input-mode selection",
+      "reference label allocation",
+      "asset or media observations",
+      "retention relationship assignment",
+      "shot and cut timing",
+      "speaker ID allocation",
+      "audio analysis",
+      "final H3 prompt serialization",
+      "generated-media quality certification"
+    ],
+    "creative_scope": "User requirements and the project's pinned case-studies corpus; official prompt examples are protocol evidence only.",
+    "mapping_document": "h3-label-mapping.md"
+  },
+  "license": {
+    "attribution": "MiniMax-AI / MiniMax H3 official project; source documents remain attributed to their original authors.",
+    "official_readme_declaration": {
+      "url": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/README.md#L446-L448",
+      "lines": [
+        446,
+        448
+      ],
+      "agreement_name": "MiniMax H3 Community License Agreement",
+      "linked_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE"
+    },
+    "relicense_official_snapshots": false,
+    "note": "Official source snapshots are not relabeled as MIT or Apache-2.0. The linked agreement includes Documentation in its definitions and states its own scope and distribution conditions. This record preserves the source declaration; model use and deployment are outside the M1 prompt-mapping task.",
+    "agreement_snapshot": {
+      "repository": "MiniMaxAI/MiniMax-H3 on Hugging Face",
+      "commit": "42ed227ee7df40d41602854ae760620d6eb651fe",
+      "source_path": "LICENSE",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/raw/42ed227ee7df40d41602854ae760620d6eb651fe/LICENSE",
+      "format": "Complete web-extracted plain text with retrieval line markers removed; not asserted to be a byte-for-byte raw file.",
+      "extracted_line_count": 94,
+      "sha256_of_utf8_extracted_text": "145ceced55b90ae29f06a174c58588b9df00d3fa86a8fcba75ca57caf6f67d94",
+      "text": "MiniMax H3 COMMUNITY LICENSE AGREEMENT\nMiniMax H3 release date/License date: August 2, 2026.\nThe scope of this License Agreement (this “Agreement”) is expressly limited to the “Applicable Territory” as defined below.\nBy clicking to accept, or by using, reproducing, modifying, distributing, running, or displaying any portion or element of the MiniMax H3 Works (including through any Hosted Services) in any manner, you acknowledge and accept the terms of this Agreement, and this Agreement shall take immediate effect upon the occurrence of such act.\nI.  Definitions\n1. “Acceptable Use Policy” means the policy published by MiniMax in Exhibit A.\n2. “Agreement” means the terms and conditions set forth herein that govern the use, reproduction, distribution, modification, running, and display of the MiniMax H3 Works or any portion or element thereof.\n3. “Applicable Territory” means worldwide, excluding the Excluded Territories.\n4. “Documentation” means the specifications, manuals, and documentation concerning MiniMax H3 that are publicly released by MiniMax.\n5. “Excluded Territories” means the European Union, the United Kingdom, the Republic of Korea and the United States of America.\n6. “MiniMax H3” means the video generation model, together with its software and algorithms, including trained model weights, parameters (including optimizer states), machine-learning model code, inference-supporting code, and other elements thereof made publicly available by Us, as released at https://huggingface.co/MiniMaxAI/MiniMax-H3.\n7. “MiniMax H3 Works” means (i) the Materials, (ii) the Model Derivatives, and (iii) all derivatives thereof.\n8. “Hosted Services” means hosted services provided via application programming interfaces (APIs), web access, or any other electronic or remote means.\n9. “Licensee,” “you,” or “your” means the natural or legal person exercising rights and/or using the MiniMax H3 Works for any purpose in any field of use under this Agreement.\n10. “Materials” means, collectively, MiniMax H3 and the Documentation (and any portion thereof), in each case as made available by MiniMax under this Agreement and proprietary to MiniMax.\n11.\n“Model Derivatives” means all of the following: (i) any modification of MiniMax H3 or any Model Derivative thereof; (ii) any work based on MiniMax H3 or any Model Derivative thereof; or (iii) any other machine learning model created by transferring the patterns of the weights, parameters, operational patterns, or Outputs of MiniMax H3 or any Model Derivative thereof to another model, such that the latter model exhibits behavior similar to MiniMax H3 or its Model Derivatives, including by distillation methods, methods using intermediate data representations, or methods based on training using synthetic-data Outputs generated by MiniMax H3 or its Model Derivatives.\nFor the avoidance of doubt, Outputs are not deemed Model Derivatives.\n12. “Output” means any result of operating or otherwise using MiniMax H3 or any Model Derivatives (including through Hosted Services).\n13. “Third Party” means any natural or legal person that is not under common control with us or with you.\n14. “Including” means “including but not limited to.”\n15. “We,” “Us”  or  “MiniMax” means Nanonoble Pte. Ltd..\nII.  Grant of Rights\nSolely within the Applicable Territory, we grant you a non-exclusive, non-transferable, royalty-free, limited license to use, reproduce, distribute, create derivative works (including Model Derivatives), and modify the Materials in accordance with the terms of this Agreement and the Acceptable Use Policy, based on the intellectual property and other rights owned by MiniMax that are embodied in or used by the Materials.\nYou shall not violate (or encourage or permit any person to violate) any term of this Agreement or the Acceptable Use Policy.\nWe will continuously evaluate the applicable laws, regulations and compliance requirements for the Excluded Territories. In the meantime, should any person in such Excluded Territories be interested in deploying our models, you are welcome to contact us about obtaining a license, which will be granted based on robust controls and guardrails for purposes of complying with the laws, regulations and compliance requirements of the Excluded Territories.\nIII.  Distribution and Redistribution\nSubject to and conditioned on your continuing compliance with this Agreement, including its territorial restrictions and the Acceptable Use Policy, and solely within the Applicable Territory, you may distribute or make available the MiniMax H3 Works to Third Parties within the Applicable Territory; provided, that all of the following conditions are met:\n1. You must provide a copy of this Agreement to all such Third Parties who receive the MiniMax H3 Works or use your products or services related thereto;\n2. You must cause any modified files to carry prominent notices stating that you have modified such files;\n3. You are encouraged to:\n  a. display a notice on any product or service developed using MiniMax H3 indicating that the product or service is “Powered by MiniMax H3”;\n  b. add an AI-generation identifier to files produced using generative AI models including MiniMax H3; and\n  c. publish at least one technical blog post or a public statement describing your experience using MiniMax H3 Works;\n4. All distributions to Third Parties (other than through Hosted Services) must be accompanied by a “NOTICE” text file containing the following notice:\n  “MiniMax H3 is licensed under the MiniMax H3 Community License Agreement, Copyright © 2026 MiniMax. All Rights Reserved.”\nYou may add your own copyright notices on your modifications; except as provided in this Section and in Section V, however, you may not impose additional or different terms and conditions on the use, reproduction, or distribution of your modifications or of any aggregate Model Derivatives, and your use, reproduction, modification, distribution, running, and display of the work must otherwise comply with the terms and conditions of this Agreement (including the provisions concerning the Applicable Territory).\nIf you receive the MiniMax H3 Works from a Licensee as part of an integrated end-user product, the provisions of Section III of this Agreement do not apply to you, but Section V and Exhibit A remain applicable.\nIV.  Additional Commercial Terms\n1. You shall obtain a separate, prior written authorization from MiniMax by contacting api@minimax.io with the subject line “MiniMax H3 licensing - authorization request”, if your commercial products and services generate more than 20 million US dollars (or equivalent in other currencies) in yearly revenue.\n2. You shall prominently display “MiniMax H3”on the user interface of commercial product or service that uses MiniMax H3 or MiniMax H3 Works.\nV. Use Restrictions\n1. Your use of the MiniMax H3 Works must comply with applicable laws and regulations (including trade-compliance laws and regulations) and must comply with the Acceptable Use Policy for the MiniMax H3 Works, which is incorporated into this Agreement by reference.\n2. Before providing access to the MiniMax H3 Works or any product, service, or Hosted Service incorporating them, you must bind each recipient or user to enforceable terms at least as protective as the use restrictions in this Section V and Exhibit A, and you must notify each recipient or user that those restrictions apply.\n3. You may not use the MiniMax H3 Works or any of their Outputs or results to improve any other artificial intelligence model (other than MiniMax H3 or its Model Derivatives).\n4. You may not use, reproduce, modify, distribute, or display the MiniMax H3 Works or any of their Outputs or results outside the Applicable Territory. Any such use outside the Applicable Territory is not authorized by this Agreement.\n5.\nIf you provide or make available to any Third Party a product, service, or Hosted Service that permits the generation of Outputs using MiniMax H3 or any Model Derivative, you must, before making that product or service available and throughout its operation, implement, maintain, test, and periodically review reasonable and proportionate technical and organizational safeguards designed to prevent and mitigate access, uses, and Outputs that violate this Section V or Exhibit A, including uses or Outputs that infringe, misappropriate, or otherwise violate any Third Party’s intellectual-property or other rights.\nYou must not knowingly disable, materially weaken, or permit the circumvention of those safeguards. You must maintain a reasonably accessible mechanism for reporting suspected violations.\nUpon receiving a good-faith report or otherwise obtaining actual knowledge of a violation, you must promptly investigate and take reasonable steps within your control to stop or mitigate the violation, including removing or disabling access to offending content or services and suspending or terminating repeat violators where appropriate. You are responsible for implementing and enforcing these requirements with respect to your products, services, systems, users, and downstream recipients.\nVI.  Intellectual Property\n1. Subject to MiniMax’s rights in the MiniMax H3 Works (and the intellectual property therein), and to your compliance with the terms and conditions of this Agreement, as between you and MiniMax, you will own the derivative works and modifications of the Materials that you have created or had created, as well as any Model Derivatives.\n2. Except for the limited license expressly granted in this paragraph, no trademark license is granted under this Agreement; with respect to MiniMax H3 Works, the Licensee may not use any name or mark owned by or associated with MiniMax or any of its affiliates, except as reasonably and customarily necessary to describe and distribute the MiniMax H3 Works.\nMiniMax hereby grants you a license to use the “MiniMax H3” mark (the “Mark”) within the Applicable Territory solely for the purpose of complying with Section III.3; provided, that you comply with all applicable trademark-protection laws. All goodwill arising from your use of the Mark shall inure to the benefit of MiniMax.\n3. If you bring or assert any suit or other legal proceeding (including a cross-claim or counterclaim in any action) against us or any other natural or legal person alleging that the Materials, any Output, or any portion of the foregoing infringes any intellectual property right or other right owned by you or for which you can obtain a license, all licenses granted to you under this Agreement will terminate as of the date such suit or proceeding is filed.\nYou shall defend, indemnify, and hold us harmless against any Third-Party claim arising out of or related to the use or distribution of the MiniMax H3 Works by you or by any Third Party.\n4. MiniMax claims no rights over the Outputs you generate. You and your users are entirely responsible for the Outputs and any subsequent use thereof.\nVII.  Disclaimers and Limitations of Liability\n1. We have no obligation to support, update, provide training for, or develop any further version of the MiniMax H3 Works, or to grant any license with respect thereto.\n2. UNLESS AND ONLY TO THE EXTENT REQUIRED BY APPLICABLE LAW, THE MINIMAX H3 WORKS AND ANY OUTPUT AND RESULTS THEREFROM ARE PROVIDED “AS IS” WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES OF ANY KIND INCLUDING ANY WARRANTIES OF TITLE, MERCHANTABILITY, NONINFRINGEMENT, COURSE OF DEALING, USAGE OF TRADE, OR FITNESS FOR A PARTICULAR PURPOSE.\nYOU ARE SOLELY RESPONSIBLE FOR DETERMINING THE APPROPRIATENESS OF USING, REPRODUCING, MODIFYING, PERFORMING, DISPLAYING OR DISTRIBUTING ANY OF THE MINIMAX H3 WORKS OR OUTPUTS AND ASSUME ANY AND ALL RISKS ASSOCIATED WITH YOUR OR A THIRD PARTY’S USE OR DISTRIBUTION OF ANY OF THE MINIMAX H3 WORKS OR OUTPUTS AND YOUR EXERCISE OF RIGHTS AND PERMISSIONS UNDER THIS AGREEMENT.\n3.\nTO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MINIMAX OR ITS AFFILIATES BE LIABLE UNDER ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, TORT, NEGLIGENCE, PRODUCTS LIABILITY, OR OTHERWISE, FOR ANY DAMAGES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, CONSEQUENTIAL OR PUNITIVE DAMAGES, OR LOST PROFITS OF ANY KIND ARISING FROM THIS AGREEMENT OR RELATED TO ANY OF THE MINIMAX H3 WORKS OR OUTPUTS, EVEN IF MINIMAX OR ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF ANY OF THE FOREGOING.\nVIII.  Term and Termination\n1. This Agreement is effective from the moment you accept this Agreement or begin accessing the Materials, and, subject to your compliance with its terms and conditions, will remain in effect until terminated as provided herein.\n2. If you breach any term or condition of this Agreement, we have the right to terminate this Agreement. Upon termination, you must immediately cease accessing, using, and distributing the MiniMax H3 Works; delete or destroy all copies within your possession or control; and notify each downstream recipient that your authorization has ended. The obligations in the preceding sentence and Sections VI.1, VI.3, VII, and IX survive termination.\nIX.  Governing Law and Jurisdiction\n1. This Agreement, and any dispute arising out of or related to this Agreement, shall be governed by the laws of the Hong Kong Special Administrative Region of the People’s Republic of China, without regard to its conflict-of-laws rules. The United Nations Convention on Contracts for the International Sale of Goods does not apply to this Agreement.\n2. Any dispute arising out of or related to this Agreement shall be subject to the exclusive jurisdiction of the courts of the Hong Kong Special Administrative Region of the People’s Republic of China with competent jurisdiction. Both MiniMax and the Licensee hereby consent to the exclusive jurisdiction of such courts for any such dispute.\nAdditional Note: Please note that the encoder of MiniMax H3 uses Qwen3-VL-32B, which is licensed under Apache 2.0 License: https://github.com/QwenLM/Qwen3-VL/blob/main/LICENSE.\nExhibit A — Acceptable Use Policy\nMiniMax reserves the right to update this Acceptable Use Policy from time to time.\nLast revised: August 2, 2026.\nMiniMax is committed to promoting the safe and fair use of its tools and features, including MiniMax H3. You agree not to use MiniMax H3, any Model Derivatives, or any Output in any of the following ways:\n1. Use outside the Applicable Territory;\n2. Use in any manner that violates any applicable national, federal, state, local, or international law, regulation, or other legal requirement, or that infringes, misappropriates, or otherwise violates any Third Party’s intellectual-property or other proprietary rights, including through unauthorized reproduction, distribution, public display, public performance, or creation of derivative works;\n3. Use in any manner that may harm yourself or others;\n4. Use to repurpose or distribute the Outputs of MiniMax H3 or any Model Derivatives in order to harm yourself or others;\n5. Use to circumvent or bypass any safety guardrails or safeguards we have implemented;\n6. Use in any manner that exploits or harms, or intends to exploit or harm, minors;\n7. Use to generate or disseminate verifiably false information and/or content for the purpose of harming others or influencing elections;\n8. Use to manufacture or facilitate false online engagement, including fake reviews and other means of false online engagement;\n9. Use to intentionally defame, disparage, or otherwise harass others;\n10. Use to generate and/or disseminate malware (including ransomware) or any other content intended to damage electronic systems;\n11. Use to generate or disseminate personally identifiable information for the purpose of harming others;\n12. Use to generate or disseminate information (including images, code, posts, or articles) in or to any public environment (including via bot tweets or similar means) without clearly and prominently disclosing that such information and/or content is machine-generated;\n13. Use to impersonate another person without that person’s consent, authorization, or lawful right to do so;\n14. Use to make high-risk automated decisions in critical domains that affect individual safety, rights, or well-being (such as law enforcement, immigration, healthcare or medical services, critical-infrastructure management, product-safety components, essential services, credit, employment, housing, education, social scoring, or insurance);\n15. Use in any manner that violates or disregards the social, ethical, or moral standards of other countries or regions;\n16. Use to carry out, assist, threaten, incite, plan, advocate for, or encourage violent extremism or terrorism;\n17. Use for any purpose intended to discriminate against, or harm, individuals or groups based on protected characteristics or categories, online or offline social behavior, or known or predicted personality traits;\n18. Use to intentionally exploit the vulnerabilities of specific populations based on age, social, physical, or psychological characteristics, so as to materially distort the behavior of a member of that group in a manner that causes, or is likely to cause, physical or psychological harm to that person or to others;\n19. Use for military purposes;\n20. Use to engage in any unauthorized or unlicensed professional activity, including but not limited to financial, legal, medical or healthcare, or other professional practice.\n"
+    }
+  },
+  "discovery_pointer": {
+    "repository": "Nuos/H3-h3-prompt-journal",
+    "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+    "path": "docs/caseskill/h3-kanzaki-beach-sword-dance-18-segment/references/h3-official.md",
+    "role": "Derivative pointer used to locate the official sources; not normative authority.",
+    "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/docs/caseskill/h3-kanzaki-beach-sword-dance-18-segment/references/h3-official.md"
+  }
+}

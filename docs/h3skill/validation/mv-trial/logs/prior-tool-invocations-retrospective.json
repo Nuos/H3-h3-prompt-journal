@@ -1,0 +1,92 @@
+{
+  "note": "Retrospective index of actual earlier calls. Not a claim that their raw output or timestamps were captured locally. Subsequent calls are captured by run_trial.py.",
+  "calls": [
+    {
+      "step": 1,
+      "argv": [
+        "cat",
+        "docs/h3skill/h3-work-intent/SKILL.md"
+      ],
+      "capture": "tool result only; read fully; not retained to local file at execution time",
+      "exit_code": 0
+    },
+    {
+      "step": 2,
+      "parallel_cat": [
+        "references/contract-guide.md",
+        "references/intent-constraints.md",
+        "references/paragraph-information.md",
+        "references/emotion-motif.md",
+        "references/audit-and-handoff.md",
+        "case/README.md",
+        "case/prompt.md"
+      ],
+      "capture": "tool result combined and truncated; relevant resources will be re-read with retained subprocess logs",
+      "exit_code": 0
+    },
+    {
+      "step": 3,
+      "argv": [
+        "pwd"
+      ],
+      "capture": "tool result: /workspace/scratch/80b796f55683/h3-work",
+      "exit_code": 0
+    },
+    {
+      "step": 4,
+      "argv": [
+        "rg",
+        "--files",
+        "docs/h3skill/h3-work-intent"
+      ],
+      "capture": "tool result only; inventory retained by this retrospective record",
+      "observation": "Local skill lacks h3-label-mapping.md and exact H3 official protocol source files; these are not claimed as read.",
+      "exit_code": 0
+    },
+    {
+      "step": 5,
+      "argv": [
+        "sed",
+        "-n",
+        "1,260p",
+        "docs/h3skill/h3-work-intent/references/contract-guide.md"
+      ],
+      "capture": "tool result only; read fully",
+      "exit_code": 0
+    },
+    {
+      "step": 6,
+      "action": "Python Path.mkdir created only the assigned output directory",
+      "capture": "tool result only",
+      "exit_code": 0
+    },
+    {
+      "step": 7,
+      "argv": [
+        "sed",
+        "-n",
+        "1,240p",
+        "docs/h3skill/h3-work-intent/assets/request-m1.json"
+      ],
+      "capture": "tool result only; read fully",
+      "exit_code": 0
+    },
+    {
+      "step": 8,
+      "action": "Python listed assigned output directory and confirmed no files yet",
+      "capture": "tool result blank",
+      "exit_code": 0
+    },
+    {
+      "step": 9,
+      "argv": [
+        "sed",
+        "-n",
+        "1,240p",
+        "docs/h3skill/h3-work-intent/references/intent-constraints.md"
+      ],
+      "capture": "tool result only; read fully",
+      "exit_code": 0
+    }
+  ]
+}

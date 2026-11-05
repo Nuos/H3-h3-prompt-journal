@@ -1,0 +1,449 @@
+{
+  "WorkType": {
+    "anyOf": [
+      {
+        "enum": [
+          "drama",
+          "mv",
+          "hybrid"
+        ]
+      },
+      {
+        "$ref": "#/$defs/Unknown"
+      }
+    ]
+  },
+  "RequestInputs": {
+    "type": "object",
+    "properties": {
+      "work_type": {
+        "$ref": "#/$defs/WorkType"
+      },
+      "creative_request": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      },
+      "intent_context": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      },
+      "paragraph_material": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      },
+      "emotion_material": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      },
+      "delivery_use": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      },
+      "notes": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      }
+    },
+    "required": [],
+    "additionalProperties": false
+  },
+  "EmotionEnergy": {
+    "type": "object",
+    "properties": {
+      "emotion_start": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      },
+      "emotion_end": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      },
+      "energy_intent": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      },
+      "source_refs": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "uniqueItems": true,
+        "minItems": 1
+      }
+    },
+    "required": [
+      "emotion_start",
+      "emotion_end",
+      "energy_intent",
+      "source_refs"
+    ],
+    "additionalProperties": false
+  },
+  "Motif": {
+    "type": "object",
+    "properties": {
+      "description": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      },
+      "paragraph_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "uniqueItems": true,
+        "minItems": 1
+      },
+      "development": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      },
+      "source_refs": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "uniqueItems": true,
+        "minItems": 1
+      }
+    },
+    "required": [
+      "description",
+      "paragraph_ids",
+      "development",
+      "source_refs"
+    ],
+    "additionalProperties": false
+  },
+  "Issue": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+      },
+      "code": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "status": {
+        "enum": [
+          "fail",
+          "unverified",
+          "conflict"
+        ]
+      },
+      "message": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "owner_module": {
+        "enum": [
+          "user",
+          "M1",
+          "M1.1",
+          "M1.2",
+          "M1.3",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8",
+          "M9",
+          "M10",
+          "M11",
+          "M12"
+        ]
+      },
+      "field": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "blocking": {
+        "type": "boolean"
+      },
+      "source_refs": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "uniqueItems": true,
+        "minItems": 1
+      }
+    },
+    "required": [
+      "id",
+      "code",
+      "status",
+      "message",
+      "owner_module",
+      "field",
+      "blocking",
+      "source_refs"
+    ],
+    "additionalProperties": false
+  },
+  "Content": {
+    "type": "object",
+    "properties": {
+      "intent": {
+        "$ref": "#/$defs/Intent"
+      },
+      "constraints": {
+        "type": "object",
+        "propertyNames": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "additionalProperties": {
+          "$ref": "#/$defs/Constraint"
+        }
+      },
+      "must_keep_events": {
+        "type": "object",
+        "propertyNames": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "additionalProperties": {
+          "$ref": "#/$defs/MustKeepEvent"
+        }
+      },
+      "paragraphs": {
+        "type": "object",
+        "propertyNames": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "additionalProperties": {
+          "$ref": "#/$defs/Paragraph"
+        }
+      },
+      "emotion_energy": {
+        "type": "object",
+        "propertyNames": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "additionalProperties": {
+          "$ref": "#/$defs/EmotionEnergy"
+        }
+      },
+      "motifs": {
+        "type": "object",
+        "propertyNames": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "additionalProperties": {
+          "$ref": "#/$defs/Motif"
+        }
+      }
+    },
+    "required": [],
+    "additionalProperties": false
+  },
+  "Paragraph": {
+    "type": "object",
+    "properties": {
+      "order": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "function": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      },
+      "audience_information_before": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "uniqueItems": true
+      },
+      "audience_information_after": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "uniqueItems": true
+      },
+      "must_keep_event_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "uniqueItems": true
+      },
+      "information_predecessors": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "uniqueItems": true
+      },
+      "source_refs": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+        },
+        "uniqueItems": true,
+        "minItems": 1
+      },
+      "character_objectives": {
+        "type": "object",
+        "propertyNames": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "additionalProperties": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "$ref": "#/$defs/Unknown"
+            }
+          ]
+        }
+      },
+      "performance_focus": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          {
+            "$ref": "#/$defs/Unknown"
+          }
+        ]
+      }
+    },
+    "required": [
+      "order",
+      "function",
+      "audience_information_before",
+      "audience_information_after",
+      "must_keep_event_ids",
+      "information_predecessors",
+      "source_refs"
+    ],
+    "additionalProperties": false
+  }
+}

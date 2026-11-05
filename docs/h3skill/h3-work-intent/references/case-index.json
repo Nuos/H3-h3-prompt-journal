@@ -1,0 +1,3723 @@
+{
+  "schema_version": "1.0.0",
+  "module_id": "M1",
+  "purpose": "独立包内的案例边界、可执行提炼规则、原文摘录、定位与完整性索引；无需访问兄弟目录即可使用规则。",
+  "repository": "Nuos/H3-h3-prompt-journal",
+  "source_commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+  "case_tree_sha": "70a8a2a632d633f5d532db23cad99c772dc23026",
+  "frozen_plan_case_baseline": "35658d3615d02c6aa6e4221fb223d73b86aa6875",
+  "source_policy": "当前实际读取固定于source_commit；历史计划基线只作追溯，不以本文重写冻结文档。",
+  "evidence_classes": {
+    "F": "原文可确认事实，含作者的结果报告；不等于本轮已复现。",
+    "D": "架构推论与开发提案；本文件从案例提炼的M1规则和接口属于D。",
+    "I": "已有实现与已执行检查；不用于表示推断。",
+    "U": "尚未验证或证据不足。"
+  },
+  "reading_scope": {
+    "case_directories": 29,
+    "october_cases": 15,
+    "primary_cases": 10,
+    "supplementary_cases": 4,
+    "index_only_cases": 15,
+    "text_inventory_files": 98,
+    "full_text_files_read": 17,
+    "selected_passage_files_read": 6,
+    "media_reviewed": false,
+    "workflow_json_executed": false,
+    "all_29_cases_all_text_semantically_audited": false,
+    "scope_note": "先扫描29案README入口，再全文阅读10个主要案例README、两份方法论、3份主要短prompt及2份补充README；其余按定位读取或仅登记元数据。JSON工作流只入文件清单与哈希，不分析/执行。"
+  },
+  "case_roles": [
+    {
+      "case_id": "2026-08-cinematic-character-reveal-two-part",
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part",
+      "priority": "supporting_month",
+      "selection": "primary",
+      "role": "主要：介绍、展开、高潮和最终视觉回收的有限信息结构",
+      "m1_nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE23",
+        "CE24"
+      ],
+      "do_not_generalize": [
+        "30秒拆两段",
+        "13 cuts/half",
+        "教堂",
+        "只用姿态库",
+        "脸大于环境的像素优先级",
+        "超过20秒就必须拆两段的作者概括"
+      ],
+      "source_files": [
+        "case-studies/2026-08-cinematic-character-reveal-two-part/README.md",
+        "case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md",
+        "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md",
+        "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md",
+        "case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-08-dual-subject-speed-contrast",
+      "path": "case-studies/2026-08-dual-subject-speed-contrast",
+      "priority": "supporting_month",
+      "selection": "index_only",
+      "role": "目录索引：双人速度反差候选；动作比例归M4/M7",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "3:1动作数比例",
+        "2人",
+        "指定角色"
+      ],
+      "source_files": [
+        "case-studies/2026-08-dual-subject-speed-contrast/README.md",
+        "case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md",
+        "case-studies/2026-08-dual-subject-speed-contrast/prompt.md",
+        "case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-08-first-person-finger-controlled-dance",
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance",
+      "priority": "supporting_month",
+      "selection": "index_only",
+      "role": "目录索引：手势控制观看关系候选；动作/机位归M4/M5",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "第一人称手机",
+        "单镜头",
+        "手指控制规则"
+      ],
+      "source_files": [
+        "case-studies/2026-08-first-person-finger-controlled-dance/README.md",
+        "case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md",
+        "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md",
+        "case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md",
+        "case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-08-furina-windsurfing-fashion-mv",
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv",
+      "priority": "supporting_month",
+      "selection": "supplementary",
+      "role": "补充：音乐功能先于平均切块；参考用途与高潮相适配",
+      "m1_nodes": [
+        "M1.1",
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE32"
+      ],
+      "do_not_generalize": [
+        "3×15秒",
+        "帆板运动",
+        "最后一段不用Picture3",
+        "Suno后期混音",
+        "9–10秒高潮"
+      ],
+      "source_files": [
+        "case-studies/2026-08-furina-windsurfing-fashion-mv/README.md",
+        "case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md",
+        "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md",
+        "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md",
+        "case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-08-single-subject-three-pose",
+      "path": "case-studies/2026-08-single-subject-three-pose",
+      "priority": "supporting_month",
+      "selection": "index_only",
+      "role": "目录索引：三姿态串联候选；具体姿态与机位归M4/M5",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "15秒",
+        "3姿态",
+        "单镜头",
+        "微型相机设定"
+      ],
+      "source_files": [
+        "case-studies/2026-08-single-subject-three-pose/README.md",
+        "case-studies/2026-08-single-subject-three-pose/README.zh-CN.md",
+        "case-studies/2026-08-single-subject-three-pose/prompt.md",
+        "case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md",
+        "case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-08-sticker-character-kitchen-comedy",
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy",
+      "priority": "supporting_month",
+      "selection": "primary",
+      "role": "主要：恶作剧、后果、夸张反应与喜剧收尾",
+      "m1_nodes": [
+        "M1.1",
+        "M1.2"
+      ],
+      "evidence_ids": [
+        "CE27",
+        "CE28"
+      ],
+      "do_not_generalize": [
+        "10秒",
+        "4个镜头",
+        "贴纸角色",
+        "盐罐无盖",
+        "卡通反应",
+        "无对白无配乐",
+        "穷举禁令的作者偏好"
+      ],
+      "source_files": [
+        "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+        "case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md",
+        "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+        "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md",
+        "case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-08-three-person-orbital-long-take",
+      "path": "case-studies/2026-08-three-person-orbital-long-take",
+      "priority": "supporting_month",
+      "selection": "index_only",
+      "role": "目录索引：遮挡接力观看候选；具体环绕路线归M5/M9",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "3人",
+        "20秒",
+        "一镜到底",
+        "环绕/遮挡参数"
+      ],
+      "source_files": [
+        "case-studies/2026-08-three-person-orbital-long-take/README.md",
+        "case-studies/2026-08-three-person-orbital-long-take/README.zh-CN.md",
+        "case-studies/2026-08-three-person-orbital-long-take/prompt.md",
+        "case-studies/2026-08-three-person-orbital-long-take/prompt.zh-CN.md",
+        "case-studies/2026-08-three-person-orbital-long-take/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-08-water-obstacle-variety-show",
+      "path": "case-studies/2026-08-water-obstacle-variety-show",
+      "priority": "supporting_month",
+      "selection": "primary",
+      "role": "主要：必保情节锚点与明确的执行自由，有限因果与反转",
+      "m1_nodes": [
+        "M1.1",
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE25",
+        "CE26"
+      ],
+      "do_not_generalize": [
+        "20秒",
+        "7个情节锚点",
+        "水上综艺",
+        "固定开场与结尾台词",
+        "模型自由执行的具体范围",
+        "分辨率0.3/0.8/1建议"
+      ],
+      "source_files": [
+        "case-studies/2026-08-water-obstacle-variety-show/README.md",
+        "case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md",
+        "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+        "case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md",
+        "case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-09-action-chain-sock-fan-comedy",
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy",
+      "priority": "supporting_month",
+      "selection": "supplementary",
+      "role": "补充：克制反应与因果链承载喜剧；身体机制交M4/M8",
+      "m1_nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE31"
+      ],
+      "do_not_generalize": [
+        "25个STATE",
+        "左右脚和手的固定职责",
+        "15.08秒",
+        "闻袜/扇风动作",
+        "无表情夸张"
+      ],
+      "source_files": [
+        "case-studies/2026-09-action-chain-sock-fan-comedy/README.md",
+        "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt",
+        "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt",
+        "case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab",
+      "priority": "supporting_month",
+      "selection": "primary",
+      "role": "主要：明确保留项与变奏项、期待—峰值—收束",
+      "m1_nodes": [
+        "M1.1",
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE21",
+        "CE22"
+      ],
+      "do_not_generalize": [
+        "15秒",
+        "124 BPM",
+        "台灯五章",
+        "10个MOMENT",
+        "暗奢/可爱两版",
+        "特定结尾动作"
+      ],
+      "source_files": [
+        "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+        "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt",
+        "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt",
+        "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt",
+        "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt",
+        "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-09-purple-veil-dance-seven-segment",
+      "path": "case-studies/2026-09-purple-veil-dance-seven-segment",
+      "priority": "supporting_month",
+      "selection": "index_only",
+      "role": "目录索引：主动力源差异和歌词权限候选；动作/连续性归M4/M8",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "7段",
+        "87.7秒",
+        "149.5 BPM",
+        "紫衣/面纱",
+        "主动力源不重复"
+      ],
+      "source_files": [
+        "case-studies/2026-09-purple-veil-dance-seven-segment/README.md",
+        "case-studies/2026-09-purple-veil-dance-seven-segment/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-09-snap-lock-editorial-reveal",
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal",
+      "priority": "supporting_month",
+      "selection": "index_only",
+      "role": "目录索引：快切与连续运镜辨析；机位/编辑归M5/M9",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "5.30秒",
+        "快照/硬锁两态",
+        "特定音频时点"
+      ],
+      "source_files": [
+        "case-studies/2026-09-snap-lock-editorial-reveal/README.md",
+        "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md",
+        "case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md",
+        "case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-09-song-style-classical-dance-six-segment",
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment",
+      "priority": "supporting_month",
+      "selection": "index_only",
+      "role": "目录索引：段落差异与接力状态候选；主要由M4/M8/M9承接",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "6段",
+        "75.5秒",
+        "5个Hero",
+        "宋韵水袖",
+        "末段改16:9"
+      ],
+      "source_files": [
+        "case-studies/2026-09-song-style-classical-dance-six-segment/README.md",
+        "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md",
+        "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md",
+        "case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap",
+      "priority": "supporting_month",
+      "selection": "supplementary",
+      "role": "补充：保留因果骨架的外观替换；错误归因不能反转故事",
+      "m1_nodes": [
+        "M1.1",
+        "M1.2"
+      ],
+      "evidence_ids": [
+        "CE29"
+      ],
+      "do_not_generalize": [
+        "3次恶作剧循环",
+        "0.5秒定格",
+        "指定cos角色",
+        "4–8fps抽样",
+        "源片音轨无音乐"
+      ],
+      "source_files": [
+        "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md",
+        "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md",
+        "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md",
+        "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md",
+        "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-advanced-camera-combinations",
+      "path": "case-studies/2026-10-advanced-camera-combinations",
+      "priority": "October",
+      "selection": "index_only",
+      "role": "目录索引：M5摄影组合知识；M1仅向其提供观看目的",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "10组合",
+        "14条段落规则",
+        "NO DEGREE风格约束"
+      ],
+      "source_files": [
+        "case-studies/2026-10-advanced-camera-combinations/README.md",
+        "case-studies/2026-10-advanced-camera-combinations/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "priority": "October",
+      "selection": "primary",
+      "role": "主要：受阻、恢复与未完成状态作为情绪表达方向",
+      "m1_nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE12",
+        "CE13",
+        "CE14",
+        "CE37"
+      ],
+      "do_not_generalize": [
+        "6段",
+        "79.882秒",
+        "105.25 BPM",
+        "宋玉",
+        "冷中性低饱和",
+        "不出现施压者",
+        "指定手动剪辑点"
+      ],
+      "source_files": [
+        "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md",
+        "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-camera-movement-discipline-library",
+      "path": "case-studies/2026-10-camera-movement-discipline-library",
+      "priority": "October",
+      "selection": "index_only",
+      "role": "目录索引：M5/M7响应策略库；不导入成M1全局运镜律",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "提前/同步/滞后各策略",
+        "特定提前秒数",
+        "切镜规则"
+      ],
+      "source_files": [
+        "case-studies/2026-10-camera-movement-discipline-library/README.md",
+        "case-studies/2026-10-camera-movement-discipline-library/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment",
+      "priority": "October",
+      "selection": "primary",
+      "role": "主要：作品五问、段落任务、动作母题及能量发展",
+      "m1_nodes": [
+        "M1.1",
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE01",
+        "CE02",
+        "CE03",
+        "CE04",
+        "CE05",
+        "CE06"
+      ],
+      "do_not_generalize": [
+        "13段",
+        "160.496秒",
+        "90.5 BPM",
+        "单人",
+        "当前版本武器状态",
+        "当前项目不加对白"
+      ],
+      "source_files": [
+        "case-studies/2026-10-classical-wuxia-dance-13-segment/README.md",
+        "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+        "case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-dance-motion-chain-library",
+      "path": "case-studies/2026-10-dance-motion-chain-library",
+      "priority": "October",
+      "selection": "index_only",
+      "role": "目录索引：M4动作知识库；M1只给动作主题与作品目标",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "2–8拍动作链",
+        "动作编号",
+        "旋转预算",
+        "各舞种动作密度"
+      ],
+      "source_files": [
+        "case-studies/2026-10-dance-motion-chain-library/README.md",
+        "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-four-subject-formation-choreography",
+      "path": "case-studies/2026-10-four-subject-formation-choreography",
+      "priority": "October",
+      "selection": "primary",
+      "role": "主要：多人保护、信任和重新集结的段落语义",
+      "m1_nodes": [
+        "M1.1",
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE17",
+        "CE18",
+        "CE33",
+        "CE34"
+      ],
+      "do_not_generalize": [
+        "4人",
+        "14段",
+        "181.560秒",
+        "93.75 BPM",
+        "固定角色",
+        "星芒队形",
+        "各守象限/禁止交叉的README规则"
+      ],
+      "source_files": [
+        "case-studies/2026-10-four-subject-formation-choreography/README.md",
+        "case-studies/2026-10-four-subject-formation-choreography/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-h3-motion-transfer",
+      "path": "case-studies/2026-10-h3-motion-transfer",
+      "priority": "October",
+      "selection": "index_only",
+      "role": "目录索引：M2/M4/M11参考迁移；M1保留替换边界",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "8–9秒作者上限",
+        "9秒/124帧/24FPS表述",
+        "特定ComfyUI工作流"
+      ],
+      "source_files": [
+        "case-studies/2026-10-h3-motion-transfer/README.md",
+        "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+        "case-studies/2026-10-h3-motion-transfer/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-identity-only-half-body-dance-six-segment",
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment",
+      "priority": "October",
+      "selection": "index_only",
+      "role": "目录索引：M2/M5身份权限及构图；M1不重写其属性权限",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "6段",
+        "111 BPM",
+        "半身构图",
+        "两图各属性范围"
+      ],
+      "source_files": [
+        "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+        "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment",
+      "priority": "October",
+      "selection": "primary",
+      "role": "主要：作品定位分叉、观看优先级、段落功能和全曲收束",
+      "m1_nodes": [
+        "M1.1",
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE07",
+        "CE08",
+        "CE09",
+        "CE10",
+        "CE11"
+      ],
+      "do_not_generalize": [
+        "18段/9组",
+        "230.034秒",
+        "139.5 BPM",
+        "海滩",
+        "单人剑舞",
+        "每段一镜到底",
+        "英雄式结尾"
+      ],
+      "source_files": [
+        "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md",
+        "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+        "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-leg-lift-contact-cut-stocking-six-look",
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look",
+      "priority": "October",
+      "selection": "index_only",
+      "role": "目录索引：M8/M9物理事件触发换装；M1提供展示目标",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "5.17秒",
+        "六次点地",
+        "LOOK编号",
+        "永久支撑腿",
+        "接触即切"
+      ],
+      "source_files": [
+        "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+        "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-physical-camera-position-library",
+      "path": "case-studies/2026-10-physical-camera-position-library",
+      "priority": "October",
+      "selection": "index_only",
+      "role": "目录索引：M5物理机位知识；M1输出看什么而非替写机位",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "25类机位",
+        "具体高度/角度/距离"
+      ],
+      "source_files": [
+        "case-studies/2026-10-physical-camera-position-library/README.md",
+        "case-studies/2026-10-physical-camera-position-library/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-sock-showcase-right-entry-three-shot",
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot",
+      "priority": "October",
+      "selection": "supplementary",
+      "role": "补充：展示目标、唯一变化项与原假设被否证后的修正",
+      "m1_nodes": [
+        "M1.1",
+        "M1.2"
+      ],
+      "evidence_ids": [
+        "CE30"
+      ],
+      "do_not_generalize": [
+        "3种袜饰",
+        "3个镜头",
+        "5.9秒",
+        "右入跨步",
+        "切点2.267/4.233秒",
+        "一镜一状态"
+      ],
+      "source_files": [
+        "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+        "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment",
+      "priority": "October",
+      "selection": "primary",
+      "role": "主要：同一视觉主题下的不同段落任务与渐进揭示",
+      "m1_nodes": [
+        "M1.1",
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE15",
+        "CE16",
+        "CE38"
+      ],
+      "do_not_generalize": [
+        "4段/55秒",
+        "泳池/海滩/浴缸",
+        "9:16",
+        "冷中性配色",
+        "固定切点",
+        "水线机位"
+      ],
+      "source_files": [
+        "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+        "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-waterfront-solo-dance-two-segment",
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment",
+      "priority": "October",
+      "selection": "index_only",
+      "role": "目录索引：M7/M8接续与证据核验；M1保留单支舞意图",
+      "m1_nodes": [],
+      "evidence_ids": [],
+      "do_not_generalize": [
+        "24.474秒",
+        "2段",
+        "100 BPM",
+        "固定单镜头",
+        "源片检测阈值"
+      ],
+      "source_files": [
+        "case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+        "case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    },
+    {
+      "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment",
+      "priority": "October",
+      "selection": "primary",
+      "role": "主要：歌词、情绪与视觉授权分离；稳定与漂移形成对比",
+      "m1_nodes": [
+        "M1.1",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE19",
+        "CE20",
+        "CE35",
+        "CE36"
+      ],
+      "do_not_generalize": [
+        "12段",
+        "134 BPM",
+        "面纱",
+        "独舞",
+        "只给S03/S10/S11漂移镜头",
+        "4个Hero",
+        "README中有矛盾的总时长"
+      ],
+      "source_files": [
+        "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+        "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md"
+      ],
+      "review_claim": "仅以reading_status/read_ranges登记实际读取；source_files是文件边界清单，不表示全部语义审计。"
+    }
+  ],
+  "rules": [
+    {
+      "id": "CASE-R01",
+      "nodes": [
+        "M1.1"
+      ],
+      "evidence_ids": [
+        "CE01",
+        "CE07",
+        "CE21",
+        "CE25"
+      ],
+      "evidence_class": "D",
+      "title": "先提取作品目标、必保事项和明确的可调范围",
+      "applicable_when": "创建/修改作品简报，或输入同时含固定与自由项",
+      "instruction": "按当前用户要求保留事实、原台词和必保事件；给案例经验标作用范围，不自动变成硬约束。",
+      "audit": "缺目标保留unverified；相同范围的互斥要求登记冲突，不擅自裁掉一项。",
+      "positive_example": "水上综艺固定七个情节锚点，具体避障方式仍可调整。",
+      "counterexample": "把允许即兴的动作全部固定，或为方便编排删除必保落水事件。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    },
+    {
+      "id": "CASE-R02",
+      "nodes": [
+        "M1.2"
+      ],
+      "evidence_ids": [
+        "CE01",
+        "CE08",
+        "CE15",
+        "CE16",
+        "CE23",
+        "CE24"
+      ],
+      "evidence_class": "D",
+      "title": "为段落分配主要功能与观众信息",
+      "applicable_when": "用户要求分段结构、镜头目的或已有段落审计",
+      "instruction": "每个相关段落说明作用、观众此段应理解/期待/感受的内容以及主要可见信息；可保留次要目标。",
+      "audit": "只有标题、华丽形容词或机位清单而没有功能时标待补；重复功能要解释其有意呼应。",
+      "positive_example": "水线段承担渐进揭示；角色介绍之后转入展开与收束。",
+      "counterexample": "每段均写电影感、唯美、高级，没有信息增量或作用。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    },
+    {
+      "id": "CASE-R03",
+      "nodes": [
+        "M1.1",
+        "M1.2"
+      ],
+      "evidence_ids": [
+        "CE25",
+        "CE26",
+        "CE27",
+        "CE28",
+        "CE29"
+      ],
+      "evidence_class": "D",
+      "title": "保护事件顺序、施动者和后果",
+      "applicable_when": "存在用户给定情节锚点、明确因果或只替换外观的任务",
+      "instruction": "记录必保事件及必要的先后/因果关系；台词原文和对象交给对应模块，不静默重写。",
+      "audit": "遗漏、反转或未经许可替换关键事件为fail；未知前提保持unknown，不伪造事实。",
+      "positive_example": "先倒盐闯祸，随后吃到咸食，再出现夸张反应。",
+      "counterexample": "先出现咸食反应再倒盐，或把贴纸倒盐改成人手倒盐。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    },
+    {
+      "id": "CASE-R04",
+      "nodes": [
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE13",
+        "CE14",
+        "CE16",
+        "CE31"
+      ],
+      "evidence_class": "D",
+      "title": "把情绪意图连接到可观察的表达方向",
+      "applicable_when": "需要情绪变化、表演重心或意图审阅",
+      "instruction": "允许内部记录情绪词，同时给出能让下游实现和审阅的变化方向；具体动作、构图和光色仍由责任模块决定。",
+      "audit": "仅有抽象词不能证明画面可实现；没有实体授权时不把隐喻生成人/物。",
+      "positive_example": "受阻由起身路径中断表现，结尾逐步恢复自主动作路径。",
+      "counterexample": "为表现压迫而凭空加入绑绳/施压者，或把尊严收束改为胜利狂欢。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    },
+    {
+      "id": "CASE-R05",
+      "nodes": [
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE02",
+        "CE21"
+      ],
+      "evidence_class": "D",
+      "title": "用母题的不变特征与变化方式建立呼应",
+      "applicable_when": "当前任务使用动作/视觉母题或审阅长片发展",
+      "instruction": "记录可识别核心、出现位置和变形/回收作用；母题可重复，不强迫每段完全换新。",
+      "audit": "未声明母题可不适用；已有母题被随机替换却声称连贯时列语义问题。",
+      "positive_example": "双臂收拢到斜向展开在后段改变力度和幅度，但保留可辨联系。",
+      "counterexample": "把每段一套互不相关动作误称统一母题，或一概拒绝有意重现。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    },
+    {
+      "id": "CASE-R06",
+      "nodes": [
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE02",
+        "CE06",
+        "CE08",
+        "CE19",
+        "CE22",
+        "CE32"
+      ],
+      "evidence_class": "D",
+      "title": "按作品目的安排发展、反差、留白和收束",
+      "applicable_when": "多段MV、表演片或指定能量变化",
+      "instruction": "给定性走向及其作用，允许回落/休止/对比；不规定必须每段递增，不把定性计划当拍点测量。",
+      "audit": "缺音乐时可继续定性设计；精确音乐对齐保持unverified并交M6/M7。",
+      "positive_example": "高潮前抽稀以建立期待，结尾收束；部分情绪段与稳定段形成对比。",
+      "counterexample": "每段都高潮、每段都漂移，或无音频却声称已精确卡点。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    },
+    {
+      "id": "CASE-R07",
+      "nodes": [
+        "M1.2"
+      ],
+      "evidence_ids": [
+        "CE03",
+        "CE08",
+        "CE09",
+        "CE18"
+      ],
+      "evidence_class": "D",
+      "title": "给观看目标排优先级，向摄影/剪辑交付目的",
+      "applicable_when": "需要镜头任务、观看信息或多个细节同时清晰",
+      "instruction": "明确本段必须看清什么及可让步的次要信息；输出M5/M9的设计目标，不代写其权威机位/镜头数。",
+      "audit": "冲突的观看要求保留并路由，不以增加更多摄影术语掩盖。",
+      "positive_example": "剑路段优先让轨迹可读；道具操作段优先让关键接触可辨。",
+      "counterexample": "每段要求脸、脚、完整剑路和远景同时占据最大清晰度。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    },
+    {
+      "id": "CASE-R08",
+      "nodes": [
+        "M1.1",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE04",
+        "CE07",
+        "CE20"
+      ],
+      "evidence_class": "D",
+      "title": "把歌词/参考的情绪作用与视觉授权分离",
+      "applicable_when": "歌词、主题隐喻或运动参考包含额外人物/物件/地点",
+      "instruction": "明确借用情绪、节奏、动作或环境的哪一层；新增实体和环境替换需由当前要求及M2授权支持。",
+      "audit": "不能因词语出现就新增实体；规则不禁止用户明确授权的歌词可视化。",
+      "positive_example": "歌词提供情绪作用，独舞背景仍按当前空场要求保持。",
+      "counterexample": "歌词出现宾客便增加路人，或借剑路时同时复制敌人和战斗场景。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    },
+    {
+      "id": "CASE-R09",
+      "nodes": [
+        "M1.1"
+      ],
+      "evidence_ids": [
+        "CE07",
+        "CE10",
+        "CE17",
+        "CE25"
+      ],
+      "evidence_class": "D",
+      "title": "案例常量和策略只在当前作用范围生效",
+      "applicable_when": "从案例提炼新任务，或合并多个案例策略",
+      "instruction": "人数、时长、BPM、段数、画幅、镜头模式、人物/场景、口型与声音策略逐项取当前输入；没有统一默认人数限制。",
+      "audit": "检测单人/四人、固定现场/可替景、连续/蒙太奇等策略被无条件叠加。",
+      "positive_example": "同一接口可接单人剑舞与四人保护/重组队形，两者分别带条件。",
+      "counterexample": "把18段、单人、139.5 BPM、一镜到底、无对白设成所有项目必需。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    },
+    {
+      "id": "CASE-R10",
+      "nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE11",
+        "CE14",
+        "CE22",
+        "CE24",
+        "CE26"
+      ],
+      "evidence_class": "D",
+      "title": "区分中段交接与作品结尾的功能",
+      "applicable_when": "存在段末、全片终章或结尾审计",
+      "instruction": "中段说明下一段为何仍有必要；终章说明作品如何完成当前目标。收束方式由作品决定，不强制英雄定格。",
+      "audit": "只因视频到时而停止不能自动视为作品完成；也不能强迫中段做完整音乐终止。",
+      "positive_example": "中段保留待展开信息，末段以克制自主/喜剧反应/视觉回收结束。",
+      "counterexample": "每段都结束整首音乐，或所有作品统一改成胜利式英雄定格。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    },
+    {
+      "id": "CASE-R11",
+      "nodes": [
+        "M1.1",
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE21",
+        "CE29",
+        "CE30"
+      ],
+      "evidence_class": "D",
+      "title": "局部变更保留未授权改动的作品条件",
+      "applicable_when": "已有WorkBrief修订、外观替换或A/B变奏",
+      "instruction": "列出变化项、保留项和受影响段落；按原任务允许范围提案，不顺带重写身份/剧情/时间。",
+      "audit": "检查新增机制是否有来源或明确设计标识；存在权限冲突则返责任方。",
+      "positive_example": "把暗奢改为俏皮时只改获准调性/动作意图，保留原章节骨架。",
+      "counterexample": "替换角色却改掉原因果链；为解决生成问题凭空加入走出清屏动作。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    },
+    {
+      "id": "CASE-R12",
+      "nodes": [
+        "M1.1",
+        "M1.2",
+        "M1.3"
+      ],
+      "evidence_ids": [
+        "CE05",
+        "CE11",
+        "CE30"
+      ],
+      "evidence_class": "D",
+      "title": "原文规则、作者报告、设计推论和实测结论分别登记",
+      "applicable_when": "任意来源提炼或验收声明",
+      "instruction": "源文本的存在为F；本包抽象为D；实际实施/检查才可记I；没有媒体或完整戏剧样本的结论为U。",
+      "audit": "作者说成功、正文写exact或清单打勾不升级为本轮验证。",
+      "positive_example": "输出定性作品简报并注明尚无音频测量与媒体审阅。",
+      "counterexample": "把来源作者稳定声明或格式校验通过写成全片效果已经通过。",
+      "validation_limit": "文本与职责边界；不证明H3实际输出或完整影视剧方法论。"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "CASE-C01",
+      "evidence_ids": [
+        "CE10",
+        "CE37"
+      ],
+      "topic": "跨段连续与独立蒙太奇",
+      "resolution": "由当前作品目标声明关系；M1记录意义，M9定编辑边界，M8按类型检查，不把所有段落强制逐帧相等。",
+      "owners": [
+        "M1",
+        "M9",
+        "M8"
+      ]
+    },
+    {
+      "id": "CASE-C02",
+      "evidence_ids": [
+        "CE33",
+        "CE34"
+      ],
+      "topic": "四人案例README禁交叉与prompt实际中心交叉并存",
+      "resolution": "保留原文差异；不能同时复制为硬规则。M1保留保护/信任/重组意图，M3核对实际路径及许可。",
+      "owners": [
+        "M1",
+        "M3"
+      ]
+    },
+    {
+      "id": "CASE-C03",
+      "evidence_ids": [
+        "CE35",
+        "CE36"
+      ],
+      "topic": "下山README总时长141.845与清单末值181.956不一致",
+      "resolution": "这是来源文本冲突，不擅自选值。记录两个位置，当前输入使用真实清单/音频核对；精确时间由M7负责。",
+      "owners": [
+        "M1",
+        "M7"
+      ]
+    },
+    {
+      "id": "CASE-C04",
+      "evidence_ids": [
+        "CE07",
+        "CE38"
+      ],
+      "topic": "固定原场景与允许替景属于不同创作授权",
+      "resolution": "当前任务选择后才交M2，不把两个案例版本混合成全局权限。",
+      "owners": [
+        "M1",
+        "M2"
+      ]
+    },
+    {
+      "id": "CASE-C05",
+      "evidence_ids": [
+        "CE02",
+        "CE06",
+        "CE19",
+        "CE22"
+      ],
+      "topic": "全片不停与有意留白/静止/能量回落的范围",
+      "resolution": "区分无意空站与有功能的休止；M1定义目的，M4/M7/M9决定具体实现，避免全局禁止静止。",
+      "owners": [
+        "M1",
+        "M4",
+        "M7",
+        "M9"
+      ]
+    },
+    {
+      "id": "CASE-C06",
+      "evidence_ids": [
+        "CE23",
+        "CE24"
+      ],
+      "topic": "作者对超过20秒角色揭示必拆两段的泛化表述",
+      "resolution": "仅保留此案例两种段落功能的设计证据；不将20秒或两段作为后端限制/通用结构公式。",
+      "owners": [
+        "M1",
+        "M9",
+        "M11"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "CE01",
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "lines": [
+        19,
+        29
+      ],
+      "excerpt_lines": [
+        20,
+        24,
+        25
+      ],
+      "excerpt": "每段创作前先回答五个问题：\n- 观众最应该看到什么动作信息？\n- 这一段在整支作品中承担什么功能？",
+      "source_statement": "原文提出每段的舞种、情绪能量、动作重点、观看信息和段落功能五问。",
+      "m1_application": "将作品目标和段落目的放在动作与摄影实现之前；缺项留待确认，不用形容词替代。",
+      "nodes": [
+        "M1.1",
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md#L19-L29"
+    },
+    {
+      "id": "CE02",
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "lines": [
+        71,
+        78
+      ],
+      "excerpt_lines": [
+        72,
+        77
+      ],
+      "excerpt": "动作素材与完整作品之间，差的往往是 Motif：可以反复识别、变形和回收的动作主题。\n不是每段都要比上一段更强，也不是每段都必须换一套新动作。",
+      "source_statement": "原文规定主题可识别、变形、回收，能量不必每段递增。",
+      "m1_application": "母题记录不变特征与变化方式；允许留白、回落和有意重现。",
+      "nodes": [
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md#L71-L78"
+    },
+    {
+      "id": "CE03",
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "lines": [
+        112,
+        128
+      ],
+      "excerpt_lines": [
+        116,
+        127
+      ],
+      "excerpt": "每次硬切或运动都应该带来新的信息，例如揭示支撑脚、展示新的身体线条、表现动作方向变化或强调关键重拍。\n但必须先明确项目采用哪种镜头模式：独立蒙太奇、连续物理镜头，还是分组一镜到底。不能把互相矛盾的剪辑规则同时写进一个方案。",
+      "source_statement": "摄影变化应带来新的动作信息；项目先声明镜头模式。",
+      "m1_application": "写清观众应读取什么，向M5/M9交付目的；不从段落数直接推断镜头或生成任务。",
+      "nodes": [
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md#L112-L128"
+    },
+    {
+      "id": "CE04",
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "lines": [
+        146,
+        151
+      ],
+      "excerpt_lines": [
+        150
+      ],
+      "excerpt": "同样，文字不能因为提到某个意象，就擅自把它变成画面中的实体。歌词可以提供情绪和段落含义，但不自动授权换装、添加道具、生成额外人物或改变场景。",
+      "source_statement": "歌词和文字意象不自动授权画面实体。",
+      "m1_application": "把情绪作用与新增人物/道具/场景授权分开，权限变化转M2。",
+      "nodes": [
+        "M1.1",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md#L146-L151"
+    },
+    {
+      "id": "CE05",
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "lines": [
+        130,
+        136
+      ],
+      "excerpt_lines": [
+        136
+      ],
+      "excerpt": "当节拍数据不完整或首拍相位不确定时，应明确标记这一精度限制，不能把推算的拍点冒充实测结果。",
+      "source_statement": "缺节拍数据或相位不确定时不能把推算当实测。",
+      "m1_application": "M1可给定性能量计划，不得编造实测拍点；精确时间交M7。",
+      "nodes": [
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md#L130-L136"
+    },
+    {
+      "id": "CE06",
+      "case_id": "2026-10-classical-wuxia-dance-13-segment",
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "lines": [
+        160,
+        168
+      ],
+      "excerpt_lines": [
+        167
+      ],
+      "excerpt": "静止本身并不是错误。没有音乐依据、没有动作意图、没有后续衔接的空站，才是问题。",
+      "source_statement": "静止是否有意图、音乐依据和接续比一概禁止静止更重要。",
+      "m1_application": "允许有功能的停顿；负面要求附正向表达方向，具体动链交M4。",
+      "nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md#L160-L168"
+    },
+    {
+      "id": "CE07",
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "lines": [
+        12,
+        37
+      ],
+      "excerpt_lines": [
+        12,
+        27
+      ],
+      "excerpt": "**先设计作品，再写提示词；先明确每个镜头要表达什么，再决定人物做什么、摄影机怎么走、音乐在哪个时间点推动动作。**\n同一个人物、同一首歌，可以形成两种视觉语言。",
+      "source_statement": "同人物与音乐可以有不同作品定位；海滩固定现场与奇幻替景是两套授权。",
+      "m1_application": "先选择当前目标和保留/可改范围，不混合案例的互斥版本。",
+      "nodes": [
+        "M1.1"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md#L12-L37"
+    },
+    {
+      "id": "CE08",
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "lines": [
+        210,
+        231
+      ],
+      "excerpt_lines": [
+        212,
+        220,
+        222
+      ],
+      "excerpt": "全曲分段时，需要给每一段分配明确的功能。\n每段都应该有自己可辨认的动作重点、构图重点和情绪功能。\n**每段只解决一个主要视觉问题。** 例如：",
+      "source_statement": "原文要求每段明确功能，配不同重点和情绪任务。",
+      "m1_application": "为每个段落给主要观看任务和次要目标优先级；一个主要问题不等于只能有一个动作。",
+      "nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md#L210-L231"
+    },
+    {
+      "id": "CE09",
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "lines": [
+        122,
+        130
+      ],
+      "excerpt_lines": [
+        129
+      ],
+      "excerpt": "先确定观众这一刻必须看清什么，再决定摄影机离人物多远。",
+      "source_statement": "景别目标有优先级，脸/脚/剑路/环境不能默认同时最清楚。",
+      "m1_application": "M1输出必须看清的关键信息，M5解决构图。",
+      "nodes": [
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md#L122-L130"
+    },
+    {
+      "id": "CE10",
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "lines": [
+        233,
+        252
+      ],
+      "excerpt_lines": [
+        242
+      ],
+      "excerpt": "**分组只是组织方式，不是强制首尾姿势匹配。**",
+      "source_statement": "分组是组织方式，不强制逐帧首尾姿态匹配。",
+      "m1_application": "先声明段间关系意图，再交M9/M8决定剪辑与连续性检查。",
+      "nodes": [
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md#L233-L252"
+    },
+    {
+      "id": "CE11",
+      "case_id": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "lines": [
+        314,
+        324
+      ],
+      "excerpt_lines": [
+        318,
+        322
+      ],
+      "excerpt": "1. 这一段有没有一个让人记得住的动作？\n5. 最后一个镜头结束时，观众感受到的是一支 MV 完成了，还是单纯视频停止了？",
+      "source_statement": "作品级自检覆盖记忆点、差异、摄影理由、继续观看和作品收束。",
+      "m1_application": "用作品目的审阅段落，不能以结构格式通过代替作品表达判断。",
+      "nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md#L314-L324"
+    },
+    {
+      "id": "CE12",
+      "case_id": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md",
+      "lines": [
+        27,
+        36
+      ],
+      "excerpt_lines": [
+        36
+      ],
+      "excerpt": "| SEG06 傲骨未折 | 65.750–79.882 | 14.132 | 呼吸提沉 → 背身双臂渐升 → 立圆胸腰展开 → 空手致意 → 冷静终止 |",
+      "source_statement": "六段标题和动作机制呈现由受阻到恢复自主的推进。",
+      "m1_application": "用段落功能与过程变化表达意图，不复制六段和原时长作为默认。",
+      "nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md#L27-L36"
+    },
+    {
+      "id": "CE13",
+      "case_id": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md",
+      "lines": [
+        121,
+        134
+      ],
+      "excerpt_lines": [
+        123
+      ],
+      "excerpt": "动作机制：C5 拧倾出胯 → C6 圆场碎步 → C19 低位扫弧与腰圈 → C20 沉跪即起。压迫感来自舞步第一次被截断，身体重心与上身转向失去同步。",
+      "source_statement": "压迫通过动作被截断及重心/上身失配表现，原文不授权新增施压者。",
+      "m1_application": "情绪写成待实现的可观察方向；不能因“压迫”自动添人或拘束道具。",
+      "nodes": [
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md#L121-L134"
+    },
+    {
+      "id": "CE14",
+      "case_id": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md",
+      "lines": [
+        395,
+        408
+      ],
+      "excerpt_lines": [
+        397
+      ],
+      "excerpt": "动作机制：C1 呼吸提沉 → C34 背身双臂渐升 → C3 立圆与胸腰展开 → C30 空手致意与收回 → C14 收势改成冷静正面终止式。恢复自主路径，不变成胜利庆典，也不重复低位挣扎。",
+      "source_statement": "结尾恢复自主路径，但明确不是胜利庆典或继续低位挣扎。",
+      "m1_application": "结尾可选择克制、尊严、收束，不强制高能英雄胜利式。",
+      "nodes": [
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md#L395-L408"
+    },
+    {
+      "id": "CE15",
+      "case_id": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "lines": [
+        46,
+        59
+      ],
+      "excerpt_lines": [
+        48
+      ],
+      "excerpt": "目标：用两个完整镜头建立夏日 MV 的视觉风格。",
+      "source_statement": "第一段目的明确为建立夏日MV视觉风格。",
+      "m1_application": "写段落任务，而不是只罗列机位名称。",
+      "nodes": [
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md#L46-L59"
+    },
+    {
+      "id": "CE16",
+      "case_id": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "lines": [
+        76,
+        109
+      ],
+      "excerpt_lines": [
+        92,
+        96
+      ],
+      "excerpt": "这一段的重点是镜头语言切换：开场依靠固定机位和身体遮挡建立冲击，后续通过常规跟拍、人物转身和水面空间恢复流动感。\n目标：把水面本身变成镜头语言，而非反复切换正面、侧面和俯拍。**整段一镜到底，00:05 与 00:10 只是同一镜头内的连续推进阶段，不是切点。**",
+      "source_statement": "第三段以机位切换恢复流动感，第四段以水线/泡沫形成渐进揭示。",
+      "m1_application": "同主题可承担不同观看任务；阶段变化不自动等于切镜。",
+      "nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md#L76-L109"
+    },
+    {
+      "id": "CE17",
+      "case_id": "2026-10-four-subject-formation-choreography",
+      "path": "case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "lines": [
+        30,
+        62
+      ],
+      "excerpt_lines": [
+        30
+      ],
+      "excerpt": "Story of the segment: protection, trust and re-assembly. The formation makes a full round trip — pairs split into crossing protection arcs, meet at the center, exchange layers, and regroup into a four-line starburst — while every cut keeps the same four locked identities.",
+      "source_statement": "四人段落明写保护、信任、重新组装的意图，并区分四人动作性格。",
+      "m1_application": "M1接受多人角色关系目标；不把单人案例的人数与表演风格设为默认限制。",
+      "nodes": [
+        "M1.1",
+        "M1.2",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-four-subject-formation-choreography/prompt.md#L30-L62"
+    },
+    {
+      "id": "CE18",
+      "case_id": "2026-10-four-subject-formation-choreography",
+      "path": "case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "lines": [
+        64,
+        86
+      ],
+      "excerpt_lines": [
+        66
+      ],
+      "excerpt": "Physically grounded, fast, real-time camera operation. Cuts happen only when a new visual fact is revealed (a new member, a new formation, an action peak). The camera never substitutes for the dance.",
+      "source_statement": "新成员、新队形或动作峰值作为切镜所揭示的新信息。",
+      "m1_application": "把信息增量与段落目的交给摄影/编辑消费者，不自行编写其路径和切点。",
+      "nodes": [
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-four-subject-formation-choreography/prompt.md#L64-L86"
+    },
+    {
+      "id": "CE19",
+      "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "lines": [
+        15,
+        20
+      ],
+      "excerpt_lines": [
+        19
+      ],
+      "excerpt": "5. **醉酒模式滥用风险**:第一视角失衡运镜若全片使用会失去质感——**只给 S03/S10/S11 三个情绪漂移段**(母规则全文内联进这三段),其余 9 段精确稳定相机,**稳定与失醇的对比**才让醉意被读出来;",
+      "source_statement": "作者记录全片漂移镜头会削弱对比，只在指定情绪段应用。",
+      "m1_application": "情绪差异来自局部策略的对比，不把一个案例风格覆盖所有段落。",
+      "nodes": [
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md#L15-L20"
+    },
+    {
+      "id": "CE20",
+      "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "lines": [
+        46,
+        56
+      ],
+      "excerpt_lines": [
+        52
+      ],
+      "excerpt": "每段 LYRIC_RELATION = ①锚点层(歌词原句+本地时间,辅助对口型/节奏)+ ②情绪弧线(动作只表达情绪,不演绎内容)+ ③面纱句(口鼻在纱下随唱句轻微起伏,veil never comes off)。锚点引文自带负句:引文永不向画面添加任何人/物。",
+      "source_statement": "歌词按时间锚、情绪弧线和穿戴物状态区分，引用不添加画面人/物。",
+      "m1_application": "M1承接情绪意图；M6管歌词/音轨用途，M2管视觉授权。",
+      "nodes": [
+        "M1.1",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md#L46-L56"
+    },
+    {
+      "id": "CE21",
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+      "lines": [
+        14,
+        30
+      ],
+      "excerpt_lines": [
+        18,
+        30
+      ],
+      "excerpt": "真正的需求是一次**受控变奏（controlled variation）**：保留可复用的机制（Creative DNA），只替换表层的情绪、音色和结尾那个最大动作。这个案例展示了如何让两版共享同一副骨架、只在三个指定层面分叉，从而低成本产出气质迥异但节奏同样精准的成片。\n只在以下三层分叉（见对照表）：**音乐调性与配器、中段若干下身动作、结尾 MOMENT 10 的 Hero 机制**。",
+      "source_statement": "A/B变奏保留节奏骨架，只在明确层面分叉。",
+      "m1_application": "变更任务先列保留项和许可变化，避免改情绪时连带改剧情/身份/时间。",
+      "nodes": [
+        "M1.1",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md#L14-L30"
+    },
+    {
+      "id": "CE22",
+      "case_id": "2026-09-editorial-lamp-rhythm-fashion-ab",
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+      "lines": [
+        52,
+        79
+      ],
+      "excerpt_lines": [
+        61,
+        62
+      ],
+      "excerpt": "| 11.613 | bar 6 | **OFF** | D 悬停期待 temporal vacuum（11.613–13.548） |\n| 13.548 | bar 7 | **ON** | E 最终 Hero impact（13.548–15.000，3 拍尾） |",
+      "source_statement": "五章中有期待、最终峰值和最终静态收束。",
+      "m1_application": "能量曲线允许抽稀、期待与收束；具体BPM/灯点不进入M1。",
+      "nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md#L52-L79"
+    },
+    {
+      "id": "CE23",
+      "case_id": "2026-08-cinematic-character-reveal-two-part",
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.md",
+      "lines": [
+        28,
+        49
+      ],
+      "excerpt_lines": [
+        46
+      ],
+      "excerpt": "| Non-repetition of shots | (implicit — first half) | \"Do not repeat Part 1's exact shot mechanisms\" + an explicit avoidance list |",
+      "source_statement": "两段有不同揭示职责，第二段避免重复第一段主要机制。",
+      "m1_application": "段落承担不同信息功能；“超过20秒必须拆两段”仅作者概括，不升级为通用规则。",
+      "nodes": [
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-cinematic-character-reveal-two-part/README.md#L28-L49"
+    },
+    {
+      "id": "CE24",
+      "case_id": "2026-08-cinematic-character-reveal-two-part",
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md",
+      "lines": [
+        10,
+        21
+      ],
+      "excerpt_lines": [
+        12,
+        13
+      ],
+      "excerpt": "- **Part 1（0–15s）** — 建立角色、神秘出场、逐步展示姿态\n- **Part 2（15–30s）** — 延续视觉语言，节奏加快，姿态蒙太奇进入高潮与 Hero 收尾",
+      "source_statement": "原提示词分别安排建立/神秘出场和展开/高潮/收尾。",
+      "m1_application": "可用于有限揭示与回收任务；不能证明完整戏剧理论或长篇人物弧线。",
+      "nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md#L10-L21"
+    },
+    {
+      "id": "CE25",
+      "case_id": "2026-08-water-obstacle-variety-show",
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.md",
+      "lines": [
+        21,
+        33
+      ],
+      "excerpt_lines": [
+        21,
+        23
+      ],
+      "excerpt": "Lock the **story beats**. Free the **execution**.\nThe prompt specifies only seven non-negotiable plot anchors:",
+      "source_statement": "七个必保情节锚点与其间明确的自由执行范围并存。",
+      "m1_application": "M1分开必保事件与可调实现，不用过度细化覆盖用户允许的创作自由。",
+      "nodes": [
+        "M1.1",
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-water-obstacle-variety-show/README.md#L21-L33"
+    },
+    {
+      "id": "CE26",
+      "case_id": "2026-08-water-obstacle-variety-show",
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+      "lines": [
+        111,
+        153
+      ],
+      "excerpt_lines": [
+        117,
+        125,
+        153
+      ],
+      "excerpt": "For a brief moment, she appears extremely close to completing the challenge.\nAt the moment she appears close to succeeding, a large padded mechanical game-show obstacle unexpectedly swings from the side and physically strikes her upper body.\nEnd on her reaction.",
+      "source_statement": "接近成功、侧击、落水、反应台词按因果顺序出现。",
+      "m1_application": "记录事件依赖和观众预期变化，原台词保留并交M6；精确动作交M4。",
+      "nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-water-obstacle-variety-show/prompt.md#L111-L153"
+    },
+    {
+      "id": "CE27",
+      "case_id": "2026-08-sticker-character-kitchen-comedy",
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+      "lines": [
+        45,
+        101
+      ],
+      "excerpt_lines": [
+        55,
+        87,
+        101
+      ],
+      "excerpt": "<Subject 1> finishes pouring and makes a mischievous facial expression.\nAt 00:08.000, <Subject 1> suddenly freezes.\nThe camera remains in the first-person viewpoint and holds on the final comedic composition until 00:10.000.",
+      "source_statement": "倒盐恶作剧后有被喂咸食和夸张喜剧反应。",
+      "m1_application": "支持短事件链的意图/后果/结尾功能，不扩写为完整戏剧方法论。",
+      "nodes": [
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md#L45-L101"
+    },
+    {
+      "id": "CE28",
+      "case_id": "2026-08-sticker-character-kitchen-comedy",
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+      "lines": [
+        37,
+        48
+      ],
+      "excerpt_lines": [
+        37
+      ],
+      "excerpt": "Division of labor between the two \"actors\" is also strict: the realistic human hands do the cooking and the punishment; the sticker does the mischief and the suffering. The hands \"do not touch or operate the salt jar\" — the pour belongs to the character.",
+      "source_statement": "真实人手与贴纸的表演职责有明确分工。",
+      "m1_application": "保护施动者、后果对象和喜剧机制，角色替换不得倒转因果归属。",
+      "nodes": [
+        "M1.1",
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-sticker-character-kitchen-comedy/README.md#L37-L48"
+    },
+    {
+      "id": "CE29",
+      "case_id": "2026-09-three-person-prank-freeze-gag-cos-swap",
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md",
+      "lines": [
+        16,
+        33
+      ],
+      "excerpt_lines": [
+        33
+      ],
+      "excerpt": "The **cos swap** was done last, under a \"skin-only\" contract: timestamps, actions, camera, freeze points and sound structure are frozen; only appearance, costume, and the wet-hair/fabric physics they touch are rewritten. A compatibility check handled the one real dependency — the flip-up visor the gags rely on — and character-specific props (lab gear, drawn duty equipment) were explicitly barred from frame so the setting never changes.",
+      "source_statement": "案例说明外观替换保留事件、时刻、镜头、定格与声音结构。",
+      "m1_application": "M1记录被授权的替换范围；不把替换造型扩大为重写情节。",
+      "nodes": [
+        "M1.1",
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md#L16-L33"
+    },
+    {
+      "id": "CE30",
+      "case_id": "2026-10-sock-showcase-right-entry-three-shot",
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+      "lines": [
+        11,
+        30
+      ],
+      "excerpt_lines": [
+        14,
+        30
+      ],
+      "excerpt": "2. **\"左出右进\"过度设计**：为解决生成时的两人同框，设计了\"走出清屏+空帧停留\"——但原片人物**从不走出画框**，被切走的是 pose 中的她；左出右进是凭空发明的机制；\n主服装（红漆皮束身裙）、场景（厨房）、机位（固定正面全身、零运镜）全程不变——**唯一变量（袜饰）**在镜头间切换，视线被结构本身引导。",
+      "source_statement": "作者撤销左出右进的无依据机制，并以唯一变化项引导观看。",
+      "m1_application": "明确区分来源事实、旧假设与新设计；保留展示目标，不能填补无证据事件。",
+      "nodes": [
+        "M1.1",
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md#L11-L30"
+    },
+    {
+      "id": "CE31",
+      "case_id": "2026-09-action-chain-sock-fan-comedy",
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/README.md",
+      "lines": [
+        90,
+        103
+      ],
+      "excerpt_lines": [
+        94
+      ],
+      "excerpt": "3. **喜剧靠编排与克制反应，不靠做鬼脸**：脸始终保持古风优雅稳定，情绪主要由**眼神**（视线方向、聚焦、微眯、凝视切换）和捂嘴手承担；袜子是真实布料、动作是真实发力链，反差本身就是笑点。",
+      "source_statement": "克制眼神和因果反差承担喜剧，不依赖夸张鬼脸。",
+      "m1_application": "情绪有多种可观察载体，具体机制由M4实现。",
+      "nodes": [
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-action-chain-sock-fan-comedy/README.md#L90-L103"
+    },
+    {
+      "id": "CE32",
+      "case_id": "2026-08-furina-windsurfing-fashion-mv",
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.md",
+      "lines": [
+        48,
+        62
+      ],
+      "excerpt_lines": [
+        50
+      ],
+      "excerpt": "The 15-second timeline is not divided evenly. It's divided by **musical function**:",
+      "source_statement": "原案按音乐功能而非平均时长划分段落。",
+      "m1_application": "段落任务先于机械等分；有真实音乐输入时再由M6/M7提供时间依据。",
+      "nodes": [
+        "M1.2",
+        "M1.3"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-furina-windsurfing-fashion-mv/README.md#L48-L62"
+    },
+    {
+      "id": "CE33",
+      "case_id": "2026-10-four-subject-formation-choreography",
+      "path": "case-studies/2026-10-four-subject-formation-choreography/README.md",
+      "lines": [
+        76,
+        82
+      ],
+      "excerpt_lines": [
+        78,
+        79
+      ],
+      "excerpt": "- **Own quadrant only.** Dancers adjust within their lane — half-steps, never walks;\n  no center-line crossing, no passing in front of another body.",
+      "source_statement": "README要求各守象限且禁止跨中线。",
+      "m1_application": "与同案prompt交叉队形冲突；不得两条同时升为全局规则。",
+      "nodes": [
+        "M1.1"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-four-subject-formation-choreography/README.md#L76-L82"
+    },
+    {
+      "id": "CE34",
+      "case_id": "2026-10-four-subject-formation-choreography",
+      "path": "case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "lines": [
+        77,
+        86
+      ],
+      "excerpt_lines": [
+        79,
+        82
+      ],
+      "excerpt": "- IN (from SEG 09): loose crossing diagonals; S1 mid-turn, S3 inward, S2/S4 crossing the center gap.\n- k186–k188: layer exchange — S1/S2 swap front/back layers while S3 counter-twists; then S3 leads a rotation relay (S1 follows same direction, S2/S4 step outward).",
+      "source_statement": "同案prompt明确穿过中心以及前后换层。",
+      "m1_application": "M1保留保护/重组意图，具体合法路线由M3核对。",
+      "nodes": [
+        "M1.1"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-four-subject-formation-choreography/prompt.md#L77-L86"
+    },
+    {
+      "id": "CE35",
+      "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "lines": [
+        3,
+        3
+      ],
+      "excerpt_lines": [
+        3
+      ],
+      "excerpt": "> 一支 141.845 秒的古风独舞(BPM 134.0,40 句唱词),切成 12 段分别生成再拼接。**双图分权参考**:PICTURE 1 = 正面全身照(**无头部信息**,只管正面服装)、PICTURE 2 = 三视图(只管脸部+背部,人物佩戴**只遮口鼻的半纱面纱**);分段 AUDIO 1 锁节拍网格(BPM 134.0 / beat 0.4478s / 首拍 0.441s)。编舞全部用**链记法**(入态→拍数→出态),段间用**特写续动转场**(每段 SHOT 01 = 上段结尾仍在运动的身体部位),Hero ×4 + 地面技术套件 + 运镜双模式(稳定/醉酒)。**本案例最大教训:一切规则拼进每一段,不存在全局段。**",
+      "source_statement": "导语列总长141.845秒。",
+      "m1_application": "这是原文参数，未实测；与另一处总时间并列待核对。",
+      "nodes": [
+        "M1.1"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md#L3-L3"
+    },
+    {
+      "id": "CE36",
+      "case_id": "2026-10-xiashan-veiled-solo-twelve-segment",
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "lines": [
+        58,
+        62
+      ],
+      "excerpt_lines": [
+        62
+      ],
+      "excerpt": "3. 12 段按切割清单时间轴(0.000 / 12.860 / 25.666 / … / 181.956)拼接,切点即特写匹配剪辑。",
+      "source_statement": "提交工作流的清单末值出现181.956。",
+      "m1_application": "不自动选择/改写总长；精确时间冲突交M7核对原素材清单。",
+      "nodes": [
+        "M1.1"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md#L58-L62"
+    },
+    {
+      "id": "CE37",
+      "case_id": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md",
+      "lines": [
+        97,
+        103
+      ],
+      "excerpt_lines": [
+        101
+      ],
+      "excerpt": "**段间：必须保持动作连续。** 段落之间不是每次重摆初始姿势——上一段结尾的手腕方向、脚下重心、身体朝向或眼神落点，应成为下一段的动作起点。把两次生成的源片手动拼接时，优先寻找这样的剪辑点：同一只手沿相同方向继续移动；身体转向保持相同趋势；头发或衣袖掠过镜头短暂遮挡接缝；重心正从一个支撑点转到另一个；摄影机正处于横移、下降或追随中。",
+      "source_statement": "白凤案例明确要求段间承接上一段运动状态。",
+      "m1_application": "这是当前连续舞蹈任务的策略；不能覆盖海滩剑舞允许的独立蒙太奇组织。",
+      "nodes": [
+        "M1.2"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md#L97-L103"
+    },
+    {
+      "id": "CE38",
+      "case_id": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "lines": [
+        30,
+        44
+      ],
+      "excerpt_lines": [
+        37
+      ],
+      "excerpt": "其中最重要的一点是：参考图负责锁定人物，不代表必须复制参考图里的姿势、背景和摄影机角度。",
+      "source_statement": "夏日MV将人物身份和重设计的场景/姿势/机位分开。",
+      "m1_application": "作品目标决定需要的权限提案，具体资产权限交M2。",
+      "nodes": [
+        "M1.1"
+      ],
+      "source_evidence_class": "F",
+      "derived_application_class": "D",
+      "media_validation": "unverified",
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md#L30-L44"
+    }
+  ],
+  "source_inventory": [
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "72c4bfeedf2eb966d05e44515128b620a219b5e1",
+      "sha256": "26f2a637765712b3456c1bb94aabbf53b3c6bc05c8f359a2b752967a5be008f8",
+      "bytes": 8973,
+      "lines": 109,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          109
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-cinematic-character-reveal-two-part/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "6a77d28f7032e60ee8bc7ae192d99c02e47655e1",
+      "sha256": "59e6653d0a5be8f978d09ea3c657089a4fff6aa0591024758623fe749b852ea5",
+      "bytes": 26476,
+      "lines": 415,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "5cb92433398250390c00dad804bbc3804550e897",
+      "sha256": "662a755d3abb0f985ee5c273aac6a9943c559cac13bc8d4d6ec11be559d8c226",
+      "bytes": 18328,
+      "lines": 653,
+      "reading_status": "selected_passages_read",
+      "read_ranges": [
+        [
+          1,
+          27
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "e39931e9262ed9599d84fddbccf3155f6ca75e29",
+      "sha256": "7acbdc272d9d7f01b0f1baaab693198c6fb04e20a5cfd79401f4fee451b476f6",
+      "bytes": 71417,
+      "lines": 1869,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "b44081b88877ae7d8f97ce6424bf92c92c13f17c",
+      "sha256": "c523ba2fa3ff1ee8cc79e4b75d4cce7fc9c66abe553552aa8d3498d17e3ddea5",
+      "bytes": 13734,
+      "lines": 127,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "4672e2c8969cf78cc7ae9c84f4060d5ce293b6eb",
+      "sha256": "03a82e79d8479c6ebc80ded8347f8522a96a64cb8f56e0a76c1a129f44e5bc25",
+      "bytes": 3642,
+      "lines": 70,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          22,
+          22
+        ],
+        [
+          37,
+          37
+        ],
+        [
+          39,
+          39
+        ],
+        [
+          43,
+          43
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-dual-subject-speed-contrast/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "883bccae513bb798c4fb868bf19aabdc12a1380a",
+      "sha256": "e2ddd770ce690d4561b71cfd8f48d62b3b62924008705a15ad3b3f1ae6b25513",
+      "bytes": 12645,
+      "lines": 247,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "5643ee691a8e81250057e3a04ca564c8f4c28971",
+      "sha256": "60461d26bbfc22ddf6aad4e75ecfae1f75a8ed674460a13189b22f72db6eafe3",
+      "bytes": 2653,
+      "lines": 171,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-dual-subject-speed-contrast/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "9242adcb39f1b9c837ea8ce3be3491eadee83c3b",
+      "sha256": "97e486a8dbaf52c0025317f2aaa8e4f26bd249c5dda63e587413463ac9e30b1e",
+      "bytes": 12760,
+      "lines": 109,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "eb24f9095c1512b03d423354161c7db656dd7bff",
+      "sha256": "ba7ef1911f9d93901318f2784b9ca7c8fa0fb0141536933c16ccb4dd7b9b71b5",
+      "bytes": 7128,
+      "lines": 109,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          26,
+          26
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-first-person-finger-controlled-dance/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "8510ce889dd55118aa65ad8ae78562d71ece5aae",
+      "sha256": "85e125d85f8a0ab0303611a459f8d6890453d8608889f2fce1fd738d91aaf790",
+      "bytes": 19743,
+      "lines": 334,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "b60d367e04180dbf99976c451223c57a6fc58f5f",
+      "sha256": "68769f007f1ceaf0b3c5d20be07c4298d2c1ea827b59913e1fe6d2904613b1c2",
+      "bytes": 6580,
+      "lines": 67,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-first-person-finger-controlled-dance/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "1bea74520f7c00446f2c3059c77b8fe54356f75b",
+      "sha256": "4abfdbb588760ddf6896a0af277b85827157058815f04d326aa4cc07be483f65",
+      "bytes": 18406,
+      "lines": 302,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "531b7e9a5ecd744adb443cde1d0426029bed441d",
+      "sha256": "68a5945faff4822892e725bf8c07f9cc08cf2c60dafb853010f1def84c775b6f",
+      "bytes": 11341,
+      "lines": 103,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "fb114c0db8112ad8d72616f8d92a7e0f8c7dbb27",
+      "sha256": "9ea0ed0ef4f10175296003c30c9965da8713e03d7c422a641da5e9a0e720c09a",
+      "bytes": 8448,
+      "lines": 140,
+      "reading_status": "selected_passages_read",
+      "read_ranges": [
+        [
+          1,
+          85
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-furina-windsurfing-fashion-mv/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "1908c33251798ce7dba748b2545e36be5269b0dd",
+      "sha256": "395bdf407961cf9e2a2ec907d8c1b7829e369e2dd66505d43e5a3fa005c541ae",
+      "bytes": 19937,
+      "lines": 397,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "d70f7a2d8f6af02914d9bb0b9344173da8cb4b84",
+      "sha256": "615805834349a4446429ac9422222272b03e418133dc7528f46f30a8756a7bc6",
+      "bytes": 26514,
+      "lines": 1465,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "456aaec92703f8ef4e4034db690d45457be4ab8b",
+      "sha256": "d0187e9ebb881642343c610fae823285cb4165867fc4826a0874096d35fa4eac",
+      "bytes": 43730,
+      "lines": 869,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "768687db0a705a353c6a3a1c2823919a6c217061",
+      "sha256": "faffb0713e48175301ae5656bbed1103b1beffa163963b7f2a27d67e3e778252",
+      "bytes": 11567,
+      "lines": 107,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "a397a5e0e672904eb80e370ae6ac560a5e5133cd",
+      "sha256": "fd9275b829033318e3a444b0e16fcd984f9f394bf1776ce2b7c7aee50f869421",
+      "bytes": 4954,
+      "lines": 85,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          35,
+          35
+        ],
+        [
+          37,
+          37
+        ],
+        [
+          41,
+          41
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-single-subject-three-pose/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/README.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "8d974ae50506cfe61b707a97199ea1f3cdde99cc",
+      "sha256": "1f496302d0813d94415b32f9f18d354fc69c58f6553cab47bdf21a004f88647c",
+      "bytes": 14281,
+      "lines": 266,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-single-subject-three-pose/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "500cf634e40a302ef36ac505d7fa2500f0cc5630",
+      "sha256": "d7a0ec8cfb9cd2e4d241774852d064cabe3254bb56ccf9afc6ecdf1429334615",
+      "bytes": 16750,
+      "lines": 879,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-single-subject-three-pose/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "28e6cc42c0510fdf352dbdea31cd33629277da07",
+      "sha256": "8083f69d66398fceb847ecd83074dfeba6977de1db3edc50a2c1b6c18942b19e",
+      "bytes": 47909,
+      "lines": 1178,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "ca42d3b76e2c8493c535c22ed507554b3a980b92",
+      "sha256": "58081c91e536f3c502dd9694bc9e083c69c11cb97129f26f4ef04d3eb48af5e7",
+      "bytes": 11916,
+      "lines": 107,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "07ccc6cada79700019656c65000e1ff185ab1ccb",
+      "sha256": "88e8bbec07a740b63e7f68417bb1e555031e3c33dacada45c625732b9a5a0907",
+      "bytes": 5869,
+      "lines": 93,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          93
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-sticker-character-kitchen-comedy/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "5290ad33edc00bea3e1ae24e3305ae1b2601e869",
+      "sha256": "e96affe636ae6fee6dad25daadbe1906ec36d097bc8ef4858b634c8eac4137da",
+      "bytes": 15559,
+      "lines": 287,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "07719668193e6b82226f1380399f0e576c831273",
+      "sha256": "cb0dd901e8162ecb1bfbd89475df2648dcbe8eeb34821cdb9726228d1c09f46e",
+      "bytes": 4666,
+      "lines": 109,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          109
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "c56419699287a9e074debad5ddfc7242df73f5d9",
+      "sha256": "27301d4d415043c298487e5c6f6cbcbda5eb9de98e841acdf683956f3e249764",
+      "bytes": 13742,
+      "lines": 369,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "bca11db0afd44a9a12e1b32b08c833d2a67d08f1",
+      "sha256": "557648e76f7319cd4dae52878bb62f5b30055a9bdeb66f5e04b78c316a5505a1",
+      "bytes": 11158,
+      "lines": 107,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "be69aaa3305c0a7859548f5dd6ee2729fe32866b",
+      "sha256": "1d6bc8411a168725010f7a6d93b194398e3e0df276a04afb00554815c2cd8abb",
+      "bytes": 3603,
+      "lines": 74,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          31,
+          31
+        ],
+        [
+          33,
+          33
+        ],
+        [
+          37,
+          37
+        ],
+        [
+          43,
+          43
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-three-person-orbital-long-take/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/README.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "2c78fa8d8c1dff078a32f656ba0d52ed5a4a425d",
+      "sha256": "c97b7bbcb94fc5788b6875da4469b60caac4ad6a25ff4dec21b293eff379e673",
+      "bytes": 8760,
+      "lines": 194,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-three-person-orbital-long-take/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "85cd5ebdbb4ce5979ade026607b00822c949d3fc",
+      "sha256": "262915229f84cd187353174c68806c04949168b6c686efa36931cb6340c8faaf",
+      "bytes": 29240,
+      "lines": 1413,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-three-person-orbital-long-take/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/prompt.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "2c55a4c1372c8350da7d744a05a07cc857edef9a",
+      "sha256": "c5d810b8f46b626753f101e164e8436e2ae6f093ba89ab7d1072ffc4202b5192",
+      "bytes": 71063,
+      "lines": 1599,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-three-person-orbital-long-take/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "bbf05f5f51abe140d2c6de8402138225d821156d",
+      "sha256": "58feeb800f1450064240f920270b86cf8526631c6d1e9d9565c72d4a925dd58f",
+      "bytes": 12116,
+      "lines": 107,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-three-person-orbital-long-take/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "090d9f52cd0c979167b7f3db1927549729cfbc17",
+      "sha256": "5777d39d3c21ef0666296ff4ad2ff2544306f9a9989b45d8cca8358b4f840c93",
+      "bytes": 6295,
+      "lines": 95,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          95
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-water-obstacle-variety-show/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "5d05a80c26ed684a4307d16c826422680f538568",
+      "sha256": "915b57fe603b1d4033f49bd429ec0d8c2657a86cf33b79d6ceeb38c5fdd1fb87",
+      "bytes": 15364,
+      "lines": 278,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "ae572459f259615b45f88b300eeedc6c804cfc35",
+      "sha256": "a7eb42a7967a1b1f28a61dce224fe2e1fb3182a16f40e7a6969cc52c3eaba266",
+      "bytes": 7374,
+      "lines": 165,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          165
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-water-obstacle-variety-show/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "1bb82da7b81205a4dde66fea5a7ab1eec1a539f5",
+      "sha256": "3c29a4562f09a9b05510a06f87ab6b095fbfc899a496b56c0840bc595a452a08",
+      "bytes": 21315,
+      "lines": 515,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "876c670bb25057112d32084e914eb3ca9ee9440e",
+      "sha256": "ae0e874951cbd4b33825d92234db538dbb86f3a6d111902718e75752a0bdb156",
+      "bytes": 11165,
+      "lines": 105,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "9fc55df75cc6f0d0fdcee1812ae36bd8ffc46ac3",
+      "sha256": "c2d6041235ad743caf143c8e0cdeb9487a65a9b35bf4a9dbc472aed6d1b11a7a",
+      "bytes": 12441,
+      "lines": 128,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          128
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-action-chain-sock-fan-comedy/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "14d6577a94976b6fea29266c827d0f27ba0b4996",
+      "sha256": "93acf96bbfc304a7d8fb7d8cf35dbef9780867ff03d9a1da5e1dd8a02b7808c9",
+      "bytes": 30627,
+      "lines": 624,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "2c480eba7377db6c36d26cba2b8c66f3ef46f92b",
+      "sha256": "2b8623fabbff40976378af0a5ebb287704243f5bc9ee28714a28a20a64fba5c0",
+      "bytes": 30831,
+      "lines": 463,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "a991cc33afbf28ef65f819ac18bba8dbb8b6cfdf",
+      "sha256": "fc1fb02f894e2eb314b62295871bb7de732fdc72b5d72d6b615443fc4443be07",
+      "bytes": 12096,
+      "lines": 111,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "820f293466c621b83008067f2ba57dce4b88927e",
+      "sha256": "e30609f323379c5495ea1d3c46c03d948f1692407b74a2aa3a5bac4286427290",
+      "bytes": 13205,
+      "lines": 115,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          115
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "4da9e6df67e2adbb33d569cb830cde800b7878f8",
+      "sha256": "da58a065f3c2f7b825e1958717f4cbe97dfd9fa60a816e054b2f55ce4243f032",
+      "bytes": 26943,
+      "lines": 1306,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "f9c13e974868d922acd8f49a725e6d4f88f2c12f",
+      "sha256": "1013cd7615d245d9e0127e4004a5091479fe09fda746c042b1a96f5814d75b54",
+      "bytes": 27451,
+      "lines": 370,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "b4863def7914a1dcbaca6695330c8b548b184377",
+      "sha256": "0a5d2c13f1c0718c09be689feab290bf85cc87a9b204c1d95d74e7ed012108d6",
+      "bytes": 27900,
+      "lines": 1234,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "22fefc9744dadf16edd24039071ed7eed0ed24c5",
+      "sha256": "90fc1572bbb9f11fdd7f40e019cec893ad47e9d412280d8f301f88e89ad78597",
+      "bytes": 27319,
+      "lines": 355,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "73f3a15ffddc95437e8632d458e522ab00730899",
+      "sha256": "b35ad6664669769fc3074266071435db82c39ad5aeac9d45c4f19dd3f40d421a",
+      "bytes": 19149,
+      "lines": 176,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-purple-veil-dance-seven-segment/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "8b7c6f9b7480b4e613abeb1d766795064510203d",
+      "sha256": "a37ccb539941f0f3bbfcbd1a9e4a9f78ef4c267f7f17f3d9413345e8d6de3134",
+      "bytes": 8262,
+      "lines": 99,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          35,
+          35
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-purple-veil-dance-seven-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-purple-veil-dance-seven-segment/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "8befb4ec85eb720efa6b4ee432b9e48787b7801e",
+      "sha256": "3a9e822fce663198ae0c0446bdfa13c00f095a4b7628e9b0c4ab85f7475bcfd8",
+      "bytes": 37639,
+      "lines": 786,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-purple-veil-dance-seven-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "75fa100fd4a1e954789545920279ba9f1c56b000",
+      "sha256": "4dbe8f75fdb88738af500927d5fce3501b27d5de269faa36fd1aac9ce0b728b2",
+      "bytes": 9740,
+      "lines": 132,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          29,
+          29
+        ],
+        [
+          39,
+          39
+        ],
+        [
+          41,
+          41
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-snap-lock-editorial-reveal/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "d92b6d24ebdf9ca88e48421fd349c0d905c97302",
+      "sha256": "fc2c5eea24fe28a714d921ad3a7ef77931911147641088e7079816cfcfb6edf6",
+      "bytes": 20295,
+      "lines": 571,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-snap-lock-editorial-reveal/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "9af61b2d1f043927c61ae390add95847731bd8b5",
+      "sha256": "2db644dfd0e9a2d7f4ae963cd59ec03c1396271716af8f1292fb09f0b9f2cb56",
+      "bytes": 13761,
+      "lines": 278,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "35c9c1232d988f92c4145e6359876bc2ba05972f",
+      "sha256": "aee1575e8a8140ef0e92dac02e972c48d13d1d975989fe6b487e1bae788ad1bf",
+      "bytes": 10852,
+      "lines": 107,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "9c82e8c71cf560609789fadde850be9ab8436446",
+      "sha256": "6b506f0c45ddc7ecf5ba5ee266b99e163e34e6d7d49827efb44d3bd4a3ab8264",
+      "bytes": 12527,
+      "lines": 142,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          26,
+          26
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          38,
+          38
+        ],
+        [
+          44,
+          44
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-song-style-classical-dance-six-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "c1b73a7a879bd5994b59100c5ae041fc457a85ec",
+      "sha256": "010f5d1db16cfb5dd9dfe3c8b765050c01571949ca8cca4442437dc5b4bd4626",
+      "bytes": 134285,
+      "lines": 2939,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "b0d7bb62373528713b6731309f1a9fe7e5b18604",
+      "sha256": "57065a52ed353280752c676f6b862d84b99667ded3ea66dae57e2c5bc5fabed9",
+      "bytes": 87307,
+      "lines": 1100,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "f0fc45a5eb2026e9cbd06fc5b9a55ff3b20d264c",
+      "sha256": "ffdfaf289f5158cdddd0107535fe832b083f15e7fea415d376ed4407b2995681",
+      "bytes": 21002,
+      "lines": 200,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "9f42cf388a5b8e3d84a5b2160b5aab445733d829",
+      "sha256": "00b141391037d6173c13721474d8f36ec73b6ea17c3f7429a07955ac8dcc3de6",
+      "bytes": 6844,
+      "lines": 91,
+      "reading_status": "selected_passages_read",
+      "read_ranges": [
+        [
+          1,
+          85
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "0b28c91a167e20b593b2131bbb18ec9440dabbb4",
+      "sha256": "b06317bdb5059cd2a01a95bfe763e306ef095c37a59dd9c3c595dec632d21781",
+      "bytes": 17909,
+      "lines": 305,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "5134e8fe1a15e2c381e2546ae700754596380c6f",
+      "sha256": "da7562b149ee4c72e7813ae6320b50a29e26caafacab9159263b09c023d35a71",
+      "bytes": 15041,
+      "lines": 95,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "01c8289ffeb1639b225c35b986406f9d5405f0e1",
+      "sha256": "cd27eb33e16c39c26773ba53956886039eeedccd7ea1dbd0639783d1a08951d8",
+      "bytes": 42551,
+      "lines": 628,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "de577943cdfcafa3046d019dfda86129583926cc",
+      "sha256": "82ec632d7f0e7dca5c38481361f12bd97fff53d113465e65cc142b43fe9a7492",
+      "bytes": 11110,
+      "lines": 109,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-10-advanced-camera-combinations/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "6248882c17cc0841012bd538825849ce9b27a53c",
+      "sha256": "833804acf934a109dfc8991a0f42bafe0f9b96ee71967d503af5cc888d8595fd",
+      "bytes": 4900,
+      "lines": 57,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          22,
+          22
+        ],
+        [
+          26,
+          26
+        ],
+        [
+          34,
+          34
+        ],
+        [
+          40,
+          40
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-advanced-camera-combinations/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-advanced-camera-combinations/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "329cc1d8327759900ad9ee2495c0945ffb8f88dd",
+      "sha256": "6dbc877637aff70c1340de1b4eb4a4c221ca2f25926003801f55b574ada32ffa",
+      "bytes": 18459,
+      "lines": 328,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-advanced-camera-combinations/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "7ead89d1d75c434c1ab69aab841c53c1e3a23481",
+      "sha256": "61f167bb5c9707afaee638d3185d58dfaba100f3016dedb55203ecacdfe1bcd5",
+      "bytes": 12008,
+      "lines": 155,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          155
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "4508141604349c6aab29a86a88cc35965b646714",
+      "sha256": "842fac7e188ff164a60cce1baa6a65844cad2eb7440cf401df63d1b636f3fdba",
+      "bytes": 56000,
+      "lines": 475,
+      "reading_status": "selected_passages_read",
+      "read_ranges": [
+        [
+          115,
+          136
+        ],
+        [
+          319,
+          342
+        ],
+        [
+          388,
+          410
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "dae6601f45b9f4d0ae3cec10114eb102a0f500db",
+      "sha256": "51179fb7c3fd71729a939d287f6dad624dcf5bf719fe4532c16399929e84e179",
+      "bytes": 5545,
+      "lines": 93,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          26,
+          26
+        ],
+        [
+          41,
+          41
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-camera-movement-discipline-library/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "6437e5a26f84f34aa5dc803b1dbc5c79f9dcab13",
+      "sha256": "c70294287fc4155e691de6e7d50a09bb08f8d2bcd9bc18620f49c47c3a0d3053",
+      "bytes": 15365,
+      "lines": 234,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-camera-movement-discipline-library/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "6bc13ac4af04d59ff036e50bdf55e662a6cb7b79",
+      "sha256": "e054bd15bedd75cd384c9e5e0e35c9ca17a1ad8685d041b12964876ab872e53c",
+      "bytes": 7765,
+      "lines": 83,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          83
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-classical-wuxia-dance-13-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "5a6760efa52e3a0f2ef14073e9cbd8a5c93923a8",
+      "sha256": "24707ce3ca43b3696b97bf634d3fc87b3568116c33e3a31635a0ea01974ec1d8",
+      "bytes": 16996,
+      "lines": 199,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          199
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md"
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "13b0cfedb1e8ba8c92ed13c7d4adcee9f43edf03",
+      "sha256": "40ca025fbdab770c72c25a0f259a4319f45725313b3a92bac5bcfee10ca8cd9d",
+      "bytes": 84646,
+      "lines": 543,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "d196d84601fd33a2cc9a4be93d35aa969494bb6e",
+      "sha256": "ce47520bafe4d3fd129f20068452199eb4c3fda0219b2537f34f6fbf31866a90",
+      "bytes": 4031,
+      "lines": 41,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          33,
+          33
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-dance-motion-chain-library/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "53a0bfadbfa128998aaa5fcfc4d015f0e0e41e30",
+      "sha256": "69caa314ae11942dfff9cca14ba4a88ecf6187a336e3569f512f7c1f07d7a37b",
+      "bytes": 265991,
+      "lines": 2767,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "13b9d82944302e6e9d1c3ed33da1738c3d5bf065",
+      "sha256": "fcdd6a8bea055e2a357007d0024381c7c23dccf1ca2f74eceabb2de26e2fe1c7",
+      "bytes": 9119,
+      "lines": 164,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          164
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-four-subject-formation-choreography/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "2ceabb516af03c306d58b2a74474838f37dfcdbc",
+      "sha256": "2fdcf5cab127dbe3fdcf2a4991386b3bd31a2b08db04a0753f3715794d8ab481",
+      "bytes": 16205,
+      "lines": 148,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          148
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-four-subject-formation-choreography/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "90e326cd2f2eeb13f1b3bb82a4997969df1884fe",
+      "sha256": "091c7f3efd88dd609375d22c4afb110306d2d1ee85c7d1363128d6dfa9379a6b",
+      "bytes": 3875,
+      "lines": 54,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          23,
+          23
+        ],
+        [
+          40,
+          40
+        ],
+        [
+          42,
+          42
+        ],
+        [
+          44,
+          44
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-h3-motion-transfer/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "827fe8500e9b67ad068d9fee566f276f0caa8a2f",
+      "sha256": "152b3df9c83e5677e2df46756a122eb64a3e05b0e15ff63e3f2ebadcea41b659",
+      "bytes": 107172,
+      "lines": 4982,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "d2832c361a34e9e441d2dcba8e207e684b97fef6",
+      "sha256": "884616f829c22f00dc2f210e57621927bcb0ab58c28055f648bce2c2c2fa9915",
+      "bytes": 13165,
+      "lines": 586,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-h3-motion-transfer/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "80383594744c1caefadf9feb941d853953813338",
+      "sha256": "c3726c8d92958ba60393b5f0b7c07b6ebd3c9f1152095e0f66423ab871c92695",
+      "bytes": 5248,
+      "lines": 54,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          27,
+          27
+        ],
+        [
+          33,
+          33
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "b4e12f5932869ecff50fa75cfc5c963766d4f076",
+      "sha256": "e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+      "bytes": 34220,
+      "lines": 1524,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "858a611c88260f27eccf3751aaee75009981ae4e",
+      "sha256": "02820d3b4652b25993a1efd9ace4d3a024b6bd979f61460b7276fb793a4b4eb9",
+      "bytes": 11856,
+      "lines": 115,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          115
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "89d84013643a50dfcd796f1397f7fc0cadc199c1",
+      "sha256": "1b7dcf449f3536b5f3af859351baeb394c3663624648e8ae92a5f5a4b54983a1",
+      "bytes": 22179,
+      "lines": 346,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          346
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "8aae663ded62e74b33248443b36111d9e2630aa9",
+      "sha256": "1ec6d47a864a889cd050065be227ead4be82e2211003f00c796934e8f57588f5",
+      "bytes": 194131,
+      "lines": 1186,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "d5787b1e34ad1ae88ed33f7441633a51a222f510",
+      "sha256": "e8b79275bdebce7596df0b6625c5a5a9bf1ef2c05c18e1abf1f29fb498f4a506",
+      "bytes": 4094,
+      "lines": 58,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          25,
+          25
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          34,
+          34
+        ],
+        [
+          38,
+          38
+        ],
+        [
+          42,
+          42
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "356034cad0dbf6e7b3e0f14b76debb325b8163f6",
+      "sha256": "5bcea5bf820f4a1432bb6427ed2bd6fad85d26cccad891d2975153ea96dca0ed",
+      "bytes": 19122,
+      "lines": 759,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-physical-camera-position-library/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "6dbea940341fd033a59c475b443bf14cdd2380f9",
+      "sha256": "cd03402caed497e0f2f93e10b1c42d2dd07842df602cb7ea42615c55c570387b",
+      "bytes": 4235,
+      "lines": 61,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          29,
+          29
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-physical-camera-position-library/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-physical-camera-position-library/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "29931724c56332b3c4cb8f15c9e7b39187f3f6e5",
+      "sha256": "3cdfb65af35d87bdb587c0246d1eeda06129a4c33f6142c1f3817907d111bf1b",
+      "bytes": 25066,
+      "lines": 795,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-physical-camera-position-library/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "f0df490b0ddd28d78f1eb1332c72a46248dd4654",
+      "sha256": "301860e8a966da6ffa62327c6564bb3f0c392484477afac5606c747f776ab0a2",
+      "bytes": 4602,
+      "lines": 52,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          52
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "a6ac7572bfd08806686680e60d0d21f333e574ca",
+      "sha256": "f7b91e3ccc47bb46bb39aae0171f25e0d9d4b572955183789cb4d257e96071d4",
+      "bytes": 8907,
+      "lines": 98,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "9940c805eee0e4f208100593745353d4b2efb9ab",
+      "sha256": "4a9382a4562c88bd25afc0d8debcc6d31a2a40c172f0581bea6d4c4ad65588e7",
+      "bytes": 11195,
+      "lines": 146,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          146
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "1c185e60e2e73a456369709fd0b302cac8fa3a5a",
+      "sha256": "4ddcd492a10a451e124dba192db2c6608aae4a8e62ddbc601a424e5b46a303cd",
+      "bytes": 36790,
+      "lines": 283,
+      "reading_status": "selected_passages_read",
+      "read_ranges": [
+        [
+          20,
+          50
+        ],
+        [
+          123,
+          144
+        ],
+        [
+          151,
+          158
+        ],
+        [
+          174,
+          210
+        ],
+        [
+          231,
+          267
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "bb9a28d25757e4d78d54d4e9dd517d12d063f6c4",
+      "sha256": "67b089f4d560d388e0ceb7dcc7f9011b7456fec69aed0c73f1d70dd341470276",
+      "bytes": 3940,
+      "lines": 48,
+      "reading_status": "readme_heading_scan",
+      "read_ranges": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          28,
+          28
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          36,
+          36
+        ],
+        [
+          42,
+          42
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-waterfront-solo-dance-two-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "539cebf0828ce83ad43d6b7381445c69c3b9f411",
+      "sha256": "5fac40dab9977ecf671bba747db25f4aee43ce892b796f230c319a8ad80da332",
+      "bytes": 8762,
+      "lines": 119,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "7d2d18c1697928bed90d80361f5ac16997302d28",
+      "sha256": "58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+      "bytes": 7390,
+      "lines": 71,
+      "reading_status": "full_text_read",
+      "read_ranges": [
+        [
+          1,
+          71
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "1db431d27a43f05da550ad1d96bf05bb1325bc05",
+      "sha256": "5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "bytes": 101257,
+      "lines": 743,
+      "reading_status": "selected_passages_read",
+      "read_ranges": [
+        [
+          14,
+          45
+        ]
+      ],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/VOCABULARY-EXPANSION.zh-CN.md",
+      "commit": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "git_blob_sha": "67eabcf0dfe631dcfdd54b8ee78acb8af38bc9db",
+      "sha256": "4f2bbe9d8df761913cdf1a5ca5167357e053eaf746f17b21379cfdd536b5f4ed",
+      "bytes": 9130,
+      "lines": 95,
+      "reading_status": "metadata_only_not_semantically_reviewed",
+      "read_ranges": [],
+      "url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/0ce8b7b1890052bf1d4dd233ef20e68817b38f28/case-studies/VOCABULARY-EXPANSION.zh-CN.md"
+    }
+  ],
+  "coverage_limits": [
+    "有限案例支持MV、展示、喜剧短事件和人物揭示的意图组织；不证明长篇影视剧、完整人物弧线或复杂对白系统。",
+    "来源中Summary/Subject等写法是案例原文，H3官方模式/Label必须由包内官方映射核验，不能照抄旧格式作为协议。",
+    "未查看图片/视频/音频，未运行H3或剪辑；原文实测/成功率报告保持F作者报告，媒体效果仍U。",
+    "CASE-R规则为D类实现设计依据，脚本检查只验证它实现的结构/引用条件；语义与实际媒体须分别取得证据。"
+  ]
+}

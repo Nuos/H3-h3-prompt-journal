@@ -1,0 +1,28 @@
+{
+  "kind": "M1ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "check",
+  "execution_status": "completed",
+  "outcome": "structurally_valid",
+  "audit": {
+    "structure": "pass",
+    "deterministic": "pass",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [],
+  "limitations": [
+    "No natural-language meaning, H3 execution, media, or undeclared dependency was verified."
+  ],
+  "checked_kind": "WorkBrief",
+  "request_match_checked": false,
+  "execution": {
+    "invocation_id": "m1tool-fc8ea48617da4cc79b8c584a6ca4e498",
+    "started_at": "2026-11-05T06:58:49.668446+00:00",
+    "finished_at": "2026-11-05T06:58:49.668861+00:00",
+    "operation_effect": "read_inputs_and_emit_new_result",
+    "input_files_modified": false
+  }
+}

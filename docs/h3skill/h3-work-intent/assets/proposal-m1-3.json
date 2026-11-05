@@ -1,0 +1,71 @@
+{
+  "kind": "M1Proposal",
+  "contract_version": "1.0.0",
+  "proposal_id": "PROP-WATER-M1-3",
+  "module_id": "M1.3",
+  "work_id": "WORK-WATER-001",
+  "base_version": 0,
+  "source_request_id": "REQ-WATER-001",
+  "sources": {
+    "SRC-WATER-CASE": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-water-obstacle-variety-show/prompt.md#L9-L13,L37-L55,L59-L159",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "滚筒成功 → Fishbone 摔倒 → 起身继续 → 高墙抓住 → 机关侧面击飞 → 落水 → 湿发表情结尾"
+    },
+    "SRC-WATER-PROJECTION": {
+      "kind": "design_decision",
+      "locator": "fixture:water-obstacle-m1-projection-v1",
+      "version": "0.1.0",
+      "excerpt": "本例把原案七个剧情锚点整理为三个功能段落。分组、信息表述和情绪解释为受控文字示例，未经媒体审阅，不代表原案只有三个镜头。"
+    }
+  },
+  "changes": {
+    "emotion_energy": {
+      "P01": {
+        "emotion_start": "期待",
+        "emotion_end": "初步自信",
+        "energy_intent": "借顺利完成首个障碍建立挑战进展感。",
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ]
+      },
+      "P02": {
+        "emotion_start": "突遇失误",
+        "emotion_end": "恢复挑战意愿",
+        "energy_intent": "把摔倒与继续推进形成一次有因果的起伏。",
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ]
+      },
+      "P03": {
+        "emotion_start": "接近成功的兴奋",
+        "emotion_end": "落水后的喜剧反应",
+        "energy_intent": "保留期待被意外打断的反转，最后让表情完成收束。",
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ]
+      }
+    },
+    "motifs": {
+      "MOTIF-PROGRESS": {
+        "description": "持续向终点推进。",
+        "paragraph_ids": [
+          "P01",
+          "P02",
+          "P03"
+        ],
+        "development": "由顺利前进，经失误恢复，到终点前的意外反转。",
+        "source_refs": [
+          "SRC-WATER-CASE",
+          "SRC-WATER-PROJECTION"
+        ]
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

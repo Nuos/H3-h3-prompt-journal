@@ -1,0 +1,134 @@
+{
+  "kind": "M1Proposal",
+  "contract_version": "1.0.0",
+  "proposal_id": "PROP-WORK-TRIAL-STICKER-M1-2",
+  "module_id": "M1.2",
+  "work_id": "WORK-TRIAL-STICKER",
+  "base_version": 0,
+  "source_request_id": "REQ-WORK-TRIAL-STICKER-M1-2",
+  "sources": {
+    "SRC_USER": {
+      "kind": "user_requirement",
+      "locator": "session:WORK-TRIAL-STICKER",
+      "version": "trial-user-input-1",
+      "excerpt": "只调用 M1.2；将已有贴纸厨房喜剧整理成段落功能与观众信息方案。目标为真实厨房中的平面贴纸恶作剧、产生后果、夸张反应收尾；保留原案例人物分工、无对白和无配乐要求。没有实际图片或视频，内容依据仅为 README.md 与 prompt.md。"
+    },
+    "SRC_RULES": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md#L7-L27;L105-L109",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "`<Picture 1>` 是一个 **2D 平面贴纸角色**。提示词要求 H3 把这个平面角色合成进**真实实拍厨房环境**中：真人手部负责炒菜和互动，贴纸角色负责闯祸和挨打。\n\n两个设计核心：\n\n**① 平面贴纸不立体化** — 反复强调 \"flat 2D sticker appearance\"，防止 H3 把贴纸渲染成 3D 角色。混搭感本身就是笑点。\n\n**② 物理道具属性写死** — 盐罐\"无盖、无帽、无任何可拆卸盖子，开口永久畅通，场景中任何地方都不存在盖子\"。模型对玻璃罐的先验是带盖子的，必须用否定清单正面消灭。\n\n时间锚点精确到毫秒：00:03.000 敲头、00:05.000 喂饭、00:08.000 昏倒。\n\n---\n\n## Prompt\n\n### subject_definitions\n\n<Subject 1> is the 2D flat sticker character shown in <Picture 1>. Preserve the exact visual identity, proportions, facial features, colors, outlines, clothing, accessories, and flat 2D sticker appearance shown in <Picture 1>. <Subject 1> remains the same 2D character throughout the video.\n\n### summary\n\nA humorous 10-second vertical live-action cooking POV in a realistic home kitchen. <Subject 1> from <Picture 1> is composited into the real environment as a flat 2D sticker. <Subject 1> personally pours salt into the wok using an open glass salt jar. The realistic human hands perform the cooking actions and interact with <Subject 1> afterward.\nNatural kitchen ambience and cooking sounds only. No dialogue, no character speech, no singing, and no spoken narration.\n\n### non_diegetic_music\n\nNone."
+    },
+    "SRC_POUR": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md#L35-L55",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "Vertical 9:16, 10 seconds, realistic handheld first-person cooking POV with subtle natural camera movement.\n\n[Shot 1]\n\nA realistic home kitchen is shown from a slightly top-down first-person cooking viewpoint. A black iron wok sits on the stove with beef and green vegetables being stir-fried. Realistic oil movement and natural steam are visible. White tiled walls, a wall socket, soy sauce and cooking-oil bottles, and a stainless-steel sink are visible in the background. Natural light enters from a side window.\n\nA realistic human hand enters from the right and continuously stirs the food with a spatula.\n\n<Subject 1> sits on a small wooden stool beside the stove, approximately half the height of the wok.\n\n<Subject 1> picks up a transparent glass salt jar with both hands.\n\n**The salt jar has no lid, no cap, and no removable cover. It is an open-top glass jar with a permanently unobstructed opening. There is no lid anywhere in the scene.**\n\n<Subject 1> raises the open glass salt jar, tilts its unobstructed opening toward the wok, and personally pours a large amount of white salt directly into the food.\n\nThe salt visibly flows from the completely open top of the jar into the wok.\n\nThe realistic human hand continues stirring the food and does not touch or operate the salt jar.\n\n<Subject 1> finishes pouring and makes a mischievous facial expression."
+    },
+    "SRC_RETURN": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md#L59-L83",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "At 00:03.000, the realistic human hand takes the open salt jar directly from <Subject 1>.\n\nThe other realistic human hand raises the spatula and lightly taps the top of <Subject 1>'s head.\n\n<Subject 1> rapidly bounces from the impact.\n\nA temporary red cartoon bump appears on the head.\n\n<Subject 1> immediately holds its head.\n\n[Shot 3]\n\nAt 00:05.000, <Subject 1> covers its head.\n\nIts eyes become exaggerated spinning cartoon eyes and its mouth opens wide.\n\nBlue cartoon tears spray outward.\n\nThe realistic human hand uses the spatula to scoop a large amount of the salted food from the wok.\n\nThe hand moves the spatula toward <Subject 1>'s open mouth.\n\n<Subject 1> eats the food from the spatula.\n\nIts mouth becomes visibly swollen and full in an exaggerated cartoon manner."
+    },
+    "SRC_END": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md#L87-L101",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "At 00:08.000, <Subject 1> suddenly freezes.\n\nIts body becomes rigid and trembles briefly.\n\nIts eyes change into X-shaped cartoon eyes.\n\n<Subject 1> falls backward from the small wooden stool and lands beside the stove in an exaggerated cartoon pose.\n\nIts limbs briefly move upward during the fall.\n\nSmall rotating cartoon stars appear above its head.\n\nA small white cartoon spirit effect appears beside the character.\n\nThe camera remains in the first-person viewpoint and holds on the final comedic composition until 00:10.000."
+    },
+    "SRC_CASE": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md#L70-L89",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "The prompt is organized in this order:\n\n1. **Usage notes** — single image, sticker-lock philosophy, prop negation, ms-anchors\n2. **subject_definitions** — flat 2D sticker identity lock\n3. **summary** — 10s / 9:16 / live-action POV / composited sticker\n4. **retention_analysis** — 2D flatness preserved across every shot\n5. **detailed_description** — 4 shots: pour gag / head-tap / salted-food revenge / cartoon collapse\n6. **overall_soundscape** — kitchen ambience only, no dialogue\n7. **non_diegetic_music** — none\n\n## Result\n\nA 10-second vertical comedy:\n\n- Real kitchen POV: wok, steam, real hand stirring\n- Flat sticker sits on a stool, grabs an open jar, dumps a salt avalanche into the stir-fry, smirks\n- Real hand confiscates the jar; spatula taps the sticker's head; red cartoon bump\n- Sticker crying with spinning eyes gets fed the over-salted food off the spatula; cheeks balloon\n- Freeze → tremble → X-shaped eyes → backward collapse off the stool with rotating stars and a small departing spirit effect\n- Camera holds on the dead-sticker composition to 00:10.000"
+    },
+    "SRC_GROUP": {
+      "kind": "design_decision",
+      "locator": "narrative-trial:three-semantic-paragraphs",
+      "version": "trial-v1",
+      "excerpt": "按观众信息的因果推进整理为三个语义段：倒盐恶作剧；敲头与喂回过咸食物的后果；卡通倒地收束。原四镜只是来源定位，不将语义段转换为新的镜头、时长或生成单元。"
+    }
+  },
+  "changes": {
+    "paragraphs": {
+      "P01": {
+        "order": 1,
+        "function": "建立真实厨房与平面贴纸角色的对照，明确倒盐恶作剧由贴纸角色主动实施，为后续吃到同锅食物的结果建立可见原因。",
+        "audience_information_before": [
+          "本片开端，观众尚不知谁将实施恶作剧，也不知道锅内食物会被大量加盐。"
+        ],
+        "audience_information_after": [
+          "真实厨房中，真人手负责料理，平面贴纸角色负责恶作剧。",
+          "贴纸角色亲自将大量白盐从无盖敞口盐罐倒入正在料理的同一口锅，并露出恶作剧表情。",
+          "倒盐阶段真人手只继续翻炒，没有接触或操作盐罐；锅中食物被大量加盐这一后果已经成立。"
+        ],
+        "must_keep_event_ids": [
+          "KEEP01",
+          "KEEP02"
+        ],
+        "information_predecessors": [],
+        "source_refs": [
+          "SRC_USER",
+          "SRC_RULES",
+          "SRC_POUR",
+          "SRC_CASE",
+          "SRC_GROUP"
+        ]
+      },
+      "P02": {
+        "order": 2,
+        "function": "把倒盐恶作剧转成贴纸角色承受的直接后果：先被收走盐罐并轻敲头，再吃下自己刚刚加过大量盐的同锅食物，让观众看清原因如何回到闯祸者身上。",
+        "audience_information_before": [
+          "观众已看到贴纸角色把大量白盐倒入这口锅，知道真人手持续料理，而贴纸角色是恶作剧实施者。",
+          "盐罐仍在贴纸角色手中；后续真人手将如何回应尚未呈现。"
+        ],
+        "audience_information_after": [
+          "倒盐结束后真人手收走盐罐；这一动作发生在倒盐阶段不碰盐罐的约束之后。",
+          "贴纸角色被锅铲轻敲头，出现弹跳、红色卡通肿包、捂头、转圈眼与蓝色卡通眼泪等反应。",
+          "真人手把同一口锅中已被大量加盐的食物喂给贴纸角色；角色吃下后嘴部鼓胀，恶作剧的后果回到自己身上。"
+        ],
+        "must_keep_event_ids": [
+          "KEEP03",
+          "KEEP04",
+          "KEEP05"
+        ],
+        "information_predecessors": [
+          "P01"
+        ],
+        "source_refs": [
+          "SRC_USER",
+          "SRC_POUR",
+          "SRC_RETURN",
+          "SRC_CASE",
+          "SRC_GROUP"
+        ]
+      },
+      "P03": {
+        "order": 3,
+        "function": "以贴纸角色吃下食物后的夸张卡通反应完成喜剧收束，让观众把最后的倒地画面理解为前段后果的升级。",
+        "audience_information_before": [
+          "观众已看到贴纸角色吃下自己加盐的同锅食物，嘴部鼓胀，等待它的下一步反应。"
+        ],
+        "audience_information_after": [
+          "角色依次僵住、绷直、短暂颤抖、变成 X 眼并从小凳向后跌倒，跌落时四肢短暂朝上。",
+          "绕头旋转的星星与身旁的小白色卡通灵魂构成最终夸张反应，恶作剧—后果—卡通倒地的喜剧因果链完成。"
+        ],
+        "must_keep_event_ids": [
+          "KEEP06"
+        ],
+        "information_predecessors": [
+          "P02"
+        ],
+        "source_refs": [
+          "SRC_USER",
+          "SRC_END",
+          "SRC_CASE",
+          "SRC_GROUP"
+        ]
+      }
+    }
+  },
+  "issues": [],
+  "resolutions": []
+}

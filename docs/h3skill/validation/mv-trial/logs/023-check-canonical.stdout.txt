@@ -1,0 +1,38 @@
+{
+  "kind": "M1ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "check",
+  "execution_status": "completed",
+  "outcome": "incomplete",
+  "audit": {
+    "structure": "pass",
+    "deterministic": "unverified",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [
+    {
+      "code": "partial_workbrief",
+      "path": "/content",
+      "message": "This is a partial draft; missing M1 partitions: intent, constraints, must_keep_events, paragraphs, emotion_energy, motifs",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M1",
+      "recheck": "Resubmit the corrected input to the same command."
+    }
+  ],
+  "limitations": [
+    "No natural-language meaning, H3 execution, media, or undeclared dependency was verified."
+  ],
+  "checked_kind": "WorkBrief",
+  "request_match_checked": false,
+  "execution": {
+    "invocation_id": "m1tool-e55ea0e2ea134e6bbb77a240b2401997",
+    "started_at": "2026-11-05T07:20:53.974429+00:00",
+    "finished_at": "2026-11-05T07:20:53.974665+00:00",
+    "operation_effect": "read_inputs_and_emit_new_result",
+    "input_files_modified": false
+  }
+}

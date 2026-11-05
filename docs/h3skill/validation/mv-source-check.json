@@ -1,0 +1,280 @@
+{
+  "kind": "IndependentTrialSourceReview",
+  "reviewed_at_utc": "2026-11-05T07:26:36.736276+00:00",
+  "reviewer": "root integration agent",
+  "trial": "mv-trial",
+  "passed": true,
+  "source_checks": [
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/case-studies/2026-10-four-subject-formation-choreography/README.md",
+      "snapshot": "inputs/README.md",
+      "original_matches": true,
+      "snapshot_matches": true
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "snapshot": "inputs/prompt.md",
+      "original_matches": true,
+      "snapshot_matches": true
+    }
+  ],
+  "resource_checks": [
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/SKILL.md",
+      "matches": true
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/contracts.json",
+      "matches": true
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/contract-guide.md",
+      "matches": true
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/intent-constraints.md",
+      "matches": true
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/paragraph-information.md",
+      "matches": true
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/emotion-motif.md",
+      "matches": true
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/references/audit-and-handoff.md",
+      "matches": true
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/scripts/m1_contract.py",
+      "matches": true
+    },
+    {
+      "path": "/workspace/scratch/80b796f55683/h3-work/docs/h3skill/h3-work-intent/assets/workbrief-empty.json",
+      "matches": true
+    }
+  ],
+  "artifact_checks": [
+    {
+      "path": "request-m1.json",
+      "matches": true
+    },
+    {
+      "path": "request-m1-1.json",
+      "matches": true
+    },
+    {
+      "path": "request-m1-2.json",
+      "matches": true
+    },
+    {
+      "path": "request-m1-3.json",
+      "matches": true
+    },
+    {
+      "path": "proposal-m1-1.json",
+      "matches": true
+    },
+    {
+      "path": "proposal-m1-2.json",
+      "matches": true
+    },
+    {
+      "path": "proposal-m1-3.json",
+      "matches": true
+    },
+    {
+      "path": "proposal-batch.json",
+      "matches": true
+    },
+    {
+      "path": "workbrief.json",
+      "matches": true
+    },
+    {
+      "path": "workbrief-proposed.json",
+      "matches": true
+    },
+    {
+      "path": "parent-acceptance-result.json",
+      "matches": true
+    },
+    {
+      "path": "README.md",
+      "matches": true
+    },
+    {
+      "path": "run_trial.py",
+      "matches": true
+    },
+    {
+      "path": "build_artifacts.py",
+      "matches": true
+    }
+  ],
+  "exact_log_checks": [
+    {
+      "invocation": "004-case-readme",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "001-paragraph-guide",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "002-emotion-guide",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "003-audit-guide",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "005-prompt-read",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "006-prompt-part-one",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "008-case-readme-full",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "007-prompt-part-two",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "009-contract-schema",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "010-schema-selected",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "011-schema-keys",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "012-schema-minimum",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "013-compact-contract",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "014-assets-cli",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "015-build-artifacts",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "016-conflict-locator",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "017-build-artifacts-retry",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "022-check-batch",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "023-check-canonical",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "018-route-m1",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "019-check-m1-1",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "021-check-m1-3",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "020-check-m1-2",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "024-accept-parent",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "025-finalize",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "026-review-correction",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "027-rebuild-after-review",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "028-check-m1-1-after-review",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "029-check-batch-after-review",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "030-accept-after-review",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "031-final-review-and-portability",
+      "stdout_matches": true,
+      "stderr_matches": true
+    },
+    {
+      "invocation": "032-final-integrity",
+      "stdout_matches": true,
+      "stderr_matches": true
+    }
+  ],
+  "scope": "Hashes and correspondence of saved records; semantic conclusions are in semantic-review.md. Historical execution paths are preserved."
+}

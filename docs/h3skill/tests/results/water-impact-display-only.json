@@ -1,0 +1,57 @@
+{
+  "kind": "M1ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "impact",
+  "execution_status": "completed",
+  "outcome": "impact_reported",
+  "audit": {
+    "structure": "pass",
+    "deterministic": "pass",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [],
+  "limitations": [
+    "No natural-language meaning, H3 execution, media, or undeclared dependency was verified."
+  ],
+  "work_id": "WORK-WATER-001",
+  "from_version": 1,
+  "to_version": 2,
+  "changed_dependency_paths": [],
+  "ignored_metadata_paths": [
+    "/display/title",
+    "/version"
+  ],
+  "stale_consumers": [],
+  "unaffected_consumers": [
+    {
+      "consumer_id": "M1-PARAGRAPHS",
+      "module_id": "M1.2",
+      "consumer_version": 1,
+      "source_work_version": 1,
+      "changed_dependencies": [],
+      "status": "unaffected_in_this_comparison"
+    },
+    {
+      "consumer_id": "M4-P01",
+      "module_id": "M4",
+      "consumer_version": 1,
+      "source_work_version": 1,
+      "changed_dependencies": [],
+      "status": "unaffected_in_this_comparison"
+    }
+  ],
+  "preexisting_unverified_consumers": [],
+  "unregistered_consumer_coverage": "unknown",
+  "transitive_discovery": "not_implemented",
+  "scope": "Only consumers explicitly registered in the previous snapshot; declarations do not prove those modules ran.",
+  "execution": {
+    "invocation_id": "m1tool-4522fb1e52e549e29501bcacf859a51a",
+    "started_at": "2026-11-05T06:58:49.714170+00:00",
+    "finished_at": "2026-11-05T06:58:49.716768+00:00",
+    "operation_effect": "read_inputs_and_emit_new_result",
+    "input_files_modified": false
+  }
+}

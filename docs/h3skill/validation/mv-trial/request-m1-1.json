@@ -1,0 +1,57 @@
+{
+  "kind": "M1Request",
+  "contract_version": "1.0.0",
+  "request_id": "REQ_FOUR_M1_1",
+  "target": "M1.1",
+  "work_id": "WORK-TRIAL-FOUR",
+  "base_version": 0,
+  "sources": {
+    "SRC_TASK": {
+      "kind": "user_requirement",
+      "locator": "conversation:mv-trial-task",
+      "version": "task-2026-11-05",
+      "excerpt": "整理四人队形 MV 为 M1 作品意图、必保事项、段落功能/观众信息、情绪能量和母题；仅有 README 与 prompt 文本。交付真实请求、子提案、父接受结果及 WorkBrief。"
+    },
+    "SRC_README": {
+      "kind": "case_text",
+      "locator": "/workspace/scratch/80b796f55683/h3-work/case-studies/2026-10-four-subject-formation-choreography/README.md",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "作者报告整片 181.56 秒、14 段，固定四人和木墙外廊，通过相同锚定块、动作状态交接和跳舞式换阵维持连续性；本次未检查媒体。"
+    },
+    "SRC_PROMPT": {
+      "kind": "case_text",
+      "locator": "/workspace/scratch/80b796f55683/h3-work/case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "SEG10：同一四人、固定外观和场景；保护弧与会合、前后换层、转身接力、重组、四条不同方向的星芒线，Saten 前臂擦镜接续 SEG11；沿用原音轨。"
+    },
+    "SRC_BAN": {
+      "kind": "case_text",
+      "locator": "/workspace/scratch/80b796f55683/h3-work/case-studies/2026-10-four-subject-formation-choreography/README.md#centerline",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "- **Own quadrant only.** Dancers adjust within their lane — half-steps, never walks;\n  no center-line crossing, no passing in front of another body."
+    },
+    "SRC_CROSS": {
+      "kind": "case_text",
+      "locator": "/workspace/scratch/80b796f55683/h3-work/case-studies/2026-10-four-subject-formation-choreography/prompt.md#SEG10-formation-and-beats",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "Story of the segment: protection, trust and re-assembly. The formation makes a full round trip — pairs split into crossing protection arcs, meet at the center, exchange layers, and regroup into a four-line starburst — while every cut keeps the same four locked identities.\n- k184: the two pairs meet near center, shoulders briefly close without contact.\n- k186–k188: layer exchange — S1/S2 swap front/back layers while S3 counter-twists; then S3 leads a rotation relay (S1 follows same direction, S2/S4 step outward).\n3.212s local | 118.178s global | k184 [phrase accent] — The two pairs meet near the center; shoulders come briefly close without contact, forearms sweep past each other and open outward; feet keep lateral taps throughout.\n4.492s local | 119.458s global | k186 [onbeat] — Fast weight handoff inside the leftover momentum: Subject 1 absorbs through a knee bend and rebounds immediately, shoulder turning first, head catching up half a beat later. Subject 2 steps diagonally to open a channel; the other two tap-step in opposite directions; four paths never overlap.\n8.332s local | 123.298s global | k192 [phrase accent] — Turn the previous recovery into the next launch: heel pivots lightly, weight crosses the center line, chest leads the shoulder-elbow reversal. Subject 3 starts; Subject 4 delays half a beat; Subjects 1 and 2 cross along another short diagonal."
+    },
+    "SRC_DESIGN": {
+      "kind": "design_decision",
+      "locator": "mv-trial:semantic-proposal",
+      "version": "trial-design-1",
+      "excerpt": "仅把已提供完整文本的 SEG10 整理为四个语义段。四段不是镜头数、生成任务数或整片 14 段的替代。情绪与母题是可追溯的文本解读，不声称已通过音画验证。"
+    }
+  },
+  "inputs": {
+    "work_type": "mv",
+    "creative_request": "保留四人队形 MV 的人物与作品方向，整理 M1；本次仅细化完整给出的 SEG10 为四个语义段。",
+    "delivery_use": "后续专业模块的可审查候选依据；保留真实冲突并实际执行父接受。",
+    "notes": "只有两份文本；未提供图片、音乐、视频、cuts_manifest.json 或整片其余 13 段完整稿。"
+  },
+  "requested_fields": [
+    "intent",
+    "constraints",
+    "must_keep_events"
+  ]
+}

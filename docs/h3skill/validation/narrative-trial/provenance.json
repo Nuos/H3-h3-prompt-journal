@@ -1,0 +1,88 @@
+{
+  "work_id": "WORK-TRIAL-STICKER",
+  "base_version": 0,
+  "source_version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+  "recorded_at_utc": "2026-11-05T07:14:52.638774+00:00",
+  "observed_head": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+  "input_media": {
+    "image": "not supplied",
+    "video": "not supplied",
+    "evidence": "README.md and prompt.md only"
+  },
+  "read_resources": [
+    {
+      "path": "docs/h3skill/h3-work-intent/SKILL.md",
+      "read_scope": "全文；仅采用 M1.2 路径",
+      "sha256": "072e39c88670a836979d04931649042e57e82f7fbf63f13d58521e92ae1ae464"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/contract-guide.md",
+      "read_scope": "全文；请求与提案的契约边界",
+      "sha256": "bfc702e6a77d52643f2d4481547c92d4f4796b6162179443f2e26968c9c95a47"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/paragraph-information.md",
+      "read_scope": "全文；段落功能、观众信息和信息前置关系",
+      "sha256": "4ff38dedd65dd3100129952a9a82bbc62c16b084f0043e666d2ee8eee0fd2523"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/audit-and-handoff.md",
+      "read_scope": "已读相关审查与移交段落；未依赖被截断的少量表格内容",
+      "sha256": "5809803bb2bb73cbfc2176943792d2dc477f680885ec5df4f82335f28451f30d"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/contracts.json",
+      "read_scope": "M1Request、M1Proposal、Source、RequestInputs、Content、Paragraph 等相关定义",
+      "sha256": "3e2fbeaa55c51365330777151834f60ae3f8c54d0f74298dc6c9ba9f95f419ed"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/request-m1-2.json",
+      "read_scope": "M1.2 请求示例",
+      "sha256": "52b565fc29f7c56678d37b5606492e7940ba17e6c29936b270677591494cbfc8"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/proposal-m1-2.json",
+      "read_scope": "M1.2 提案示例",
+      "sha256": "297ef54540f505990cf43b94d0bbab795f7232a446402893401baa5a9958d881"
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/scripts/m1_contract.py",
+      "read_scope": "CLI help 与 route/check、事件引用相关定位；未声称全文审计",
+      "sha256": "4ec812dfbd7e1d7f4c0a3acd240c76126f541fb8697dfee2808c4e71668f9e1e"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+      "read_scope": "全文；案例书面说明，不作为实际成片观察",
+      "sha256": "88e8bbec07a740b63e7f68417bb1e555031e3c33dacada45c625732b9a5a0907"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+      "read_scope": "全文；原事件链与角色、声音、无盖盐罐约束",
+      "sha256": "cb0dd901e8162ecb1bfbd89475df2648dcbe8eeb34821cdb9726228d1c09f46e"
+    }
+  ],
+  "source_version_checks": [
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+      "matches_declared_source_version": true,
+      "sha256": "88e8bbec07a740b63e7f68417bb1e555031e3c33dacada45c625732b9a5a0907"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+      "matches_declared_source_version": true,
+      "sha256": "cb0dd901e8162ecb1bfbd89475df2648dcbe8eeb34821cdb9726228d1c09f46e"
+    }
+  ],
+  "scope": "Only M1.2 proposal generation, one route invocation and one check invocation; no accept, other M1 module, source edit or repository commit.",
+  "route_metadata": {
+    "package_version": "0.1.0",
+    "contract_version": "1.0.0",
+    "route_id": "route-m1-2",
+    "route_version": "1.0.0",
+    "resource_refs": [
+      "references/contracts.json",
+      "references/paragraph-information.md",
+      "references/audit-and-handoff.md"
+    ]
+  }
+}

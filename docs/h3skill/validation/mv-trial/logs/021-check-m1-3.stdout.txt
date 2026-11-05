@@ -1,0 +1,47 @@
+{
+  "kind": "M1ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "check",
+  "execution_status": "completed",
+  "outcome": "structurally_valid",
+  "audit": {
+    "structure": "pass",
+    "deterministic": "unverified",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [
+    {
+      "code": "paragraph_context_unverified",
+      "path": "/changes",
+      "message": "Paragraph references need an M1.2 projection at acceptance.",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M1.2",
+      "recheck": "Resubmit the corrected input to the same command."
+    },
+    {
+      "code": "declared_issue",
+      "path": "/content/emotion_energy",
+      "message": "13.767 秒、93.75 BPM、绝对音轨区间和 beat cells 均为源文本声明；cuts_manifest.json 与音频缺失，未测量或核实。",
+      "status": "unverified",
+      "blocking": false,
+      "repair_target": "M7",
+      "recheck": "Resubmit the corrected input to the same command."
+    }
+  ],
+  "limitations": [
+    "No natural-language meaning, H3 execution, media, or undeclared dependency was verified."
+  ],
+  "checked_kind": "M1Proposal",
+  "request_match_checked": true,
+  "execution": {
+    "invocation_id": "m1tool-955b0b7d93054325875e806eea2a13b0",
+    "started_at": "2026-11-05T07:20:54.058098+00:00",
+    "finished_at": "2026-11-05T07:20:54.058684+00:00",
+    "operation_effect": "read_inputs_and_emit_new_result",
+    "input_files_modified": false
+  }
+}

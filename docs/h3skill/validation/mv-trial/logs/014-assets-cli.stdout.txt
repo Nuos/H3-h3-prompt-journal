@@ -1,0 +1,183 @@
+EMPTY {
+  "kind": "WorkBrief",
+  "contract_version": "1.0.0",
+  "work_id": "WORK-WATER-001",
+  "version": 0,
+  "owner_module": "M1",
+  "status": "draft",
+  "display": {
+    "title": "水上闯关：M1受控文字示例"
+  },
+  "sources": {
+    "SRC-WATER-CASE": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-water-obstacle-variety-show/prompt.md#L9-L13,L37-L55,L59-L159",
+      "version": "0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+      "excerpt": "滚筒成功 → Fishbone 摔倒 → 起身继续 → 高墙抓住 → 机关侧面击飞 → 落水 → 湿发表情结尾"
+    },
+    "SRC-WATER-PROJECTION": {
+      "kind": "design_decision",
+      "locator": "fixture:water-obstacle-m1-projection-v1",
+      "version": "0.1.0",
+      "excerpt": "本例把原案七个剧情锚点整理为三个功能段落。分组、信息表述和情绪解释为受控文字示例，未经媒体审阅，不代表原案只有三个镜头。"
+    }
+  },
+  "content": {},
+  "issues": [],
+  "accepted_proposals": [],
+  "consumers": []
+}
+
+LINE 99
+        self.diagnostics = []
+
+    def add(self, code, path, message, owner="M1", status="fail", blocking=True):
+        self.diagnostics.append({
+            "code": code, "path": path, "message": message,
+            "status": status, "blocking": blocking, "repair_target": owner,
+            "recheck": "Resubmit the corrected input to the same command.",
+        })
+
+    def obj(self, value, path, required=(), optional=()):
+        if not isinstance(value, dict):
+            self.add("invalid_type", path, "Expected a JSON object.")
+            return False
+        for key in required:
+            if key not in value:
+                self.add("missing_field", at(path, key), "Required field is missing.")
+LINE 122
+            self.text(value.get("reason"), at(path, "reason"))
+            self.add("unknown_value", path, "Explicitly unknown; not treated as not applicable.",
+                     status="unverified", blocking=False)
+            return False
+        if not isinstance(value, str) or not value.strip():
+            self.add("invalid_text", path, "Expected a non-empty string.")
+            return False
+        return True
+
+    def ident(self, value, path):
+        if not isinstance(value, str) or not ID_RE.fullmatch(value):
+            self.add("invalid_id", path, "Use 1–64 ASCII letters, digits, dots, underscores or hyphens; start with a letter.")
+            return False
+        return True
+
+    def integer(self, value, path, minimum=0):
+LINE 323
+
+    def issue(self, value, path, sources):
+        if self.obj(value, path, ("id", "code", "status", "message", "owner_module", "field", "blocking", "source_refs")):
+            self.ident(value.get("id"), at(path, "id"))
+            for key in ("code", "message", "field"):
+                self.text(value.get(key), at(path, key))
+            self.enum(value.get("status"), at(path, "status"), ("fail", "unverified", "conflict"))
+            self.enum(value.get("owner_module"), at(path, "owner_module"), REPAIR_MODULES)
+            if type(value.get("blocking")) is not bool:
+                self.add("invalid_type", at(path, "blocking"), "Expected a boolean.")
+            self.refs(value.get("source_refs"), at(path, "source_refs"), sources)
+
+    def issues(self, value, path, sources):
+        if not isinstance(value, list):
+            self.add("invalid_type", path, "Expected an issues array.")
+            return
+LINE 413
+            if type(record.get("from_version")) is int and type(record.get("to_version")) is int:
+                if record["to_version"] != record["from_version"] + 1:
+                    self.add("invalid_history_version", p, "Each acceptance increments the WorkBrief version by one.")
+                if type(work_version) is int and record["to_version"] > work_version:
+                    self.add("future_history", p, "History cannot refer to a future WorkBrief version.")
+            proposed_id = record.get("proposal_id")
+            if isinstance(proposed_id, str):
+                if proposed_id in seen:
+                    self.add("duplicate_proposal_id", p, "A proposal cannot be accepted twice.")
+                seen.add(proposed_id)
+            names = self.sequence(record.get("changed_fields"), at(p, "changed_fields"), nonempty=True)
+            module = record.get("module_id")
+            allowed = OWNED.get(module, ()) if isinstance(module, str) else ()
+            for name in names:
+                if name not in allowed:
+                    self.add("history_out_of_scope", at(p, "changed_fields"), "History records an unauthorized write.")
+LINE 509
+        if not isinstance(paragraphs, dict):
+            if any(content.get(name) for name in ("must_keep_events", "emotion_energy", "motifs")):
+                self.add("paragraph_context_unverified", path, "Paragraph references need an M1.2 projection at acceptance.",
+                         "M1.2", "unverified", False)
+            return
+        orders = {}
+        kept = set()
+        graph = {}
+        for pid, paragraph in paragraphs.items():
+            if not isinstance(paragraph, dict):
+                continue
+            pp = at(at(path, "paragraphs"), pid)
+            order = paragraph.get("order")
+            if type(order) is int:
+                if order in orders:
+                    self.add("duplicate_paragraph_order", at(pp, "order"), "Paragraph orders must be unique.", "M1.2")
+LINE 602
+
+    def blocked(self):
+        return any(d["blocking"] for d in self.diagnostics)
+
+
+def declared_issues(artifact):
+    if not isinstance(artifact, dict):
+        return []
+    if artifact.get("kind") == "M1ProposalBatch":
+        proposals = artifact.get("proposals")
+        return [issue for proposal in proposals if isinstance(proposal, dict)
+                for issue in declared_issues(proposal)] if isinstance(proposals, list) else []
+    value = artifact.get("issues")
+    return value if isinstance(value, list) else []
+
+
+LINE 621
+            validator.add("declared_issue", issue.get("field", "/issues"), issue.get("message", "Unresolved issue."),
+                          issue.get("owner_module", "M1"), issue.get("status", "unverified"),
+                          issue.get("blocking", True))
+
+
+def envelope(command, validator, outcome):
+    deterministic = "fail" if validator.failed() else ("unverified" if validator.diagnostics else "pass")
+    return {
+        "kind": "M1ToolResult", "contract_version": CONTRACT_VERSION,
+        "package_version": PACKAGE_VERSION, "command": command,
+        "execution_status": "completed", "outcome": outcome,
+        "audit": {"structure": "fail" if any(d["code"] in STRUCTURAL_CODES and d["status"] == "fail" for d in validator.diagnostics) else "pass",
+                  "deterministic": deterministic, "semantic": "unverified",
+                  "media": "unverified", "overall": "fail" if validator.failed() else "unverified"},
+        "diagnostics": validator.diagnostics,
+        "limitations": ["No natural-language meaning, H3 execution, media, or undeclared dependency was verified."],
+LINE 742
+
+
+def accept(current, proposed):
+    validation = Validation()
+    validation.work(current, "/current", cross=False)
+    validation.artifact(proposed, "/proposal")
+    if not isinstance(proposed, dict) or proposed.get("kind") not in ("M1Proposal", "M1ProposalBatch"):
+        validation.add("wrong_result_kind", "/proposal", "Accept expects M1Proposal or M1ProposalBatch.")
+    if validation.failed():
+        return envelope("accept", validation, "rejected"), 1
+    # Cross-projection unknowns are allowed in an explicitly draft WorkBrief.
+    proposals = proposed["proposals"] if proposed["kind"] == "M1ProposalBatch" else [proposed]
+    seen = {item["proposal_id"] for item in current["accepted_proposals"]}
+    fields = set()
+    issue_ids = {issue["id"] for issue in current["issues"]}
+    candidate = copy.deepcopy(current)
+LINE 916
+    p.add_argument("artifact")
+    p.add_argument("--request")
+    p = commands.add_parser("accept", help="Accept owned, version-compatible child proposals into a new draft WorkBrief.")
+    p.add_argument("current")
+    p.add_argument("proposal")
+    p = commands.add_parser("impact", help="Report only explicitly registered consumers affected by this snapshot change.")
+    p.add_argument("previous")
+    p.add_argument("current")
+    args = parser.parse_args(argv)
+    started = datetime.now(timezone.utc).isoformat()
+    try:
+        if args.command == "route":
+            result, code = route(load_json(args.request))
+        elif args.command == "check":
+            result, code = check(load_json(args.artifact), load_json(args.request) if args.request else None)
+        elif args.command == "accept":

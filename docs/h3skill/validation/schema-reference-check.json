@@ -1,0 +1,11 @@
+{
+  "kind": "ContractSchemaLocalReferenceCheck",
+  "executed_at_utc": "2026-11-05T07:06:33.438879+00:00",
+  "schema": "docs/h3skill/h3-work-intent/references/contracts.json",
+  "schema_sha256": "3e2fbeaa55c51365330777151834f60ae3f8c54d0f74298dc6c9ba9f95f419ed",
+  "local_reference_count": 50,
+  "unique_reference_count": 23,
+  "all_references_resolve": true,
+  "generic_json_schema_validation": "not_executed",
+  "scope": "Resolves local JSON pointers only; runtime semantic invariants are checked by separate unit tests."
+}

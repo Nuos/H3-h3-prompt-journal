@@ -1,0 +1,62 @@
+{
+  "kind": "M1ToolResult",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "command": "route",
+  "execution_status": "completed",
+  "outcome": "routed",
+  "audit": {
+    "structure": "pass",
+    "deterministic": "pass",
+    "semantic": "unverified",
+    "media": "unverified",
+    "overall": "unverified"
+  },
+  "diagnostics": [],
+  "limitations": [
+    "No natural-language meaning, H3 execution, media, or undeclared dependency was verified.",
+    "M1 entry inputs do not establish the M1.2 or M1.3 projected inputs; the agent must prepare them explicitly."
+  ],
+  "dispatch": {
+    "route_id": "route-m1",
+    "route_version": "1.0.0",
+    "request_id": "REQ_FOUR_M1",
+    "target": "M1",
+    "work_id": "WORK-TRIAL-FOUR",
+    "base_version": 0,
+    "input_projection": {
+      "work_type": "mv",
+      "creative_request": "保留四人队形 MV 的人物与作品方向，整理 M1；本次仅细化完整给出的 SEG10 为四个语义段。",
+      "delivery_use": "后续专业模块的可审查候选依据；保留真实冲突并实际执行父接受。",
+      "notes": "只有两份文本；未提供图片、音乐、视频、cuts_manifest.json 或整片其余 13 段完整稿。"
+    },
+    "requested_fields": [
+      "intent",
+      "constraints",
+      "must_keep_events",
+      "paragraphs",
+      "emotion_energy",
+      "motifs"
+    ],
+    "resources": [
+      "references/contracts.json",
+      "references/contract-guide.md",
+      "references/audit-and-handoff.md"
+    ],
+    "return_to": "user_or_declared_consumer",
+    "semantic_execution": "not_started",
+    "eligible_children": [
+      "M1.1",
+      "M1.2",
+      "M1.3"
+    ],
+    "child_inputs_verified": false
+  },
+  "execution": {
+    "invocation_id": "m1tool-f7eade219e5a4f798cde56f2c7173f16",
+    "started_at": "2026-11-05T07:20:54.010380+00:00",
+    "finished_at": "2026-11-05T07:20:54.010792+00:00",
+    "operation_effect": "read_inputs_and_emit_new_result",
+    "input_files_modified": false
+  }
+}

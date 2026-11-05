@@ -1,0 +1,77 @@
+{
+  "kind": "IndependentTrialSourceReview",
+  "reviewed_at_utc": "2026-11-05T07:18:27.331562+00:00",
+  "reviewer": "root integration agent",
+  "trial": "narrative-trial",
+  "quoted_case_sources": [
+    {
+      "source_id": "SRC_RULES",
+      "locator": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md#L7-L27;L105-L109",
+      "excerpt_matches_declared_lines": true
+    },
+    {
+      "source_id": "SRC_POUR",
+      "locator": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md#L35-L55",
+      "excerpt_matches_declared_lines": true
+    },
+    {
+      "source_id": "SRC_RETURN",
+      "locator": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md#L59-L83",
+      "excerpt_matches_declared_lines": true
+    },
+    {
+      "source_id": "SRC_END",
+      "locator": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md#L87-L101",
+      "excerpt_matches_declared_lines": true
+    },
+    {
+      "source_id": "SRC_CASE",
+      "locator": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md#L70-L89",
+      "excerpt_matches_declared_lines": true
+    }
+  ],
+  "read_resource_hashes": [
+    {
+      "path": "docs/h3skill/h3-work-intent/SKILL.md",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/contract-guide.md",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/paragraph-information.md",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/audit-and-handoff.md",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/references/contracts.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/request-m1-2.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/assets/proposal-m1-2.json",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "docs/h3skill/h3-work-intent/scripts/m1_contract.py",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+      "matches_recorded_sha256": true
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+      "matches_recorded_sha256": true
+    }
+  ],
+  "passed": true,
+  "scope": "Checks recorded text excerpts and resource versions, not media or interpretation."
+}

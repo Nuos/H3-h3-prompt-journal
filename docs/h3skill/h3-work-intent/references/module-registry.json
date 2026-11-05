@@ -1,0 +1,468 @@
+{
+  "kind": "M1ModuleRegistry",
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "plan_baseline": "Nuos/H3-h3-prompt-journal@0ce8b7b1890052bf1d4dd233ef20e68817b38f28",
+  "implementation_scope": "M1 text workflow and offline deterministic support; M2–M12 are not implemented here.",
+  "parent_child_policy": "child_proposal_parent_acceptance",
+  "nodes": {
+    "M1": {
+      "id": "M1",
+      "parent_id": null,
+      "name": "作品意图、叙事／情绪与段落功能",
+      "call_scope": "public",
+      "contract_version": "1.0.0",
+      "responsibility": "Reconcile owned child proposals and publish the versioned WorkBrief without rewriting domain choices.",
+      "not_owned": [
+        "AssetRegistry",
+        "EntityRegistry",
+        "ReferenceMap",
+        "SpatialPlan",
+        "ActionPlan",
+        "CameraPlan",
+        "SoundPlan",
+        "TimingMap",
+        "ContinuityPolicy",
+        "StateLedger",
+        "ShotEditGenerationPlan",
+        "LookPlan",
+        "CompilationResult",
+        "MediaObservationLedger"
+      ],
+      "applicable_tasks": "New or changed work brief; explicit combination of M1 child results.",
+      "minimum_input": {
+        "envelope": [
+          "kind",
+          "contract_version",
+          "request_id",
+          "target",
+          "work_id",
+          "base_version",
+          "sources",
+          "inputs"
+        ],
+        "projected_inputs": [
+          "work_type",
+          "creative_request"
+        ]
+      },
+      "optional_inputs": [
+        "delivery_use",
+        "notes"
+      ],
+      "unknown_form": {
+        "state": "unknown",
+        "reason": "Non-empty explanation"
+      },
+      "source_kinds": [
+        "user_requirement",
+        "case_text",
+        "design_decision",
+        "external_input",
+        "official_document",
+        "hypothesis"
+      ],
+      "read_only": [
+        "request.inputs",
+        "request.sources",
+        "request.work_id",
+        "request.base_version",
+        "declared prior WorkBrief projection"
+      ],
+      "produces": "WorkBrief after explicit acceptance",
+      "owned_content_partitions": [
+        "intent",
+        "constraints",
+        "must_keep_events",
+        "paragraphs",
+        "emotion_energy",
+        "motifs"
+      ],
+      "authoritative_writes": [
+        "WorkBrief"
+      ],
+      "proposal_only": false,
+      "input_projection": {
+        "inputs.work_type": "M1Request.inputs.work_type",
+        "inputs.creative_request": "M1Request.inputs.creative_request"
+      },
+      "route_id": "route-m1",
+      "route_version": "1.0.0",
+      "entrypoint": "python scripts/m1_contract.py route REQUEST.json",
+      "semantic_execution": "Agent reads only applicable resources and writes an explicit candidate; the CLI does not interpret prose.",
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/audit-and-handoff.md"
+      ],
+      "return_to": "user_or_declared_consumer",
+      "failure_routes": {
+        "missing_input": "user",
+        "unknown_input": "user",
+        "incompatible_contract": "M1",
+        "ownership_conflict": "owning module",
+        "semantic_conflict": "M1",
+        "stale_base_version": "M1",
+        "external_blocker": "declared issue owner"
+      },
+      "recheck": "Return the corrected versioned input to the same public node; no automatic unbounded repair loop.",
+      "retry": "Read-only checks can be repeated; semantic conflicts require a new decision, not repeated identical checks.",
+      "required_dependencies": [
+        "Bundled references/contracts.json",
+        "Bundled references/module-registry.json",
+        "Python 3.10+ standard library for CLI"
+      ],
+      "optional_dependencies": [],
+      "downstream_consumers": "Only explicit WorkBrief.consumers declarations count as actual dependency records.",
+      "status": "implemented_text_scope",
+      "local_acceptance": [
+        "minimum input/unknown distinction",
+        "field ownership",
+        "source and version integrity",
+        "declared deterministic references",
+        "semantic/media remain unverified"
+      ],
+      "evidence": "../tests/test_m1_contract.py and ../tests/test-results.json are development records outside the runtime package."
+    },
+    "M1.1": {
+      "id": "M1.1",
+      "parent_id": "M1",
+      "name": "意图与约束整理",
+      "call_scope": "public",
+      "contract_version": "1.0.0",
+      "responsibility": "意图与约束整理",
+      "not_owned": [
+        "AssetRegistry",
+        "EntityRegistry",
+        "ReferenceMap",
+        "SpatialPlan",
+        "ActionPlan",
+        "CameraPlan",
+        "SoundPlan",
+        "TimingMap",
+        "ContinuityPolicy",
+        "StateLedger",
+        "ShotEditGenerationPlan",
+        "LookPlan",
+        "CompilationResult",
+        "MediaObservationLedger"
+      ],
+      "applicable_tasks": "意图与约束整理的独立整理、复核或修复。",
+      "minimum_input": {
+        "envelope": [
+          "kind",
+          "contract_version",
+          "request_id",
+          "target",
+          "work_id",
+          "base_version",
+          "sources",
+          "inputs"
+        ],
+        "projected_inputs": [
+          "work_type",
+          "creative_request"
+        ]
+      },
+      "optional_inputs": [
+        "delivery_use",
+        "notes"
+      ],
+      "unknown_form": {
+        "state": "unknown",
+        "reason": "Non-empty explanation"
+      },
+      "source_kinds": [
+        "user_requirement",
+        "case_text",
+        "design_decision",
+        "external_input",
+        "official_document",
+        "hypothesis"
+      ],
+      "read_only": [
+        "request.inputs",
+        "request.sources",
+        "request.work_id",
+        "request.base_version",
+        "declared prior WorkBrief projection"
+      ],
+      "produces": "M1Proposal",
+      "owned_content_partitions": [
+        "intent",
+        "constraints",
+        "must_keep_events"
+      ],
+      "authoritative_writes": [],
+      "proposal_only": true,
+      "input_projection": {
+        "inputs.work_type": "M1Request.inputs.work_type",
+        "inputs.creative_request": "M1Request.inputs.creative_request"
+      },
+      "route_id": "route-m1-1",
+      "route_version": "1.0.0",
+      "entrypoint": "python scripts/m1_contract.py route REQUEST.json",
+      "semantic_execution": "Agent reads only applicable resources and writes an explicit candidate; the CLI does not interpret prose.",
+      "resources": [
+        "references/contracts.json",
+        "references/intent-constraints.md",
+        "references/audit-and-handoff.md"
+      ],
+      "return_to": "M1.accept",
+      "failure_routes": {
+        "missing_input": "user",
+        "unknown_input": "user",
+        "incompatible_contract": "M1",
+        "ownership_conflict": "owning module",
+        "semantic_conflict": "M1.1",
+        "stale_base_version": "M1.1",
+        "external_blocker": "declared issue owner"
+      },
+      "recheck": "Return the corrected versioned input to the same public node; no automatic unbounded repair loop.",
+      "retry": "Read-only checks can be repeated; semantic conflicts require a new decision, not repeated identical checks.",
+      "required_dependencies": [
+        "Bundled references/contracts.json",
+        "Bundled references/module-registry.json",
+        "Python 3.10+ standard library for CLI"
+      ],
+      "optional_dependencies": [],
+      "downstream_consumers": "Only explicit WorkBrief.consumers declarations count as actual dependency records.",
+      "status": "implemented_text_scope",
+      "local_acceptance": [
+        "minimum input/unknown distinction",
+        "field ownership",
+        "source and version integrity",
+        "declared deterministic references",
+        "semantic/media remain unverified"
+      ],
+      "evidence": "../tests/test_m1_contract.py and ../tests/test-results.json are development records outside the runtime package."
+    },
+    "M1.2": {
+      "id": "M1.2",
+      "parent_id": "M1",
+      "name": "段落功能与信息结构",
+      "call_scope": "public",
+      "contract_version": "1.0.0",
+      "responsibility": "段落功能与信息结构",
+      "not_owned": [
+        "AssetRegistry",
+        "EntityRegistry",
+        "ReferenceMap",
+        "SpatialPlan",
+        "ActionPlan",
+        "CameraPlan",
+        "SoundPlan",
+        "TimingMap",
+        "ContinuityPolicy",
+        "StateLedger",
+        "ShotEditGenerationPlan",
+        "LookPlan",
+        "CompilationResult",
+        "MediaObservationLedger"
+      ],
+      "applicable_tasks": "段落功能与信息结构的独立整理、复核或修复。",
+      "minimum_input": {
+        "envelope": [
+          "kind",
+          "contract_version",
+          "request_id",
+          "target",
+          "work_id",
+          "base_version",
+          "sources",
+          "inputs"
+        ],
+        "projected_inputs": [
+          "work_type",
+          "intent_context",
+          "paragraph_material"
+        ]
+      },
+      "optional_inputs": [
+        "delivery_use",
+        "notes"
+      ],
+      "unknown_form": {
+        "state": "unknown",
+        "reason": "Non-empty explanation"
+      },
+      "source_kinds": [
+        "user_requirement",
+        "case_text",
+        "design_decision",
+        "external_input",
+        "official_document",
+        "hypothesis"
+      ],
+      "read_only": [
+        "request.inputs",
+        "request.sources",
+        "request.work_id",
+        "request.base_version",
+        "declared prior WorkBrief projection"
+      ],
+      "produces": "M1Proposal",
+      "owned_content_partitions": [
+        "paragraphs"
+      ],
+      "authoritative_writes": [],
+      "proposal_only": true,
+      "input_projection": {
+        "inputs.work_type": "M1Request.inputs.work_type",
+        "inputs.intent_context": "M1Request.inputs.intent_context",
+        "inputs.paragraph_material": "M1Request.inputs.paragraph_material"
+      },
+      "route_id": "route-m1-2",
+      "route_version": "1.0.0",
+      "entrypoint": "python scripts/m1_contract.py route REQUEST.json",
+      "semantic_execution": "Agent reads only applicable resources and writes an explicit candidate; the CLI does not interpret prose.",
+      "resources": [
+        "references/contracts.json",
+        "references/paragraph-information.md",
+        "references/audit-and-handoff.md"
+      ],
+      "return_to": "M1.accept",
+      "failure_routes": {
+        "missing_input": "user",
+        "unknown_input": "user",
+        "incompatible_contract": "M1",
+        "ownership_conflict": "owning module",
+        "semantic_conflict": "M1.2",
+        "stale_base_version": "M1.2",
+        "external_blocker": "declared issue owner"
+      },
+      "recheck": "Return the corrected versioned input to the same public node; no automatic unbounded repair loop.",
+      "retry": "Read-only checks can be repeated; semantic conflicts require a new decision, not repeated identical checks.",
+      "required_dependencies": [
+        "Bundled references/contracts.json",
+        "Bundled references/module-registry.json",
+        "Python 3.10+ standard library for CLI"
+      ],
+      "optional_dependencies": [],
+      "downstream_consumers": "Only explicit WorkBrief.consumers declarations count as actual dependency records.",
+      "status": "implemented_text_scope",
+      "local_acceptance": [
+        "minimum input/unknown distinction",
+        "field ownership",
+        "source and version integrity",
+        "declared deterministic references",
+        "semantic/media remain unverified"
+      ],
+      "evidence": "../tests/test_m1_contract.py and ../tests/test-results.json are development records outside the runtime package."
+    },
+    "M1.3": {
+      "id": "M1.3",
+      "parent_id": "M1",
+      "name": "情绪能量与母题",
+      "call_scope": "public",
+      "contract_version": "1.0.0",
+      "responsibility": "情绪能量与母题",
+      "not_owned": [
+        "AssetRegistry",
+        "EntityRegistry",
+        "ReferenceMap",
+        "SpatialPlan",
+        "ActionPlan",
+        "CameraPlan",
+        "SoundPlan",
+        "TimingMap",
+        "ContinuityPolicy",
+        "StateLedger",
+        "ShotEditGenerationPlan",
+        "LookPlan",
+        "CompilationResult",
+        "MediaObservationLedger"
+      ],
+      "applicable_tasks": "情绪能量与母题的独立整理、复核或修复。",
+      "minimum_input": {
+        "envelope": [
+          "kind",
+          "contract_version",
+          "request_id",
+          "target",
+          "work_id",
+          "base_version",
+          "sources",
+          "inputs"
+        ],
+        "projected_inputs": [
+          "work_type",
+          "intent_context",
+          "emotion_material"
+        ]
+      },
+      "optional_inputs": [
+        "delivery_use",
+        "notes"
+      ],
+      "unknown_form": {
+        "state": "unknown",
+        "reason": "Non-empty explanation"
+      },
+      "source_kinds": [
+        "user_requirement",
+        "case_text",
+        "design_decision",
+        "external_input",
+        "official_document",
+        "hypothesis"
+      ],
+      "read_only": [
+        "request.inputs",
+        "request.sources",
+        "request.work_id",
+        "request.base_version",
+        "declared prior WorkBrief projection"
+      ],
+      "produces": "M1Proposal",
+      "owned_content_partitions": [
+        "emotion_energy",
+        "motifs"
+      ],
+      "authoritative_writes": [],
+      "proposal_only": true,
+      "input_projection": {
+        "inputs.work_type": "M1Request.inputs.work_type",
+        "inputs.intent_context": "M1Request.inputs.intent_context",
+        "inputs.emotion_material": "M1Request.inputs.emotion_material"
+      },
+      "route_id": "route-m1-3",
+      "route_version": "1.0.0",
+      "entrypoint": "python scripts/m1_contract.py route REQUEST.json",
+      "semantic_execution": "Agent reads only applicable resources and writes an explicit candidate; the CLI does not interpret prose.",
+      "resources": [
+        "references/contracts.json",
+        "references/emotion-motif.md",
+        "references/audit-and-handoff.md"
+      ],
+      "return_to": "M1.accept",
+      "failure_routes": {
+        "missing_input": "user",
+        "unknown_input": "user",
+        "incompatible_contract": "M1",
+        "ownership_conflict": "owning module",
+        "semantic_conflict": "M1.3",
+        "stale_base_version": "M1.3",
+        "external_blocker": "declared issue owner"
+      },
+      "recheck": "Return the corrected versioned input to the same public node; no automatic unbounded repair loop.",
+      "retry": "Read-only checks can be repeated; semantic conflicts require a new decision, not repeated identical checks.",
+      "required_dependencies": [
+        "Bundled references/contracts.json",
+        "Bundled references/module-registry.json",
+        "Python 3.10+ standard library for CLI"
+      ],
+      "optional_dependencies": [],
+      "downstream_consumers": "Only explicit WorkBrief.consumers declarations count as actual dependency records.",
+      "status": "implemented_text_scope",
+      "local_acceptance": [
+        "minimum input/unknown distinction",
+        "field ownership",
+        "source and version integrity",
+        "declared deterministic references",
+        "semantic/media remain unverified"
+      ],
+      "evidence": "../tests/test_m1_contract.py and ../tests/test-results.json are development records outside the runtime package."
+    }
+  }
+}
