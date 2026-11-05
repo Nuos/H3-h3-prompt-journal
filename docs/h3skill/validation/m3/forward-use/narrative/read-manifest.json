@@ -1,0 +1,56 @@
+{
+  "snapshot_utc": "2026-11-05T10:04:26.278527+00:00",
+  "note": "SHA256 是交付前重新读取文件字节所得快照；不倒推为最初阅读时版本。runtime dependency only 不表示已人工阅读其内容。",
+  "files": [
+    {
+      "path": "docs/h3skill/h3-scene-blocking/SKILL.md",
+      "usage": "read: skill",
+      "sha256": "2ae4ea196ceb103d9317fef5900e1b26dd02ce35fd936ee76d84cd17897a07bf"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.md",
+      "usage": "read: complete narrative source",
+      "sha256": "5777d39d3c21ef0666296ff4ad2ff2544306f9a9989b45d8cca8358b4f840c93"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+      "usage": "read: complete narrative source",
+      "sha256": "a7eb42a7967a1b1f28a61dce224fe2e1fb3182a16f40e7a6969cc52c3eaba266"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/spatial-topology.md",
+      "usage": "read: module reference",
+      "sha256": "66c1a918f5dada1886eff2bba138cfa8c4038e6d0dac3f6ac58a66274b960390"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/contract-guide.md",
+      "usage": "read: contract reference; delivered snapshot after parent update",
+      "sha256": "074afc5bb66dd1f4eb5fd52123598e70e58ec2ff18397da60820c9313ccc96b4"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/request-m3-1.json",
+      "usage": "read: minimal request example",
+      "sha256": "57bb55af2d311162dbcab101c4c73ffa54f228388734fcdd639add3fcfef45f9"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/proposal-m3-1.json",
+      "usage": "read: minimal proposal example",
+      "sha256": "61b280471227980c92d46869ee27ac9a8b0d99a977bc72eacaf9bec2f0855158"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/contracts.json",
+      "usage": "read: bundled schema; runtime dependency",
+      "sha256": "fc1c56331646539b2b1538e7162fcbbc36ac4d3ded2896a1399e144b9263e793"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/module-registry.json",
+      "usage": "runtime dependency only; not narrative evidence",
+      "sha256": "bdadceed3f6d6d5e0d37e9d8083fdcd88dc7b00e52d9a2b9f0c58364cd26c305"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/scripts/m3_contract.py",
+      "usage": "executed: help and validation entry point",
+      "sha256": "58cb1c3c8dd118c988e8483e17185a5a685637a5fef9e775df5d48a0b7f072bb"
+    }
+  ]
+}

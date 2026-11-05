@@ -1,0 +1,40 @@
+{
+  "kind": "M3ToolResult",
+  "contract_version": "1.0.0",
+  "command": "check",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "natural_language_intent",
+      "source_authenticity",
+      "media_observation",
+      "geometric_collision_and_contact",
+      "camera_projection_M5",
+      "actual_timing_M7",
+      "generated_video_quality",
+      "global_acceptance_G0_to_G4"
+    ]
+  },
+  "diagnostics": [],
+  "trace": {
+    "call_id": "call_300aee6bae5d41cbbbe3e9d796988acc",
+    "started_at": "2026-11-05T10:00:14.164928+00:00",
+    "finished_at": "2026-11-05T10:00:14.165869+00:00",
+    "package_version": "0.1.0",
+    "input_digests": {
+      "artifact": "2f24884ecd2f1ebbda4beaac4cec1afa80cde32fcd56bacc188976085b204209"
+    },
+    "route_version": "1.0.0",
+    "parent_module": "M3",
+    "resources": {
+      "contracts.json": "160740091d7548a576167463b0d5c5d163059e7a709b3f719542aec19d877204",
+      "module-registry.json": "83485bfa1829206b534a7295c3513a010d1dc4622acd621f8de31edb17f5ce9b"
+    },
+    "registry_version": "1.0.0",
+    "side_effects": "none",
+    "retry": "Technical retry keeps proposal ID and exact content; domain revision uses current base_version and a new proposal ID."
+  }
+}

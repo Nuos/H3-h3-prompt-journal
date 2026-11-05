@@ -1,0 +1,85 @@
+{
+  "kind": "M3PrimarySourceAndFrozenPlanCheck",
+  "date": "2026-11-05",
+  "timezone": "America/Los_Angeles",
+  "repository_base": "91e6ed0b09d17e13cf5f58cccfe0df588c5b1d8a",
+  "scope": "Read-only GitHub primary-source retrieval and local byte comparison; no media inspection.",
+  "primary_heads": {
+    "MiniMax-AI/MiniMax-H3": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+    "anthropics/skills": "ca45fc496a3436251f191354091d557da31c15b5"
+  },
+  "frozen_members_and_controls": [
+    {
+      "path": "docs/skillplan/00-analysis-full.md",
+      "sha256": "e877dc9b5fc82d02eab9c86276f5844c003bad8b96336ffa8951eec6e90df1da",
+      "matches_baseline": true
+    },
+    {
+      "path": "docs/skillplan/01-core-framework.md",
+      "sha256": "518e183f3ef2ac5abac3159f8c4c994dafff3e6e94997f08b689f21fe649d9e7",
+      "matches_baseline": true
+    },
+    {
+      "path": "docs/skillplan/02-development-roadmap.md",
+      "sha256": "94d0a333514998aba1d179dd78433160100bf7444be52b1f23b4419e56a3db28",
+      "matches_baseline": true
+    },
+    {
+      "path": "docs/skillplan/03-source-evidence.md",
+      "sha256": "986598996e1e5bbfd41e1e5ade5007003e47e08a3462f9b15304accc8f05f45b",
+      "matches_baseline": true
+    },
+    {
+      "path": "docs/skillplan/04-framework-confirmation-full.md",
+      "sha256": "fdfa3736eb768543e9a71e209cf35d2de01f0b301303ab1da320893b2272cb8f",
+      "matches_baseline": true
+    },
+    {
+      "path": "docs/skillplan/05-workflow-routing.md",
+      "sha256": "a80703c4d01c1bddab43a947872724e96c710a74bdfa6f08b92e8211491f7270",
+      "matches_baseline": true
+    },
+    {
+      "path": "docs/skillplan/06-modularity-routing-principles.md",
+      "sha256": "316ede58a536f8b2580c1c9d7fa6b37fe7b4637cbea311838927295b39d9d334",
+      "matches_baseline": true
+    },
+    {
+      "path": "docs/skillplan/README.md",
+      "sha256": "3e819a61d72d3cb7de8aff97ae9d5ee294fe79c9687a6a34479a17d9b5dcba35",
+      "matches_baseline": true
+    },
+    {
+      "path": "docs/skillplan/validation-record.json",
+      "sha256": "c54af9d36ed6c26cb2df260e09e95671404756e4c245b92df5d5dccd6509ac92",
+      "matches_baseline": true
+    },
+    {
+      "path": "docs/skillplan/AGENTS.md",
+      "sha256": "595d99bf93b257adbe1cdb8103a2c702d402b0584ff3365c10ca274d9c8e8b44",
+      "matches_baseline": true
+    },
+    {
+      "path": "docs/skillplan/LOCK.md",
+      "sha256": "91ed9d148773ff7608853b1a21c9bf3d2f906ec54b5148b9cec2064d3142dd40",
+      "matches_baseline": true
+    }
+  ],
+  "official_snapshots": [
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/h3-base-official.txt",
+      "expected_github_blob_sha": "40cf586a634d677d6b7107b367cf0ec9621be728",
+      "actual_git_blob_sha": "40cf586a634d677d6b7107b367cf0ec9621be728",
+      "matches_primary_fetch": true,
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/h3-ref-official.txt",
+      "expected_github_blob_sha": "7ae1b2d07d743fd2392258a96449be9e9e322d35",
+      "actual_git_blob_sha": "7ae1b2d07d743fd2392258a96449be9e9e322d35",
+      "matches_primary_fetch": true,
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"
+    }
+  ],
+  "media_observations_performed": 0
+}

@@ -1,0 +1,1141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:h3-scene-blocking:contracts:1.0.0",
+  "title": "M3 SpatialPlan contracts; repository implementation design, not a MiniMax API",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/M3Request"
+    },
+    {
+      "$ref": "#/$defs/M3Proposal"
+    },
+    {
+      "$ref": "#/$defs/M3ProposalBatch"
+    },
+    {
+      "$ref": "#/$defs/M3State"
+    }
+  ],
+  "$defs": {
+    "ID": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"
+    },
+    "Text": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "Version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "Unknown": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "const": "unknown"
+        },
+        "reason": {
+          "$ref": "#/$defs/Text"
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "TextOrUnknown": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Text"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Refs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ID"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "OptionalRefs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ID"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "Source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "user_requirement",
+            "approved_plan",
+            "case_text",
+            "external_input",
+            "media_observation",
+            "design_decision",
+            "official_document",
+            "hypothesis"
+          ]
+        },
+        "locator": {
+          "$ref": "#/$defs/Text"
+        },
+        "version": {
+          "$ref": "#/$defs/Text"
+        },
+        "excerpt": {
+          "$ref": "#/$defs/Text"
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "version",
+        "excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "SourceMap": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/ID"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      }
+    },
+    "RequiredSourceMap": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/ID"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      },
+      "minProperties": 1
+    },
+    "Entity": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "person",
+            "animal",
+            "object",
+            "scene",
+            "motion",
+            "style",
+            "voice",
+            "soundtrack",
+            "other"
+          ]
+        },
+        "description": {
+          "$ref": "#/$defs/Text"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "kind",
+        "description",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Vector": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "VectorOrUnknown": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Vector"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "IDOrUnknown": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/ID"
+        },
+        {
+          "$ref": "#/$defs/Unknown"
+        }
+      ]
+    },
+    "Scope": {
+      "type": "object",
+      "properties": {
+        "scene_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "shot_id": {
+          "$ref": "#/$defs/IDOrUnknown"
+        },
+        "phase": {
+          "$ref": "#/$defs/IDOrUnknown"
+        }
+      },
+      "required": [
+        "scene_id",
+        "shot_id",
+        "phase"
+      ],
+      "additionalProperties": false
+    },
+    "Frame": {
+      "type": "object",
+      "properties": {
+        "space": {
+          "enum": [
+            "world",
+            "entity_local",
+            "screen"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "m",
+            "cm",
+            "normalized",
+            "arbitrary"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/Text"
+        },
+        "axes": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "$ref": "#/$defs/Text"
+            },
+            "y": {
+              "$ref": "#/$defs/Text"
+            },
+            "z": {
+              "$ref": "#/$defs/Text"
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "z"
+          ],
+          "additionalProperties": false
+        },
+        "anchor_entity_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "view_context": {
+          "$ref": "#/$defs/TextOrUnknown"
+        }
+      },
+      "required": [
+        "space",
+        "unit",
+        "origin",
+        "axes",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Region": {
+      "type": "object",
+      "properties": {
+        "scene_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "frame_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "description": {
+          "$ref": "#/$defs/Text"
+        },
+        "traversable": {
+          "type": "boolean"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "exclusive_with": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "scene_id",
+        "frame_id",
+        "description",
+        "traversable",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Connection": {
+      "type": "object",
+      "properties": {
+        "from_region": {
+          "$ref": "#/$defs/ID"
+        },
+        "to_region": {
+          "$ref": "#/$defs/ID"
+        },
+        "direction": {
+          "enum": [
+            "both",
+            "forward"
+          ]
+        },
+        "passable": {
+          "type": "boolean"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "from_region",
+        "to_region",
+        "direction",
+        "passable",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Topology": {
+      "type": "object",
+      "properties": {
+        "frames": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Frame"
+          }
+        },
+        "regions": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Region"
+          }
+        },
+        "connections": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Connection"
+          }
+        }
+      },
+      "required": [
+        "frames",
+        "regions",
+        "connections"
+      ],
+      "additionalProperties": false
+    },
+    "EntityMap": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/ID"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Entity"
+      }
+    },
+    "Gaze": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "entity",
+                "region"
+              ]
+            },
+            "target_id": {
+              "$ref": "#/$defs/ID"
+            }
+          },
+          "required": [
+            "kind",
+            "target_id"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "unknown"
+            },
+            "reason": {
+              "$ref": "#/$defs/Text"
+            }
+          },
+          "required": [
+            "kind",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "Placement": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "region_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "frame_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "position": {
+          "$ref": "#/$defs/VectorOrUnknown"
+        },
+        "facing": {
+          "$ref": "#/$defs/VectorOrUnknown"
+        },
+        "gaze": {
+          "$ref": "#/$defs/Gaze"
+        },
+        "layer": {
+          "enum": [
+            "foreground",
+            "middle",
+            "background",
+            "unknown"
+          ]
+        },
+        "scope": {
+          "$ref": "#/$defs/Scope"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "entity_id",
+        "region_id",
+        "frame_id",
+        "position",
+        "facing",
+        "gaze",
+        "layer",
+        "scope",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Route": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "frame_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "start_placement": {
+          "$ref": "#/$defs/ID"
+        },
+        "end_placement": {
+          "$ref": "#/$defs/ID"
+        },
+        "region_path": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1
+        },
+        "scope": {
+          "$ref": "#/$defs/Scope"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "entity_id",
+        "frame_id",
+        "start_placement",
+        "end_placement",
+        "region_path",
+        "scope",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Blocking": {
+      "type": "object",
+      "properties": {
+        "entities": {
+          "$ref": "#/$defs/EntityMap"
+        },
+        "placements": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Placement"
+          }
+        },
+        "routes": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Route"
+          }
+        }
+      },
+      "required": [
+        "entities",
+        "placements",
+        "routes"
+      ],
+      "additionalProperties": false
+    },
+    "Relation": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "contact",
+            "crossing",
+            "avoidance",
+            "occlusion",
+            "eyeline"
+          ]
+        },
+        "participants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 2,
+          "uniqueItems": true
+        },
+        "region_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "route_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "scope": {
+          "$ref": "#/$defs/Scope"
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "occlusion": {
+          "enum": [
+            "allowed",
+            "forbidden",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "view_context": {
+          "$ref": "#/$defs/TextOrUnknown"
+        },
+        "description": {
+          "$ref": "#/$defs/Text"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "occlusion_target": {
+          "$ref": "#/$defs/OcclusionTarget"
+        }
+      },
+      "required": [
+        "kind",
+        "participants",
+        "region_id",
+        "route_ids",
+        "scope",
+        "order",
+        "occlusion",
+        "view_context",
+        "description",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "ChangeRequest": {
+      "type": "object",
+      "properties": {
+        "target_module": {
+          "enum": [
+            "M3.2",
+            "M4",
+            "M5",
+            "M7",
+            "M8"
+          ]
+        },
+        "description": {
+          "$ref": "#/$defs/Text"
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Text"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "target_module",
+        "description",
+        "read_paths",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Interactions": {
+      "type": "object",
+      "properties": {
+        "relations": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Relation"
+          }
+        },
+        "change_requests": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/ChangeRequest"
+          }
+        }
+      },
+      "required": [
+        "relations",
+        "change_requests"
+      ],
+      "additionalProperties": false
+    },
+    "Content": {
+      "type": "object",
+      "properties": {
+        "topology": {
+          "$ref": "#/$defs/Topology"
+        },
+        "blocking": {
+          "$ref": "#/$defs/Blocking"
+        },
+        "interactions": {
+          "$ref": "#/$defs/Interactions"
+        }
+      },
+      "required": [
+        "topology",
+        "blocking",
+        "interactions"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs": {
+      "type": "object",
+      "properties": {
+        "scene_brief": {
+          "$ref": "#/$defs/TextOrUnknown"
+        },
+        "topology_context": {
+          "$ref": "#/$defs/Topology"
+        },
+        "entity_context": {
+          "$ref": "#/$defs/EntityMap"
+        },
+        "blocking_brief": {
+          "$ref": "#/$defs/TextOrUnknown"
+        },
+        "blocking_context": {
+          "$ref": "#/$defs/Blocking"
+        },
+        "interaction_brief": {
+          "$ref": "#/$defs/TextOrUnknown"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "Changes": {
+      "type": "object",
+      "properties": {
+        "topology": {
+          "$ref": "#/$defs/Topology"
+        },
+        "blocking": {
+          "$ref": "#/$defs/Blocking"
+        },
+        "interactions": {
+          "$ref": "#/$defs/Interactions"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "Issue": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M3",
+            "M3.1",
+            "M3.2",
+            "M3.3",
+            "M4",
+            "M5",
+            "M7",
+            "M8",
+            "user"
+          ]
+        },
+        "state": {
+          "enum": [
+            "open",
+            "resolved"
+          ]
+        },
+        "blocking": {
+          "type": "boolean"
+        },
+        "description": {
+          "$ref": "#/$defs/Text"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "resolution": {
+          "type": "object",
+          "properties": {
+            "description": {
+              "$ref": "#/$defs/Text"
+            },
+            "source_refs": {
+              "$ref": "#/$defs/Refs"
+            }
+          },
+          "required": [
+            "description",
+            "source_refs"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "owner",
+        "state",
+        "blocking",
+        "description",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "IssueMap": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/ID"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Issue"
+      }
+    },
+    "Resolution": {
+      "type": "object",
+      "properties": {
+        "issue_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "description": {
+          "$ref": "#/$defs/Text"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "issue_id",
+        "description",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "M3Request": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M3Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "$ref": "#/$defs/Version"
+        },
+        "sources": {
+          "$ref": "#/$defs/RequiredSourceMap"
+        },
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target": {
+          "enum": [
+            "M3",
+            "M3.1",
+            "M3.2",
+            "M3.3"
+          ]
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "request_id",
+        "target",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "M3Proposal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M3Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "$ref": "#/$defs/Version"
+        },
+        "sources": {
+          "$ref": "#/$defs/RequiredSourceMap"
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "enum": [
+            "M3.1",
+            "M3.2",
+            "M3.3"
+          ]
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs"
+        },
+        "changes": {
+          "$ref": "#/$defs/Changes"
+        },
+        "issues": {
+          "$ref": "#/$defs/IssueMap"
+        },
+        "resolutions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Resolution"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "context",
+        "changes",
+        "issues",
+        "resolutions"
+      ],
+      "additionalProperties": false
+    },
+    "M3ProposalBatch": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M3ProposalBatch"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "batch_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "$ref": "#/$defs/Version"
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/M3Proposal"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "batch_id",
+        "work_id",
+        "base_version",
+        "proposals"
+      ],
+      "additionalProperties": false
+    },
+    "Consumer": {
+      "type": "object",
+      "properties": {
+        "module_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "result_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_state_version": {
+          "$ref": "#/$defs/Version"
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^/(content|sources|issues|display)(/.*)?$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "module_id",
+        "result_version",
+        "source_state_version",
+        "read_paths"
+      ],
+      "additionalProperties": false
+    },
+    "Receipt": {
+      "type": "object",
+      "properties": {
+        "digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "enum": [
+            "M3.1",
+            "M3.2",
+            "M3.3"
+          ]
+        },
+        "accepted_version": {
+          "$ref": "#/$defs/Version"
+        }
+      },
+      "required": [
+        "digest",
+        "source_request_id",
+        "module_id",
+        "accepted_version"
+      ],
+      "additionalProperties": false
+    },
+    "M3State": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M3State"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "version": {
+          "$ref": "#/$defs/Version"
+        },
+        "owner": {
+          "const": "M3"
+        },
+        "object_type": {
+          "const": "SpatialPlan"
+        },
+        "status": {
+          "const": "draft"
+        },
+        "sources": {
+          "$ref": "#/$defs/SourceMap"
+        },
+        "content": {
+          "$ref": "#/$defs/Content"
+        },
+        "issues": {
+          "$ref": "#/$defs/IssueMap"
+        },
+        "accepted_proposals": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Receipt"
+          }
+        },
+        "consumers": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/Consumer"
+          }
+        },
+        "display": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "$ref": "#/$defs/Text"
+            },
+            "note": {
+              "$ref": "#/$defs/Text"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "version",
+        "owner",
+        "object_type",
+        "status",
+        "sources",
+        "content",
+        "issues",
+        "accepted_proposals",
+        "consumers"
+      ],
+      "additionalProperties": false
+    },
+    "OcclusionTarget": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Unknown"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "occluder_id": {
+              "$ref": "#/$defs/ID"
+            },
+            "occluded_id": {
+              "$ref": "#/$defs/ID"
+            },
+            "part": {
+              "$ref": "#/$defs/Text"
+            }
+          },
+          "required": [
+            "occluder_id",
+            "occluded_id",
+            "part"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

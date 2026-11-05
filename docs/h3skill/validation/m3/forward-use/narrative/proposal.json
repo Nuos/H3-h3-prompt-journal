@@ -1,0 +1,192 @@
+{
+  "kind": "M3Proposal",
+  "contract_version": "1.0.0",
+  "proposal_id": "PROP_narrative_m3_1",
+  "module_id": "M3.1",
+  "work_id": "WORK_water_obstacle_narrative",
+  "base_version": 0,
+  "source_request_id": "REQ_narrative_m3_1",
+  "sources": {
+    "S_scope": {
+      "kind": "external_input",
+      "locator": "task://m3-forward-use/narrative",
+      "version": "2026-11-05",
+      "excerpt": "本轮开发中父代理分配的试用任务，不是实际用户创作需求或新媒体授权：仅依据该案例 README.md 与 prompt.md 文字，完成独立 M3.1 空间坐标与场景拓扑提案；没有视频、尺寸或摄影投影；不扩充剧情、不运行其他核心模块。"
+    },
+    "S_case_prompt": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+      "version": "sha256:a7eb42a7967a1b1f28a61dce224fe2e1fb3182a16f40e7a6969cc52c3eaba266",
+      "excerpt": "summary 与 retention_analysis 规定同一连续夜间场地、一个泳池及起跑台、滚筒、Fishbone Reverse、连接跑道、终点曲墙的连贯次序；Shot 3 在 Fishbone 障碍平台摔倒；Shot 5–8 在终点墙侧落入并浮出同一泳池。"
+    },
+    "S_case_readme": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-water-obstacle-variety-show/README.md",
+      "version": "sha256:5777d39d3c21ef0666296ff4ad2ff2544306f9a9989b45d8cca8358b4f840c93",
+      "excerpt": "Inputs 限定 Picture 1 只供身份和外观；The breakthrough 给出固定剧情锚点。本文 Result 为案例文字陈述，不作为本次视频观察或效果验证。"
+    },
+    "S_design_frame": {
+      "kind": "design_decision",
+      "locator": "request.json#/sources/S_design_frame",
+      "version": "narrative-spatial-1",
+      "excerpt": "本提案自行约定世界框架 F_course：原点为起跑平台的赛道入口参考点；+X 为起跑端朝终点端的总体纵向，+Y 为未绑定具体机关侧或落水侧的横向命名方向，+Z 为向上；单位 arbitrary。只作拓扑方向约定，不表示米制测量、实际直线几何或屏幕方向。"
+    },
+    "S_design_topology": {
+      "kind": "design_decision",
+      "locator": "request.json#/sources/S_design_topology",
+      "version": "narrative-spatial-1",
+      "excerpt": "将文字中的五段赛道映射为五个区域，按剧情前进顺序建立四条 forward 连接。traversable/passable 仅表示文本要求能够通过，不保证净空、碰撞或物理可行性。终点侧落水是同一泳池内的事件关系，不另建普通步行连接或另一个泳池。"
+    }
+  },
+  "context": {
+    "scene_brief": "同一夜间场地 SC_arena 内，赛道由起跑台、滚筒、Fishbone Reverse、连接跑道、终点曲墙依次相连。Fishbone 摔倒仍在其障碍平台；终点侧落水与浮出属于同一比赛泳池。只提交五段赛道的定性空间拓扑及显式设计坐标约定。尺寸、净空、机关具体侧别、精确落点与摄影投影未知；Picture 1 不提供场地证据。"
+  },
+  "changes": {
+    "topology": {
+      "frames": {
+        "F_course": {
+          "space": "world",
+          "unit": "arbitrary",
+          "origin": "起跑平台的赛道入口参考点（设计约定，未经测量）",
+          "axes": {
+            "x": "正向：起跑端朝终点端的总体纵向；不宣称各段共线。",
+            "y": "正向：自定横向命名方向；不绑定机关侧、落水侧或画面左右。",
+            "z": "正向：竖直向上。"
+          },
+          "source_refs": [
+            "S_design_frame",
+            "S_case_prompt"
+          ]
+        }
+      },
+      "regions": {
+        "R_start": {
+          "scene_id": "SC_arena",
+          "frame_id": "F_course",
+          "description": "起跑平台；同一赛道的起始区域。",
+          "traversable": true,
+          "source_refs": [
+            "S_case_prompt",
+            "S_design_topology"
+          ]
+        },
+        "R_rollers": {
+          "scene_id": "SC_arena",
+          "frame_id": "F_course",
+          "description": "第一段滚筒障碍；成功通过后进入 Fishbone Reverse。",
+          "traversable": true,
+          "source_refs": [
+            "S_case_prompt",
+            "S_design_topology"
+          ]
+        },
+        "R_fishbone": {
+          "scene_id": "SC_arena",
+          "frame_id": "F_course",
+          "description": "Fishbone Reverse 及其障碍平台；摔倒和恢复仍发生于本区域，没有转移至泳池。",
+          "traversable": true,
+          "source_refs": [
+            "S_case_prompt",
+            "S_design_topology"
+          ]
+        },
+        "R_runway": {
+          "scene_id": "SC_arena",
+          "frame_id": "F_course",
+          "description": "Fishbone 之后、终点曲墙之前的连接跑道；属于同一连续赛道。",
+          "traversable": true,
+          "source_refs": [
+            "S_case_prompt",
+            "S_design_topology"
+          ]
+        },
+        "R_wall": {
+          "scene_id": "SC_arena",
+          "frame_id": "F_course",
+          "description": "终点曲墙，含墙面和可双手抓住的上缘；不推定额外站立平台。其侧邻同一比赛泳池，落水和浮出位置保持同场关系；具体侧别与落点未知。",
+          "traversable": true,
+          "source_refs": [
+            "S_case_prompt",
+            "S_design_topology"
+          ]
+        }
+      },
+      "connections": {
+        "C_course_1": {
+          "from_region": "R_start",
+          "to_region": "R_rollers",
+          "direction": "forward",
+          "passable": true,
+          "source_refs": [
+            "S_case_prompt",
+            "S_design_topology"
+          ]
+        },
+        "C_course_2": {
+          "from_region": "R_rollers",
+          "to_region": "R_fishbone",
+          "direction": "forward",
+          "passable": true,
+          "source_refs": [
+            "S_case_prompt",
+            "S_design_topology"
+          ]
+        },
+        "C_course_3": {
+          "from_region": "R_fishbone",
+          "to_region": "R_runway",
+          "direction": "forward",
+          "passable": true,
+          "source_refs": [
+            "S_case_prompt",
+            "S_design_topology"
+          ]
+        },
+        "C_course_4": {
+          "from_region": "R_runway",
+          "to_region": "R_wall",
+          "direction": "forward",
+          "passable": true,
+          "source_refs": [
+            "S_case_prompt",
+            "S_design_topology"
+          ]
+        }
+      }
+    }
+  },
+  "issues": {
+    "I_dimensions": {
+      "owner": "M3.1",
+      "state": "open",
+      "blocking": false,
+      "description": "未提供场地测量或媒体。区域尺度、相对高度、间距、边界和通行净空未知；不阻断定性拓扑提案，但不得据此证明几何、碰撞或物理可行性。",
+      "source_refs": [
+        "S_scope",
+        "S_design_frame"
+      ]
+    },
+    "I_side_projection": {
+      "owner": "M3.1",
+      "state": "open",
+      "blocking": false,
+      "description": "文字仅给出侧击和终点旁同一泳池，未指定世界正负 Y、机关安装点、精确落点或摄影投影。保持未知，不能将世界方向等同画面方向。",
+      "source_refs": [
+        "S_scope",
+        "S_case_prompt",
+        "S_design_frame"
+      ]
+    },
+    "I_pool_relation": {
+      "owner": "M3.1",
+      "state": "open",
+      "blocking": false,
+      "description": "本最小提案以终点区域描述保存同一泳池侧邻关系，不用普通通行连接表示击飞落水；三维水域边界和落水轨迹不在本次拓扑中求解。",
+      "source_refs": [
+        "S_case_prompt",
+        "S_design_topology"
+      ]
+    }
+  },
+  "resolutions": []
+}

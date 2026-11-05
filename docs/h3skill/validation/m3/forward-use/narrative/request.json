@@ -1,0 +1,43 @@
+{
+  "kind": "M3Request",
+  "contract_version": "1.0.0",
+  "request_id": "REQ_narrative_m3_1",
+  "target": "M3.1",
+  "work_id": "WORK_water_obstacle_narrative",
+  "base_version": 0,
+  "sources": {
+    "S_scope": {
+      "kind": "external_input",
+      "locator": "task://m3-forward-use/narrative",
+      "version": "2026-11-05",
+      "excerpt": "本轮开发中父代理分配的试用任务，不是实际用户创作需求或新媒体授权：仅依据该案例 README.md 与 prompt.md 文字，完成独立 M3.1 空间坐标与场景拓扑提案；没有视频、尺寸或摄影投影；不扩充剧情、不运行其他核心模块。"
+    },
+    "S_case_prompt": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+      "version": "sha256:a7eb42a7967a1b1f28a61dce224fe2e1fb3182a16f40e7a6969cc52c3eaba266",
+      "excerpt": "summary 与 retention_analysis 规定同一连续夜间场地、一个泳池及起跑台、滚筒、Fishbone Reverse、连接跑道、终点曲墙的连贯次序；Shot 3 在 Fishbone 障碍平台摔倒；Shot 5–8 在终点墙侧落入并浮出同一泳池。"
+    },
+    "S_case_readme": {
+      "kind": "case_text",
+      "locator": "case-studies/2026-08-water-obstacle-variety-show/README.md",
+      "version": "sha256:5777d39d3c21ef0666296ff4ad2ff2544306f9a9989b45d8cca8358b4f840c93",
+      "excerpt": "Inputs 限定 Picture 1 只供身份和外观；The breakthrough 给出固定剧情锚点。本文 Result 为案例文字陈述，不作为本次视频观察或效果验证。"
+    },
+    "S_design_frame": {
+      "kind": "design_decision",
+      "locator": "request.json#/sources/S_design_frame",
+      "version": "narrative-spatial-1",
+      "excerpt": "本提案自行约定世界框架 F_course：原点为起跑平台的赛道入口参考点；+X 为起跑端朝终点端的总体纵向，+Y 为未绑定具体机关侧或落水侧的横向命名方向，+Z 为向上；单位 arbitrary。只作拓扑方向约定，不表示米制测量、实际直线几何或屏幕方向。"
+    },
+    "S_design_topology": {
+      "kind": "design_decision",
+      "locator": "request.json#/sources/S_design_topology",
+      "version": "narrative-spatial-1",
+      "excerpt": "将文字中的五段赛道映射为五个区域，按剧情前进顺序建立四条 forward 连接。traversable/passable 仅表示文本要求能够通过，不保证净空、碰撞或物理可行性。终点侧落水是同一泳池内的事件关系，不另建普通步行连接或另一个泳池。"
+    }
+  },
+  "inputs": {
+    "scene_brief": "同一夜间场地 SC_arena 内，赛道由起跑台、滚筒、Fishbone Reverse、连接跑道、终点曲墙依次相连。Fishbone 摔倒仍在其障碍平台；终点侧落水与浮出属于同一比赛泳池。只提交五段赛道的定性空间拓扑及显式设计坐标约定。尺寸、净空、机关具体侧别、精确落点与摄影投影未知；Picture 1 不提供场地证据。"
+  }
+}

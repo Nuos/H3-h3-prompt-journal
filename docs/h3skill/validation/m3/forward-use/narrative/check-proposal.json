@@ -1,0 +1,41 @@
+{
+  "kind": "M3ToolResult",
+  "contract_version": "1.0.0",
+  "command": "check",
+  "execution": "completed",
+  "disposition": "checked_draft",
+  "validation": {
+    "local_contract": "pass",
+    "overall": "unverified",
+    "unverified": [
+      "natural_language_intent",
+      "source_authenticity",
+      "media_observation",
+      "geometric_collision_and_contact",
+      "camera_projection_M5",
+      "actual_timing_M7",
+      "generated_video_quality",
+      "global_acceptance_G0_to_G4"
+    ]
+  },
+  "diagnostics": [],
+  "trace": {
+    "call_id": "call_f5df548902214282aa852fd473dfddbb",
+    "started_at": "2026-11-05T10:04:26.440896+00:00",
+    "finished_at": "2026-11-05T10:04:26.442198+00:00",
+    "package_version": "0.1.0",
+    "input_digests": {
+      "artifact": "97da4fe2bec2cbb73ac27bd4bbbbb5a8e7016cd012528d4eabfe50c88c9b9994",
+      "request": "b27991ae540b45385e6580e1a209b9b57dc30359e545c6f2e7f7295111e8f49a"
+    },
+    "route_version": "1.0.0",
+    "parent_module": "M3",
+    "resources": {
+      "contracts.json": "160740091d7548a576167463b0d5c5d163059e7a709b3f719542aec19d877204",
+      "module-registry.json": "83485bfa1829206b534a7295c3513a010d1dc4622acd621f8de31edb17f5ce9b"
+    },
+    "registry_version": "1.0.0",
+    "side_effects": "none",
+    "retry": "Technical retry keeps proposal ID and exact content; domain revision uses current base_version and a new proposal ID."
+  }
+}

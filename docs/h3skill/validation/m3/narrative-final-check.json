@@ -1,0 +1,75 @@
+{
+  "kind": "M3NarrativeTrialFinalReview",
+  "reviewed_utc": "2026-11-05T10:06:03.107565+00:00",
+  "file_checks": [
+    {
+      "path": "docs/h3skill/h3-scene-blocking/SKILL.md",
+      "matches_final_bytes": true
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.md",
+      "matches_final_bytes": true
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+      "matches_final_bytes": true
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/spatial-topology.md",
+      "matches_final_bytes": true
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/contract-guide.md",
+      "matches_final_bytes": true
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/request-m3-1.json",
+      "matches_final_bytes": true
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/assets/proposal-m3-1.json",
+      "matches_final_bytes": true
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/contracts.json",
+      "matches_final_bytes": true
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/module-registry.json",
+      "matches_final_bytes": true
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/scripts/m3_contract.py",
+      "matches_final_bytes": true
+    }
+  ],
+  "proposal_preserves_original_request": true,
+  "executions": [
+    {
+      "command": "route",
+      "return_code": 0,
+      "local_contract": "pass",
+      "overall": "unverified",
+      "source_inputs_match": true,
+      "contract_matches_final": true
+    },
+    {
+      "command": "check-request",
+      "return_code": 0,
+      "local_contract": "pass",
+      "overall": "unverified",
+      "source_inputs_match": true,
+      "contract_matches_final": true
+    },
+    {
+      "command": "check-proposal",
+      "return_code": 0,
+      "local_contract": "pass",
+      "overall": "unverified",
+      "source_inputs_match": true,
+      "contract_matches_final": true
+    }
+  ],
+  "review_scope": "Read archived outputs and compare exact final resource/input digests; no duplicate execution or media inspection by this review.",
+  "ok": true
+}

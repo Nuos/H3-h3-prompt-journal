@@ -1,0 +1,334 @@
+{
+  "kind": "M3DeliveryValidation",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "date": "2026-11-05",
+  "timezone": "America/Los_Angeles",
+  "started_utc": "2026-11-05T10:00:11.530737+00:00",
+  "finished_utc": "2026-11-05T10:00:14.431819+00:00",
+  "executions": [
+    {
+      "check": "anthropic-format",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "docs/h3skill/_standards/anthropics-quick-validate.py",
+        "docs/h3skill/h3-scene-blocking"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/anthropic-format.stdout.txt",
+      "stderr": "logs/anthropic-format.stderr.txt"
+    },
+    {
+      "check": "m3-unittest",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "docs/h3skill/tests/m3",
+        "-p",
+        "test*.py",
+        "-v"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/m3-unittest.stdout.txt",
+      "stderr": "logs/m3-unittest.stderr.txt",
+      "tests_run": 31,
+      "skipped": 1
+    },
+    {
+      "check": "m1-regression",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "docs/h3skill/tests",
+        "-p",
+        "test_m1_contract.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/m1-regression.stdout.txt",
+      "stderr": "logs/m1-regression.stderr.txt",
+      "tests_run": 52,
+      "skipped": 0
+    },
+    {
+      "check": "m2-regression",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "docs/h3skill/tests/m2",
+        "-p",
+        "test_m2_contract.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/m2-regression.stdout.txt",
+      "stderr": "logs/m2-regression.stderr.txt",
+      "tests_run": 61,
+      "skipped": 1
+    },
+    {
+      "check": "portable-help",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "--help"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-help.stdout.txt",
+      "stderr": "logs/portable-help.stderr.txt"
+    },
+    {
+      "check": "portable-check-proposal-batch",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "check",
+        "assets/proposal-batch.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-check-proposal-batch.stdout.txt",
+      "stderr": "logs/portable-check-proposal-batch.stderr.txt"
+    },
+    {
+      "check": "portable-check-proposal-m3-1",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "check",
+        "assets/proposal-m3-1.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-check-proposal-m3-1.stdout.txt",
+      "stderr": "logs/portable-check-proposal-m3-1.stderr.txt"
+    },
+    {
+      "check": "portable-check-proposal-m3-2",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "check",
+        "assets/proposal-m3-2.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-check-proposal-m3-2.stdout.txt",
+      "stderr": "logs/portable-check-proposal-m3-2.stderr.txt"
+    },
+    {
+      "check": "portable-check-proposal-m3-3",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "check",
+        "assets/proposal-m3-3.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-check-proposal-m3-3.stdout.txt",
+      "stderr": "logs/portable-check-proposal-m3-3.stderr.txt"
+    },
+    {
+      "check": "portable-check-request-m3-1",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "check",
+        "assets/request-m3-1.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-check-request-m3-1.stdout.txt",
+      "stderr": "logs/portable-check-request-m3-1.stderr.txt"
+    },
+    {
+      "check": "portable-route-request-m3-1",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "route",
+        "assets/request-m3-1.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-route-request-m3-1.stdout.txt",
+      "stderr": "logs/portable-route-request-m3-1.stderr.txt"
+    },
+    {
+      "check": "portable-check-request-m3-2",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "check",
+        "assets/request-m3-2.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-check-request-m3-2.stdout.txt",
+      "stderr": "logs/portable-check-request-m3-2.stderr.txt"
+    },
+    {
+      "check": "portable-route-request-m3-2",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "route",
+        "assets/request-m3-2.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-route-request-m3-2.stdout.txt",
+      "stderr": "logs/portable-route-request-m3-2.stderr.txt"
+    },
+    {
+      "check": "portable-check-request-m3-3",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "check",
+        "assets/request-m3-3.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-check-request-m3-3.stdout.txt",
+      "stderr": "logs/portable-check-request-m3-3.stderr.txt"
+    },
+    {
+      "check": "portable-route-request-m3-3",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "route",
+        "assets/request-m3-3.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-route-request-m3-3.stdout.txt",
+      "stderr": "logs/portable-route-request-m3-3.stderr.txt"
+    },
+    {
+      "check": "portable-check-request-m3",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "check",
+        "assets/request-m3.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-check-request-m3.stdout.txt",
+      "stderr": "logs/portable-check-request-m3.stderr.txt"
+    },
+    {
+      "check": "portable-route-request-m3",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "route",
+        "assets/request-m3.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-route-request-m3.stdout.txt",
+      "stderr": "logs/portable-route-request-m3.stderr.txt"
+    },
+    {
+      "check": "portable-check-state-empty",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "check",
+        "assets/state-empty.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-check-state-empty.stdout.txt",
+      "stderr": "logs/portable-check-state-empty.stderr.txt"
+    },
+    {
+      "check": "portable-accept",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/m3_contract.py",
+        "accept",
+        "assets/state-empty.json",
+        "assets/proposal-batch.json",
+        "--requests",
+        "assets/requests.json"
+      ],
+      "cwd": "isolated copied skill directory",
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "logs/portable-accept.stdout.txt",
+      "stderr": "logs/portable-accept.stderr.txt"
+    }
+  ],
+  "m3_tests_nonempty": true,
+  "ok": true,
+  "file_sha256": {
+    "h3-scene-blocking/SKILL.md": "2ae4ea196ceb103d9317fef5900e1b26dd02ce35fd936ee76d84cd17897a07bf",
+    "h3-scene-blocking/assets/proposal-batch.json": "5e269970cb28856657f3b8d960ebfcf03dd6b80c67705b7d2f874b0bdf9b9ad8",
+    "h3-scene-blocking/assets/proposal-m3-1.json": "61b280471227980c92d46869ee27ac9a8b0d99a977bc72eacaf9bec2f0855158",
+    "h3-scene-blocking/assets/proposal-m3-2.json": "80b9b9674f59541387681e00f60c7e82fce30141a09a2e7802d5052293050f14",
+    "h3-scene-blocking/assets/proposal-m3-3.json": "54b8bdbe21489ebcf2dc944e6b4e30e1b1b368279515c260431238000c260976",
+    "h3-scene-blocking/assets/request-m3-1.json": "57bb55af2d311162dbcab101c4c73ffa54f228388734fcdd639add3fcfef45f9",
+    "h3-scene-blocking/assets/request-m3-2.json": "2d93a6f27b5869199c1f1d09bfec7ff441cf739d9e21aa83c8857368f1afe5f0",
+    "h3-scene-blocking/assets/request-m3-3.json": "6b15621a14180a4586e289361be3a3f5aef40e32bc1325cd8f73dabeb0a84764",
+    "h3-scene-blocking/assets/request-m3.json": "264ca1a99f0dfa7aeec890e80451c4baf59efa118da3a0076944720f7cc6a3f9",
+    "h3-scene-blocking/assets/requests.json": "678f238f36cb508c21be074a8ca310222bd4890ee09f26f8d527165b2010855e",
+    "h3-scene-blocking/assets/state-empty.json": "b2ee77977013564776622a89d18f6f138261098e2541134853f51329835d3f95",
+    "h3-scene-blocking/references/audit-and-handoff.md": "dbc72026c333311acfefe1f2f845e909383b8290c8c7655cbc02cd6eaa8e9511",
+    "h3-scene-blocking/references/case-evidence.md": "bbcec006a41b68c68f2235d70d5a5e9930070d9117e367d98ccd2e708eab33e8",
+    "h3-scene-blocking/references/case-index.json": "b3ad6625bbd7f2f3a0de9396b74deee317bf9a3e9c215ec4745545a3d38ddf85",
+    "h3-scene-blocking/references/case-source-LICENSE.txt": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+    "h3-scene-blocking/references/contract-guide.md": "074afc5bb66dd1f4eb5fd52123598e70e58ec2ff18397da60820c9313ccc96b4",
+    "h3-scene-blocking/references/contracts.json": "fc1c56331646539b2b1538e7162fcbbc36ac4d3ded2896a1399e144b9263e793",
+    "h3-scene-blocking/references/h3-NOTICE.txt": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+    "h3-scene-blocking/references/h3-base-official.txt": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+    "h3-scene-blocking/references/h3-label-mapping.md": "42a20ab6bab02813e97e402a569cd9e2f56abcf9d92ef05e883365a85ba03705",
+    "h3-scene-blocking/references/h3-protocol-source.json": "1a91aa69a581850c2c77d69f98107018145f1728cd982ab13b3a2681d7a8ad0e",
+    "h3-scene-blocking/references/h3-ref-official.txt": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+    "h3-scene-blocking/references/interaction-and-occlusion.md": "11afc366e7e96207115f3aa70e39a6c279a15017af91da1ce24dbe1bcc2aa9c8",
+    "h3-scene-blocking/references/module-registry.json": "bdadceed3f6d6d5e0d37e9d8083fdcd88dc7b00e52d9a2b9f0c58364cd26c305",
+    "h3-scene-blocking/references/placement-and-routes.md": "998dbeb1c623c5f64adc63f16b3318786706cfe92c6ebd5c63d875e1a3fab172",
+    "h3-scene-blocking/references/provenance-and-license.md": "9d48aa1b011e18a3721d44672abe902280dcbc7fefd62e75c635c7c9f2d7dcc6",
+    "h3-scene-blocking/references/spatial-topology.md": "66c1a918f5dada1886eff2bba138cfa8c4038e6d0dac3f6ac58a66274b960390",
+    "h3-scene-blocking/scripts/m3_contract.py": "58cb1c3c8dd118c988e8483e17185a5a685637a5fef9e775df5d48a0b7f072bb"
+  },
+  "limits": [
+    "No H3 inference or media inspection",
+    "No host automatic-trigger benchmark",
+    "CLI results cover only implemented structural and deterministic relations",
+    "Optional dependency skips are recorded by the underlying suites"
+  ]
+}

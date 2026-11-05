@@ -1,0 +1,64 @@
+[
+  {
+    "name": "route",
+    "cwd": "/workspace/scratch/87a9764abf06/H3-h3-prompt-journal",
+    "argv": [
+      "python",
+      "-B",
+      "docs/h3skill/h3-scene-blocking/scripts/m3_contract.py",
+      "route",
+      "docs/h3skill/validation/m3/forward-use/narrative/request.json"
+    ],
+    "command": "python -B docs/h3skill/h3-scene-blocking/scripts/m3_contract.py route docs/h3skill/validation/m3/forward-use/narrative/request.json",
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "started_utc": "2026-11-05T10:04:26.279705+00:00",
+    "completed_utc": "2026-11-05T10:04:26.349793+00:00",
+    "return_code": 0,
+    "stdout_file": "route.json",
+    "stderr_file": "route.stderr.txt"
+  },
+  {
+    "name": "check-request",
+    "cwd": "/workspace/scratch/87a9764abf06/H3-h3-prompt-journal",
+    "argv": [
+      "python",
+      "-B",
+      "docs/h3skill/h3-scene-blocking/scripts/m3_contract.py",
+      "check",
+      "docs/h3skill/validation/m3/forward-use/narrative/request.json"
+    ],
+    "command": "python -B docs/h3skill/h3-scene-blocking/scripts/m3_contract.py check docs/h3skill/validation/m3/forward-use/narrative/request.json",
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "started_utc": "2026-11-05T10:04:26.350085+00:00",
+    "completed_utc": "2026-11-05T10:04:26.401907+00:00",
+    "return_code": 0,
+    "stdout_file": "check-request.json",
+    "stderr_file": "check-request.stderr.txt"
+  },
+  {
+    "name": "check-proposal",
+    "cwd": "/workspace/scratch/87a9764abf06/H3-h3-prompt-journal",
+    "argv": [
+      "python",
+      "-B",
+      "docs/h3skill/h3-scene-blocking/scripts/m3_contract.py",
+      "check",
+      "docs/h3skill/validation/m3/forward-use/narrative/proposal.json",
+      "--request",
+      "docs/h3skill/validation/m3/forward-use/narrative/request.json"
+    ],
+    "command": "python -B docs/h3skill/h3-scene-blocking/scripts/m3_contract.py check docs/h3skill/validation/m3/forward-use/narrative/proposal.json --request docs/h3skill/validation/m3/forward-use/narrative/request.json",
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "started_utc": "2026-11-05T10:04:26.402347+00:00",
+    "completed_utc": "2026-11-05T10:04:26.449544+00:00",
+    "return_code": 0,
+    "stdout_file": "check-proposal.json",
+    "stderr_file": "check-proposal.stderr.txt"
+  }
+]

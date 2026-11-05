@@ -1,0 +1,29 @@
+{
+  "kind": "M3State",
+  "contract_version": "1.0.0",
+  "work_id": "WORK_courtyard",
+  "version": 0,
+  "owner": "M3",
+  "object_type": "SpatialPlan",
+  "status": "draft",
+  "sources": {},
+  "content": {
+    "topology": {
+      "frames": {},
+      "regions": {},
+      "connections": {}
+    },
+    "blocking": {
+      "entities": {},
+      "placements": {},
+      "routes": {}
+    },
+    "interactions": {
+      "relations": {},
+      "change_requests": {}
+    }
+  },
+  "issues": {},
+  "accepted_proposals": {},
+  "consumers": {}
+}

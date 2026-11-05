@@ -1,0 +1,67 @@
+{
+  "kind": "M3FormationTrialReadReview",
+  "reviewed_utc": "2026-11-05T10:01:11.024495+00:00",
+  "purpose": "Compare the actual trial resource manifest with the final release candidate; preserve original read history.",
+  "checks": [
+    {
+      "path": "docs/h3skill/h3-scene-blocking/SKILL.md",
+      "read_sha256": "2ae4ea196ceb103d9317fef5900e1b26dd02ce35fd936ee76d84cd17897a07bf",
+      "final_sha256": "2ae4ea196ceb103d9317fef5900e1b26dd02ce35fd936ee76d84cd17897a07bf",
+      "matches": true
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/audit-and-handoff.md",
+      "read_sha256": "dbc72026c333311acfefe1f2f845e909383b8290c8c7655cbc02cd6eaa8e9511",
+      "final_sha256": "dbc72026c333311acfefe1f2f845e909383b8290c8c7655cbc02cd6eaa8e9511",
+      "matches": true
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/spatial-topology.md",
+      "read_sha256": "66c1a918f5dada1886eff2bba138cfa8c4038e6d0dac3f6ac58a66274b960390",
+      "final_sha256": "66c1a918f5dada1886eff2bba138cfa8c4038e6d0dac3f6ac58a66274b960390",
+      "matches": true
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/placement-and-routes.md",
+      "read_sha256": "998dbeb1c623c5f64adc63f16b3318786706cfe92c6ebd5c63d875e1a3fab172",
+      "final_sha256": "998dbeb1c623c5f64adc63f16b3318786706cfe92c6ebd5c63d875e1a3fab172",
+      "matches": true
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/interaction-and-occlusion.md",
+      "read_sha256": "47e6c1abd36ebf05ea26384a9d1f351430bfda56f86988c0e8b47f575f480ad8",
+      "final_sha256": "11afc366e7e96207115f3aa70e39a6c279a15017af91da1ce24dbe1bcc2aa9c8",
+      "matches": false
+    },
+    {
+      "path": "docs/h3skill/h3-scene-blocking/references/h3-label-mapping.md",
+      "read_sha256": "42a20ab6bab02813e97e402a569cd9e2f56abcf9d92ef05e883365a85ba03705",
+      "final_sha256": "42a20ab6bab02813e97e402a569cd9e2f56abcf9d92ef05e883365a85ba03705",
+      "matches": true
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/README.md",
+      "read_sha256": "fcdd6a8bea055e2a357007d0024381c7c23dccf1ca2f74eceabb2de26e2fe1c7",
+      "final_sha256": "fcdd6a8bea055e2a357007d0024381c7c23dccf1ca2f74eceabb2de26e2fe1c7",
+      "matches": true
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "read_sha256": "2fdcf5cab127dbe3fdcf2a4991386b3bd31a2b08db04a0753f3715794d8ab481",
+      "final_sha256": "2fdcf5cab127dbe3fdcf2a4991386b3bd31a2b08db04a0753f3715794d8ab481",
+      "matches": true
+    }
+  ],
+  "changed_resources": [
+    "docs/h3skill/h3-scene-blocking/references/interaction-and-occlusion.md"
+  ],
+  "changes_explained": {
+    "docs/h3skill/h3-scene-blocking/references/interaction-and-occlusion.md": "Parent narrowed two source-summary phrases: sock example concerns screen region; water example concerns obstacle platform, final wall edge and body relation. No change to workflow, permissions, or trial answer."
+  },
+  "output_presentation_change": "Parent replaced two scratch-only sandbox links in answer.md with pinned GitHub source URLs; text conclusions unchanged.",
+  "limits": [
+    "The trial read an earlier draft while contract-guide.md was missing.",
+    "No M3 CLI, formal JSON contract, media observation or H3 inference was run by this trial.",
+    "It received a continuation instruction and is not an unassisted benchmark."
+  ]
+}

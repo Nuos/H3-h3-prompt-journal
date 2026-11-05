@@ -1,0 +1,19 @@
+usage: m3_contract.py [-h] {route,check,accept,impact} ...
+
+Self-contained, offline M3 spatial contracts; only the bundled schema
+vocabulary. No media inspection, physics solver, natural-language interpreter
+or H3 compiler. Every operation reads JSON and prints a result; input files
+are never modified.
+
+positional arguments:
+  {route,check,accept,impact}
+    route               Validate and route a request; no child is executed.
+    check               Check any public artifact; use --request for original-
+                        request fidelity.
+    accept              Accept a proposed draft only after matching actual
+                        original requests.
+    impact              Report affected consumers from their registered actual
+                        read paths.
+
+options:
+  -h, --help            show this help message and exit

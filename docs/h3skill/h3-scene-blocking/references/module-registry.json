@@ -1,0 +1,253 @@
+{
+  "contract_version": "1.0.0",
+  "package_version": "0.1.0",
+  "classification": "D: repository implementation design, not a MiniMax API or observed case fact",
+  "commit_mode": "child-proposal-parent-accept",
+  "state_owner": "M3",
+  "object_type": "SpatialPlan",
+  "state_status": "draft",
+  "versions": {
+    "compatibility": "Exact contract_version 1.0.0; stale base_version is rejected.",
+    "breaking_change": "Change contract_version and migrate caller-owned JSON explicitly; no silent conversion."
+  },
+  "effects": {
+    "filesystem": "Read supplied JSON/resources; write result only to stdout.",
+    "network": "none",
+    "media": "none",
+    "retry": "Exact accepted proposal ID+digest is idempotent; semantic revision requires current base_version and a new proposal ID."
+  },
+  "resources": {
+    "required_for_machine_checks": [
+      "scripts/m3_contract.py",
+      "references/contracts.json",
+      "references/module-registry.json"
+    ],
+    "required_for_skill_use": [
+      "SKILL.md",
+      "references/contract-guide.md",
+      "references/spatial-topology.md",
+      "references/placement-and-routes.md",
+      "references/interaction-and-occlusion.md",
+      "references/audit-and-handoff.md",
+      "references/h3-label-mapping.md"
+    ],
+    "optional": [
+      "assets/request-m3.json",
+      "assets/requests.json",
+      "assets/proposal-batch.json",
+      "assets/state-empty.json"
+    ]
+  },
+  "modules": {
+    "M3": {
+      "module_id": "M3",
+      "name": "场景空间、人物站位与交互调度",
+      "parent": null,
+      "public": true,
+      "interface_version": "1.0.0",
+      "goal": "Aggregate explicit spatial proposals and reconcile their exact dependencies.",
+      "minimum_inputs": [
+        "scene_brief"
+      ],
+      "read_only_projections": [],
+      "write_partitions": [],
+      "independent_entry": "route assets/request-m3.json",
+      "local_check": "check STATE",
+      "result": "M3State (draft)",
+      "return_to": "caller",
+      "acceptance": "accept STATE BATCH --requests ORIGINAL_REQUESTS",
+      "failure_owner": "M3",
+      "dependencies": "Compatible explicit projections accepted, with immutable source IDs and versions; no automatic M1/M2 execution.",
+      "completion_scope": "Structural/reference/topology/request-fidelity checks only.",
+      "unverified": [
+        "natural-language interpretation",
+        "source authenticity",
+        "media",
+        "physical collision and contact",
+        "M5 camera projection",
+        "M7 actual timing",
+        "global gates"
+      ],
+      "boundaries": [
+        "No M2 identity edits",
+        "No M4 performance mechanism",
+        "No M5 camera solution",
+        "No M7 actual timeline",
+        "No M11 final Labels/compilation",
+        "No M12 generated-media verdict"
+      ],
+      "revision": "Return issue to its semantic owner; retain accepted IDs; new proposal ID and current base version.",
+      "test_evidence": "docs/h3skill/tests/m3/test-results.json (repository evidence; not required when this skill is copied alone)",
+      "aggregation_rule": "M3 accepts exact child-owned partitions atomically, compares original requests and candidate projections, and may reject; it does not rewrite child semantics.",
+      "resources": [
+        "references/contract-guide.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md",
+        "references/spatial-topology.md",
+        "references/placement-and-routes.md",
+        "references/interaction-and-occlusion.md"
+      ]
+    },
+    "M3.1": {
+      "module_id": "M3.1",
+      "name": "空间坐标与场景拓扑",
+      "parent": "M3",
+      "public": true,
+      "interface_version": "1.0.0",
+      "goal": "Declare frames, regions and passable adjacency without deriving source facts.",
+      "minimum_inputs": [
+        "scene_brief"
+      ],
+      "read_only_projections": [],
+      "write_partitions": [
+        "topology"
+      ],
+      "independent_entry": "route assets/request-m3-1.json",
+      "local_check": "check PROPOSAL --request ORIGINAL_REQUEST",
+      "result": "M3Proposal",
+      "return_to": "M3.accept",
+      "acceptance": "accept STATE BATCH --requests ORIGINAL_REQUESTS",
+      "failure_owner": "M3.1",
+      "dependencies": "Compatible explicit projections accepted, with immutable source IDs and versions; no automatic M1/M2 execution.",
+      "completion_scope": "Structural/reference/topology/request-fidelity checks only.",
+      "unverified": [
+        "natural-language interpretation",
+        "source authenticity",
+        "media",
+        "physical collision and contact",
+        "M5 camera projection",
+        "M7 actual timing",
+        "global gates"
+      ],
+      "boundaries": [
+        "No M2 identity edits",
+        "No M4 performance mechanism",
+        "No M5 camera solution",
+        "No M7 actual timeline",
+        "No M11 final Labels/compilation",
+        "No M12 generated-media verdict"
+      ],
+      "revision": "Return issue to its semantic owner; retain accepted IDs; new proposal ID and current base version.",
+      "test_evidence": "docs/h3skill/tests/m3/test-results.json (repository evidence; not required when this skill is copied alone)",
+      "resources": [
+        "references/contract-guide.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md",
+        "references/spatial-topology.md"
+      ]
+    },
+    "M3.2": {
+      "module_id": "M3.2",
+      "name": "站位与移动路线",
+      "parent": "M3",
+      "public": true,
+      "interface_version": "1.0.0",
+      "goal": "Place stable public entities and declare topology-reachable ordered routes.",
+      "minimum_inputs": [
+        "topology_context",
+        "entity_context",
+        "blocking_brief"
+      ],
+      "read_only_projections": [
+        "topology_context",
+        "entity_context"
+      ],
+      "write_partitions": [
+        "blocking"
+      ],
+      "independent_entry": "route assets/request-m3-2.json",
+      "local_check": "check PROPOSAL --request ORIGINAL_REQUEST",
+      "result": "M3Proposal",
+      "return_to": "M3.accept",
+      "acceptance": "accept STATE BATCH --requests ORIGINAL_REQUESTS",
+      "failure_owner": "M3.2",
+      "dependencies": "Compatible explicit projections accepted, with immutable source IDs and versions; no automatic M1/M2 execution.",
+      "completion_scope": "Structural/reference/topology/request-fidelity checks only.",
+      "unverified": [
+        "natural-language interpretation",
+        "source authenticity",
+        "media",
+        "physical collision and contact",
+        "M5 camera projection",
+        "M7 actual timing",
+        "global gates"
+      ],
+      "boundaries": [
+        "No M2 identity edits",
+        "No M4 performance mechanism",
+        "No M5 camera solution",
+        "No M7 actual timeline",
+        "No M11 final Labels/compilation",
+        "No M12 generated-media verdict"
+      ],
+      "revision": "Return issue to its semantic owner; retain accepted IDs; new proposal ID and current base version.",
+      "test_evidence": "docs/h3skill/tests/m3/test-results.json (repository evidence; not required when this skill is copied alone)",
+      "resources": [
+        "references/contract-guide.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md",
+        "references/placement-and-routes.md"
+      ]
+    },
+    "M3.3": {
+      "module_id": "M3.3",
+      "name": "交互区域与遮挡约束",
+      "parent": "M3",
+      "public": true,
+      "interface_version": "1.0.0",
+      "goal": "Declare interaction regions, route associations, crossing order and occlusion constraints.",
+      "minimum_inputs": [
+        "topology_context",
+        "blocking_context",
+        "interaction_brief"
+      ],
+      "read_only_projections": [
+        "topology_context",
+        "blocking_context"
+      ],
+      "write_partitions": [
+        "interactions"
+      ],
+      "independent_entry": "route assets/request-m3-3.json",
+      "local_check": "check PROPOSAL --request ORIGINAL_REQUEST",
+      "result": "M3Proposal",
+      "return_to": "M3.accept",
+      "acceptance": "accept STATE BATCH --requests ORIGINAL_REQUESTS",
+      "failure_owner": "M3.3",
+      "dependencies": "Compatible explicit projections accepted, with immutable source IDs and versions; no automatic M1/M2 execution.",
+      "completion_scope": "Structural/reference/topology/request-fidelity checks only.",
+      "unverified": [
+        "natural-language interpretation",
+        "source authenticity",
+        "media",
+        "physical collision and contact",
+        "M5 camera projection",
+        "M7 actual timing",
+        "global gates"
+      ],
+      "boundaries": [
+        "No M2 identity edits",
+        "No M4 performance mechanism",
+        "No M5 camera solution",
+        "No M7 actual timeline",
+        "No M11 final Labels/compilation",
+        "No M12 generated-media verdict"
+      ],
+      "revision": "Return issue to its semantic owner; retain accepted IDs; new proposal ID and current base version.",
+      "test_evidence": "docs/h3skill/tests/m3/test-results.json (repository evidence; not required when this skill is copied alone)",
+      "change_request_targets": [
+        "M3.2",
+        "M4",
+        "M5",
+        "M7",
+        "M8"
+      ],
+      "resources": [
+        "references/contract-guide.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md",
+        "references/interaction-and-occlusion.md"
+      ]
+    }
+  }
+}

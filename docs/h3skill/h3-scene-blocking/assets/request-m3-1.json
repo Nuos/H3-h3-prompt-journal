@@ -1,0 +1,19 @@
+{
+  "kind": "M3Request",
+  "contract_version": "1.0.0",
+  "request_id": "REQ_m3_1",
+  "target": "M3.1",
+  "work_id": "WORK_courtyard",
+  "base_version": 0,
+  "sources": {
+    "S_fixture": {
+      "kind": "design_decision",
+      "locator": "example://contract-fixture/courtyard",
+      "version": "fixture-1",
+      "excerpt": "D 类受控合同测试输入：庭院、人物与全部坐标均为设计值，非测量；不代表用户真实任务或授权，不是新增案例来源，不是原案例的媒体观察。"
+    }
+  },
+  "inputs": {
+    "scene_brief": "设计一处南北连通的庭院空间。"
+  }
+}

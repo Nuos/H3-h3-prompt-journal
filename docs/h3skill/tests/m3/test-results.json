@@ -1,0 +1,46 @@
+{
+  "kind": "M3BehavioralTestRecord",
+  "contract_version": "1.0.0",
+  "started_utc": "2026-11-05T09:59:46.105099+00:00",
+  "finished_utc": "2026-11-05T09:59:46.963881+00:00",
+  "elapsed_seconds": 0.858782,
+  "python": "3.12.14",
+  "command": "python docs/h3skill/tests/m3/run_tests.py",
+  "tests_run": 31,
+  "passed": 30,
+  "failures": 0,
+  "errors": 0,
+  "skipped": [
+    {
+      "test": "test_optional_full_schema_cross_check (test_m3_contract.M3Contracts.test_optional_full_schema_cross_check)",
+      "reason": "jsonschema is not installed; standard-library checks are the required runtime."
+    }
+  ],
+  "status": "pass_with_skip",
+  "scope": "Independent request routing, topology/blocking/interaction contracts, actual-request fidelity, exact composition projections, finite coordinates, declared topology reachability, semantic ownership/version/replay, explicit same-phase contradictions, portability and actual-read invalidation.",
+  "not_verified": [
+    "Natural-language trigger recall",
+    "Truth of supplied provenance and semantic intent",
+    "Actual source media",
+    "H3 inference or generated-video quality",
+    "Downstream M4–M12 execution"
+  ],
+  "file_sha256": {
+    "h3-scene-blocking/scripts/m3_contract.py": "58cb1c3c8dd118c988e8483e17185a5a685637a5fef9e775df5d48a0b7f072bb",
+    "h3-scene-blocking/references/contracts.json": "fc1c56331646539b2b1538e7162fcbbc36ac4d3ded2896a1399e144b9263e793",
+    "h3-scene-blocking/references/module-registry.json": "bdadceed3f6d6d5e0d37e9d8083fdcd88dc7b00e52d9a2b9f0c58364cd26c305",
+    "h3-scene-blocking/references/contract-guide.md": "074afc5bb66dd1f4eb5fd52123598e70e58ec2ff18397da60820c9313ccc96b4",
+    "h3-scene-blocking/assets/proposal-batch.json": "5e269970cb28856657f3b8d960ebfcf03dd6b80c67705b7d2f874b0bdf9b9ad8",
+    "h3-scene-blocking/assets/proposal-m3-1.json": "61b280471227980c92d46869ee27ac9a8b0d99a977bc72eacaf9bec2f0855158",
+    "h3-scene-blocking/assets/proposal-m3-2.json": "80b9b9674f59541387681e00f60c7e82fce30141a09a2e7802d5052293050f14",
+    "h3-scene-blocking/assets/proposal-m3-3.json": "54b8bdbe21489ebcf2dc944e6b4e30e1b1b368279515c260431238000c260976",
+    "h3-scene-blocking/assets/request-m3-1.json": "57bb55af2d311162dbcab101c4c73ffa54f228388734fcdd639add3fcfef45f9",
+    "h3-scene-blocking/assets/request-m3-2.json": "2d93a6f27b5869199c1f1d09bfec7ff441cf739d9e21aa83c8857368f1afe5f0",
+    "h3-scene-blocking/assets/request-m3-3.json": "6b15621a14180a4586e289361be3a3f5aef40e32bc1325cd8f73dabeb0a84764",
+    "h3-scene-blocking/assets/request-m3.json": "264ca1a99f0dfa7aeec890e80451c4baf59efa118da3a0076944720f7cc6a3f9",
+    "h3-scene-blocking/assets/requests.json": "678f238f36cb508c21be074a8ca310222bd4890ee09f26f8d527165b2010855e",
+    "h3-scene-blocking/assets/state-empty.json": "b2ee77977013564776622a89d18f6f138261098e2541134853f51329835d3f95",
+    "tests/m3/test_m3_contract.py": "21cd6b3c25587034e82dcbd1ebd281358426ce508145b9f3e104aeb3fd0238e8",
+    "tests/m3/run_tests.py": "893cfb1877b5dc5e122fde0f4a6e70147847f6f4e74e796824273fc09757eaf9"
+  }
+}
