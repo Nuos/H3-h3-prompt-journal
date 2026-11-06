@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python",
+    "/workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/scripts/m12_contract.py",
+    "propose",
+    "/workspace/scratch/67acb32e99b3/m12-forward-run/output/requests/scope-request-v1.json"
+  ],
+  "cwd": "/workspace/scratch/67acb32e99b3/m12-forward-run",
+  "at_utc": "2026-11-06T06:13:14.302825+00:00",
+  "exit_code": 2,
+  "stdout": "{\n  \"status\": \"invalid\",\n  \"errors\": [\n    {\n      \"code\": \"digest\",\n      \"detail\": \"Expected lowercase SHA-256 hex digest\",\n      \"path\": \"\",\n      \"owner\": \"M12\"\n    }\n  ],\n  \"verification_boundary\": {\n    \"checked\": \"supplied_declarations_and_record_consistency\",\n    \"independent_source_verification\": false,\n    \"media_observed_by_this_program\": false,\n    \"whole_task_certified\": false,\n    \"declared_actual_is_attestation\": true,\n    \"not_run\": [\n      \"evidence_locator_read\",\n      \"media_decode\",\n      \"semantic_truth_verification\",\n      \"owner_module_execution\",\n      \"h3_inference\",\n      \"media_regeneration\",\n      \"file_write\"\n    ]\n  }\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,1822 @@
+{
+  "kind": "M12Proposal",
+  "contract_version": "1.0.0",
+  "route_version": "1.0.0",
+  "proposal_id": "P_823f0e51b22239dbb9ba160c3323128c250d69d52b102c89ba439e359dfe50cb",
+  "request_id": "m12-current-audit-v2",
+  "request_digest": "823f0e51b22239dbb9ba160c3323128c250d69d52b102c89ba439e359dfe50cb",
+  "work_id": "counter-key-transfer",
+  "base_version": 0,
+  "module_id": "M12.2",
+  "record": {
+    "kind": "AuditLedger",
+    "id": "m12-current-audit-v2",
+    "version": "1",
+    "owner": "M12.2",
+    "work_id": "counter-key-transfer",
+    "content": {
+      "scope_id": "SCOPE-CURRENT-PRODUCTION",
+      "scope_version": "1",
+      "plan": {
+        "scope_id": "SCOPE-CURRENT-PRODUCTION",
+        "scope_version": "1",
+        "plan_ref": {
+          "id": "plan",
+          "version": "2",
+          "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+          "owner": "M7",
+          "kind": "execution_plan"
+        },
+        "scope_sources": [
+          {
+            "id": "brief",
+            "version": "current",
+            "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+            "owner": "external",
+            "kind": "brief"
+          },
+          {
+            "id": "plan",
+            "version": "2",
+            "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+            "owner": "M7",
+            "kind": "execution_plan"
+          },
+          {
+            "id": "media-inventory",
+            "version": "current",
+            "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+            "owner": "external",
+            "kind": "media_inventory"
+          },
+          {
+            "id": "legacy-review",
+            "version": "1",
+            "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+            "owner": "external",
+            "kind": "external_report"
+          },
+          {
+            "id": "dependencies",
+            "version": "current",
+            "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+            "owner": "external",
+            "kind": "dependency_manifest"
+          }
+        ],
+        "gates": [
+          "G0",
+          "G1",
+          "G2",
+          "G3",
+          "G4"
+        ],
+        "requirement_ids": [
+          "R-DURATION",
+          "R-ACTION",
+          "R-DIALOGUE",
+          "R-SOUND"
+        ],
+        "checks": [
+          {
+            "id": "CHK-BASIS",
+            "requirement_id": "R-DURATION",
+            "gate": "G0",
+            "expected": "Use brief-current and plan@2 as the current task basis.",
+            "method": "compare_supplied_current_basis",
+            "targets": [
+              {
+                "id": "brief",
+                "version": "current",
+                "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+                "owner": "external",
+                "kind": "brief"
+              },
+              {
+                "id": "plan",
+                "version": "2",
+                "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+                "owner": "M7",
+                "kind": "execution_plan"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-SOURCES",
+            "requirement_id": "R-SOUND",
+            "gate": "G0",
+            "expected": "Current source media and their binding are available for the requested images and selected music.",
+            "method": "inspect_supplied_inventory",
+            "targets": [
+              {
+                "id": "media-inventory",
+                "version": "current",
+                "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+                "owner": "external",
+                "kind": "media_inventory"
+              },
+              {
+                "id": "compilation",
+                "version": "1",
+                "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+                "owner": "M11",
+                "kind": "compiled_prompt"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-PLAN-DURATION",
+            "requirement_id": "R-DURATION",
+            "gate": "G1",
+            "expected": "Plan retains two shots totaling 10 seconds, with shot 2 starting at 6 seconds.",
+            "method": "compare_current_brief_and_plan",
+            "targets": [
+              {
+                "id": "brief",
+                "version": "current",
+                "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+                "owner": "external",
+                "kind": "brief"
+              },
+              {
+                "id": "plan",
+                "version": "2",
+                "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+                "owner": "M7",
+                "kind": "execution_plan"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-PLAN-ACTION",
+            "requirement_id": "R-ACTION",
+            "gate": "G1",
+            "expected": "Lin Che uses the left hand to place the brass key on the counter right, and it stays after release.",
+            "method": "compare_current_brief_and_plan",
+            "targets": [
+              {
+                "id": "brief",
+                "version": "current",
+                "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+                "owner": "external",
+                "kind": "brief"
+              },
+              {
+                "id": "plan",
+                "version": "2",
+                "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+                "owner": "M7",
+                "kind": "execution_plan"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-PLAN-DIALOGUE",
+            "requirement_id": "R-DIALOGUE",
+            "gate": "G1",
+            "expected": "He Yuan sees the key before saying exactly 我看见了。",
+            "method": "compare_current_brief_and_plan",
+            "targets": [
+              {
+                "id": "brief",
+                "version": "current",
+                "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+                "owner": "external",
+                "kind": "brief"
+              },
+              {
+                "id": "plan",
+                "version": "2",
+                "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+                "owner": "M7",
+                "kind": "execution_plan"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-PLAN-SOUND",
+            "requirement_id": "R-SOUND",
+            "gate": "G1",
+            "expected": "A current sound plan specifies the selected music segment while retaining dialogue and key contact.",
+            "method": "inspect_current_sound_plan",
+            "targets": [
+              {
+                "id": "brief",
+                "version": "current",
+                "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+                "owner": "external",
+                "kind": "brief"
+              },
+              {
+                "id": "plan",
+                "version": "2",
+                "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+                "owner": "M7",
+                "kind": "execution_plan"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-COMPILE-BASIS",
+            "requirement_id": "R-DURATION",
+            "gate": "G2",
+            "expected": "The compilation consumes current plan@2.",
+            "method": "compare_declared_consumed_version",
+            "targets": [
+              {
+                "id": "plan",
+                "version": "2",
+                "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+                "owner": "M7",
+                "kind": "execution_plan"
+              },
+              {
+                "id": "compilation",
+                "version": "1",
+                "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+                "owner": "M11",
+                "kind": "compiled_prompt"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-COMPILE-DURATION",
+            "requirement_id": "R-DURATION",
+            "gate": "G2",
+            "expected": "Compiled duration is 10 seconds, with two shots and shot 2 beginning at 00:06.000.",
+            "method": "compare_plan_with_parameters_and_shot_timing",
+            "targets": [
+              {
+                "id": "plan",
+                "version": "2",
+                "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+                "owner": "M7",
+                "kind": "execution_plan"
+              },
+              {
+                "id": "compilation",
+                "version": "1",
+                "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+                "owner": "M11",
+                "kind": "compiled_prompt"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-COMPILE-ACTION",
+            "requirement_id": "R-ACTION",
+            "gate": "G2",
+            "expected": "The compiled action retains the left hand, counter right, and resting key.",
+            "method": "compare_approved_action_with_compiled_action",
+            "targets": [
+              {
+                "id": "plan",
+                "version": "2",
+                "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+                "owner": "M7",
+                "kind": "execution_plan"
+              },
+              {
+                "id": "compilation",
+                "version": "1",
+                "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+                "owner": "M11",
+                "kind": "compiled_prompt"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-COMPILE-DIALOGUE",
+            "requirement_id": "R-DIALOGUE",
+            "gate": "G2",
+            "expected": "The compiled dialogue retains exactly 我看见了。 after He Yuan sees the key.",
+            "method": "compare_approved_dialogue_with_compiled_dialogue",
+            "targets": [
+              {
+                "id": "plan",
+                "version": "2",
+                "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+                "owner": "M7",
+                "kind": "execution_plan"
+              },
+              {
+                "id": "compilation",
+                "version": "1",
+                "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+                "owner": "M11",
+                "kind": "compiled_prompt"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-COMPILE-FIELDS",
+            "requirement_id": "R-ACTION",
+            "gate": "G2",
+            "expected": "The Ref2VA compilation contains its six named text fields.",
+            "method": "inspect_six_field_presence_only",
+            "targets": [
+              {
+                "id": "compilation",
+                "version": "1",
+                "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+                "owner": "M11",
+                "kind": "compiled_prompt"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-COMPILE-SOUND",
+            "requirement_id": "R-SOUND",
+            "gate": "G2",
+            "expected": "The source-music retention strategy is compatible with the exact new dialogue and key contact sound.",
+            "method": "inspect_sound_retention_declaration",
+            "targets": [
+              {
+                "id": "brief",
+                "version": "current",
+                "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+                "owner": "external",
+                "kind": "brief"
+              },
+              {
+                "id": "compilation",
+                "version": "1",
+                "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+                "owner": "M11",
+                "kind": "compiled_prompt"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-RUNTIME",
+            "requirement_id": "R-DURATION",
+            "gate": "G2",
+            "expected": "A current run configuration and generation record agree with the approved plan and compiled prompt.",
+            "method": "compare_current_run_declarations",
+            "targets": [
+              {
+                "id": "compilation",
+                "version": "1",
+                "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+                "owner": "M11",
+                "kind": "compiled_prompt"
+              },
+              {
+                "id": "media-inventory",
+                "version": "current",
+                "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+                "owner": "external",
+                "kind": "media_inventory"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          },
+          {
+            "id": "CHK-GENERATED-DURATION",
+            "requirement_id": "R-DURATION",
+            "gate": "G3",
+            "expected": "Actual media lasts 10 seconds with two shots and the second shot at 6 seconds.",
+            "method": "observe_current_media_full_window",
+            "targets": [
+              {
+                "id": "required-generated-media",
+                "version": "not-provided",
+                "owner": "external",
+                "kind": "generated_media",
+                "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+              }
+            ],
+            "channels": [
+              "video"
+            ],
+            "time_window_ms": [
+              0,
+              10000
+            ],
+            "coverage": "full_window"
+          },
+          {
+            "id": "CHK-GENERATED-ACTION",
+            "requirement_id": "R-ACTION",
+            "gate": "G3",
+            "expected": "The visible left-hand key placement, release and resting state meet the brief.",
+            "method": "observe_current_media_full_window",
+            "targets": [
+              {
+                "id": "required-generated-media",
+                "version": "not-provided",
+                "owner": "external",
+                "kind": "generated_media",
+                "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+              }
+            ],
+            "channels": [
+              "video"
+            ],
+            "time_window_ms": [
+              0,
+              10000
+            ],
+            "coverage": "full_window"
+          },
+          {
+            "id": "CHK-GENERATED-DIALOGUE",
+            "requirement_id": "R-DIALOGUE",
+            "gate": "G3",
+            "expected": "He Yuan sees the key and audibly says exactly 我看见了。 in correct order.",
+            "method": "observe_current_media_full_window",
+            "targets": [
+              {
+                "id": "required-generated-media",
+                "version": "not-provided",
+                "owner": "external",
+                "kind": "generated_media",
+                "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+              }
+            ],
+            "channels": [
+              "video",
+              "audio"
+            ],
+            "time_window_ms": [
+              0,
+              10000
+            ],
+            "coverage": "full_window"
+          },
+          {
+            "id": "CHK-GENERATED-SOUND",
+            "requirement_id": "R-SOUND",
+            "gate": "G3",
+            "expected": "The selected source music segment, dialogue and key contact are audibly present and compatible.",
+            "method": "observe_current_media_full_window",
+            "targets": [
+              {
+                "id": "required-generated-media",
+                "version": "not-provided",
+                "owner": "external",
+                "kind": "generated_media",
+                "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+              }
+            ],
+            "channels": [
+              "audio"
+            ],
+            "time_window_ms": [
+              0,
+              10000
+            ],
+            "coverage": "full_window"
+          },
+          {
+            "id": "CHK-ASSEMBLY-DURATION",
+            "requirement_id": "R-DURATION",
+            "gate": "G4",
+            "expected": "Actual media lasts 10 seconds with two shots and the second shot at 6 seconds.",
+            "method": "observe_current_media_full_window",
+            "targets": [
+              {
+                "id": "assembly",
+                "version": "1",
+                "owner": "M9",
+                "kind": "assembled_media",
+                "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+              }
+            ],
+            "channels": [
+              "video"
+            ],
+            "time_window_ms": [
+              0,
+              10000
+            ],
+            "coverage": "full_window"
+          },
+          {
+            "id": "CHK-ASSEMBLY-ACTION",
+            "requirement_id": "R-ACTION",
+            "gate": "G4",
+            "expected": "The visible left-hand key placement, release and resting state meet the brief.",
+            "method": "observe_current_media_full_window",
+            "targets": [
+              {
+                "id": "assembly",
+                "version": "1",
+                "owner": "M9",
+                "kind": "assembled_media",
+                "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+              }
+            ],
+            "channels": [
+              "video"
+            ],
+            "time_window_ms": [
+              0,
+              10000
+            ],
+            "coverage": "full_window"
+          },
+          {
+            "id": "CHK-ASSEMBLY-DIALOGUE",
+            "requirement_id": "R-DIALOGUE",
+            "gate": "G4",
+            "expected": "He Yuan sees the key and audibly says exactly 我看见了。 in correct order.",
+            "method": "observe_current_media_full_window",
+            "targets": [
+              {
+                "id": "assembly",
+                "version": "1",
+                "owner": "M9",
+                "kind": "assembled_media",
+                "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+              }
+            ],
+            "channels": [
+              "video",
+              "audio"
+            ],
+            "time_window_ms": [
+              0,
+              10000
+            ],
+            "coverage": "full_window"
+          },
+          {
+            "id": "CHK-ASSEMBLY-SOUND",
+            "requirement_id": "R-SOUND",
+            "gate": "G4",
+            "expected": "The selected source music segment, dialogue and key contact are audibly present and compatible.",
+            "method": "observe_current_media_full_window",
+            "targets": [
+              {
+                "id": "assembly",
+                "version": "1",
+                "owner": "M9",
+                "kind": "assembled_media",
+                "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+              }
+            ],
+            "channels": [
+              "audio"
+            ],
+            "time_window_ms": [
+              0,
+              10000
+            ],
+            "coverage": "full_window"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "check_id": "CHK-BASIS",
+          "requirement_id": "R-DURATION",
+          "gate": "G0",
+          "requested_result": "pass",
+          "result": "pass",
+          "current_validity": "current",
+          "effective_result": "pass",
+          "evidence_ids": [
+            "EV-BASIS"
+          ],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "The task identifies plan-v2 as current; its change record retains action and words."
+        },
+        {
+          "check_id": "CHK-SOURCES",
+          "requirement_id": "R-SOUND",
+          "gate": "G0",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [
+            "EV-INVENTORY"
+          ],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "No actual image, audio or video files are provided; Picture 1/2 and Audio 1 binding cannot be verified."
+        },
+        {
+          "check_id": "CHK-PLAN-DURATION",
+          "requirement_id": "R-DURATION",
+          "gate": "G1",
+          "requested_result": "pass",
+          "result": "pass",
+          "current_validity": "current",
+          "effective_result": "pass",
+          "evidence_ids": [
+            "EV-PLAN-DURATION"
+          ],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "Plan@2 has [0,6] and [6,10], two contiguous shots totaling 10 seconds."
+        },
+        {
+          "check_id": "CHK-PLAN-ACTION",
+          "requirement_id": "R-ACTION",
+          "gate": "G1",
+          "requested_result": "pass",
+          "result": "pass",
+          "current_validity": "current",
+          "effective_result": "pass",
+          "evidence_ids": [
+            "EV-PLAN-ACTION"
+          ],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "The current plan explicitly preserves left hand, counter right and key resting after the hand leaves."
+        },
+        {
+          "check_id": "CHK-PLAN-DIALOGUE",
+          "requirement_id": "R-DIALOGUE",
+          "gate": "G1",
+          "requested_result": "pass",
+          "result": "pass",
+          "current_validity": "current",
+          "effective_result": "pass",
+          "evidence_ids": [
+            "EV-PLAN-DIALOGUE"
+          ],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "Plan action orders seeing before response; its dialogue field retains the exact required words."
+        },
+        {
+          "check_id": "CHK-PLAN-SOUND",
+          "requirement_id": "R-SOUND",
+          "gate": "G1",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "The brief defines the sound requirement, but plan@2 contains no source segment or mixing arrangement; no current M6 sound plan is supplied."
+        },
+        {
+          "check_id": "CHK-COMPILE-BASIS",
+          "requirement_id": "R-DURATION",
+          "gate": "G2",
+          "requested_result": "fail",
+          "result": "fail",
+          "current_validity": "current",
+          "effective_result": "fail",
+          "evidence_ids": [
+            "EV-COMPILE-BASIS"
+          ],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "compilation@1 explicitly consumes plan@1 and therefore is not a compilation of the current plan."
+        },
+        {
+          "check_id": "CHK-COMPILE-DURATION",
+          "requirement_id": "R-DURATION",
+          "gate": "G2",
+          "requested_result": "fail",
+          "result": "fail",
+          "current_validity": "current",
+          "effective_result": "fail",
+          "evidence_ids": [
+            "EV-COMPILE-DURATION"
+          ],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "The compilation declares duration_seconds=8 and starts shot 2 at 00:05.000."
+        },
+        {
+          "check_id": "CHK-COMPILE-ACTION",
+          "requirement_id": "R-ACTION",
+          "gate": "G2",
+          "requested_result": "fail",
+          "result": "fail",
+          "current_validity": "current",
+          "effective_result": "fail",
+          "evidence_ids": [
+            "EV-COMPILE-ACTION"
+          ],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "The compiled action uses right hand, contradicting both plan@1 and plan@2; right-side placement and resting key are retained."
+        },
+        {
+          "check_id": "CHK-COMPILE-DIALOGUE",
+          "requirement_id": "R-DIALOGUE",
+          "gate": "G2",
+          "requested_result": "fail",
+          "result": "fail",
+          "current_validity": "current",
+          "effective_result": "fail",
+          "evidence_ids": [
+            "EV-COMPILE-DIALOGUE"
+          ],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "The compilation changes the required words to 我知道了。; the look-before-speech sequence is textually present."
+        },
+        {
+          "check_id": "CHK-COMPILE-FIELDS",
+          "requirement_id": "R-ACTION",
+          "gate": "G2",
+          "requested_result": "pass",
+          "result": "pass",
+          "current_validity": "current",
+          "effective_result": "pass",
+          "evidence_ids": [
+            "EV-FIELDS"
+          ],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "All six expected fields are present. This verifies field presence only, not full H3 validity or media quality."
+        },
+        {
+          "check_id": "CHK-COMPILE-SOUND",
+          "requirement_id": "R-SOUND",
+          "gate": "G2",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [
+            "EV-SOUND"
+          ],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "The text combines Audio 1 fully_copy with added speech/contact sound; source content, exact retention scope and an explicit compatible sound plan are missing. This audit does not certify that combination."
+        },
+        {
+          "check_id": "CHK-RUNTIME",
+          "requirement_id": "R-DURATION",
+          "gate": "G2",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "No generation submission or execution record is supplied; declared text parameters do not establish actual runtime use."
+        },
+        {
+          "check_id": "CHK-GENERATED-DURATION",
+          "requirement_id": "R-DURATION",
+          "gate": "G3",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "required-generated-media",
+              "version": "not-provided",
+              "owner": "external",
+              "kind": "generated_media",
+              "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+        },
+        {
+          "check_id": "CHK-GENERATED-ACTION",
+          "requirement_id": "R-ACTION",
+          "gate": "G3",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "required-generated-media",
+              "version": "not-provided",
+              "owner": "external",
+              "kind": "generated_media",
+              "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+        },
+        {
+          "check_id": "CHK-GENERATED-DIALOGUE",
+          "requirement_id": "R-DIALOGUE",
+          "gate": "G3",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "required-generated-media",
+              "version": "not-provided",
+              "owner": "external",
+              "kind": "generated_media",
+              "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+        },
+        {
+          "check_id": "CHK-GENERATED-SOUND",
+          "requirement_id": "R-SOUND",
+          "gate": "G3",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "required-generated-media",
+              "version": "not-provided",
+              "owner": "external",
+              "kind": "generated_media",
+              "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+        },
+        {
+          "check_id": "CHK-ASSEMBLY-DURATION",
+          "requirement_id": "R-DURATION",
+          "gate": "G4",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "assembly",
+              "version": "1",
+              "owner": "M9",
+              "kind": "assembled_media",
+              "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+        },
+        {
+          "check_id": "CHK-ASSEMBLY-ACTION",
+          "requirement_id": "R-ACTION",
+          "gate": "G4",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "assembly",
+              "version": "1",
+              "owner": "M9",
+              "kind": "assembled_media",
+              "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+        },
+        {
+          "check_id": "CHK-ASSEMBLY-DIALOGUE",
+          "requirement_id": "R-DIALOGUE",
+          "gate": "G4",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "assembly",
+              "version": "1",
+              "owner": "M9",
+              "kind": "assembled_media",
+              "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+        },
+        {
+          "check_id": "CHK-ASSEMBLY-SOUND",
+          "requirement_id": "R-SOUND",
+          "gate": "G4",
+          "requested_result": "unverified",
+          "result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "evidence_ids": [],
+          "basis_refs": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "legacy-review",
+              "version": "1",
+              "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+              "owner": "external",
+              "kind": "external_report"
+            },
+            {
+              "id": "dependencies",
+              "version": "current",
+              "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+              "owner": "external",
+              "kind": "dependency_manifest"
+            },
+            {
+              "id": "assembly",
+              "version": "1",
+              "owner": "M9",
+              "kind": "assembled_media",
+              "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+            }
+          ],
+          "gaps": [],
+          "stale_ids": [],
+          "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+        }
+      ],
+      "gate_results": {
+        "G0": "unverified",
+        "G1": "unverified",
+        "G2": "fail",
+        "G3": "unverified",
+        "G4": "unverified"
+      },
+      "scope_result": "fail",
+      "unassessed_gates": [],
+      "verification_boundary": {
+        "checked": "supplied_declarations_and_record_consistency",
+        "independent_source_verification": false,
+        "media_observed_by_this_program": false,
+        "whole_task_certified": false,
+        "declared_actual_is_attestation": true,
+        "not_run": [
+          "evidence_locator_read",
+          "media_decode",
+          "semantic_truth_verification",
+          "owner_module_execution",
+          "h3_inference",
+          "media_regeneration",
+          "file_write"
+        ]
+      }
+    },
+    "digest": "4ac7e7ca10e7a7a532b0bda6402aa52e98b17a9445805c1431d31ee82e0cb8bc"
+  }
+}

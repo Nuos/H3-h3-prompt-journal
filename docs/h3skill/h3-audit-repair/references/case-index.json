@@ -1,0 +1,543 @@
+{
+  "kind": "M12CaseSourceIndex",
+  "package": "h3-audit-repair",
+  "version": "1.0.0",
+  "record_date": "2026-11-05",
+  "record_timezone": "America/Los_Angeles",
+  "summary": "四个代表案例的完整文本范围：八份 Markdown 全文阅读，一份 JSON 全文解析并审阅全部节点和连线的语义投影；不包含媒体观察或 H3 运行。",
+  "keywords": [
+    "审计范围",
+    "媒体观察",
+    "候选切点",
+    "证据覆盖",
+    "原文冲突",
+    "参考权限",
+    "版本绑定",
+    "修复复验"
+  ],
+  "navigation": {
+    "evidence_document": "case-evidence.md",
+    "protocol_mapping": "h3-label-mapping.md",
+    "protocol_source": "h3-protocol-source.json",
+    "provenance": "provenance-and-license.md"
+  },
+  "source_repository": "Nuos/H3-h3-prompt-journal",
+  "source_commit": "9fc2520bec5bc9d339e6b88dd1e93b9cd6f6992a",
+  "source_tree": "f3f37cd9fff640796b1c02d27e35843693a62f98",
+  "content_boundary": "case-studies/",
+  "index_scope": "selected_cases_only",
+  "index_extensions": [
+    ".md",
+    ".json"
+  ],
+  "evidence_document": "case-evidence.md",
+  "reading_policy": [
+    "只索引四个所选案例全部九份文本；不宣称全仓案例盘点。",
+    "full_text 表示原文完整进入阅读范围；line_ranges 精确记录完整逻辑行范围。",
+    "structured_projection 表示全文解析并审阅列出的字段；line_ranges 为空，不等同逐行审阅界面元数据。",
+    "line_count 使用 UTF-8 splitlines 逻辑行计数；文件末尾无换行符不影响末行计数。",
+    "F 为原文或配置事实，A 为作者报告，D 为本模块工程推导，U 为本轮未验证。",
+    "作者所述逐帧观察、工具阈值、成片参数和模型上限不冒充本轮观察或当前官方能力。",
+    "节点缓存、实际连线、模式与执行分开；算术代入不等于节点已运行。",
+    "本次没有查看图片、播放或解码音视频、运行 ComfyUI、验证插件实现或执行 H3 推理。"
+  ],
+  "evidence_layers": {
+    "F": "来源文本或 JSON 配置中明确存在的内容。",
+    "A": "作者报告的观察、失败、纠正、结果或能力经验。",
+    "D": "M12 由来源提炼的有条件工程要求，不冒充案例原话。",
+    "U": "本轮未取得媒体、执行、后端或覆盖证据的事项。"
+  },
+  "coverage": {
+    "selected_case_directories": 4,
+    "indexed_text_files": 9,
+    "indexed_text_lines": 6756,
+    "read_files": 9,
+    "full_text_read_files": 8,
+    "structured_projection_files": 1,
+    "full_text_read_lines": 1774,
+    "structured_projection_source_lines": 4982,
+    "structured_projection_nodes": 62,
+    "structured_projection_links": 91,
+    "all_selected_case_text_files_included": true,
+    "media_files_viewed_or_decoded": 0,
+    "comfyui_execution_runs": 0,
+    "h3_inference_runs": 0,
+    "runtime_plugin_implementation_verified": false
+  },
+  "cases": [
+    {
+      "source_id": "C12-WATER",
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment",
+      "text_files": [
+        "case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+        "case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md"
+      ],
+      "all_selected_case_text_files_included": true,
+      "excluded_media_files": [],
+      "inventory_method": "git ls-tree of fixed commit; independent of sparse-checkout materialization"
+    },
+    {
+      "source_id": "C12-SOCK",
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot",
+      "text_files": [
+        "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+        "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md"
+      ],
+      "all_selected_case_text_files_included": true,
+      "excluded_media_files": [],
+      "inventory_method": "git ls-tree of fixed commit; independent of sparse-checkout materialization"
+    },
+    {
+      "source_id": "C12-CONTACT",
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look",
+      "text_files": [
+        "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+        "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md"
+      ],
+      "all_selected_case_text_files_included": true,
+      "excluded_media_files": [],
+      "inventory_method": "git ls-tree of fixed commit; independent of sparse-checkout materialization"
+    },
+    {
+      "source_id": "C12-MOTION",
+      "path": "case-studies/2026-10-h3-motion-transfer",
+      "text_files": [
+        "case-studies/2026-10-h3-motion-transfer/README.md",
+        "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+        "case-studies/2026-10-h3-motion-transfer/prompt.md"
+      ],
+      "all_selected_case_text_files_included": true,
+      "excluded_media_files": [
+        "case-studies/2026-10-h3-motion-transfer/cover.png",
+        "case-studies/2026-10-h3-motion-transfer/result-video.mp4"
+      ],
+      "inventory_method": "git ls-tree of fixed commit; independent of sparse-checkout materialization"
+    }
+  ],
+  "files": [
+    {
+      "source_id": "C12-WATER",
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/9fc2520bec5bc9d339e6b88dd1e93b9cd6f6992a/case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+      "git_blob_sha1": "bb9a28d25757e4d78d54d4e9dd517d12d063f6c4",
+      "sha256": "67b089f4d560d388e0ceb7dcc7f9011b7456fec69aed0c73f1d70dd341470276",
+      "byte_count": 3940,
+      "line_count": 48,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档按 M12 的范围、观察、归因和复验职责提炼。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 48
+        }
+      ],
+      "evidence_ids": [
+        "M12-E01",
+        "M12-E02",
+        "M12-E03",
+        "M12-E04",
+        "M12-E08"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "C12-WATER",
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/9fc2520bec5bc9d339e6b88dd1e93b9cd6f6992a/case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md",
+      "git_blob_sha1": "539cebf0828ce83ad43d6b7381445c69c3b9f411",
+      "sha256": "5fac40dab9977ecf671bba747db25f4aee43ce892b796f230c319a8ad80da332",
+      "byte_count": 8762,
+      "line_count": 119,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档按 M12 的范围、观察、归因和复验职责提炼。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 119
+        }
+      ],
+      "evidence_ids": [
+        "M12-E03",
+        "M12-E04",
+        "M12-E06",
+        "M12-E10"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "C12-SOCK",
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/9fc2520bec5bc9d339e6b88dd1e93b9cd6f6992a/case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+      "git_blob_sha1": "f0df490b0ddd28d78f1eb1332c72a46248dd4654",
+      "sha256": "301860e8a966da6ffa62327c6564bb3f0c392484477afac5606c747f776ab0a2",
+      "byte_count": 4602,
+      "line_count": 52,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档按 M12 的范围、观察、归因和复验职责提炼。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 52
+        }
+      ],
+      "evidence_ids": [
+        "M12-E01",
+        "M12-E02",
+        "M12-E03",
+        "M12-E08",
+        "M12-E10"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "C12-SOCK",
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/9fc2520bec5bc9d339e6b88dd1e93b9cd6f6992a/case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+      "git_blob_sha1": "a6ac7572bfd08806686680e60d0d21f333e574ca",
+      "sha256": "f7b91e3ccc47bb46bb39aae0171f25e0d9d4b572955183789cb4d257e96071d4",
+      "byte_count": 8907,
+      "line_count": 98,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档按 M12 的范围、观察、归因和复验职责提炼。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 98
+        }
+      ],
+      "evidence_ids": [
+        "M12-E02",
+        "M12-E03",
+        "M12-E06",
+        "M12-E10"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "C12-CONTACT",
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/9fc2520bec5bc9d339e6b88dd1e93b9cd6f6992a/case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+      "git_blob_sha1": "d5787b1e34ad1ae88ed33f7441633a51a222f510",
+      "sha256": "e8b79275bdebce7596df0b6625c5a5a9bf1ef2c05c18e1abf1f29fb498f4a506",
+      "byte_count": 4094,
+      "line_count": 58,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档按 M12 的范围、观察、归因和复验职责提炼。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 58
+        }
+      ],
+      "evidence_ids": [
+        "M12-E03",
+        "M12-E05",
+        "M12-E08",
+        "M12-E10"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "C12-CONTACT",
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/9fc2520bec5bc9d339e6b88dd1e93b9cd6f6992a/case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+      "git_blob_sha1": "356034cad0dbf6e7b3e0f14b76debb325b8163f6",
+      "sha256": "5bcea5bf820f4a1432bb6427ed2bd6fad85d26cccad891d2975153ea96dca0ed",
+      "byte_count": 19122,
+      "line_count": 759,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档按 M12 的范围、观察、归因和复验职责提炼。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 759
+        }
+      ],
+      "evidence_ids": [
+        "M12-E03",
+        "M12-E05",
+        "M12-E06",
+        "M12-E10"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "C12-MOTION",
+      "path": "case-studies/2026-10-h3-motion-transfer/README.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/9fc2520bec5bc9d339e6b88dd1e93b9cd6f6992a/case-studies/2026-10-h3-motion-transfer/README.md",
+      "git_blob_sha1": "90e326cd2f2eeb13f1b3bb82a4997969df1884fe",
+      "sha256": "091c7f3efd88dd609375d22c4afb110306d2d1ee85c7d1363128d6dfa9379a6b",
+      "byte_count": 3875,
+      "line_count": 54,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档按 M12 的范围、观察、归因和复验职责提炼。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 54
+        }
+      ],
+      "evidence_ids": [
+        "M12-E07",
+        "M12-E08",
+        "M12-E09"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "C12-MOTION",
+      "path": "case-studies/2026-10-h3-motion-transfer/prompt.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/9fc2520bec5bc9d339e6b88dd1e93b9cd6f6992a/case-studies/2026-10-h3-motion-transfer/prompt.md",
+      "git_blob_sha1": "d2832c361a34e9e441d2dcba8e207e684b97fef6",
+      "sha256": "884616f829c22f00dc2f210e57621927bcb0ab58c28055f648bce2c2c2fa9915",
+      "byte_count": 13165,
+      "line_count": 586,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档按 M12 的范围、观察、归因和复验职责提炼。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 586
+        }
+      ],
+      "evidence_ids": [
+        "M12-E07",
+        "M12-E08",
+        "M12-E09"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "C12-MOTION",
+      "path": "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/9fc2520bec5bc9d339e6b88dd1e93b9cd6f6992a/case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+      "git_blob_sha1": "827fe8500e9b67ad068d9fee566f276f0caa8a2f",
+      "sha256": "152b3df9c83e5677e2df46756a122eb64a3e05b0e15ff63e3f2ebadcea41b659",
+      "byte_count": 107172,
+      "line_count": 4982,
+      "matches_pinned_blob": true,
+      "read_status": "structured_projection",
+      "read_scope": "全文 JSON 解析；审阅所有节点的 id/type/mode/title/widgets_values、输入/输出名称与类型/连线及全部链接，不宣称逐行阅读画布坐标与颜色等界面元数据。嵌入提示词与已全文阅读 Markdown 代码块核对一致（去首尾空白）。",
+      "line_ranges": [],
+      "evidence_ids": [
+        "M12-E09"
+      ],
+      "media_observation": "not_run",
+      "structured_review": {
+        "json_parsed_in_full": true,
+        "all_node_ids": [
+          120,
+          125,
+          122,
+          121,
+          130,
+          140,
+          159,
+          129,
+          170,
+          174,
+          175,
+          152,
+          155,
+          188,
+          187,
+          183,
+          119,
+          190,
+          131,
+          136,
+          162,
+          115,
+          92,
+          128,
+          184,
+          161,
+          151,
+          126,
+          123,
+          167,
+          200,
+          202,
+          201,
+          181,
+          191,
+          182,
+          207,
+          206,
+          205,
+          177,
+          179,
+          169,
+          149,
+          143,
+          160,
+          194,
+          203,
+          211,
+          208,
+          180,
+          178,
+          213,
+          212,
+          137,
+          139,
+          147,
+          153,
+          132,
+          154,
+          138,
+          198,
+          193
+        ],
+        "node_count": 62,
+        "link_count": 91,
+        "node_fields_reviewed": [
+          "id",
+          "type",
+          "mode",
+          "title",
+          "widgets_values",
+          "inputs.name",
+          "inputs.type",
+          "inputs.link",
+          "outputs.name",
+          "outputs.type",
+          "outputs.links"
+        ],
+        "all_links_reviewed": true,
+        "root_metadata_reviewed": [
+          "id",
+          "revision",
+          "last_node_id",
+          "last_link_id",
+          "config",
+          "version"
+        ],
+        "excluded_review_fields": [
+          "canvas positions",
+          "sizes",
+          "colors",
+          "groups",
+          "extra UI metadata"
+        ],
+        "embedded_prompt_node_id": 138,
+        "embedded_prompt_matches_markdown_ignoring_outer_whitespace": true,
+        "embedded_prompt_markdown_code_lines": {
+          "start": 17,
+          "end": 579
+        },
+        "selected_node_source_ranges": [
+          {
+            "node_id": 130,
+            "start": 229,
+            "end": 297
+          },
+          {
+            "node_id": 159,
+            "start": 324,
+            "end": 384
+          },
+          {
+            "node_id": 170,
+            "start": 430,
+            "end": 490
+          },
+          {
+            "node_id": 155,
+            "start": 682,
+            "end": 746
+          },
+          {
+            "node_id": 188,
+            "start": 747,
+            "end": 817
+          },
+          {
+            "node_id": 131,
+            "start": 1049,
+            "end": 1119
+          },
+          {
+            "node_id": 136,
+            "start": 1120,
+            "end": 1316
+          },
+          {
+            "node_id": 115,
+            "start": 1342,
+            "end": 1424
+          },
+          {
+            "node_id": 161,
+            "start": 1638,
+            "end": 1685
+          },
+          {
+            "node_id": 191,
+            "start": 2206,
+            "end": 2403
+          },
+          {
+            "node_id": 169,
+            "start": 2775,
+            "end": 2833
+          },
+          {
+            "node_id": 194,
+            "start": 3051,
+            "end": 3121
+          },
+          {
+            "node_id": 203,
+            "start": 3122,
+            "end": 3146
+          },
+          {
+            "node_id": 211,
+            "start": 3147,
+            "end": 3171
+          },
+          {
+            "node_id": 213,
+            "start": 3328,
+            "end": 3398
+          },
+          {
+            "node_id": 212,
+            "start": 3399,
+            "end": 3457
+          },
+          {
+            "node_id": 132,
+            "start": 3702,
+            "end": 3749
+          },
+          {
+            "node_id": 138,
+            "start": 3913,
+            "end": 3960
+          }
+        ],
+        "links_source_start_line": 4159,
+        "duration_input_node_id": 132,
+        "formula_node_ids": [
+          131,
+          188
+        ],
+        "formula_input_value": 9,
+        "formula_static_result": 226,
+        "formula_result_status": "静态配置算术；不是节点执行、实际生成帧数或媒体时长。",
+        "runtime_executed": false,
+        "plugin_implementation_verified": false
+      }
+    }
+  ]
+}

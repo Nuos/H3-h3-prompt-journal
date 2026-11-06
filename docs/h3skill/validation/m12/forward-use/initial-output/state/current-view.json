@@ -1,0 +1,247 @@
+{
+  "current_refs": [
+    {
+      "id": "assembly",
+      "version": "1",
+      "owner": "M9",
+      "kind": "assembled_media",
+      "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+    },
+    {
+      "id": "brief",
+      "version": "current",
+      "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+      "owner": "external",
+      "kind": "brief"
+    },
+    {
+      "id": "compilation",
+      "version": "1",
+      "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+      "owner": "M11",
+      "kind": "compiled_prompt"
+    },
+    {
+      "id": "dependencies",
+      "version": "current",
+      "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+      "owner": "external",
+      "kind": "dependency_manifest"
+    },
+    {
+      "id": "identity-sheet",
+      "version": "1",
+      "owner": "M2",
+      "kind": "identity_sheet",
+      "digest": "c8d5966463beac68f7c36be3fb16c6146a270937e80c103100ebf17d0f6c788e"
+    },
+    {
+      "id": "legacy-review",
+      "version": "1",
+      "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+      "owner": "external",
+      "kind": "external_report"
+    },
+    {
+      "id": "media-inventory",
+      "version": "current",
+      "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+      "owner": "external",
+      "kind": "media_inventory"
+    },
+    {
+      "id": "plan",
+      "version": "2",
+      "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+      "owner": "M7",
+      "kind": "execution_plan"
+    },
+    {
+      "id": "required-generated-media",
+      "version": "not-provided",
+      "owner": "external",
+      "kind": "generated_media",
+      "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+    }
+  ],
+  "audit_ledgers": [
+    {
+      "record_id": "m12-current-audit-v2",
+      "scope_id": "SCOPE-CURRENT-PRODUCTION",
+      "checks": [
+        {
+          "check_id": "CHK-BASIS",
+          "historical_result": "pass",
+          "current_validity": "current",
+          "effective_result": "pass",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-SOURCES",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-PLAN-DURATION",
+          "historical_result": "pass",
+          "current_validity": "current",
+          "effective_result": "pass",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-PLAN-ACTION",
+          "historical_result": "pass",
+          "current_validity": "current",
+          "effective_result": "pass",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-PLAN-DIALOGUE",
+          "historical_result": "pass",
+          "current_validity": "current",
+          "effective_result": "pass",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-PLAN-SOUND",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-COMPILE-BASIS",
+          "historical_result": "fail",
+          "current_validity": "current",
+          "effective_result": "fail",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-COMPILE-DURATION",
+          "historical_result": "fail",
+          "current_validity": "current",
+          "effective_result": "fail",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-COMPILE-ACTION",
+          "historical_result": "fail",
+          "current_validity": "current",
+          "effective_result": "fail",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-COMPILE-DIALOGUE",
+          "historical_result": "fail",
+          "current_validity": "current",
+          "effective_result": "fail",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-COMPILE-FIELDS",
+          "historical_result": "pass",
+          "current_validity": "current",
+          "effective_result": "pass",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-COMPILE-SOUND",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-RUNTIME",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-GENERATED-DURATION",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-GENERATED-ACTION",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-GENERATED-DIALOGUE",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-GENERATED-SOUND",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-ASSEMBLY-DURATION",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-ASSEMBLY-ACTION",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-ASSEMBLY-DIALOGUE",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        },
+        {
+          "check_id": "CHK-ASSEMBLY-SOUND",
+          "historical_result": "unverified",
+          "current_validity": "current",
+          "effective_result": "unverified",
+          "stale_ids": [],
+          "missing_current_ids": []
+        }
+      ],
+      "scope_current_validity": "current",
+      "scope_result": "fail"
+    }
+  ],
+  "dependency_impact": "partial",
+  "whole_task_certified": false
+}

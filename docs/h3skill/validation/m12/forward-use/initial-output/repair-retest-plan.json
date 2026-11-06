@@ -1,0 +1,208 @@
+{
+  "current_basis": "plan@2",
+  "actual_reported_input_change": {
+    "before": {
+      "id": "plan",
+      "version": "1",
+      "digest": "7a13a9ec5039f385e3f4ffa52399c2f10c9f802b39cf54ec8cdb66efda68a72e",
+      "owner": "M7",
+      "kind": "execution_plan"
+    },
+    "after": {
+      "id": "plan",
+      "version": "2",
+      "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+      "owner": "M7",
+      "kind": "execution_plan"
+    },
+    "basis": "sources/plan-v2.json#/change_record",
+    "status": "reported_applied",
+    "effect": "compilation@1 still consumes plan@1; assembly@1 transitively depends on compilation. No new compilation or assembly bytes were supplied.",
+    "ledger_treatment": "Preserved as supplied source history and a current mismatch finding. Not falsely entered as a completed repair."
+  },
+  "confirmed_issues": [
+    {
+      "id": "ISSUE-STALE-COMPILE",
+      "check_id": "CHK-COMPILE-BASIS",
+      "object_ref": {
+        "id": "compilation",
+        "version": "1",
+        "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+        "owner": "M11",
+        "kind": "compiled_prompt"
+      },
+      "location": "consumes",
+      "expected": "The compilation consumes current plan@2.",
+      "actual": "编译声明读取 plan@1；当前依据为 plan@2。",
+      "evidence_ids": [
+        "EV-COMPILE-BASIS"
+      ],
+      "owner": "M11",
+      "attribution_basis": "源文件明确编译归M11；本次仅归责可直接比对的编译字段差异，不推断未观察媒体的失败根因。",
+      "causal_evidence_ids": [
+        "CAUSE-ISSUE-STALE-COMPILE"
+      ],
+      "requested_action": "M11 读取 plan@2 重编译，记录实际读取版本；保留编译1历史。"
+    },
+    {
+      "id": "ISSUE-TIMING",
+      "check_id": "CHK-COMPILE-DURATION",
+      "object_ref": {
+        "id": "compilation",
+        "version": "1",
+        "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+        "owner": "M11",
+        "kind": "compiled_prompt"
+      },
+      "location": "parameters.duration_seconds; fields.detailed_description shot 2 marker",
+      "expected": "Compiled duration is 10 seconds, with two shots and shot 2 beginning at 00:06.000.",
+      "actual": "8秒及00:05.000；当前要求10秒及00:06.000。",
+      "evidence_ids": [
+        "EV-COMPILE-DURATION"
+      ],
+      "owner": "M11",
+      "attribution_basis": "源文件明确编译归M11；本次仅归责可直接比对的编译字段差异，不推断未观察媒体的失败根因。",
+      "causal_evidence_ids": [
+        "CAUSE-ISSUE-TIMING"
+      ],
+      "requested_action": "M11 从 plan@2 编译10秒参数与第二镜6秒起点；不改变两镜结构。"
+    },
+    {
+      "id": "ISSUE-HAND",
+      "check_id": "CHK-COMPILE-ACTION",
+      "object_ref": {
+        "id": "compilation",
+        "version": "1",
+        "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+        "owner": "M11",
+        "kind": "compiled_prompt"
+      },
+      "location": "fields.detailed_description",
+      "expected": "The compiled action retains the left hand, counter right, and resting key.",
+      "actual": "right hand；两版计划均要求左手。",
+      "evidence_ids": [
+        "EV-COMPILE-ACTION"
+      ],
+      "owner": "M11",
+      "attribution_basis": "源文件明确编译归M11；本次仅归责可直接比对的编译字段差异，不推断未观察媒体的失败根因。",
+      "causal_evidence_ids": [
+        "CAUSE-ISSUE-HAND"
+      ],
+      "requested_action": "M11 恢复 left hand，并保持柜台右侧、松手后钥匙留台面的既定动作。"
+    },
+    {
+      "id": "ISSUE-WORDS",
+      "check_id": "CHK-COMPILE-DIALOGUE",
+      "object_ref": {
+        "id": "compilation",
+        "version": "1",
+        "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+        "owner": "M11",
+        "kind": "compiled_prompt"
+      },
+      "location": "fields.detailed_description dialogue",
+      "expected": "The compiled dialogue retains exactly 我看见了。 after He Yuan sees the key.",
+      "actual": "我知道了。；要求我看见了。",
+      "evidence_ids": [
+        "EV-COMPILE-DIALOGUE"
+      ],
+      "owner": "M11",
+      "attribution_basis": "源文件明确编译归M11；本次仅归责可直接比对的编译字段差异，不推断未观察媒体的失败根因。",
+      "causal_evidence_ids": [
+        "CAUSE-ISSUE-WORDS"
+      ],
+      "requested_action": "M11 恢复原词我看见了。及先看见后说话的顺序；由M6核对说话人和对白绑定。"
+    }
+  ],
+  "open_gaps": [
+    {
+      "owner": "M6",
+      "item": "Provide selected music segment, retention/mixing arrangement, speaker binding and dialogue/key contact preservation."
+    },
+    {
+      "owner": "M2",
+      "item": "Provide actual Picture 1/2 and Audio 1 assets with binding/order and source identity."
+    },
+    {
+      "owner": "M11",
+      "item": "Provide current compiled artifact and actual submitted run configuration/record."
+    },
+    {
+      "owner": "external",
+      "item": "Provide current generated media plus actual video/audio observations over 0–10 seconds."
+    },
+    {
+      "owner": "M9",
+      "item": "Provide current assembly artifact, consumed versions and complete video/audio observations."
+    }
+  ],
+  "dependency_limit": "Known graph is plan -> compilation -> assembly. identity-sheet is disconnected only within this incomplete supplied graph; its validity is unverified, and no external dependency completeness is claimed.",
+  "retest_steps": [
+    {
+      "step": 1,
+      "owner": "M11",
+      "checks": [
+        "CHK-COMPILE-BASIS",
+        "CHK-COMPILE-DURATION",
+        "CHK-COMPILE-ACTION",
+        "CHK-COMPILE-DIALOGUE",
+        "CHK-COMPILE-FIELDS",
+        "CHK-COMPILE-SOUND",
+        "CHK-RUNTIME"
+      ],
+      "requires": "New actual compilation version and its consumed plan@2; current assets/sound plan and run declaration. Rerun all original G2 checks, not only changed fields."
+    },
+    {
+      "step": 2,
+      "owner": "external",
+      "checks": [
+        "CHK-GENERATED-DURATION",
+        "CHK-GENERATED-ACTION",
+        "CHK-GENERATED-DIALOGUE",
+        "CHK-GENERATED-SOUND"
+      ],
+      "requires": "New generated media/version and actual observed video/audio 0–10000ms with source/run binding. Use M12.3 only when observations exist."
+    },
+    {
+      "step": 3,
+      "owner": "M9",
+      "checks": [
+        "CHK-ASSEMBLY-DURATION",
+        "CHK-ASSEMBLY-ACTION",
+        "CHK-ASSEMBLY-DIALOGUE",
+        "CHK-ASSEMBLY-SOUND"
+      ],
+      "requires": "New final assembly/version with dependencies and actual full-window video/audio observations."
+    },
+    {
+      "step": 4,
+      "owner": "M12",
+      "checks": [
+        "CHK-BASIS",
+        "CHK-SOURCES",
+        "CHK-PLAN-DURATION",
+        "CHK-PLAN-ACTION",
+        "CHK-PLAN-DIALOGUE",
+        "CHK-PLAN-SOUND",
+        "CHK-COMPILE-BASIS",
+        "CHK-COMPILE-DURATION",
+        "CHK-COMPILE-ACTION",
+        "CHK-COMPILE-DIALOGUE",
+        "CHK-COMPILE-FIELDS",
+        "CHK-COMPILE-SOUND",
+        "CHK-RUNTIME",
+        "CHK-GENERATED-DURATION",
+        "CHK-GENERATED-ACTION",
+        "CHK-GENERATED-DIALOGUE",
+        "CHK-GENERATED-SOUND",
+        "CHK-ASSEMBLY-DURATION",
+        "CHK-ASSEMBLY-ACTION",
+        "CHK-ASSEMBLY-DIALOGUE",
+        "CHK-ASSEMBLY-SOUND"
+      ],
+      "requires": "Same scope ID, all four requirement IDs, every current check and full media window retained. Advance object versions, rerun M12.2/M12.4. Close issues only with corresponding new evidence; retain immutable failure history."
+    }
+  ],
+  "implemented_repairs": [],
+  "completed_retests": []
+}

@@ -1,0 +1,47 @@
+{
+  "all_sources_unchanged": true,
+  "files": [
+    {
+      "path": "sources/brief-current.json",
+      "expected": "sha256:e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+      "actual": "sha256:e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+      "unchanged": true
+    },
+    {
+      "path": "sources/compilation-v1.json",
+      "expected": "sha256:e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+      "actual": "sha256:e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+      "unchanged": true
+    },
+    {
+      "path": "sources/media-inventory.json",
+      "expected": "sha256:2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+      "actual": "sha256:2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+      "unchanged": true
+    },
+    {
+      "path": "sources/object-dependencies.json",
+      "expected": "sha256:19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+      "actual": "sha256:19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+      "unchanged": true
+    },
+    {
+      "path": "sources/plan-v1.json",
+      "expected": "sha256:7a13a9ec5039f385e3f4ffa52399c2f10c9f802b39cf54ec8cdb66efda68a72e",
+      "actual": "sha256:7a13a9ec5039f385e3f4ffa52399c2f10c9f802b39cf54ec8cdb66efda68a72e",
+      "unchanged": true
+    },
+    {
+      "path": "sources/plan-v2.json",
+      "expected": "sha256:0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+      "actual": "sha256:0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+      "unchanged": true
+    },
+    {
+      "path": "sources/prior-review.json",
+      "expected": "sha256:0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+      "actual": "sha256:0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+      "unchanged": true
+    }
+  ]
+}

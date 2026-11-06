@@ -1,0 +1,8 @@
+{
+  "all_source_artifacts_retained": true,
+  "excluded_files": [
+    "output/__pycache__/run_public_interfaces.cpython-312.pyc",
+    "revised-output/__pycache__/run_public_interfaces.cpython-312.pyc"
+  ],
+  "reason": "Derived interpreter bytecode caches only; requests, scripts, command traces, raw stdout/stderr, states and reports are retained as text."
+}

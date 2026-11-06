@@ -1,0 +1,610 @@
+{
+  "kind": "M12ModuleRegistry",
+  "module": "M12",
+  "skill": "h3-audit-repair",
+  "skill_version": "0.1.0",
+  "contract_version": "1.0.0",
+  "route_version": "1.0.0",
+  "framework_version": "0.1.2",
+  "principles": [
+    "HC-01",
+    "HC-02",
+    "HC-03",
+    "LC-01",
+    "LC-02",
+    "LC-03",
+    "LC-04",
+    "LC-05",
+    "MD-01",
+    "MD-02",
+    "MD-03",
+    "MD-04",
+    "RT-01",
+    "RT-02",
+    "RT-03",
+    "RT-04",
+    "RT-05",
+    "RT-06"
+  ],
+  "shared_contract": {
+    "definition": "references/contracts.json",
+    "guide": "references/contract-guide.md",
+    "runtime": "Python >= 3.10; standard library only",
+    "entry": "scripts/m12_contract.py",
+    "operations": [
+      "route",
+      "propose",
+      "check",
+      "accept"
+    ],
+    "supported_versions": [
+      "1.0.0"
+    ],
+    "unknown_versions": "reject",
+    "compatibility": "显式且保留来源的投影可以替代上游重跑；不宣称 M1—M11 所有原生 JSON 可直接拼接。",
+    "effects": "只读输入、确定性计算并输出 JSON；不联网、不解码媒体、不执行 H3、不修改其他模块。",
+    "evidence_boundary": "核验声明及关系，不认证外部声明真实；实际媒体、观察与语义需独立证据。"
+  },
+  "modules": [
+    {
+      "module_id": "M12",
+      "parent_id": null,
+      "name": "持续审计、问题归因与反馈修复",
+      "responsibility": "核对真实原请求及四路提案，原子接受本范围结果，保留历史、版本与重复操作身份，不覆盖专业字段。",
+      "input_contract": {
+        "kind": "M12State",
+        "also_required": [
+          "original M12Request objects",
+          "M12Proposal objects"
+        ]
+      },
+      "output_contract": {
+        "kind": "M12State",
+        "professional_objects": [
+          "AuditPlan",
+          "AuditLedger",
+          "MediaObservationLedger",
+          "ChangeSet"
+        ]
+      },
+      "readonly": [
+        "原请求",
+        "当前接受状态",
+        "来源引用",
+        "全部上游专业数据"
+      ],
+      "write_permissions": [
+        "本工作范围内的 M12 历史记录、版本、接受收据与当前有效性"
+      ],
+      "forbidden_writes": [
+        "M1—M11 专业字段",
+        "历史检查和观察内容",
+        "模型输入正文",
+        "真实媒体与外部服务"
+      ],
+      "dependencies": {
+        "required": [
+          "本次实际提交的子提案及真实原请求"
+        ],
+        "optional": [
+          "其他兄弟记录"
+        ],
+        "upstream_execution_required": false
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/repair-and-retest.md"
+      ],
+      "route": {
+        "route_id": "M12.accept",
+        "trigger": "接收一个或多个子模块提案",
+        "input_mapping": "显式 state、requests、proposals；不自动读取其他模块状态",
+        "preconditions": [
+          "工作与基版本一致",
+          "提案与原请求可复算",
+          "唯一责任与来源关系一致"
+        ],
+        "success_return": "新状态或精确重试的同一状态",
+        "failure_return": "结构化合同错误；不产生部分接受或修改输入",
+        "operation_effect": "只读输入并计算新值；由调用方选择新文件保存",
+        "technical_retry": "同一已接受请求和提案保持幂等；新语义使用新请求",
+        "branch_selection": "由提交的显式目标决定，不要求四个子模块全运行"
+      },
+      "consumers": [
+        "用户／总编排入口",
+        "四个子模块",
+        "专业修订责任方"
+      ],
+      "invalidation": "保留原结论与证据，以新记录表达当前失效和复验；不将本地接受等同全局关卡或媒体通过。"
+    },
+    {
+      "module_id": "M12.1",
+      "parent_id": "M12",
+      "name": "审计范围与检查计划",
+      "responsibility": "建立或扩展本次检查范围、明确要求、方法、证据与覆盖。",
+      "input_contract": {
+        "kind": "M12Request",
+        "target": "M12.1",
+        "required_inputs": [
+          "scope_id",
+          "scope_version",
+          "plan_ref",
+          "scope_sources",
+          "gates",
+          "requirement_ids",
+          "checks"
+        ],
+        "meaning": "用户要求或兼容外部范围；受检对象、版本和规则依据。",
+        "exact_types": "references/contracts.json"
+      },
+      "output_contract": {
+        "kind": "M12Proposal",
+        "professional_object": "AuditPlan",
+        "exclusive_writer": "M12.1"
+      },
+      "readonly": [
+        "本次公开合同内的来源、版本和字段投影",
+        "外部兼容资料；不要求其生产模块重跑"
+      ],
+      "write_permissions": [
+        "AuditPlan 的本范围新记录提案"
+      ],
+      "forbidden_writes": [
+        "兄弟子模块的记录",
+        "原历史内容",
+        "M1—M11 权威专业字段",
+        "真实媒体或外部执行状态"
+      ],
+      "dependencies": {
+        "required_inputs": [
+          "scope_id",
+          "scope_version",
+          "plan_ref",
+          "scope_sources",
+          "gates",
+          "requirement_ids",
+          "checks"
+        ],
+        "replacement": "兼容的用户资料、既有项目或外部工具记录可满足输入",
+        "upstream_execution_required": false,
+        "implicit_sibling_calls": false
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/audit-scope.md",
+        "references/h3-label-mapping.md"
+      ],
+      "official_mapping": {
+        "modes": [
+          "T2VA",
+          "I2VA",
+          "FL2VA",
+          "L2VA",
+          "Ref2VA"
+        ],
+        "base_fields": [
+          "integrated_multimodal_description",
+          "overall_soundscape",
+          "non_diegetic_music"
+        ],
+        "reference_fields": [
+          "subject_definitions",
+          "summary",
+          "retention_analysis",
+          "detailed_description",
+          "overall_soundscape",
+          "non_diegetic_music"
+        ],
+        "reference_labels": [
+          "Subject",
+          "Picture",
+          "Video",
+          "Audio"
+        ],
+        "other_markers": [
+          "Shot",
+          "Sx",
+          "d",
+          "scenetrans",
+          "cutoff"
+        ],
+        "role": "只形成工作流审计／观察／修复记录，不新增原生模型字段"
+      },
+      "route": {
+        "route_id": "M12.1",
+        "explicit_target": "M12.1",
+        "trigger": "建立或扩展本次检查范围、明确要求、方法、证据与覆盖。",
+        "input_mapping": "M12Request.inputs 中声明的最小投影；对象身份与来源随输入保留",
+        "preconditions": [
+          "合同和路由版本受支持",
+          "该职责必需的显式字段具备",
+          "证据、适用性与未知项如实提供"
+        ],
+        "success_return": "AuditPlan 提案及明确完成范围，交 M12.accept 或调用者",
+        "failure_return": "结构化输入／版本／引用错误；专业缺证据保留未验证，专业修订转唯一责任方",
+        "branch_selection": "显式 target 优先；语义任务选择由 Agent 依据范围决定",
+        "operation_effect": "读取显式 JSON 并计算，不能自动触发生成、上传或专业修订",
+        "technical_retry": "相同输入可复算；不把重试视为新观察",
+        "creative_revision": "新请求与新版本，保留历史并复验受影响范围"
+      },
+      "parent_acceptance": {
+        "original_request_required": true,
+        "authority": "子提案、父接受；父不悄悄修改子专业决定"
+      },
+      "consumers": [
+        "M12.2",
+        "M12.4",
+        "用户／总编排入口"
+      ],
+      "invalidation": "范围、检查条件或受检对象改变后，相关检查结果必须重新核对；原要求不能静默削弱。"
+    },
+    {
+      "module_id": "M12.2",
+      "parent_id": "M12",
+      "name": "检查结果与证据汇总",
+      "responsibility": "将局部检查、来源及观察汇总为有覆盖边界的结果和 Gate 状态。",
+      "input_contract": {
+        "kind": "M12Request",
+        "target": "M12.2",
+        "required_inputs": [
+          "plan",
+          "current_refs",
+          "results",
+          "evidence",
+          "observations"
+        ],
+        "meaning": "兼容检查计划、当前对象引用、实际检查及来源证据；媒体检查还需要独立观察。",
+        "exact_types": "references/contracts.json"
+      },
+      "output_contract": {
+        "kind": "M12Proposal",
+        "professional_object": "AuditLedger",
+        "exclusive_writer": "M12.2"
+      },
+      "readonly": [
+        "本次公开合同内的来源、版本和字段投影",
+        "外部兼容资料；不要求其生产模块重跑"
+      ],
+      "write_permissions": [
+        "AuditLedger 的本范围新记录提案"
+      ],
+      "forbidden_writes": [
+        "兄弟子模块的记录",
+        "原历史内容",
+        "M1—M11 权威专业字段",
+        "真实媒体或外部执行状态"
+      ],
+      "dependencies": {
+        "required_inputs": [
+          "plan",
+          "current_refs",
+          "results",
+          "evidence",
+          "observations"
+        ],
+        "replacement": "兼容的用户资料、既有项目或外部工具记录可满足输入",
+        "upstream_execution_required": false,
+        "implicit_sibling_calls": false
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/evidence-and-gates.md",
+        "references/h3-label-mapping.md"
+      ],
+      "official_mapping": {
+        "modes": [
+          "T2VA",
+          "I2VA",
+          "FL2VA",
+          "L2VA",
+          "Ref2VA"
+        ],
+        "base_fields": [
+          "integrated_multimodal_description",
+          "overall_soundscape",
+          "non_diegetic_music"
+        ],
+        "reference_fields": [
+          "subject_definitions",
+          "summary",
+          "retention_analysis",
+          "detailed_description",
+          "overall_soundscape",
+          "non_diegetic_music"
+        ],
+        "reference_labels": [
+          "Subject",
+          "Picture",
+          "Video",
+          "Audio"
+        ],
+        "other_markers": [
+          "Shot",
+          "Sx",
+          "d",
+          "scenetrans",
+          "cutoff"
+        ],
+        "role": "只形成工作流审计／观察／修复记录，不新增原生模型字段"
+      },
+      "route": {
+        "route_id": "M12.2",
+        "explicit_target": "M12.2",
+        "trigger": "将局部检查、来源及观察汇总为有覆盖边界的结果和 Gate 状态。",
+        "input_mapping": "M12Request.inputs 中声明的最小投影；对象身份与来源随输入保留",
+        "preconditions": [
+          "合同和路由版本受支持",
+          "该职责必需的显式字段具备",
+          "证据、适用性与未知项如实提供"
+        ],
+        "success_return": "AuditLedger 提案及明确完成范围，交 M12.accept 或调用者",
+        "failure_return": "结构化输入／版本／引用错误；专业缺证据保留未验证，专业修订转唯一责任方",
+        "branch_selection": "显式 target 优先；语义任务选择由 Agent 依据范围决定",
+        "operation_effect": "读取显式 JSON 并计算，不能自动触发生成、上传或专业修订",
+        "technical_retry": "相同输入可复算；不把重试视为新观察",
+        "creative_revision": "新请求与新版本，保留历史并复验受影响范围"
+      },
+      "parent_acceptance": {
+        "original_request_required": true,
+        "authority": "子提案、父接受；父不悄悄修改子专业决定"
+      },
+      "consumers": [
+        "M12.4",
+        "用户／总编排入口"
+      ],
+      "invalidation": "实际消费的计划、对象或证据版本变化使受影响结论在当前范围失效；历史结果保留。"
+    },
+    {
+      "module_id": "M12.3",
+      "parent_id": "M12",
+      "name": "媒体观察与测量登记",
+      "responsibility": "登记真实观察者提供的事实、方法、时间域、覆盖和限制；保留合成记录的身份。",
+      "input_contract": {
+        "kind": "M12Request",
+        "target": "M12.3",
+        "required_inputs": [
+          "observations"
+        ],
+        "meaning": "媒体与对应计划身份、观察者、方法、通道、时间窗和事实；不能用文本计划代替实际观察。",
+        "exact_types": "references/contracts.json"
+      },
+      "output_contract": {
+        "kind": "M12Proposal",
+        "professional_object": "MediaObservationLedger",
+        "exclusive_writer": "M12.3"
+      },
+      "readonly": [
+        "本次公开合同内的来源、版本和字段投影",
+        "外部兼容资料；不要求其生产模块重跑"
+      ],
+      "write_permissions": [
+        "MediaObservationLedger 的本范围新记录提案"
+      ],
+      "forbidden_writes": [
+        "兄弟子模块的记录",
+        "原历史内容",
+        "M1—M11 权威专业字段",
+        "真实媒体或外部执行状态"
+      ],
+      "dependencies": {
+        "required_inputs": [
+          "observations"
+        ],
+        "replacement": "兼容的用户资料、既有项目或外部工具记录可满足输入",
+        "upstream_execution_required": false,
+        "implicit_sibling_calls": false
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/media-observations.md",
+        "references/h3-label-mapping.md"
+      ],
+      "official_mapping": {
+        "modes": [
+          "T2VA",
+          "I2VA",
+          "FL2VA",
+          "L2VA",
+          "Ref2VA"
+        ],
+        "base_fields": [
+          "integrated_multimodal_description",
+          "overall_soundscape",
+          "non_diegetic_music"
+        ],
+        "reference_fields": [
+          "subject_definitions",
+          "summary",
+          "retention_analysis",
+          "detailed_description",
+          "overall_soundscape",
+          "non_diegetic_music"
+        ],
+        "reference_labels": [
+          "Subject",
+          "Picture",
+          "Video",
+          "Audio"
+        ],
+        "other_markers": [
+          "Shot",
+          "Sx",
+          "d",
+          "scenetrans",
+          "cutoff"
+        ],
+        "role": "只形成工作流审计／观察／修复记录，不新增原生模型字段"
+      },
+      "route": {
+        "route_id": "M12.3",
+        "explicit_target": "M12.3",
+        "trigger": "登记真实观察者提供的事实、方法、时间域、覆盖和限制；保留合成记录的身份。",
+        "input_mapping": "M12Request.inputs 中声明的最小投影；对象身份与来源随输入保留",
+        "preconditions": [
+          "合同和路由版本受支持",
+          "该职责必需的显式字段具备",
+          "证据、适用性与未知项如实提供"
+        ],
+        "success_return": "MediaObservationLedger 提案及明确完成范围，交 M12.accept 或调用者",
+        "failure_return": "结构化输入／版本／引用错误；专业缺证据保留未验证，专业修订转唯一责任方",
+        "branch_selection": "显式 target 优先；语义任务选择由 Agent 依据范围决定",
+        "operation_effect": "读取显式 JSON 并计算，不能自动触发生成、上传或专业修订",
+        "technical_retry": "相同输入可复算；不把重试视为新观察",
+        "creative_revision": "新请求与新版本，保留历史并复验受影响范围"
+      },
+      "parent_acceptance": {
+        "original_request_required": true,
+        "authority": "子提案、父接受；父不悄悄修改子专业决定"
+      },
+      "consumers": [
+        "M12.2",
+        "M12.4",
+        "M8及其他专业模块"
+      ],
+      "invalidation": "新媒体必须有新的观察；计划或检查方法变化可复核原媒体，另存关联和检查，不覆盖旧观察。"
+    },
+    {
+      "module_id": "M12.4",
+      "parent_id": "M12",
+      "name": "问题归因、变更与复验路由",
+      "responsibility": "依据问题与来源定位修订责任，沿实际依赖登记影响、失效、复验与停止条件。",
+      "input_contract": {
+        "kind": "M12Request",
+        "target": "M12.4",
+        "required_inputs": [
+          "audit",
+          "issues",
+          "changes",
+          "dependencies",
+          "retests"
+        ],
+        "meaning": "兼容问题记录、归因依据、前后版本、显式依赖和复验资料；依赖不完整时保留部分范围。",
+        "exact_types": "references/contracts.json"
+      },
+      "output_contract": {
+        "kind": "M12Proposal",
+        "professional_object": "ChangeSet",
+        "exclusive_writer": "M12.4"
+      },
+      "readonly": [
+        "本次公开合同内的来源、版本和字段投影",
+        "外部兼容资料；不要求其生产模块重跑"
+      ],
+      "write_permissions": [
+        "ChangeSet 的本范围新记录提案"
+      ],
+      "forbidden_writes": [
+        "兄弟子模块的记录",
+        "原历史内容",
+        "M1—M11 权威专业字段",
+        "真实媒体或外部执行状态"
+      ],
+      "dependencies": {
+        "required_inputs": [
+          "audit",
+          "issues",
+          "changes",
+          "dependencies",
+          "retests"
+        ],
+        "replacement": "兼容的用户资料、既有项目或外部工具记录可满足输入",
+        "upstream_execution_required": false,
+        "implicit_sibling_calls": false
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/repair-and-retest.md",
+        "references/h3-label-mapping.md"
+      ],
+      "official_mapping": {
+        "modes": [
+          "T2VA",
+          "I2VA",
+          "FL2VA",
+          "L2VA",
+          "Ref2VA"
+        ],
+        "base_fields": [
+          "integrated_multimodal_description",
+          "overall_soundscape",
+          "non_diegetic_music"
+        ],
+        "reference_fields": [
+          "subject_definitions",
+          "summary",
+          "retention_analysis",
+          "detailed_description",
+          "overall_soundscape",
+          "non_diegetic_music"
+        ],
+        "reference_labels": [
+          "Subject",
+          "Picture",
+          "Video",
+          "Audio"
+        ],
+        "other_markers": [
+          "Shot",
+          "Sx",
+          "d",
+          "scenetrans",
+          "cutoff"
+        ],
+        "role": "只形成工作流审计／观察／修复记录，不新增原生模型字段"
+      },
+      "route": {
+        "route_id": "M12.4",
+        "explicit_target": "M12.4",
+        "trigger": "依据问题与来源定位修订责任，沿实际依赖登记影响、失效、复验与停止条件。",
+        "input_mapping": "M12Request.inputs 中声明的最小投影；对象身份与来源随输入保留",
+        "preconditions": [
+          "合同和路由版本受支持",
+          "该职责必需的显式字段具备",
+          "证据、适用性与未知项如实提供"
+        ],
+        "success_return": "ChangeSet 提案及明确完成范围，交 M12.accept 或调用者",
+        "failure_return": "结构化输入／版本／引用错误；专业缺证据保留未验证，专业修订转唯一责任方",
+        "branch_selection": "显式 target 优先；语义任务选择由 Agent 依据范围决定",
+        "operation_effect": "读取显式 JSON 并计算，不能自动触发生成、上传或专业修订",
+        "technical_retry": "相同输入可复算；不把重试视为新观察",
+        "creative_revision": "新请求与新版本，保留历史并复验受影响范围"
+      },
+      "parent_acceptance": {
+        "original_request_required": true,
+        "authority": "子提案、父接受；父不悄悄修改子专业决定"
+      },
+      "consumers": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6",
+        "M7",
+        "M8",
+        "M9",
+        "M10",
+        "M11",
+        "M12",
+        "用户／总编排入口"
+      ],
+      "invalidation": "变化沿显式依赖闭包扩散，不自动废弃无关对象；改计划、路由成功或技术重试不能关闭媒体问题。"
+    }
+  ],
+  "verification": {
+    "status": "See the release-scoped executed records; registration itself does not prove execution.",
+    "record": "docs/h3skill/validation/m12/validation-results.json",
+    "tests": "docs/h3skill/tests/test_m12_contract.py",
+    "scope": "All five responsibility nodes; contracts, independent/combined calls, failure routing and actual evidence boundaries."
+  }
+}

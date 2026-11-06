@@ -1,0 +1,240 @@
+{
+  "task": "counter-key-transfer",
+  "artifact_kind": "synthetic_engineering_audit",
+  "current_task_basis": "brief-current.json + plan@2",
+  "scope_id": "SCOPE-CURRENT-PRODUCTION",
+  "requirement_ids": [
+    "R-DURATION",
+    "R-ACTION",
+    "R-DIALOGUE",
+    "R-SOUND"
+  ],
+  "check_count": 21,
+  "check_results": {
+    "pass": 5,
+    "unverified": 12,
+    "fail": 4
+  },
+  "gate_results": {
+    "G0": "unverified",
+    "G1": "unverified",
+    "G2": "fail",
+    "G3": "unverified",
+    "G4": "unverified"
+  },
+  "scope_result": "fail",
+  "interfaces": [
+    {
+      "module": "M12.1",
+      "request": "requests/scope-request-v2.json",
+      "route": "ready",
+      "propose": "M12Proposal",
+      "check": "valid"
+    },
+    {
+      "module": "M12.2",
+      "request": "requests/audit-request-v2.json",
+      "route": "ready",
+      "propose": "M12Proposal",
+      "check": "valid"
+    },
+    {
+      "module": "M12.3",
+      "status": "not_run",
+      "reason": "No actual media or observation is supplied. No synthetic observation is promoted to actual evidence."
+    },
+    {
+      "module": "M12.4",
+      "request": "requests/repair-request-v3.json",
+      "route": "ready",
+      "propose": "M12Proposal",
+      "check": "valid"
+    }
+  ],
+  "acceptance": {
+    "status": "accepted",
+    "idempotent": false,
+    "state_version": 1,
+    "record_count": 3,
+    "request_bundle": "requests/accept-requests.json",
+    "proposal_bundle": "requests/accept-proposals.json",
+    "raw_result": "results/05-batch-accept.stdout.json",
+    "current_state": "state/current-state.json",
+    "current_view": "state/current-view.json"
+  },
+  "repair_state": {
+    "repair_executed": false,
+    "all_issues_closed": false,
+    "impact_status": "partial",
+    "planned_affected_ids": [],
+    "affected_ids": [],
+    "invalidated_refs": [],
+    "unknown_dependency_ids": [
+      "brief",
+      "dependencies",
+      "legacy-review",
+      "media-inventory",
+      "required-generated-media"
+    ]
+  },
+  "public_command_invocations": 18,
+  "failed_invocations_preserved": [
+    {
+      "command": [
+        "python",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/scripts/m12_contract.py",
+        "propose",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/output/requests/audit-request-v1.json"
+      ],
+      "exit_code": 2,
+      "errors": [
+        {
+          "code": "digest",
+          "detail": "Expected lowercase SHA-256 hex digest",
+          "path": "",
+          "owner": "M12"
+        }
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/scripts/m12_contract.py",
+        "route",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/output/requests/audit-request-v1.json"
+      ],
+      "exit_code": 2,
+      "errors": [
+        {
+          "code": "digest",
+          "detail": "Expected lowercase SHA-256 hex digest",
+          "path": "",
+          "owner": "M12"
+        }
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/scripts/m12_contract.py",
+        "propose",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/output/requests/repair-request-v1.json"
+      ],
+      "exit_code": 2,
+      "errors": [
+        {
+          "code": "digest",
+          "detail": "Expected lowercase SHA-256 hex digest",
+          "path": "",
+          "owner": "M12"
+        }
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/scripts/m12_contract.py",
+        "route",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/output/requests/repair-request-v1.json"
+      ],
+      "exit_code": 2,
+      "errors": [
+        {
+          "code": "digest",
+          "detail": "Expected lowercase SHA-256 hex digest",
+          "path": "",
+          "owner": "M12"
+        }
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/scripts/m12_contract.py",
+        "propose",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/output/requests/scope-request-v1.json"
+      ],
+      "exit_code": 2,
+      "errors": [
+        {
+          "code": "digest",
+          "detail": "Expected lowercase SHA-256 hex digest",
+          "path": "",
+          "owner": "M12"
+        }
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/scripts/m12_contract.py",
+        "route",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/output/requests/scope-request-v1.json"
+      ],
+      "exit_code": 2,
+      "errors": [
+        {
+          "code": "digest",
+          "detail": "Expected lowercase SHA-256 hex digest",
+          "path": "",
+          "owner": "M12"
+        }
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/scripts/m12_contract.py",
+        "propose",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/output/requests/repair-request-v2.json"
+      ],
+      "exit_code": 2,
+      "errors": [
+        {
+          "code": "type",
+          "detail": "Expected a non-empty string",
+          "path": "",
+          "owner": "M12"
+        }
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/scripts/m12_contract.py",
+        "route",
+        "/workspace/scratch/67acb32e99b3/m12-forward-run/output/requests/repair-request-v2.json"
+      ],
+      "exit_code": 2,
+      "errors": [
+        {
+          "code": "type",
+          "detail": "Expected a non-empty string",
+          "path": "",
+          "owner": "M12"
+        }
+      ]
+    }
+  ],
+  "format_corrections": [
+    "Initial request digests used a sha256: prefix; the public contract requires the lowercase 64-character hex only. Original v1 requests and all error outputs are retained.",
+    "Initial dependency edges used full references; the public template uses object ID strings. Repair v2 error and corrected v3 request are both retained."
+  ],
+  "state_interpretation": "Started from an empty ledger. No historical pass ledger or completed repair was invented. Current validity is the supplied-declaration version status; the obsolete consumed plan is an explicit failing check. The reported plan@1 to plan@2 input change is retained in repair-retest-plan.json, not declared as a newly completed repair.",
+  "verification_boundary": {
+    "checked": "supplied_declarations_and_record_consistency",
+    "independent_source_verification": false,
+    "media_observed_by_this_program": false,
+    "whole_task_certified": false,
+    "declared_actual_is_attestation": true,
+    "not_run": [
+      "evidence_locator_read",
+      "media_decode",
+      "semantic_truth_verification",
+      "owner_module_execution",
+      "h3_inference",
+      "media_regeneration",
+      "file_write"
+    ]
+  }
+}

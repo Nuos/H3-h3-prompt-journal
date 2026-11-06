@@ -1,0 +1,23 @@
+{
+  "object_id": "compilation",
+  "version": "1",
+  "owner": "M11",
+  "consumes": [
+    {
+      "object_id": "plan",
+      "version": "1"
+    }
+  ],
+  "mode": "Ref2VA",
+  "parameters": {
+    "duration_seconds": 8
+  },
+  "fields": {
+    "subject_definitions": "<Subject 1> is Lin Che from <Picture 1>. <Subject 2> is He Yuan from <Picture 2>. <Audio 1> is the selected music source.",
+    "summary": "New shot referencing: A key handoff at a counter.",
+    "retention_analysis": "<Subject 1>: retain identity. <Subject 2>: retain identity. <Audio 1>: fully_copy; add the new response and a metal contact sound.",
+    "detailed_description": "Natural interior light. [Shot 1] Lin Che uses his right hand to place the brass key at the right side of the counter. The key remains on the counter as the hand withdraws. At 00:05.000, [Shot 2] He Yuan looks at the key and says (S1) in Chinese, <d>我知道了。</d>.",
+    "overall_soundscape": "One metal contact sound and He Yuan’s reply accompany the copied music.",
+    "non_diegetic_music": "The selected source music continues throughout."
+  }
+}

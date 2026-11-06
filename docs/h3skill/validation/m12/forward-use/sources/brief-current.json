@@ -1,0 +1,24 @@
+{
+  "artifact_kind": "synthetic_engineering_task",
+  "work_id": "counter-key-transfer",
+  "current_plan": "plan-v2",
+  "request": "审计当前制作资料，确认可交付范围；保留原文件并给出最小修复和复验安排。",
+  "requirements": [
+    {
+      "id": "R-DURATION",
+      "text": "目标片长10秒，保持两镜。"
+    },
+    {
+      "id": "R-ACTION",
+      "text": "林澈用左手把铜钥匙放在柜台右侧，松手后钥匙留在台面。"
+    },
+    {
+      "id": "R-DIALOGUE",
+      "text": "何远在看见铜钥匙后说“我看见了。”，保留原词。"
+    },
+    {
+      "id": "R-SOUND",
+      "text": "音乐采用已选源曲片段，同时保留何远的对白和钥匙接触声。"
+    }
+  ]
+}

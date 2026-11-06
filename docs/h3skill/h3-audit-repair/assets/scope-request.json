@@ -1,0 +1,56 @@
+{
+  "kind": "M12Request",
+  "contract_version": "1.0.0",
+  "route_version": "1.0.0",
+  "work_id": "WORK_SYNTHETIC",
+  "base_version": 0,
+  "request_id": "REQUEST_M12_1",
+  "target": "M12.1",
+  "inputs": {
+    "scope_id": "SCOPE_PROTOCOL",
+    "scope_version": "v1",
+    "plan_ref": {
+      "id": "PLAN",
+      "version": "v1",
+      "digest": "99ef88ca6bcd25ec47bb363f08ac98bfededad1ff4f1919873de0e4046cefe80",
+      "owner": "M8",
+      "kind": "StateLedger"
+    },
+    "scope_sources": [
+      {
+        "id": "BRIEF",
+        "version": "v1",
+        "digest": "422e19f9921a5805769d0aaa6f37d6b386e8d688f29a92864226ab4e05d0df7e",
+        "owner": "M1",
+        "kind": "WorkBrief"
+      }
+    ],
+    "gates": [
+      "G2"
+    ],
+    "requirement_ids": [
+      "REQ_PROTOCOL"
+    ],
+    "checks": [
+      {
+        "id": "CHK_PROTOCOL",
+        "requirement_id": "REQ_PROTOCOL",
+        "gate": "G2",
+        "expected": "The approved summary is retained in the compiled prompt.",
+        "method": "compare_approved_summary",
+        "targets": [
+          {
+            "id": "PROMPT",
+            "version": "v1",
+            "digest": "f6f8eb9a4fb355e3d25dba83bd218f10e55b092f4055edac6d609a6e2b4dd762",
+            "owner": "M11",
+            "kind": "CompilationResult"
+          }
+        ],
+        "channels": [],
+        "time_window_ms": null,
+        "coverage": "document"
+      }
+    ]
+  }
+}

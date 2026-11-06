@@ -1,0 +1,35 @@
+{
+  "objects": [
+    {
+      "object_id": "plan",
+      "version": "1",
+      "owner": "M7"
+    },
+    {
+      "object_id": "compilation",
+      "version": "1",
+      "owner": "M11"
+    },
+    {
+      "object_id": "assembly",
+      "version": "1",
+      "owner": "M9"
+    },
+    {
+      "object_id": "identity-sheet",
+      "version": "1",
+      "owner": "M2"
+    }
+  ],
+  "dependencies": [
+    {
+      "consumer": "compilation",
+      "reads": "plan"
+    },
+    {
+      "consumer": "assembly",
+      "reads": "compilation"
+    }
+  ],
+  "graph_scope": "本次提供的四个对象；外部依赖是否齐全尚未确认"
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python",
+    "/workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/scripts/m12_contract.py",
+    "check",
+    "/workspace/scratch/67acb32e99b3/m12-forward-run/revised-output/results/01-audit-propose.stdout.json",
+    "--request",
+    "/workspace/scratch/67acb32e99b3/m12-forward-run/revised-output/requests/audit-request.json"
+  ],
+  "cwd": "/workspace/scratch/67acb32e99b3/m12-forward-run",
+  "at_utc": "2026-11-06T06:19:44.517902+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"valid\",\n  \"module_id\": \"M12.2\",\n  \"proposal_id\": \"P_0a7bd6c2dab591b024be52c29f5e86a11388db6fbd040b65114b7ba9baf87cb9\",\n  \"verification_boundary\": {\n    \"checked\": \"supplied_declarations_and_record_consistency\",\n    \"independent_source_verification\": false,\n    \"media_observed_by_this_program\": false,\n    \"whole_task_certified\": false,\n    \"declared_actual_is_attestation\": true,\n    \"not_run\": [\n      \"evidence_locator_read\",\n      \"media_decode\",\n      \"semantic_truth_verification\",\n      \"owner_module_execution\",\n      \"h3_inference\",\n      \"media_regeneration\",\n      \"file_write\"\n    ]\n  }\n}\n",
+  "stderr": ""
+}

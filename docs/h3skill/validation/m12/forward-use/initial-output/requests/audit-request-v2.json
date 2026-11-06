@@ -1,0 +1,1072 @@
+{
+  "kind": "M12Request",
+  "contract_version": "1.0.0",
+  "route_version": "1.0.0",
+  "work_id": "counter-key-transfer",
+  "base_version": 0,
+  "request_id": "m12-current-audit-v2",
+  "target": "M12.2",
+  "inputs": {
+    "plan": {
+      "scope_id": "SCOPE-CURRENT-PRODUCTION",
+      "scope_version": "1",
+      "plan_ref": {
+        "id": "plan",
+        "version": "2",
+        "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+        "owner": "M7",
+        "kind": "execution_plan"
+      },
+      "scope_sources": [
+        {
+          "id": "brief",
+          "version": "current",
+          "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+          "owner": "external",
+          "kind": "brief"
+        },
+        {
+          "id": "plan",
+          "version": "2",
+          "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+          "owner": "M7",
+          "kind": "execution_plan"
+        },
+        {
+          "id": "media-inventory",
+          "version": "current",
+          "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+          "owner": "external",
+          "kind": "media_inventory"
+        },
+        {
+          "id": "legacy-review",
+          "version": "1",
+          "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+          "owner": "external",
+          "kind": "external_report"
+        },
+        {
+          "id": "dependencies",
+          "version": "current",
+          "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+          "owner": "external",
+          "kind": "dependency_manifest"
+        }
+      ],
+      "gates": [
+        "G0",
+        "G1",
+        "G2",
+        "G3",
+        "G4"
+      ],
+      "requirement_ids": [
+        "R-DURATION",
+        "R-ACTION",
+        "R-DIALOGUE",
+        "R-SOUND"
+      ],
+      "checks": [
+        {
+          "id": "CHK-BASIS",
+          "requirement_id": "R-DURATION",
+          "gate": "G0",
+          "expected": "Use brief-current and plan@2 as the current task basis.",
+          "method": "compare_supplied_current_basis",
+          "targets": [
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-SOURCES",
+          "requirement_id": "R-SOUND",
+          "gate": "G0",
+          "expected": "Current source media and their binding are available for the requested images and selected music.",
+          "method": "inspect_supplied_inventory",
+          "targets": [
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-PLAN-DURATION",
+          "requirement_id": "R-DURATION",
+          "gate": "G1",
+          "expected": "Plan retains two shots totaling 10 seconds, with shot 2 starting at 6 seconds.",
+          "method": "compare_current_brief_and_plan",
+          "targets": [
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-PLAN-ACTION",
+          "requirement_id": "R-ACTION",
+          "gate": "G1",
+          "expected": "Lin Che uses the left hand to place the brass key on the counter right, and it stays after release.",
+          "method": "compare_current_brief_and_plan",
+          "targets": [
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-PLAN-DIALOGUE",
+          "requirement_id": "R-DIALOGUE",
+          "gate": "G1",
+          "expected": "He Yuan sees the key before saying exactly 我看见了。",
+          "method": "compare_current_brief_and_plan",
+          "targets": [
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-PLAN-SOUND",
+          "requirement_id": "R-SOUND",
+          "gate": "G1",
+          "expected": "A current sound plan specifies the selected music segment while retaining dialogue and key contact.",
+          "method": "inspect_current_sound_plan",
+          "targets": [
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-COMPILE-BASIS",
+          "requirement_id": "R-DURATION",
+          "gate": "G2",
+          "expected": "The compilation consumes current plan@2.",
+          "method": "compare_declared_consumed_version",
+          "targets": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-COMPILE-DURATION",
+          "requirement_id": "R-DURATION",
+          "gate": "G2",
+          "expected": "Compiled duration is 10 seconds, with two shots and shot 2 beginning at 00:06.000.",
+          "method": "compare_plan_with_parameters_and_shot_timing",
+          "targets": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-COMPILE-ACTION",
+          "requirement_id": "R-ACTION",
+          "gate": "G2",
+          "expected": "The compiled action retains the left hand, counter right, and resting key.",
+          "method": "compare_approved_action_with_compiled_action",
+          "targets": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-COMPILE-DIALOGUE",
+          "requirement_id": "R-DIALOGUE",
+          "gate": "G2",
+          "expected": "The compiled dialogue retains exactly 我看见了。 after He Yuan sees the key.",
+          "method": "compare_approved_dialogue_with_compiled_dialogue",
+          "targets": [
+            {
+              "id": "plan",
+              "version": "2",
+              "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+              "owner": "M7",
+              "kind": "execution_plan"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-COMPILE-FIELDS",
+          "requirement_id": "R-ACTION",
+          "gate": "G2",
+          "expected": "The Ref2VA compilation contains its six named text fields.",
+          "method": "inspect_six_field_presence_only",
+          "targets": [
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-COMPILE-SOUND",
+          "requirement_id": "R-SOUND",
+          "gate": "G2",
+          "expected": "The source-music retention strategy is compatible with the exact new dialogue and key contact sound.",
+          "method": "inspect_sound_retention_declaration",
+          "targets": [
+            {
+              "id": "brief",
+              "version": "current",
+              "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+              "owner": "external",
+              "kind": "brief"
+            },
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-RUNTIME",
+          "requirement_id": "R-DURATION",
+          "gate": "G2",
+          "expected": "A current run configuration and generation record agree with the approved plan and compiled prompt.",
+          "method": "compare_current_run_declarations",
+          "targets": [
+            {
+              "id": "compilation",
+              "version": "1",
+              "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+              "owner": "M11",
+              "kind": "compiled_prompt"
+            },
+            {
+              "id": "media-inventory",
+              "version": "current",
+              "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+              "owner": "external",
+              "kind": "media_inventory"
+            }
+          ],
+          "channels": [],
+          "time_window_ms": null,
+          "coverage": "document"
+        },
+        {
+          "id": "CHK-GENERATED-DURATION",
+          "requirement_id": "R-DURATION",
+          "gate": "G3",
+          "expected": "Actual media lasts 10 seconds with two shots and the second shot at 6 seconds.",
+          "method": "observe_current_media_full_window",
+          "targets": [
+            {
+              "id": "required-generated-media",
+              "version": "not-provided",
+              "owner": "external",
+              "kind": "generated_media",
+              "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+            }
+          ],
+          "channels": [
+            "video"
+          ],
+          "time_window_ms": [
+            0,
+            10000
+          ],
+          "coverage": "full_window"
+        },
+        {
+          "id": "CHK-GENERATED-ACTION",
+          "requirement_id": "R-ACTION",
+          "gate": "G3",
+          "expected": "The visible left-hand key placement, release and resting state meet the brief.",
+          "method": "observe_current_media_full_window",
+          "targets": [
+            {
+              "id": "required-generated-media",
+              "version": "not-provided",
+              "owner": "external",
+              "kind": "generated_media",
+              "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+            }
+          ],
+          "channels": [
+            "video"
+          ],
+          "time_window_ms": [
+            0,
+            10000
+          ],
+          "coverage": "full_window"
+        },
+        {
+          "id": "CHK-GENERATED-DIALOGUE",
+          "requirement_id": "R-DIALOGUE",
+          "gate": "G3",
+          "expected": "He Yuan sees the key and audibly says exactly 我看见了。 in correct order.",
+          "method": "observe_current_media_full_window",
+          "targets": [
+            {
+              "id": "required-generated-media",
+              "version": "not-provided",
+              "owner": "external",
+              "kind": "generated_media",
+              "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+            }
+          ],
+          "channels": [
+            "video",
+            "audio"
+          ],
+          "time_window_ms": [
+            0,
+            10000
+          ],
+          "coverage": "full_window"
+        },
+        {
+          "id": "CHK-GENERATED-SOUND",
+          "requirement_id": "R-SOUND",
+          "gate": "G3",
+          "expected": "The selected source music segment, dialogue and key contact are audibly present and compatible.",
+          "method": "observe_current_media_full_window",
+          "targets": [
+            {
+              "id": "required-generated-media",
+              "version": "not-provided",
+              "owner": "external",
+              "kind": "generated_media",
+              "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+            }
+          ],
+          "channels": [
+            "audio"
+          ],
+          "time_window_ms": [
+            0,
+            10000
+          ],
+          "coverage": "full_window"
+        },
+        {
+          "id": "CHK-ASSEMBLY-DURATION",
+          "requirement_id": "R-DURATION",
+          "gate": "G4",
+          "expected": "Actual media lasts 10 seconds with two shots and the second shot at 6 seconds.",
+          "method": "observe_current_media_full_window",
+          "targets": [
+            {
+              "id": "assembly",
+              "version": "1",
+              "owner": "M9",
+              "kind": "assembled_media",
+              "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+            }
+          ],
+          "channels": [
+            "video"
+          ],
+          "time_window_ms": [
+            0,
+            10000
+          ],
+          "coverage": "full_window"
+        },
+        {
+          "id": "CHK-ASSEMBLY-ACTION",
+          "requirement_id": "R-ACTION",
+          "gate": "G4",
+          "expected": "The visible left-hand key placement, release and resting state meet the brief.",
+          "method": "observe_current_media_full_window",
+          "targets": [
+            {
+              "id": "assembly",
+              "version": "1",
+              "owner": "M9",
+              "kind": "assembled_media",
+              "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+            }
+          ],
+          "channels": [
+            "video"
+          ],
+          "time_window_ms": [
+            0,
+            10000
+          ],
+          "coverage": "full_window"
+        },
+        {
+          "id": "CHK-ASSEMBLY-DIALOGUE",
+          "requirement_id": "R-DIALOGUE",
+          "gate": "G4",
+          "expected": "He Yuan sees the key and audibly says exactly 我看见了。 in correct order.",
+          "method": "observe_current_media_full_window",
+          "targets": [
+            {
+              "id": "assembly",
+              "version": "1",
+              "owner": "M9",
+              "kind": "assembled_media",
+              "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+            }
+          ],
+          "channels": [
+            "video",
+            "audio"
+          ],
+          "time_window_ms": [
+            0,
+            10000
+          ],
+          "coverage": "full_window"
+        },
+        {
+          "id": "CHK-ASSEMBLY-SOUND",
+          "requirement_id": "R-SOUND",
+          "gate": "G4",
+          "expected": "The selected source music segment, dialogue and key contact are audibly present and compatible.",
+          "method": "observe_current_media_full_window",
+          "targets": [
+            {
+              "id": "assembly",
+              "version": "1",
+              "owner": "M9",
+              "kind": "assembled_media",
+              "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+            }
+          ],
+          "channels": [
+            "audio"
+          ],
+          "time_window_ms": [
+            0,
+            10000
+          ],
+          "coverage": "full_window"
+        }
+      ]
+    },
+    "current_refs": [
+      {
+        "id": "brief",
+        "version": "current",
+        "digest": "e381ac758b65bebe18846782946a0e00e73bb84a9209fcacc404715d375f785d",
+        "owner": "external",
+        "kind": "brief"
+      },
+      {
+        "id": "plan",
+        "version": "2",
+        "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+        "owner": "M7",
+        "kind": "execution_plan"
+      },
+      {
+        "id": "compilation",
+        "version": "1",
+        "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+        "owner": "M11",
+        "kind": "compiled_prompt"
+      },
+      {
+        "id": "media-inventory",
+        "version": "current",
+        "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+        "owner": "external",
+        "kind": "media_inventory"
+      },
+      {
+        "id": "legacy-review",
+        "version": "1",
+        "digest": "0b30b7d1dbdf0cad25939dd44d285547b39f805a978857f284f6c0e740816f47",
+        "owner": "external",
+        "kind": "external_report"
+      },
+      {
+        "id": "dependencies",
+        "version": "current",
+        "digest": "19c381ba3f4899a33a9d90dd87165200246ced594c49d3b7f24e40d5e2e710fe",
+        "owner": "external",
+        "kind": "dependency_manifest"
+      },
+      {
+        "id": "assembly",
+        "version": "1",
+        "owner": "M9",
+        "kind": "assembled_media",
+        "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+      },
+      {
+        "id": "identity-sheet",
+        "version": "1",
+        "owner": "M2",
+        "kind": "identity_sheet",
+        "digest": "c8d5966463beac68f7c36be3fb16c6146a270937e80c103100ebf17d0f6c788e"
+      },
+      {
+        "id": "required-generated-media",
+        "version": "not-provided",
+        "owner": "external",
+        "kind": "generated_media",
+        "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+      }
+    ],
+    "results": [
+      {
+        "check_id": "CHK-BASIS",
+        "result": "pass",
+        "evidence_ids": [
+          "EV-BASIS"
+        ],
+        "reason": "The task identifies plan-v2 as current; its change record retains action and words."
+      },
+      {
+        "check_id": "CHK-SOURCES",
+        "result": "unverified",
+        "evidence_ids": [
+          "EV-INVENTORY"
+        ],
+        "reason": "No actual image, audio or video files are provided; Picture 1/2 and Audio 1 binding cannot be verified."
+      },
+      {
+        "check_id": "CHK-PLAN-DURATION",
+        "result": "pass",
+        "evidence_ids": [
+          "EV-PLAN-DURATION"
+        ],
+        "reason": "Plan@2 has [0,6] and [6,10], two contiguous shots totaling 10 seconds."
+      },
+      {
+        "check_id": "CHK-PLAN-ACTION",
+        "result": "pass",
+        "evidence_ids": [
+          "EV-PLAN-ACTION"
+        ],
+        "reason": "The current plan explicitly preserves left hand, counter right and key resting after the hand leaves."
+      },
+      {
+        "check_id": "CHK-PLAN-DIALOGUE",
+        "result": "pass",
+        "evidence_ids": [
+          "EV-PLAN-DIALOGUE"
+        ],
+        "reason": "Plan action orders seeing before response; its dialogue field retains the exact required words."
+      },
+      {
+        "check_id": "CHK-PLAN-SOUND",
+        "result": "unverified",
+        "evidence_ids": [],
+        "reason": "The brief defines the sound requirement, but plan@2 contains no source segment or mixing arrangement; no current M6 sound plan is supplied."
+      },
+      {
+        "check_id": "CHK-COMPILE-BASIS",
+        "result": "fail",
+        "evidence_ids": [
+          "EV-COMPILE-BASIS"
+        ],
+        "reason": "compilation@1 explicitly consumes plan@1 and therefore is not a compilation of the current plan."
+      },
+      {
+        "check_id": "CHK-COMPILE-DURATION",
+        "result": "fail",
+        "evidence_ids": [
+          "EV-COMPILE-DURATION"
+        ],
+        "reason": "The compilation declares duration_seconds=8 and starts shot 2 at 00:05.000."
+      },
+      {
+        "check_id": "CHK-COMPILE-ACTION",
+        "result": "fail",
+        "evidence_ids": [
+          "EV-COMPILE-ACTION"
+        ],
+        "reason": "The compiled action uses right hand, contradicting both plan@1 and plan@2; right-side placement and resting key are retained."
+      },
+      {
+        "check_id": "CHK-COMPILE-DIALOGUE",
+        "result": "fail",
+        "evidence_ids": [
+          "EV-COMPILE-DIALOGUE"
+        ],
+        "reason": "The compilation changes the required words to 我知道了。; the look-before-speech sequence is textually present."
+      },
+      {
+        "check_id": "CHK-COMPILE-FIELDS",
+        "result": "pass",
+        "evidence_ids": [
+          "EV-FIELDS"
+        ],
+        "reason": "All six expected fields are present. This verifies field presence only, not full H3 validity or media quality."
+      },
+      {
+        "check_id": "CHK-COMPILE-SOUND",
+        "result": "unverified",
+        "evidence_ids": [
+          "EV-SOUND"
+        ],
+        "reason": "The text combines Audio 1 fully_copy with added speech/contact sound; source content, exact retention scope and an explicit compatible sound plan are missing. This audit does not certify that combination."
+      },
+      {
+        "check_id": "CHK-RUNTIME",
+        "result": "unverified",
+        "evidence_ids": [],
+        "reason": "No generation submission or execution record is supplied; declared text parameters do not establish actual runtime use."
+      },
+      {
+        "check_id": "CHK-GENERATED-DURATION",
+        "result": "unverified",
+        "evidence_ids": [],
+        "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+      },
+      {
+        "check_id": "CHK-GENERATED-ACTION",
+        "result": "unverified",
+        "evidence_ids": [],
+        "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+      },
+      {
+        "check_id": "CHK-GENERATED-DIALOGUE",
+        "result": "unverified",
+        "evidence_ids": [],
+        "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+      },
+      {
+        "check_id": "CHK-GENERATED-SOUND",
+        "result": "unverified",
+        "evidence_ids": [],
+        "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+      },
+      {
+        "check_id": "CHK-ASSEMBLY-DURATION",
+        "result": "unverified",
+        "evidence_ids": [],
+        "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+      },
+      {
+        "check_id": "CHK-ASSEMBLY-ACTION",
+        "result": "unverified",
+        "evidence_ids": [],
+        "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+      },
+      {
+        "check_id": "CHK-ASSEMBLY-DIALOGUE",
+        "result": "unverified",
+        "evidence_ids": [],
+        "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+      },
+      {
+        "check_id": "CHK-ASSEMBLY-SOUND",
+        "result": "unverified",
+        "evidence_ids": [],
+        "reason": "No actual current media or observations are supplied. The target reference is a missing-target declaration, not media evidence."
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-BASIS",
+        "kind": "document",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "plan",
+          "version": "2",
+          "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+          "owner": "M7",
+          "kind": "execution_plan"
+        },
+        "check_ids": [
+          "CHK-BASIS"
+        ],
+        "locator": "sources/plan-v2.json#/change_record",
+        "content": "Synthetic source: plan@2 reports the change from 8 to 10 seconds and the second shot start from 5 to 6 seconds; the task explicitly selects plan-v2."
+      },
+      {
+        "id": "EV-INVENTORY",
+        "kind": "document",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "media-inventory",
+          "version": "current",
+          "digest": "2e762c3d8091d67887a0b37bc8f2dfd48443430da116843b962b28ecc4a36214",
+          "owner": "external",
+          "kind": "media_inventory"
+        },
+        "check_ids": [
+          "CHK-SOURCES"
+        ],
+        "locator": "sources/media-inventory.json",
+        "content": "The synthetic inventory explicitly provides zero files, no generation/run record, no assembly and no actual image/video/audio."
+      },
+      {
+        "id": "EV-PLAN-DURATION",
+        "kind": "document",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "plan",
+          "version": "2",
+          "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+          "owner": "M7",
+          "kind": "execution_plan"
+        },
+        "check_ids": [
+          "CHK-PLAN-DURATION"
+        ],
+        "locator": "sources/plan-v2.json#/shots",
+        "content": "duration_seconds=10; s1=[0,6], s2=[6,10]."
+      },
+      {
+        "id": "EV-PLAN-ACTION",
+        "kind": "document",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "plan",
+          "version": "2",
+          "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+          "owner": "M7",
+          "kind": "execution_plan"
+        },
+        "check_ids": [
+          "CHK-PLAN-ACTION"
+        ],
+        "locator": "sources/plan-v2.json#/action",
+        "content": "林澈用左手把铜钥匙放在柜台右侧，手离开后钥匙静止。何远看见钥匙后回应。"
+      },
+      {
+        "id": "EV-PLAN-DIALOGUE",
+        "kind": "document",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "plan",
+          "version": "2",
+          "digest": "0d1c90a36dd66d6c344e4636c934a75b18d6b720ff8dfafb2ea360c1cf4f80f3",
+          "owner": "M7",
+          "kind": "execution_plan"
+        },
+        "check_ids": [
+          "CHK-PLAN-DIALOGUE"
+        ],
+        "locator": "sources/plan-v2.json#/dialogue",
+        "content": "action: 何远看见钥匙后回应。 dialogue: 我看见了。"
+      },
+      {
+        "id": "EV-COMPILE-BASIS",
+        "kind": "document",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "compilation",
+          "version": "1",
+          "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+          "owner": "M11",
+          "kind": "compiled_prompt"
+        },
+        "check_ids": [
+          "CHK-COMPILE-BASIS"
+        ],
+        "locator": "sources/compilation-v1.json#/consumes",
+        "content": "consumes=[{object_id:plan,version:1}], while the task current plan is plan@2."
+      },
+      {
+        "id": "EV-COMPILE-DURATION",
+        "kind": "document",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "compilation",
+          "version": "1",
+          "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+          "owner": "M11",
+          "kind": "compiled_prompt"
+        },
+        "check_ids": [
+          "CHK-COMPILE-DURATION"
+        ],
+        "locator": "sources/compilation-v1.json#/parameters;#/fields/detailed_description",
+        "content": "duration_seconds=8; At 00:05.000, [Shot 2]. Current plan requires 10 seconds and shot 2 start at 6 seconds."
+      },
+      {
+        "id": "EV-COMPILE-ACTION",
+        "kind": "document",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "compilation",
+          "version": "1",
+          "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+          "owner": "M11",
+          "kind": "compiled_prompt"
+        },
+        "check_ids": [
+          "CHK-COMPILE-ACTION"
+        ],
+        "locator": "sources/compilation-v1.json#/fields/detailed_description",
+        "content": "Lin Che uses his right hand to place the brass key at the right side of the counter. The key remains on the counter as the hand withdraws."
+      },
+      {
+        "id": "EV-COMPILE-DIALOGUE",
+        "kind": "document",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "compilation",
+          "version": "1",
+          "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+          "owner": "M11",
+          "kind": "compiled_prompt"
+        },
+        "check_ids": [
+          "CHK-COMPILE-DIALOGUE"
+        ],
+        "locator": "sources/compilation-v1.json#/fields/detailed_description",
+        "content": "He Yuan looks at the key and says (S1) in Chinese, <d>我知道了。</d>."
+      },
+      {
+        "id": "EV-FIELDS",
+        "kind": "document",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "compilation",
+          "version": "1",
+          "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+          "owner": "M11",
+          "kind": "compiled_prompt"
+        },
+        "check_ids": [
+          "CHK-COMPILE-FIELDS"
+        ],
+        "locator": "sources/compilation-v1.json#/fields",
+        "content": "Present: subject_definitions, summary, retention_analysis, detailed_description, overall_soundscape, non_diegetic_music."
+      },
+      {
+        "id": "EV-SOUND",
+        "kind": "document",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "compilation",
+          "version": "1",
+          "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+          "owner": "M11",
+          "kind": "compiled_prompt"
+        },
+        "check_ids": [
+          "CHK-COMPILE-SOUND"
+        ],
+        "locator": "sources/compilation-v1.json#/fields/retention_analysis",
+        "content": "<Audio 1>: fully_copy; add the new response and a metal contact sound. Overall soundscape adds dialogue/contact while copying music; no source audio exists in supplied files."
+      },
+      {
+        "id": "CAUSE-ISSUE-STALE-COMPILE",
+        "kind": "causal_analysis",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "compilation",
+          "version": "1",
+          "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+          "owner": "M11",
+          "kind": "compiled_prompt"
+        },
+        "check_ids": [
+          "CHK-COMPILE-BASIS"
+        ],
+        "locator": "sources/compilation-v1.json; sources/plan-v1.json; sources/plan-v2.json",
+        "content": "Semantic comparison of supplied synthetic documents: 编译声明读取 plan@1；当前依据为 plan@2。 The compilation is owned by M11. The hand and words mismatch already existed against plan@1; the duration/shot-start mismatch follows the declared plan@2 update. This attributes a text compilation repair, not a cause of unobserved media failure."
+      },
+      {
+        "id": "CAUSE-ISSUE-TIMING",
+        "kind": "causal_analysis",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "compilation",
+          "version": "1",
+          "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+          "owner": "M11",
+          "kind": "compiled_prompt"
+        },
+        "check_ids": [
+          "CHK-COMPILE-DURATION"
+        ],
+        "locator": "sources/compilation-v1.json; sources/plan-v1.json; sources/plan-v2.json",
+        "content": "Semantic comparison of supplied synthetic documents: 8秒及00:05.000；当前要求10秒及00:06.000。 The compilation is owned by M11. The hand and words mismatch already existed against plan@1; the duration/shot-start mismatch follows the declared plan@2 update. This attributes a text compilation repair, not a cause of unobserved media failure."
+      },
+      {
+        "id": "CAUSE-ISSUE-HAND",
+        "kind": "causal_analysis",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "compilation",
+          "version": "1",
+          "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+          "owner": "M11",
+          "kind": "compiled_prompt"
+        },
+        "check_ids": [
+          "CHK-COMPILE-ACTION"
+        ],
+        "locator": "sources/compilation-v1.json; sources/plan-v1.json; sources/plan-v2.json",
+        "content": "Semantic comparison of supplied synthetic documents: right hand；两版计划均要求左手。 The compilation is owned by M11. The hand and words mismatch already existed against plan@1; the duration/shot-start mismatch follows the declared plan@2 update. This attributes a text compilation repair, not a cause of unobserved media failure."
+      },
+      {
+        "id": "CAUSE-ISSUE-WORDS",
+        "kind": "causal_analysis",
+        "origin": "synthetic",
+        "source_ref": {
+          "id": "compilation",
+          "version": "1",
+          "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+          "owner": "M11",
+          "kind": "compiled_prompt"
+        },
+        "check_ids": [
+          "CHK-COMPILE-DIALOGUE"
+        ],
+        "locator": "sources/compilation-v1.json; sources/plan-v1.json; sources/plan-v2.json",
+        "content": "Semantic comparison of supplied synthetic documents: 我知道了。；要求我看见了。 The compilation is owned by M11. The hand and words mismatch already existed against plan@1; the duration/shot-start mismatch follows the declared plan@2 update. This attributes a text compilation repair, not a cause of unobserved media failure."
+      }
+    ],
+    "observations": []
+  }
+}

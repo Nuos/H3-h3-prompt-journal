@@ -1,0 +1,4 @@
+interface:
+  display_name: "H3 持续审计与修复"
+  short_description: "登记五个关卡的范围、证据、独立媒体观察与修复复验，保持版本可追溯"
+  default_prompt: "使用 $h3-audit-repair 审计当前 H3 任务，区分计划、编译与媒体证据，并将问题回传责任模块。"

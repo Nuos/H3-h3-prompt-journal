@@ -1,0 +1,18 @@
+{
+  "name": "anthropic-quick-validate",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-B",
+    "docs/h3skill/_standards/anthropics-quick-validate.py",
+    "docs/h3skill/h3-audit-repair"
+  ],
+  "cwd": "repository root",
+  "started_at": "2026-11-06T05:53:00.470690+00:00",
+  "ended_at": "2026-11-06T05:53:00.501965+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "stdout_file": "anthropic-quick-validate.stdout.txt",
+  "stderr_file": "anthropic-quick-validate.stderr.txt",
+  "h3_inference": "not_run",
+  "media_observation": "not_run"
+}

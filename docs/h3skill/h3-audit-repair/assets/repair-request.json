@@ -1,0 +1,238 @@
+{
+  "kind": "M12Request",
+  "contract_version": "1.0.0",
+  "route_version": "1.0.0",
+  "work_id": "WORK_SYNTHETIC",
+  "base_version": 0,
+  "request_id": "REQUEST_M12_4",
+  "target": "M12.4",
+  "inputs": {
+    "audit": {
+      "plan": {
+        "scope_id": "SCOPE_PROTOCOL",
+        "scope_version": "v1",
+        "plan_ref": {
+          "id": "PLAN",
+          "version": "v1",
+          "digest": "99ef88ca6bcd25ec47bb363f08ac98bfededad1ff4f1919873de0e4046cefe80",
+          "owner": "M8",
+          "kind": "StateLedger"
+        },
+        "scope_sources": [
+          {
+            "id": "BRIEF",
+            "version": "v1",
+            "digest": "422e19f9921a5805769d0aaa6f37d6b386e8d688f29a92864226ab4e05d0df7e",
+            "owner": "M1",
+            "kind": "WorkBrief"
+          }
+        ],
+        "gates": [
+          "G2"
+        ],
+        "requirement_ids": [
+          "REQ_PROTOCOL"
+        ],
+        "checks": [
+          {
+            "id": "CHK_PROTOCOL",
+            "requirement_id": "REQ_PROTOCOL",
+            "gate": "G2",
+            "expected": "The approved summary is retained in the compiled prompt.",
+            "method": "compare_approved_summary",
+            "targets": [
+              {
+                "id": "PROMPT",
+                "version": "v1",
+                "digest": "f6f8eb9a4fb355e3d25dba83bd218f10e55b092f4055edac6d609a6e2b4dd762",
+                "owner": "M11",
+                "kind": "CompilationResult"
+              }
+            ],
+            "channels": [],
+            "time_window_ms": null,
+            "coverage": "document"
+          }
+        ]
+      },
+      "current_refs": [
+        {
+          "id": "PLAN",
+          "version": "v1",
+          "digest": "99ef88ca6bcd25ec47bb363f08ac98bfededad1ff4f1919873de0e4046cefe80",
+          "owner": "M8",
+          "kind": "StateLedger"
+        },
+        {
+          "id": "BRIEF",
+          "version": "v1",
+          "digest": "422e19f9921a5805769d0aaa6f37d6b386e8d688f29a92864226ab4e05d0df7e",
+          "owner": "M1",
+          "kind": "WorkBrief"
+        },
+        {
+          "id": "PROMPT",
+          "version": "v1",
+          "digest": "f6f8eb9a4fb355e3d25dba83bd218f10e55b092f4055edac6d609a6e2b4dd762",
+          "owner": "M11",
+          "kind": "CompilationResult"
+        }
+      ],
+      "results": [
+        {
+          "check_id": "CHK_PROTOCOL",
+          "result": "fail",
+          "evidence_ids": [
+            "EV_DOCUMENT"
+          ],
+          "reason": "Synthetic example of a supplied reviewer declaration."
+        }
+      ],
+      "evidence": [
+        {
+          "id": "EV_DOCUMENT",
+          "kind": "document",
+          "origin": "synthetic",
+          "source_ref": {
+            "id": "PROMPT",
+            "version": "v1",
+            "digest": "f6f8eb9a4fb355e3d25dba83bd218f10e55b092f4055edac6d609a6e2b4dd762",
+            "owner": "M11",
+            "kind": "CompilationResult"
+          },
+          "check_ids": [
+            "CHK_PROTOCOL"
+          ],
+          "locator": "fixture:declared-evidence-only",
+          "content": "Synthetic supplied evidence for the declared check; no file is read."
+        },
+        {
+          "id": "EV_CAUSE",
+          "kind": "causal_analysis",
+          "origin": "synthetic",
+          "source_ref": {
+            "id": "PROMPT",
+            "version": "v1",
+            "digest": "f6f8eb9a4fb355e3d25dba83bd218f10e55b092f4055edac6d609a6e2b4dd762",
+            "owner": "M11",
+            "kind": "CompilationResult"
+          },
+          "check_ids": [
+            "CHK_PROTOCOL"
+          ],
+          "locator": "fixture:declared-evidence-only",
+          "content": "Synthetic comparison identifies summary serialization in the M11-owned compilation as the cause."
+        }
+      ],
+      "observations": []
+    },
+    "issues": [
+      {
+        "id": "ISSUE_SUMMARY",
+        "check_id": "CHK_PROTOCOL",
+        "object_ref": {
+          "id": "PROMPT",
+          "version": "v1",
+          "digest": "f6f8eb9a4fb355e3d25dba83bd218f10e55b092f4055edac6d609a6e2b4dd762",
+          "owner": "M11",
+          "kind": "CompilationResult"
+        },
+        "location": "Synthetic compiled summary field",
+        "expected": "The approved summary is retained in the compiled prompt.",
+        "actual": "Synthetic fixture: approved summary is missing.",
+        "evidence_ids": [
+          "EV_DOCUMENT"
+        ],
+        "owner": "M11",
+        "attribution_basis": "Synthetic semantic review attributes a missing serialized field to its M11 owner.",
+        "causal_evidence_ids": [
+          "EV_CAUSE"
+        ],
+        "requested_action": "Return the summary correction to M11; preserve the approved plan."
+      }
+    ],
+    "changes": [
+      {
+        "id": "CHANGE_SUMMARY",
+        "issue_ids": [
+          "ISSUE_SUMMARY"
+        ],
+        "owner": "M11",
+        "before": {
+          "id": "PROMPT",
+          "version": "v1",
+          "digest": "f6f8eb9a4fb355e3d25dba83bd218f10e55b092f4055edac6d609a6e2b4dd762",
+          "owner": "M11",
+          "kind": "CompilationResult"
+        },
+        "after": {
+          "id": "PROMPT",
+          "version": "v2",
+          "digest": "714299186a822ea57e46651392ef0396e740fc75597644a1b01a60938264c572",
+          "owner": "M11",
+          "kind": "CompilationResult"
+        },
+        "reason": "Synthetic supplied version transition; this program executes no edit.",
+        "status": "proposed"
+      }
+    ],
+    "dependencies": {
+      "nodes": [
+        {
+          "id": "PLAN",
+          "version": "v1",
+          "digest": "99ef88ca6bcd25ec47bb363f08ac98bfededad1ff4f1919873de0e4046cefe80",
+          "owner": "M8",
+          "kind": "StateLedger"
+        },
+        {
+          "id": "BRIEF",
+          "version": "v1",
+          "digest": "422e19f9921a5805769d0aaa6f37d6b386e8d688f29a92864226ab4e05d0df7e",
+          "owner": "M1",
+          "kind": "WorkBrief"
+        },
+        {
+          "id": "PROMPT",
+          "version": "v1",
+          "digest": "f6f8eb9a4fb355e3d25dba83bd218f10e55b092f4055edac6d609a6e2b4dd762",
+          "owner": "M11",
+          "kind": "CompilationResult"
+        },
+        {
+          "id": "CLIP",
+          "version": "v1",
+          "digest": "ccb5523f8b140a99954f265a191e7b8206af0d9479f60241054533f5bbe38fe3",
+          "owner": "external",
+          "kind": "generated_media"
+        },
+        {
+          "id": "FILM",
+          "version": "v1",
+          "digest": "df4940efd2878246805dcf744808513e7edfc675ba19441c32dba880011a562f",
+          "owner": "external",
+          "kind": "assembled_media"
+        },
+        {
+          "id": "UNRELATED_LOOK",
+          "version": "v1",
+          "digest": "1bc17a76bab5708bce9d6a8aa0fd1def5e9e0828592a71f7562a0c7c350ba464",
+          "owner": "M10",
+          "kind": "LookPlan"
+        }
+      ],
+      "edges": [
+        {
+          "upstream": "PROMPT",
+          "downstream": "CLIP"
+        },
+        {
+          "upstream": "CLIP",
+          "downstream": "FILM"
+        }
+      ],
+      "complete": true
+    },
+    "retests": []
+  }
+}

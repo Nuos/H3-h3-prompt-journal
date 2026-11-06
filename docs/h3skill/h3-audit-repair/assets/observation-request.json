@@ -1,0 +1,61 @@
+{
+  "kind": "M12Request",
+  "contract_version": "1.0.0",
+  "route_version": "1.0.0",
+  "work_id": "WORK_SYNTHETIC",
+  "base_version": 0,
+  "request_id": "REQUEST_M12_3",
+  "target": "M12.3",
+  "inputs": {
+    "observations": [
+      {
+        "id": "OBS_SYNTHETIC",
+        "media_ref": {
+          "id": "CLIP",
+          "version": "v1",
+          "digest": "ccb5523f8b140a99954f265a191e7b8206af0d9479f60241054533f5bbe38fe3",
+          "owner": "external",
+          "kind": "generated_media"
+        },
+        "plan_ref": {
+          "id": "PLAN",
+          "version": "v1",
+          "digest": "99ef88ca6bcd25ec47bb363f08ac98bfededad1ff4f1919873de0e4046cefe80",
+          "owner": "M8",
+          "kind": "StateLedger"
+        },
+        "observer": "synthetic_fixture_observer",
+        "observed_at": "2026-11-01T10:00:00Z",
+        "method": "human_video_review",
+        "time_domain": "media_ms",
+        "channels": [
+          "video"
+        ],
+        "coverage": {
+          "mode": "full",
+          "windows_ms": [
+            [
+              0,
+              4000
+            ]
+          ],
+          "duration_ms": 4000
+        },
+        "origin": "synthetic",
+        "facts": [
+          {
+            "check_id": "CHK_MEDIA",
+            "expected": "The red cup remains in the right hand throughout the required window.",
+            "observed": "Synthetic fixture assertion; no real video has been observed.",
+            "assessment": "satisfies",
+            "location": "Synthetic fixture media window 0–4000 ms",
+            "time_window_ms": [
+              0,
+              4000
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "object_id": "plan",
+  "version": "2",
+  "owner": "M7",
+  "duration_seconds": 10,
+  "shots": [
+    {
+      "shot_id": "s1",
+      "start": 0,
+      "end": 6
+    },
+    {
+      "shot_id": "s2",
+      "start": 6,
+      "end": 10
+    }
+  ],
+  "action": "林澈用左手把铜钥匙放在柜台右侧，手离开后钥匙静止。何远看见钥匙后回应。",
+  "dialogue": "我看见了。",
+  "change_record": {
+    "source": "本次用户时间要求",
+    "from": "plan@1",
+    "changed": "总时长8秒变为10秒、第二镜起点5秒变为6秒",
+    "action_and_words": "保持原要求"
+  }
+}

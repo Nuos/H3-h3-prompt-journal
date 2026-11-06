@@ -1,0 +1,24 @@
+{
+  "status": "ready",
+  "target": "M12.2",
+  "owned_record_kind": "AuditLedger",
+  "work_id": "counter-key-transfer",
+  "request_id": "m12-rule-revision-audit-v1",
+  "read_only": true,
+  "verification_boundary": {
+    "checked": "supplied_declarations_and_record_consistency",
+    "independent_source_verification": false,
+    "media_observed_by_this_program": false,
+    "whole_task_certified": false,
+    "declared_actual_is_attestation": true,
+    "not_run": [
+      "evidence_locator_read",
+      "media_decode",
+      "semantic_truth_verification",
+      "owner_module_execution",
+      "h3_inference",
+      "media_regeneration",
+      "file_write"
+    ]
+  }
+}

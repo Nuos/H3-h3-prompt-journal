@@ -1,0 +1,95 @@
+{
+  "task": "counter-key-transfer",
+  "context": "same-context review following the audit-rule update",
+  "base_state_version": 1,
+  "new_state_version": 2,
+  "acceptance_status": "accepted",
+  "idempotent": false,
+  "first_round_record_count": 3,
+  "new_record_count": 2,
+  "total_record_count": 5,
+  "first_round_records_preserved_verbatim": true,
+  "scope_unchanged": true,
+  "scope_id": "SCOPE-CURRENT-PRODUCTION",
+  "scope_version": "1",
+  "requirements_unchanged": [
+    "R-DURATION",
+    "R-ACTION",
+    "R-DIALOGUE",
+    "R-SOUND"
+  ],
+  "check_count": 21,
+  "changed_result_ids": [
+    "CHK-COMPILE-SOUND"
+  ],
+  "changed_result": {
+    "check_id": "CHK-COMPILE-SOUND",
+    "previous": "unverified",
+    "current": "fail"
+  },
+  "check_results": {
+    "pass": 5,
+    "unverified": 11,
+    "fail": 5
+  },
+  "gate_results": {
+    "G0": "unverified",
+    "G1": "unverified",
+    "G2": "fail",
+    "G3": "unverified",
+    "G4": "unverified"
+  },
+  "scope_result": "fail",
+  "repair_issue_count": 5,
+  "repair_executed": false,
+  "all_issues_closed": false,
+  "interfaces": [
+    {
+      "module": "M12.2",
+      "request": "requests/audit-request.json",
+      "route": "ready",
+      "propose": "M12Proposal",
+      "check": "valid"
+    },
+    {
+      "module": "M12.4",
+      "request": "requests/repair-request.json",
+      "route": "ready",
+      "propose": "M12Proposal",
+      "check": "valid"
+    }
+  ],
+  "unchanged_interfaces": [
+    {
+      "module": "M12.1",
+      "reason": "Same full scope; original accepted AuditPlan retained."
+    },
+    {
+      "module": "M12.3",
+      "reason": "No actual observation; still not run."
+    }
+  ],
+  "command_count": 7,
+  "all_new_commands_exit_zero": true,
+  "acceptance_result": "results/02-batch-accept.stdout.json",
+  "current_state": "state/current-state.json",
+  "current_view": "state/current-view.json",
+  "original_output_sources_task_unchanged": true,
+  "semantic_revision_boundary": "The newest version-2 audit corrects the same check under the revised rule. The original version-1 unverified declaration remains in immutable history; no actual object change, repair, generation or new media observation is asserted.",
+  "verification_boundary": {
+    "checked": "supplied_declarations_and_record_consistency",
+    "independent_source_verification": false,
+    "media_observed_by_this_program": false,
+    "whole_task_certified": false,
+    "declared_actual_is_attestation": true,
+    "not_run": [
+      "evidence_locator_read",
+      "media_decode",
+      "semantic_truth_verification",
+      "owner_module_execution",
+      "h3_inference",
+      "media_regeneration",
+      "file_write"
+    ]
+  }
+}

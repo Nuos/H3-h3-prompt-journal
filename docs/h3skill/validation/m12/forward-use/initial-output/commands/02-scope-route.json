@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python",
+    "/workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/scripts/m12_contract.py",
+    "route",
+    "/workspace/scratch/67acb32e99b3/m12-forward-run/output/requests/scope-request-v2.json"
+  ],
+  "cwd": "/workspace/scratch/67acb32e99b3/m12-forward-run",
+  "at_utc": "2026-11-06T06:13:23.783263+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"ready\",\n  \"target\": \"M12.1\",\n  \"owned_record_kind\": \"AuditPlan\",\n  \"work_id\": \"counter-key-transfer\",\n  \"request_id\": \"m12-current-scope-v2\",\n  \"read_only\": true,\n  \"verification_boundary\": {\n    \"checked\": \"supplied_declarations_and_record_consistency\",\n    \"independent_source_verification\": false,\n    \"media_observed_by_this_program\": false,\n    \"whole_task_certified\": false,\n    \"declared_actual_is_attestation\": true,\n    \"not_run\": [\n      \"evidence_locator_read\",\n      \"media_decode\",\n      \"semantic_truth_verification\",\n      \"owner_module_execution\",\n      \"h3_inference\",\n      \"media_regeneration\",\n      \"file_write\"\n    ]\n  }\n}\n",
+  "stderr": ""
+}

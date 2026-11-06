@@ -1,0 +1,30 @@
+{
+  "name": "behavior-tests",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "docs/h3skill/tests",
+    "-p",
+    "test_m12_contract.py",
+    "-v"
+  ],
+  "cwd": "repository root",
+  "started_at": "2026-11-06T05:57:04.252249+00:00",
+  "ended_at": "2026-11-06T05:57:04.482950+00:00",
+  "exit_code": 0,
+  "status": "pass",
+  "stdout_file": "behavior-tests.stdout.txt",
+  "stderr_file": "behavior-tests.stderr.txt",
+  "h3_inference": "not_run",
+  "media_observation": "not_run",
+  "tests_run": 44,
+  "skipped": 1,
+  "skip_reason": "Optional jsonschema is not installed; runtime validators and local schema-reference checks remain exercised.",
+  "test_file_sha256": "f296268be3b94a5132479799ff89c0d2779954565dda91077b2ead014d1df774",
+  "contract_script_sha256": "9d9249a12ff869e6934baddc48b1b8ca565d15f1f1705a7fe719bdd429f98244",
+  "passed": 43
+}

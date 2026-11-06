@@ -1,0 +1,221 @@
+{
+  "kind": "M12ForwardUseReview",
+  "status": "completed_with_documented_refinement",
+  "independent_contexts": 1,
+  "independent_initial_result": {
+    "met": 11,
+    "partially_met": 1,
+    "unmet": 0
+  },
+  "criteria": [
+    {
+      "id": "current_scope",
+      "requirement": "Uses the current 10-second/two-shot requirement; detects duration 8 and second-shot start 5 vs current 6.",
+      "initial_result": "met",
+      "evidence": [
+        "initial-output/audit-report.zh.md: 四项确认问题及最小修复",
+        "initial-output/requests/audit-request-v2.json: CHK-COMPILE-DURATION"
+      ],
+      "after_revision": "retained_without_scope_change"
+    },
+    {
+      "id": "source_version",
+      "requirement": "Preserves historical plan@1 report and identifies current plan@2 mismatch; old status is not current approval.",
+      "initial_result": "met",
+      "evidence": [
+        "initial-output/audit-report.zh.md: 历史记录、依赖与复验",
+        "initial-output/requests/audit-request-v2.json: CHK-COMPILE-BASIS"
+      ],
+      "after_revision": "retained_without_scope_change"
+    },
+    {
+      "id": "action_fidelity",
+      "requirement": "Identifies right-hand compilation vs required left hand; proposes owner-based correction without changing source files.",
+      "initial_result": "met",
+      "evidence": [
+        "initial-output/audit-report.zh.md: 手别改写",
+        "initial-output/repair-retest-plan.json: ISSUE-HAND"
+      ],
+      "after_revision": "retained_without_scope_change"
+    },
+    {
+      "id": "original_words",
+      "requirement": "Identifies 我知道了。 vs required 我看见了。 and retains exact required words.",
+      "initial_result": "met",
+      "evidence": [
+        "initial-output/audit-report.zh.md: 对白改写",
+        "initial-output/repair-retest-plan.json: ISSUE-WORDS"
+      ],
+      "after_revision": "retained_without_scope_change"
+    },
+    {
+      "id": "audio_policy",
+      "requirement": "Identifies fully_copy plus added new reply/contact sound as conflicting signal strategy; requests a justified partial-copy plan.",
+      "initial_result": "partially_met",
+      "evidence": [
+        "initial-output/audit-report.zh.md: Audio 1 paragraph (raised but left unresolved)",
+        "revised-output/revision-report.zh.md",
+        "revised-output/requests/audit-request.json: CHK-COMPILE-SOUND",
+        "revised-output/requests/repair-request.json: ISSUE-SOUND-STRATEGY"
+      ],
+      "after_revision": "met_by_same_context_recheck"
+    },
+    {
+      "id": "evidence_boundary",
+      "requirement": "Does not claim G3/G4 pass from legacy report, absent media, or synthetic sources.",
+      "initial_result": "met",
+      "evidence": [
+        "initial-output/interface-summary.json: gate_results",
+        "revised-output/interface-summary.json: gate_results"
+      ],
+      "after_revision": "retained_without_scope_change"
+    },
+    {
+      "id": "impact_locality",
+      "requirement": "Known plan -> compilation -> assembly dependencies addressed; unrelated identity-sheet not automatically invalidated.",
+      "initial_result": "met",
+      "evidence": [
+        "initial-output/audit-report.zh.md: known plan -> compilation -> assembly and disconnected identity-sheet",
+        "initial-output/repair-retest-plan.json: dependency_limit"
+      ],
+      "after_revision": "retained_without_scope_change"
+    },
+    {
+      "id": "impact_limit",
+      "requirement": "Explicitly preserves incomplete external dependency coverage.",
+      "initial_result": "met",
+      "evidence": [
+        "initial-output/interface-summary.json: repair_state.impact_status=partial"
+      ],
+      "after_revision": "retained_without_scope_change"
+    },
+    {
+      "id": "no_fabricated_observation",
+      "requirement": "No invented real observer, frames, media ID/version or actual rendering; any synthetic records remain labelled.",
+      "initial_result": "met",
+      "evidence": [
+        "initial-output/target-declarations.json",
+        "initial-output/audit-report.zh.md: target hashes are missing-media declarations, not media bytes",
+        "initial-output/interface-summary.json: M12.3 not_run"
+      ],
+      "after_revision": "retained_without_scope_change"
+    },
+    {
+      "id": "public_contract",
+      "requirement": "Applicable public requests/proposals recheck using original request; CLI outputs retained and machine errors not misreported as professional pass.",
+      "initial_result": "met",
+      "evidence": [
+        "initial-output/commands/",
+        "initial-output/interface-summary.json: failed_invocations_preserved",
+        "revised-output/commands/",
+        "revised-output/state/current-state.json"
+      ],
+      "after_revision": "retained_without_scope_change"
+    },
+    {
+      "id": "source_preservation",
+      "requirement": "All seven raw artifacts retain exact starting SHA256.",
+      "initial_result": "met",
+      "evidence": [
+        "before-snapshot.json",
+        "sources/",
+        "revised-output/preserved-files-integrity.json"
+      ],
+      "after_revision": "retained_without_scope_change"
+    },
+    {
+      "id": "package_preservation",
+      "requirement": "Isolated skill package unmodified and outputs written only under output/.",
+      "initial_result": "met",
+      "evidence": [
+        "before-snapshot.json",
+        "initial-package-delta/evidence-and-gates.md",
+        "revision-record.json"
+      ],
+      "after_revision": "retained_without_scope_change"
+    }
+  ],
+  "refinement": {
+    "file": "references/evidence-and-gates.md",
+    "principle": "A proven text contradiction remains a G1/G2 failure even when actual media is unavailable; actual G3/G4 remains unverified.",
+    "basis": [
+      "references/h3-label-mapping.md: fully_copy / partially_copy definitions",
+      "references/case-evidence.md: M12-E06 conditional source boundary"
+    ],
+    "followup": "Same-context revised-skill recheck; not a second independent trial."
+  },
+  "command_counts": {
+    "initial-output": {
+      "total": 18,
+      "exit_zero": 10,
+      "nonzero": 8
+    },
+    "revised-output": {
+      "total": 7,
+      "exit_zero": 7,
+      "nonzero": 0
+    }
+  },
+  "final_acceptance": {
+    "status": "accepted",
+    "base_version": 1,
+    "new_version": 2,
+    "original_records_preserved": 3,
+    "new_records": 2,
+    "total_records": 5,
+    "same_plan_and_21_checks": true,
+    "changed_check_ids": [
+      "CHK-COMPILE-SOUND"
+    ]
+  },
+  "final_business_results": {
+    "pass": 5,
+    "unverified": 11,
+    "fail": 5
+  },
+  "final_gates": {
+    "G0": "unverified",
+    "G1": "unverified",
+    "G2": "fail",
+    "G3": "unverified",
+    "G4": "unverified"
+  },
+  "source_task_and_initial_output_preserved": true,
+  "final_package_sha256": {
+    "SKILL.md": "64bcb26cb82e9c2f7c797cdf73edfadd5f28b9b5fbb10a7a2878647b8c4960d2",
+    "agents/openai.yaml": "1b1e58cc160493d006514f021af5e4ed2e34166ad5cad931e5980753633ed489",
+    "assets/audit-report-template.md": "c2d37f6f3127d8c020c938574b267b2c65e40a59cb0a4fa2a6724b7ae7a323aa",
+    "assets/audit-request.json": "2e20cc6f348d4140a6e2a1e38de01bf53ab9077a0eb3a8fa5d32b46c1682defc",
+    "assets/empty-state.json": "8998c38c96f4a382171c244db9421dcf95cef1d459df07ef7d9a7390bfbfe04c",
+    "assets/observation-request.json": "a6740238055a7347ea21249bcd4ff1c01f4a7188716faa6666ed41b347776465",
+    "assets/repair-request.json": "4d200d68023ddd79b4105bba92c012ef6e0335e0f21f025f871f6b48d935d2f7",
+    "assets/scope-request.json": "25442da8f7b13746c7194da909400d33d269f7c138409216e5763487ca344acb",
+    "references/audit-scope.md": "66ab559313652c2c508627a96b3d2e07453d6c526b59a4b324793a68e71454d6",
+    "references/case-evidence.md": "adf01b57bfb5db01600c7b7dc2143373f17f06f02614a8a0bfb4e7be31ce709a",
+    "references/case-index.json": "0e3f20bd7a3b34746065ed7a97fb8d1f95dee10f3116a898a87581265b89c4eb",
+    "references/case-source-LICENSE.txt": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+    "references/contract-guide.md": "82b4a61676110a7cd3cc4e450e5792cf052ce70d508e0e512dea023a9d143405",
+    "references/contracts.json": "c16c4aadeb1d8475a2ca484438ab43b5e2c162b8e3e590184d61040dab26a5d1",
+    "references/evidence-and-gates.md": "19b98ba56f9add3c40f18f16d6d6ab1113fdcf76e22c9505b06ad767592c2a6f",
+    "references/h3-NOTICE.txt": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+    "references/h3-base-official.txt": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+    "references/h3-label-mapping.md": "a6723f2deed2bdace47f26324c7d9f8f143558b9920efc413ec17d937e8fd5ca",
+    "references/h3-protocol-source.json": "0d4501aef7792aaac3df20d61799a9e6adcab028610eeddaded493be27d906b4",
+    "references/h3-ref-official.txt": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+    "references/media-observations.md": "8440645cbb9b5cbadf1e443dccc2e0c36d5fc83c8781534b515f287a97b380c8",
+    "references/module-registry.json": "dc4f5c42b06599b991ed2b8b106a1fb5fae30bf6237eae2f88a9739acb947e66",
+    "references/official-sources.md": "c5d613d4ea08a58d311e14fc1ded1df26629b0287527797453aeeabdbd95dfaf",
+    "references/provenance-and-license.md": "d9c38b972aed3b825dc99f8b115056642ab9db861da2523bc0d0841fb777a8c4",
+    "references/repair-and-retest.md": "4b3f26cf256394bfdc927912b1881199d79f6378f17a724c9cec1c0ab2330cc9",
+    "scripts/m12_contract.py": "9d9249a12ff869e6934baddc48b1b8ca565d15f1f1705a7fe719bdd429f98244"
+  },
+  "limitations": [
+    "First independent run did not fully meet audio_policy; that result remains visible.",
+    "Eight initial CLI format errors were corrected by the executor using the public contract; not a zero-retry interoperability demonstration.",
+    "Prospective media references explicitly hash absence declarations, not media bytes. No actual media identity or observation is claimed.",
+    "Impact closure is described from the supplied incomplete graph; this task did not claim a reported_applied repair or executed invalidation closure. Those program branches are covered by separate synthetic behavior tests.",
+    "One synthetic text task plus a same-context refinement is not a performance benchmark, trigger-rate estimate or H3/media acceptance."
+  ],
+  "h3_inference": "not_run",
+  "real_media_observation": "not_run"
+}

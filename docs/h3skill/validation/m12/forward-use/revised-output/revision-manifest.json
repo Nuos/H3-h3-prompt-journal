@@ -1,0 +1,57 @@
+{
+  "context": "Same task and same input artifacts; review after one audit-rule revision.",
+  "first_round_state": "output/state/current-state.json",
+  "base_state_version": 1,
+  "rule_path": "h3-audit-repair/references/evidence-and-gates.md",
+  "rule_sha256": "19b98ba56f9add3c40f18f16d6d6ab1113fdcf76e22c9505b06ad767592c2a6f",
+  "supersedes_semantic_conclusion_of": "m12-current-audit-v2:CHK-COMPILE-SOUND",
+  "new_audit_request_id": "m12-rule-revision-audit-v1",
+  "unchanged_scope_id": "SCOPE-CURRENT-PRODUCTION",
+  "unchanged_scope_version": "1",
+  "unchanged_requirement_ids": [
+    "R-DURATION",
+    "R-ACTION",
+    "R-DIALOGUE",
+    "R-SOUND"
+  ],
+  "unchanged_check_count": 21,
+  "changed_check": {
+    "id": "CHK-COMPILE-SOUND",
+    "before": "unverified",
+    "after": "fail",
+    "evidence": "Existing EV-SOUND and the same compilation@1; revised rule interpretation only."
+  },
+  "added_issue": {
+    "id": "ISSUE-SOUND-STRATEGY",
+    "check_id": "CHK-COMPILE-SOUND",
+    "object_ref": {
+      "id": "compilation",
+      "version": "1",
+      "digest": "e4ad5ce5837a04ba1edfc767e54b81089866cc2a1dabf349307c60642a61d74e",
+      "owner": "M11",
+      "kind": "compiled_prompt"
+    },
+    "location": "fields.retention_analysis; fields.overall_soundscape; fields.non_diegetic_music",
+    "expected": "The source-music retention strategy is compatible with the exact new dialogue and key contact sound.",
+    "actual": "<Audio 1> is fully_copy, while the same compilation explicitly adds He Yuan's new response and a metal contact sound alongside the copied music.",
+    "evidence_ids": [
+      "EV-SOUND"
+    ],
+    "owner": "M6",
+    "attribution_basis": "The revised audit rule specifically returns the sound retention scope and partially_copy strategy to M6, followed by M11 compilation. Compilation ownership remains M11; M6 is the sound-strategy repair owner, not an asserted cause of an unobserved media failure.",
+    "causal_evidence_ids": [
+      "CAUSE-ISSUE-SOUND-STRATEGY"
+    ],
+    "requested_action": "M6 confirms the exact selected music segment and retained scope, proposes a suitable partially_copy sound plan preserving the required original dialogue 我看见了。 and key contact, then M11 compiles that approved strategy. Recheck this text conflict in G2; actual mixing and synchronization require unchanged full-window G3/G4 media observations."
+  },
+  "unchanged": {
+    "all_other_results": true,
+    "scope_and_methods": true,
+    "object_references": true,
+    "dependency_graph": true,
+    "G3_G4_media_absent": true
+  },
+  "no_new_media_evidence": true,
+  "no_repair_executed": true,
+  "original_output_preserved": true
+}

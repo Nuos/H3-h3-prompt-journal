@@ -1,0 +1,21 @@
+{
+  "status": "valid",
+  "module_id": "M12.4",
+  "proposal_id": "P_869f955797ded68cf078de23c0ad4ec83ad2ad7bfc8f4cc9b6317d6e4854f129",
+  "verification_boundary": {
+    "checked": "supplied_declarations_and_record_consistency",
+    "independent_source_verification": false,
+    "media_observed_by_this_program": false,
+    "whole_task_certified": false,
+    "declared_actual_is_attestation": true,
+    "not_run": [
+      "evidence_locator_read",
+      "media_decode",
+      "semantic_truth_verification",
+      "owner_module_execution",
+      "h3_inference",
+      "media_regeneration",
+      "file_write"
+    ]
+  }
+}

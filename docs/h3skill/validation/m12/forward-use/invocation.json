@@ -1,0 +1,22 @@
+{
+  "kind": "M12ForwardUseInvocation",
+  "context": "fresh agent; fork_turns=none",
+  "agent": "m12_forward_use",
+  "task_prompt": "使用 /workspace/scratch/67acb32e99b3/m12-forward-run/h3-audit-repair/SKILL.md，完成 /workspace/scratch/67acb32e99b3/m12-forward-run/task.md 中的任务。资料位于同目录 sources/，交付写入 output/。按该技能的公开合同实际调用适用接口，保留原请求、命令输出和接受状态，并给出中文说明。只使用这个技能包和任务提供的资料；不访问主仓库、其他开发历史或验证目录，不联网或调用生成服务，不改变技能包、task.md 或 sources/。",
+  "status_message": "请简短告知当前进展，然后继续完成 task.md 的交付。只需完成本次资料对应的审计与公开接口调用，保持任务原定范围；无需扩展研究或开发技能。",
+  "expected_findings_supplied_to_agent": false,
+  "review_criteria_supplied_to_agent": false,
+  "task_nature": "synthetic text engineering scenario; no media provided",
+  "not_claimed": [
+    "trigger_rate",
+    "baseline_effectiveness_comparison",
+    "native_upstream_integration",
+    "h3_inference",
+    "actual_media_acceptance"
+  ],
+  "lifecycle_management": {
+    "interrupted_once_before_first_output": true,
+    "followup_message": "请基于已经读到的技能和任务资料直接完成当前交付，不继续扩大阅读范围。现在先写出可评审的审计记录，再实际执行适用的公开接口并保存原请求、输出、状态和简洁说明；按原 task.md 的资料与范围完成即可。不要改技能或输入。",
+    "purpose": "Bound reading and complete the existing task; no expected diagnoses or evaluation criteria supplied."
+  }
+}

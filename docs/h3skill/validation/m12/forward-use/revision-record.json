@@ -1,0 +1,24 @@
+{
+  "kind": "M12ForwardRevision",
+  "reason": "Initial independent run recognized a copy/additive sound question but did not identify the declared text conflict or request a justified partially_copy plan.",
+  "initial_outcome": {
+    "met": 11,
+    "partially_met": 1,
+    "unmet": 0
+  },
+  "partial_criterion": "audio_policy",
+  "initial_artifacts_preserved": true,
+  "excluded_initial_artifacts": [
+    "output/__pycache__/run_public_interfaces.cpython-312.pyc (derived interpreter cache only)"
+  ],
+  "changed_package_files": [
+    {
+      "path": "references/evidence-and-gates.md",
+      "before_sha256": "1e0641fb2bfc3dc56f61a2a37fa3a30f18c6c2e893b066e22eff2c973de3118e",
+      "after_sha256": "19b98ba56f9add3c40f18f16d6d6ab1113fdcf76e22c9505b06ad767592c2a6f"
+    }
+  ],
+  "followup_type": "same-context recheck using improved skill; not a second independent fresh-context trial",
+  "raw_inputs_and_initial_package_unchanged_during_initial_trial": true,
+  "followup_prompt": "首轮结果已完整归档，原 output/、sources/ 和 task.md 保持原样。技能包内 references/evidence-and-gates.md 已更新一处审计规则。请只重读该更新文件，再复核原 task.md 的既有结论；如需修订，将修订说明、原请求、新提案、命令输出和基于首轮 state 的新接受状态写入 revised-output/，不要覆盖首轮 output/，不要修改其余文件。按同一原始要求保留历史和范围，实际调用需要变更的公开接口。此次属于同上下文的规则修订后复核，不是新一轮独立试验。"
+}

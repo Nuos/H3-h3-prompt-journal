@@ -1,0 +1,63 @@
+{
+  "digest_basis": "sha256 of canonical declaration JSON only; these digests are not hashes of media or asset bytes. No actual media or identity asset is asserted.",
+  "declarations": [
+    {
+      "id": "assembly",
+      "version": "1",
+      "owner": "M9",
+      "kind": "assembled_media",
+      "availability": "not_provided",
+      "basis": [
+        "sources/object-dependencies.json",
+        "sources/media-inventory.json"
+      ],
+      "meaning": "Only the declared assembly identity; no media bytes were provided."
+    },
+    {
+      "id": "identity-sheet",
+      "version": "1",
+      "owner": "M2",
+      "kind": "identity_sheet",
+      "availability": "not_provided",
+      "basis": [
+        "sources/object-dependencies.json",
+        "sources/media-inventory.json"
+      ],
+      "meaning": "Only the declared identity-sheet identity; no asset bytes were provided."
+    },
+    {
+      "id": "required-generated-media",
+      "version": "not-provided",
+      "owner": "external",
+      "kind": "generated_media",
+      "availability": "not_provided",
+      "basis": [
+        "sources/media-inventory.json"
+      ],
+      "meaning": "Explicit missing target required for audit scope; not a generated artifact or observation."
+    }
+  ],
+  "references": [
+    {
+      "id": "assembly",
+      "version": "1",
+      "owner": "M9",
+      "kind": "assembled_media",
+      "digest": "68180b82767813146eed64c8692e1d0b9854a8217ed17dd786fb26c1c4501f05"
+    },
+    {
+      "id": "identity-sheet",
+      "version": "1",
+      "owner": "M2",
+      "kind": "identity_sheet",
+      "digest": "c8d5966463beac68f7c36be3fb16c6146a270937e80c103100ebf17d0f6c788e"
+    },
+    {
+      "id": "required-generated-media",
+      "version": "not-provided",
+      "owner": "external",
+      "kind": "generated_media",
+      "digest": "28334bf79bff9376328f5c370303bcef42c2d8700f1f8d02f3ad47112a9cc3b1"
+    }
+  ]
+}

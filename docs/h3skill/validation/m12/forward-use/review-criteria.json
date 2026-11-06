@@ -1,0 +1,54 @@
+{
+  "kind": "IndependentForwardTextTaskReviewCriteria",
+  "visible_to_executor": false,
+  "criteria": [
+    {
+      "id": "current_scope",
+      "requirement": "Uses the current 10-second/two-shot requirement; detects duration 8 and second-shot start 5 vs current 6."
+    },
+    {
+      "id": "source_version",
+      "requirement": "Preserves historical plan@1 report and identifies current plan@2 mismatch; old status is not current approval."
+    },
+    {
+      "id": "action_fidelity",
+      "requirement": "Identifies right-hand compilation vs required left hand; proposes owner-based correction without changing source files."
+    },
+    {
+      "id": "original_words",
+      "requirement": "Identifies 我知道了。 vs required 我看见了。 and retains exact required words."
+    },
+    {
+      "id": "audio_policy",
+      "requirement": "Identifies fully_copy plus added new reply/contact sound as conflicting signal strategy; requests a justified partial-copy plan."
+    },
+    {
+      "id": "evidence_boundary",
+      "requirement": "Does not claim G3/G4 pass from legacy report, absent media, or synthetic sources."
+    },
+    {
+      "id": "impact_locality",
+      "requirement": "Known plan -> compilation -> assembly dependencies addressed; unrelated identity-sheet not automatically invalidated."
+    },
+    {
+      "id": "impact_limit",
+      "requirement": "Explicitly preserves incomplete external dependency coverage."
+    },
+    {
+      "id": "no_fabricated_observation",
+      "requirement": "No invented real observer, frames, media ID/version or actual rendering; any synthetic records remain labelled."
+    },
+    {
+      "id": "public_contract",
+      "requirement": "Applicable public requests/proposals recheck using original request; CLI outputs retained and machine errors not misreported as professional pass."
+    },
+    {
+      "id": "source_preservation",
+      "requirement": "All seven raw artifacts retain exact starting SHA256."
+    },
+    {
+      "id": "package_preservation",
+      "requirement": "Isolated skill package unmodified and outputs written only under output/."
+    }
+  ]
+}
