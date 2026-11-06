@@ -1,0 +1,24 @@
+{
+  "kind": "M10IndependentUseSources",
+  "files": [
+    {
+      "input": "input/summer-README.md",
+      "source_repository_path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "source_commit": "c8ec1a4e5162ec5179ed9bec99d2f46a437ae67c",
+      "byte_count": 11195,
+      "line_count": 146,
+      "sha256": "4a9382a4562c88bd25afc0d8debcc6d31a2a40c172f0581bea6d4c4ad65588e7",
+      "git_blob_sha1": "9940c805eee0e4f208100593745353d4b2efb9ab"
+    },
+    {
+      "input": "input/summer-prompt.md",
+      "source_repository_path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+      "source_commit": "c8ec1a4e5162ec5179ed9bec99d2f46a437ae67c",
+      "byte_count": 36790,
+      "line_count": 283,
+      "sha256": "4ddcd492a10a451e124dba192db2c6608aae4a8e62ddbc601a424e5b46a303cd",
+      "git_blob_sha1": "1c185e60e2e73a456369709fd0b302cac8fa3a5a"
+    }
+  ],
+  "design_task": "The bookshop brief in input/task.md is a newly designed exercise, not historical case evidence."
+}

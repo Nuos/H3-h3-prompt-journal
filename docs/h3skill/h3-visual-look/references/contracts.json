@@ -1,0 +1,2357 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "M10 LookPlan declaration and transaction contracts",
+  "description": "D-class adapter design. Not H3 model input or a complete JSON Schema engine. Natural language meaning and actual media remain unverified.",
+  "$defs": {
+    "ID": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "Refs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ID"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "Source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "design_decision",
+            "user_requirement",
+            "upstream_object",
+            "media_observation",
+            "case_text"
+          ]
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "version",
+        "excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "Sources": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/ID"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      }
+    },
+    "Scope": {
+      "type": "object",
+      "properties": {
+        "scope_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "level": {
+          "enum": [
+            "work",
+            "scene",
+            "shot"
+          ]
+        },
+        "parent_scope_id": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ID"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "scope_id",
+        "level",
+        "parent_scope_id",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Scopes": {
+      "type": "object",
+      "properties": {
+        "scopes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Scope"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "scopes"
+      ],
+      "additionalProperties": false
+    },
+    "ReferenceUse": {
+      "type": "object",
+      "properties": {
+        "asset_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "use": {
+          "enum": [
+            "style",
+            "lighting",
+            "color",
+            "material",
+            "effects"
+          ]
+        },
+        "scope_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "asset_id",
+        "use",
+        "scope_id",
+        "target_ids"
+      ],
+      "additionalProperties": false
+    },
+    "ReferencePermission": {
+      "type": "object",
+      "properties": {
+        "asset_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "allowed_uses": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "style",
+              "lighting",
+              "color",
+              "material",
+              "effects",
+              "identity",
+              "motion",
+              "composition"
+            ]
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "forbidden_uses": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "style",
+              "lighting",
+              "color",
+              "material",
+              "effects",
+              "identity",
+              "motion",
+              "composition"
+            ]
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "scope_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "target_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "asset_id",
+        "allowed_uses",
+        "forbidden_uses",
+        "scope_ids",
+        "target_ids",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "References": {
+      "type": "object",
+      "properties": {
+        "assets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ReferencePermission"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "assets"
+      ],
+      "additionalProperties": false
+    },
+    "StyleValues": {
+      "type": "object",
+      "properties": {
+        "rendering": {
+          "type": "string",
+          "minLength": 1
+        },
+        "visual_language": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image_texture": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "StyleLayer": {
+      "type": "object",
+      "properties": {
+        "scope_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "parent_scope_id": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ID"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "style": {
+          "$ref": "#/$defs/StyleValues"
+        },
+        "override_keys": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "rendering",
+              "visual_language",
+              "image_texture"
+            ]
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "override_reason": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "reference_uses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ReferenceUse"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "scope_id",
+        "parent_scope_id",
+        "style",
+        "override_keys",
+        "override_reason",
+        "source_refs",
+        "reference_uses"
+      ],
+      "additionalProperties": false
+    },
+    "StyleHierarchy": {
+      "type": "object",
+      "properties": {
+        "layers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/StyleLayer"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "layers"
+      ],
+      "additionalProperties": false
+    },
+    "SceneCondition": {
+      "type": "object",
+      "properties": {
+        "scope_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "environment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lighting_constraints": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "scope_id",
+        "environment",
+        "lighting_constraints",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Scenes": {
+      "type": "object",
+      "properties": {
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SceneCondition"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "conditions"
+      ],
+      "additionalProperties": false
+    },
+    "VisibilityRequirement": {
+      "type": "object",
+      "properties": {
+        "requirement_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "scope_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "criterion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "requirement_id",
+        "scope_id",
+        "target_id",
+        "criterion",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Visibility": {
+      "type": "object",
+      "properties": {
+        "requirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VisibilityRequirement"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "requirements"
+      ],
+      "additionalProperties": false
+    },
+    "VisibilityCheck": {
+      "type": "object",
+      "properties": {
+        "requirement_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "scope_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "result": {
+          "enum": [
+            "preserved_by_design",
+            "conflict",
+            "unverified"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "requirement_id",
+        "scope_id",
+        "result",
+        "reason",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Light": {
+      "type": "object",
+      "properties": {
+        "light_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "kind": {
+          "enum": [
+            "natural",
+            "practical",
+            "studio",
+            "environment"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quality": {
+          "type": "string",
+          "minLength": 1
+        },
+        "color_description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "temperature_kelvin": {
+          "oneOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "intensity_relation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "reference_uses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ReferenceUse"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "light_id",
+        "kind",
+        "location",
+        "direction",
+        "quality",
+        "color_description",
+        "temperature_kelvin",
+        "intensity_relation",
+        "source_refs",
+        "reference_uses"
+      ],
+      "additionalProperties": false
+    },
+    "LightingSetup": {
+      "type": "object",
+      "properties": {
+        "setup_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "scope_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "parent_setup_id": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ID"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "override_reason": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lights": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Light"
+          },
+          "minItems": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "setup_id",
+        "scope_id",
+        "parent_setup_id",
+        "override_reason",
+        "lights",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "LightingPlan": {
+      "type": "object",
+      "properties": {
+        "setups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/LightingSetup"
+          },
+          "minItems": 1
+        },
+        "visibility_checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VisibilityCheck"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "setups",
+        "visibility_checks"
+      ],
+      "additionalProperties": false
+    },
+    "SurfaceProperty": {
+      "enum": [
+        "wetness",
+        "roughness",
+        "wear",
+        "temperature",
+        "cleanliness",
+        "opacity"
+      ]
+    },
+    "Surface": {
+      "type": "object",
+      "properties": {
+        "surface_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_material": {
+          "type": "string",
+          "minLength": 1
+        },
+        "properties": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/SurfaceProperty"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "mutable_properties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SurfaceProperty"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "surface_id",
+        "base_material",
+        "properties",
+        "mutable_properties",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Identity": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "kind": {
+          "enum": [
+            "subject",
+            "prop",
+            "scene"
+          ]
+        },
+        "scope_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "locked_attributes": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "surfaces": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Surface"
+          },
+          "minItems": 0
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "entity_id",
+        "kind",
+        "scope_ids",
+        "locked_attributes",
+        "surfaces",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Identities": {
+      "type": "object",
+      "properties": {
+        "entities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Identity"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "entities"
+      ],
+      "additionalProperties": false
+    },
+    "Grade": {
+      "type": "object",
+      "properties": {
+        "grade_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "scope_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "parent_grade_id": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ID"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "override_reason": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "palette": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "temperature_bias": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contrast": {
+          "type": "string",
+          "minLength": 1
+        },
+        "saturation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exposure_intent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "identity_change": {
+          "const": false
+        },
+        "protected_identity_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "reference_uses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ReferenceUse"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "grade_id",
+        "scope_id",
+        "parent_grade_id",
+        "override_reason",
+        "palette",
+        "temperature_bias",
+        "contrast",
+        "saturation",
+        "exposure_intent",
+        "identity_change",
+        "protected_identity_ids",
+        "source_refs",
+        "reference_uses"
+      ],
+      "additionalProperties": false
+    },
+    "ColorPlan": {
+      "type": "object",
+      "properties": {
+        "grades": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Grade"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "grades"
+      ],
+      "additionalProperties": false
+    },
+    "ChangePermission": {
+      "type": "object",
+      "properties": {
+        "permission_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "scope_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "target_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "surface_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "property": {
+          "$ref": "#/$defs/SurfaceProperty"
+        },
+        "allowed_values": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "permission_id",
+        "scope_ids",
+        "target_id",
+        "surface_id",
+        "property",
+        "allowed_values",
+        "reason",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Continuity": {
+      "type": "object",
+      "properties": {
+        "permissions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ChangePermission"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "permissions"
+      ],
+      "additionalProperties": false
+    },
+    "Events": {
+      "type": "object",
+      "properties": {
+        "event_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "event_ids"
+      ],
+      "additionalProperties": false
+    },
+    "Condition": {
+      "type": "object",
+      "properties": {
+        "property": {
+          "$ref": "#/$defs/SurfaceProperty"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "permission_id": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ID"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "property",
+        "value",
+        "permission_id"
+      ],
+      "additionalProperties": false
+    },
+    "Material": {
+      "type": "object",
+      "properties": {
+        "material_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "scope_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "parent_material_id": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ID"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "override_reason": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "target_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "surface_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_material": {
+          "type": "string",
+          "minLength": 1
+        },
+        "appearance": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Condition"
+          },
+          "minItems": 0
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "reference_uses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ReferenceUse"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "material_id",
+        "scope_id",
+        "parent_material_id",
+        "override_reason",
+        "target_id",
+        "surface_id",
+        "base_material",
+        "appearance",
+        "conditions",
+        "source_refs",
+        "reference_uses"
+      ],
+      "additionalProperties": false
+    },
+    "Effect": {
+      "type": "object",
+      "properties": {
+        "effect_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "scope_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "kind": {
+          "enum": [
+            "atmosphere",
+            "optical",
+            "particle",
+            "surface"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "trigger_kind": {
+          "enum": [
+            "constant",
+            "event"
+          ]
+        },
+        "event_id": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ID"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "visibility_impact": {
+          "enum": [
+            "none",
+            "managed",
+            "blocks_key"
+          ]
+        },
+        "mitigation": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        },
+        "reference_uses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ReferenceUse"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "effect_id",
+        "scope_id",
+        "kind",
+        "description",
+        "target_ids",
+        "trigger_kind",
+        "event_id",
+        "visibility_impact",
+        "mitigation",
+        "source_refs",
+        "reference_uses"
+      ],
+      "additionalProperties": false
+    },
+    "ContinuityHandoff": {
+      "type": "object",
+      "properties": {
+        "material_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "scope_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "surface_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "property": {
+          "$ref": "#/$defs/SurfaceProperty"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "permission_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "consumer": {
+          "const": "M8"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "material_id",
+        "scope_id",
+        "target_id",
+        "surface_id",
+        "property",
+        "value",
+        "permission_id",
+        "consumer",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "MaterialEffectPlan": {
+      "type": "object",
+      "properties": {
+        "materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Material"
+          },
+          "minItems": 0
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Effect"
+          },
+          "minItems": 0
+        },
+        "visibility_checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VisibilityCheck"
+          },
+          "minItems": 0
+        },
+        "continuity_handoffs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ContinuityHandoff"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "materials",
+        "effects",
+        "visibility_checks",
+        "continuity_handoffs"
+      ],
+      "additionalProperties": false
+    },
+    "ScopeProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M1",
+            "M3",
+            "M9",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/Scopes"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "ReferenceProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M2",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/References"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "StyleProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M10.1",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/StyleHierarchy"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "SceneProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M3",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/Scenes"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "VisibilityProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M5",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/Visibility"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "IdentityProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M2",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/Identities"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "LightingProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M10.2",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/LightingPlan"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "ColorProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M10.3",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/ColorPlan"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "ContinuityProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M8",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/Continuity"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "EventProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M4",
+            "M7",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/Events"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "Issue": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "detail": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "code",
+        "owner",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs1": {
+      "type": "object",
+      "properties": {
+        "brief": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope_context": {
+          "$ref": "#/$defs/ScopeProjection"
+        },
+        "reference_context": {
+          "$ref": "#/$defs/ReferenceProjection"
+        }
+      },
+      "required": [
+        "brief",
+        "scope_context"
+      ],
+      "additionalProperties": false
+    },
+    "Request1": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M10Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target": {
+          "const": "M10.1"
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs1"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "request_id",
+        "target",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "Proposal1": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M10Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "const": "M10.1"
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs1"
+        },
+        "changes": {
+          "type": "object",
+          "properties": {
+            "StyleHierarchy": {
+              "$ref": "#/$defs/StyleHierarchy"
+            }
+          },
+          "required": [
+            "StyleHierarchy"
+          ],
+          "additionalProperties": false
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "context",
+        "changes",
+        "issues"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs2": {
+      "type": "object",
+      "properties": {
+        "brief": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope_context": {
+          "$ref": "#/$defs/ScopeProjection"
+        },
+        "scene_context": {
+          "$ref": "#/$defs/SceneProjection"
+        },
+        "reference_context": {
+          "$ref": "#/$defs/ReferenceProjection"
+        },
+        "style_context": {
+          "$ref": "#/$defs/StyleProjection"
+        },
+        "visibility_context": {
+          "$ref": "#/$defs/VisibilityProjection"
+        }
+      },
+      "required": [
+        "brief",
+        "scope_context",
+        "scene_context"
+      ],
+      "additionalProperties": false
+    },
+    "Request2": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M10Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target": {
+          "const": "M10.2"
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs2"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "request_id",
+        "target",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "Proposal2": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M10Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "const": "M10.2"
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs2"
+        },
+        "changes": {
+          "type": "object",
+          "properties": {
+            "LightingPlan": {
+              "$ref": "#/$defs/LightingPlan"
+            }
+          },
+          "required": [
+            "LightingPlan"
+          ],
+          "additionalProperties": false
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "context",
+        "changes",
+        "issues"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs3": {
+      "type": "object",
+      "properties": {
+        "brief": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope_context": {
+          "$ref": "#/$defs/ScopeProjection"
+        },
+        "reference_context": {
+          "$ref": "#/$defs/ReferenceProjection"
+        },
+        "style_context": {
+          "$ref": "#/$defs/StyleProjection"
+        },
+        "lighting_context": {
+          "$ref": "#/$defs/LightingProjection"
+        },
+        "identity_context": {
+          "$ref": "#/$defs/IdentityProjection"
+        }
+      },
+      "required": [
+        "brief",
+        "scope_context"
+      ],
+      "additionalProperties": false
+    },
+    "Request3": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M10Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target": {
+          "const": "M10.3"
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs3"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "request_id",
+        "target",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "Proposal3": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M10Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "const": "M10.3"
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs3"
+        },
+        "changes": {
+          "type": "object",
+          "properties": {
+            "ColorPlan": {
+              "$ref": "#/$defs/ColorPlan"
+            }
+          },
+          "required": [
+            "ColorPlan"
+          ],
+          "additionalProperties": false
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "context",
+        "changes",
+        "issues"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs4": {
+      "type": "object",
+      "properties": {
+        "brief": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope_context": {
+          "$ref": "#/$defs/ScopeProjection"
+        },
+        "identity_context": {
+          "$ref": "#/$defs/IdentityProjection"
+        },
+        "reference_context": {
+          "$ref": "#/$defs/ReferenceProjection"
+        },
+        "style_context": {
+          "$ref": "#/$defs/StyleProjection"
+        },
+        "lighting_context": {
+          "$ref": "#/$defs/LightingProjection"
+        },
+        "color_context": {
+          "$ref": "#/$defs/ColorProjection"
+        },
+        "visibility_context": {
+          "$ref": "#/$defs/VisibilityProjection"
+        },
+        "continuity_context": {
+          "$ref": "#/$defs/ContinuityProjection"
+        },
+        "event_context": {
+          "$ref": "#/$defs/EventProjection"
+        }
+      },
+      "required": [
+        "brief",
+        "scope_context",
+        "identity_context"
+      ],
+      "additionalProperties": false
+    },
+    "Request4": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M10Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target": {
+          "const": "M10.4"
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs4"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "request_id",
+        "target",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "Proposal4": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M10Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "const": "M10.4"
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs4"
+        },
+        "changes": {
+          "type": "object",
+          "properties": {
+            "MaterialEffectPlan": {
+              "$ref": "#/$defs/MaterialEffectPlan"
+            }
+          },
+          "required": [
+            "MaterialEffectPlan"
+          ],
+          "additionalProperties": false
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Issue"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "context",
+        "changes",
+        "issues"
+      ],
+      "additionalProperties": false
+    },
+    "Request": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Request1"
+        },
+        {
+          "$ref": "#/$defs/Request2"
+        },
+        {
+          "$ref": "#/$defs/Request3"
+        },
+        {
+          "$ref": "#/$defs/Request4"
+        }
+      ]
+    },
+    "Proposal": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Proposal1"
+        },
+        {
+          "$ref": "#/$defs/Proposal2"
+        },
+        {
+          "$ref": "#/$defs/Proposal3"
+        },
+        {
+          "$ref": "#/$defs/Proposal4"
+        }
+      ]
+    },
+    "RequestBatch": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M10RequestBatch"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "requests": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Request"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "requests"
+      ],
+      "additionalProperties": false
+    },
+    "ProposalBatch": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M10ProposalBatch"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Proposal"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "proposals"
+      ],
+      "additionalProperties": false
+    },
+    "Pointer": {
+      "type": "string",
+      "pattern": "^(/([^~/]|~[01])*)+$"
+    },
+    "Consumer": {
+      "type": "object",
+      "properties": {
+        "consumer_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Pointer"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "status": {
+          "enum": [
+            "current",
+            "stale"
+          ]
+        }
+      },
+      "required": [
+        "consumer_id",
+        "read_paths",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "Receipt": {
+      "type": "object",
+      "properties": {
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "enum": [
+            "M10.1",
+            "M10.2",
+            "M10.3",
+            "M10.4"
+          ]
+        },
+        "proposal_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "request_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "output_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "context_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "source_digests": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/ID"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "accepted_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Pointer"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "proposal_id",
+        "request_id",
+        "module_id",
+        "proposal_digest",
+        "request_digest",
+        "output_digest",
+        "context_digest",
+        "source_digests",
+        "base_version",
+        "accepted_version",
+        "read_paths"
+      ],
+      "additionalProperties": false
+    },
+    "State": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M10State"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "owner": {
+          "const": "M10"
+        },
+        "object_type": {
+          "const": "LookPlan"
+        },
+        "status": {
+          "const": "draft"
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "StyleHierarchy": {
+              "$ref": "#/$defs/StyleHierarchy"
+            },
+            "LightingPlan": {
+              "$ref": "#/$defs/LightingPlan"
+            },
+            "ColorPlan": {
+              "$ref": "#/$defs/ColorPlan"
+            },
+            "MaterialEffectPlan": {
+              "$ref": "#/$defs/MaterialEffectPlan"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "contexts": {
+          "type": "object",
+          "properties": {
+            "M10.1": {
+              "$ref": "#/$defs/Inputs1"
+            },
+            "M10.2": {
+              "$ref": "#/$defs/Inputs2"
+            },
+            "M10.3": {
+              "$ref": "#/$defs/Inputs3"
+            },
+            "M10.4": {
+              "$ref": "#/$defs/Inputs4"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "receipts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Receipt"
+          },
+          "minItems": 0
+        },
+        "consumers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Consumer"
+          },
+          "minItems": 0
+        },
+        "stale_modules": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "M10.1",
+              "M10.2",
+              "M10.3",
+              "M10.4"
+            ]
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "display": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "title"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "version",
+        "owner",
+        "object_type",
+        "status",
+        "content",
+        "contexts",
+        "sources",
+        "receipts",
+        "consumers",
+        "stale_modules"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

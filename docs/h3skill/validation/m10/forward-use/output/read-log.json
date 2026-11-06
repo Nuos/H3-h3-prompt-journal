@@ -1,0 +1,191 @@
+{
+  "task_root": "/workspace/scratch/b07e6062df99/m10-forward-use",
+  "recorded_at": "2026-11-06T03:09:54.897156+00:00",
+  "scope": "Only the provided skill package, input files, and newly created output artifacts were consulted. No parent-project files, snapshots, historical artifacts, external services, or media were used.",
+  "manual_source_reads": [
+    {
+      "path": "input/task.md",
+      "reviewed_ranges": [
+        [
+          1,
+          7
+        ]
+      ],
+      "coverage": "full",
+      "methods": [
+        "cat"
+      ]
+    },
+    {
+      "path": "h3-visual-look/SKILL.md",
+      "reviewed_ranges": [
+        [
+          1,
+          99
+        ]
+      ],
+      "coverage": "full_after_gap_fill",
+      "methods": [
+        "cat (display truncated)",
+        "nl -ba | sed -n 1,240p (actual file: 99 lines; display truncated)",
+        "sed -n 45,49p (gap fill)",
+        "nl -ba | sed -n 70,84p (targeted reread for final handoff precision)"
+      ]
+    },
+    {
+      "path": "input/summer-README.md",
+      "reviewed_ranges": [
+        [
+          1,
+          146
+        ]
+      ],
+      "coverage": "full_after_gap_fill",
+      "methods": [
+        "nl -ba (display truncated around lines 73–80)",
+        "nl -ba | sed -n 68,86p (gap fill)"
+      ]
+    },
+    {
+      "path": "input/summer-prompt.md",
+      "reviewed_ranges": [
+        [
+          1,
+          283
+        ]
+      ],
+      "coverage": "full_after_gap_fill",
+      "methods": [
+        "nl -ba | sed -n 1,100p (display truncated around lines 55–59)",
+        "nl -ba | sed -n 54,60p (gap fill)",
+        "nl -ba | sed -n 101,150p",
+        "nl -ba | sed -n 151,200p",
+        "nl -ba | sed -n 201,245p",
+        "nl -ba | sed -n 246,283p"
+      ]
+    },
+    {
+      "path": "h3-visual-look/references/contract-guide.md",
+      "reviewed_ranges": [
+        [
+          1,
+          118
+        ]
+      ],
+      "coverage": "full_after_repeat",
+      "methods": [
+        "initial full nl command executed in a parallel call but its output was omitted; not counted as reviewed then",
+        "nl -ba | sed -n 1,200p (actual file: 118 lines; fully reviewed)"
+      ]
+    },
+    {
+      "path": "h3-visual-look/references/contracts.json",
+      "reviewed_ranges": [
+        [
+          18,
+          28
+        ]
+      ],
+      "coverage": "targeted_excerpt_only",
+      "methods": [
+        "rg -n -C 5 design_decision|user_input|user_brief|sourceRecord|source_record"
+      ],
+      "note": "rg scans the file, but only the displayed Source.kind enum excerpt was inspected. Other schema definitions were not manually read."
+    },
+    {
+      "path": "h3-visual-look/assets/request-minimal-m10-3.json",
+      "reviewed_ranges": "all",
+      "coverage": "full",
+      "methods": [
+        "cat",
+        "json.load for structure adaptation"
+      ]
+    },
+    {
+      "path": "h3-visual-look/assets/proposal-minimal-m10-3.json",
+      "reviewed_ranges": "all",
+      "coverage": "full",
+      "methods": [
+        "cat",
+        "json.load for structure adaptation"
+      ]
+    },
+    {
+      "path": "h3-visual-look/assets/state-empty.json",
+      "reviewed_ranges": "all",
+      "coverage": "full",
+      "methods": [
+        "cat",
+        "json.load; changed only the work_id for this task"
+      ]
+    },
+    {
+      "path": "h3-visual-look/references/h3-label-mapping.md",
+      "reviewed_ranges": [
+        [
+          1,
+          85
+        ]
+      ],
+      "coverage": "full",
+      "methods": [
+        "nl -ba | sed -n 1,180p (actual file: 85 lines)"
+      ],
+      "purpose": "Clarify T2VA style placement within Shot 1 and distinguish identity-source images from independent Picture anchors."
+    }
+  ],
+  "inventory_only": [
+    {
+      "paths": [
+        "h3-visual-look",
+        "input"
+      ],
+      "methods": [
+        "rg --files"
+      ],
+      "note": "File names only; listing a file is not a content read."
+    },
+    {
+      "paths": [
+        "input/*"
+      ],
+      "methods": [
+        "wc -l"
+      ],
+      "note": "Line counts only."
+    }
+  ],
+  "cli_execution_reads": {
+    "inputs": [
+      "output/bookshop-request.json",
+      "output/bookshop-proposal.json",
+      "output/bookshop-state-empty.json"
+    ],
+    "ranges": "complete JSON inputs",
+    "program": "h3-visual-look/scripts/m10_contract.py",
+    "note": "The provided CLI loads its own package dependencies. Their exact runtime read trace was not instrumented; no claim is made that the agent manually read their contents. Raw executions are recorded in execution.json."
+  },
+  "generated_artifact_reads": [
+    {
+      "path": "output/case-look-plan.md",
+      "range": "all",
+      "purpose": "bounded wording correction after initial write"
+    },
+    {
+      "path": "output/bookshop-result.md",
+      "range": "all",
+      "purpose": "append actual CLI results"
+    },
+    {
+      "path": "output/execution.json",
+      "range": "all",
+      "purpose": "extract accepted state and actual result fields"
+    },
+    {
+      "path": "output/read-log.json",
+      "range": "all",
+      "purpose": "Record the final targeted protocol-mapping read and wording revision"
+    }
+  ],
+  "unread_material_note": "The four specialist guides, case evidence, official protocol snapshot text, source scripts, and full schema/registry were not manually reviewed. Main skill instructions, the contract guide, h3-label-mapping.md, original inputs, the Source.kind enum excerpt, and the three minimum fixtures were reviewed as recorded above."
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed_with_unverified",
+  "module_id": "M10.3",
+  "read_paths": [
+    "/contexts/M10.3/brief",
+    "/contexts/M10.3/scope_context",
+    "/sources/bookshop_design",
+    "/sources/user_constraints"
+  ],
+  "limitations": [
+    "Only explicit JSON structure, relationships and supplied provenance/permissions were checked.",
+    "Free-text meaning and the truth of supplied assertions remain unverified.",
+    "No physical light simulation, actual visibility/continuity observation, H3 execution or complete G0-G4 certification."
+  ],
+  "not_run": [
+    "natural_language_semantic_audit",
+    "physical_lighting_simulation",
+    "actual_media_visibility",
+    "actual_media_continuity",
+    "h3_inference"
+  ]
+}

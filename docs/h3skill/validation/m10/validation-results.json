@@ -1,0 +1,131 @@
+{
+  "kind": "M10ValidationResults",
+  "recorded_at_utc": "2026-11-06T02:59:45.825246+00:00",
+  "package": "docs/h3skill/h3-visual-look",
+  "package_version": "0.1.0",
+  "contract_version": "1.0.0",
+  "source_commit": "c8ec1a4e5162ec5179ed9bec99d2f46a437ae67c",
+  "status": "passed_with_documented_limits",
+  "program_checks": [
+    {
+      "name": "behavior",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "docs/h3skill/tests",
+        "-p",
+        "test_m10_contract.py",
+        "-v"
+      ],
+      "started_utc": "2026-11-06T02:52:17.126947+00:00",
+      "ended_utc": "2026-11-06T02:52:18.803984+00:00",
+      "package_and_test_files_unchanged": true,
+      "record": "docs/h3skill/validation/m10/behavior.record.json"
+    },
+    {
+      "name": "portability",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "docs/h3skill/tests/m10_portability.py"
+      ],
+      "started_utc": "2026-11-06T02:52:17.133137+00:00",
+      "ended_utc": "2026-11-06T02:52:18.822219+00:00",
+      "package_and_test_files_unchanged": true,
+      "record": "docs/h3skill/validation/m10/portability.record.json"
+    },
+    {
+      "name": "official-format",
+      "status": "passed",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "docs/h3skill/_standards/anthropics-quick-validate.py",
+        "docs/h3skill/h3-visual-look"
+      ],
+      "started_utc": "2026-11-06T02:52:17.127456+00:00",
+      "ended_utc": "2026-11-06T02:52:17.166125+00:00",
+      "package_and_test_files_unchanged": true,
+      "record": "docs/h3skill/validation/m10/official-format.record.json"
+    }
+  ],
+  "counts": {
+    "behavior_tests": 57,
+    "behavior_passed": 57,
+    "portability_checks": 33,
+    "portability_passed": 33,
+    "copied_runtime_files": 42,
+    "independent_functional_rechecks": 9,
+    "standards_source_files_verified": 6,
+    "fresh_official_protocol_files_verified": 2,
+    "independent_text_tasks": 2,
+    "independent_use_cli_runs": 3
+  },
+  "functional_review": {
+    "status": "passed_with_documented_scope",
+    "record": "docs/h3skill/validation/m10/implementation-review.md",
+    "initial_findings": 4,
+    "remaining_blockers_in_reviewed_scope": 0
+  },
+  "case_source_analysis": {
+    "case_directories": 29,
+    "october_case_directories": 15,
+    "indexed_text_files": 98,
+    "per_case_text_files": 97,
+    "ancillary_root_text_files": 1,
+    "selected_case_directories": 6,
+    "read_files": 9,
+    "full_text_read_files": 2,
+    "partial_text_read_files": 7,
+    "inventory_only_files": 89,
+    "recorded_read_lines": 809,
+    "media_files_viewed_or_decoded": 0,
+    "h3_inference_runs": 0
+  },
+  "independent_use": {
+    "status": "completed_after_targeted_text_clarification",
+    "text_tasks": 2,
+    "cli_runs": 3,
+    "cli_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "protocol": "docs/h3skill/validation/m10/forward-use-protocol.json",
+    "review": "docs/h3skill/validation/m10/forward-use/review.md",
+    "execution_record": "docs/h3skill/validation/m10/forward-use/output/execution.json",
+    "reading_record": "docs/h3skill/validation/m10/forward-use/output/read-log.json",
+    "artifact_verification": "docs/h3skill/validation/m10/forward-use/artifact-verification.json",
+    "initial_draft_preserved": true,
+    "skill_package_changed": false,
+    "scope": "Supervised use from fresh context on two text tasks; not an unassisted first-pass benchmark or exhaustive specialist-resource activation test."
+  },
+  "release_verification": "docs/h3skill/validation/m10/release-check.json",
+  "runtime_sha256": "7b3e38fbf357fbb7797407de0c2477e676ad61a9992a1aa7d7e9ebb7f82188b4",
+  "limits": {
+    "h3_inference_runs": 0,
+    "images_viewed": 0,
+    "audio_video_decoding_runs": 0,
+    "model_quality_certified": false,
+    "host_auto_trigger_verified": false,
+    "full_g0_g2_certified": false,
+    "g3": "unverified",
+    "g4": "unverified",
+    "m11_implemented_by_this_release": false,
+    "m12_implemented_by_this_release": false
+  },
+  "notes": [
+    "Counts refer to distinct engineering and text checks, not a combined model-quality success rate.",
+    "All successful contract outputs retain draft/passed_with_unverified/not_run boundaries.",
+    "The final publication commit must match the staged, verified file tree."
+  ]
+}

@@ -1,0 +1,1070 @@
+{
+  "kind": "M10ProposalBatch",
+  "contract_version": "1.0.0",
+  "proposals": [
+    {
+      "kind": "M10Proposal",
+      "contract_version": "1.0.0",
+      "work_id": "m10_design_demo",
+      "base_version": 0,
+      "proposal_id": "prop_m10_1",
+      "module_id": "M10.1",
+      "source_request_id": "req_m10_1",
+      "sources": {
+        "design": {
+          "kind": "design_decision",
+          "locator": "synthetic-design-fixture://m10/visual-look",
+          "version": "design-1",
+          "excerpt": "D类合成工程夹具：此处人物、作用域、光源、材质许可和可见性声明只用于合同正反例，不是原案例媒体观察或H3生成实测。"
+        }
+      },
+      "context": {
+        "brief": "为全片、场景和镜头建立可追溯风格继承；局部材质读感允许有理由的例外。",
+        "scope_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "scopes": [
+              {
+                "scope_id": "work_look",
+                "level": "work",
+                "parent_scope_id": null,
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "scene_counter",
+                "level": "scene",
+                "parent_scope_id": "work_look",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "shot_handoff",
+                "level": "shot",
+                "parent_scope_id": "scene_counter",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "reference_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "assets": [
+              {
+                "asset_id": "look_ref",
+                "allowed_uses": [
+                  "style",
+                  "lighting",
+                  "color",
+                  "material",
+                  "effects"
+                ],
+                "forbidden_uses": [
+                  "identity",
+                  "motion"
+                ],
+                "scope_ids": [
+                  "work_look"
+                ],
+                "target_ids": [],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "asset_id": "actor_ref",
+                "allowed_uses": [
+                  "identity"
+                ],
+                "forbidden_uses": [
+                  "style",
+                  "lighting",
+                  "color",
+                  "material",
+                  "effects"
+                ],
+                "scope_ids": [
+                  "work_look"
+                ],
+                "target_ids": [
+                  "subject_a"
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "changes": {
+        "StyleHierarchy": {
+          "layers": [
+            {
+              "scope_id": "work_look",
+              "parent_scope_id": null,
+              "style": {
+                "rendering": "写实影像",
+                "visual_language": "安静清楚的环境叙事",
+                "image_texture": "保留自然表面细节"
+              },
+              "override_keys": [],
+              "override_reason": null,
+              "reference_uses": [
+                {
+                  "asset_id": "look_ref",
+                  "use": "style",
+                  "scope_id": "work_look",
+                  "target_ids": []
+                }
+              ],
+              "source_refs": [
+                "design"
+              ]
+            },
+            {
+              "scope_id": "scene_counter",
+              "parent_scope_id": "work_look",
+              "style": {},
+              "override_keys": [],
+              "override_reason": null,
+              "reference_uses": [],
+              "source_refs": [
+                "design"
+              ]
+            },
+            {
+              "scope_id": "shot_handoff",
+              "parent_scope_id": "scene_counter",
+              "style": {
+                "image_texture": "保留台面细节与轻微反光"
+              },
+              "override_keys": [
+                "image_texture"
+              ],
+              "override_reason": "交接镜头需要辨认台面与接触区域。",
+              "reference_uses": [],
+              "source_refs": [
+                "design"
+              ]
+            }
+          ]
+        }
+      },
+      "issues": []
+    },
+    {
+      "kind": "M10Proposal",
+      "contract_version": "1.0.0",
+      "work_id": "m10_design_demo",
+      "base_version": 0,
+      "proposal_id": "prop_m10_2",
+      "module_id": "M10.2",
+      "source_request_id": "req_m10_2",
+      "sources": {
+        "design": {
+          "kind": "design_decision",
+          "locator": "synthetic-design-fixture://m10/visual-look",
+          "version": "design-1",
+          "excerpt": "D类合成工程夹具：此处人物、作用域、光源、材质许可和可见性声明只用于合同正反例，不是原案例媒体观察或H3生成实测。"
+        }
+      },
+      "context": {
+        "brief": "独立整理柜台场景照明，区分现场暖光与整体调色，维护关键动作可见条件。",
+        "scope_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "scopes": [
+              {
+                "scope_id": "work_look",
+                "level": "work",
+                "parent_scope_id": null,
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "scene_counter",
+                "level": "scene",
+                "parent_scope_id": "work_look",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "shot_handoff",
+                "level": "shot",
+                "parent_scope_id": "scene_counter",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "scene_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "conditions": [
+              {
+                "scope_id": "scene_counter",
+                "environment": "柜台与背景墙形成明确前后层次",
+                "lighting_constraints": "主光方向沿柜台保持明确；光效不遮挡交接动作。",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "visibility_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "requirements": [
+              {
+                "requirement_id": "hand_contact",
+                "scope_id": "shot_handoff",
+                "target_id": "subject_a",
+                "criterion": "手指与柜台接触区域必须可以辨认",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "style_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "layers": [
+              {
+                "scope_id": "work_look",
+                "parent_scope_id": null,
+                "style": {
+                  "rendering": "写实影像",
+                  "visual_language": "安静清楚的环境叙事",
+                  "image_texture": "保留自然表面细节"
+                },
+                "override_keys": [],
+                "override_reason": null,
+                "reference_uses": [
+                  {
+                    "asset_id": "look_ref",
+                    "use": "style",
+                    "scope_id": "work_look",
+                    "target_ids": []
+                  }
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "scene_counter",
+                "parent_scope_id": "work_look",
+                "style": {},
+                "override_keys": [],
+                "override_reason": null,
+                "reference_uses": [],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "shot_handoff",
+                "parent_scope_id": "scene_counter",
+                "style": {
+                  "image_texture": "保留台面细节与轻微反光"
+                },
+                "override_keys": [
+                  "image_texture"
+                ],
+                "override_reason": "交接镜头需要辨认台面与接触区域。",
+                "reference_uses": [],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "reference_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "assets": [
+              {
+                "asset_id": "look_ref",
+                "allowed_uses": [
+                  "style",
+                  "lighting",
+                  "color",
+                  "material",
+                  "effects"
+                ],
+                "forbidden_uses": [
+                  "identity",
+                  "motion"
+                ],
+                "scope_ids": [
+                  "work_look"
+                ],
+                "target_ids": [],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "asset_id": "actor_ref",
+                "allowed_uses": [
+                  "identity"
+                ],
+                "forbidden_uses": [
+                  "style",
+                  "lighting",
+                  "color",
+                  "material",
+                  "effects"
+                ],
+                "scope_ids": [
+                  "work_look"
+                ],
+                "target_ids": [
+                  "subject_a"
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "changes": {
+        "LightingPlan": {
+          "setups": [
+            {
+              "setup_id": "lighting_counter",
+              "scope_id": "scene_counter",
+              "parent_setup_id": null,
+              "override_reason": null,
+              "lights": [
+                {
+                  "light_id": "window_key",
+                  "kind": "natural",
+                  "location": "柜台左侧的高位窗面",
+                  "direction": "从画面左前方斜向柜台右后方",
+                  "quality": "面积较大的柔光",
+                  "color_description": "略暖的窗面入射光",
+                  "temperature_kelvin": null,
+                  "intensity_relation": "主光高于室内环境填充光，手部暗面保留细节",
+                  "reference_uses": [],
+                  "source_refs": [
+                    "design"
+                  ]
+                }
+              ],
+              "source_refs": [
+                "design"
+              ]
+            }
+          ],
+          "visibility_checks": [
+            {
+              "requirement_id": "hand_contact",
+              "scope_id": "shot_handoff",
+              "result": "preserved_by_design",
+              "reason": "计划中控制台面反光与光晕，接触区域保留局部对比；媒体结果未验证。",
+              "source_refs": [
+                "design"
+              ]
+            }
+          ]
+        }
+      },
+      "issues": []
+    },
+    {
+      "kind": "M10Proposal",
+      "contract_version": "1.0.0",
+      "work_id": "m10_design_demo",
+      "base_version": 0,
+      "proposal_id": "prop_m10_3",
+      "module_id": "M10.3",
+      "source_request_id": "req_m10_3",
+      "sources": {
+        "design": {
+          "kind": "design_decision",
+          "locator": "synthetic-design-fixture://m10/visual-look",
+          "version": "design-1",
+          "excerpt": "D类合成工程夹具：此处人物、作用域、光源、材质许可和可见性声明只用于合同正反例，不是原案例媒体观察或H3生成实测。"
+        }
+      },
+      "context": {
+        "brief": "制定冷中性调色策略，同时保留暖光与角色固有身份。",
+        "scope_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "scopes": [
+              {
+                "scope_id": "work_look",
+                "level": "work",
+                "parent_scope_id": null,
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "scene_counter",
+                "level": "scene",
+                "parent_scope_id": "work_look",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "shot_handoff",
+                "level": "shot",
+                "parent_scope_id": "scene_counter",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "identity_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "entities": [
+              {
+                "entity_id": "subject_a",
+                "kind": "subject",
+                "scope_ids": [
+                  "work_look"
+                ],
+                "locked_attributes": {
+                  "hair_color": "黑色",
+                  "hairstyle": "短发"
+                },
+                "surfaces": [
+                  {
+                    "surface_id": "hair",
+                    "base_material": "黑色短发纤维",
+                    "properties": {
+                      "wetness": "dry"
+                    },
+                    "mutable_properties": [
+                      "wetness"
+                    ],
+                    "source_refs": [
+                      "design"
+                    ]
+                  }
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "style_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "layers": [
+              {
+                "scope_id": "work_look",
+                "parent_scope_id": null,
+                "style": {
+                  "rendering": "写实影像",
+                  "visual_language": "安静清楚的环境叙事",
+                  "image_texture": "保留自然表面细节"
+                },
+                "override_keys": [],
+                "override_reason": null,
+                "reference_uses": [
+                  {
+                    "asset_id": "look_ref",
+                    "use": "style",
+                    "scope_id": "work_look",
+                    "target_ids": []
+                  }
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "scene_counter",
+                "parent_scope_id": "work_look",
+                "style": {},
+                "override_keys": [],
+                "override_reason": null,
+                "reference_uses": [],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "shot_handoff",
+                "parent_scope_id": "scene_counter",
+                "style": {
+                  "image_texture": "保留台面细节与轻微反光"
+                },
+                "override_keys": [
+                  "image_texture"
+                ],
+                "override_reason": "交接镜头需要辨认台面与接触区域。",
+                "reference_uses": [],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "lighting_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "setups": [
+              {
+                "setup_id": "lighting_counter",
+                "scope_id": "scene_counter",
+                "parent_setup_id": null,
+                "override_reason": null,
+                "lights": [
+                  {
+                    "light_id": "window_key",
+                    "kind": "natural",
+                    "location": "柜台左侧的高位窗面",
+                    "direction": "从画面左前方斜向柜台右后方",
+                    "quality": "面积较大的柔光",
+                    "color_description": "略暖的窗面入射光",
+                    "temperature_kelvin": null,
+                    "intensity_relation": "主光高于室内环境填充光，手部暗面保留细节",
+                    "reference_uses": [],
+                    "source_refs": [
+                      "design"
+                    ]
+                  }
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "visibility_checks": [
+              {
+                "requirement_id": "hand_contact",
+                "scope_id": "shot_handoff",
+                "result": "preserved_by_design",
+                "reason": "计划中控制台面反光与光晕，接触区域保留局部对比；媒体结果未验证。",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "reference_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "assets": [
+              {
+                "asset_id": "look_ref",
+                "allowed_uses": [
+                  "style",
+                  "lighting",
+                  "color",
+                  "material",
+                  "effects"
+                ],
+                "forbidden_uses": [
+                  "identity",
+                  "motion"
+                ],
+                "scope_ids": [
+                  "work_look"
+                ],
+                "target_ids": [],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "asset_id": "actor_ref",
+                "allowed_uses": [
+                  "identity"
+                ],
+                "forbidden_uses": [
+                  "style",
+                  "lighting",
+                  "color",
+                  "material",
+                  "effects"
+                ],
+                "scope_ids": [
+                  "work_look"
+                ],
+                "target_ids": [
+                  "subject_a"
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "changes": {
+        "ColorPlan": {
+          "grades": [
+            {
+              "grade_id": "grade_work",
+              "scope_id": "work_look",
+              "parent_grade_id": null,
+              "override_reason": null,
+              "palette": [
+                "中性灰",
+                "暖木色"
+              ],
+              "temperature_bias": "全片保持冷中性调色，允许现场窗光略暖",
+              "contrast": "中等反差，保留暗部层次",
+              "saturation": "自然饱和度，不以调色更换主体固有颜色",
+              "exposure_intent": "高光有层次，手部接触区可辨",
+              "identity_change": false,
+              "protected_identity_ids": [
+                "subject_a"
+              ],
+              "reference_uses": [],
+              "source_refs": [
+                "design"
+              ]
+            }
+          ]
+        }
+      },
+      "issues": []
+    },
+    {
+      "kind": "M10Proposal",
+      "contract_version": "1.0.0",
+      "work_id": "m10_design_demo",
+      "base_version": 0,
+      "proposal_id": "prop_m10_4",
+      "module_id": "M10.4",
+      "source_request_id": "req_m10_4",
+      "sources": {
+        "design": {
+          "kind": "design_decision",
+          "locator": "synthetic-design-fixture://m10/visual-look",
+          "version": "design-1",
+          "excerpt": "D类合成工程夹具：此处人物、作用域、光源、材质许可和可见性声明只用于合同正反例，不是原案例媒体观察或H3生成实测。"
+        }
+      },
+      "context": {
+        "brief": "设计湿发质感与受控背景空气层次，依据已给状态许可向M8交接视觉条件。",
+        "scope_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "scopes": [
+              {
+                "scope_id": "work_look",
+                "level": "work",
+                "parent_scope_id": null,
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "scene_counter",
+                "level": "scene",
+                "parent_scope_id": "work_look",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "shot_handoff",
+                "level": "shot",
+                "parent_scope_id": "scene_counter",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "identity_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "entities": [
+              {
+                "entity_id": "subject_a",
+                "kind": "subject",
+                "scope_ids": [
+                  "work_look"
+                ],
+                "locked_attributes": {
+                  "hair_color": "黑色",
+                  "hairstyle": "短发"
+                },
+                "surfaces": [
+                  {
+                    "surface_id": "hair",
+                    "base_material": "黑色短发纤维",
+                    "properties": {
+                      "wetness": "dry"
+                    },
+                    "mutable_properties": [
+                      "wetness"
+                    ],
+                    "source_refs": [
+                      "design"
+                    ]
+                  }
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "visibility_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "requirements": [
+              {
+                "requirement_id": "hand_contact",
+                "scope_id": "shot_handoff",
+                "target_id": "subject_a",
+                "criterion": "手指与柜台接触区域必须可以辨认",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "continuity_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "permissions": [
+              {
+                "permission_id": "wet_hair_allowed",
+                "scope_ids": [
+                  "shot_handoff"
+                ],
+                "target_id": "subject_a",
+                "surface_id": "hair",
+                "property": "wetness",
+                "allowed_values": [
+                  "wet"
+                ],
+                "reason": "外部计划允许该镜头呈现湿发状态；发色与发型仍保持不变。",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "style_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "layers": [
+              {
+                "scope_id": "work_look",
+                "parent_scope_id": null,
+                "style": {
+                  "rendering": "写实影像",
+                  "visual_language": "安静清楚的环境叙事",
+                  "image_texture": "保留自然表面细节"
+                },
+                "override_keys": [],
+                "override_reason": null,
+                "reference_uses": [
+                  {
+                    "asset_id": "look_ref",
+                    "use": "style",
+                    "scope_id": "work_look",
+                    "target_ids": []
+                  }
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "scene_counter",
+                "parent_scope_id": "work_look",
+                "style": {},
+                "override_keys": [],
+                "override_reason": null,
+                "reference_uses": [],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "scope_id": "shot_handoff",
+                "parent_scope_id": "scene_counter",
+                "style": {
+                  "image_texture": "保留台面细节与轻微反光"
+                },
+                "override_keys": [
+                  "image_texture"
+                ],
+                "override_reason": "交接镜头需要辨认台面与接触区域。",
+                "reference_uses": [],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "lighting_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "setups": [
+              {
+                "setup_id": "lighting_counter",
+                "scope_id": "scene_counter",
+                "parent_setup_id": null,
+                "override_reason": null,
+                "lights": [
+                  {
+                    "light_id": "window_key",
+                    "kind": "natural",
+                    "location": "柜台左侧的高位窗面",
+                    "direction": "从画面左前方斜向柜台右后方",
+                    "quality": "面积较大的柔光",
+                    "color_description": "略暖的窗面入射光",
+                    "temperature_kelvin": null,
+                    "intensity_relation": "主光高于室内环境填充光，手部暗面保留细节",
+                    "reference_uses": [],
+                    "source_refs": [
+                      "design"
+                    ]
+                  }
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "visibility_checks": [
+              {
+                "requirement_id": "hand_contact",
+                "scope_id": "shot_handoff",
+                "result": "preserved_by_design",
+                "reason": "计划中控制台面反光与光晕，接触区域保留局部对比；媒体结果未验证。",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "color_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "grades": [
+              {
+                "grade_id": "grade_work",
+                "scope_id": "work_look",
+                "parent_grade_id": null,
+                "override_reason": null,
+                "palette": [
+                  "中性灰",
+                  "暖木色"
+                ],
+                "temperature_bias": "全片保持冷中性调色，允许现场窗光略暖",
+                "contrast": "中等反差，保留暗部层次",
+                "saturation": "自然饱和度，不以调色更换主体固有颜色",
+                "exposure_intent": "高光有层次，手部接触区可辨",
+                "identity_change": false,
+                "protected_identity_ids": [
+                  "subject_a"
+                ],
+                "reference_uses": [],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "reference_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "assets": [
+              {
+                "asset_id": "look_ref",
+                "allowed_uses": [
+                  "style",
+                  "lighting",
+                  "color",
+                  "material",
+                  "effects"
+                ],
+                "forbidden_uses": [
+                  "identity",
+                  "motion"
+                ],
+                "scope_ids": [
+                  "work_look"
+                ],
+                "target_ids": [],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "asset_id": "actor_ref",
+                "allowed_uses": [
+                  "identity"
+                ],
+                "forbidden_uses": [
+                  "style",
+                  "lighting",
+                  "color",
+                  "material",
+                  "effects"
+                ],
+                "scope_ids": [
+                  "work_look"
+                ],
+                "target_ids": [
+                  "subject_a"
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "changes": {
+        "MaterialEffectPlan": {
+          "materials": [
+            {
+              "material_id": "hair_appearance",
+              "scope_id": "shot_handoff",
+              "parent_material_id": null,
+              "override_reason": null,
+              "target_id": "subject_a",
+              "surface_id": "hair",
+              "base_material": "黑色短发纤维",
+              "appearance": "湿润发束与少量表面高光保留黑色短发的身份特征",
+              "conditions": [
+                {
+                  "property": "wetness",
+                  "value": "wet",
+                  "permission_id": "wet_hair_allowed"
+                }
+              ],
+              "reference_uses": [],
+              "source_refs": [
+                "design"
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "effect_id": "background_haze",
+              "scope_id": "shot_handoff",
+              "kind": "atmosphere",
+              "description": "背景墙前保持轻微空气层次，交接区域不被遮蔽",
+              "target_ids": [],
+              "trigger_kind": "constant",
+              "event_id": null,
+              "visibility_impact": "managed",
+              "mitigation": "限制于背景，保持手部接触区清楚",
+              "reference_uses": [],
+              "source_refs": [
+                "design"
+              ]
+            }
+          ],
+          "visibility_checks": [
+            {
+              "requirement_id": "hand_contact",
+              "scope_id": "shot_handoff",
+              "result": "preserved_by_design",
+              "reason": "计划中控制台面反光与光晕，接触区域保留局部对比；媒体结果未验证。",
+              "source_refs": [
+                "design"
+              ]
+            }
+          ],
+          "continuity_handoffs": [
+            {
+              "material_id": "hair_appearance",
+              "scope_id": "shot_handoff",
+              "target_id": "subject_a",
+              "surface_id": "hair",
+              "property": "wetness",
+              "value": "wet",
+              "permission_id": "wet_hair_allowed",
+              "consumer": "M8",
+              "source_refs": [
+                "design"
+              ]
+            }
+          ]
+        }
+      },
+      "issues": []
+    }
+  ]
+}

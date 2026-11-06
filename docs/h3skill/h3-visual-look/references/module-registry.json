@@ -1,0 +1,846 @@
+{
+  "module": "M10",
+  "skill": "h3-visual-look",
+  "contract_version": "1.0.0",
+  "route_version": "1.0.0",
+  "framework_version": "0.1.2",
+  "modules": [
+    {
+      "contract_version": "1.0.0",
+      "route_version": "1.0.0",
+      "principles": [
+        "HC-01",
+        "HC-02",
+        "HC-03",
+        "LC-01",
+        "LC-02",
+        "LC-03",
+        "LC-04",
+        "LC-05",
+        "MD-01",
+        "MD-02",
+        "MD-03",
+        "MD-04",
+        "RT-01",
+        "RT-02",
+        "RT-03",
+        "RT-04",
+        "RT-05",
+        "RT-06"
+      ],
+      "implementation_status": "implemented_text_and_contract_only",
+      "compatibility": {
+        "supported_contract_versions": [
+          "1.0.0"
+        ],
+        "unknown_versions": "reject",
+        "migration": "Explicit source-preserving adapter only; no claim of byte-for-byte native M1-M9 schema compatibility."
+      },
+      "operation": {
+        "effects": "Pure JSON validation and proposal acceptance to stdout; no input mutation, network, inference or media generation.",
+        "technical_retry": "Identical accepted request/proposal IDs and digests are idempotent.",
+        "creative_revision": "New IDs and current base_version; return semantic conflicts to the owner."
+      },
+      "verification": {
+        "deterministic_scope": "Schema, explicit IDs/versions/permissions/inheritance/visibility declarations, atomic acceptance and actual dependency invalidation.",
+        "not_run": [
+          "Natural-language meaning validation",
+          "Physical lighting simulation",
+          "Actual media visibility and continuity",
+          "H3 inference",
+          "Complete G0-G4 acceptance"
+        ]
+      },
+      "module_id": "M10",
+      "parent_id": null,
+      "responsibility": "原子接受四个独占子分区，输出有版本的LookPlan草稿；接受时不改写子模块的专业决定。",
+      "input_contract": [
+        "#/$defs/State",
+        "#/$defs/RequestBatch",
+        "#/$defs/ProposalBatch"
+      ],
+      "output_contract": "#/$defs/State",
+      "readonly": [
+        "Exact original requests",
+        "Upstream or external read-only projections"
+      ],
+      "write_permissions": [
+        "Accepted LookPlan partitions",
+        "Version and receipts",
+        "Actual dependency paths and stale flags"
+      ],
+      "dependencies": {
+        "child_modules": [
+          "M10.1",
+          "M10.2",
+          "M10.3",
+          "M10.4"
+        ],
+        "automatic_child_execution": false
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/audit-and-handoff.md",
+        "references/style-hierarchy-and-inheritance.md",
+        "references/lighting-design.md",
+        "references/color-and-grading.md",
+        "references/materials-and-effects.md"
+      ],
+      "route": {
+        "route_id": "M10.accept",
+        "trigger": "Accept one or more checked child proposals for the same work and base version.",
+        "input_mapping": "Current State + exact request set + proposal set.",
+        "preconditions": [
+          "All submitted original requests are available",
+          "Versions, sources, exclusive partitions and sibling projections agree"
+        ],
+        "success_return": "LookPlan draft at version + 1, or the current state on an exact retry.",
+        "failure_return": "No partial state; errors contain owner and path.",
+        "branch_priority": "Explicit requested scope; no mandatory execution of other children.",
+        "status": "definition_only_until_invoked"
+      },
+      "parent_acceptance": {
+        "atomic": true,
+        "exclusive_writers": {
+          "StyleHierarchy": "M10.1",
+          "LightingPlan": "M10.2",
+          "ColorPlan": "M10.3",
+          "MaterialEffectPlan": "M10.4"
+        },
+        "sources": "Same source ID/version cannot silently change content.",
+        "sibling_projection": "Referenced supplied rows must equal the corresponding candidate accepted rows; external projections work when no sibling exists.",
+        "status": "draft; passed_with_unverified is limited to explicit declarations."
+      },
+      "consumers": [
+        "M5",
+        "M8",
+        "M11",
+        "M12"
+      ],
+      "invalidation": {
+        "mechanism": "Registered actual read_paths, JSON Pointer prefix overlap, previous stale flags preserved.",
+        "display_only": "Does not invalidate consumers that did not read display.",
+        "stale_dependency": "Propagate stale only through actual sibling read_paths; new proposals depending on stale siblings are rejected unless those siblings are revalidated in the same batch."
+      }
+    },
+    {
+      "contract_version": "1.0.0",
+      "route_version": "1.0.0",
+      "principles": [
+        "HC-01",
+        "HC-02",
+        "HC-03",
+        "LC-01",
+        "LC-02",
+        "LC-03",
+        "LC-04",
+        "LC-05",
+        "MD-01",
+        "MD-02",
+        "MD-03",
+        "MD-04",
+        "RT-01",
+        "RT-02",
+        "RT-03",
+        "RT-04",
+        "RT-05",
+        "RT-06"
+      ],
+      "implementation_status": "implemented_text_and_contract_only",
+      "compatibility": {
+        "supported_contract_versions": [
+          "1.0.0"
+        ],
+        "unknown_versions": "reject",
+        "migration": "Explicit source-preserving adapter only; no claim of byte-for-byte native M1-M9 schema compatibility."
+      },
+      "operation": {
+        "effects": "Pure JSON validation and proposal acceptance to stdout; no input mutation, network, inference or media generation.",
+        "technical_retry": "Identical accepted request/proposal IDs and digests are idempotent.",
+        "creative_revision": "New IDs and current base_version; return semantic conflicts to the owner."
+      },
+      "verification": {
+        "deterministic_scope": "Schema, explicit IDs/versions/permissions/inheritance/visibility declarations, atomic acceptance and actual dependency invalidation.",
+        "not_run": [
+          "Natural-language meaning validation",
+          "Physical lighting simulation",
+          "Actual media visibility and continuity",
+          "H3 inference",
+          "Complete G0-G4 acceptance"
+        ]
+      },
+      "module_id": "M10.1",
+      "parent_id": "M10",
+      "responsibility": "建立作用域内风格层级、明确继承和有理由的局部覆盖，不借风格词改写动作或身份。",
+      "input_contract": "#/$defs/Request1",
+      "output_contract": "#/$defs/Proposal1",
+      "inputs": {
+        "required": [
+          "brief",
+          "scope_context"
+        ],
+        "optional": [
+          "reference_context"
+        ],
+        "replacement": "Compatible user or external projections with declared owner/source/version are accepted.",
+        "conditional": "Any direct or read-only reference_uses requires the used assets' minimum reference_context; bound targets need their declared permissions; changed surfaces need continuity_context; event effects need event_context."
+      },
+      "outputs": [
+        {
+          "object": "StyleHierarchy",
+          "write_path": "/content/StyleHierarchy",
+          "owner": "M10.1",
+          "consumers": [
+            "M10",
+            "M5",
+            "M8",
+            "M11",
+            "M12"
+          ]
+        }
+      ],
+      "readonly": {
+        "projections": [
+          "scope_context",
+          "reference_context"
+        ],
+        "source_versions": "Nonblank adapter version strings; adapt native object versions explicitly."
+      },
+      "write_permissions": [
+        "/content/StyleHierarchy"
+      ],
+      "forbidden_writes": [
+        "M1.WorkIntent",
+        "M2.AssetRegistry and identity/reference permissions",
+        "M3 spatial topology",
+        "M4 actions",
+        "M5 CameraPlan",
+        "M7 TimingMap",
+        "M8 StateLedger",
+        "M9 ShotEditGenerationPlan",
+        "M11 protocol fields and runtime parameters",
+        "M12 media observations"
+      ],
+      "dependencies": {
+        "required_inputs": [
+          "scope_context"
+        ],
+        "optional_inputs": [
+          "reference_context"
+        ],
+        "upstream_execution_required": false,
+        "automatic_downstream_invocation": false
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/style-hierarchy-and-inheritance.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md",
+        "references/case-evidence.md"
+      ],
+      "tools": [
+        {
+          "tool": "python scripts/m10_contract.py",
+          "operations": [
+            "route",
+            "check",
+            "accept",
+            "impact"
+          ],
+          "runtime": "Python >= 3.10; standard library only"
+        }
+      ],
+      "route": {
+        "route_id": "M10.1.plan",
+        "trigger": "建立作用域内风格层级、明确继承和有理由的局部覆盖，不借风格词改写动作或身份。",
+        "explicit_target": "M10.1",
+        "input_mapping": "Select only declared fields from the actual source versions into inputs; retain provenance.",
+        "preconditions": [
+          "scope_context"
+        ],
+        "success_return": "Child proposal for parent M10.accept; no automatic M5/M8/M11/M12 calls.",
+        "failure_return": {
+          "schema_or_source": "Caller or actual source owner",
+          "reference_permission_or_identity": "M2 or external authorized provider",
+          "critical_visibility": "M5",
+          "visual_state_permission": "M8",
+          "style_override": "M10.1",
+          "light_design": "M10.2",
+          "grade_design": "M10.3",
+          "material_effect": "M10.4",
+          "schedule": "M7",
+          "model_serialization": "M11",
+          "media_observation": "M12"
+        },
+        "branch_priority": "Explicit target, then requested responsibility. Unknown evidence is never converted to not_applicable.",
+        "status": "not_invoked until the relevant action runs"
+      },
+      "parent_acceptance": {
+        "atomic": true,
+        "exclusive_partition": "StyleHierarchy",
+        "actual_original_request_required": true,
+        "exact_context_and_sources": true,
+        "base_version_check": true,
+        "stale_sibling_dependency": "reject; update upstream dependency first or include a compatible revalidation in this batch"
+      },
+      "invalidation": {
+        "mechanism": "Receipts store actual read_paths and source digests; optional sibling paths are added only when their projection is supplied.",
+        "source_change": "Only actual readers become stale.",
+        "accepted_revision": "Successful explicit revision replaces that partition; unrelated content is retained.",
+        "stale_dependency": "Propagate stale only through actual sibling read_paths; new proposals depending on stale siblings are rejected unless those siblings are revalidated in the same batch."
+      }
+    },
+    {
+      "contract_version": "1.0.0",
+      "route_version": "1.0.0",
+      "principles": [
+        "HC-01",
+        "HC-02",
+        "HC-03",
+        "LC-01",
+        "LC-02",
+        "LC-03",
+        "LC-04",
+        "LC-05",
+        "MD-01",
+        "MD-02",
+        "MD-03",
+        "MD-04",
+        "RT-01",
+        "RT-02",
+        "RT-03",
+        "RT-04",
+        "RT-05",
+        "RT-06"
+      ],
+      "implementation_status": "implemented_text_and_contract_only",
+      "compatibility": {
+        "supported_contract_versions": [
+          "1.0.0"
+        ],
+        "unknown_versions": "reject",
+        "migration": "Explicit source-preserving adapter only; no claim of byte-for-byte native M1-M9 schema compatibility."
+      },
+      "operation": {
+        "effects": "Pure JSON validation and proposal acceptance to stdout; no input mutation, network, inference or media generation.",
+        "technical_retry": "Identical accepted request/proposal IDs and digests are idempotent.",
+        "creative_revision": "New IDs and current base_version; return semantic conflicts to the owner."
+      },
+      "verification": {
+        "deterministic_scope": "Schema, explicit IDs/versions/permissions/inheritance/visibility declarations, atomic acceptance and actual dependency invalidation.",
+        "not_run": [
+          "Natural-language meaning validation",
+          "Physical lighting simulation",
+          "Actual media visibility and continuity",
+          "H3 inference",
+          "Complete G0-G4 acceptance"
+        ]
+      },
+      "module_id": "M10.2",
+      "parent_id": "M10",
+      "responsibility": "制定现场光源的位置、方向、性质、色温描述和照明关系，声明关键动作的计划可见性。",
+      "input_contract": "#/$defs/Request2",
+      "output_contract": "#/$defs/Proposal2",
+      "inputs": {
+        "required": [
+          "brief",
+          "scope_context",
+          "scene_context"
+        ],
+        "optional": [
+          "reference_context",
+          "style_context",
+          "visibility_context"
+        ],
+        "replacement": "Compatible user or external projections with declared owner/source/version are accepted.",
+        "conditional": "Any direct or read-only reference_uses requires the used assets' minimum reference_context; bound targets need their declared permissions; changed surfaces need continuity_context; event effects need event_context."
+      },
+      "outputs": [
+        {
+          "object": "LightingPlan",
+          "write_path": "/content/LightingPlan",
+          "owner": "M10.2",
+          "consumers": [
+            "M10",
+            "M5",
+            "M8",
+            "M11",
+            "M12"
+          ]
+        }
+      ],
+      "readonly": {
+        "projections": [
+          "scope_context",
+          "scene_context",
+          "reference_context",
+          "style_context",
+          "visibility_context"
+        ],
+        "source_versions": "Nonblank adapter version strings; adapt native object versions explicitly."
+      },
+      "write_permissions": [
+        "/content/LightingPlan"
+      ],
+      "forbidden_writes": [
+        "M1.WorkIntent",
+        "M2.AssetRegistry and identity/reference permissions",
+        "M3 spatial topology",
+        "M4 actions",
+        "M5 CameraPlan",
+        "M7 TimingMap",
+        "M8 StateLedger",
+        "M9 ShotEditGenerationPlan",
+        "M11 protocol fields and runtime parameters",
+        "M12 media observations"
+      ],
+      "dependencies": {
+        "required_inputs": [
+          "scope_context",
+          "scene_context"
+        ],
+        "optional_inputs": [
+          "reference_context",
+          "style_context",
+          "visibility_context"
+        ],
+        "upstream_execution_required": false,
+        "automatic_downstream_invocation": false
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/lighting-design.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md",
+        "references/case-evidence.md"
+      ],
+      "tools": [
+        {
+          "tool": "python scripts/m10_contract.py",
+          "operations": [
+            "route",
+            "check",
+            "accept",
+            "impact"
+          ],
+          "runtime": "Python >= 3.10; standard library only"
+        }
+      ],
+      "route": {
+        "route_id": "M10.2.plan",
+        "trigger": "制定现场光源的位置、方向、性质、色温描述和照明关系，声明关键动作的计划可见性。",
+        "explicit_target": "M10.2",
+        "input_mapping": "Select only declared fields from the actual source versions into inputs; retain provenance.",
+        "preconditions": [
+          "scope_context",
+          "scene_context"
+        ],
+        "success_return": "Child proposal for parent M10.accept; no automatic M5/M8/M11/M12 calls.",
+        "failure_return": {
+          "schema_or_source": "Caller or actual source owner",
+          "reference_permission_or_identity": "M2 or external authorized provider",
+          "critical_visibility": "M5",
+          "visual_state_permission": "M8",
+          "style_override": "M10.1",
+          "light_design": "M10.2",
+          "grade_design": "M10.3",
+          "material_effect": "M10.4",
+          "schedule": "M7",
+          "model_serialization": "M11",
+          "media_observation": "M12"
+        },
+        "branch_priority": "Explicit target, then requested responsibility. Unknown evidence is never converted to not_applicable.",
+        "status": "not_invoked until the relevant action runs"
+      },
+      "parent_acceptance": {
+        "atomic": true,
+        "exclusive_partition": "LightingPlan",
+        "actual_original_request_required": true,
+        "exact_context_and_sources": true,
+        "base_version_check": true,
+        "stale_sibling_dependency": "reject; update upstream dependency first or include a compatible revalidation in this batch"
+      },
+      "invalidation": {
+        "mechanism": "Receipts store actual read_paths and source digests; optional sibling paths are added only when their projection is supplied.",
+        "source_change": "Only actual readers become stale.",
+        "accepted_revision": "Successful explicit revision replaces that partition; unrelated content is retained.",
+        "stale_dependency": "Propagate stale only through actual sibling read_paths; new proposals depending on stale siblings are rejected unless those siblings are revalidated in the same batch."
+      }
+    },
+    {
+      "contract_version": "1.0.0",
+      "route_version": "1.0.0",
+      "principles": [
+        "HC-01",
+        "HC-02",
+        "HC-03",
+        "LC-01",
+        "LC-02",
+        "LC-03",
+        "LC-04",
+        "LC-05",
+        "MD-01",
+        "MD-02",
+        "MD-03",
+        "MD-04",
+        "RT-01",
+        "RT-02",
+        "RT-03",
+        "RT-04",
+        "RT-05",
+        "RT-06"
+      ],
+      "implementation_status": "implemented_text_and_contract_only",
+      "compatibility": {
+        "supported_contract_versions": [
+          "1.0.0"
+        ],
+        "unknown_versions": "reject",
+        "migration": "Explicit source-preserving adapter only; no claim of byte-for-byte native M1-M9 schema compatibility."
+      },
+      "operation": {
+        "effects": "Pure JSON validation and proposal acceptance to stdout; no input mutation, network, inference or media generation.",
+        "technical_retry": "Identical accepted request/proposal IDs and digests are idempotent.",
+        "creative_revision": "New IDs and current base_version; return semantic conflicts to the owner."
+      },
+      "verification": {
+        "deterministic_scope": "Schema, explicit IDs/versions/permissions/inheritance/visibility declarations, atomic acceptance and actual dependency invalidation.",
+        "not_run": [
+          "Natural-language meaning validation",
+          "Physical lighting simulation",
+          "Actual media visibility and continuity",
+          "H3 inference",
+          "Complete G0-G4 acceptance"
+        ]
+      },
+      "module_id": "M10.3",
+      "parent_id": "M10",
+      "responsibility": "制定色彩基调、对比、饱和与曝光意图，区分整体调色与现场光源颜色，保留身份约束。",
+      "input_contract": "#/$defs/Request3",
+      "output_contract": "#/$defs/Proposal3",
+      "inputs": {
+        "required": [
+          "brief",
+          "scope_context"
+        ],
+        "optional": [
+          "reference_context",
+          "style_context",
+          "lighting_context",
+          "identity_context"
+        ],
+        "replacement": "Compatible user or external projections with declared owner/source/version are accepted.",
+        "conditional": "Any direct or read-only reference_uses requires the used assets' minimum reference_context; bound targets need their declared permissions; changed surfaces need continuity_context; event effects need event_context."
+      },
+      "outputs": [
+        {
+          "object": "ColorPlan",
+          "write_path": "/content/ColorPlan",
+          "owner": "M10.3",
+          "consumers": [
+            "M10",
+            "M5",
+            "M8",
+            "M11",
+            "M12"
+          ]
+        }
+      ],
+      "readonly": {
+        "projections": [
+          "scope_context",
+          "reference_context",
+          "style_context",
+          "lighting_context",
+          "identity_context"
+        ],
+        "source_versions": "Nonblank adapter version strings; adapt native object versions explicitly."
+      },
+      "write_permissions": [
+        "/content/ColorPlan"
+      ],
+      "forbidden_writes": [
+        "M1.WorkIntent",
+        "M2.AssetRegistry and identity/reference permissions",
+        "M3 spatial topology",
+        "M4 actions",
+        "M5 CameraPlan",
+        "M7 TimingMap",
+        "M8 StateLedger",
+        "M9 ShotEditGenerationPlan",
+        "M11 protocol fields and runtime parameters",
+        "M12 media observations"
+      ],
+      "dependencies": {
+        "required_inputs": [
+          "scope_context"
+        ],
+        "optional_inputs": [
+          "reference_context",
+          "style_context",
+          "lighting_context",
+          "identity_context"
+        ],
+        "upstream_execution_required": false,
+        "automatic_downstream_invocation": false
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/color-and-grading.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md",
+        "references/case-evidence.md"
+      ],
+      "tools": [
+        {
+          "tool": "python scripts/m10_contract.py",
+          "operations": [
+            "route",
+            "check",
+            "accept",
+            "impact"
+          ],
+          "runtime": "Python >= 3.10; standard library only"
+        }
+      ],
+      "route": {
+        "route_id": "M10.3.plan",
+        "trigger": "制定色彩基调、对比、饱和与曝光意图，区分整体调色与现场光源颜色，保留身份约束。",
+        "explicit_target": "M10.3",
+        "input_mapping": "Select only declared fields from the actual source versions into inputs; retain provenance.",
+        "preconditions": [
+          "scope_context"
+        ],
+        "success_return": "Child proposal for parent M10.accept; no automatic M5/M8/M11/M12 calls.",
+        "failure_return": {
+          "schema_or_source": "Caller or actual source owner",
+          "reference_permission_or_identity": "M2 or external authorized provider",
+          "critical_visibility": "M5",
+          "visual_state_permission": "M8",
+          "style_override": "M10.1",
+          "light_design": "M10.2",
+          "grade_design": "M10.3",
+          "material_effect": "M10.4",
+          "schedule": "M7",
+          "model_serialization": "M11",
+          "media_observation": "M12"
+        },
+        "branch_priority": "Explicit target, then requested responsibility. Unknown evidence is never converted to not_applicable.",
+        "status": "not_invoked until the relevant action runs"
+      },
+      "parent_acceptance": {
+        "atomic": true,
+        "exclusive_partition": "ColorPlan",
+        "actual_original_request_required": true,
+        "exact_context_and_sources": true,
+        "base_version_check": true,
+        "stale_sibling_dependency": "reject; update upstream dependency first or include a compatible revalidation in this batch"
+      },
+      "invalidation": {
+        "mechanism": "Receipts store actual read_paths and source digests; optional sibling paths are added only when their projection is supplied.",
+        "source_change": "Only actual readers become stale.",
+        "accepted_revision": "Successful explicit revision replaces that partition; unrelated content is retained.",
+        "stale_dependency": "Propagate stale only through actual sibling read_paths; new proposals depending on stale siblings are rejected unless those siblings are revalidated in the same batch."
+      }
+    },
+    {
+      "contract_version": "1.0.0",
+      "route_version": "1.0.0",
+      "principles": [
+        "HC-01",
+        "HC-02",
+        "HC-03",
+        "LC-01",
+        "LC-02",
+        "LC-03",
+        "LC-04",
+        "LC-05",
+        "MD-01",
+        "MD-02",
+        "MD-03",
+        "MD-04",
+        "RT-01",
+        "RT-02",
+        "RT-03",
+        "RT-04",
+        "RT-05",
+        "RT-06"
+      ],
+      "implementation_status": "implemented_text_and_contract_only",
+      "compatibility": {
+        "supported_contract_versions": [
+          "1.0.0"
+        ],
+        "unknown_versions": "reject",
+        "migration": "Explicit source-preserving adapter only; no claim of byte-for-byte native M1-M9 schema compatibility."
+      },
+      "operation": {
+        "effects": "Pure JSON validation and proposal acceptance to stdout; no input mutation, network, inference or media generation.",
+        "technical_retry": "Identical accepted request/proposal IDs and digests are idempotent.",
+        "creative_revision": "New IDs and current base_version; return semantic conflicts to the owner."
+      },
+      "verification": {
+        "deterministic_scope": "Schema, explicit IDs/versions/permissions/inheritance/visibility declarations, atomic acceptance and actual dependency invalidation.",
+        "not_run": [
+          "Natural-language meaning validation",
+          "Physical lighting simulation",
+          "Actual media visibility and continuity",
+          "H3 inference",
+          "Complete G0-G4 acceptance"
+        ]
+      },
+      "module_id": "M10.4",
+      "parent_id": "M10",
+      "responsibility": "设计有来源的材质读感、获准状态的表面表现和环境效果，向M8交接条件并保护关键可见区域。",
+      "input_contract": "#/$defs/Request4",
+      "output_contract": "#/$defs/Proposal4",
+      "inputs": {
+        "required": [
+          "brief",
+          "scope_context",
+          "identity_context"
+        ],
+        "optional": [
+          "reference_context",
+          "style_context",
+          "lighting_context",
+          "color_context",
+          "visibility_context",
+          "continuity_context",
+          "event_context"
+        ],
+        "replacement": "Compatible user or external projections with declared owner/source/version are accepted.",
+        "conditional": "Any direct or read-only reference_uses requires the used assets' minimum reference_context; bound targets need their declared permissions; changed surfaces need continuity_context; event effects need event_context."
+      },
+      "outputs": [
+        {
+          "object": "MaterialEffectPlan",
+          "write_path": "/content/MaterialEffectPlan",
+          "owner": "M10.4",
+          "consumers": [
+            "M10",
+            "M5",
+            "M8",
+            "M11",
+            "M12"
+          ]
+        }
+      ],
+      "readonly": {
+        "projections": [
+          "scope_context",
+          "identity_context",
+          "reference_context",
+          "style_context",
+          "lighting_context",
+          "color_context",
+          "visibility_context",
+          "continuity_context",
+          "event_context"
+        ],
+        "source_versions": "Nonblank adapter version strings; adapt native object versions explicitly."
+      },
+      "write_permissions": [
+        "/content/MaterialEffectPlan"
+      ],
+      "forbidden_writes": [
+        "M1.WorkIntent",
+        "M2.AssetRegistry and identity/reference permissions",
+        "M3 spatial topology",
+        "M4 actions",
+        "M5 CameraPlan",
+        "M7 TimingMap",
+        "M8 StateLedger",
+        "M9 ShotEditGenerationPlan",
+        "M11 protocol fields and runtime parameters",
+        "M12 media observations"
+      ],
+      "dependencies": {
+        "required_inputs": [
+          "scope_context",
+          "identity_context"
+        ],
+        "optional_inputs": [
+          "reference_context",
+          "style_context",
+          "lighting_context",
+          "color_context",
+          "visibility_context",
+          "continuity_context",
+          "event_context"
+        ],
+        "upstream_execution_required": false,
+        "automatic_downstream_invocation": false
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/materials-and-effects.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md",
+        "references/case-evidence.md"
+      ],
+      "tools": [
+        {
+          "tool": "python scripts/m10_contract.py",
+          "operations": [
+            "route",
+            "check",
+            "accept",
+            "impact"
+          ],
+          "runtime": "Python >= 3.10; standard library only"
+        }
+      ],
+      "route": {
+        "route_id": "M10.4.plan",
+        "trigger": "设计有来源的材质读感、获准状态的表面表现和环境效果，向M8交接条件并保护关键可见区域。",
+        "explicit_target": "M10.4",
+        "input_mapping": "Select only declared fields from the actual source versions into inputs; retain provenance.",
+        "preconditions": [
+          "scope_context",
+          "identity_context"
+        ],
+        "success_return": "Child proposal for parent M10.accept; no automatic M5/M8/M11/M12 calls.",
+        "failure_return": {
+          "schema_or_source": "Caller or actual source owner",
+          "reference_permission_or_identity": "M2 or external authorized provider",
+          "critical_visibility": "M5",
+          "visual_state_permission": "M8",
+          "style_override": "M10.1",
+          "light_design": "M10.2",
+          "grade_design": "M10.3",
+          "material_effect": "M10.4",
+          "schedule": "M7",
+          "model_serialization": "M11",
+          "media_observation": "M12"
+        },
+        "branch_priority": "Explicit target, then requested responsibility. Unknown evidence is never converted to not_applicable.",
+        "status": "not_invoked until the relevant action runs"
+      },
+      "parent_acceptance": {
+        "atomic": true,
+        "exclusive_partition": "MaterialEffectPlan",
+        "actual_original_request_required": true,
+        "exact_context_and_sources": true,
+        "base_version_check": true,
+        "stale_sibling_dependency": "reject; update upstream dependency first or include a compatible revalidation in this batch"
+      },
+      "invalidation": {
+        "mechanism": "Receipts store actual read_paths and source digests; optional sibling paths are added only when their projection is supplied.",
+        "source_change": "Only actual readers become stale.",
+        "accepted_revision": "Successful explicit revision replaces that partition; unrelated content is retained.",
+        "stale_dependency": "Propagate stale only through actual sibling read_paths; new proposals depending on stale siblings are rejected unless those siblings are revalidated in the same batch."
+      }
+    }
+  ]
+}

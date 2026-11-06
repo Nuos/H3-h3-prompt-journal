@@ -1,0 +1,15 @@
+{
+  "kind": "M10State",
+  "contract_version": "1.0.0",
+  "work_id": "bookshop_color_design",
+  "version": 0,
+  "owner": "M10",
+  "object_type": "LookPlan",
+  "status": "draft",
+  "content": {},
+  "contexts": {},
+  "sources": {},
+  "receipts": [],
+  "consumers": [],
+  "stale_modules": []
+}

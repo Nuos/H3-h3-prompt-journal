@@ -1,0 +1,87 @@
+{
+  "kind": "M10Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "m10_design_demo",
+  "base_version": 0,
+  "proposal_id": "prop_minimal_m10_2",
+  "module_id": "M10.2",
+  "source_request_id": "req_minimal_m10_2",
+  "sources": {
+    "design": {
+      "kind": "design_decision",
+      "locator": "synthetic-design-fixture://m10/visual-look",
+      "version": "design-1",
+      "excerpt": "D类合成工程夹具：此处人物、作用域、光源、材质许可和可见性声明只用于合同正反例，不是原案例媒体观察或H3生成实测。"
+    }
+  },
+  "context": {
+    "brief": "最小独立调用M10.2；只提供本任务必要资料，未提供全片其余信息。",
+    "scope_context": {
+      "owner": "external",
+      "source_id": "design",
+      "source_version": "design-1",
+      "values": {
+        "scopes": [
+          {
+            "scope_id": "local_scope",
+            "level": "shot",
+            "parent_scope_id": null,
+            "source_refs": [
+              "design"
+            ]
+          }
+        ]
+      }
+    },
+    "scene_context": {
+      "owner": "external",
+      "source_id": "design",
+      "source_version": "design-1",
+      "values": {
+        "conditions": [
+          {
+            "scope_id": "local_scope",
+            "environment": "柜台与背景墙形成明确前后层次",
+            "lighting_constraints": "主光方向沿柜台保持明确；光效不遮挡交接动作。",
+            "source_refs": [
+              "design"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "changes": {
+    "LightingPlan": {
+      "setups": [
+        {
+          "setup_id": "lighting_counter",
+          "scope_id": "local_scope",
+          "parent_setup_id": null,
+          "override_reason": null,
+          "lights": [
+            {
+              "light_id": "window_key",
+              "kind": "natural",
+              "location": "柜台左侧的高位窗面",
+              "direction": "从画面左前方斜向柜台右后方",
+              "quality": "面积较大的柔光",
+              "color_description": "略暖的窗面入射光",
+              "temperature_kelvin": null,
+              "intensity_relation": "主光高于室内环境填充光，手部暗面保留细节",
+              "reference_uses": [],
+              "source_refs": [
+                "design"
+              ]
+            }
+          ],
+          "source_refs": [
+            "design"
+          ]
+        }
+      ],
+      "visibility_checks": []
+    }
+  },
+  "issues": []
+}

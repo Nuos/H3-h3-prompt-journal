@@ -1,0 +1,60 @@
+{
+  "kind": "M10IndependentUseArtifactVerification",
+  "checks": [
+    {
+      "name": "recorded_input_matches_bookshop-request.json",
+      "passed": true
+    },
+    {
+      "name": "recorded_input_matches_bookshop-proposal.json",
+      "passed": true
+    },
+    {
+      "name": "recorded_input_matches_bookshop-state-empty.json",
+      "passed": true
+    },
+    {
+      "name": "run_route",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified"
+    },
+    {
+      "name": "run_check",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified"
+    },
+    {
+      "name": "run_accept",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified"
+    },
+    {
+      "name": "partial_draft_scope",
+      "passed": true
+    },
+    {
+      "name": "trial_package_matches_snapshot",
+      "passed": true,
+      "files": 42
+    },
+    {
+      "name": "release_package_matches_snapshot",
+      "passed": true,
+      "files": 42
+    },
+    {
+      "name": "final_read_log_ranges_exist",
+      "passed": true,
+      "manual_source_entries": 10
+    },
+    {
+      "name": "accepted_state_copy_matches_original_stdout",
+      "passed": true
+    }
+  ],
+  "status": "passed",
+  "note": "Compares saved execution records, inputs, outputs and immutable skill snapshot; no extra H3 or media execution."
+}

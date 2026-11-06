@@ -1,44 +1,45 @@
 # H3 通用核心技能
 
-**当前新增模块：** M9 `h3-shot-edit-generation` v0.1.0。
+**当前新增模块：** M10 `h3-visual-look` v0.1.0。
 
-**模块合同：** M1—M9 各自为 `1.0.0`；不表示全部共享对象已冻结。
+**模块合同：** M1—M10 各自为 `1.0.0`；不表示全部共享对象已冻结。
 
 **更新日期：** 2026-11-05（America/Los_Angeles）。
 
-**开发基线：** `skillplan-v0.1.2-608813b`；M9 本轮读取仓库 `36987c56ade886aacfb166a21d6560925c97c330`。
+**开发基线：** `skillplan-v0.1.2-608813b`；M10 本轮读取仓库 `c8ec1a4e5162ec5179ed9bec99d2f46a437ae67c`。
 
 ## 核心摘要
 
-依据冻结的十二模块方案，已交付 M1—M8，本轮新增 **M9 分镜组织、转场、剪辑与生成分段**，技能名为 `h3-shot-edit-generation`。M9 包含镜头／分镜格归属、剪辑拓扑／选窗／转场、生成任务划分三个可独立调用的子模块，输出版本化 `ShotEditGenerationPlan`。分别管理动作阶段、故事板画格、镜头、生成任务和成片使用片段，各包可独立复制使用其声明的文字编排与离线检查能力。
+依据冻结的十二模块方案，已交付 M1—M9，本轮新增 **M10 视觉风格、光线、色彩与材质**，技能名为 `h3-visual-look`。M10 包含风格层级／继承、光源／照明、色彩／调色、材质／效果四个可独立调用的子模块，输出版本化 `LookPlan`。它将全片、场景和镜头的视觉要求分层组织，明确参考权限、例外、对象、持续范围和问题回传；每个独立生成请求得到自足的有效视觉上下文。
 
-领域方法限定为 `case-studies/` 文本，重点为 10 月案例。Anthropic 资料规定技能结构与创建方式，MiniMax 官方资料规定输入协议。自动媒体分析、真实拍点测量、音频合成、剪辑执行、H3 模型调用及真实媒体质量不因本轮交付而变为已验证能力。
+领域方法限定为 `case-studies/` 文本，重点为 10 月案例；新剧情任务与工程反例明确标注为设计样本。Anthropic 资料规定技能结构与创建方式，MiniMax 官方资料规定输入协议。真实光照模拟、像素调色、材质仿真、视频生成和媒体质量不因本轮交付而变为已验证能力。
 
 ## 关键结论
 
-1. M9.1／M9.2／M9.3 具有独立合同；兼容外部资料可以满足输入，无需先运行所有上游。
-2. 镜头、动作阶段、分镜格、生成任务与成片片段分别登记；旧稿 Shot 标题、固定机位或一次生成都不能单独证明真实镜头数。
-3. 边界执行位置与连续性策略分别表达；后期桥接不自动变为每次生成必须额外表演的动作。
-4. M9 管理源窗、剪辑意图和任务结构；M7 负责权威时间换算，M8 负责状态许可，M11 负责编译，M12 负责实际媒体观察。
-5. 候选选窗与已观察媒体选窗分开；缺后端能力时保留待核实，不把短成片使用窗直接当成合法生成时长。
-6. 本轮新增 M9 包、测试、来源及发布记录，保护 367 个既有文本／代码文件；M1—M8 运行包、原案例和冻结方案保持原字节。
+1. M10.1／M10.2／M10.3／M10.4 具有独立合同；兼容外部资料可以满足输入，无需顺序执行全部上游。
+2. 风格继承、实际光源、整体调色和对象表面状态分别决策；暖光与冷调可以并存，湿发／湿衣不自动授予身份变更许可。
+3. M10 不通过视觉词替代具体动作；影响必保信息时回 M5，涉及参考权限回 M2，视觉持续范围交 M8。
+4. 五种 H3 模式与 Subject／Picture／Video／Audio 的映射、编排和审计分开记录；LookPlan 及其四分区不是新增 H3 字段。
+5. 父接受核对真实请求、来源、基版本及分区权限；检查只作用于已实现的结构化声明，实际视频结果仍须取得媒体证据。
+6. 本轮新增 M10 包、测试、来源与发布记录，保护 397 个既有文本／代码文件；M1—M9 运行包、原案例文本、冻结方案与标准快照保持原字节。
 
-**关键词：** M1—M9、ShotEditGenerationPlan、分镜、剪辑拓扑、源窗、生成分段、H3 Label、独立调用、版本与证据。
+**关键词：** M1—M10、LookPlan、风格继承、光源与调色、材质效果、H3 Label、独立调用、版本与证据。
 
 ## 目录导航
 
 1. 模块入口
-2. M9 分镜、编辑与生成方案
-3. M8 连续性方案与 H3 交接
-4. M7 时间方案与 H3 交接
-5. M6 声音方案与 H3 交接
-6. M5 摄影方案与 H3 交接
-7. M4 动作计划与 H3 交接
-8. M3 空间计划与 H3 交接
-9. 既有 M2 与 H3 的对应
-10. 调用与文件组织
-11. 验证入口和完成边界
-12. 基线与历史记录
+2. M10 视觉风格、光色与材质方案
+3. M9 分镜、编辑与生成方案
+4. M8 连续性方案与 H3 交接
+5. M7 时间方案与 H3 交接
+6. M6 声音方案与 H3 交接
+7. M5 摄影方案与 H3 交接
+8. M4 动作计划与 H3 交接
+9. M3 空间计划与 H3 交接
+10. 既有 M2 与 H3 的对应
+11. 调用与文件组织
+12. 验证入口和完成边界
+13. 基线与历史记录
 
 ## 1. 模块入口
 
@@ -53,7 +54,8 @@
 | M7 统一时间轴与动作—镜头—声音协同 | [h3-time-synchronization/SKILL.md](h3-time-synchronization/SKILL.md) | M7.1 时间依据；M7.2 事件排时；M7.3 时间域映射与帧量化 | 文字工作流、独立合同、时间数值检查、父接受和交接 |
 | M8 主体、道具、场景与跨镜状态连续性 | [h3-state-continuity/SKILL.md](h3-state-continuity/SKILL.md) | M8.1 策略许可；M8.2 计划账本；M8.3 边界交接 | 文字工作流、独立合同、状态关系／来源／版本检查、父接受和交接 |
 | M9 分镜组织、转场、剪辑与生成分段 | [h3-shot-edit-generation/SKILL.md](h3-shot-edit-generation/SKILL.md) | M9.1 镜头画格；M9.2 剪辑选窗；M9.3 生成任务 | 文字工作流、独立合同、结构关系／来源／版本检查、父接受和交接 |
-| M10—M12 | 冻结方案中的后续职责 | 依已锁定职责推进 | 未因本轮交付而标为实现 |
+| M10 视觉风格、光线、色彩与材质 | [h3-visual-look/SKILL.md](h3-visual-look/SKILL.md) | M10.1 风格继承；M10.2 光源照明；M10.3 色彩调色；M10.4 材质效果 | 文字工作流、四路独立合同、作用域／权限／版本检查与父接受 |
+| M11—M12 | 冻结方案中的后续职责 | 依已锁定职责推进 | 未因本轮交付而标为实现 |
 
 ### M2 的三个产物
 
@@ -65,7 +67,22 @@
 
 三对象在 `M2State.content` 中分别为 `asset_registry`、`entity_registry`、`reference_map`。M2State 是本包的组合记录，不替代全部 ProjectPlan。
 
-## 2. M9 分镜、编辑与生成方案
+## 2. M10 视觉风格、光色与材质方案
+
+| 子模块 | 权威分区 | 主要产物与审计 |
+| --- | --- | --- |
+| M10.1 风格层级与继承 | StyleHierarchy | 全片／场景／镜头关系、明确例外、独立任务有效风格 |
+| M10.2 光源与照明 | LightingPlan | 光源、方向与空间依据、光质、局部光色及观看条件 |
+| M10.3 色彩与调色 | ColorPlan | 基调、对比、曝光倾向、保护属性及局部色彩关系 |
+| M10.4 材质与视觉效果 | MaterialEffectPlan | 对象与表面绑定、状态／效果条件、可见性和连续性交接 |
+
+暖色光源与全片冷中性调色分别归 M10.2／M10.3；湿发、湿衣的表面状态不自动授权改变发色、发型或服装身份。各子模块使用公开最小输入，接受兼容用户／外部投影，不强制先运行 M1—M9。参考权限由 M2 决定，可见性与 M5 协调，持续范围交 M8，最终模型字段和 Label 交 M11。
+
+基础四模式的视觉描述进入 `integrated_multimodal_description`；I2VA／FL2VA／L2VA 分别保留实际首帧／首尾帧／尾帧约束。Ref2VA 通过定义、摘要、保留分析和 `detailed_description` 保持风格参考角色一致。四类官方 Label 保持 Subject／Picture／Video／Audio 的实际用途；本模块不新增 Style／Lighting／Material Label 或 H3 顶层字段。
+
+完整五模式与逐 Label 编排／审计见 [M10 H3 映射](h3-visual-look/references/h3-label-mapping.md)，独立及组合调用见 [M10 合同指南](h3-visual-look/references/contract-guide.md)，条件化领域证据见 [M10 案例证据](h3-visual-look/references/case-evidence.md)，失败回传见 [M10 审计与交接](h3-visual-look/references/audit-and-handoff.md)。
+
+## 3. M9 分镜、编辑与生成方案
 
 | 子模块 | 权威分区 | 主要产物与审计 |
 | --- | --- | --- |
@@ -79,7 +96,7 @@
 
 完整映射见 [M9 H3 模式与 Label](h3-shot-edit-generation/references/h3-label-mapping.md)，领域方法及冲突见 [M9 案例证据](h3-shot-edit-generation/references/case-evidence.md)，独立／组合调用见 [M9 合同指南](h3-shot-edit-generation/references/contract-guide.md)。
 
-## 3. M8 连续性方案与 H3 交接
+## 4. M8 连续性方案与 H3 交接
 
 | 子模块 | 权威职责 | 主要产物与审计 |
 | --- | --- | --- |
@@ -93,7 +110,7 @@
 
 M8.3 不改写 M8.2 状态，实际媒体观察仍归 M12。完整五模式／Label 编排与审计见 [M8 映射](h3-state-continuity/references/h3-label-mapping.md)，独立调用见 [M8 合同](h3-state-continuity/references/contract-guide.md)，专业问题回传见 [M8 审计](h3-state-continuity/references/audit-and-handoff.md)。
 
-## 4. M7 时间方案与 H3 交接
+## 5. M7 时间方案与 H3 交接
 
 | 子模块 | TimingMap 分区 | 主要产物与审计 |
 | --- | --- | --- |
@@ -105,7 +122,7 @@ M8.3 不改写 M8.2 状态，实际媒体观察仍归 M12。完整五模式／La
 
 `[Shot N]` 代表真实镜头，第一镜不加切点时间戳；后续切点使用局部 `At MM:SS.mmm`。`<Picture N>`、`<Video N>`、`<Audio N>` 的时间角色不能混用，`<Subject N>` 不承担时间域标识。`TimingMap` 是项目内部对象，未新增 H3 原生字段。完整五模式／Label 编排与审计见 [M7 映射](h3-time-synchronization/references/h3-label-mapping.md)。
 
-## 5. M6 声音方案与 H3 交接
+## 6. M6 声音方案与 H3 交接
 
 | 子模块 | SoundPlan 分区 | 主要产物与审计 |
 | --- | --- | --- |
@@ -120,7 +137,7 @@ M6 适用 T2VA、I2VA、FL2VA、L2VA、Ref2VA。基础四模式的逐镜声音�
 
 完整编排与审计见 [M6 H3 映射](h3-sound-music-dialogue/references/h3-label-mapping.md)、[M6 合同](h3-sound-music-dialogue/references/contract-guide.md)、[M6 审计交接](h3-sound-music-dialogue/references/audit-and-handoff.md)。
 
-## 6. M5 摄影方案与 H3 交接
+## 7. M5 摄影方案与 H3 交接
 
 | 子模块 | CameraPlan 分区 | 主要产物与审计 |
 | --- | --- | --- |
@@ -135,7 +152,7 @@ M5 对应 T2VA、I2VA、FL2VA、L2VA、Ref2VA。基础四模式的摄影内容�
 
 完整逐项编排与审计见 [M5 H3 映射](h3-camera-visibility/references/h3-label-mapping.md)，独立输入与父接受见 [M5 合同指南](h3-camera-visibility/references/contract-guide.md)，具体检查与责任回传见 [M5 审计交接](h3-camera-visibility/references/audit-and-handoff.md)。
 
-## 7. M4 动作计划与 H3 交接
+## 8. M4 动作计划与 H3 交接
 
 | 子模块 | ActionPlan 分区 | 主要产物与审计 |
 | --- | --- | --- |
@@ -147,7 +164,7 @@ M4 适用于 T2VA、I2VA、FL2VA、L2VA、Ref2VA。基础四模式动作正文�
 
 完整逐字段、逐 Label 编排与审计见 [M4 H3 映射](h3-action-performance/references/h3-label-mapping.md)；独立输入、三分区、版本、未知项与工具用法见 [M4 合同指南](h3-action-performance/references/contract-guide.md)；专业检查和责任回传见 [M4 审计交接](h3-action-performance/references/audit-and-handoff.md)。
 
-## 8. M3 空间计划与 H3 交接
+## 9. M3 空间计划与 H3 交接
 
 | 子模块 | SpatialPlan 分区 | 主要产物与审计 |
 |---|---|---|
@@ -159,7 +176,7 @@ M3 适用于五种 H3 输入模式。T2VA 从文字组织空间；I2VA 从首帧
 
 完整逐字段、逐 Label 编排／审计说明见 [M3 H3 映射](h3-scene-blocking/references/h3-label-mapping.md)。公开调用与 JSON 示例见 [M3 合同指南](h3-scene-blocking/references/contract-guide.md)，领域规则和来源由技能入口按需路由。
 
-## 9. 既有 M2 与 H3 的对应
+## 10. 既有 M2 与 H3 的对应
 
 | 输入模式 | M2 交接重点 | 官方字段/Label 去向 |
 |---|---|---|
@@ -171,7 +188,18 @@ M3 适用于五种 H3 输入模式。T2VA 从文字组织空间；I2VA 从首帧
 
 完整逐项编排与审计见 [H3 模式与 Label 映射](h3-asset-reference/references/h3-label-mapping.md)。M2 的稳定 ID 与 H3 编号分别管理；音轨参考、原信号复制、画内角色和实际说话者不混用。
 
-## 10. 调用与文件组织
+## 11. 调用与文件组织
+
+M10 示例（Python 3.10+ 标准库）：
+
+```bash
+cd docs/h3skill/h3-visual-look
+python scripts/m10_contract.py route assets/request-standalone-m10-1.json
+python scripts/m10_contract.py check assets/proposal-standalone-m10-2.json --request assets/request-standalone-m10-2.json
+python scripts/m10_contract.py accept assets/state-empty.json assets/proposal-batch.json --requests assets/requests.json
+```
+
+四个子模块均可接受兼容最小输入。`accept` 输出 `.state` 内的新草稿，不写回输入；权限、来源、继承与版本检查不等于实际光照、颜色和材质效果已经通过。精确字段、最小夹具、影响分析及失败回传见 [M10 合同指南](h3-visual-look/references/contract-guide.md)。
 
 M9 示例（Python 3.10+ 标准库）：
 
@@ -262,7 +290,11 @@ python scripts/m2_contract.py accept assets/state-empty.json assets/proposal-bat
 
 独立调用最小输入、数据类型、范围语义、未知处理和版本规则分别见 [M3 合同指南](h3-scene-blocking/references/contract-guide.md)与 [M2 合同指南](h3-asset-reference/references/contract-guide.md)。示例资产均为文字示例，不能当作已提供媒体。
 
-## 11. 验证入口和完成边界
+## 12. 验证入口和完成边界
+
+- [M10 开发与验收记录](20261105-development-m10-v001.md)：四子模块、H3 映射、案例证据、实现与完成边界。
+- [M10 行为测试](tests/test_m10_contract.py)与[实际验证记录](validation/m10/)：最小输入、独立／组合调用、风险反例、独立包运行和 Agent 文字试用。
+- [M10 发布清单](release-manifest-m10.json)与[核验工具](tools/verify_m10_release.py)：文件、官方来源、案例、冻结方案和原模块保护。
 
 - [M9 开发与验收记录](20261105-development-m9-v001.md)：职责、模式／Label、案例冲突、实际验证与完成边界。
 - [M9 行为测试](tests/m9/)与[实际验证记录](validation/m9/)：独立／组合调用、负例、便携运行和 Agent 文字试用。
@@ -301,7 +333,7 @@ python scripts/m2_contract.py accept assets/state-empty.json assets/proposal-bat
 
 M3 核验器应在其对应的历史发布提交中执行。确定性工具始终保留专业语义/媒体未验证，实际 Agent 文字试用另有记录；没有 H3 推理、真实生成质量、宿主自动触发率或全流程完成声明。
 
-## 12. 基线与历史记录
+## 13. 基线与历史记录
 
 `release-manifest.json`、`tools/verify_release.py` 及原 `validation/` 下的 M1 报告对应首模块发布快照 `faa8edc3`。其中旧核验器覆盖当时整个 h3skill 目录，不能作为扩展目录后的全局核验器；M2 的 `release-manifest-m2.json` 与 `verify_m2_release.py` 对应 `91e6ed0b` 发布快照，其中的 README 哈希也具有历史范围。M3 发布使用独立清单和核验器，并核对 M1、M2 运行包字节未变。历史记录不重写为本轮结果。
 
@@ -340,8 +372,15 @@ M8 使用独立发布清单与核验器，核对 339 个保护文件（原案例
 - [M8 来源与许可记录](h3-state-continuity/references/provenance-and-license.md)；[M8 案例读取基线](https://github.com/Nuos/H3-h3-prompt-journal/tree/f1456793d21bfb411d36eea13cee2916c3bd20c5/case-studies)。
 
 
-M9 使用独立发布清单与核验器；保护原案例、冻结方案与控制记录、标准快照和 M1—M8 运行包的 367 个文本／代码文件。旧清单中的 README 哈希表示各自发布快照，本轮经授权更新集合索引不改写历史清单。M10—M12 仍未因本轮交付而变为已实现。
+M9 使用独立发布清单与核验器；保护原案例、冻结方案与控制记录、标准快照和 M1—M8 运行包的 367 个文本／代码文件。旧清单中的 README 哈希表示各自发布快照，本轮经授权更新集合索引不改写历史清单。M9 发布时 M10—M12 尚未实现；该历史范围保留。
 
-从仓库根运行 `python docs/h3skill/tools/verify_m9_release.py` 可复查本次 M9 发布完整性。实际合同检查与文字试用见 M9 开发记录，H3 推理及媒体／成片验收未执行。
+在 M9 对应历史发布提交中，从仓库根运行 `python docs/h3skill/tools/verify_m9_release.py` 可复查该次 M9 发布完整性。实际合同检查与文字试用见 M9 开发记录，H3 推理及媒体／成片验收未执行。
 
 - [M9 来源与许可记录](h3-shot-edit-generation/references/provenance-and-license.md)；[M9 案例读取基线](https://github.com/Nuos/H3-h3-prompt-journal/tree/36987c56ade886aacfb166a21d6560925c97c330/case-studies)。
+
+
+M10 使用独立发布清单与核验器；保护原案例文本、冻结方案与控制记录、标准快照和 M1—M9 运行包的 397 个文本／代码文件。旧清单中的共享 README 哈希表示各自发布快照，本轮索引更新不改写历史清单。M11—M12 尚未因本轮交付而实现。
+
+从仓库根运行 `python docs/h3skill/tools/verify_m10_release.py` 复查 M10 发布完整性。实际行为检查、独立目录运行和前向使用见 [M10 开发记录](20261105-development-m10-v001.md)及 [M10 验证记录](validation/m10/validation-results.json)。H3 推理、像素分析和媒体／成片验收未执行。
+
+- [M10 来源与许可记录](h3-visual-look/references/provenance-and-license.md)；[M10 案例读取基线](https://github.com/Nuos/H3-h3-prompt-journal/tree/c8ec1a4e5162ec5179ed9bec99d2f46a437ae67c/case-studies)。

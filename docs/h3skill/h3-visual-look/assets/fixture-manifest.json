@@ -1,0 +1,26 @@
+{
+  "evidence_class": "D",
+  "purpose": "Synthetic contract examples, not source-case media outcomes or H3 inference evidence.",
+  "standalone": [
+    "request-standalone-m10-1.json",
+    "request-standalone-m10-2.json",
+    "request-standalone-m10-3.json",
+    "request-standalone-m10-4.json"
+  ],
+  "minimal": [
+    "request-minimal-m10-1.json",
+    "request-minimal-m10-2.json",
+    "request-minimal-m10-3.json",
+    "request-minimal-m10-4.json"
+  ],
+  "minimal_scope": "Each minimal request includes only the required projections; no optional sibling snapshots.",
+  "parent": "state-empty.json + proposal-batch.json + requests.json",
+  "impact": "impact-before.json and impact-after.json compare only a display-title addition.",
+  "unverified": [
+    "Free-text meaning",
+    "Permission authenticity",
+    "Physical light behavior",
+    "Media visibility and continuity",
+    "H3 execution"
+  ]
+}

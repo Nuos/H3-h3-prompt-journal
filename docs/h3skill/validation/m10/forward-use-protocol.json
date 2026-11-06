@@ -1,0 +1,85 @@
+{
+  "kind": "M10IndependentUseProtocol",
+  "recorded_utc": "2026-11-06T02:55:20.324067+00:00",
+  "mode": "Fresh agent with no parent history; user-like task, no prior findings or expected-answer file.",
+  "task_path": "input/task.md",
+  "allowed_inputs": [
+    "h3-visual-look/",
+    "input/"
+  ],
+  "forbidden_context": [
+    "other project directories",
+    "development and validation reports",
+    "historical review findings",
+    "snapshot.json"
+  ],
+  "tasks": [
+    "Organize and audit the raw four-part summer MV text into four M10 responsibilities with five-mode and reference-role handoff.",
+    "Use M10.3 independently for a new designed bookshop color plan, audit the supplied candidate and execute route/check/accept with minimal JSON."
+  ],
+  "criteria": [
+    {
+      "id": "FU01",
+      "criterion": "Read the skill entry and relevant bundled resources, and disclose the actual source reading scope."
+    },
+    {
+      "id": "FU02",
+      "criterion": "Provide all four visual responsibilities for the existing case while preserving supplied story, actions, shot organization, duration and audio decisions."
+    },
+    {
+      "id": "FU03",
+      "criterion": "Separate source text facts, proposed visual reconciliation and unknown actual media properties."
+    },
+    {
+      "id": "FU04",
+      "criterion": "Audit style, lighting, grading and surface-state relationships without inventing identity or reference permissions."
+    },
+    {
+      "id": "FU05",
+      "criterion": "Map five H3 input modes and actual reference roles consistently with the bundled official guide; do not claim H3 compilation or nonexistent assets."
+    },
+    {
+      "id": "FU06",
+      "criterion": "Handle the new M10.3 task independently with minimal compatible inputs, preserving missing facts as unknown."
+    },
+    {
+      "id": "FU07",
+      "criterion": "Audit the supplied bookshop candidate against the user's reference restrictions and identity scope."
+    },
+    {
+      "id": "FU08",
+      "criterion": "Save the executed route, check and empty-state accept commands, inputs, outputs and exit codes; accepted scope remains M10.3 only."
+    },
+    {
+      "id": "FU09",
+      "criterion": "Keep text/schema validation distinct from real media/H3 verification and label the new scene as a design example."
+    },
+    {
+      "id": "FU10",
+      "criterion": "Do not modify the supplied skill package; final snapshot matches the package used in the recorded checks."
+    }
+  ],
+  "input_files": [
+    {
+      "path": "input/summer-README.md",
+      "bytes": 11195,
+      "sha256": "4a9382a4562c88bd25afc0d8debcc6d31a2a40c172f0581bea6d4c4ad65588e7"
+    },
+    {
+      "path": "input/summer-prompt.md",
+      "bytes": 36790,
+      "sha256": "4ddcd492a10a451e124dba192db2c6608aae4a8e62ddbc601a424e5b46a303cd"
+    },
+    {
+      "path": "input/task.md",
+      "bytes": 1909,
+      "sha256": "4c351a76b7fc4aa57e266ec5cffae8f2f15ae8cfafaa454d2d31d497b36ad00d"
+    }
+  ],
+  "evaluation_scope": "Human review of these two text tasks and recorded CLI outputs only; not model accuracy, host-trigger testing or general film look certification.",
+  "artifacts_root": "docs/h3skill/validation/m10/forward-use",
+  "supervision": [
+    "Progress reminders and an interruption/resume were used after truncated read output and delayed file creation.",
+    "The follow-up pointed to the bundled minimal M10.3 fixtures already documented by the skill; no expected conclusions or prior review findings were provided."
+  ]
+}

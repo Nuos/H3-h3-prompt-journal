@@ -1,0 +1,110 @@
+{
+  "kind": "M10State",
+  "contract_version": "1.0.0",
+  "work_id": "bookshop_color_design",
+  "version": 1,
+  "owner": "M10",
+  "object_type": "LookPlan",
+  "status": "draft",
+  "content": {
+    "ColorPlan": {
+      "grades": [
+        {
+          "grade_id": "grade_bookshop_shot",
+          "scope_id": "bookshop_shot",
+          "parent_grade_id": null,
+          "override_reason": null,
+          "palette": [
+            "冷中性环境基线",
+            "门外已有暖灯照到窗框的局部暖色",
+            "木质柜台固有棕色"
+          ],
+          "temperature_bias": "整体冷中性；保留既有暖灯在窗框上形成的局部暖色，不改变光源设定。",
+          "contrast": "本任务的设计样本：温和、有层次，保留窗框受光区与棕木细节。",
+          "saturation": "本任务的设计样本：适度自然；局部暖色和柜台棕色仍可辨，不以冷调为由改变人物或物体固有色。",
+          "exposure_intent": "本任务的设计样本：保留窗框暖光与柜台棕色细节，不设定具体曝光数值。",
+          "identity_change": false,
+          "protected_identity_ids": [],
+          "reference_uses": [],
+          "source_refs": [
+            "user_constraints",
+            "bookshop_design"
+          ]
+        }
+      ]
+    }
+  },
+  "contexts": {
+    "M10.3": {
+      "brief": "独立M10.3：雨夜旧书店单镜整体冷中性；门外已有暖灯在窗框上保留局部暖色，木柜台保留棕色。角色、动作和光源沿用用户约束，不作新增。人物图A仅授权身份且未提供实际图片；不使用其调色，不改变人物原有发色、肤色或服装色，具体身份颜色未知。未提供身份投影或更广的全片继承资料；本请求不声称完成具体人物媒体审查。对比、饱和度和曝光意图的文字细化属于本任务的设计样本。",
+      "scope_context": {
+        "owner": "external",
+        "source_id": "bookshop_design",
+        "source_version": "bookshop-design-1",
+        "values": {
+          "scopes": [
+            {
+              "scope_id": "bookshop_shot",
+              "level": "shot",
+              "parent_scope_id": null,
+              "source_refs": [
+                "user_constraints",
+                "bookshop_design"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "sources": {
+    "user_constraints": {
+      "kind": "user_requirement",
+      "locator": "input/task.md:5",
+      "version": "task-input-1",
+      "excerpt": "用户要求整体冷中性，门外已有暖灯在窗框上保留局部暖色，木质柜台保留棕色。人物图A仅授权身份且尚未提供真实图片。镜头的角色、动作和光源已由用户给出，无需运行其他模块。"
+    },
+    "bookshop_design": {
+      "kind": "design_decision",
+      "locator": "output/bookshop-result.md#认可候选",
+      "version": "bookshop-design-1",
+      "excerpt": "本任务的设计样本：只为书店单镜建立局部色彩作用域；温和有层次的对比、适度自然的饱和度，保留窗框暖色和柜台棕色细节。没有新增剧情；未获得人物图A内容、具体身份属性、色温、LUT或曝光值。不把图A作为调色参考，不更换发色。"
+    }
+  },
+  "receipts": [
+    {
+      "proposal_id": "prop_bookshop_m10_3_v1",
+      "request_id": "req_bookshop_m10_3_v1",
+      "module_id": "M10.3",
+      "proposal_digest": "2a533c51acf1bba42c3956eaea619a68079f01e46ac22116902a51678bee42f9",
+      "request_digest": "e0dfe08c93991901da08c5b6f7e4c1a6b37ca3b0c395472b22e4ed862901ce8f",
+      "output_digest": "70861fb9a388e7ce0c3ce549c26b84943105a82bbd339934e300ada694572b43",
+      "context_digest": "1eb639523524238a71f98637cceff49ea2f53ee0048ce69b91911bb2e6b9f43e",
+      "source_digests": {
+        "bookshop_design": "738a01c03dd7b8ddb4273b0fe6aeeced72d22771b2ea44c45f5bab465a0caa14",
+        "user_constraints": "30dd8fd02c3d0fc24a368183907a5c6821639ad81ff279882d0ccd0ce2bdc7f9"
+      },
+      "base_version": 0,
+      "accepted_version": 1,
+      "read_paths": [
+        "/contexts/M10.3/brief",
+        "/contexts/M10.3/scope_context",
+        "/sources/bookshop_design",
+        "/sources/user_constraints"
+      ]
+    }
+  ],
+  "consumers": [
+    {
+      "consumer_id": "M10.3",
+      "read_paths": [
+        "/contexts/M10.3/brief",
+        "/contexts/M10.3/scope_context",
+        "/sources/bookshop_design",
+        "/sources/user_constraints"
+      ],
+      "status": "current"
+    }
+  ],
+  "stale_modules": []
+}

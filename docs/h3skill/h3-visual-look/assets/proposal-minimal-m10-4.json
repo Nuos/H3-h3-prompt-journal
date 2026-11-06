@@ -1,0 +1,106 @@
+{
+  "kind": "M10Proposal",
+  "contract_version": "1.0.0",
+  "work_id": "m10_design_demo",
+  "base_version": 0,
+  "proposal_id": "prop_minimal_m10_4",
+  "module_id": "M10.4",
+  "source_request_id": "req_minimal_m10_4",
+  "sources": {
+    "design": {
+      "kind": "design_decision",
+      "locator": "synthetic-design-fixture://m10/visual-look",
+      "version": "design-1",
+      "excerpt": "D类合成工程夹具：此处人物、作用域、光源、材质许可和可见性声明只用于合同正反例，不是原案例媒体观察或H3生成实测。"
+    }
+  },
+  "context": {
+    "brief": "最小独立调用M10.4；只提供本任务必要资料，未提供全片其余信息。",
+    "scope_context": {
+      "owner": "external",
+      "source_id": "design",
+      "source_version": "design-1",
+      "values": {
+        "scopes": [
+          {
+            "scope_id": "local_scope",
+            "level": "shot",
+            "parent_scope_id": null,
+            "source_refs": [
+              "design"
+            ]
+          }
+        ]
+      }
+    },
+    "identity_context": {
+      "owner": "external",
+      "source_id": "design",
+      "source_version": "design-1",
+      "values": {
+        "entities": [
+          {
+            "entity_id": "subject_a",
+            "kind": "subject",
+            "scope_ids": [
+              "local_scope"
+            ],
+            "locked_attributes": {
+              "hair_color": "黑色",
+              "hairstyle": "短发"
+            },
+            "surfaces": [
+              {
+                "surface_id": "hair",
+                "base_material": "黑色短发纤维",
+                "properties": {
+                  "wetness": "dry"
+                },
+                "mutable_properties": [
+                  "wetness"
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "source_refs": [
+              "design"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "changes": {
+    "MaterialEffectPlan": {
+      "materials": [
+        {
+          "material_id": "hair_appearance",
+          "scope_id": "local_scope",
+          "parent_material_id": null,
+          "override_reason": null,
+          "target_id": "subject_a",
+          "surface_id": "hair",
+          "base_material": "黑色短发纤维",
+          "appearance": "自然干燥的黑色短发纤维，保留资产固有材质",
+          "conditions": [
+            {
+              "property": "wetness",
+              "value": "dry",
+              "permission_id": null
+            }
+          ],
+          "reference_uses": [],
+          "source_refs": [
+            "design"
+          ]
+        }
+      ],
+      "effects": [],
+      "visibility_checks": [],
+      "continuity_handoffs": []
+    }
+  },
+  "issues": []
+}

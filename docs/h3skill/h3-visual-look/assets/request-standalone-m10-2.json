@@ -1,0 +1,196 @@
+{
+  "kind": "M10Request",
+  "contract_version": "1.0.0",
+  "work_id": "m10_design_demo",
+  "base_version": 0,
+  "request_id": "req_m10_2",
+  "target": "M10.2",
+  "sources": {
+    "design": {
+      "kind": "design_decision",
+      "locator": "synthetic-design-fixture://m10/visual-look",
+      "version": "design-1",
+      "excerpt": "D类合成工程夹具：此处人物、作用域、光源、材质许可和可见性声明只用于合同正反例，不是原案例媒体观察或H3生成实测。"
+    }
+  },
+  "inputs": {
+    "brief": "独立整理柜台场景照明，区分现场暖光与整体调色，维护关键动作可见条件。",
+    "scope_context": {
+      "owner": "external",
+      "source_id": "design",
+      "source_version": "design-1",
+      "values": {
+        "scopes": [
+          {
+            "scope_id": "work_look",
+            "level": "work",
+            "parent_scope_id": null,
+            "source_refs": [
+              "design"
+            ]
+          },
+          {
+            "scope_id": "scene_counter",
+            "level": "scene",
+            "parent_scope_id": "work_look",
+            "source_refs": [
+              "design"
+            ]
+          },
+          {
+            "scope_id": "shot_handoff",
+            "level": "shot",
+            "parent_scope_id": "scene_counter",
+            "source_refs": [
+              "design"
+            ]
+          }
+        ]
+      }
+    },
+    "scene_context": {
+      "owner": "external",
+      "source_id": "design",
+      "source_version": "design-1",
+      "values": {
+        "conditions": [
+          {
+            "scope_id": "scene_counter",
+            "environment": "柜台与背景墙形成明确前后层次",
+            "lighting_constraints": "主光方向沿柜台保持明确；光效不遮挡交接动作。",
+            "source_refs": [
+              "design"
+            ]
+          }
+        ]
+      }
+    },
+    "visibility_context": {
+      "owner": "external",
+      "source_id": "design",
+      "source_version": "design-1",
+      "values": {
+        "requirements": [
+          {
+            "requirement_id": "hand_contact",
+            "scope_id": "shot_handoff",
+            "target_id": "subject_a",
+            "criterion": "手指与柜台接触区域必须可以辨认",
+            "source_refs": [
+              "design"
+            ]
+          }
+        ]
+      }
+    },
+    "style_context": {
+      "owner": "external",
+      "source_id": "design",
+      "source_version": "design-1",
+      "values": {
+        "layers": [
+          {
+            "scope_id": "work_look",
+            "parent_scope_id": null,
+            "style": {
+              "rendering": "写实影像",
+              "visual_language": "安静清楚的环境叙事",
+              "image_texture": "保留自然表面细节"
+            },
+            "override_keys": [],
+            "override_reason": null,
+            "reference_uses": [
+              {
+                "asset_id": "look_ref",
+                "use": "style",
+                "scope_id": "work_look",
+                "target_ids": []
+              }
+            ],
+            "source_refs": [
+              "design"
+            ]
+          },
+          {
+            "scope_id": "scene_counter",
+            "parent_scope_id": "work_look",
+            "style": {},
+            "override_keys": [],
+            "override_reason": null,
+            "reference_uses": [],
+            "source_refs": [
+              "design"
+            ]
+          },
+          {
+            "scope_id": "shot_handoff",
+            "parent_scope_id": "scene_counter",
+            "style": {
+              "image_texture": "保留台面细节与轻微反光"
+            },
+            "override_keys": [
+              "image_texture"
+            ],
+            "override_reason": "交接镜头需要辨认台面与接触区域。",
+            "reference_uses": [],
+            "source_refs": [
+              "design"
+            ]
+          }
+        ]
+      }
+    },
+    "reference_context": {
+      "owner": "external",
+      "source_id": "design",
+      "source_version": "design-1",
+      "values": {
+        "assets": [
+          {
+            "asset_id": "look_ref",
+            "allowed_uses": [
+              "style",
+              "lighting",
+              "color",
+              "material",
+              "effects"
+            ],
+            "forbidden_uses": [
+              "identity",
+              "motion"
+            ],
+            "scope_ids": [
+              "work_look"
+            ],
+            "target_ids": [],
+            "source_refs": [
+              "design"
+            ]
+          },
+          {
+            "asset_id": "actor_ref",
+            "allowed_uses": [
+              "identity"
+            ],
+            "forbidden_uses": [
+              "style",
+              "lighting",
+              "color",
+              "material",
+              "effects"
+            ],
+            "scope_ids": [
+              "work_look"
+            ],
+            "target_ids": [
+              "subject_a"
+            ],
+            "source_refs": [
+              "design"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

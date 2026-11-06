@@ -1,0 +1,38 @@
+{
+  "status": "passed_with_unverified",
+  "ready": true,
+  "invocation_status": "not_invoked",
+  "module_id": "M10.3",
+  "parent": "M10",
+  "work_id": "bookshop_color_design",
+  "request_id": "req_bookshop_m10_3_v1",
+  "contract_version": "1.0.0",
+  "route_version": "1.0.0",
+  "base_version": 0,
+  "input_versions": {
+    "scope_context": "bookshop-design-1"
+  },
+  "write_path": "/content/ColorPlan",
+  "resources": [
+    "references/contracts.json",
+    "references/contract-guide.md",
+    "references/module-registry.json",
+    "references/color-and-grading.md",
+    "references/audit-and-handoff.md",
+    "references/h3-label-mapping.md",
+    "references/case-evidence.md"
+  ],
+  "rationale": "制定色彩基调、对比、饱和与曝光意图，区分整体调色与现场光源颜色，保留身份约束。",
+  "limitations": [
+    "Only explicit JSON structure, relationships and supplied provenance/permissions were checked.",
+    "Free-text meaning and the truth of supplied assertions remain unverified.",
+    "No physical light simulation, actual visibility/continuity observation, H3 execution or complete G0-G4 certification."
+  ],
+  "not_run": [
+    "natural_language_semantic_audit",
+    "physical_lighting_simulation",
+    "actual_media_visibility",
+    "actual_media_continuity",
+    "h3_inference"
+  ]
+}
