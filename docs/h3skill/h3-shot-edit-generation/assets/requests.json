@@ -1,0 +1,963 @@
+{
+  "kind": "M9RequestBatch",
+  "contract_version": "1.0.0",
+  "requests": [
+    {
+      "kind": "M9Request",
+      "contract_version": "1.0.0",
+      "work_id": "m9_design_demo",
+      "base_version": 0,
+      "request_id": "req_m9_1",
+      "target": "M9.1",
+      "sources": {
+        "design": {
+          "kind": "design_decision",
+          "locator": "synthetic-design-fixture://m9/turn-assembly",
+          "version": "design-1",
+          "excerpt": "D类工程夹具：以下两镜、三个源片、数字区间、状态及许可均用于合同演示，不是原案例、真实媒体观察或H3能力保证。"
+        },
+        "capability_fixture": {
+          "kind": "capability_evidence",
+          "locator": "synthetic-capability-fixture://m9/backend-example",
+          "version": "fixture-1",
+          "excerpt": "仅用于执行正反例的虚构兼容后端：本示例允许最多3镜和10秒、允许同镜分段；不能作为任何真实H3后端能力资料。"
+        }
+      },
+      "inputs": {
+        "brief": "独立整理五单位中的镜头、阶段与画格；相位可跨镜。",
+        "action_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "phase_ids": [
+              "phase_approach",
+              "phase_turn",
+              "phase_settle"
+            ],
+            "event_ids": [
+              "event_join_a",
+              "event_cut_ab",
+              "event_join_b"
+            ]
+          }
+        },
+        "camera_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "camera_event_ids": [
+              "camera_pan_track"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "kind": "M9Request",
+      "contract_version": "1.0.0",
+      "work_id": "m9_design_demo",
+      "base_version": 0,
+      "request_id": "req_m9_2",
+      "target": "M9.2",
+      "sources": {
+        "design": {
+          "kind": "design_decision",
+          "locator": "synthetic-design-fixture://m9/turn-assembly",
+          "version": "design-1",
+          "excerpt": "D类工程夹具：以下两镜、三个源片、数字区间、状态及许可均用于合同演示，不是原案例、真实媒体观察或H3能力保证。"
+        },
+        "capability_fixture": {
+          "kind": "capability_evidence",
+          "locator": "synthetic-capability-fixture://m9/backend-example",
+          "version": "fixture-1",
+          "excerpt": "仅用于执行正反例的虚构兼容后端：本示例允许最多3镜和10秒、允许同镜分段；不能作为任何真实H3后端能力资料。"
+        }
+      },
+      "inputs": {
+        "brief": "独立选择候选源窗与装配；明确模型内切镜和后期接缝。",
+        "shot_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "phases": [
+              {
+                "phase_id": "phase_approach",
+                "description": "同镜接近并开始运镜变化",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "phase_id": "phase_turn",
+                "description": "转体阶段跨越明确的真实切点，切后继续未完成转体",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "phase_id": "phase_settle",
+                "description": "完成转体后稳定",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "shots": [
+              {
+                "shot_id": "shot_a",
+                "phase_ids": [
+                  "phase_approach",
+                  "phase_turn"
+                ],
+                "panel_ids": [
+                  "panel_start",
+                  "panel_turn_before"
+                ],
+                "purpose": "建立动作后进入转体",
+                "assignment_note": "phase_turn只使用切点前部分；同镜可以被两个任务分担。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "shot_id": "shot_b",
+                "phase_ids": [
+                  "phase_turn",
+                  "phase_settle"
+                ],
+                "panel_ids": [
+                  "panel_turn_after",
+                  "panel_end"
+                ],
+                "purpose": "在新视角继续转体并稳定",
+                "assignment_note": "phase_turn使用切点后未完成部分；不是重新开始一个转体。",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "panels": [
+              {
+                "panel_id": "panel_start",
+                "shot_id": "shot_a",
+                "phase_ids": [
+                  "phase_approach"
+                ],
+                "purpose": "storyboard",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "panel_id": "panel_turn_before",
+                "shot_id": "shot_a",
+                "phase_ids": [
+                  "phase_turn"
+                ],
+                "purpose": "key_state",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "panel_id": "panel_turn_after",
+                "shot_id": "shot_b",
+                "phase_ids": [
+                  "phase_turn"
+                ],
+                "purpose": "key_state",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "panel_id": "panel_end",
+                "shot_id": "shot_b",
+                "phase_ids": [
+                  "phase_settle"
+                ],
+                "purpose": "storyboard",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "events": [
+              {
+                "event_id": "camera_pan_track",
+                "kind": "camera_change",
+                "from_shot": "shot_a",
+                "to_shot": "shot_a",
+                "phase_ids": [
+                  "phase_approach"
+                ],
+                "cue": "摇镜转为跟拍，保持连续观察",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "event_id": "event_join_a",
+                "kind": "assembly_join",
+                "from_shot": "shot_a",
+                "to_shot": "shot_a",
+                "phase_ids": [
+                  "phase_approach",
+                  "phase_turn"
+                ],
+                "cue": "同镜生成分段接缝，后期连接",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "event_id": "event_cut_ab",
+                "kind": "cut",
+                "from_shot": "shot_a",
+                "to_shot": "shot_b",
+                "phase_ids": [
+                  "phase_turn"
+                ],
+                "cue": "转体中切换视角并保留运动相位",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "event_id": "event_join_b",
+                "kind": "assembly_join",
+                "from_shot": "shot_b",
+                "to_shot": "shot_b",
+                "phase_ids": [
+                  "phase_turn",
+                  "phase_settle"
+                ],
+                "cue": "同镜后半任务接续到稳定阶段",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "source_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "sources": [
+              {
+                "media_id": "source_a",
+                "media_version": "candidate-1",
+                "shot_ids": [
+                  "shot_a"
+                ],
+                "span": {
+                  "domain": "generation_local",
+                  "unit": "second",
+                  "start": 0,
+                  "end": 3
+                },
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "media_id": "source_ab",
+                "media_version": "candidate-1",
+                "shot_ids": [
+                  "shot_a",
+                  "shot_b"
+                ],
+                "span": {
+                  "domain": "generation_local",
+                  "unit": "second",
+                  "start": 0,
+                  "end": 6
+                },
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "media_id": "source_b",
+                "media_version": "candidate-1",
+                "shot_ids": [
+                  "shot_b"
+                ],
+                "span": {
+                  "domain": "generation_local",
+                  "unit": "second",
+                  "start": 0,
+                  "end": 3
+                },
+                "basis": "planned",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "continuity_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "policies": [
+              {
+                "policy_id": "policy_boundary_a",
+                "boundary_id": "boundary_a",
+                "from_shot": "shot_a",
+                "to_shot": "shot_a",
+                "status": "approved",
+                "invariants": [
+                  "人物身份",
+                  "转体方向与未完成阶段"
+                ],
+                "allowed_changes": [],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "policy_id": "policy_boundary_cut",
+                "boundary_id": "boundary_cut",
+                "from_shot": "shot_a",
+                "to_shot": "shot_b",
+                "status": "approved",
+                "invariants": [
+                  "人物身份",
+                  "转体方向与未完成阶段"
+                ],
+                "allowed_changes": [
+                  "真实切点改变观察视角"
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "policy_id": "policy_boundary_b",
+                "boundary_id": "boundary_b",
+                "from_shot": "shot_b",
+                "to_shot": "shot_b",
+                "status": "approved",
+                "invariants": [
+                  "人物身份",
+                  "转体方向与未完成阶段"
+                ],
+                "allowed_changes": [],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "states": [
+              {
+                "state_id": "entry_task_intro",
+                "shot_id": "shot_a",
+                "edge": "initial",
+                "description": "该任务在所属镜头的明确起点，相位由本任务内容与M8交接记录指定。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "state_id": "exit_task_intro",
+                "shot_id": "shot_a",
+                "edge": "final",
+                "description": "该任务在所属镜头的明确终点，不自动代表整个镜头的最终帧。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "state_id": "entry_task_turn",
+                "shot_id": "shot_a",
+                "edge": "initial",
+                "description": "该任务在所属镜头的明确起点，相位由本任务内容与M8交接记录指定。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "state_id": "exit_task_turn",
+                "shot_id": "shot_b",
+                "edge": "final",
+                "description": "该任务在所属镜头的明确终点，不自动代表整个镜头的最终帧。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "state_id": "entry_task_finish",
+                "shot_id": "shot_b",
+                "edge": "initial",
+                "description": "该任务在所属镜头的明确起点，相位由本任务内容与M8交接记录指定。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "state_id": "exit_task_finish",
+                "shot_id": "shot_b",
+                "edge": "final",
+                "description": "该任务在所属镜头的明确终点，不自动代表整个镜头的最终帧。",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "kind": "M9Request",
+      "contract_version": "1.0.0",
+      "work_id": "m9_design_demo",
+      "base_version": 0,
+      "request_id": "req_m9_3",
+      "target": "M9.3",
+      "sources": {
+        "design": {
+          "kind": "design_decision",
+          "locator": "synthetic-design-fixture://m9/turn-assembly",
+          "version": "design-1",
+          "excerpt": "D类工程夹具：以下两镜、三个源片、数字区间、状态及许可均用于合同演示，不是原案例、真实媒体观察或H3能力保证。"
+        },
+        "capability_fixture": {
+          "kind": "capability_evidence",
+          "locator": "synthetic-capability-fixture://m9/backend-example",
+          "version": "fixture-1",
+          "excerpt": "仅用于执行正反例的虚构兼容后端：本示例允许最多3镜和10秒、允许同镜分段；不能作为任何真实H3后端能力资料。"
+        }
+      },
+      "inputs": {
+        "brief": "独立分配三个任务；一个任务含两镜，两个镜头均可跨任务。",
+        "shot_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "phases": [
+              {
+                "phase_id": "phase_approach",
+                "description": "同镜接近并开始运镜变化",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "phase_id": "phase_turn",
+                "description": "转体阶段跨越明确的真实切点，切后继续未完成转体",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "phase_id": "phase_settle",
+                "description": "完成转体后稳定",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "shots": [
+              {
+                "shot_id": "shot_a",
+                "phase_ids": [
+                  "phase_approach",
+                  "phase_turn"
+                ],
+                "panel_ids": [
+                  "panel_start",
+                  "panel_turn_before"
+                ],
+                "purpose": "建立动作后进入转体",
+                "assignment_note": "phase_turn只使用切点前部分；同镜可以被两个任务分担。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "shot_id": "shot_b",
+                "phase_ids": [
+                  "phase_turn",
+                  "phase_settle"
+                ],
+                "panel_ids": [
+                  "panel_turn_after",
+                  "panel_end"
+                ],
+                "purpose": "在新视角继续转体并稳定",
+                "assignment_note": "phase_turn使用切点后未完成部分；不是重新开始一个转体。",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "panels": [
+              {
+                "panel_id": "panel_start",
+                "shot_id": "shot_a",
+                "phase_ids": [
+                  "phase_approach"
+                ],
+                "purpose": "storyboard",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "panel_id": "panel_turn_before",
+                "shot_id": "shot_a",
+                "phase_ids": [
+                  "phase_turn"
+                ],
+                "purpose": "key_state",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "panel_id": "panel_turn_after",
+                "shot_id": "shot_b",
+                "phase_ids": [
+                  "phase_turn"
+                ],
+                "purpose": "key_state",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "panel_id": "panel_end",
+                "shot_id": "shot_b",
+                "phase_ids": [
+                  "phase_settle"
+                ],
+                "purpose": "storyboard",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "events": [
+              {
+                "event_id": "camera_pan_track",
+                "kind": "camera_change",
+                "from_shot": "shot_a",
+                "to_shot": "shot_a",
+                "phase_ids": [
+                  "phase_approach"
+                ],
+                "cue": "摇镜转为跟拍，保持连续观察",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "event_id": "event_join_a",
+                "kind": "assembly_join",
+                "from_shot": "shot_a",
+                "to_shot": "shot_a",
+                "phase_ids": [
+                  "phase_approach",
+                  "phase_turn"
+                ],
+                "cue": "同镜生成分段接缝，后期连接",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "event_id": "event_cut_ab",
+                "kind": "cut",
+                "from_shot": "shot_a",
+                "to_shot": "shot_b",
+                "phase_ids": [
+                  "phase_turn"
+                ],
+                "cue": "转体中切换视角并保留运动相位",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "event_id": "event_join_b",
+                "kind": "assembly_join",
+                "from_shot": "shot_b",
+                "to_shot": "shot_b",
+                "phase_ids": [
+                  "phase_turn",
+                  "phase_settle"
+                ],
+                "cue": "同镜后半任务接续到稳定阶段",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "edit_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "segments": [
+              {
+                "segment_id": "segment_intro",
+                "source_id": "source_a",
+                "shot_ids": [
+                  "shot_a"
+                ],
+                "phase_ids": [
+                  "phase_approach"
+                ],
+                "window": {
+                  "domain": "generation_local",
+                  "unit": "second",
+                  "start": 0,
+                  "end": 2,
+                  "basis": "planned",
+                  "range_source_ref": "design"
+                },
+                "playback": {
+                  "kind": "normal"
+                },
+                "selection_reason": "设计候选区间；取得源媒体后由M12观察，M7负责排时。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "segment_id": "segment_turn",
+                "source_id": "source_ab",
+                "shot_ids": [
+                  "shot_a",
+                  "shot_b"
+                ],
+                "phase_ids": [
+                  "phase_turn"
+                ],
+                "window": {
+                  "domain": "generation_local",
+                  "unit": "second",
+                  "start": 0,
+                  "end": 4,
+                  "basis": "planned",
+                  "range_source_ref": "design"
+                },
+                "playback": {
+                  "kind": "normal"
+                },
+                "selection_reason": "设计候选区间；取得源媒体后由M12观察，M7负责排时。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "segment_id": "segment_finish",
+                "source_id": "source_b",
+                "shot_ids": [
+                  "shot_b"
+                ],
+                "phase_ids": [
+                  "phase_settle"
+                ],
+                "window": {
+                  "domain": "generation_local",
+                  "unit": "second",
+                  "start": 0,
+                  "end": 2,
+                  "basis": "planned",
+                  "range_source_ref": "design"
+                },
+                "playback": {
+                  "kind": "normal"
+                },
+                "selection_reason": "设计候选区间；取得源媒体后由M12观察，M7负责排时。",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "assembly": [
+              "segment_intro",
+              "segment_turn",
+              "segment_finish"
+            ],
+            "boundaries": [
+              {
+                "boundary_id": "boundary_a",
+                "from_segment": "segment_intro",
+                "to_segment": "segment_turn",
+                "from_shot": "shot_a",
+                "to_shot": "shot_a",
+                "event_id": "event_join_a",
+                "execution_stage": "post_edit",
+                "continuity_strategy": "same_shot_continuation",
+                "policy_id": "policy_boundary_a",
+                "reason": "按显式事件组织，保持已声明相位；后期同镜接缝不自动成为真实新镜头。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "boundary_id": "boundary_cut",
+                "from_segment": "segment_turn",
+                "to_segment": "segment_turn",
+                "from_shot": "shot_a",
+                "to_shot": "shot_b",
+                "event_id": "event_cut_ab",
+                "execution_stage": "model_internal",
+                "continuity_strategy": "continuous_action",
+                "policy_id": "policy_boundary_cut",
+                "reason": "按显式事件组织，保持已声明相位；后期同镜接缝不自动成为真实新镜头。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "boundary_id": "boundary_b",
+                "from_segment": "segment_turn",
+                "to_segment": "segment_finish",
+                "from_shot": "shot_b",
+                "to_shot": "shot_b",
+                "event_id": "event_join_b",
+                "execution_stage": "post_edit",
+                "continuity_strategy": "same_shot_continuation",
+                "policy_id": "policy_boundary_b",
+                "reason": "按显式事件组织，保持已声明相位；后期同镜接缝不自动成为真实新镜头。",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "time_requests": [
+              {
+                "request_id": "map_segment_intro",
+                "segment_id": "segment_intro",
+                "owner": "M7",
+                "reason": "请求权威源窗到任务/作品/成片时间的映射；M9不计算。"
+              },
+              {
+                "request_id": "map_segment_turn",
+                "segment_id": "segment_turn",
+                "owner": "M7",
+                "reason": "请求权威源窗到任务/作品/成片时间的映射；M9不计算。"
+              },
+              {
+                "request_id": "map_segment_finish",
+                "segment_id": "segment_finish",
+                "owner": "M7",
+                "reason": "请求权威源窗到任务/作品/成片时间的映射；M9不计算。"
+              }
+            ]
+          }
+        },
+        "continuity_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "policies": [
+              {
+                "policy_id": "policy_boundary_a",
+                "boundary_id": "boundary_a",
+                "from_shot": "shot_a",
+                "to_shot": "shot_a",
+                "status": "approved",
+                "invariants": [
+                  "人物身份",
+                  "转体方向与未完成阶段"
+                ],
+                "allowed_changes": [],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "policy_id": "policy_boundary_cut",
+                "boundary_id": "boundary_cut",
+                "from_shot": "shot_a",
+                "to_shot": "shot_b",
+                "status": "approved",
+                "invariants": [
+                  "人物身份",
+                  "转体方向与未完成阶段"
+                ],
+                "allowed_changes": [
+                  "真实切点改变观察视角"
+                ],
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "policy_id": "policy_boundary_b",
+                "boundary_id": "boundary_b",
+                "from_shot": "shot_b",
+                "to_shot": "shot_b",
+                "status": "approved",
+                "invariants": [
+                  "人物身份",
+                  "转体方向与未完成阶段"
+                ],
+                "allowed_changes": [],
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ],
+            "states": [
+              {
+                "state_id": "entry_task_intro",
+                "shot_id": "shot_a",
+                "edge": "initial",
+                "description": "该任务在所属镜头的明确起点，相位由本任务内容与M8交接记录指定。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "state_id": "exit_task_intro",
+                "shot_id": "shot_a",
+                "edge": "final",
+                "description": "该任务在所属镜头的明确终点，不自动代表整个镜头的最终帧。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "state_id": "entry_task_turn",
+                "shot_id": "shot_a",
+                "edge": "initial",
+                "description": "该任务在所属镜头的明确起点，相位由本任务内容与M8交接记录指定。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "state_id": "exit_task_turn",
+                "shot_id": "shot_b",
+                "edge": "final",
+                "description": "该任务在所属镜头的明确终点，不自动代表整个镜头的最终帧。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "state_id": "entry_task_finish",
+                "shot_id": "shot_b",
+                "edge": "initial",
+                "description": "该任务在所属镜头的明确起点，相位由本任务内容与M8交接记录指定。",
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "state_id": "exit_task_finish",
+                "shot_id": "shot_b",
+                "edge": "final",
+                "description": "该任务在所属镜头的明确终点，不自动代表整个镜头的最终帧。",
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "capability_context": {
+          "owner": "external",
+          "source_id": "capability_fixture",
+          "source_version": "fixture-1",
+          "values": {
+            "profiles": [
+              {
+                "profile_id": "profile_fixture",
+                "backend": "fictional-backend-for-contract-tests",
+                "workflow": "fixture-only",
+                "status": "known",
+                "supported_modes": [
+                  "T2VA",
+                  "I2VA",
+                  "FL2VA",
+                  "L2VA",
+                  "Ref2VA"
+                ],
+                "duration_limit": {
+                  "unit": "second",
+                  "value": 10
+                },
+                "max_shots": 3,
+                "supports_same_shot_split": true,
+                "source_refs": [
+                  "capability_fixture"
+                ]
+              }
+            ]
+          }
+        },
+        "time_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "records": [
+              {
+                "request_id": "time_task_intro",
+                "task_id": "task_intro",
+                "duration": {
+                  "unit": "second",
+                  "value": 3
+                },
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "request_id": "time_task_turn",
+                "task_id": "task_turn",
+                "duration": {
+                  "unit": "second",
+                  "value": 6
+                },
+                "source_refs": [
+                  "design"
+                ]
+              },
+              {
+                "request_id": "time_task_finish",
+                "task_id": "task_finish",
+                "duration": {
+                  "unit": "second",
+                  "value": 3
+                },
+                "source_refs": [
+                  "design"
+                ]
+              }
+            ]
+          }
+        },
+        "asset_context": {
+          "owner": "external",
+          "source_id": "design",
+          "source_version": "design-1",
+          "values": {
+            "asset_ids": []
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "kind": "M9ReleaseManifest",
+  "package_version": "0.1.0",
+  "contract_version": "1.0.0",
+  "date": "2026-11-05",
+  "timezone": "America/Los_Angeles",
+  "base_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+  "package": "docs/h3skill/h3-shot-edit-generation",
+  "scope": "M9 and M9.1–M9.3 text workflow, declared deterministic contracts and portability; no H3 or media execution.",
+  "frozen_plan_baseline": "skillplan-v0.1.2-608813b",
+  "excluded_to_avoid_self_reference": [
+    "docs/h3skill/release-manifest-m9.json",
+    "docs/h3skill/validation/m9/release-check.json",
+    "docs/h3skill/validation/m9/release-check.stderr.txt"
+  ],
+  "excluded_note": "The manifest and final verifier result are fixed by the publication commit; they do not hash themselves.",
+  "prior_packages_unchanged": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M7",
+    "M8"
+  ],
+  "file_count": 54,
+  "files": [
+    {
+      "path": "docs/h3skill/20261105-development-m9-v001.md",
+      "bytes": 17626,
+      "sha256": "0a42b19f89aa3dcbe6cc52b014620bd5e13e7e4c9465587b6655e287515f90ca",
+      "git_blob_sha1": "5c9fcce2d987eeb281253c9368eca92fc7769bd7"
+    },
+    {
+      "path": "docs/h3skill/README.md",
+      "bytes": 31313,
+      "sha256": "18a4c17f8576ee29f75527d2349756da4bc77daf2834fbff8c94a179b2a68b1d",
+      "git_blob_sha1": "a39e6cabaf20e369fcf0ceb52d732d0310003aac"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/SKILL.md",
+      "bytes": 10265,
+      "sha256": "4a0d07013b111d1cd957913105f43b5237137398454cd5cf24b2757e6d4d0326",
+      "git_blob_sha1": "26da43dc06e6737497c67d355550c1c14259b3b0"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/assets/impact-after.json",
+      "bytes": 47220,
+      "sha256": "8a0dfc3a71c3413458dd6acd720781684e43363851f495a46d43bcca9394b1c5",
+      "git_blob_sha1": "92cf725e5e435da5e733796ff7b45127298c91d9"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/assets/impact-before.json",
+      "bytes": 47211,
+      "sha256": "3a875c243121f9d24d12a6c77429e6ef06edb4a7c9955769868586ccc26952e0",
+      "git_blob_sha1": "a9cccf2688c02ce0ea30fe51ca50123f1cc68493"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/assets/proposal-batch.json",
+      "bytes": 49292,
+      "sha256": "b6832e82076528a0c60a964fde22435fadacc0d8b430181b645709cb060d80de",
+      "git_blob_sha1": "494179302bf13fc5bed4576892d3e1e83755fdc9"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/assets/proposal-standalone-m9-1.json",
+      "bytes": 5661,
+      "sha256": "a7480b0dde62c8ee3dde8b5439844ed35d75f649d340954c0b03140f70a3dd98",
+      "git_blob_sha1": "278a4272a838ecf466a4c44bcb2b7dbcbfb5fd21"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/assets/proposal-standalone-m9-2.json",
+      "bytes": 15170,
+      "sha256": "383ec08fee2cfdeab46984ec7f5504dc8a3d43f7bb811393a9b83278a973781a",
+      "git_blob_sha1": "3accb27132affc57bd217110d57aacb7f3b5b461"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/assets/proposal-standalone-m9-3.json",
+      "bytes": 22498,
+      "sha256": "fc702f932ac9ee156637dfff5f7a38c137f161fb0f2c466ec80b6879c31cbb1a",
+      "git_blob_sha1": "a305b75e7d9850450c20f6df4ec91a2e706467ef"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/assets/request-standalone-m9-1.json",
+      "bytes": 1543,
+      "sha256": "81aae8e8454c6089adc6bc6e209971a61ca5c3496ba65e60dfaefdcc9c7ae980",
+      "git_blob_sha1": "232e4c44502d3b7f165c0dd1698d3a551f39d793"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/assets/request-standalone-m9-2.json",
+      "bytes": 10413,
+      "sha256": "5131f97f9443411921e7af587b50481f5987e53cecb792d1b9e158040fcdd666",
+      "git_blob_sha1": "1a298e4e392c2f76a1a734f286fbd1680fb62daa"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/assets/request-standalone-m9-3.json",
+      "bytes": 16009,
+      "sha256": "9759eabd5cc702852baa0bb5726f543241b8364eb683d7dd468f4893a1a0df76",
+      "git_blob_sha1": "3afb88261d807ef41ba5b9735099e4e97979942c"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/assets/requests.json",
+      "bytes": 31878,
+      "sha256": "604e6481ddbc46e82568496f374c3d927185fe5ffe79b962ec937bd235fe52e0",
+      "git_blob_sha1": "bffb7d6d3397c530291439dcc55a9704b2c5e696"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/assets/state-empty.json",
+      "bytes": 295,
+      "sha256": "3b6fb4ffdd61fcc50adfc0e607e73f50792bcc65376809240b5a2a08824e723e",
+      "git_blob_sha1": "ce4d8d177adcc834815f62f17908efb4f98eb7c8"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/audit-and-handoff.md",
+      "bytes": 6648,
+      "sha256": "d9e8d5b5da91e12923ac135930cf5b73aae7c384316acc155c6795122baa81cb",
+      "git_blob_sha1": "b2cf9aeb971583ab186bcd85a79099406c32ac63"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/case-evidence.md",
+      "bytes": 22478,
+      "sha256": "a1f3aefc831049396411fce28f120a28574f504b09785ebc60dc5da7bde9c875",
+      "git_blob_sha1": "86aa440828e6ee2a071019859269e5ea2dbbbe5f"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/case-index.json",
+      "bytes": 95412,
+      "sha256": "232f0a516f9794988c307d530e31ed8a56ff5446ffcce2b20cdeb99b50ee61c4",
+      "git_blob_sha1": "71960851e152e3ab637d05668c4d006a1ec65ce4"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/case-source-LICENSE.txt",
+      "bytes": 1069,
+      "sha256": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+      "git_blob_sha1": "1edcc82393ad4bce49aca4ab0c074dc75fcc268e"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/contract-guide.md",
+      "bytes": 14395,
+      "sha256": "9eebd003f4ac75b3c255efa2a4d589bfa72cb138828d9fee1ee03e61115a528c",
+      "git_blob_sha1": "9713e3d1db3d047b081c536b8588ef1c3cd7735d"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/contracts.json",
+      "bytes": 47382,
+      "sha256": "3feaed9c23a016df3486754ee1f9cc95a7d93cfcf5aaceaed6e8e0f6f578753e",
+      "git_blob_sha1": "e4795172b8e49d35b653339fc3c995dd37720c44"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/edit-topology-and-windows.md",
+      "bytes": 7136,
+      "sha256": "3f7662b8aeba83133031111450e1fed5ec68338eeca43cc04328a47eba8479b0",
+      "git_blob_sha1": "130f9a39c74c7bc92f93d97314263a998c14db57"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/generation-partition.md",
+      "bytes": 5184,
+      "sha256": "fd0da92aa19b5397856404f0e760926789f137377dfcdf11d3465350afc54a2b",
+      "git_blob_sha1": "89d4007e9b915ec839a7077ce00fda1ff81ea88c"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/h3-NOTICE.txt",
+      "bytes": 121,
+      "sha256": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+      "git_blob_sha1": "65d507740b0ae63baacdcc501b35ee1ffa5d1226"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/h3-base-official.txt",
+      "bytes": 15773,
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+      "git_blob_sha1": "40cf586a634d677d6b7107b367cf0ec9621be728"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/h3-label-mapping.md",
+      "bytes": 14008,
+      "sha256": "5280319ae10cff0888f70e6fbec9efdd2a0834c4c7824d9516702855dbaf11fd",
+      "git_blob_sha1": "d4cb50e914097290d7e12a88480555ddd7d090cc"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/h3-protocol-source.json",
+      "bytes": 31071,
+      "sha256": "ec6efef2d6df083d5d39938903aae3e37270d745d3bb1e6171528b9018c6efe9",
+      "git_blob_sha1": "cdd4151cc0a2e80cbfe38defe814674c605a4387"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/h3-ref-official.txt",
+      "bytes": 23553,
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+      "git_blob_sha1": "7ae1b2d07d743fd2392258a96449be9e9e322d35"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/module-registry.json",
+      "bytes": 20453,
+      "sha256": "4133d0508687529c5d14b34c6022c5768f974cfadbe72a674d3ddf36f0811c12",
+      "git_blob_sha1": "56ebeee21df1fd2d7d472b703c8d7321a633116e"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/provenance-and-license.md",
+      "bytes": 5736,
+      "sha256": "634c1682e474ae2c323afe12f5f36d49d3df9b7bde11494d2e9da74048654ee6",
+      "git_blob_sha1": "8430db9120935f9704e3bab310a1c9176faca7ad"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/references/shot-and-panel-mapping.md",
+      "bytes": 4099,
+      "sha256": "a2e586fd17f8f212b140dd06db44daf1917e910769d37d2d4dd2f56fece09bb2",
+      "git_blob_sha1": "5971222ae63a43bafce4468d03bb0b5aaceeb131"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/scripts/_schema.py",
+      "bytes": 3751,
+      "sha256": "fea0f17a9fa76bac2fdc12fc97ddcb7ca21f2bbc3def6ea795e487ca4a346cdc",
+      "git_blob_sha1": "03c7d31ca071d3de862361b0362ab23693569375"
+    },
+    {
+      "path": "docs/h3skill/h3-shot-edit-generation/scripts/m9_contract.py",
+      "bytes": 39997,
+      "sha256": "4971c7e2e1eae4c17095a80a46ccb272fe1cd6b81badd60844e439d14eb2f070",
+      "git_blob_sha1": "ac7b5a5117059b9f7590c2fe2718e2281e499a9f"
+    },
+    {
+      "path": "docs/h3skill/tests/m9/portability-results.json",
+      "bytes": 3166,
+      "sha256": "c16378f5444f9fb1d23502f1638ff0eb3cc0f5d73d3140e25209afd0af2b7016",
+      "git_blob_sha1": "b6c4e44467d8b2bd66695c9529340b2f4b90c4ae"
+    },
+    {
+      "path": "docs/h3skill/tests/m9/test_contract.py",
+      "bytes": 15259,
+      "sha256": "352bdae65726a853970d0aa5a94f9d8e59c5b3c3143b1502eef1631662705d0e",
+      "git_blob_sha1": "52fd2361591405ea4266380bd4065b43142c6698"
+    },
+    {
+      "path": "docs/h3skill/tests/m9_portability.py",
+      "bytes": 5841,
+      "sha256": "cd20504efdb9a596db6afed449f878f97ab9a3b982982a66ae3380b0dd5755fe",
+      "git_blob_sha1": "4b23c3c520faec08222da603d7e4e78ef56cfeae"
+    },
+    {
+      "path": "docs/h3skill/tools/verify_m9_release.py",
+      "bytes": 11366,
+      "sha256": "7c8675715454f15f6f2d586b8fedd936027ce5819287a13bb44cb3d84f291fcd",
+      "git_blob_sha1": "b532eefb401aa556db4399b52d0d07d4d838184a"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/behavior.stderr.txt",
+      "bytes": 3639,
+      "sha256": "1f81bf996251542c8295aad743cfbc8e2082068200ae65405c5a246878eaec87",
+      "git_blob_sha1": "c1ba851980bcd2d61f82aade4e179dcfaf81b90e"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/behavior.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/diff-check.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/diff-check.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/forward-use-final/dance-plan.md",
+      "bytes": 5098,
+      "sha256": "bfa0d5a8e08c7b2832723efad13863c5ae76bef4689935bda7a3e832376ae6d8",
+      "git_blob_sha1": "c5f9d3e2cf4b4085bcfdbbbb30fe0cec68b69e45"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/forward-use-final/read-log.json",
+      "bytes": 4300,
+      "sha256": "4992a7dcad0199ec421e4850fcc700c402d368877f8c6c3a87bad6a0e14fe09f",
+      "git_blob_sha1": "44c94a1ec459d69a994a6b2386ff676cc96de773"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/forward-use-final/review.md",
+      "bytes": 2738,
+      "sha256": "b28e4992bc5585f9cfe87b614a58666bb939c1b57c7c8d4165dacd974591c7bf",
+      "git_blob_sha1": "5fc44d357763a9ed5ddb125cb2a08031c15eef37"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/forward-use/dance-plan.md",
+      "bytes": 6680,
+      "sha256": "4b4c1936125b6de748acb55792c88f71545255811c43201fe68bc778f5e205f1",
+      "git_blob_sha1": "1149b585653d62185da4c005bb77c1579ff5f611"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/forward-use/read-log.json",
+      "bytes": 7767,
+      "sha256": "399eb65d73536a1a876ae0f9cdba8c2e551201e7a7ffa1df52e3655e73a1e5c1",
+      "git_blob_sha1": "6bed3e44e369991cc478787ee238e1ae262c4a72"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/forward-use/review-initial.md",
+      "bytes": 1918,
+      "sha256": "4e711184c6b53dc77b748da4f1aa1ec7ca6511eef5124fe9e4e99c6bfd7d64c0",
+      "git_blob_sha1": "148f0340c3582e8b508ebb2236667858e41f3614"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/independent-doc-review.md",
+      "bytes": 1355,
+      "sha256": "fccad2f2b2d663ed3791a4638a9091fc709bb2c30942f0063f10007be0fbe16a",
+      "git_blob_sha1": "3aed03c9e9016f53c29041e0c611a854d9e5ac3c"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/official-format.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/official-format.stdout.txt",
+      "bytes": 16,
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "git_blob_sha1": "bff765fd541fb9563ef683506b3f1eb10a0b31ed"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/portability.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/portability.stdout.txt",
+      "bytes": 3166,
+      "sha256": "c16378f5444f9fb1d23502f1638ff0eb3cc0f5d73d3140e25209afd0af2b7016",
+      "git_blob_sha1": "b6c4e44467d8b2bd66695c9529340b2f4b90c4ae"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/protected-baseline.json",
+      "bytes": 97503,
+      "sha256": "2aab6691ea0645c3067ddd35370ec0d1d640511e36c0581056ba589ef06fc408",
+      "git_blob_sha1": "fd38067622a129e6e7cc96440128ecf33bd4363c"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/protocol-interface-review.md",
+      "bytes": 2498,
+      "sha256": "8ea305fa6e3682b5eedb396ef7821be274c2b88fd878c3a71c640b819c685b4c",
+      "git_blob_sha1": "44ecb8b80cd2d2d4b031479c4624c521bda6a97e"
+    },
+    {
+      "path": "docs/h3skill/validation/m9/validation-results.json",
+      "bytes": 7143,
+      "sha256": "09a8ec3960de225bdae87530a6fbb76a0c56d7e18e9c7d59e21c4908f41d853f",
+      "git_blob_sha1": "87bb4ba61539440887f1bb6f29a734fe7739d48a"
+    }
+  ]
+}

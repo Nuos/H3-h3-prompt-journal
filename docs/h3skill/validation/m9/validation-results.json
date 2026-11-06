@@ -1,0 +1,112 @@
+{
+  "kind": "M9ExecutedValidation",
+  "recorded_at_utc": "2026-11-06T01:52:18.623034+00:00",
+  "development_date": "2026-11-05",
+  "development_timezone": "America/Los_Angeles",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "commands": [
+    {
+      "name": "behavior",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "docs/h3skill/tests/m9",
+        "-p",
+        "test*.py",
+        "-v"
+      ],
+      "cwd": ".",
+      "started_at_utc": "2026-11-06T01:52:17.127079+00:00",
+      "ended_at_utc": "2026-11-06T01:52:17.668524+00:00",
+      "exit_code": 0,
+      "stdout": "docs/h3skill/validation/m9/behavior.stdout.txt",
+      "stderr": "docs/h3skill/validation/m9/behavior.stderr.txt"
+    },
+    {
+      "name": "portability",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "docs/h3skill/tests/m9_portability.py"
+      ],
+      "cwd": ".",
+      "started_at_utc": "2026-11-06T01:52:17.668671+00:00",
+      "ended_at_utc": "2026-11-06T01:52:18.555830+00:00",
+      "exit_code": 0,
+      "stdout": "docs/h3skill/validation/m9/portability.stdout.txt",
+      "stderr": "docs/h3skill/validation/m9/portability.stderr.txt"
+    },
+    {
+      "name": "official-format",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "docs/h3skill/_standards/anthropics-quick-validate.py",
+        "docs/h3skill/h3-shot-edit-generation"
+      ],
+      "cwd": ".",
+      "started_at_utc": "2026-11-06T01:52:18.555950+00:00",
+      "ended_at_utc": "2026-11-06T01:52:18.607948+00:00",
+      "exit_code": 0,
+      "stdout": "docs/h3skill/validation/m9/official-format.stdout.txt",
+      "stderr": "docs/h3skill/validation/m9/official-format.stderr.txt"
+    },
+    {
+      "name": "diff-check",
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "HEAD"
+      ],
+      "cwd": ".",
+      "started_at_utc": "2026-11-06T01:52:18.608128+00:00",
+      "ended_at_utc": "2026-11-06T01:52:18.620175+00:00",
+      "exit_code": 0,
+      "stdout": "docs/h3skill/validation/m9/diff-check.stdout.txt",
+      "stderr": "docs/h3skill/validation/m9/diff-check.stderr.txt"
+    }
+  ],
+  "runtime_and_test_sha256": {
+    "docs/h3skill/h3-shot-edit-generation/SKILL.md": "4a0d07013b111d1cd957913105f43b5237137398454cd5cf24b2757e6d4d0326",
+    "docs/h3skill/h3-shot-edit-generation/assets/impact-after.json": "8a0dfc3a71c3413458dd6acd720781684e43363851f495a46d43bcca9394b1c5",
+    "docs/h3skill/h3-shot-edit-generation/assets/impact-before.json": "3a875c243121f9d24d12a6c77429e6ef06edb4a7c9955769868586ccc26952e0",
+    "docs/h3skill/h3-shot-edit-generation/assets/proposal-batch.json": "b6832e82076528a0c60a964fde22435fadacc0d8b430181b645709cb060d80de",
+    "docs/h3skill/h3-shot-edit-generation/assets/proposal-standalone-m9-1.json": "a7480b0dde62c8ee3dde8b5439844ed35d75f649d340954c0b03140f70a3dd98",
+    "docs/h3skill/h3-shot-edit-generation/assets/proposal-standalone-m9-2.json": "383ec08fee2cfdeab46984ec7f5504dc8a3d43f7bb811393a9b83278a973781a",
+    "docs/h3skill/h3-shot-edit-generation/assets/proposal-standalone-m9-3.json": "fc702f932ac9ee156637dfff5f7a38c137f161fb0f2c466ec80b6879c31cbb1a",
+    "docs/h3skill/h3-shot-edit-generation/assets/request-standalone-m9-1.json": "81aae8e8454c6089adc6bc6e209971a61ca5c3496ba65e60dfaefdcc9c7ae980",
+    "docs/h3skill/h3-shot-edit-generation/assets/request-standalone-m9-2.json": "5131f97f9443411921e7af587b50481f5987e53cecb792d1b9e158040fcdd666",
+    "docs/h3skill/h3-shot-edit-generation/assets/request-standalone-m9-3.json": "9759eabd5cc702852baa0bb5726f543241b8364eb683d7dd468f4893a1a0df76",
+    "docs/h3skill/h3-shot-edit-generation/assets/requests.json": "604e6481ddbc46e82568496f374c3d927185fe5ffe79b962ec937bd235fe52e0",
+    "docs/h3skill/h3-shot-edit-generation/assets/state-empty.json": "3b6fb4ffdd61fcc50adfc0e607e73f50792bcc65376809240b5a2a08824e723e",
+    "docs/h3skill/h3-shot-edit-generation/references/audit-and-handoff.md": "d9e8d5b5da91e12923ac135930cf5b73aae7c384316acc155c6795122baa81cb",
+    "docs/h3skill/h3-shot-edit-generation/references/case-evidence.md": "a1f3aefc831049396411fce28f120a28574f504b09785ebc60dc5da7bde9c875",
+    "docs/h3skill/h3-shot-edit-generation/references/case-index.json": "232f0a516f9794988c307d530e31ed8a56ff5446ffcce2b20cdeb99b50ee61c4",
+    "docs/h3skill/h3-shot-edit-generation/references/case-source-LICENSE.txt": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7",
+    "docs/h3skill/h3-shot-edit-generation/references/contract-guide.md": "9eebd003f4ac75b3c255efa2a4d589bfa72cb138828d9fee1ee03e61115a528c",
+    "docs/h3skill/h3-shot-edit-generation/references/contracts.json": "3feaed9c23a016df3486754ee1f9cc95a7d93cfcf5aaceaed6e8e0f6f578753e",
+    "docs/h3skill/h3-shot-edit-generation/references/edit-topology-and-windows.md": "3f7662b8aeba83133031111450e1fed5ec68338eeca43cc04328a47eba8479b0",
+    "docs/h3skill/h3-shot-edit-generation/references/generation-partition.md": "fd0da92aa19b5397856404f0e760926789f137377dfcdf11d3465350afc54a2b",
+    "docs/h3skill/h3-shot-edit-generation/references/h3-NOTICE.txt": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a",
+    "docs/h3skill/h3-shot-edit-generation/references/h3-base-official.txt": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+    "docs/h3skill/h3-shot-edit-generation/references/h3-label-mapping.md": "5280319ae10cff0888f70e6fbec9efdd2a0834c4c7824d9516702855dbaf11fd",
+    "docs/h3skill/h3-shot-edit-generation/references/h3-protocol-source.json": "ec6efef2d6df083d5d39938903aae3e37270d745d3bb1e6171528b9018c6efe9",
+    "docs/h3skill/h3-shot-edit-generation/references/h3-ref-official.txt": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+    "docs/h3skill/h3-shot-edit-generation/references/module-registry.json": "4133d0508687529c5d14b34c6022c5768f974cfadbe72a674d3ddf36f0811c12",
+    "docs/h3skill/h3-shot-edit-generation/references/provenance-and-license.md": "634c1682e474ae2c323afe12f5f36d49d3df9b7bde11494d2e9da74048654ee6",
+    "docs/h3skill/h3-shot-edit-generation/references/shot-and-panel-mapping.md": "a2e586fd17f8f212b140dd06db44daf1917e910769d37d2d4dd2f56fece09bb2",
+    "docs/h3skill/h3-shot-edit-generation/scripts/_schema.py": "fea0f17a9fa76bac2fdc12fc97ddcb7ca21f2bbc3def6ea795e487ca4a346cdc",
+    "docs/h3skill/h3-shot-edit-generation/scripts/m9_contract.py": "4971c7e2e1eae4c17095a80a46ccb272fe1cd6b81badd60844e439d14eb2f070",
+    "docs/h3skill/tests/m9/test_contract.py": "352bdae65726a853970d0aa5a94f9d8e59c5b3c3143b1502eef1631662705d0e",
+    "docs/h3skill/tests/m9_portability.py": "cd20504efdb9a596db6afed449f878f97ab9a3b982982a66ae3380b0dd5755fe"
+  },
+  "unchanged_during_validation": true,
+  "media_observations": 0,
+  "h3_inference_runs": 0,
+  "scope": "Recorded deterministic and portability checks; forward use is separately recorded. No global Gate or media-quality certification."
+}

@@ -1,0 +1,52 @@
+{
+  "kind": "M9Request",
+  "contract_version": "1.0.0",
+  "work_id": "m9_design_demo",
+  "base_version": 0,
+  "request_id": "req_m9_1",
+  "target": "M9.1",
+  "sources": {
+    "design": {
+      "kind": "design_decision",
+      "locator": "synthetic-design-fixture://m9/turn-assembly",
+      "version": "design-1",
+      "excerpt": "D类工程夹具：以下两镜、三个源片、数字区间、状态及许可均用于合同演示，不是原案例、真实媒体观察或H3能力保证。"
+    },
+    "capability_fixture": {
+      "kind": "capability_evidence",
+      "locator": "synthetic-capability-fixture://m9/backend-example",
+      "version": "fixture-1",
+      "excerpt": "仅用于执行正反例的虚构兼容后端：本示例允许最多3镜和10秒、允许同镜分段；不能作为任何真实H3后端能力资料。"
+    }
+  },
+  "inputs": {
+    "brief": "独立整理五单位中的镜头、阶段与画格；相位可跨镜。",
+    "action_context": {
+      "owner": "external",
+      "source_id": "design",
+      "source_version": "design-1",
+      "values": {
+        "phase_ids": [
+          "phase_approach",
+          "phase_turn",
+          "phase_settle"
+        ],
+        "event_ids": [
+          "event_join_a",
+          "event_cut_ab",
+          "event_join_b"
+        ]
+      }
+    },
+    "camera_context": {
+      "owner": "external",
+      "source_id": "design",
+      "source_version": "design-1",
+      "values": {
+        "camera_event_ids": [
+          "camera_pan_track"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "suite": "m9-portability",
+  "timestamp_utc": "2026-11-06T01:52:18.545276+00:00",
+  "status": "passed",
+  "checks_run": 18,
+  "checks": [
+    {
+      "name": "isolated_help",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "independent_route_m9_1",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "independent_check_m9_1",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "independent_accept_m9_1",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "independent_route_m9_2",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "independent_check_m9_2",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "independent_accept_m9_2",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "independent_route_m9_3",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "independent_check_m9_3",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "independent_accept_m9_3",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "atomic_parent_accept",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "idempotent_parent_replay",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "exact_replay_preserves_state_and_version",
+      "passed": true
+    },
+    {
+      "name": "registered_read_path_impact",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "display_only_change_does_not_stale_unrelated_readers",
+      "passed": true
+    },
+    {
+      "name": "standard_library_and_own_helper_only",
+      "passed": true,
+      "unbundled_imports": []
+    },
+    {
+      "name": "installed_package_unchanged",
+      "passed": true
+    },
+    {
+      "name": "no_upstream_or_repository_in_detached_tree",
+      "passed": true
+    }
+  ],
+  "copied_files": 30,
+  "dependencies": "Python 3.10+ standard library, only one copied skill package",
+  "isolation": "Python -I -B; empty PATH; unrelated cwd; no SDK/site dependency or upstream invocation",
+  "media_verification": "not_performed"
+}

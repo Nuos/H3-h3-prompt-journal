@@ -1,0 +1,1976 @@
+{
+  "schema_version": "1.0.0",
+  "module": "M9",
+  "source_repository": "https://github.com/Nuos/H3-h3-prompt-journal",
+  "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+  "source_tree": "70a8a2a632d633f5d532db23cad99c772dc23026",
+  "indexed_at": "2026-11-05",
+  "indexed_timezone": "America/Los_Angeles",
+  "evidence_legend": {
+    "F": "Directly readable case-text requirement, numeric value, structure or conflict; not proof of generated-media behavior.",
+    "A": "Author-reported experiment, observation, failure, improvement or explanation; not independently reproduced by this task.",
+    "D": "Derived planning/audit rule or local contract design, with declared source and applicability.",
+    "U": "Unavailable, unmeasured, unobserved or insufficiently evidenced; must not be marked passed."
+  },
+  "coverage": {
+    "case_directory_count": 29,
+    "text_file_count": 98,
+    "text_bytes": 2507574,
+    "text_lines": 45614,
+    "read_status_counts": {
+      "full_text": 11,
+      "partial_text": 0,
+      "inventory_only": 87
+    },
+    "reviewed_case_count": 8,
+    "cases_with_at_least_one_full_text_file": 8,
+    "full_text_read_file_count": 11,
+    "full_text_read_lines": 4082,
+    "full_text_read_bytes": 223523,
+    "cases_with_all_tracked_text_files_read": [
+      "2026-10-identity-only-half-body-dance-six-segment",
+      "2026-10-leg-lift-contact-cut-stocking-six-look",
+      "2026-10-sock-showcase-right-entry-three-shot"
+    ],
+    "excluded_tracked_nontext_file_count": 29,
+    "media_files_inspected": 0,
+    "image_files_inspected": 0,
+    "audio_files_inspected": 0,
+    "video_files_inspected": 0,
+    "h3_inference_runs": 0,
+    "media_status": "media_not_inspected",
+    "coverage_note": "All 98 tracked .md/.txt/.json files are inventoried at the fixed commit. Semantic reading covers 11 complete files in eight October cases; the other 87 files are inventory_only. No earlier-module or frozen-plan reading claim is inherited. A case with one fully read file is not necessarily a fully read case."
+  },
+  "inventory_verification": {
+    "performed": true,
+    "performer": "m9_evidence",
+    "method": "git ls-tree -r -z at source_commit; for each text file, compute SHA-1 of Git blob header plus bytes and compare to the pinned tree blob ID; compute SHA-256, byte length and UTF-8 splitlines count.",
+    "all_text_blob_ids_match_pinned_commit": true,
+    "scope": "Metadata and byte identity only; no inference that the source claims are correct."
+  },
+  "keyword_scan": {
+    "performed": false,
+    "scope": "No whole-corpus keyword scan in this M9 evidence task. Files not listed in read_receipts remain inventory_only."
+  },
+  "read_receipts": [
+    {
+      "reader": "m9_evidence",
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md",
+      "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+      "operation": "Text displayed through exec_command using nl/sed or complete cat; any initially truncated opening was re-read before assigning full_text. Listed chunks are normalized non-overlapping complete coverage.",
+      "scope": "full_text",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 475
+        }
+      ],
+      "displayed_coverage_chunks": [
+        {
+          "start": 1,
+          "end": 160
+        },
+        {
+          "start": 161,
+          "end": 320
+        },
+        {
+          "start": 321,
+          "end": 475
+        }
+      ],
+      "evidence_ids": [
+        "C05"
+      ]
+    },
+    {
+      "reader": "m9_evidence",
+      "path": "case-studies/2026-10-camera-movement-discipline-library/prompt.md",
+      "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+      "operation": "Text displayed through exec_command using nl/sed or complete cat; any initially truncated opening was re-read before assigning full_text. Listed chunks are normalized non-overlapping complete coverage.",
+      "scope": "full_text",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 234
+        }
+      ],
+      "displayed_coverage_chunks": [
+        {
+          "start": 1,
+          "end": 234
+        }
+      ],
+      "evidence_ids": [
+        "C03"
+      ]
+    },
+    {
+      "reader": "m9_evidence",
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+      "operation": "Text displayed through exec_command using nl/sed or complete cat; any initially truncated opening was re-read before assigning full_text. Listed chunks are normalized non-overlapping complete coverage.",
+      "scope": "full_text",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 199
+        }
+      ],
+      "displayed_coverage_chunks": [
+        {
+          "start": 1,
+          "end": 199
+        }
+      ],
+      "evidence_ids": [
+        "C01"
+      ]
+    },
+    {
+      "reader": "m9_evidence",
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+      "operation": "Text displayed through exec_command using nl/sed or complete cat; any initially truncated opening was re-read before assigning full_text. Listed chunks are normalized non-overlapping complete coverage.",
+      "scope": "full_text",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 54
+        }
+      ],
+      "displayed_coverage_chunks": [
+        {
+          "start": 1,
+          "end": 54
+        }
+      ],
+      "evidence_ids": [
+        "C04"
+      ]
+    },
+    {
+      "reader": "m9_evidence",
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+      "operation": "Text displayed through exec_command using nl/sed or complete cat; any initially truncated opening was re-read before assigning full_text. Listed chunks are normalized non-overlapping complete coverage.",
+      "scope": "full_text",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 1524
+        }
+      ],
+      "displayed_coverage_chunks": [
+        {
+          "start": 1,
+          "end": 400
+        },
+        {
+          "start": 401,
+          "end": 800
+        },
+        {
+          "start": 801,
+          "end": 1200
+        },
+        {
+          "start": 1201,
+          "end": 1524
+        }
+      ],
+      "evidence_ids": [
+        "C04"
+      ]
+    },
+    {
+      "reader": "m9_evidence",
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+      "operation": "Text displayed through exec_command using nl/sed or complete cat; any initially truncated opening was re-read before assigning full_text. Listed chunks are normalized non-overlapping complete coverage.",
+      "scope": "full_text",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 346
+        }
+      ],
+      "displayed_coverage_chunks": [
+        {
+          "start": 1,
+          "end": 80
+        },
+        {
+          "start": 81,
+          "end": 346
+        }
+      ],
+      "evidence_ids": [
+        "C02"
+      ]
+    },
+    {
+      "reader": "m9_evidence",
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+      "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+      "operation": "Text displayed through exec_command using nl/sed or complete cat; any initially truncated opening was re-read before assigning full_text. Listed chunks are normalized non-overlapping complete coverage.",
+      "scope": "full_text",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 58
+        }
+      ],
+      "displayed_coverage_chunks": [
+        {
+          "start": 1,
+          "end": 58
+        }
+      ],
+      "evidence_ids": [
+        "C07"
+      ]
+    },
+    {
+      "reader": "m9_evidence",
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+      "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+      "operation": "Text displayed through exec_command using nl/sed or complete cat; any initially truncated opening was re-read before assigning full_text. Listed chunks are normalized non-overlapping complete coverage.",
+      "scope": "full_text",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 759
+        }
+      ],
+      "displayed_coverage_chunks": [
+        {
+          "start": 1,
+          "end": 400
+        },
+        {
+          "start": 401,
+          "end": 759
+        }
+      ],
+      "evidence_ids": [
+        "C07"
+      ]
+    },
+    {
+      "reader": "m9_evidence",
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+      "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+      "operation": "Text displayed through exec_command using nl/sed or complete cat; any initially truncated opening was re-read before assigning full_text. Listed chunks are normalized non-overlapping complete coverage.",
+      "scope": "full_text",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 52
+        }
+      ],
+      "displayed_coverage_chunks": [
+        {
+          "start": 1,
+          "end": 52
+        }
+      ],
+      "evidence_ids": [
+        "C08"
+      ]
+    },
+    {
+      "reader": "m9_evidence",
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+      "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+      "operation": "Text displayed through exec_command using nl/sed or complete cat; any initially truncated opening was re-read before assigning full_text. Listed chunks are normalized non-overlapping complete coverage.",
+      "scope": "full_text",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 98
+        }
+      ],
+      "displayed_coverage_chunks": [
+        {
+          "start": 1,
+          "end": 98
+        }
+      ],
+      "evidence_ids": [
+        "C08"
+      ]
+    },
+    {
+      "reader": "m9_evidence",
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+      "source_commit": "36987c56ade886aacfb166a21d6560925c97c330",
+      "operation": "Text displayed through exec_command using nl/sed or complete cat; any initially truncated opening was re-read before assigning full_text. Listed chunks are normalized non-overlapping complete coverage.",
+      "scope": "full_text",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 283
+        }
+      ],
+      "displayed_coverage_chunks": [
+        {
+          "start": 1,
+          "end": 150
+        },
+        {
+          "start": 151,
+          "end": 283
+        }
+      ],
+      "evidence_ids": [
+        "C06"
+      ]
+    }
+  ],
+  "cases": [
+    "2026-08-cinematic-character-reveal-two-part",
+    "2026-08-dual-subject-speed-contrast",
+    "2026-08-first-person-finger-controlled-dance",
+    "2026-08-furina-windsurfing-fashion-mv",
+    "2026-08-single-subject-three-pose",
+    "2026-08-sticker-character-kitchen-comedy",
+    "2026-08-three-person-orbital-long-take",
+    "2026-08-water-obstacle-variety-show",
+    "2026-09-action-chain-sock-fan-comedy",
+    "2026-09-editorial-lamp-rhythm-fashion-ab",
+    "2026-09-purple-veil-dance-seven-segment",
+    "2026-09-snap-lock-editorial-reveal",
+    "2026-09-song-style-classical-dance-six-segment",
+    "2026-09-three-person-prank-freeze-gag-cos-swap",
+    "2026-10-advanced-camera-combinations",
+    "2026-10-baifeng-mengchen-classical-dance-six-segment",
+    "2026-10-camera-movement-discipline-library",
+    "2026-10-classical-wuxia-dance-13-segment",
+    "2026-10-dance-motion-chain-library",
+    "2026-10-four-subject-formation-choreography",
+    "2026-10-h3-motion-transfer",
+    "2026-10-identity-only-half-body-dance-six-segment",
+    "2026-10-kanzaki-beach-sword-dance-18-segment",
+    "2026-10-leg-lift-contact-cut-stocking-six-look",
+    "2026-10-physical-camera-position-library",
+    "2026-10-sock-showcase-right-entry-three-shot",
+    "2026-10-summer-pool-beach-waterline-mv-4-segment",
+    "2026-10-waterfront-solo-dance-two-segment",
+    "2026-10-xiashan-veiled-solo-twelve-segment"
+  ],
+  "evidence_registry": [
+    {
+      "id": "C01",
+      "case_directory": "2026-10-classical-wuxia-dance-13-segment",
+      "topic": "Choose shot mode before continuity policy; standalone generation does not require pose reset.",
+      "paths": [
+        "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md"
+      ],
+      "evidence_kinds": [
+        "F",
+        "A",
+        "D",
+        "U"
+      ],
+      "media_status": "not_inspected"
+    },
+    {
+      "id": "C02",
+      "case_directory": "2026-10-kanzaki-beach-sword-dance-18-segment",
+      "topic": "Keep independent generation context complete and separate postproduction visual bridges from in-generation tasks.",
+      "paths": [
+        "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md"
+      ],
+      "evidence_kinds": [
+        "F",
+        "A",
+        "D",
+        "U"
+      ],
+      "media_status": "not_inspected"
+    },
+    {
+      "id": "C03",
+      "case_directory": "2026-10-camera-movement-discipline-library",
+      "topic": "Condition action-completion cuts versus mid-action phase-match cuts and explicit transition mechanisms.",
+      "paths": [
+        "case-studies/2026-10-camera-movement-discipline-library/prompt.md"
+      ],
+      "evidence_kinds": [
+        "F",
+        "A",
+        "D",
+        "U"
+      ],
+      "media_status": "not_inspected"
+    },
+    {
+      "id": "C04",
+      "case_directory": "2026-10-identity-only-half-body-dance-six-segment",
+      "topic": "One action can span multiple shots; match-cut continuity names phase, trajectory, direction, weight and momentum.",
+      "paths": [
+        "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+        "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md"
+      ],
+      "evidence_kinds": [
+        "F",
+        "A",
+        "D",
+        "U"
+      ],
+      "media_status": "not_inspected"
+    },
+    {
+      "id": "C05",
+      "case_directory": "2026-10-baifeng-mengchen-classical-dance-six-segment",
+      "topic": "Legacy Shot headings can be action chapters; two generation tasks and actual source-window selection; endpoint and handoff conflicts.",
+      "paths": [
+        "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md"
+      ],
+      "evidence_kinds": [
+        "F",
+        "A",
+        "D",
+        "U"
+      ],
+      "media_status": "not_inspected"
+    },
+    {
+      "id": "C06",
+      "case_directory": "2026-10-summer-pool-beach-waterline-mv-4-segment",
+      "topic": "Timecoded stages and camera-path changes do not necessarily create cuts or separate shots.",
+      "paths": [
+        "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md"
+      ],
+      "evidence_kinds": [
+        "F",
+        "D",
+        "U"
+      ],
+      "media_status": "not_inspected"
+    },
+    {
+      "id": "C07",
+      "case_directory": "2026-10-leg-lift-contact-cut-stocking-six-look",
+      "topic": "Contact-triggered costume edits; separate fixed camera, single generation, visual edit events and state intervals.",
+      "paths": [
+        "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+        "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md"
+      ],
+      "evidence_kinds": [
+        "F",
+        "A",
+        "D",
+        "U"
+      ],
+      "media_status": "not_inspected"
+    },
+    {
+      "id": "C08",
+      "case_directory": "2026-10-sock-showcase-right-entry-three-shot",
+      "topic": "Independent state generations and short final use windows; pose-to-entry jump cuts; author-reported detection corrections.",
+      "paths": [
+        "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+        "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md"
+      ],
+      "evidence_kinds": [
+        "F",
+        "A",
+        "D",
+        "U"
+      ],
+      "media_status": "not_inspected"
+    }
+  ],
+  "files": [
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.md",
+      "sha256": "26f2a637765712b3456c1bb94aabbf53b3c6bc05c8f359a2b752967a5be008f8",
+      "git_blob_sha1": "72c4bfeedf2eb966d05e44515128b620a219b5e1",
+      "git_mode": "100644",
+      "byte_count": 8973,
+      "line_count": 109,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-cinematic-character-reveal-two-part/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md",
+      "sha256": "59e6653d0a5be8f978d09ea3c657089a4fff6aa0591024758623fe749b852ea5",
+      "git_blob_sha1": "6a77d28f7032e60ee8bc7ae192d99c02e47655e1",
+      "git_mode": "100644",
+      "byte_count": 26476,
+      "line_count": 415,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-cinematic-character-reveal-two-part/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md",
+      "sha256": "662a755d3abb0f985ee5c273aac6a9943c559cac13bc8d4d6ec11be559d8c226",
+      "git_blob_sha1": "5cb92433398250390c00dad804bbc3804550e897",
+      "git_mode": "100644",
+      "byte_count": 18328,
+      "line_count": 653,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-cinematic-character-reveal-two-part/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md",
+      "sha256": "7acbdc272d9d7f01b0f1baaab693198c6fb04e20a5cfd79401f4fee451b476f6",
+      "git_blob_sha1": "e39931e9262ed9599d84fddbccf3155f6ca75e29",
+      "git_mode": "100644",
+      "byte_count": 71417,
+      "line_count": 1869,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-cinematic-character-reveal-two-part/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md",
+      "sha256": "c523ba2fa3ff1ee8cc79e4b75d4cce7fc9c66abe553552aa8d3498d17e3ddea5",
+      "git_blob_sha1": "b44081b88877ae7d8f97ce6424bf92c92c13f17c",
+      "git_mode": "100644",
+      "byte_count": 13734,
+      "line_count": 127,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-cinematic-character-reveal-two-part/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/README.md",
+      "sha256": "03a82e79d8479c6ebc80ded8347f8522a96a64cb8f56e0a76c1a129f44e5bc25",
+      "git_blob_sha1": "4672e2c8969cf78cc7ae9c84f4060d5ce293b6eb",
+      "git_mode": "100644",
+      "byte_count": 3642,
+      "line_count": 70,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-dual-subject-speed-contrast/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md",
+      "sha256": "e2ddd770ce690d4561b71cfd8f48d62b3b62924008705a15ad3b3f1ae6b25513",
+      "git_blob_sha1": "883bccae513bb798c4fb868bf19aabdc12a1380a",
+      "git_mode": "100644",
+      "byte_count": 12645,
+      "line_count": 247,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-dual-subject-speed-contrast/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/prompt.md",
+      "sha256": "60461d26bbfc22ddf6aad4e75ecfae1f75a8ed674460a13189b22f72db6eafe3",
+      "git_blob_sha1": "5643ee691a8e81250057e3a04ca564c8f4c28971",
+      "git_mode": "100644",
+      "byte_count": 2653,
+      "line_count": 171,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-dual-subject-speed-contrast/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md",
+      "sha256": "97e486a8dbaf52c0025317f2aaa8e4f26bd249c5dda63e587413463ac9e30b1e",
+      "git_blob_sha1": "9242adcb39f1b9c837ea8ce3be3491eadee83c3b",
+      "git_mode": "100644",
+      "byte_count": 12760,
+      "line_count": 109,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-dual-subject-speed-contrast/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.md",
+      "sha256": "ba7ef1911f9d93901318f2784b9ca7c8fa0fb0141536933c16ccb4dd7b9b71b5",
+      "git_blob_sha1": "eb24f9095c1512b03d423354161c7db656dd7bff",
+      "git_mode": "100644",
+      "byte_count": 7128,
+      "line_count": 109,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-first-person-finger-controlled-dance/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md",
+      "sha256": "85e125d85f8a0ab0303611a459f8d6890453d8608889f2fce1fd738d91aaf790",
+      "git_blob_sha1": "8510ce889dd55118aa65ad8ae78562d71ece5aae",
+      "git_mode": "100644",
+      "byte_count": 19743,
+      "line_count": 334,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-first-person-finger-controlled-dance/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.md",
+      "sha256": "68769f007f1ceaf0b3c5d20be07c4298d2c1ea827b59913e1fe6d2904613b1c2",
+      "git_blob_sha1": "b60d367e04180dbf99976c451223c57a6fc58f5f",
+      "git_mode": "100644",
+      "byte_count": 6580,
+      "line_count": 67,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-first-person-finger-controlled-dance/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md",
+      "sha256": "4abfdbb588760ddf6896a0af277b85827157058815f04d326aa4cc07be483f65",
+      "git_blob_sha1": "1bea74520f7c00446f2c3059c77b8fe54356f75b",
+      "git_mode": "100644",
+      "byte_count": 18406,
+      "line_count": 302,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-first-person-finger-controlled-dance/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md",
+      "sha256": "68a5945faff4822892e725bf8c07f9cc08cf2c60dafb853010f1def84c775b6f",
+      "git_blob_sha1": "531b7e9a5ecd744adb443cde1d0426029bed441d",
+      "git_mode": "100644",
+      "byte_count": 11341,
+      "line_count": 103,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-first-person-finger-controlled-dance/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.md",
+      "sha256": "9ea0ed0ef4f10175296003c30c9965da8713e03d7c422a641da5e9a0e720c09a",
+      "git_blob_sha1": "fb114c0db8112ad8d72616f8d92a7e0f8c7dbb27",
+      "git_mode": "100644",
+      "byte_count": 8448,
+      "line_count": 140,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-furina-windsurfing-fashion-mv/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md",
+      "sha256": "395bdf407961cf9e2a2ec907d8c1b7829e369e2dd66505d43e5a3fa005c541ae",
+      "git_blob_sha1": "1908c33251798ce7dba748b2545e36be5269b0dd",
+      "git_mode": "100644",
+      "byte_count": 19937,
+      "line_count": 397,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-furina-windsurfing-fashion-mv/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md",
+      "sha256": "615805834349a4446429ac9422222272b03e418133dc7528f46f30a8756a7bc6",
+      "git_blob_sha1": "d70f7a2d8f6af02914d9bb0b9344173da8cb4b84",
+      "git_mode": "100644",
+      "byte_count": 26514,
+      "line_count": 1465,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md",
+      "sha256": "d0187e9ebb881642343c610fae823285cb4165867fc4826a0874096d35fa4eac",
+      "git_blob_sha1": "456aaec92703f8ef4e4034db690d45457be4ab8b",
+      "git_mode": "100644",
+      "byte_count": 43730,
+      "line_count": 869,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-furina-windsurfing-fashion-mv/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md",
+      "sha256": "faffb0713e48175301ae5656bbed1103b1beffa163963b7f2a27d67e3e778252",
+      "git_blob_sha1": "768687db0a705a353c6a3a1c2823919a6c217061",
+      "git_mode": "100644",
+      "byte_count": 11567,
+      "line_count": 107,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-furina-windsurfing-fashion-mv/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/README.md",
+      "sha256": "fd9275b829033318e3a444b0e16fcd984f9f394bf1776ce2b7c7aee50f869421",
+      "git_blob_sha1": "a397a5e0e672904eb80e370ae6ac560a5e5133cd",
+      "git_mode": "100644",
+      "byte_count": 4954,
+      "line_count": 85,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-single-subject-three-pose/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/README.zh-CN.md",
+      "sha256": "1f496302d0813d94415b32f9f18d354fc69c58f6553cab47bdf21a004f88647c",
+      "git_blob_sha1": "8d974ae50506cfe61b707a97199ea1f3cdde99cc",
+      "git_mode": "100644",
+      "byte_count": 14281,
+      "line_count": 266,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-single-subject-three-pose/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/prompt.md",
+      "sha256": "d7a0ec8cfb9cd2e4d241774852d064cabe3254bb56ccf9afc6ecdf1429334615",
+      "git_blob_sha1": "500cf634e40a302ef36ac505d7fa2500f0cc5630",
+      "git_mode": "100644",
+      "byte_count": 16750,
+      "line_count": 879,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-single-subject-three-pose/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md",
+      "sha256": "8083f69d66398fceb847ecd83074dfeba6977de1db3edc50a2c1b6c18942b19e",
+      "git_blob_sha1": "28e6cc42c0510fdf352dbdea31cd33629277da07",
+      "git_mode": "100644",
+      "byte_count": 47909,
+      "line_count": 1178,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-single-subject-three-pose/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md",
+      "sha256": "58081c91e536f3c502dd9694bc9e083c69c11cb97129f26f4ef04d3eb48af5e7",
+      "git_blob_sha1": "ca42d3b76e2c8493c535c22ed507554b3a980b92",
+      "git_mode": "100644",
+      "byte_count": 11916,
+      "line_count": 107,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-single-subject-three-pose/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.md",
+      "sha256": "88e8bbec07a740b63e7f68417bb1e555031e3c33dacada45c625732b9a5a0907",
+      "git_blob_sha1": "07ccc6cada79700019656c65000e1ff185ab1ccb",
+      "git_mode": "100644",
+      "byte_count": 5869,
+      "line_count": 93,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-sticker-character-kitchen-comedy/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md",
+      "sha256": "e96affe636ae6fee6dad25daadbe1906ec36d097bc8ef4858b634c8eac4137da",
+      "git_blob_sha1": "5290ad33edc00bea3e1ae24e3305ae1b2601e869",
+      "git_mode": "100644",
+      "byte_count": 15559,
+      "line_count": 287,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-sticker-character-kitchen-comedy/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md",
+      "sha256": "cb0dd901e8162ecb1bfbd89475df2648dcbe8eeb34821cdb9726228d1c09f46e",
+      "git_blob_sha1": "07719668193e6b82226f1380399f0e576c831273",
+      "git_mode": "100644",
+      "byte_count": 4666,
+      "line_count": 109,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-sticker-character-kitchen-comedy/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md",
+      "sha256": "27301d4d415043c298487e5c6f6cbcbda5eb9de98e841acdf683956f3e249764",
+      "git_blob_sha1": "c56419699287a9e074debad5ddfc7242df73f5d9",
+      "git_mode": "100644",
+      "byte_count": 13742,
+      "line_count": 369,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-sticker-character-kitchen-comedy/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md",
+      "sha256": "557648e76f7319cd4dae52878bb62f5b30055a9bdeb66f5e04b78c316a5505a1",
+      "git_blob_sha1": "bca11db0afd44a9a12e1b32b08c833d2a67d08f1",
+      "git_mode": "100644",
+      "byte_count": 11158,
+      "line_count": 107,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-sticker-character-kitchen-comedy/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/README.md",
+      "sha256": "1d6bc8411a168725010f7a6d93b194398e3e0df276a04afb00554815c2cd8abb",
+      "git_blob_sha1": "be69aaa3305c0a7859548f5dd6ee2729fe32866b",
+      "git_mode": "100644",
+      "byte_count": 3603,
+      "line_count": 74,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-three-person-orbital-long-take/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/README.zh-CN.md",
+      "sha256": "c97b7bbcb94fc5788b6875da4469b60caac4ad6a25ff4dec21b293eff379e673",
+      "git_blob_sha1": "2c78fa8d8c1dff078a32f656ba0d52ed5a4a425d",
+      "git_mode": "100644",
+      "byte_count": 8760,
+      "line_count": 194,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-three-person-orbital-long-take/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/prompt.md",
+      "sha256": "262915229f84cd187353174c68806c04949168b6c686efa36931cb6340c8faaf",
+      "git_blob_sha1": "85cd5ebdbb4ce5979ade026607b00822c949d3fc",
+      "git_mode": "100644",
+      "byte_count": 29240,
+      "line_count": 1413,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-three-person-orbital-long-take/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/prompt.zh-CN.md",
+      "sha256": "c5d810b8f46b626753f101e164e8436e2ae6f093ba89ab7d1072ffc4202b5192",
+      "git_blob_sha1": "2c55a4c1372c8350da7d744a05a07cc857edef9a",
+      "git_mode": "100644",
+      "byte_count": 71063,
+      "line_count": 1599,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-three-person-orbital-long-take/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-three-person-orbital-long-take/vocabulary-expanded.zh-CN.md",
+      "sha256": "58feeb800f1450064240f920270b86cf8526631c6d1e9d9565c72d4a925dd58f",
+      "git_blob_sha1": "bbf05f5f51abe140d2c6de8402138225d821156d",
+      "git_mode": "100644",
+      "byte_count": 12116,
+      "line_count": 107,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-three-person-orbital-long-take/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.md",
+      "sha256": "5777d39d3c21ef0666296ff4ad2ff2544306f9a9989b45d8cca8358b4f840c93",
+      "git_blob_sha1": "090d9f52cd0c979167b7f3db1927549729cfbc17",
+      "git_mode": "100644",
+      "byte_count": 6295,
+      "line_count": 95,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-water-obstacle-variety-show/README.md"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md",
+      "sha256": "915b57fe603b1d4033f49bd429ec0d8c2657a86cf33b79d6ceeb38c5fdd1fb87",
+      "git_blob_sha1": "5d05a80c26ed684a4307d16c826422680f538568",
+      "git_mode": "100644",
+      "byte_count": 15364,
+      "line_count": 278,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-water-obstacle-variety-show/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.md",
+      "sha256": "a7eb42a7967a1b1f28a61dce224fe2e1fb3182a16f40e7a6969cc52c3eaba266",
+      "git_blob_sha1": "ae572459f259615b45f88b300eeedc6c804cfc35",
+      "git_mode": "100644",
+      "byte_count": 7374,
+      "line_count": 165,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-water-obstacle-variety-show/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md",
+      "sha256": "3c29a4562f09a9b05510a06f87ab6b095fbfc899a496b56c0840bc595a452a08",
+      "git_blob_sha1": "1bb82da7b81205a4dde66fea5a7ab1eec1a539f5",
+      "git_mode": "100644",
+      "byte_count": 21315,
+      "line_count": 515,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-water-obstacle-variety-show/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md",
+      "sha256": "ae0e874951cbd4b33825d92234db538dbb86f3a6d111902718e75752a0bdb156",
+      "git_blob_sha1": "876c670bb25057112d32084e914eb3ca9ee9440e",
+      "git_mode": "100644",
+      "byte_count": 11165,
+      "line_count": 105,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-08-water-obstacle-variety-show/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/README.md",
+      "sha256": "c2d6041235ad743caf143c8e0cdeb9487a65a9b35bf4a9dbc472aed6d1b11a7a",
+      "git_blob_sha1": "9fc55df75cc6f0d0fdcee1812ae36bd8ffc46ac3",
+      "git_mode": "100644",
+      "byte_count": 12441,
+      "line_count": 128,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-action-chain-sock-fan-comedy/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt",
+      "sha256": "93acf96bbfc304a7d8fb7d8cf35dbef9780867ff03d9a1da5e1dd8a02b7808c9",
+      "git_blob_sha1": "14d6577a94976b6fea29266c827d0f27ba0b4996",
+      "git_mode": "100644",
+      "byte_count": 30627,
+      "line_count": 624,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-action-chain-sock-fan-comedy/prompt.txt"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt",
+      "sha256": "2b8623fabbff40976378af0a5ebb287704243f5bc9ee28714a28a20a64fba5c0",
+      "git_blob_sha1": "2c480eba7377db6c36d26cba2b8c66f3ef46f92b",
+      "git_mode": "100644",
+      "byte_count": 30831,
+      "line_count": 463,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-action-chain-sock-fan-comedy/prompt.zh-CN.txt"
+    },
+    {
+      "path": "case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md",
+      "sha256": "fc1fb02f894e2eb314b62295871bb7de732fdc72b5d72d6b615443fc4443be07",
+      "git_blob_sha1": "a991cc33afbf28ef65f819ac18bba8dbb8b6cfdf",
+      "git_mode": "100644",
+      "byte_count": 12096,
+      "line_count": 111,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-action-chain-sock-fan-comedy/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md",
+      "sha256": "e30609f323379c5495ea1d3c46c03d948f1692407b74a2aa3a5bac4286427290",
+      "git_blob_sha1": "820f293466c621b83008067f2ba57dce4b88927e",
+      "git_mode": "100644",
+      "byte_count": 13205,
+      "line_count": 115,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt",
+      "sha256": "da58a065f3c2f7b825e1958717f4cbe97dfd9fa60a816e054b2f55ce4243f032",
+      "git_blob_sha1": "4da9e6df67e2adbb33d569cb830cde800b7878f8",
+      "git_mode": "100644",
+      "byte_count": 26943,
+      "line_count": 1306,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.txt"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt",
+      "sha256": "1013cd7615d245d9e0127e4004a5091479fe09fda746c042b1a96f5814d75b54",
+      "git_blob_sha1": "f9c13e974868d922acd8f49a725e6d4f88f2c12f",
+      "git_mode": "100644",
+      "byte_count": 27451,
+      "line_count": 370,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p83-dark-luxury-skirt-throw.zh-CN.txt"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt",
+      "sha256": "0a5d2c13f1c0718c09be689feab290bf85cc87a9b204c1d95d74e7ed012108d6",
+      "git_blob_sha1": "b4863def7914a1dcbaca6695330c8b548b184377",
+      "git_mode": "100644",
+      "byte_count": 27900,
+      "line_count": 1234,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.txt"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt",
+      "sha256": "90fc1572bbb9f11fdd7f40e019cec893ad47e9d412280d8f301f88e89ad78597",
+      "git_blob_sha1": "22fefc9744dadf16edd24039071ed7eed0ed24c5",
+      "git_mode": "100644",
+      "byte_count": 27319,
+      "line_count": 355,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/p84-cute-backfolded-jump.zh-CN.txt"
+    },
+    {
+      "path": "case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md",
+      "sha256": "b35ad6664669769fc3074266071435db82c39ad5aeac9d45c4f19dd3f40d421a",
+      "git_blob_sha1": "73f3a15ffddc95437e8632d458e522ab00730899",
+      "git_mode": "100644",
+      "byte_count": 19149,
+      "line_count": 176,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-editorial-lamp-rhythm-fashion-ab/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-purple-veil-dance-seven-segment/README.md",
+      "sha256": "a37ccb539941f0f3bbfcbd1a9e4a9f78ef4c267f7f17f3d9413345e8d6de3134",
+      "git_blob_sha1": "8b7c6f9b7480b4e613abeb1d766795064510203d",
+      "git_mode": "100644",
+      "byte_count": 8262,
+      "line_count": 99,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-purple-veil-dance-seven-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-purple-veil-dance-seven-segment/prompt.md",
+      "sha256": "3a9e822fce663198ae0c0446bdfa13c00f095a4b7628e9b0c4ab85f7475bcfd8",
+      "git_blob_sha1": "8befb4ec85eb720efa6b4ee432b9e48787b7801e",
+      "git_mode": "100644",
+      "byte_count": 37639,
+      "line_count": 786,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-purple-veil-dance-seven-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/README.md",
+      "sha256": "4dbe8f75fdb88738af500927d5fce3501b27d5de269faa36fd1aac9ce0b728b2",
+      "git_blob_sha1": "75fa100fd4a1e954789545920279ba9f1c56b000",
+      "git_mode": "100644",
+      "byte_count": 9740,
+      "line_count": 132,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-snap-lock-editorial-reveal/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.md",
+      "sha256": "fc2c5eea24fe28a714d921ad3a7ef77931911147641088e7079816cfcfb6edf6",
+      "git_blob_sha1": "d92b6d24ebdf9ca88e48421fd349c0d905c97302",
+      "git_mode": "100644",
+      "byte_count": 20295,
+      "line_count": 571,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-snap-lock-editorial-reveal/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md",
+      "sha256": "2db644dfd0e9a2d7f4ae963cd59ec03c1396271716af8f1292fb09f0b9f2cb56",
+      "git_blob_sha1": "9af61b2d1f043927c61ae390add95847731bd8b5",
+      "git_mode": "100644",
+      "byte_count": 13761,
+      "line_count": 278,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-snap-lock-editorial-reveal/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md",
+      "sha256": "aee1575e8a8140ef0e92dac02e972c48d13d1d975989fe6b487e1bae788ad1bf",
+      "git_blob_sha1": "35c9c1232d988f92c4145e6359876bc2ba05972f",
+      "git_mode": "100644",
+      "byte_count": 10852,
+      "line_count": 107,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-snap-lock-editorial-reveal/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/README.md",
+      "sha256": "6b506f0c45ddc7ecf5ba5ee266b99e163e34e6d7d49827efb44d3bd4a3ab8264",
+      "git_blob_sha1": "9c82e8c71cf560609789fadde850be9ab8436446",
+      "git_mode": "100644",
+      "byte_count": 12527,
+      "line_count": 142,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-song-style-classical-dance-six-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md",
+      "sha256": "010f5d1db16cfb5dd9dfe3c8b765050c01571949ca8cca4442437dc5b4bd4626",
+      "git_blob_sha1": "c1b73a7a879bd5994b59100c5ae041fc457a85ec",
+      "git_mode": "100644",
+      "byte_count": 134285,
+      "line_count": 2939,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-song-style-classical-dance-six-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md",
+      "sha256": "57065a52ed353280752c676f6b862d84b99667ded3ea66dae57e2c5bc5fabed9",
+      "git_blob_sha1": "b0d7bb62373528713b6731309f1a9fe7e5b18604",
+      "git_mode": "100644",
+      "byte_count": 87307,
+      "line_count": 1100,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-song-style-classical-dance-six-segment/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md",
+      "sha256": "ffdfaf289f5158cdddd0107535fe832b083f15e7fea415d376ed4407b2995681",
+      "git_blob_sha1": "f0fc45a5eb2026e9cbd06fc5b9a55ff3b20d264c",
+      "git_mode": "100644",
+      "byte_count": 21002,
+      "line_count": 200,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-song-style-classical-dance-six-segment/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md",
+      "sha256": "00b141391037d6173c13721474d8f36ec73b6ea17c3f7429a07955ac8dcc3de6",
+      "git_blob_sha1": "9f42cf388a5b8e3d84a5b2160b5aab445733d829",
+      "git_mode": "100644",
+      "byte_count": 6844,
+      "line_count": 91,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.md"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md",
+      "sha256": "b06317bdb5059cd2a01a95bfe763e306ef095c37a59dd9c3c595dec632d21781",
+      "git_blob_sha1": "0b28c91a167e20b593b2131bbb18ec9440dabbb4",
+      "git_mode": "100644",
+      "byte_count": 17909,
+      "line_count": 305,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/README.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md",
+      "sha256": "da7562b149ee4c72e7813ae6320b50a29e26caafacab9159263b09c023d35a71",
+      "git_blob_sha1": "5134e8fe1a15e2c381e2546ae700754596380c6f",
+      "git_mode": "100644",
+      "byte_count": 15041,
+      "line_count": 95,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md",
+      "sha256": "cd27eb33e16c39c26773ba53956886039eeedccd7ea1dbd0639783d1a08951d8",
+      "git_blob_sha1": "01c8289ffeb1639b225c35b986406f9d5405f0e1",
+      "git_mode": "100644",
+      "byte_count": 42551,
+      "line_count": 628,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/prompt.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md",
+      "sha256": "82ec632d7f0e7dca5c38481361f12bd97fff53d113465e65cc142b43fe9a7492",
+      "git_blob_sha1": "de577943cdfcafa3046d019dfda86129583926cc",
+      "git_mode": "100644",
+      "byte_count": 11110,
+      "line_count": 109,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-09-three-person-prank-freeze-gag-cos-swap/vocabulary-expanded.zh-CN.md"
+    },
+    {
+      "path": "case-studies/2026-10-advanced-camera-combinations/README.md",
+      "sha256": "833804acf934a109dfc8991a0f42bafe0f9b96ee71967d503af5cc888d8595fd",
+      "git_blob_sha1": "6248882c17cc0841012bd538825849ce9b27a53c",
+      "git_mode": "100644",
+      "byte_count": 4900,
+      "line_count": 57,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-advanced-camera-combinations/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-advanced-camera-combinations/prompt.md",
+      "sha256": "6dbc877637aff70c1340de1b4eb4a4c221ca2f25926003801f55b574ada32ffa",
+      "git_blob_sha1": "329cc1d8327759900ad9ee2495c0945ffb8f88dd",
+      "git_mode": "100644",
+      "byte_count": 18459,
+      "line_count": 328,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-advanced-camera-combinations/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md",
+      "sha256": "61f167bb5c9707afaee638d3185d58dfaba100f3016dedb55203ecacdfe1bcd5",
+      "git_blob_sha1": "7ead89d1d75c434c1ab69aab841c53c1e3a23481",
+      "git_mode": "100644",
+      "byte_count": 12008,
+      "line_count": 155,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md",
+      "sha256": "842fac7e188ff164a60cce1baa6a65844cad2eb7440cf401df63d1b636f3fdba",
+      "git_blob_sha1": "4508141604349c6aab29a86a88cc35965b646714",
+      "git_mode": "100644",
+      "byte_count": 56000,
+      "line_count": 475,
+      "read_status": "full_text",
+      "read_scope": "Complete text displayed and read during the M9 evidence task; full coverage verified from recorded chunks. No media inspection.",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 475
+        }
+      ],
+      "read_by": [
+        "m9_evidence"
+      ],
+      "evidence_ids": [
+        "C05"
+      ],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-baifeng-mengchen-classical-dance-six-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/README.md",
+      "sha256": "51179fb7c3fd71729a939d287f6dad624dcf5bf719fe4532c16399929e84e179",
+      "git_blob_sha1": "dae6601f45b9f4d0ae3cec10114eb102a0f500db",
+      "git_mode": "100644",
+      "byte_count": 5545,
+      "line_count": 93,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-camera-movement-discipline-library/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-camera-movement-discipline-library/prompt.md",
+      "sha256": "c70294287fc4155e691de6e7d50a09bb08f8d2bcd9bc18620f49c47c3a0d3053",
+      "git_blob_sha1": "6437e5a26f84f34aa5dc803b1dbc5c79f9dcab13",
+      "git_mode": "100644",
+      "byte_count": 15365,
+      "line_count": 234,
+      "read_status": "full_text",
+      "read_scope": "Complete text displayed and read during the M9 evidence task; full coverage verified from recorded chunks. No media inspection.",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 234
+        }
+      ],
+      "read_by": [
+        "m9_evidence"
+      ],
+      "evidence_ids": [
+        "C03"
+      ],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-camera-movement-discipline-library/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/README.md",
+      "sha256": "e054bd15bedd75cd384c9e5e0e35c9ca17a1ad8685d041b12964876ab872e53c",
+      "git_blob_sha1": "6bc13ac4af04d59ff036e50bdf55e662a6cb7b79",
+      "git_mode": "100644",
+      "byte_count": 7765,
+      "line_count": 83,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-classical-wuxia-dance-13-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md",
+      "sha256": "24707ce3ca43b3696b97bf634d3fc87b3568116c33e3a31635a0ea01974ec1d8",
+      "git_blob_sha1": "5a6760efa52e3a0f2ef14073e9cbd8a5c93923a8",
+      "git_mode": "100644",
+      "byte_count": 16996,
+      "line_count": 199,
+      "read_status": "full_text",
+      "read_scope": "Complete text displayed and read during the M9 evidence task; full coverage verified from recorded chunks. No media inspection.",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 199
+        }
+      ],
+      "read_by": [
+        "m9_evidence"
+      ],
+      "evidence_ids": [
+        "C01"
+      ],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-classical-wuxia-dance-13-segment/methodology.md"
+    },
+    {
+      "path": "case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md",
+      "sha256": "40ca025fbdab770c72c25a0f259a4319f45725313b3a92bac5bcfee10ca8cd9d",
+      "git_blob_sha1": "13b0cfedb1e8ba8c92ed13c7d4adcee9f43edf03",
+      "git_mode": "100644",
+      "byte_count": 84646,
+      "line_count": 543,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-classical-wuxia-dance-13-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/README.md",
+      "sha256": "ce47520bafe4d3fd129f20068452199eb4c3fda0219b2537f34f6fbf31866a90",
+      "git_blob_sha1": "d196d84601fd33a2cc9a4be93d35aa969494bb6e",
+      "git_mode": "100644",
+      "byte_count": 4031,
+      "line_count": 41,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-dance-motion-chain-library/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md",
+      "sha256": "69caa314ae11942dfff9cca14ba4a88ecf6187a336e3569f512f7c1f07d7a37b",
+      "git_blob_sha1": "53a0bfadbfa128998aaa5fcfc4d015f0e0e41e30",
+      "git_mode": "100644",
+      "byte_count": 265991,
+      "line_count": 2767,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-dance-motion-chain-library/dance-motion-chain-h3.md"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/README.md",
+      "sha256": "fcdd6a8bea055e2a357007d0024381c7c23dccf1ca2f74eceabb2de26e2fe1c7",
+      "git_blob_sha1": "13b9d82944302e6e9d1c3ed33da1738c3d5bf065",
+      "git_mode": "100644",
+      "byte_count": 9119,
+      "line_count": 164,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-four-subject-formation-choreography/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-four-subject-formation-choreography/prompt.md",
+      "sha256": "2fdcf5cab127dbe3fdcf2a4991386b3bd31a2b08db04a0753f3715794d8ab481",
+      "git_blob_sha1": "2ceabb516af03c306d58b2a74474838f37dfcdbc",
+      "git_mode": "100644",
+      "byte_count": 16205,
+      "line_count": 148,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-four-subject-formation-choreography/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/README.md",
+      "sha256": "091c7f3efd88dd609375d22c4afb110306d2d1ee85c7d1363128d6dfa9379a6b",
+      "git_blob_sha1": "90e326cd2f2eeb13f1b3bb82a4997969df1884fe",
+      "git_mode": "100644",
+      "byte_count": 3875,
+      "line_count": 54,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-h3-motion-transfer/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+      "sha256": "152b3df9c83e5677e2df46756a122eb64a3e05b0e15ff63e3f2ebadcea41b659",
+      "git_blob_sha1": "827fe8500e9b67ad068d9fee566f276f0caa8a2f",
+      "git_mode": "100644",
+      "byte_count": 107172,
+      "line_count": 4982,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json"
+    },
+    {
+      "path": "case-studies/2026-10-h3-motion-transfer/prompt.md",
+      "sha256": "884616f829c22f00dc2f210e57621927bcb0ab58c28055f648bce2c2c2fa9915",
+      "git_blob_sha1": "d2832c361a34e9e441d2dcba8e207e684b97fef6",
+      "git_mode": "100644",
+      "byte_count": 13165,
+      "line_count": 586,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-h3-motion-transfer/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md",
+      "sha256": "c3726c8d92958ba60393b5f0b7c07b6ebd3c9f1152095e0f66423ab871c92695",
+      "git_blob_sha1": "80383594744c1caefadf9feb941d853953813338",
+      "git_mode": "100644",
+      "byte_count": 5248,
+      "line_count": 54,
+      "read_status": "full_text",
+      "read_scope": "Complete text displayed and read during the M9 evidence task; full coverage verified from recorded chunks. No media inspection.",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 54
+        }
+      ],
+      "read_by": [
+        "m9_evidence"
+      ],
+      "evidence_ids": [
+        "C04"
+      ],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-identity-only-half-body-dance-six-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md",
+      "sha256": "e1ba6733d366f4a3e1499ba17e8d57a3bb2b51be8d775a2192ceff1f278d6818",
+      "git_blob_sha1": "b4e12f5932869ecff50fa75cfc5c963766d4f076",
+      "git_mode": "100644",
+      "byte_count": 34220,
+      "line_count": 1524,
+      "read_status": "full_text",
+      "read_scope": "Complete text displayed and read during the M9 evidence task; full coverage verified from recorded chunks. No media inspection.",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 1524
+        }
+      ],
+      "read_by": [
+        "m9_evidence"
+      ],
+      "evidence_ids": [
+        "C04"
+      ],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-identity-only-half-body-dance-six-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md",
+      "sha256": "02820d3b4652b25993a1efd9ace4d3a024b6bd979f61460b7276fb793a4b4eb9",
+      "git_blob_sha1": "858a611c88260f27eccf3751aaee75009981ae4e",
+      "git_mode": "100644",
+      "byte_count": 11856,
+      "line_count": 115,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md",
+      "sha256": "1b7dcf449f3536b5f3af859351baeb394c3663624648e8ae92a5f5a4b54983a1",
+      "git_blob_sha1": "89d84013643a50dfcd796f1397f7fc0cadc199c1",
+      "git_mode": "100644",
+      "byte_count": 22179,
+      "line_count": 346,
+      "read_status": "full_text",
+      "read_scope": "Complete text displayed and read during the M9 evidence task; full coverage verified from recorded chunks. No media inspection.",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 346
+        }
+      ],
+      "read_by": [
+        "m9_evidence"
+      ],
+      "evidence_ids": [
+        "C02"
+      ],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/methodology.md"
+    },
+    {
+      "path": "case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md",
+      "sha256": "1ec6d47a864a889cd050065be227ead4be82e2211003f00c796934e8f57588f5",
+      "git_blob_sha1": "8aae663ded62e74b33248443b36111d9e2630aa9",
+      "git_mode": "100644",
+      "byte_count": 194131,
+      "line_count": 1186,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-kanzaki-beach-sword-dance-18-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md",
+      "sha256": "e8b79275bdebce7596df0b6625c5a5a9bf1ef2c05c18e1abf1f29fb498f4a506",
+      "git_blob_sha1": "d5787b1e34ad1ae88ed33f7441633a51a222f510",
+      "git_mode": "100644",
+      "byte_count": 4094,
+      "line_count": 58,
+      "read_status": "full_text",
+      "read_scope": "Complete text displayed and read during the M9 evidence task; full coverage verified from recorded chunks. No media inspection.",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 58
+        }
+      ],
+      "read_by": [
+        "m9_evidence"
+      ],
+      "evidence_ids": [
+        "C07"
+      ],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md",
+      "sha256": "5bcea5bf820f4a1432bb6427ed2bd6fad85d26cccad891d2975153ea96dca0ed",
+      "git_blob_sha1": "356034cad0dbf6e7b3e0f14b76debb325b8163f6",
+      "git_mode": "100644",
+      "byte_count": 19122,
+      "line_count": 759,
+      "read_status": "full_text",
+      "read_scope": "Complete text displayed and read during the M9 evidence task; full coverage verified from recorded chunks. No media inspection.",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 759
+        }
+      ],
+      "read_by": [
+        "m9_evidence"
+      ],
+      "evidence_ids": [
+        "C07"
+      ],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-leg-lift-contact-cut-stocking-six-look/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-physical-camera-position-library/README.md",
+      "sha256": "cd03402caed497e0f2f93e10b1c42d2dd07842df602cb7ea42615c55c570387b",
+      "git_blob_sha1": "6dbea940341fd033a59c475b443bf14cdd2380f9",
+      "git_mode": "100644",
+      "byte_count": 4235,
+      "line_count": 61,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-physical-camera-position-library/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-physical-camera-position-library/prompt.md",
+      "sha256": "3cdfb65af35d87bdb587c0246d1eeda06129a4c33f6142c1f3817907d111bf1b",
+      "git_blob_sha1": "29931724c56332b3c4cb8f15c9e7b39187f3f6e5",
+      "git_mode": "100644",
+      "byte_count": 25066,
+      "line_count": 795,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-physical-camera-position-library/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+      "sha256": "301860e8a966da6ffa62327c6564bb3f0c392484477afac5606c747f776ab0a2",
+      "git_blob_sha1": "f0df490b0ddd28d78f1eb1332c72a46248dd4654",
+      "git_mode": "100644",
+      "byte_count": 4602,
+      "line_count": 52,
+      "read_status": "full_text",
+      "read_scope": "Complete text displayed and read during the M9 evidence task; full coverage verified from recorded chunks. No media inspection.",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 52
+        }
+      ],
+      "read_by": [
+        "m9_evidence"
+      ],
+      "evidence_ids": [
+        "C08"
+      ],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+      "sha256": "f7b91e3ccc47bb46bb39aae0171f25e0d9d4b572955183789cb4d257e96071d4",
+      "git_blob_sha1": "a6ac7572bfd08806686680e60d0d21f333e574ca",
+      "git_mode": "100644",
+      "byte_count": 8907,
+      "line_count": 98,
+      "read_status": "full_text",
+      "read_scope": "Complete text displayed and read during the M9 evidence task; full coverage verified from recorded chunks. No media inspection.",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 98
+        }
+      ],
+      "read_by": [
+        "m9_evidence"
+      ],
+      "evidence_ids": [
+        "C08"
+      ],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "sha256": "4a9382a4562c88bd25afc0d8debcc6d31a2a40c172f0581bea6d4c4ad65588e7",
+      "git_blob_sha1": "9940c805eee0e4f208100593745353d4b2efb9ab",
+      "git_mode": "100644",
+      "byte_count": 11195,
+      "line_count": 146,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+      "sha256": "4ddcd492a10a451e124dba192db2c6608aae4a8e62ddbc601a424e5b46a303cd",
+      "git_blob_sha1": "1c185e60e2e73a456369709fd0b302cac8fa3a5a",
+      "git_mode": "100644",
+      "byte_count": 36790,
+      "line_count": 283,
+      "read_status": "full_text",
+      "read_scope": "Complete text displayed and read during the M9 evidence task; full coverage verified from recorded chunks. No media inspection.",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 283
+        }
+      ],
+      "read_by": [
+        "m9_evidence"
+      ],
+      "evidence_ids": [
+        "C06"
+      ],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/README.md",
+      "sha256": "67b089f4d560d388e0ceb7dcc7f9011b7456fec69aed0c73f1d70dd341470276",
+      "git_blob_sha1": "bb9a28d25757e4d78d54d4e9dd517d12d063f6c4",
+      "git_mode": "100644",
+      "byte_count": 3940,
+      "line_count": 48,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-waterfront-solo-dance-two-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md",
+      "sha256": "5fac40dab9977ecf671bba747db25f4aee43ce892b796f230c319a8ad80da332",
+      "git_blob_sha1": "539cebf0828ce83ad43d6b7381445c69c3b9f411",
+      "git_mode": "100644",
+      "byte_count": 8762,
+      "line_count": 119,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-waterfront-solo-dance-two-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "sha256": "58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+      "git_blob_sha1": "7d2d18c1697928bed90d80361f5ac16997302d28",
+      "git_mode": "100644",
+      "byte_count": 7390,
+      "line_count": 71,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md"
+    },
+    {
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "sha256": "5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "git_blob_sha1": "1db431d27a43f05da550ad1d96bf05bb1325bc05",
+      "git_mode": "100644",
+      "byte_count": 101257,
+      "line_count": 743,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md"
+    },
+    {
+      "path": "case-studies/VOCABULARY-EXPANSION.zh-CN.md",
+      "sha256": "4f2bbe9d8df761913cdf1a5ca5167357e053eaf746f17b21379cfdd536b5f4ed",
+      "git_blob_sha1": "67eabcf0dfe631dcfdd54b8ee78acb8af38bc9db",
+      "git_mode": "100644",
+      "byte_count": 9130,
+      "line_count": 95,
+      "read_status": "inventory_only",
+      "read_scope": "Pinned-commit file inventory and byte/hash/line-count verification only; no semantic reading or whole-corpus keyword search claimed.",
+      "line_ranges": [],
+      "read_by": [],
+      "evidence_ids": [],
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/36987c56ade886aacfb166a21d6560925c97c330/case-studies/VOCABULARY-EXPANSION.zh-CN.md"
+    }
+  ],
+  "limitations": [
+    "No image, audio or video was inspected, measured, generated or edited.",
+    "Prompt timestamps and author-reported observations are source text, not measurements by this implementation.",
+    "Inventory, byte identity and valid citation line ranges do not establish semantic correctness or media quality.",
+    "Case-specific durations, shot counts, motion-cut policies, garment-state counts, source-window lengths and detector thresholds are not universal defaults.",
+    "Legacy Shot headings and custom prompt blocks are not automatically valid official H3 labels or true physical/editing shot boundaries.",
+    "Fixed camera, one model run and uninterrupted shot are distinct; the contact-cut case mixes these phrases while requesting six explicit visual edits.",
+    "The right-entry case contains contradictory summaries; a held pose to new right-entry jump cut must not be silently relabeled as same-action phase continuity.",
+    "No general time-remapping rate, frame interpolation method, optical-flow setting or freeze-frame duration is established by the directly read cases.",
+    "Representing narrative ellipsis, cross-cutting or flashbacks in the contract does not imply these cases validate those uses.",
+    "Representative validation scenarios in case-evidence.md are scenario definitions; actual executions require separate saved records."
+  ],
+  "navigation": {
+    "semantic_evidence": "case-evidence.md",
+    "official_protocol_sources": "h3-protocol-source.json",
+    "official_label_mapping": "h3-label-mapping.md"
+  }
+}

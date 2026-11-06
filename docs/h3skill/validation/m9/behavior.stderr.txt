@@ -1,0 +1,29 @@
+test_accepted_state_or_dependency_tampering_cannot_skip_revalidation (test_contract.ContractTests.test_accepted_state_or_dependency_tampering_cannot_skip_revalidation) ... ok
+test_all_observed_media_can_have_zero_generation_tasks (test_contract.ContractTests.test_all_observed_media_can_have_zero_generation_tasks) ... ok
+test_assembly_adjacency_and_internal_cut_are_distinct (test_contract.ContractTests.test_assembly_adjacency_and_internal_cut_are_distinct) ... ok
+test_batch_is_atomic_and_exact_retry_is_idempotent (test_contract.ContractTests.test_batch_is_atomic_and_exact_retry_is_idempotent) ... ok
+test_camera_motion_is_not_reclassified_as_cut (test_contract.ContractTests.test_camera_motion_is_not_reclassified_as_cut) ... ok
+test_capability_unknown_or_wrong_profile_is_not_execution_permission (test_contract.ContractTests.test_capability_unknown_or_wrong_profile_is_not_execution_permission) ... ok
+test_changed_actual_request_cannot_be_self_attested (test_contract.ContractTests.test_changed_actual_request_cannot_be_self_attested) ... ok
+test_coverage_missing_duplicate_or_wrong_source_fails (test_contract.ContractTests.test_coverage_missing_duplicate_or_wrong_source_fails) ... ok
+test_duplicate_ids_and_orphan_panels_fail (test_contract.ContractTests.test_duplicate_ids_and_orphan_panels_fail) ... ok
+test_duplicate_writers_and_stale_base_fail (test_contract.ContractTests.test_duplicate_writers_and_stale_base_fail) ... ok
+test_exclusive_partition_and_unknown_fields (test_contract.ContractTests.test_exclusive_partition_and_unknown_fields) ... ok
+test_five_units_allow_shared_phase_multi_panel_and_many_to_many_tasks (test_contract.ContractTests.test_five_units_allow_shared_phase_multi_panel_and_many_to_many_tasks) ... ok
+test_freeze_intent_is_explicit_and_needs_retained_event (test_contract.ContractTests.test_freeze_intent_is_explicit_and_needs_retained_event) ... ok
+test_impact_follows_actual_reads_display_and_prior_stale (test_contract.ContractTests.test_impact_follows_actual_reads_display_and_prior_stale) ... ok
+test_m7_duration_is_checked_without_assuming_fifteen_seconds (test_contract.ContractTests.test_m7_duration_is_checked_without_assuming_fifteen_seconds) ... ok
+test_partial_revision_invalidates_actual_siblings_and_preserves_receipts (test_contract.ContractTests.test_partial_revision_invalidates_actual_siblings_and_preserves_receipts) ... ok
+test_pending_or_forged_continuity_policy_cannot_pass (test_contract.ContractTests.test_pending_or_forged_continuity_policy_cannot_pass) ... ok
+test_plan_cannot_be_claimed_as_observed_media (test_contract.ContractTests.test_plan_cannot_be_claimed_as_observed_media) ... ok
+test_same_shot_split_requires_supplied_capability (test_contract.ContractTests.test_same_shot_split_requires_supplied_capability) ... ok
+test_sibling_projection_conflict_rejects_entire_batch (test_contract.ContractTests.test_sibling_projection_conflict_rejects_entire_batch) ... ok
+test_strict_json_duplicate_keys_and_nonfinite_values (test_contract.ContractTests.test_strict_json_duplicate_keys_and_nonfinite_values) ... ok
+test_task_context_boundaries_and_compile_handoff_preserve_scope (test_contract.ContractTests.test_task_context_boundaries_and_compile_handoff_preserve_scope) ... ok
+test_three_modules_route_check_accept_independently (test_contract.ContractTests.test_three_modules_route_check_accept_independently) ... ok
+test_window_bounds_coordinate_domains_and_source_evidence (test_contract.ContractTests.test_window_bounds_coordinate_domains_and_source_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.464s
+
+OK

@@ -1,0 +1,2220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:h3-skill:m9:contracts:1.0.0",
+  "title": "M9 explicit relation contracts; no media/NLP or timing inference",
+  "$defs": {
+    "ID": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{0,63}$"
+    },
+    "Source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "design_decision",
+            "user_requirement",
+            "upstream_object",
+            "media_observation",
+            "capability_evidence",
+            "case_text"
+          ]
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "version",
+        "excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "Sources": {
+      "type": "object",
+      "propertyNames": {
+        "$ref": "#/$defs/ID"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      }
+    },
+    "Refs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ID"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "Phase": {
+      "type": "object",
+      "properties": {
+        "phase_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "phase_id",
+        "description",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Shot": {
+      "type": "object",
+      "properties": {
+        "shot_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "phase_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "panel_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assignment_note": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "shot_id",
+        "phase_ids",
+        "panel_ids",
+        "purpose",
+        "assignment_note",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Panel": {
+      "type": "object",
+      "properties": {
+        "panel_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "shot_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "phase_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "purpose": {
+          "enum": [
+            "storyboard",
+            "key_state",
+            "first_frame_intent",
+            "last_frame_intent",
+            "reference_only"
+          ]
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "panel_id",
+        "shot_id",
+        "phase_ids",
+        "purpose",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Event": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "kind": {
+          "enum": [
+            "cut",
+            "camera_change",
+            "assembly_join"
+          ]
+        },
+        "from_shot": {
+          "$ref": "#/$defs/ID"
+        },
+        "to_shot": {
+          "$ref": "#/$defs/ID"
+        },
+        "phase_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "cue": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "event_id",
+        "kind",
+        "from_shot",
+        "to_shot",
+        "phase_ids",
+        "cue",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "ShotMap": {
+      "type": "object",
+      "properties": {
+        "phases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Phase"
+          },
+          "minItems": 1
+        },
+        "shots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Shot"
+          },
+          "minItems": 1
+        },
+        "panels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Panel"
+          },
+          "minItems": 0
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Event"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "phases",
+        "shots",
+        "panels",
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "Span": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "enum": [
+            "source_local",
+            "generation_local"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "second",
+            "frame"
+          ]
+        },
+        "start": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "domain",
+        "unit",
+        "start",
+        "end"
+      ],
+      "additionalProperties": false
+    },
+    "Window": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "enum": [
+            "source_local",
+            "generation_local"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "second",
+            "frame"
+          ]
+        },
+        "start": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end": {
+          "type": "number",
+          "minimum": 0
+        },
+        "basis": {
+          "enum": [
+            "planned",
+            "observed"
+          ]
+        },
+        "range_source_ref": {
+          "$ref": "#/$defs/ID"
+        }
+      },
+      "required": [
+        "domain",
+        "unit",
+        "start",
+        "end",
+        "basis",
+        "range_source_ref"
+      ],
+      "additionalProperties": false
+    },
+    "SourceRange": {
+      "type": "object",
+      "properties": {
+        "media_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "media_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shot_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "span": {
+          "$ref": "#/$defs/Span"
+        },
+        "basis": {
+          "enum": [
+            "planned",
+            "observed"
+          ]
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "media_id",
+        "media_version",
+        "shot_ids",
+        "span",
+        "basis",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Playback": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "normal"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "speed_intent"
+            },
+            "factor": {
+              "type": "number",
+              "minimum": 0
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "factor",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "freeze_intent"
+            },
+            "anchor_event_id": {
+              "$ref": "#/$defs/ID"
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "anchor_event_id",
+            "reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "Segment": {
+      "type": "object",
+      "properties": {
+        "segment_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "shot_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "phase_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "window": {
+          "$ref": "#/$defs/Window"
+        },
+        "playback": {
+          "$ref": "#/$defs/Playback"
+        },
+        "selection_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "segment_id",
+        "source_id",
+        "shot_ids",
+        "phase_ids",
+        "window",
+        "playback",
+        "selection_reason",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Boundary": {
+      "type": "object",
+      "properties": {
+        "boundary_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "from_segment": {
+          "$ref": "#/$defs/ID"
+        },
+        "to_segment": {
+          "$ref": "#/$defs/ID"
+        },
+        "from_shot": {
+          "$ref": "#/$defs/ID"
+        },
+        "to_shot": {
+          "$ref": "#/$defs/ID"
+        },
+        "event_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "execution_stage": {
+          "enum": [
+            "model_internal",
+            "post_edit",
+            "no_cut"
+          ]
+        },
+        "continuity_strategy": {
+          "enum": [
+            "continuous_action",
+            "match_cut",
+            "montage",
+            "ellipsis",
+            "same_shot_continuation"
+          ]
+        },
+        "policy_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "boundary_id",
+        "from_segment",
+        "to_segment",
+        "from_shot",
+        "to_shot",
+        "event_id",
+        "execution_stage",
+        "continuity_strategy",
+        "policy_id",
+        "reason",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "EditTimeRequest": {
+      "type": "object",
+      "properties": {
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "segment_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "owner": {
+          "const": "M7"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "request_id",
+        "segment_id",
+        "owner",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "EditGraph": {
+      "type": "object",
+      "properties": {
+        "segments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Segment"
+          },
+          "minItems": 1
+        },
+        "assembly": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "boundaries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Boundary"
+          },
+          "minItems": 0
+        },
+        "time_requests": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/EditTimeRequest"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "segments",
+        "assembly",
+        "boundaries",
+        "time_requests"
+      ],
+      "additionalProperties": false
+    },
+    "Policy": {
+      "type": "object",
+      "properties": {
+        "policy_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "boundary_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "from_shot": {
+          "$ref": "#/$defs/ID"
+        },
+        "to_shot": {
+          "$ref": "#/$defs/ID"
+        },
+        "status": {
+          "enum": [
+            "approved",
+            "pending"
+          ]
+        },
+        "invariants": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "allowed_changes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "policy_id",
+        "boundary_id",
+        "from_shot",
+        "to_shot",
+        "status",
+        "invariants",
+        "allowed_changes",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "StateRecord": {
+      "type": "object",
+      "properties": {
+        "state_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "shot_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "edge": {
+          "enum": [
+            "initial",
+            "final"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "state_id",
+        "shot_id",
+        "edge",
+        "description",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Continuity": {
+      "type": "object",
+      "properties": {
+        "policies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Policy"
+          },
+          "minItems": 0
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/StateRecord"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "policies",
+        "states"
+      ],
+      "additionalProperties": false
+    },
+    "Duration": {
+      "type": "object",
+      "properties": {
+        "unit": {
+          "enum": [
+            "second",
+            "frame"
+          ]
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "unit",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "Profile": {
+      "type": "object",
+      "properties": {
+        "profile_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "backend": {
+          "type": "string",
+          "minLength": 1
+        },
+        "workflow": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "known",
+            "unknown"
+          ]
+        },
+        "supported_modes": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "T2VA",
+              "I2VA",
+              "FL2VA",
+              "L2VA",
+              "Ref2VA"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "duration_limit": {
+          "$ref": "#/$defs/Duration"
+        },
+        "max_shots": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "supports_same_shot_split": {
+          "type": "boolean"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "profile_id",
+        "backend",
+        "workflow",
+        "status",
+        "supported_modes",
+        "duration_limit",
+        "max_shots",
+        "supports_same_shot_split",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "TimeRecord": {
+      "type": "object",
+      "properties": {
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "task_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "duration": {
+          "$ref": "#/$defs/Duration"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "request_id",
+        "task_id",
+        "duration",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "TaskContext": {
+      "type": "object",
+      "properties": {
+        "subjects": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reference_permissions": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scene": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start_state": {
+          "type": "string",
+          "minLength": 1
+        },
+        "action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "camera": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audio": {
+          "type": "string",
+          "minLength": 1
+        },
+        "end_state": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "subjects",
+        "reference_permissions",
+        "scene",
+        "start_state",
+        "action",
+        "camera",
+        "audio",
+        "end_state"
+      ],
+      "additionalProperties": false
+    },
+    "Task": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "output_source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "profile_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "mode_intent": {
+          "enum": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ]
+        },
+        "shot_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "time_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "context": {
+          "$ref": "#/$defs/TaskContext"
+        },
+        "entry_state_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "exit_state_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "asset_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "task_id",
+        "output_source_id",
+        "profile_id",
+        "mode_intent",
+        "shot_ids",
+        "time_request_id",
+        "context",
+        "entry_state_ids",
+        "exit_state_ids",
+        "asset_ids",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Coverage": {
+      "type": "object",
+      "properties": {
+        "coverage_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "task_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "segment_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "phase_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "coverage_kind": {
+          "enum": [
+            "full",
+            "partial",
+            "candidate_overlap",
+            "intentional_repeat"
+          ]
+        },
+        "selected": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "coverage_id",
+        "task_id",
+        "segment_id",
+        "phase_ids",
+        "coverage_kind",
+        "selected",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "GenerationTimeRequest": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "time_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "owner": {
+          "const": "M7"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "task_id",
+        "time_request_id",
+        "owner",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "Handoff": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "shot_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "mode_intent": {
+          "enum": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ]
+        },
+        "owner": {
+          "const": "M11"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/Refs"
+        }
+      },
+      "required": [
+        "task_id",
+        "shot_ids",
+        "mode_intent",
+        "owner",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "GenerationPlan": {
+      "type": "object",
+      "properties": {
+        "reused_segment_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ID"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Task"
+          },
+          "minItems": 0
+        },
+        "coverage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Coverage"
+          },
+          "minItems": 0
+        },
+        "m7_requests": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/GenerationTimeRequest"
+          },
+          "minItems": 0
+        },
+        "m11_handoffs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Handoff"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "reused_segment_ids",
+        "tasks",
+        "coverage",
+        "m7_requests",
+        "m11_handoffs"
+      ],
+      "additionalProperties": false
+    },
+    "ActionProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M4",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "type": "object",
+          "properties": {
+            "phase_ids": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ID"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "event_ids": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ID"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "phase_ids",
+            "event_ids"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "CameraProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M5",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "type": "object",
+          "properties": {
+            "camera_event_ids": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ID"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "camera_event_ids"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "ShotProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M9.1",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/ShotMap"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "EditProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M9.2",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/EditGraph"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "SourceProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M11",
+            "M12",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "type": "object",
+          "properties": {
+            "sources": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/SourceRange"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "sources"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "ContinuityProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M8",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "$ref": "#/$defs/Continuity"
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "CapabilityProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M11",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "type": "object",
+          "properties": {
+            "profiles": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Profile"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "profiles"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "TimeProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M7",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "type": "object",
+          "properties": {
+            "records": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/TimeRecord"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "records"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "AssetProjection": {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "enum": [
+            "M2",
+            "external"
+          ]
+        },
+        "source_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "source_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "values": {
+          "type": "object",
+          "properties": {
+            "asset_ids": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ID"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "asset_ids"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "owner",
+        "source_id",
+        "source_version",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs1": {
+      "type": "object",
+      "properties": {
+        "brief": {
+          "type": "string",
+          "minLength": 1
+        },
+        "action_context": {
+          "$ref": "#/$defs/ActionProjection"
+        },
+        "camera_context": {
+          "$ref": "#/$defs/CameraProjection"
+        }
+      },
+      "required": [
+        "brief",
+        "action_context",
+        "camera_context"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs2": {
+      "type": "object",
+      "properties": {
+        "brief": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shot_context": {
+          "$ref": "#/$defs/ShotProjection"
+        },
+        "source_context": {
+          "$ref": "#/$defs/SourceProjection"
+        },
+        "continuity_context": {
+          "$ref": "#/$defs/ContinuityProjection"
+        }
+      },
+      "required": [
+        "brief",
+        "shot_context",
+        "source_context",
+        "continuity_context"
+      ],
+      "additionalProperties": false
+    },
+    "Inputs3": {
+      "type": "object",
+      "properties": {
+        "brief": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shot_context": {
+          "$ref": "#/$defs/ShotProjection"
+        },
+        "edit_context": {
+          "$ref": "#/$defs/EditProjection"
+        },
+        "continuity_context": {
+          "$ref": "#/$defs/ContinuityProjection"
+        },
+        "capability_context": {
+          "$ref": "#/$defs/CapabilityProjection"
+        },
+        "time_context": {
+          "$ref": "#/$defs/TimeProjection"
+        },
+        "asset_context": {
+          "$ref": "#/$defs/AssetProjection"
+        }
+      },
+      "required": [
+        "brief",
+        "shot_context",
+        "edit_context",
+        "continuity_context",
+        "capability_context",
+        "time_context",
+        "asset_context"
+      ],
+      "additionalProperties": false
+    },
+    "Request1": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M9Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target": {
+          "const": "M9.1"
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs1"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "request_id",
+        "target",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "Proposal1": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M9Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "const": "M9.1"
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs1"
+        },
+        "changes": {
+          "type": "object",
+          "properties": {
+            "ShotMap": {
+              "$ref": "#/$defs/ShotMap"
+            }
+          },
+          "required": [
+            "ShotMap"
+          ],
+          "additionalProperties": false
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "detail": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "code",
+              "owner",
+              "detail"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "context",
+        "changes",
+        "issues"
+      ],
+      "additionalProperties": false
+    },
+    "Request2": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M9Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target": {
+          "const": "M9.2"
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs2"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "request_id",
+        "target",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "Proposal2": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M9Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "const": "M9.2"
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs2"
+        },
+        "changes": {
+          "type": "object",
+          "properties": {
+            "EditGraph": {
+              "$ref": "#/$defs/EditGraph"
+            }
+          },
+          "required": [
+            "EditGraph"
+          ],
+          "additionalProperties": false
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "detail": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "code",
+              "owner",
+              "detail"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "context",
+        "changes",
+        "issues"
+      ],
+      "additionalProperties": false
+    },
+    "Request3": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M9Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "target": {
+          "const": "M9.3"
+        },
+        "inputs": {
+          "$ref": "#/$defs/Inputs3"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "request_id",
+        "target",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "Proposal3": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M9Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "const": "M9.3"
+        },
+        "source_request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "context": {
+          "$ref": "#/$defs/Inputs3"
+        },
+        "changes": {
+          "type": "object",
+          "properties": {
+            "GenerationPlan": {
+              "$ref": "#/$defs/GenerationPlan"
+            }
+          },
+          "required": [
+            "GenerationPlan"
+          ],
+          "additionalProperties": false
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "detail": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "code",
+              "owner",
+              "detail"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "base_version",
+        "sources",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "context",
+        "changes",
+        "issues"
+      ],
+      "additionalProperties": false
+    },
+    "Request": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Request1"
+        },
+        {
+          "$ref": "#/$defs/Request2"
+        },
+        {
+          "$ref": "#/$defs/Request3"
+        }
+      ]
+    },
+    "Proposal": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Proposal1"
+        },
+        {
+          "$ref": "#/$defs/Proposal2"
+        },
+        {
+          "$ref": "#/$defs/Proposal3"
+        }
+      ]
+    },
+    "RequestBatch": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M9RequestBatch"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "requests": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Request"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "requests"
+      ],
+      "additionalProperties": false
+    },
+    "ProposalBatch": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M9ProposalBatch"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Proposal"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "proposals"
+      ],
+      "additionalProperties": false
+    },
+    "Pointer": {
+      "type": "string",
+      "pattern": "^/(content|contexts|sources|display|issues)(/[^\\s]*)?$"
+    },
+    "Consumer": {
+      "type": "object",
+      "properties": {
+        "consumer_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Pointer"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "status": {
+          "enum": [
+            "current",
+            "stale"
+          ]
+        }
+      },
+      "required": [
+        "consumer_id",
+        "read_paths",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "Receipt": {
+      "type": "object",
+      "properties": {
+        "proposal_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "request_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "module_id": {
+          "enum": [
+            "M9.1",
+            "M9.2",
+            "M9.3"
+          ]
+        },
+        "proposal_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "request_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "output_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "context_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "accepted_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "read_paths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Pointer"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "proposal_id",
+        "request_id",
+        "module_id",
+        "proposal_digest",
+        "request_digest",
+        "output_digest",
+        "context_digest",
+        "base_version",
+        "accepted_version",
+        "read_paths"
+      ],
+      "additionalProperties": false
+    },
+    "State": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M9State"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "$ref": "#/$defs/ID"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "owner": {
+          "const": "M9"
+        },
+        "object_type": {
+          "const": "ShotEditGenerationPlan"
+        },
+        "status": {
+          "const": "draft"
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "ShotMap": {
+              "$ref": "#/$defs/ShotMap"
+            },
+            "EditGraph": {
+              "$ref": "#/$defs/EditGraph"
+            },
+            "GenerationPlan": {
+              "$ref": "#/$defs/GenerationPlan"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "contexts": {
+          "type": "object",
+          "properties": {
+            "M9.1": {
+              "$ref": "#/$defs/Inputs1"
+            },
+            "M9.2": {
+              "$ref": "#/$defs/Inputs2"
+            },
+            "M9.3": {
+              "$ref": "#/$defs/Inputs3"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "receipts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Receipt"
+          },
+          "minItems": 0
+        },
+        "consumers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Consumer"
+          },
+          "minItems": 0
+        },
+        "stale_modules": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "M9.1",
+              "M9.2",
+              "M9.3"
+            ]
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "display": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "title"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "version",
+        "owner",
+        "object_type",
+        "status",
+        "content",
+        "contexts",
+        "sources",
+        "receipts",
+        "consumers",
+        "stale_modules"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/Request"
+    },
+    {
+      "$ref": "#/$defs/Proposal"
+    },
+    {
+      "$ref": "#/$defs/RequestBatch"
+    },
+    {
+      "$ref": "#/$defs/ProposalBatch"
+    },
+    {
+      "$ref": "#/$defs/State"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "task": "m9 forward use: 16-second dance, two independent generation tasks",
+  "date": "2026-11-06",
+  "skill_directory": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation",
+  "requested_scope": "Natural-language planning only; no JSON proposal, skill CLI, model inference, media service, developer report, existing validation results, or full case corpus.",
+  "resources_read": [
+    {
+      "path": "SKILL.md",
+      "coverage": "full effective content",
+      "reads": [
+        "cat SKILL.md",
+        "sed -n 39,58p SKILL.md"
+      ],
+      "note": "Initial combined output was partially truncated; targeted reread recovered the omitted portion."
+    },
+    {
+      "path": "references/shot-and-panel-mapping.md",
+      "coverage": "full",
+      "reads": [
+        "cat references/shot-and-panel-mapping.md"
+      ]
+    },
+    {
+      "path": "references/edit-topology-and-windows.md",
+      "coverage": "full effective content",
+      "reads": [
+        "cat references/edit-topology-and-windows.md",
+        "sed -n 26,57p references/edit-topology-and-windows.md"
+      ],
+      "note": "Targeted reread recovered the truncated section 2 and start of section 3."
+    },
+    {
+      "path": "references/generation-partition.md",
+      "coverage": "full",
+      "reads": [
+        "cat references/generation-partition.md (initial combined call)",
+        "cat references/generation-partition.md (full reread)"
+      ],
+      "note": "The initial combined result did not expose the full content; subsequent standalone result did."
+    },
+    {
+      "path": "references/h3-label-mapping.md",
+      "coverage": "full effective content",
+      "reads": [
+        "cat references/h3-label-mapping.md",
+        "sed -n 30,82p references/h3-label-mapping.md"
+      ],
+      "note": "Targeted reread recovered omitted sections 2–4; external official baseline cited inside this local guide was not independently read."
+    },
+    {
+      "path": "references/audit-and-handoff.md",
+      "coverage": "full effective content",
+      "reads": [
+        "cat references/audit-and-handoff.md",
+        "sed -n 1,30p references/audit-and-handoff.md",
+        "sed -n 31,60p references/audit-and-handoff.md",
+        "sed -n 61,74p references/audit-and-handoff.md"
+      ],
+      "note": "Three sequential ranges in the final read batch recovered all 74 lines after truncation."
+    }
+  ],
+  "metadata_only_attempts": [
+    {
+      "command": "wc -l references/generation-partition.md references/edit-topology-and-windows.md references/h3-label-mapping.md references/audit-and-handoff.md references/contract-guide.md",
+      "successful_line_counts": {
+        "references/generation-partition.md": 49,
+        "references/edit-topology-and-windows.md": 80,
+        "references/h3-label-mapping.md": 115,
+        "references/audit-and-handoff.md": 74
+      },
+      "missing_path": "references/contract-guide.md",
+      "result": "Exit 1 because the last path did not exist; no contract-guide content was read. Root contract-guide was not needed for this natural-language task."
+    }
+  ],
+  "evidence_scope": {
+    "positive": [
+      "User-supplied timing, action, cut, reference roles, and two-task requirement.",
+      "Six local skill resources listed above, with rereads repairing visible truncations."
+    ],
+    "not_inspected": [
+      "Actual storyboard images, identity photograph, reference video, or music track.",
+      "Backend capability documentation and concrete backend/version.",
+      "Generated media, source version IDs, frame rate, observed trim windows, or actual seam.",
+      "Developer reports, pre-existing validation directory content, or whole case corpus.",
+      "External official H3 baseline cited by the local label guide."
+    ],
+    "conclusion_level": "Textual production plan and candidate mapping only; no backend-valid, CLI-passed, or media-verified conclusion."
+  },
+  "execution": {
+    "skill_cli_run": false,
+    "json_proposal_constructed": false,
+    "model_or_media_service_called": false,
+    "media_generated": false,
+    "format_check": "UTF-8 Markdown and JSON serialized locally; no domain validator run."
+  },
+  "outputs": [
+    "dance-plan.md",
+    "read-log.json"
+  ],
+  "plan_han_character_count": 1277
+}

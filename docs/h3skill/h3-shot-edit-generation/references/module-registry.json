@@ -1,0 +1,584 @@
+{
+  "module": "M9",
+  "skill": "h3-shot-edit-generation",
+  "contract_version": "1.0.0",
+  "route_version": "1.0.0",
+  "framework_version": "v0.1.2",
+  "modules": [
+    {
+      "module_id": "M9",
+      "parent_id": null,
+      "contract_version": "1.0.0",
+      "route_version": "1.0.0",
+      "responsibility": "原子接受三个独占分区，形成有版本的ShotEditGenerationPlan草稿，不改写子模块创作决定。",
+      "input_contract": [
+        "#/$defs/State",
+        "#/$defs/RequestBatch",
+        "#/$defs/ProposalBatch"
+      ],
+      "output_contract": "#/$defs/State",
+      "inputs": [
+        "Current accepted state",
+        "Exact original requests",
+        "Child proposals"
+      ],
+      "outputs": [
+        {
+          "object": "ShotEditGenerationPlan",
+          "owner": "M9",
+          "write_path": "/content",
+          "consumers": [
+            "M7",
+            "M8",
+            "M11",
+            "M12"
+          ]
+        }
+      ],
+      "readonly": [
+        "Original requests",
+        "Upstream/external projections"
+      ],
+      "write_permissions": [
+        "Parent version",
+        "Accepted child partitions without rewriting",
+        "Receipts",
+        "Actual dependencies and stale flags"
+      ],
+      "dependencies": {
+        "child_modules": [
+          "M9.1",
+          "M9.2",
+          "M9.3"
+        ],
+        "automatic_child_execution": false
+      },
+      "route": {
+        "explicit_target": "M9",
+        "dispatch": "Choose the requested child targets; combine independent proposal/request files for accept.",
+        "priority": "Explicit scope; no mandatory ordering.",
+        "status": "not_invoked"
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/shot-and-panel-mapping.md",
+        "references/edit-topology-and-windows.md",
+        "references/generation-partition.md",
+        "references/audit-and-handoff.md"
+      ],
+      "tools": [
+        {
+          "tool": "python scripts/m9_contract.py accept",
+          "effects": "stdout only; no source-file overwrite"
+        }
+      ],
+      "parent_acceptance": {
+        "atomic": true,
+        "exclusive_writers": {
+          "ShotMap": "M9.1",
+          "EditGraph": "M9.2",
+          "GenerationPlan": "M9.3"
+        },
+        "version": "All new proposals target the same current base_version."
+      },
+      "failure_return": {
+        "conflicting_partition": "Relevant child",
+        "inconsistent_projection": "Caller/provider",
+        "stale_base": "Caller rebase and revalidate",
+        "source_conflict": "Source owner"
+      },
+      "retry": {
+        "technical": "Exact accepted request and proposal digests are idempotent.",
+        "creative_revision": "New IDs and current base_version.",
+        "side_effects": "none"
+      },
+      "invalidation": {
+        "mechanism": "Actual consumer read_paths; preserve stale status until explicit successful revision."
+      },
+      "compatibility": {
+        "supported_contract_versions": [
+          "1.0.0"
+        ],
+        "unknown_versions": "reject",
+        "migration": "Explicit source-preserving adapter only."
+      },
+      "verification": {
+        "deterministic_scope": "Atomicity, ownership, exact original request, digest/version/conflict checks.",
+        "not_verified": [
+          "Truth of externally supplied assertions",
+          "Domain completeness",
+          "Generated media"
+        ]
+      }
+    },
+    {
+      "module_id": "M9.1",
+      "parent_id": "M9",
+      "contract_version": "1.0.0",
+      "route_version": "1.0.0",
+      "responsibility": "镜头、分镜格、显式事件和动作阶段归属；允许阶段跨镜与同镜多个画格。",
+      "input_contract": "#/$defs/Request1",
+      "output_contract": "#/$defs/Proposal1",
+      "inputs": [
+        {
+          "input": "action_context",
+          "type": "ActionProjection",
+          "readonly": true,
+          "replacement": "Compatible external projection with actual source/version is accepted; upstream execution is not required."
+        },
+        {
+          "input": "camera_context",
+          "type": "CameraProjection",
+          "readonly": true,
+          "replacement": "Compatible external projection with actual source/version is accepted; upstream execution is not required."
+        }
+      ],
+      "outputs": [
+        {
+          "object": "ShotMap",
+          "write_path": "/content/ShotMap",
+          "owner": "M9.1",
+          "consumers": [
+            "M9.2",
+            "M9.3",
+            "M11",
+            "M12"
+          ]
+        }
+      ],
+      "readonly": {
+        "contexts": [
+          "brief",
+          "action_context",
+          "camera_context"
+        ],
+        "source_versions": "Nonblank strings in this adapter contract; do not cast native upstream version fields blindly."
+      },
+      "write_permissions": [
+        "/content/ShotMap"
+      ],
+      "forbidden_writes": [
+        "M4.ActionPlan",
+        "M5.CameraPlan",
+        "M7.TimePlan",
+        "M8.StateContinuity",
+        "M11.model_fields",
+        "M11.backend_parameters"
+      ],
+      "dependencies": {
+        "required_inputs": [
+          "action_context",
+          "camera_context"
+        ],
+        "upstream_execution_required": false,
+        "automatic_downstream_invocation": false
+      },
+      "route": {
+        "explicit_target": "M9.1",
+        "triggers": [
+          "镜头归属",
+          "阶段/画格映射",
+          "运镜误切"
+        ],
+        "priority": "Explicit target then declared task responsibility; do not infer a mandatory pipeline.",
+        "status": "not_invoked until a proposal is produced",
+        "input_version_capture": true
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/shot-and-panel-mapping.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md",
+        "references/case-evidence.md"
+      ],
+      "tools": [
+        {
+          "tool": "python scripts/m9_contract.py",
+          "operations": [
+            "route",
+            "check",
+            "accept",
+            "impact"
+          ],
+          "runtime": "Python >=3.10, standard library only",
+          "effects": "stdout JSON only; no inference/media editing/network/write"
+        }
+      ],
+      "parent_acceptance": {
+        "atomic": true,
+        "exclusive_partition": "ShotMap",
+        "requires_actual_original_request": true,
+        "candidate_sibling_equality": true,
+        "base_version_check": true,
+        "status": "draft; passed_with_unverified is not domain/media acceptance"
+      },
+      "failure_return": {
+        "schema_or_source": "caller",
+        "phase_or_event": "M4/M5 or external provider",
+        "window_or_topology": "M9.2",
+        "continuity": "M8 or external provider",
+        "timing": "M7 or external provider",
+        "capability_or_labels": "M11 or external provider",
+        "observation": "M12 or external observer"
+      },
+      "retry": {
+        "technical": "Retry identical immutable IDs and content; exact repeat is idempotent.",
+        "creative_revision": "New request/proposal IDs at current parent base_version; never reuse accepted IDs with changed content.",
+        "side_effects": "none"
+      },
+      "invalidation": {
+        "mechanism": "Actual receipt read_paths; JSON pointer prefix overlap; collections invalidate at their declared array path.",
+        "source_change": "Consumers reading that source become stale.",
+        "sibling_change": "M9.2/M9.3 stale only when their actual registered sibling dependency changes.",
+        "display_only_change": "No invalidation unless a consumer explicitly reads /display."
+      },
+      "compatibility": {
+        "supported_contract_versions": [
+          "1.0.0"
+        ],
+        "unknown_versions": "reject",
+        "migration": "Explicit adapter with source version/provenance; no silent coercion or native-M7/M8 compatibility claim."
+      },
+      "verification": {
+        "deterministic_scope": "Explicit JSON structure, relation IDs, provenance/version and bounds, assignment and acceptance transactions.",
+        "not_verified": [
+          "Free-text meaning",
+          "Truth of supplied approvals/capability",
+          "Media cut/phase detection",
+          "M7 mappings",
+          "H3 inference",
+          "Complete G1/G2 or G3/G4"
+        ]
+      }
+    },
+    {
+      "module_id": "M9.2",
+      "parent_id": "M9",
+      "contract_version": "1.0.0",
+      "route_version": "1.0.0",
+      "responsibility": "源窗选择、剪辑拓扑、切点理由、转场执行环节与连续性策略；时间转换交M7。",
+      "input_contract": "#/$defs/Request2",
+      "output_contract": "#/$defs/Proposal2",
+      "inputs": [
+        {
+          "input": "shot_context",
+          "type": "ShotProjection",
+          "readonly": true,
+          "replacement": "Compatible external projection with actual source/version is accepted; upstream execution is not required."
+        },
+        {
+          "input": "source_context",
+          "type": "SourceProjection",
+          "readonly": true,
+          "replacement": "Compatible external projection with actual source/version is accepted; upstream execution is not required."
+        },
+        {
+          "input": "continuity_context",
+          "type": "ContinuityProjection",
+          "readonly": true,
+          "replacement": "Compatible external projection with actual source/version is accepted; upstream execution is not required."
+        }
+      ],
+      "outputs": [
+        {
+          "object": "EditGraph",
+          "write_path": "/content/EditGraph",
+          "owner": "M9.2",
+          "consumers": [
+            "M9.3",
+            "M7",
+            "M8",
+            "M11",
+            "M12"
+          ]
+        }
+      ],
+      "readonly": {
+        "contexts": [
+          "brief",
+          "shot_context",
+          "source_context",
+          "continuity_context"
+        ],
+        "source_versions": "Nonblank strings in this adapter contract; do not cast native upstream version fields blindly."
+      },
+      "write_permissions": [
+        "/content/EditGraph"
+      ],
+      "forbidden_writes": [
+        "M4.ActionPlan",
+        "M5.CameraPlan",
+        "M7.TimePlan",
+        "M8.StateContinuity",
+        "M11.model_fields",
+        "M11.backend_parameters"
+      ],
+      "dependencies": {
+        "required_inputs": [
+          "shot_context",
+          "source_context",
+          "continuity_context"
+        ],
+        "upstream_execution_required": false,
+        "automatic_downstream_invocation": false
+      },
+      "route": {
+        "explicit_target": "M9.2",
+        "triggers": [
+          "选窗",
+          "装配边界",
+          "转场意图"
+        ],
+        "priority": "Explicit target then declared task responsibility; do not infer a mandatory pipeline.",
+        "status": "not_invoked until a proposal is produced",
+        "input_version_capture": true
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/edit-topology-and-windows.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md",
+        "references/case-evidence.md"
+      ],
+      "tools": [
+        {
+          "tool": "python scripts/m9_contract.py",
+          "operations": [
+            "route",
+            "check",
+            "accept",
+            "impact"
+          ],
+          "runtime": "Python >=3.10, standard library only",
+          "effects": "stdout JSON only; no inference/media editing/network/write"
+        }
+      ],
+      "parent_acceptance": {
+        "atomic": true,
+        "exclusive_partition": "EditGraph",
+        "requires_actual_original_request": true,
+        "candidate_sibling_equality": true,
+        "base_version_check": true,
+        "status": "draft; passed_with_unverified is not domain/media acceptance"
+      },
+      "failure_return": {
+        "schema_or_source": "caller",
+        "phase_or_event": "M4/M5 or external provider",
+        "window_or_topology": "M9.2",
+        "continuity": "M8 or external provider",
+        "timing": "M7 or external provider",
+        "capability_or_labels": "M11 or external provider",
+        "observation": "M12 or external observer"
+      },
+      "retry": {
+        "technical": "Retry identical immutable IDs and content; exact repeat is idempotent.",
+        "creative_revision": "New request/proposal IDs at current parent base_version; never reuse accepted IDs with changed content.",
+        "side_effects": "none"
+      },
+      "invalidation": {
+        "mechanism": "Actual receipt read_paths; JSON pointer prefix overlap; collections invalidate at their declared array path.",
+        "source_change": "Consumers reading that source become stale.",
+        "sibling_change": "M9.2/M9.3 stale only when their actual registered sibling dependency changes.",
+        "display_only_change": "No invalidation unless a consumer explicitly reads /display."
+      },
+      "compatibility": {
+        "supported_contract_versions": [
+          "1.0.0"
+        ],
+        "unknown_versions": "reject",
+        "migration": "Explicit adapter with source version/provenance; no silent coercion or native-M7/M8 compatibility claim."
+      },
+      "verification": {
+        "deterministic_scope": "Explicit JSON structure, relation IDs, provenance/version and bounds, assignment and acceptance transactions.",
+        "not_verified": [
+          "Free-text meaning",
+          "Truth of supplied approvals/capability",
+          "Media cut/phase detection",
+          "M7 mappings",
+          "H3 inference",
+          "Complete G1/G2 or G3/G4"
+        ]
+      }
+    },
+    {
+      "module_id": "M9.3",
+      "parent_id": "M9",
+      "contract_version": "1.0.0",
+      "route_version": "1.0.0",
+      "responsibility": "依据带版本能力、时间及连续性投影，划分生成任务、完整上下文、覆盖和语义交接。",
+      "input_contract": "#/$defs/Request3",
+      "output_contract": "#/$defs/Proposal3",
+      "inputs": [
+        {
+          "input": "shot_context",
+          "type": "ShotProjection",
+          "readonly": true,
+          "replacement": "Compatible external projection with actual source/version is accepted; upstream execution is not required."
+        },
+        {
+          "input": "edit_context",
+          "type": "EditProjection",
+          "readonly": true,
+          "replacement": "Compatible external projection with actual source/version is accepted; upstream execution is not required."
+        },
+        {
+          "input": "continuity_context",
+          "type": "ContinuityProjection",
+          "readonly": true,
+          "replacement": "Compatible external projection with actual source/version is accepted; upstream execution is not required."
+        },
+        {
+          "input": "capability_context",
+          "type": "CapabilityProjection",
+          "readonly": true,
+          "replacement": "Compatible external projection with actual source/version is accepted; upstream execution is not required."
+        },
+        {
+          "input": "time_context",
+          "type": "TimeProjection",
+          "readonly": true,
+          "replacement": "Compatible external projection with actual source/version is accepted; upstream execution is not required."
+        },
+        {
+          "input": "asset_context",
+          "type": "AssetProjection",
+          "readonly": true,
+          "replacement": "Compatible external projection with actual source/version is accepted; upstream execution is not required."
+        }
+      ],
+      "outputs": [
+        {
+          "object": "GenerationPlan",
+          "write_path": "/content/GenerationPlan",
+          "owner": "M9.3",
+          "consumers": [
+            "M7",
+            "M8",
+            "M11",
+            "M12"
+          ]
+        }
+      ],
+      "readonly": {
+        "contexts": [
+          "brief",
+          "shot_context",
+          "edit_context",
+          "continuity_context",
+          "capability_context",
+          "time_context",
+          "asset_context"
+        ],
+        "source_versions": "Nonblank strings in this adapter contract; do not cast native upstream version fields blindly."
+      },
+      "write_permissions": [
+        "/content/GenerationPlan"
+      ],
+      "forbidden_writes": [
+        "M4.ActionPlan",
+        "M5.CameraPlan",
+        "M7.TimePlan",
+        "M8.StateContinuity",
+        "M11.model_fields",
+        "M11.backend_parameters"
+      ],
+      "dependencies": {
+        "required_inputs": [
+          "shot_context",
+          "edit_context",
+          "continuity_context",
+          "capability_context",
+          "time_context",
+          "asset_context"
+        ],
+        "upstream_execution_required": false,
+        "automatic_downstream_invocation": false
+      },
+      "route": {
+        "explicit_target": "M9.3",
+        "triggers": [
+          "生成分段",
+          "任务上下文",
+          "能力与覆盖"
+        ],
+        "priority": "Explicit target then declared task responsibility; do not infer a mandatory pipeline.",
+        "status": "not_invoked until a proposal is produced",
+        "input_version_capture": true
+      },
+      "resources": [
+        "references/contracts.json",
+        "references/contract-guide.md",
+        "references/module-registry.json",
+        "references/generation-partition.md",
+        "references/audit-and-handoff.md",
+        "references/h3-label-mapping.md",
+        "references/case-evidence.md"
+      ],
+      "tools": [
+        {
+          "tool": "python scripts/m9_contract.py",
+          "operations": [
+            "route",
+            "check",
+            "accept",
+            "impact"
+          ],
+          "runtime": "Python >=3.10, standard library only",
+          "effects": "stdout JSON only; no inference/media editing/network/write"
+        }
+      ],
+      "parent_acceptance": {
+        "atomic": true,
+        "exclusive_partition": "GenerationPlan",
+        "requires_actual_original_request": true,
+        "candidate_sibling_equality": true,
+        "base_version_check": true,
+        "status": "draft; passed_with_unverified is not domain/media acceptance"
+      },
+      "failure_return": {
+        "schema_or_source": "caller",
+        "phase_or_event": "M4/M5 or external provider",
+        "window_or_topology": "M9.2",
+        "continuity": "M8 or external provider",
+        "timing": "M7 or external provider",
+        "capability_or_labels": "M11 or external provider",
+        "observation": "M12 or external observer"
+      },
+      "retry": {
+        "technical": "Retry identical immutable IDs and content; exact repeat is idempotent.",
+        "creative_revision": "New request/proposal IDs at current parent base_version; never reuse accepted IDs with changed content.",
+        "side_effects": "none"
+      },
+      "invalidation": {
+        "mechanism": "Actual receipt read_paths; JSON pointer prefix overlap; collections invalidate at their declared array path.",
+        "source_change": "Consumers reading that source become stale.",
+        "sibling_change": "M9.2/M9.3 stale only when their actual registered sibling dependency changes.",
+        "display_only_change": "No invalidation unless a consumer explicitly reads /display."
+      },
+      "compatibility": {
+        "supported_contract_versions": [
+          "1.0.0"
+        ],
+        "unknown_versions": "reject",
+        "migration": "Explicit adapter with source version/provenance; no silent coercion or native-M7/M8 compatibility claim."
+      },
+      "verification": {
+        "deterministic_scope": "Explicit JSON structure, relation IDs, provenance/version and bounds, assignment and acceptance transactions.",
+        "not_verified": [
+          "Free-text meaning",
+          "Truth of supplied approvals/capability",
+          "Media cut/phase detection",
+          "M7 mappings",
+          "H3 inference",
+          "Complete G1/G2 or G3/G4"
+        ]
+      }
+    }
+  ]
+}

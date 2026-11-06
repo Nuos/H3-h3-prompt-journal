@@ -1,0 +1,15 @@
+{
+  "kind": "M9State",
+  "contract_version": "1.0.0",
+  "work_id": "m9_design_demo",
+  "version": 0,
+  "owner": "M9",
+  "object_type": "ShotEditGenerationPlan",
+  "status": "draft",
+  "content": {},
+  "contexts": {},
+  "sources": {},
+  "receipts": [],
+  "consumers": [],
+  "stale_modules": []
+}

@@ -1,0 +1,158 @@
+{
+  "task": "m9_forward_use_dance_plan",
+  "recorded_at_utc": "2026-11-06T01:45:14.756374+00:00",
+  "skill_root": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation",
+  "deliverable_status": "自然语言创作候选规划；非后端可执行性认证，非媒体验收",
+  "actual_semantic_reads": [
+    {
+      "path": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation/SKILL.md",
+      "read_scope": "full",
+      "read_method": "shell text read (cat/sed), with truncated output recovered where noted",
+      "notes": "完整阅读入口规则、路由与边界。",
+      "file_identity_at_log_write": {
+        "sha256": "b6807fbbcde21dcde9598c4afc7f9737a9ce68b6941f4a03942094c5c5816f65",
+        "bytes": 10071,
+        "lines": 88
+      }
+    },
+    {
+      "path": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation/references/shot-and-panel-mapping.md",
+      "read_scope": "full",
+      "read_method": "shell text read (cat/sed), with truncated output recovered where noted",
+      "notes": "完整阅读五种单位与阶段、画格、实际镜头映射。",
+      "file_identity_at_log_write": {
+        "sha256": "a2e586fd17f8f212b140dd06db44daf1917e910769d37d2d4dd2f56fece09bb2",
+        "bytes": 4099,
+        "lines": 40
+      }
+    },
+    {
+      "path": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation/references/edit-topology-and-windows.md",
+      "read_scope": "full",
+      "read_method": "shell text read (cat/sed), with truncated output recovered where noted",
+      "notes": "完整阅读剪辑边界、连续性策略及源窗口要求。",
+      "file_identity_at_log_write": {
+        "sha256": "6907d3efcf28d364fc006ac00861b9eded6aa7b252c3a6e7cd8051de7bc3a6ca",
+        "bytes": 6821,
+        "lines": 78
+      }
+    },
+    {
+      "path": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation/references/generation-partition.md",
+      "read_scope": "full",
+      "read_method": "shell text read (cat/sed), with truncated output recovered where noted",
+      "notes": "初次批量输出受限，随后单独完整读取。",
+      "file_identity_at_log_write": {
+        "sha256": "fd0da92aa19b5397856404f0e760926789f137377dfcdf11d3465350afc54a2b",
+        "bytes": 5184,
+        "lines": 49
+      }
+    },
+    {
+      "path": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation/references/audit-and-handoff.md",
+      "read_scope": "full",
+      "read_method": "shell text read (cat/sed), with truncated output recovered where noted",
+      "notes": "初次批量输出未完整显示，随后单独完整读取。",
+      "file_identity_at_log_write": {
+        "sha256": "d9e8d5b5da91e12923ac135930cf5b73aae7c384316acc155c6795122baa81cb",
+        "bytes": 6648,
+        "lines": 74
+      }
+    },
+    {
+      "path": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation/references/h3-base-official.txt",
+      "read_scope": "full",
+      "read_method": "shell text read (cat/sed), with truncated output recovered where noted",
+      "notes": "初次整文件输出受限，分段读取 1–76、77–150、151–240；补读 177–201 恢复截断内容。",
+      "file_identity_at_log_write": {
+        "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+        "bytes": 15773,
+        "lines": 222
+      }
+    },
+    {
+      "path": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation/references/h3-ref-official.txt",
+      "read_scope": "full",
+      "read_method": "shell text read (cat/sed), with truncated output recovered where noted",
+      "notes": "分段读取 1–115、116–225；226–341 初次截断，补读 226–249、250–295、296–341。",
+      "file_identity_at_log_write": {
+        "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+        "bytes": 23553,
+        "lines": 341
+      }
+    },
+    {
+      "path": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation/references/provenance-and-license.md",
+      "read_scope": "full",
+      "read_method": "shell text read (cat/sed), with truncated output recovered where noted",
+      "notes": "初次输出截断，后续单独整文件读取完成；其中开发阶段读取记录不算本任务读取证据。",
+      "file_identity_at_log_write": {
+        "sha256": "634c1682e474ae2c323afe12f5f36d49d3df9b7bde11494d2e9da74048654ee6",
+        "bytes": 5736,
+        "lines": 53
+      }
+    }
+  ],
+  "hash_scope_note": "哈希与大小在写入读取记录时计算，用于当前文件身份；它们不证明此前读取后未发生并发修改。",
+  "inventory_or_metadata_only": [
+    {
+      "scope": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation",
+      "operation": "rg --files",
+      "note": "技能资源目录清单；列出文件不等于读取其正文。"
+    },
+    {
+      "path": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/h3-shot-edit-generation/references/h3-protocol-source.json",
+      "operation": "wc -l",
+      "note": "仅统计行数，未读取协议来源 JSON 正文。"
+    },
+    {
+      "scope": "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill",
+      "operation": "rg --files 查找合同与资源位置",
+      "note": "看到兄弟技能合同路径，未读取其内容，未将其当作 M9 规则。"
+    }
+  ],
+  "task_evidence_scope": {
+    "user_brief": "16 秒舞蹈；0–4 秒右跨步；4–9 秒为同一次转体；6 秒侧移变后退明确不切；9 秒切近并继续完成转体，之后呼吸与衣料余动至 16 秒。三个 0/6/16 秒画格仅规划；参考视频仅节奏；定妆照仅身份；整曲仅后期。要求两个独立生成任务。",
+    "observed_inputs": [
+      "用户提供的文字要求",
+      "上述实际读取的技能正文"
+    ],
+    "reported_but_not_inspected": [
+      "三张分镜画格",
+      "一段节奏参考视频",
+      "一张身份定妆照",
+      "一条后期音乐轨"
+    ],
+    "not_available": [
+      "具体后端能力与版本资料",
+      "生成输出视频",
+      "源输出版本与实际可用窗口",
+      "真实接缝或逐帧媒体证据"
+    ],
+    "case_materials_read": [],
+    "external_web_sources_read": [],
+    "unverified": [
+      "实际媒体中的身份/构图/动作/节奏",
+      "后端对模式、参考素材数量与 9/7 秒覆盖的支持",
+      "源帧率、画幅、时间基准",
+      "音乐长度与成片适配",
+      "动作交接与成片质量"
+    ],
+    "formal_resource_limit": "初始目录清单未见 M9 正式合同与 CLI 文件；根据本任务自然语言交付范围不等待、不运行，也不声称通过其验证。",
+    "planning_assumptions": [
+      "动作分析分四阶段，跨 9 秒属于同一次 ROT01",
+      "原速剪辑仅为候选映射",
+      "转体完成时刻 tc 待定，9 < tc < 16",
+      "Picture 编号仅示意各任务局部映射，非实际后端请求"
+    ],
+    "model_service_calls": 0,
+    "generation_runs": 0,
+    "cli_validation_runs": 0,
+    "existing_user_materials_modified": false,
+    "quality_claims": "无媒体验收、无真实可用帧或接缝通过结论；G3/G4 未评估。"
+  },
+  "outputs": [
+    "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/validation/m9/forward-use/dance-plan.md",
+    "/workspace/scratch/31dfe5fa25ce/H3-h3-prompt-journal/docs/h3skill/validation/m9/forward-use/read-log.json"
+  ]
+}
