@@ -1,0 +1,37 @@
+{
+  "official-base": {
+    "kind": "official_protocol",
+    "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/base-en.txt",
+    "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+    "excerpt": "Base modes T2VA/I2VA/FL2VA/L2VA have three fields and exact image-alignment lines.",
+    "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"
+  },
+  "official-ref": {
+    "kind": "official_protocol",
+    "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/ref-en.txt",
+    "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+    "excerpt": "Ref2VA has six fields, independent reference categories and explicit audio retention relationships.",
+    "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"
+  },
+  "task-plan": {
+    "kind": "user_text",
+    "locator": "/workspace/scratch/9caa7b23478d/m11-forward-use/task.md",
+    "version": "1",
+    "excerpt": "# 独立使用任务\n\n使用提供目录中的 `h3-model-protocol` 技能，完成下面这个 8 秒片段的 H3 提示词和伴随提交资料。请读取技能需要的资源，按其公开合同构造可运行输入并执行适用命令。将产物保存在指定输出目录，记录实际执行过的命令及结果。\n\n这是用户给出的文字设计资料，尚未提供真实媒体文件供查看。本任务不需要生成视频、联网或提交仓库。\n\n## 创作计划\n\n画面是明亮、写实、自然光照的街角茶铺。柜台内的店员叶青穿浅灰围裙，柜台外的顾客罗成穿深蓝夹克。柜台保持两人中间的空间关系。墙上有清晰可见的原文标牌：`今日茶已备好！`。\n\n只有两镜。第一镜从 0 秒开始，正面中景同时包含两个人的肩颈、手和完整杯子。罗成先将一个空陶杯放到柜台中央，罗成说：`请给我一杯热茶。` 叶青用右手握壶柄、左手扶住壶盖，将热茶倒入杯中，茶水落入杯内，杯子保持原位。第二镜在生成局部时间 3.5 秒切到柜台侧面中景，叶青将茶壶放回柜台内侧，叶青说：`小心，茶还很烫！` 罗成用右手握杯柄，小心把杯子移到柜台外缘，叶青的双手离开杯子；8 秒时两人停留在这个结果状态。两句台词各说一次，不改字词或标点。\n\n独立参考资料如下，序列由调用方提供，但稳定身份不能随序列变化：\n\n- `portrait_ye`：图片，版本 img-1，只提供叶青的身份和浅灰围裙，外貌按本任务文字，不继承照片姿态、背景、机位或光线；不作为实际首帧／尾帧。\n- `portrait_luo`：图片，版本 img-2，只提供罗成的身份和深蓝夹克，同样不作为实际首帧／尾帧。\n- `room_music`：音频，版本 audio-1，提供一段已获得使用许可的 8 秒观众配乐信号；原信号的整段配乐会复用，同时添加本片新录的对白、倒水声、茶壶落台声和杯底轻擦声。角色听不到配乐，配乐没有歌词。\n\n用户请求目标为 1080×1920、24 fps、8 秒。只有官方提示词指南可用；实际本地工作流的版本、节点字段、参数范围和素材槽位尚未提供。\n\n## 交付要求\n\n给出完整模型正文、模式和参考／说话者映射、必保内容追溯，以及这次能完成的工作流提交资料与具体缺项。使用公开脚本验证可验证的数据；其余检查如实说明范围。不要更改剧情、动作、切点、台词或用户的参数目标来消除缺项。\n",
+    "sha256": "0d04248b304925eb5e608d17916bced035c6fefb30c902ab17a4e01e0e6067b0"
+  },
+  "agent-arrangement": {
+    "kind": "agent_arrangement",
+    "locator": "/workspace/scratch/9caa7b23478d/m11-forward-use/output/author-arrangements.json",
+    "version": "1",
+    "excerpt": "{\"status\": \"agent-authored-expression-and-timing-arrangements\", \"version\": \"1\", \"speaking_onsets_ms\": {\"luo_voice\": 600, \"ye_voice\": 4100}, \"reason\": \"The public speaker/utterance contract requires concrete first-vocal times. The task fixes speaker order and shot membership but does not specify these onsets.\", \"camera_expression\": \"Hold each requested medium viewpoint steady; no extra cut or shot.\", \"delivery_expression\": \"Luo speaks conversationally; Ye gives a clear gentle warning; both finish their one line in the assigned shot.\", \"state_expression\": \"Cup placement precedes Luo speech and pouring; kettle set-down precedes Ye speech and cup movement; hold the specified result through 8 seconds.\", \"unknown_reference_features\": \"No invented face, hair, gender, music instrumentation, tempo, or dynamics; use the declared source role only.\", \"asset_locators\": \"declared-media:// locators identify unavailable declared assets, not files, uploads, or executable backend values.\"}",
+    "sha256": "0cc7693558faebfc309d45cc56236bf99d61941f4b6459dd5f0e258876066fe0"
+  },
+  "field-review": {
+    "kind": "agent_review",
+    "locator": "/workspace/scratch/9caa7b23478d/m11-forward-use/output/revision-notes.json",
+    "version": "1",
+    "excerpt": "{\"revision\": 2, \"reviewer\": \"root Agent\", \"basis\": \"Public Ref2VA guide section 6 and prompt-compilation sound-layer rules\", \"first_round\": \"All three public checks passed, but root Agent field review found dialogue synchronization and intelligibility requirements in overall_soundscape.\", \"correction\": \"Move dialogue execution requirements into each detailed_description shot; retain only physical sound layers in overall_soundscape.\", \"unchanged\": \"Story, actions, cut, exact dialogue/sign, target parameters, reference permissions, and audio reuse strategy.\", \"prior_accepted_state\": \"/workspace/scratch/9caa7b23478d/m11-forward-use/output/revision-history/round-1/results/accepted-state.json\", \"base_version\": 1, \"scope\": \"Supervised field-placement revision, not evidence that first-round semantics had been automatically verified.\"}",
+    "sha256": "4727feb42e895487e2be215de1e6b0b9447f08b80ca14077e445acddc8fe5d03"
+  }
+}

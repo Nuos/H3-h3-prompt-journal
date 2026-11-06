@@ -1,0 +1,15 @@
+{
+  "kind": "M11State",
+  "contract_version": "1.0.0",
+  "work_id": "tea-shop-eight-second",
+  "version": 0,
+  "owner": "M11",
+  "object_type": "CompilationResult",
+  "status": "draft",
+  "content": {},
+  "contexts": {},
+  "sources": {},
+  "receipts": [],
+  "consumers": [],
+  "stale_modules": []
+}

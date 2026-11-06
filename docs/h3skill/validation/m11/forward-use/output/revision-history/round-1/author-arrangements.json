@@ -1,0 +1,14 @@
+{
+  "status": "agent-authored-expression-and-timing-arrangements",
+  "version": "1",
+  "speaking_onsets_ms": {
+    "luo_voice": 600,
+    "ye_voice": 4100
+  },
+  "reason": "The public speaker/utterance contract requires concrete first-vocal times. The task fixes speaker order and shot membership but does not specify these onsets.",
+  "camera_expression": "Hold each requested medium viewpoint steady; no extra cut or shot.",
+  "delivery_expression": "Luo speaks conversationally; Ye gives a clear gentle warning; both finish their one line in the assigned shot.",
+  "state_expression": "Cup placement precedes Luo speech and pouring; kettle set-down precedes Ye speech and cup movement; hold the specified result through 8 seconds.",
+  "unknown_reference_features": "No invented face, hair, gender, music instrumentation, tempo, or dynamics; use the declared source role only.",
+  "asset_locators": "declared-media:// locators identify unavailable declared assets, not files, uploads, or executable backend values."
+}

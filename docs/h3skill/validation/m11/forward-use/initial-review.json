@@ -1,0 +1,9 @@
+{
+  "kind": "M11InitialForwardReview",
+  "status": "revision_requested",
+  "finding": "overall_soundscape begins with dialogue synchronization and voice intelligibility instructions; the fixed Ref2VA guide assigns dialogue to detailed_description and reserves this summary for ambience/physical sounds.",
+  "authority": "h3-ref-official.txt lines 282-303",
+  "scope": "Field placement in an otherwise successfully compiled text task; no inference or media check.",
+  "initial_prompt_sha256": "6f77d5d491c5f5889760223a87c76485b167c1427cb2b265c9dcefa3f3d5bed7",
+  "requested_correction": "Keep original words, actions, timing and audio policy; relocate the dialogue-specific direction into the applicable detailed shots and keep overall_soundscape focused on its defined layer."
+}

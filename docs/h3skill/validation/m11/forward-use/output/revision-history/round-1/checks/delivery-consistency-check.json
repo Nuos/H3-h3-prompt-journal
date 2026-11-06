@@ -1,0 +1,30 @@
+{
+  "status": "pass",
+  "scope": "Additional deterministic checks of delivered text and stored results; not a substitute for the public CLI or semantic/media review.",
+  "checks": {
+    "six_fields_in_required_order": true,
+    "mode_ref2va": true,
+    "no_alignment_first_or_last_frame": true,
+    "two_real_shot_headers": true,
+    "exact_second_cut": true,
+    "first_shot_no_timestamp": true,
+    "luo_exact_once": true,
+    "ye_exact_once": true,
+    "only_two_dialogue_blocks": true,
+    "exact_visible_sign": true,
+    "speaker_mapping": true,
+    "no_unresolved_placeholders": true,
+    "all_17_obligation_ids_traced": true,
+    "target_parameters_preserved": true,
+    "no_unearned_export_partition": true,
+    "official_source_hashes_match_package": true
+  },
+  "detailed_description_whitespace_word_count": 464,
+  "not_checked": [
+    "spoken duration",
+    "media identity",
+    "actual audio content",
+    "backend support",
+    "generated visuals or sound"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/workspace/scratch/9caa7b23478d/m11-forward-use/output/build_delivery.py"
+  ],
+  "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use",
+  "exit_code": 0,
+  "stdout": "logs/60-delivery-check.stdout.txt",
+  "stderr": "logs/60-delivery-check.stderr.txt"
+}

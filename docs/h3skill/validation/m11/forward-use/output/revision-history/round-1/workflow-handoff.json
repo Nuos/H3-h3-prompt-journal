@@ -1,0 +1,86 @@
+{
+  "status": "protocol_text_ready_runtime_export_blocked",
+  "work_id": "tea-shop-eight-second",
+  "accepted_state": {
+    "version": 1,
+    "status": "partial",
+    "partitions": [
+      "capability_profile",
+      "reference_binding",
+      "prompt_compilation"
+    ]
+  },
+  "mode": "Ref2VA",
+  "target_parameters": {
+    "duration_ms": 8000,
+    "width": 1080,
+    "height": 1920,
+    "fps": 24
+  },
+  "prompt_file": "model-prompt.txt",
+  "fields_file": "model-fields.json",
+  "binding_file": "results/reference-binding.json",
+  "source_register": "source-register.json",
+  "runtime_asset_map": {},
+  "actual_export_attempt": "results/m11-4-export-blocked.json",
+  "export_error": [
+    {
+      "code": "runtime_unknown",
+      "detail": "No executable task export: actual runtime fields and capabilities are unknown",
+      "path": "/inputs/capability_profile/runtime",
+      "owner": "caller"
+    }
+  ],
+  "missing": [
+    {
+      "id": "runtime-identity",
+      "owner": "M11.1 / 部署资料提供方",
+      "missing": "实际后端名称和版本、H3 模型/权重版本、工作流名称和版本。"
+    },
+    {
+      "id": "mode-support",
+      "owner": "M11.1 / 部署资料提供方",
+      "missing": "目标部署已暴露 Ref2VA、两图片参考和独立音频复用的版本证据。"
+    },
+    {
+      "id": "parameter-mapping",
+      "owner": "M11.4 / 工作流提供方",
+      "missing": "duration_ms/seconds、width、height、fps 的实际节点或字段路径、类型、单位、必需项、枚举/范围和对应版本依据。"
+    },
+    {
+      "id": "prompt-and-mode-slots",
+      "owner": "M11.4 / 工作流提供方",
+      "missing": "完整六字段 rendered_prompt 的输入位置和封装方式、模式字段位置及真实取值。"
+    },
+    {
+      "id": "media-slots",
+      "owner": "M11.4 / 工作流提供方",
+      "missing": "实际素材输入槽位、通道/序列格式、资产上限与同一身份映射规则。"
+    },
+    {
+      "id": "actual-media",
+      "owner": "M2 / 素材提供方",
+      "missing": "portrait_ye img-1、portrait_luo img-2、room_music audio-1 的真实可访问文件/上传对象，以及带版本的 asset_map 值；现有声明 URI 不能作为提交值。"
+    },
+    {
+      "id": "media-inspection",
+      "owner": "M2 / M6 / M12",
+      "missing": "两张图的实际身份/衣着与参考权限范围；音频实际8秒、无歌词、信号内容与可用许可依据的独立核对。任务文字已声明许可，本轮未独立验证。"
+    },
+    {
+      "id": "execution-and-acceptance",
+      "owner": "执行方 / M12",
+      "missing": "真实工作流调用与返回、媒体解码观察、动作和口型、文字清晰度、配乐混合、两镜连续性、时长/帧率/尺寸测量。"
+    }
+  ],
+  "executable_payload": null,
+  "next_step": "Obtain versioned deployment evidence and real media values, update the CapabilityProfile and asset_map, then regenerate/check/accept the affected partitions at the current state version. Do not change the target creative plan or dimensions to conceal missing evidence.",
+  "not_performed": [
+    "network access",
+    "media generation",
+    "media decoding",
+    "backend submission",
+    "H3 inference",
+    "video acceptance"
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "kind": "M11CaseSourceIndex",
+  "package": "h3-model-protocol",
+  "version": "1.0.0",
+  "record_date": "2026-11-06",
+  "record_timezone": "Etc/UTC",
+  "summary": "四个代表案例的有界证据索引：八份 Markdown 全文阅读，工作流 JSON 全文解析及节点／连线语义投影审阅。",
+  "keywords": [
+    "协议编译",
+    "参考角色",
+    "独立任务",
+    "音频策略",
+    "时间映射",
+    "运行参数",
+    "节点连线",
+    "证据边界"
+  ],
+  "navigation": {
+    "evidence_document": "case-evidence.md",
+    "protocol_mapping": "h3-label-mapping.md",
+    "protocol_source": "h3-protocol-source.json",
+    "provenance": "provenance-and-license.md"
+  },
+  "source_repository": "Nuos/H3-h3-prompt-journal",
+  "source_commit": "586373218a0790382fc5eeed99574d2d58eb8eb8",
+  "content_boundary": "case-studies/",
+  "index_scope": "selected_cases_only",
+  "index_extensions": [
+    ".md",
+    ".json"
+  ],
+  "evidence_document": "case-evidence.md",
+  "reading_policy": [
+    "只索引四个代表案例的九份文本，不宣称完成全仓案例盘点或媒体审阅。",
+    "full_text 表示全文进入阅读范围；line_ranges 精确记录完整原文范围。",
+    "structured_projection 表示全文 JSON 解析并审阅所列字段；line_ranges 留空，不能将结构解析误计为逐行全文阅读。",
+    "line_count 采用 UTF-8 splitlines 的逻辑行计数；JSON 末行没有换行符，不能只按换行符数量统计。",
+    "原文事实 F、作者报告 A、设计推导 D、未核验 U 分开；规范 N 来自独立的固定官方协议快照。",
+    "案例文字中的参数、上限和成片描述不视为当前后端已确认能力。",
+    "节点缓存 widget、实际连线和分支模式分别记录；静态公式代入不等于节点执行。",
+    "本次未查看图片、解码音视频、运行 ComfyUI 或执行 H3 推理。"
+  ],
+  "evidence_layers": {
+    "N": "固定官方协议的规范要求；规范原文不纳入本案例索引。",
+    "F": "案例原文或 JSON 配置明确存在的内容。",
+    "A": "作者叙述的经验、效果和能力声明。",
+    "D": "本模块根据来源作出的工程设计推导。",
+    "U": "本次未取得媒体、执行或部署证据的事项。"
+  },
+  "coverage": {
+    "selected_case_directories": 4,
+    "indexed_text_files": 9,
+    "indexed_text_lines": 7015,
+    "read_files": 9,
+    "full_text_read_files": 8,
+    "structured_projection_files": 1,
+    "full_text_read_lines": 2033,
+    "structured_projection_source_lines": 4982,
+    "structured_projection_nodes": 62,
+    "structured_projection_links": 91,
+    "media_files_viewed_or_decoded": 0,
+    "comfyui_execution_runs": 0,
+    "h3_inference_runs": 0
+  },
+  "files": [
+    {
+      "source_id": "S11",
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/586373218a0790382fc5eeed99574d2d58eb8eb8/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/README.md",
+      "git_blob_sha1": "7d2d18c1697928bed90d80361f5ac16997302d28",
+      "sha256": "58c14c16fe02142201cfe5892eba983349619861cdfac534808e35ea0923595b",
+      "byte_count": 7390,
+      "line_count": 71,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档仅提炼与 M11 相关内容。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 71
+        }
+      ],
+      "evidence_ids": [
+        "M11-E01",
+        "M11-E04"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "S11",
+      "path": "case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/586373218a0790382fc5eeed99574d2d58eb8eb8/case-studies/2026-10-xiashan-veiled-solo-twelve-segment/prompt.md",
+      "git_blob_sha1": "1db431d27a43f05da550ad1d96bf05bb1325bc05",
+      "sha256": "5d6cb4990a0c1ca69ca64dfc4016a63bc808b45db8284035328a6257be7336bb",
+      "byte_count": 101257,
+      "line_count": 743,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档仅提炼与 M11 相关内容。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 743
+        }
+      ],
+      "evidence_ids": [
+        "M11-E02",
+        "M11-E03",
+        "M11-E04"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "S12",
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/586373218a0790382fc5eeed99574d2d58eb8eb8/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/README.md",
+      "git_blob_sha1": "9940c805eee0e4f208100593745353d4b2efb9ab",
+      "sha256": "4a9382a4562c88bd25afc0d8debcc6d31a2a40c172f0581bea6d4c4ad65588e7",
+      "byte_count": 11195,
+      "line_count": 146,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档仅提炼与 M11 相关内容。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 146
+        }
+      ],
+      "evidence_ids": [
+        "M11-E05",
+        "M11-E07"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "S12",
+      "path": "case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/586373218a0790382fc5eeed99574d2d58eb8eb8/case-studies/2026-10-summer-pool-beach-waterline-mv-4-segment/prompt.md",
+      "git_blob_sha1": "1c185e60e2e73a456369709fd0b302cac8fa3a5a",
+      "sha256": "4ddcd492a10a451e124dba192db2c6608aae4a8e62ddbc601a424e5b46a303cd",
+      "byte_count": 36790,
+      "line_count": 283,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档仅提炼与 M11 相关内容。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 283
+        }
+      ],
+      "evidence_ids": [
+        "M11-E05",
+        "M11-E06",
+        "M11-E07",
+        "M11-E08"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "S15",
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/586373218a0790382fc5eeed99574d2d58eb8eb8/case-studies/2026-10-sock-showcase-right-entry-three-shot/README.md",
+      "git_blob_sha1": "f0df490b0ddd28d78f1eb1332c72a46248dd4654",
+      "sha256": "301860e8a966da6ffa62327c6564bb3f0c392484477afac5606c747f776ab0a2",
+      "byte_count": 4602,
+      "line_count": 52,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档仅提炼与 M11 相关内容。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 52
+        }
+      ],
+      "evidence_ids": [
+        "M11-E09"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "S15",
+      "path": "case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/586373218a0790382fc5eeed99574d2d58eb8eb8/case-studies/2026-10-sock-showcase-right-entry-three-shot/prompt.md",
+      "git_blob_sha1": "a6ac7572bfd08806686680e60d0d21f333e574ca",
+      "sha256": "f7b91e3ccc47bb46bb39aae0171f25e0d9d4b572955183789cb4d257e96071d4",
+      "byte_count": 8907,
+      "line_count": 98,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档仅提炼与 M11 相关内容。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 98
+        }
+      ],
+      "evidence_ids": [
+        "M11-E10"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "S16",
+      "path": "case-studies/2026-10-h3-motion-transfer/README.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/586373218a0790382fc5eeed99574d2d58eb8eb8/case-studies/2026-10-h3-motion-transfer/README.md",
+      "git_blob_sha1": "90e326cd2f2eeb13f1b3bb82a4997969df1884fe",
+      "sha256": "091c7f3efd88dd609375d22c4afb110306d2d1ee85c7d1363128d6dfa9379a6b",
+      "byte_count": 3875,
+      "line_count": 54,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档仅提炼与 M11 相关内容。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 54
+        }
+      ],
+      "evidence_ids": [
+        "M11-E11"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "S16",
+      "path": "case-studies/2026-10-h3-motion-transfer/prompt.md",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/586373218a0790382fc5eeed99574d2d58eb8eb8/case-studies/2026-10-h3-motion-transfer/prompt.md",
+      "git_blob_sha1": "d2832c361a34e9e441d2dcba8e207e684b97fef6",
+      "sha256": "884616f829c22f00dc2f210e57621927bcb0ab58c28055f648bce2c2c2fa9915",
+      "byte_count": 13165,
+      "line_count": 586,
+      "matches_pinned_blob": true,
+      "read_status": "full_text",
+      "read_scope": "UTF-8 全文阅读；证据文档仅提炼与 M11 相关内容。",
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 586
+        }
+      ],
+      "evidence_ids": [
+        "M11-E11",
+        "M11-E12"
+      ],
+      "media_observation": "not_run"
+    },
+    {
+      "source_id": "S16",
+      "path": "case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+      "source_url": "https://github.com/Nuos/H3-h3-prompt-journal/blob/586373218a0790382fc5eeed99574d2d58eb8eb8/case-studies/2026-10-h3-motion-transfer/h3-motion-transfer-workflow.json",
+      "git_blob_sha1": "827fe8500e9b67ad068d9fee566f276f0caa8a2f",
+      "sha256": "152b3df9c83e5677e2df46756a122eb64a3e05b0e15ff63e3f2ebadcea41b659",
+      "byte_count": 107172,
+      "line_count": 4982,
+      "matches_pinned_blob": true,
+      "read_status": "structured_projection",
+      "read_scope": "全文解析；审阅所有节点的类型、模式、控件值、输入、输出以及全部连线；不宣称逐行审阅画布位置、颜色等界面元数据。嵌入提示词与已全文阅读的 prompt.md 代码块核对一致（去首尾空白）。",
+      "line_ranges": [],
+      "evidence_ids": [
+        "M11-E13"
+      ],
+      "media_observation": "not_run",
+      "structured_review": {
+        "json_parsed_in_full": true,
+        "all_node_ids": [
+          120,
+          125,
+          122,
+          121,
+          130,
+          140,
+          159,
+          129,
+          170,
+          174,
+          175,
+          152,
+          155,
+          188,
+          187,
+          183,
+          119,
+          190,
+          131,
+          136,
+          162,
+          115,
+          92,
+          128,
+          184,
+          161,
+          151,
+          126,
+          123,
+          167,
+          200,
+          202,
+          201,
+          181,
+          191,
+          182,
+          207,
+          206,
+          205,
+          177,
+          179,
+          169,
+          149,
+          143,
+          160,
+          194,
+          203,
+          211,
+          208,
+          180,
+          178,
+          213,
+          212,
+          137,
+          139,
+          147,
+          153,
+          132,
+          154,
+          138,
+          198,
+          193
+        ],
+        "node_count": 62,
+        "link_count": 91,
+        "node_fields_reviewed": [
+          "id",
+          "type",
+          "mode",
+          "title",
+          "widgets_values",
+          "inputs.name",
+          "inputs.link",
+          "outputs.name",
+          "outputs.links"
+        ],
+        "all_links_reviewed": true,
+        "embedded_prompt_node_id": 138,
+        "embedded_prompt_matches_markdown_ignoring_outer_whitespace": true,
+        "embedded_prompt_markdown_code_lines": {
+          "start": 17,
+          "end": 579
+        },
+        "selected_node_source_ranges": [
+          {
+            "node_id": 130,
+            "start": 229,
+            "end": 297
+          },
+          {
+            "node_id": 159,
+            "start": 324,
+            "end": 384
+          },
+          {
+            "node_id": 170,
+            "start": 430,
+            "end": 490
+          },
+          {
+            "node_id": 155,
+            "start": 682,
+            "end": 746
+          },
+          {
+            "node_id": 188,
+            "start": 747,
+            "end": 817
+          },
+          {
+            "node_id": 131,
+            "start": 1049,
+            "end": 1119
+          },
+          {
+            "node_id": 136,
+            "start": 1120,
+            "end": 1316
+          },
+          {
+            "node_id": 115,
+            "start": 1342,
+            "end": 1424
+          },
+          {
+            "node_id": 161,
+            "start": 1638,
+            "end": 1685
+          },
+          {
+            "node_id": 191,
+            "start": 2206,
+            "end": 2403
+          },
+          {
+            "node_id": 169,
+            "start": 2775,
+            "end": 2833
+          },
+          {
+            "node_id": 194,
+            "start": 3051,
+            "end": 3121
+          },
+          {
+            "node_id": 203,
+            "start": 3122,
+            "end": 3146
+          },
+          {
+            "node_id": 211,
+            "start": 3147,
+            "end": 3171
+          },
+          {
+            "node_id": 213,
+            "start": 3328,
+            "end": 3398
+          },
+          {
+            "node_id": 212,
+            "start": 3399,
+            "end": 3457
+          },
+          {
+            "node_id": 132,
+            "start": 3702,
+            "end": 3749
+          },
+          {
+            "node_id": 138,
+            "start": 3913,
+            "end": 3960
+          }
+        ],
+        "links_source_start_line": 4159,
+        "formula_node_ids": [
+          131,
+          188
+        ],
+        "duration_input_node_id": 132,
+        "formula_input_value": 9,
+        "formula_static_result": 226,
+        "formula_result_status": "静态配置算术；未执行节点、不等于实际生成帧数或媒体时长。",
+        "runtime_executed": false,
+        "plugin_implementation_verified": false
+      }
+    }
+  ]
+}

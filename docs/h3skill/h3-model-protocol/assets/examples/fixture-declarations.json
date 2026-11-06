@@ -1,0 +1,32 @@
+{
+  "kind": "simulation",
+  "description": "Synthetic engineering inputs only. No fixture URI supplies media; the adapter is not a real H3 deployment.",
+  "source_catalog": {
+    "official-base": {
+      "kind": "official_protocol",
+      "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/base-en.txt",
+      "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+      "excerpt": "Base modes T2VA/I2VA/FL2VA/L2VA have three fields and exact image-alignment lines.",
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"
+    },
+    "official-ref": {
+      "kind": "official_protocol",
+      "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/ref-en.txt",
+      "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+      "excerpt": "Ref2VA has six fields, independent reference categories and explicit audio retention relationships.",
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"
+    },
+    "fixture-plan": {
+      "kind": "simulation",
+      "locator": "assets/examples/fixture-declarations.json",
+      "version": "1",
+      "excerpt": "Synthetic engineering test declarations; the URI strings do not identify supplied real media and no H3 capability is inferred."
+    },
+    "synthetic-runtime": {
+      "kind": "simulation",
+      "locator": "assets/profiles/simulation.json",
+      "version": "1",
+      "excerpt": "Synthetic object-only adapter: /request/prompt contains the full rendered protocol text including any alignment first line; /request/mode, /request/media is an ordered list of {value,channel,label,input_index} objects; /request/seconds, /request/width, /request/height and /request/fps. This is not a MiniMax API or a real workflow."
+    }
+  }
+}

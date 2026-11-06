@@ -1,0 +1,89 @@
+{
+  "kind": "M11StandardsVerification",
+  "date": "2026-11-05",
+  "timezone": "America/Los_Angeles",
+  "anthropics_commit": "ca45fc496a3436251f191354091d557da31c15b5",
+  "agentskills_commit": "83021e2be457a9b6679148719c1f6074f0ad975e",
+  "status": "passed",
+  "files": [
+    {
+      "local_path": "anthropics-template.md",
+      "sha256": "eb685d91de039ed864fbd790cddf31684b017fd4a34ee1a55760d8d7cdbadefa",
+      "bytes": 140,
+      "repository": "anthropics/skills",
+      "commit": "ca45fc496a3436251f191354091d557da31c15b5",
+      "source_path": "template/SKILL.md",
+      "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/template/SKILL.md",
+      "git_blob_sha1": "50a4f9b104357d96361e257adb70454604cd15c0",
+      "remote_git_blob": "50a4f9b104357d96361e257adb70454604cd15c0",
+      "utf8_exact_match": true,
+      "remote_blob_match": true
+    },
+    {
+      "local_path": "anthropics-quick-validate.py",
+      "sha256": "67cf5703402013936c8fb75ad6a1afecd8841d45cc5e606b634eb05825fde365",
+      "bytes": 3972,
+      "repository": "anthropics/skills",
+      "commit": "ca45fc496a3436251f191354091d557da31c15b5",
+      "source_path": "skills/skill-creator/scripts/quick_validate.py",
+      "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/skill-creator/scripts/quick_validate.py",
+      "git_blob_sha1": "ed8e1dddce77b16af13c6f36b3fe86c4ac7c590c",
+      "remote_git_blob": "ed8e1dddce77b16af13c6f36b3fe86c4ac7c590c",
+      "utf8_exact_match": true,
+      "remote_blob_match": true
+    },
+    {
+      "local_path": "anthropics-skill-creator-LICENSE.txt",
+      "sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "bytes": 11345,
+      "repository": "anthropics/skills",
+      "commit": "ca45fc496a3436251f191354091d557da31c15b5",
+      "source_path": "skills/skill-creator/LICENSE.txt",
+      "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/skill-creator/LICENSE.txt",
+      "git_blob_sha1": "4f881c52d1f72f4cfb720e339e2d35c3058d01a9",
+      "remote_git_blob": "4f881c52d1f72f4cfb720e339e2d35c3058d01a9",
+      "utf8_exact_match": true,
+      "remote_blob_match": true
+    },
+    {
+      "local_path": "anthropics-spec-pointer.md",
+      "sha256": "ff22f2be775f4b757c9a7a2df0421de4c94021d34d9382cea5dd567ff0cdad2c",
+      "bytes": 87,
+      "repository": "anthropics/skills",
+      "commit": "ca45fc496a3436251f191354091d557da31c15b5",
+      "source_path": "spec/agent-skills-spec.md",
+      "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/spec/agent-skills-spec.md",
+      "git_blob_sha1": "772512097afe01955bd635c46b71cd351ce42e9a",
+      "remote_git_blob": "772512097afe01955bd635c46b71cd351ce42e9a",
+      "utf8_exact_match": true,
+      "remote_blob_match": true
+    },
+    {
+      "local_path": "agent-skills-specification.mdx",
+      "sha256": "b9079c0c10b7930e8c6a20ff2bc10cda2a3343c55185120e3f1116a1a529b220",
+      "bytes": 7166,
+      "repository": "agentskills/agentskills",
+      "commit": "83021e2be457a9b6679148719c1f6074f0ad975e",
+      "source_path": "docs/specification.mdx",
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/specification.mdx",
+      "git_blob_sha1": "d9a2db099d905da8b879a5c6f996728073985279",
+      "remote_git_blob": "d9a2db099d905da8b879a5c6f996728073985279",
+      "utf8_exact_match": true,
+      "remote_blob_match": true
+    },
+    {
+      "local_path": "agent-skills-docs-LICENSE.txt",
+      "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+      "bytes": 18656,
+      "repository": "agentskills/agentskills",
+      "commit": "83021e2be457a9b6679148719c1f6074f0ad975e",
+      "source_path": "docs/LICENSE",
+      "source_url": "https://github.com/agentskills/agentskills/blob/83021e2be457a9b6679148719c1f6074f0ad975e/docs/LICENSE",
+      "git_blob_sha1": "4ea99c213c5c0c005ae4e80df8e52169d06896ec",
+      "remote_git_blob": "4ea99c213c5c0c005ae4e80df8e52169d06896ec",
+      "utf8_exact_match": true,
+      "remote_blob_match": true
+    }
+  ],
+  "note": "All six existing fixed-version standards files freshly fetched and compared as UTF-8 content and Git blob IDs. Existing snapshots unchanged. This does not certify runtime or media quality."
+}

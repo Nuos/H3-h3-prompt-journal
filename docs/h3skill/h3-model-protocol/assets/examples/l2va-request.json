@@ -1,0 +1,207 @@
+{
+  "kind": "M11Request",
+  "contract_version": "1.0.0",
+  "route_version": "1.0.0",
+  "work_id": "synthetic-m11-demo",
+  "base_version": 0,
+  "request_id": "l2va-compile",
+  "target": "M11.3",
+  "sources": {
+    "official-base": {
+      "kind": "official_protocol",
+      "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/base-en.txt",
+      "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+      "excerpt": "Base modes T2VA/I2VA/FL2VA/L2VA have three fields and exact image-alignment lines.",
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"
+    },
+    "official-ref": {
+      "kind": "official_protocol",
+      "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/ref-en.txt",
+      "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+      "excerpt": "Ref2VA has six fields, independent reference categories and explicit audio retention relationships.",
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"
+    },
+    "fixture-plan": {
+      "kind": "simulation",
+      "locator": "assets/examples/fixture-declarations.json",
+      "version": "1",
+      "excerpt": "Synthetic engineering test declarations; the URI strings do not identify supplied real media and no H3 capability is inferred."
+    },
+    "synthetic-runtime": {
+      "kind": "simulation",
+      "locator": "assets/profiles/simulation.json",
+      "version": "1",
+      "excerpt": "Synthetic object-only adapter: /request/prompt contains the full rendered protocol text including any alignment first line; /request/mode, /request/media is an ordered list of {value,channel,label,input_index} objects; /request/seconds, /request/width, /request/height and /request/fps. This is not a MiniMax API or a real workflow."
+    }
+  },
+  "inputs": {
+    "binding": {
+      "kind": "ReferenceBinding",
+      "contract_version": "1.0.0",
+      "mode": "L2VA",
+      "profile_digest": "c6b81783cc1684d34db6f7a9085f8d9428eb7582fa6ea4ddb0176de96ee72252",
+      "duration_ms": 8000,
+      "shots": [
+        {
+          "shot_id": "shot-open",
+          "start_ms": 0
+        },
+        {
+          "shot_id": "shot-finish",
+          "start_ms": 4000
+        }
+      ],
+      "labels": {
+        "subjects": {},
+        "assets": {
+          "last-image": {
+            "image": "<Picture 1>"
+          }
+        },
+        "speakers": {},
+        "shots": {
+          "shot-open": "[Shot 1]",
+          "shot-finish": "[Shot 2]"
+        }
+      },
+      "media_inputs": [
+        {
+          "asset_id": "last-image",
+          "asset_version": "fixture-v1",
+          "uri": "fixture://last-image",
+          "channel": "image",
+          "category_index": 1,
+          "input_index": 1,
+          "label": "<Picture 1>",
+          "purpose": "last_frame"
+        }
+      ],
+      "task_types": [
+        "keyframe completion"
+      ],
+      "declarations": {
+        "capability_profile": {
+          "profile_id": "official-protocol-only",
+          "backend": {
+            "name": "unknown",
+            "version": "unknown"
+          },
+          "model": {
+            "name": "MiniMax-H3",
+            "version": "runtime-unknown"
+          },
+          "workflow": {
+            "name": "unknown",
+            "version": "unknown"
+          },
+          "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+          "evidence_refs": [
+            "official-base",
+            "official-ref"
+          ],
+          "protocol": {
+            "supported_modes": [
+              "T2VA",
+              "I2VA",
+              "FL2VA",
+              "L2VA",
+              "Ref2VA"
+            ],
+            "language": "en"
+          },
+          "runtime": {
+            "status": "unknown",
+            "execution": "unknown"
+          }
+        },
+        "plan": {
+          "duration_ms": 8000,
+          "shots": [
+            {
+              "shot_id": "shot-open",
+              "start_ms": 0
+            },
+            {
+              "shot_id": "shot-finish",
+              "start_ms": 4000
+            }
+          ],
+          "requested_mode": "L2VA"
+        },
+        "assets": [
+          {
+            "asset_id": "last-image",
+            "version": "fixture-v1",
+            "media_type": "image",
+            "uri": "fixture://last-image",
+            "purpose": "last_frame",
+            "source_refs": [
+              "fixture-plan"
+            ]
+          }
+        ],
+        "subjects": [],
+        "reference_items": [],
+        "audio_bindings": [],
+        "speakers": []
+      },
+      "evidence_snapshot": {
+        "fixture-plan": {
+          "version": "1",
+          "digest": "74e58c58885b2bffe653d8082eeeca9d128b5888430ef423b1f5c4c6f026610e"
+        },
+        "official-base": {
+          "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+          "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+        },
+        "official-ref": {
+          "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+          "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+        }
+      },
+      "binding_digest": "de982a03748e8edf344c0e4e0adc4346d1d31194fea82bf912c7429fd67dd2c3"
+    },
+    "fragments": {
+      "style": "Naturalistic live-action footage with restrained warm color and fine film grain.",
+      "shots": [
+        {
+          "shot_id": "shot-open",
+          "text": "A baker sets a round loaf on the wooden counter. The camera holds a waist-level medium view as the loaf settles and a few crumbs fall.",
+          "obligation_ids": [
+            "set-loaf"
+          ]
+        },
+        {
+          "shot_id": "shot-finish",
+          "text": "a close view shows the baker turning the loaf to reveal its scored crust. The loaf comes to rest with its longest score facing the camera.",
+          "obligation_ids": [
+            "show-crust"
+          ]
+        }
+      ],
+      "overall_soundscape": "A quiet room tone continues beneath the soft contact of bread on wood.",
+      "non_diegetic_music": "N/A"
+    },
+    "obligations": [
+      {
+        "obligation_id": "set-loaf",
+        "shot_id": "shot-open",
+        "description": "The approved action places the loaf visibly on the counter.",
+        "source_refs": [
+          "fixture-plan"
+        ]
+      },
+      {
+        "obligation_id": "show-crust",
+        "shot_id": "shot-finish",
+        "description": "The final approved state reveals the scored crust.",
+        "source_refs": [
+          "fixture-plan"
+        ]
+      }
+    ],
+    "utterances": [],
+    "complete_silence": false,
+    "music_present": false
+  }
+}

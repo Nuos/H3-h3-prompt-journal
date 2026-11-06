@@ -1,0 +1,11 @@
+{
+  "revision": 2,
+  "reviewer": "root Agent",
+  "basis": "Public Ref2VA guide section 6 and prompt-compilation sound-layer rules",
+  "first_round": "All three public checks passed, but root Agent field review found dialogue synchronization and intelligibility requirements in overall_soundscape.",
+  "correction": "Move dialogue execution requirements into each detailed_description shot; retain only physical sound layers in overall_soundscape.",
+  "unchanged": "Story, actions, cut, exact dialogue/sign, target parameters, reference permissions, and audio reuse strategy.",
+  "prior_accepted_state": "/workspace/scratch/9caa7b23478d/m11-forward-use/output/revision-history/round-1/results/accepted-state.json",
+  "base_version": 1,
+  "scope": "Supervised field-placement revision, not evidence that first-round semantics had been automatically verified."
+}

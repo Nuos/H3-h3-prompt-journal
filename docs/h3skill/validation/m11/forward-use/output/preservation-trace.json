@@ -1,0 +1,274 @@
+[
+  {
+    "obligation_id": "setting-front",
+    "shot_id": "tea-front",
+    "description": "Bright photorealistic naturally lit street-corner tea shop; Ye inside in light-gray apron, Luo outside in dark-blue jacket, counter between them.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 1]",
+    "review_label_zh": "街角茶铺、明亮写实自然光；人物衣着与柜台内外",
+    "text_evidence": "\"bright street-corner tea shop\"; \"light-gray apron\"; \"dark-blue jacket\"; \"counter separates them throughout\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "framing-front",
+    "shot_id": "tea-front",
+    "description": "Only first shot starts at 0; frontal medium includes both shoulders/necks, hands and the whole cup.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 1]",
+    "review_label_zh": "第一镜0秒、正面中景、肩颈手与完整杯子",
+    "text_evidence": "\"frontal medium view\"; \"shoulders and necks, their hands, and the complete ceramic cup\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "sign-front",
+    "shot_id": "tea-front",
+    "description": "Wall sign remains clearly readable as 今日茶已备好！ with exact punctuation.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 1]",
+    "review_label_zh": "原文标牌与标点",
+    "text_evidence": "\"今日茶已备好！\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "place-empty-cup",
+    "shot_id": "tea-front",
+    "description": "Luo first places an empty ceramic cup at the center of the counter.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 1]",
+    "review_label_zh": "罗成先放空陶杯到柜台中央",
+    "text_evidence": "\"First, <Subject 2> places an empty ceramic cup at the counter center\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "luo-line",
+    "shot_id": "tea-front",
+    "description": "Luo says 请给我一杯热茶。 exactly once with unchanged words and punctuation.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 1]",
+    "review_label_zh": "罗成台词一次、字词标点完全保留",
+    "text_evidence": "<Subject 2> (S1) ... <d>[Chinese] 请给我一杯热茶。</d>",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "pouring-hands",
+    "shot_id": "tea-front",
+    "description": "Ye grips kettle handle with right hand and steadies lid with left hand.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 1]",
+    "review_label_zh": "叶青右手壶柄、左手壶盖",
+    "text_evidence": "\"handle firmly in the right hand and steadies its lid with the left\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "pouring-target",
+    "shot_id": "tea-front",
+    "description": "Hot tea flows into the cup; cup stays at the center and does not move during pouring.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 1]",
+    "review_label_zh": "热茶倒进杯内、杯子原位",
+    "text_evidence": "\"pours hot tea\"; \"stream lands inside the cup\"; \"stays in its original central position\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "cut-side",
+    "shot_id": "tea-side",
+    "description": "The second and only cut is exactly at generated-local 3500 ms to side medium.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 2]",
+    "review_label_zh": "第二镜生成局部3.5秒侧面中景",
+    "text_evidence": "[Shot 2] At 00:03.500, cut to a steady side medium view",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "continuity-side",
+    "shot_id": "tea-side",
+    "description": "Same two identities, clothes, counter separation and filled cup continue into the side shot.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 2]",
+    "review_label_zh": "跨镜身份衣着位置与已装茶杯连续",
+    "text_evidence": "\"same filled cup remains at the center at the cut\"; \"identities, light-gray apron, and dark-blue jacket continue unchanged\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "sign-side",
+    "shot_id": "tea-side",
+    "description": "Wall sign continues to show the original exact text 今日茶已备好！.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 2]",
+    "review_label_zh": "第二镜继续保持同一标牌",
+    "text_evidence": "\"the wall sign remains readable\"；沿用第一镜已给出的原文字面",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "return-kettle",
+    "shot_id": "tea-side",
+    "description": "Ye returns the kettle onto the inner side of the counter before speaking.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 2]",
+    "review_label_zh": "叶青将壶放回柜台内侧",
+    "text_evidence": "\"sets the kettle back on the inner counter\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "ye-line",
+    "shot_id": "tea-side",
+    "description": "Ye says 小心，茶还很烫！ exactly once with unchanged words and punctuation.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 2]",
+    "review_label_zh": "叶青台词一次、字词标点完全保留",
+    "text_evidence": "<Subject 1> (S2) ... <d>[Chinese] 小心，茶还很烫！</d>",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "move-cup",
+    "shot_id": "tea-side",
+    "description": "Luo grips the cup handle with right hand and carefully moves the cup to the outer counter edge.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 2]",
+    "review_label_zh": "罗成右手杯柄、谨慎移到外缘",
+    "text_evidence": "\"grips the cup handle with the right hand\"; \"carefully draws the cup ... toward the outer counter edge\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "ye-hands-clear",
+    "shot_id": "tea-side",
+    "description": "Ye keeps both hands clear of the cup during Luo taking it and in the result state.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 2]",
+    "review_label_zh": "叶青双手离开杯子",
+    "text_evidence": "\"keeps both hands clear of the cup\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "end-state",
+    "shot_id": "tea-side",
+    "description": "At the eight-second endpoint both people retain this result state; no extra shot.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 2]",
+    "review_label_zh": "8秒两人保持结果状态",
+    "text_evidence": "\"cup rests securely at the outer edge\"; \"Hold these positions through the eight-second endpoint\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "music-front",
+    "shot_id": "tea-front",
+    "description": "Use the whole original eight-second lyric-free music as audience-only score with new dialogue and pouring.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 1]",
+    "review_label_zh": "整段配乐复用、观众可闻、新对白与倒水声",
+    "text_evidence": "\"complete source music signal from <Audio 1> starts with this shot as audience-only score\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  },
+  {
+    "obligation_id": "music-side",
+    "shot_id": "tea-side",
+    "description": "Continue the same music without restart across the cut; add new dialogue, kettle set-down and cup-base sliding.",
+    "source_refs": [
+      "task-plan"
+    ],
+    "source_locator": "task.md / 创作计划",
+    "output_field": "detailed_description",
+    "output_shot": "[Shot 2]",
+    "review_label_zh": "配乐跨切连续、新对白落壶轻擦声",
+    "text_evidence": "\"<Audio 1> continues seamlessly across the cut and through the end\"; \"new warning, kettle contact, and cup movement\"",
+    "machine_scope": "Obligation ID is declared, covered, and assigned to the proper shot; this is not semantic proof.",
+    "agent_text_review": "pass",
+    "media_validation": "unverified"
+  }
+]

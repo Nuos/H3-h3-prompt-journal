@@ -1,0 +1,101 @@
+{
+  "mode": "Ref2VA",
+  "task_types": [
+    "reference generation",
+    "audio reuse"
+  ],
+  "labels": {
+    "subjects": {
+      "ye_qing": "<Subject 1>",
+      "luo_cheng": "<Subject 2>"
+    },
+    "assets": {
+      "portrait_ye": {
+        "image": "<Picture 1>"
+      },
+      "portrait_luo": {
+        "image": "<Picture 2>"
+      },
+      "room_music": {
+        "audio": "<Audio 1>"
+      }
+    },
+    "speakers": {
+      "luo_voice": "S1",
+      "ye_voice": "S2"
+    },
+    "shots": {
+      "tea-front": "[Shot 1]",
+      "tea-side": "[Shot 2]"
+    }
+  },
+  "media_inputs": [
+    {
+      "asset_id": "portrait_ye",
+      "asset_version": "img-1",
+      "uri": "declared-media://portrait_ye/img-1",
+      "channel": "image",
+      "category_index": 1,
+      "input_index": 1,
+      "label": "<Picture 1>",
+      "purpose": "appearance"
+    },
+    {
+      "asset_id": "portrait_luo",
+      "asset_version": "img-2",
+      "uri": "declared-media://portrait_luo/img-2",
+      "channel": "image",
+      "category_index": 2,
+      "input_index": 2,
+      "label": "<Picture 2>",
+      "purpose": "appearance"
+    },
+    {
+      "asset_id": "room_music",
+      "asset_version": "audio-1",
+      "uri": "declared-media://room_music/audio-1",
+      "channel": "audio",
+      "category_index": 1,
+      "input_index": 3,
+      "label": "<Audio 1>",
+      "purpose": "audio_reuse"
+    }
+  ],
+  "speakers": [
+    {
+      "speaker_id": "luo_voice",
+      "person": "罗成",
+      "subject_id": "luo_cheng",
+      "subject_label": "<Subject 2>",
+      "speaker_label": "S1",
+      "first_vocal_ms": 600,
+      "time_basis": "agent_arrangement",
+      "utterance": "请给我一杯热茶。"
+    },
+    {
+      "speaker_id": "ye_voice",
+      "person": "叶青",
+      "subject_id": "ye_qing",
+      "subject_label": "<Subject 1>",
+      "speaker_label": "S2",
+      "first_vocal_ms": 4100,
+      "time_basis": "agent_arrangement",
+      "utterance": "小心，茶还很烫！"
+    }
+  ],
+  "asset_availability": "Only user text declarations are supplied. All declared-media:// URIs are non-resolving identity locators; no media was provided, opened, decoded, uploaded, or loaded by a backend.",
+  "stable_identity_rule": "Keep asset_id and subject_id stable. Picture and other category indices belong to this caller order and must be regenerated when it changes.",
+  "audio_retention": {
+    "asset_id": "room_music",
+    "version": "audio-1",
+    "retention": "partially_copy",
+    "full_source": true,
+    "entire_soundtrack": false,
+    "additional_layers": [
+      "new-dialogue",
+      "tea-pouring",
+      "kettle-set-down",
+      "cup-base-sliding"
+    ]
+  }
+}

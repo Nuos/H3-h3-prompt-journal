@@ -1,0 +1,12 @@
+usage: m11_contract.py [-h] {route,propose,check,accept,impact} ...
+
+Deterministic H3 protocol compiler. No inference, networking or file writes.
+This compiler consumes approved English fragments and explicit semantic
+declarations. It checks their structure and provenance, not the truth of
+natural-language claims.
+
+positional arguments:
+  {route,propose,check,accept,impact}
+
+options:
+  -h, --help            show this help message and exit

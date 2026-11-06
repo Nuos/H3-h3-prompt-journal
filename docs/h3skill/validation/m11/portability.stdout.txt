@@ -1,0 +1,340 @@
+{
+  "suite": "m11-portability",
+  "timestamp_utc": "2026-11-06T04:48:01.169757+00:00",
+  "status": "passed",
+  "checks_run": 43,
+  "checks": [
+    {
+      "name": "isolated_help",
+      "passed": true,
+      "exit_code": 0,
+      "status": null,
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-1_independent_route",
+      "passed": true,
+      "exit_code": 0,
+      "status": "ready",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-1_route_is_not_execution",
+      "passed": true
+    },
+    {
+      "name": "m11-1_independent_propose",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": "M11Proposal",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-1_independent_check",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-1_independent_accept",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-1_partial_accept_stays_unexecuted",
+      "passed": true
+    },
+    {
+      "name": "m11-2_independent_route",
+      "passed": true,
+      "exit_code": 0,
+      "status": "ready",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-2_route_is_not_execution",
+      "passed": true
+    },
+    {
+      "name": "m11-2_independent_propose",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": "M11Proposal",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-2_independent_check",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-2_independent_accept",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-2_partial_accept_stays_unexecuted",
+      "passed": true
+    },
+    {
+      "name": "m11-3_independent_route",
+      "passed": true,
+      "exit_code": 0,
+      "status": "ready",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-3_route_is_not_execution",
+      "passed": true
+    },
+    {
+      "name": "m11-3_independent_propose",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": "M11Proposal",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-3_independent_check",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-3_independent_accept",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-3_partial_accept_stays_unexecuted",
+      "passed": true
+    },
+    {
+      "name": "m11-4_independent_route",
+      "passed": true,
+      "exit_code": 0,
+      "status": "ready",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-4_route_is_not_execution",
+      "passed": true
+    },
+    {
+      "name": "m11-4_independent_propose",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": "M11Proposal",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-4_independent_check",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-4_independent_accept",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "m11-4_partial_accept_stays_unexecuted",
+      "passed": true
+    },
+    {
+      "name": "t2va_compile",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": "M11Proposal",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "t2va_original_request_check",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "i2va_compile",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": "M11Proposal",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "i2va_original_request_check",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "fl2va_compile",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": "M11Proposal",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "fl2va_original_request_check",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "l2va_compile",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": "M11Proposal",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "l2va_original_request_check",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "ref2va_compile",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": "M11Proposal",
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "ref2va_original_request_check",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "atomic_parent_accept",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "exact_parent_retry",
+      "passed": true,
+      "exit_code": 0,
+      "status": "passed_with_unverified",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "idempotent_retry_preserves_state",
+      "passed": true
+    },
+    {
+      "name": "display_only_impact",
+      "passed": true,
+      "exit_code": 0,
+      "status": "completed",
+      "kind": null,
+      "errors": [],
+      "stderr": ""
+    },
+    {
+      "name": "display_only_diff_is_a_review_aid",
+      "passed": true
+    },
+    {
+      "name": "only_standard_library_and_bundled_imports",
+      "passed": true,
+      "external_imports": []
+    },
+    {
+      "name": "installed_package_is_unchanged",
+      "passed": true
+    },
+    {
+      "name": "only_one_skill_package_was_installed",
+      "passed": true
+    }
+  ],
+  "copied_files": 38,
+  "isolation": "Python -I -S -B, empty PATH, unrelated cwd, copied M11 package only",
+  "not_run": [
+    "h3_inference",
+    "real_workflow_execution",
+    "media_observation",
+    "semantic_quality_certification",
+    "complete_G0_G4"
+  ]
+}

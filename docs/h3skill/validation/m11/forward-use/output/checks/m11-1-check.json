@@ -1,0 +1,22 @@
+{
+  "status": "passed_with_unverified",
+  "valid": true,
+  "module_id": "M11.1",
+  "proposal_id": "p-4eed09504f5ed89c03c9322de7553d6bf40dcb8e87b114f16c06d06f33014e83",
+  "execution_status": "completed",
+  "not_run": [
+    "natural_language_semantic_audit",
+    "source_authenticity_verification",
+    "media_file_read",
+    "media_decode",
+    "workflow_execution",
+    "h3_inference",
+    "generated_video_acceptance"
+  ],
+  "limitations": [
+    "Only explicit JSON declarations, supplied evidence references and protocol structure were checked.",
+    "English fragments and their semantic obligation coverage require Agent review.",
+    "A source excerpt is supplied evidence, not independent verification of a deployment.",
+    "Export does not load media, execute a workflow, run H3 or certify generated video quality."
+  ]
+}

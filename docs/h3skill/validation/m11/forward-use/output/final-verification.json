@@ -1,0 +1,10 @@
+{
+  "package_files_changed_between_recorded_runs": [
+    "SKILL.md"
+  ],
+  "script_hash_unchanged": true,
+  "final_state_version": 2,
+  "final_cli_invocations": 13,
+  "all_final_cli_stderr_empty": true,
+  "delivery_check_exit": 0
+}

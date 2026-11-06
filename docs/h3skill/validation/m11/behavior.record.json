@@ -1,0 +1,176 @@
+{
+  "check": "behavior",
+  "status": "pass",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "docs/h3skill/tests",
+    "-p",
+    "test_m11_contract.py",
+    "-v"
+  ],
+  "cwd": "repository root",
+  "started_utc": "2026-11-06T04:47:58.168845+00:00",
+  "finished_utc": "2026-11-06T04:47:59.653973+00:00",
+  "elapsed_seconds": 1.4851,
+  "exit_code": 0,
+  "stdout": "docs/h3skill/validation/m11/behavior.stdout.txt",
+  "stderr": "docs/h3skill/validation/m11/behavior.stderr.txt",
+  "tested_package": [
+    {
+      "path": "docs/h3skill/h3-model-protocol/SKILL.md",
+      "sha256": "fb9572793c92544169a199aa51f012b7ad0aa3c88b0f1c014c8a779b6571a82a"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/agents/openai.yaml",
+      "sha256": "a1724a87ededaf24be6abe1a1293c5ed42e1994ab683d2c6950cd8a0cd64e22d"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/fixture-declarations.json",
+      "sha256": "da885e9b050d208a61574f3123412eb7611791b51b9e1ce465a4195fcc66fb80"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/fl2va-request.json",
+      "sha256": "262a6ab6148de725785fad24fa1a839b8b09823ddca647078db58ec140024a60"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/fullcopy-dialogue-request.json",
+      "sha256": "5eba43c4d895d628e7bc03539cc87744a51556f6a27cf1687560ce69d77be65a"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/i2va-request.json",
+      "sha256": "8e39f7a847a3e9164f2614c3495f71765d3652afc14bfe01ab88b88229562434"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/l2va-request.json",
+      "sha256": "80212dd9f35a61ff7d11b86518dc19b7d52b616049c9de6fd15929e9b2e6224b"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/m11-1-request.json",
+      "sha256": "0635cd379d75ce9c5dfacbc649dbad24ef9c547ac9b26aeb2106e6817add1f61"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/m11-2-request.json",
+      "sha256": "a9d9e95d741352eb84e1bf914a5b5ba71399143aae0057247ea2a2fd84b7551f"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/m11-3-request.json",
+      "sha256": "e6e5420d65bbd7ecda840b4704bd97f42c09f5007f46b384177ad44911471180"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/m11-4-request.json",
+      "sha256": "5ca1d985ee41e3e3ee18436d4483879a1b78563452843b0dfd98b26047d4191a"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/music-cue-request.json",
+      "sha256": "6abeccfaeaa104a65438f03eced1d1d83a7839d5237abbc20255e2790bf2980e"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/music-reference-request.json",
+      "sha256": "7af79fffca8097984294968fbdb2b295010c333ff34ed35959be0feebafab8ca"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/proposals.json",
+      "sha256": "a836d06ccb02e4fccd3f35a61e8a57cb02243d6efe2223405d135d0992ad3c37"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/ref2va-request.json",
+      "sha256": "5488c50c02485033f85492c2a77f1a474f79df0f8bfc688466c46735ae22957b"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/requests.json",
+      "sha256": "88f8eeffd684b90e655607773831cacb304e0ed6698052a915bfc4232c31ec90"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/state-empty.json",
+      "sha256": "85086f9f852825e94f913a31de90e6579ed2320a722df7f83f589058abae927a"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/examples/t2va-request.json",
+      "sha256": "3bea92173ae00c1685442e3e0007ef8a0fc5a818061ff8c8469ee210f2e3e918"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/profiles/official-protocol-only.json",
+      "sha256": "97074cac5623085f23c38690c302681f95332d3954771248b092d7203673ffd8"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/assets/profiles/simulation.json",
+      "sha256": "9b142497209dd78ab68d104dfdca2240bacb1988c2ccc414bc336eefc2f05a4f"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/audit-and-handoff.md",
+      "sha256": "7081ba4ed1fbaf7bbb929910732c5c0f3098de39b59a59436a071bf43dab7b40"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/capability-and-version.md",
+      "sha256": "a89a74913be5465d14b327f394b2c1e566ed068a7d0db45c0094cd883792ebb9"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/case-evidence.md",
+      "sha256": "c316d97eab3f65804d3c80a626e3871f13d83fe26642442892cde5259707af92"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/case-index.json",
+      "sha256": "70602d1a5029a28f98f12ccee01abfa66e211de6afad44bd6c29ea28490d4697"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/case-source-LICENSE.txt",
+      "sha256": "af0610dd69d8cd806e2fa18aa3e11aa75545d365bd4de74847b4c40495611ed7"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/contract-guide.md",
+      "sha256": "8ef4ed3ad03eb37e1c71c2852cad754d0e8aa56180d5215168bf0944624d9f05"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/contracts.json",
+      "sha256": "e49c5e945eb565c96f9e4bd517d6f121ebbe935586410ada64a934360ab9525b"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/h3-NOTICE.txt",
+      "sha256": "154fe7fbdf198395d53c57d6786b2fbf7e63a083ff70843c5ef78c0c7303d91a"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/h3-base-official.txt",
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/h3-label-mapping.md",
+      "sha256": "8c543d990971bcad2848b2e2c88d963415636673dfb6823584231e63ca769722"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/h3-protocol-source.json",
+      "sha256": "22d7b1d330cb123d1446ee2b6896d3171859b7aecb1b74bc41670f79cd8f15fe"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/h3-ref-official.txt",
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/mode-and-binding.md",
+      "sha256": "5e78de5394726172b7d557b858407c89fc7448dd2f639b7993139632d05ec930"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/module-registry.json",
+      "sha256": "22c22a39bb44c1f4d3104b58f496c9133797e00f8c316d01cbd7a36c4c067aa3"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/prompt-compilation.md",
+      "sha256": "e4406c9f7264b0cc97785987d3578eb6a42941f7ddf42267528bcbbbc36e1b91"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/provenance-and-license.md",
+      "sha256": "b6c00d8eb7ebceba1857cdde06ee92f0477d761ed50a493650f28a10aaa5dc05"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/references/runtime-export.md",
+      "sha256": "38539e3eaa4ee1544aeadb3174ac533c29763ee5c513acf5e9a82121eb2766eb"
+    },
+    {
+      "path": "docs/h3skill/h3-model-protocol/scripts/m11_contract.py",
+      "sha256": "bfe89ea05d53190e4454bdf6751c6e9a5b00ae4fa10c31aca0f9d8b8ad6f81ba"
+    }
+  ]
+}

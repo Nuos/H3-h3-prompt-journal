@@ -1,0 +1,2341 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Nuos/H3-h3-prompt-journal/docs/h3skill/h3-model-protocol/references/contracts.json",
+  "title": "M11 H3 model protocol contracts 1.0.0",
+  "description": "Structural interchange schema. scripts/m11_contract.py additionally enforces source/version identity, exact derived values, role/timeline relationships, original-request recompilation and atomic acceptance. Schema validation alone is not acceptance.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/M11Request"
+    },
+    {
+      "$ref": "#/$defs/M11Proposal"
+    },
+    {
+      "$ref": "#/$defs/M11State"
+    }
+  ],
+  "x-contract-version": "1.0.0",
+  "x-route-version": "1.0.0",
+  "x-owned-partitions": {
+    "M11.1": "capability_profile",
+    "M11.2": "reference_binding",
+    "M11.3": "prompt_compilation",
+    "M11.4": "task_export"
+  },
+  "x-placeholders": [
+    "{{ref:subject-id}}",
+    "{{ref:single-channel-asset-id}}",
+    "{{ref:dual-channel-asset-id.video}}",
+    "{{ref:dual-channel-asset-id.audio}}",
+    "{{speaker:speaker-id}}",
+    "{{utterance:utterance-id}}",
+    "{{shot:shot-id}}"
+  ],
+  "x-adapter-limits": [
+    "Only the pinned official English grammar is implemented.",
+    "Semantic English fragments and first vocal event times are explicitly supplied, not inferred.",
+    "Only object JSON Pointer paths or single top-level keys are supported; array-index paths and connected workflow graph evaluation are not implemented.",
+    "Runtime media values are locator strings, serialized into an explicit channel/order/label object list.",
+    "No network, inference, source authenticity checks, media loading or writes are performed."
+  ],
+  "$defs": {
+    "Source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "kind",
+        "locator",
+        "version",
+        "excerpt"
+      ],
+      "additionalProperties": false
+    },
+    "Sources": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/Source"
+      }
+    },
+    "Identity": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "name",
+        "version"
+      ],
+      "additionalProperties": false
+    },
+    "Protocol": {
+      "type": "object",
+      "properties": {
+        "supported_modes": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "T2VA",
+              "I2VA",
+              "FL2VA",
+              "L2VA",
+              "Ref2VA"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "language": {
+          "const": "en"
+        }
+      },
+      "required": [
+        "supported_modes",
+        "language"
+      ],
+      "additionalProperties": false
+    },
+    "Mapping": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "path",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "PromptMapping": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "format": {
+          "const": "text"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "path",
+        "format",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "MediaMapping": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "format": {
+          "const": "ordered_channel_objects"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "path",
+        "format",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "EvidenceVersion": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "version",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "EvidenceSnapshot": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/EvidenceVersion"
+      }
+    },
+    "ParameterMapping": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "type": {
+          "enum": [
+            "integer",
+            "number",
+            "string",
+            "boolean"
+          ]
+        },
+        "unit": {
+          "enum": [
+            "ms",
+            "seconds",
+            "pixels",
+            "fps",
+            "unitless"
+          ]
+        },
+        "enum": {
+          "type": "array",
+          "items": {},
+          "minItems": 1
+        },
+        "minimum": {
+          "type": "number"
+        },
+        "maximum": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "path",
+        "evidence_refs",
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "UnknownRuntime": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "unknown"
+        },
+        "execution": {
+          "const": "unknown"
+        }
+      },
+      "required": [
+        "status",
+        "execution"
+      ],
+      "additionalProperties": false
+    },
+    "DocumentedRuntime": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "documented"
+        },
+        "execution": {
+          "enum": [
+            "simulation",
+            "production"
+          ]
+        },
+        "supported_modes": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "T2VA",
+              "I2VA",
+              "FL2VA",
+              "L2VA",
+              "Ref2VA"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "parameters": {
+          "type": "object",
+          "required": [
+            "duration_ms"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/ParameterMapping"
+          }
+        },
+        "required_parameters": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "media": {
+          "$ref": "#/$defs/MediaMapping"
+        },
+        "prompt": {
+          "$ref": "#/$defs/PromptMapping"
+        },
+        "mode": {
+          "$ref": "#/$defs/Mapping"
+        },
+        "limits": {
+          "type": "object",
+          "properties": {
+            "max_assets": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "status",
+        "execution",
+        "supported_modes",
+        "evidence_refs",
+        "parameters",
+        "required_parameters",
+        "media",
+        "prompt",
+        "mode"
+      ],
+      "additionalProperties": false
+    },
+    "CapabilityProfile": {
+      "type": "object",
+      "properties": {
+        "profile_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "backend": {
+          "$ref": "#/$defs/Identity"
+        },
+        "model": {
+          "$ref": "#/$defs/Identity"
+        },
+        "workflow": {
+          "$ref": "#/$defs/Identity"
+        },
+        "protocol_version": {
+          "const": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "protocol": {
+          "$ref": "#/$defs/Protocol"
+        },
+        "runtime": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/UnknownRuntime"
+            },
+            {
+              "$ref": "#/$defs/DocumentedRuntime"
+            }
+          ]
+        },
+        "profile_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "evidence_snapshot": {
+          "$ref": "#/$defs/EvidenceSnapshot"
+        }
+      },
+      "required": [
+        "profile_id",
+        "backend",
+        "model",
+        "workflow",
+        "protocol_version",
+        "evidence_refs",
+        "protocol",
+        "runtime"
+      ],
+      "additionalProperties": false
+    },
+    "Shot": {
+      "type": "object",
+      "properties": {
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "start_ms": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "shot_id",
+        "start_ms"
+      ],
+      "additionalProperties": false
+    },
+    "Plan": {
+      "type": "object",
+      "properties": {
+        "duration_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "shots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Shot"
+          },
+          "minItems": 1
+        },
+        "requested_mode": {
+          "enum": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ]
+        }
+      },
+      "required": [
+        "duration_ms",
+        "shots"
+      ],
+      "additionalProperties": false
+    },
+    "Asset": {
+      "type": "object",
+      "properties": {
+        "asset_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "media_type": {
+          "enum": [
+            "image",
+            "video",
+            "audio"
+          ]
+        },
+        "uri": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "enum": [
+            "first_frame",
+            "last_frame",
+            "keyframe",
+            "identity",
+            "appearance",
+            "composition",
+            "storyboard",
+            "style",
+            "motion",
+            "structure",
+            "editing_source",
+            "continuation_source",
+            "audio_reuse",
+            "audio_reference"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "enabled_audio": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "asset_id",
+        "version",
+        "media_type",
+        "uri",
+        "purpose",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "Subject": {
+      "type": "object",
+      "properties": {
+        "subject_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "source_asset_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retention": {
+          "enum": [
+            "fully_preserved",
+            "partially_preserved",
+            "attribute_transfer",
+            "weak_reference"
+          ]
+        },
+        "retention_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shot_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "subject_id",
+        "source_asset_ids",
+        "description",
+        "retention",
+        "retention_reason",
+        "shot_ids"
+      ],
+      "additionalProperties": false
+    },
+    "ReferenceItem": {
+      "type": "object",
+      "properties": {
+        "asset_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retention": {
+          "enum": [
+            "fully_preserved",
+            "partially_preserved",
+            "attribute_transfer",
+            "weak_reference"
+          ]
+        },
+        "retention_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shot_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "asset_id",
+        "description",
+        "retention",
+        "retention_reason",
+        "shot_ids"
+      ],
+      "additionalProperties": false
+    },
+    "AudioBinding": {
+      "type": "object",
+      "properties": {
+        "asset_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "role": {
+          "enum": [
+            "reuse",
+            "reference"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retention": {
+          "enum": [
+            "fully_copy",
+            "partially_copy",
+            "reference",
+            "weak_reference"
+          ]
+        },
+        "retention_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "full_source": {
+          "type": "boolean"
+        },
+        "entire_soundtrack": {
+          "type": "boolean"
+        },
+        "additional_layers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "replaced_layers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "speaker_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "subject_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "source_window_ms": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "integer",
+              "minimum": 1
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "target_window_ms": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "integer",
+              "minimum": 1
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "asset_id",
+        "role",
+        "description",
+        "retention",
+        "retention_reason",
+        "full_source",
+        "entire_soundtrack",
+        "additional_layers",
+        "replaced_layers"
+      ],
+      "additionalProperties": false
+    },
+    "Speaker": {
+      "type": "object",
+      "properties": {
+        "speaker_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "first_vocal_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tie_order": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "first_event_kind": {
+          "enum": [
+            "speech",
+            "singing",
+            "nonverbal"
+          ]
+        }
+      },
+      "required": [
+        "speaker_id",
+        "first_vocal_ms"
+      ],
+      "additionalProperties": false
+    },
+    "CapabilityInputs": {
+      "type": "object",
+      "properties": {
+        "profile": {
+          "$ref": "#/$defs/CapabilityProfile"
+        }
+      },
+      "required": [
+        "profile"
+      ],
+      "additionalProperties": false
+    },
+    "BindingInputs": {
+      "type": "object",
+      "properties": {
+        "capability_profile": {
+          "$ref": "#/$defs/CapabilityProfile"
+        },
+        "plan": {
+          "$ref": "#/$defs/Plan"
+        },
+        "assets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Asset"
+          },
+          "minItems": 0
+        },
+        "subjects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Subject"
+          },
+          "minItems": 0
+        },
+        "reference_items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ReferenceItem"
+          },
+          "minItems": 0
+        },
+        "audio_bindings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AudioBinding"
+          },
+          "minItems": 0
+        },
+        "speakers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Speaker"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "capability_profile",
+        "plan",
+        "assets",
+        "subjects",
+        "reference_items",
+        "audio_bindings",
+        "speakers"
+      ],
+      "additionalProperties": false
+    },
+    "MediaInput": {
+      "type": "object",
+      "properties": {
+        "asset_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "asset_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uri": {
+          "type": "string",
+          "minLength": 1
+        },
+        "channel": {
+          "enum": [
+            "image",
+            "video",
+            "audio"
+          ]
+        },
+        "category_index": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "input_index": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "asset_id",
+        "asset_version",
+        "uri",
+        "channel",
+        "category_index",
+        "input_index",
+        "label",
+        "purpose"
+      ],
+      "additionalProperties": false
+    },
+    "LabelMap": {
+      "type": "object",
+      "properties": {
+        "subjects": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "assets": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "image": {
+                "type": "string",
+                "minLength": 1
+              },
+              "video": {
+                "type": "string",
+                "minLength": 1
+              },
+              "audio": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "speakers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "shots": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "subjects",
+        "assets",
+        "speakers",
+        "shots"
+      ],
+      "additionalProperties": false
+    },
+    "ReferenceBinding": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "ReferenceBinding"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "mode": {
+          "enum": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ]
+        },
+        "profile_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "duration_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "shots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Shot"
+          },
+          "minItems": 1
+        },
+        "labels": {
+          "$ref": "#/$defs/LabelMap"
+        },
+        "media_inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/MediaInput"
+          },
+          "minItems": 0
+        },
+        "task_types": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "keyframe completion",
+              "reference generation",
+              "video editing",
+              "video continuation",
+              "audio reuse",
+              "audio reference"
+            ]
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "declarations": {
+          "$ref": "#/$defs/BindingInputs"
+        },
+        "binding_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "evidence_snapshot": {
+          "$ref": "#/$defs/EvidenceSnapshot"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "mode",
+        "profile_digest",
+        "duration_ms",
+        "shots",
+        "labels",
+        "media_inputs",
+        "task_types",
+        "declarations",
+        "binding_digest",
+        "evidence_snapshot"
+      ],
+      "additionalProperties": false
+    },
+    "ShotFragment": {
+      "type": "object",
+      "properties": {
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "obligation_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "shot_id",
+        "text",
+        "obligation_ids"
+      ],
+      "additionalProperties": false
+    },
+    "Fragments": {
+      "type": "object",
+      "properties": {
+        "style": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ShotFragment"
+          },
+          "minItems": 1
+        },
+        "overall_soundscape": {
+          "type": "string",
+          "minLength": 1
+        },
+        "non_diegetic_music": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "style",
+        "shots",
+        "overall_soundscape",
+        "non_diegetic_music"
+      ],
+      "additionalProperties": false
+    },
+    "Obligation": {
+      "type": "object",
+      "properties": {
+        "obligation_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "obligation_id",
+        "description"
+      ],
+      "additionalProperties": false
+    },
+    "Utterance": {
+      "type": "object",
+      "properties": {
+        "utterance_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "speaker_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z -]*$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "source_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "punctuation_change": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "enum": [
+            "on_screen",
+            "off_screen_voiceover"
+          ]
+        },
+        "visible_lips_subject": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "continues_from": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "continues_to": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "cutoff": {
+          "type": "boolean"
+        },
+        "origin": {
+          "enum": [
+            "generated",
+            "copied_audio"
+          ]
+        },
+        "audio_asset_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "source_language": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z -]*$"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "utterance_id",
+        "language",
+        "text",
+        "start_ms",
+        "shot_id"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "origin"
+            ],
+            "properties": {
+              "origin": {
+                "const": "copied_audio"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "audio_asset_id",
+              "source_text",
+              "source_language",
+              "source_refs"
+            ]
+          },
+          "else": {
+            "required": [
+              "speaker_id"
+            ]
+          }
+        }
+      ]
+    },
+    "VisibleText": {
+      "type": "object",
+      "properties": {
+        "text_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        }
+      },
+      "required": [
+        "text_id",
+        "text",
+        "shot_id"
+      ],
+      "additionalProperties": false
+    },
+    "CompilationInputs": {
+      "type": "object",
+      "properties": {
+        "binding": {
+          "$ref": "#/$defs/ReferenceBinding"
+        },
+        "fragments": {
+          "$ref": "#/$defs/Fragments"
+        },
+        "obligations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Obligation"
+          },
+          "minItems": 1
+        },
+        "utterances": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Utterance"
+          },
+          "minItems": 0
+        },
+        "complete_silence": {
+          "type": "boolean"
+        },
+        "music_present": {
+          "type": "boolean"
+        },
+        "visible_text": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VisibleText"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "binding",
+        "fragments",
+        "obligations",
+        "utterances",
+        "complete_silence",
+        "music_present"
+      ],
+      "additionalProperties": false
+    },
+    "BaseFields": {
+      "type": "object",
+      "properties": {
+        "integrated_multimodal_description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "overall_soundscape": {
+          "type": "string",
+          "minLength": 1
+        },
+        "non_diegetic_music": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "integrated_multimodal_description",
+        "overall_soundscape",
+        "non_diegetic_music"
+      ],
+      "additionalProperties": false
+    },
+    "RefFields": {
+      "type": "object",
+      "properties": {
+        "subject_definitions": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retention_analysis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "detailed_description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "overall_soundscape": {
+          "type": "string",
+          "minLength": 1
+        },
+        "non_diegetic_music": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "subject_definitions",
+        "summary",
+        "retention_analysis",
+        "detailed_description",
+        "overall_soundscape",
+        "non_diegetic_music"
+      ],
+      "additionalProperties": false
+    },
+    "ObligationTrace": {
+      "type": "object",
+      "properties": {
+        "obligation_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "shot_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "output_field": {
+          "enum": [
+            "integrated_multimodal_description",
+            "detailed_description"
+          ]
+        }
+      },
+      "required": [
+        "obligation_id",
+        "shot_id",
+        "output_field"
+      ],
+      "additionalProperties": false
+    },
+    "UtteranceSourceTrace": {
+      "type": "object",
+      "properties": {
+        "utterance_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "origin": {
+          "enum": [
+            "generated",
+            "copied_audio"
+          ]
+        },
+        "speaker_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "audio_asset_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "audio_asset_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "audio_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_language": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "utterance_id",
+        "origin",
+        "speaker_id",
+        "audio_asset_id",
+        "audio_asset_version",
+        "audio_label",
+        "source_text",
+        "source_language",
+        "source_refs"
+      ],
+      "additionalProperties": false
+    },
+    "PunctuationTrace": {
+      "type": "object",
+      "properties": {
+        "utterance_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "source_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "utterance_id",
+        "source_text",
+        "text",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "PromptCompilation": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "PromptCompilation"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "mode": {
+          "enum": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ]
+        },
+        "profile_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "binding_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "duration_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "fields": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/BaseFields"
+            },
+            {
+              "$ref": "#/$defs/RefFields"
+            }
+          ]
+        },
+        "field_order": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 3,
+          "uniqueItems": true
+        },
+        "alignment_instruction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rendered_prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "media_inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/MediaInput"
+          },
+          "minItems": 0
+        },
+        "obligation_trace": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ObligationTrace"
+          },
+          "minItems": 1
+        },
+        "punctuation_trace": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PunctuationTrace"
+          },
+          "minItems": 0
+        },
+        "utterance_source_trace": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/UtteranceSourceTrace"
+          },
+          "minItems": 0
+        },
+        "visible_text_trace": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/VisibleText"
+          },
+          "minItems": 0
+        },
+        "declarations": {
+          "$ref": "#/$defs/CompilationInputs"
+        },
+        "status": {
+          "const": "passed_with_unverified"
+        },
+        "not_run": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "compilation_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "evidence_snapshot": {
+          "$ref": "#/$defs/EvidenceSnapshot"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "mode",
+        "profile_digest",
+        "binding_digest",
+        "duration_ms",
+        "fields",
+        "field_order",
+        "alignment_instruction",
+        "rendered_prompt",
+        "media_inputs",
+        "obligation_trace",
+        "punctuation_trace",
+        "utterance_source_trace",
+        "visible_text_trace",
+        "declarations",
+        "status",
+        "not_run",
+        "compilation_digest",
+        "evidence_snapshot"
+      ],
+      "additionalProperties": false
+    },
+    "RuntimeAsset": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "version",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "ExportInputs": {
+      "type": "object",
+      "properties": {
+        "compilation": {
+          "$ref": "#/$defs/PromptCompilation"
+        },
+        "capability_profile": {
+          "$ref": "#/$defs/CapabilityProfile"
+        },
+        "parameters": {
+          "type": "object",
+          "required": [
+            "duration_ms"
+          ],
+          "properties": {
+            "duration_ms": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "additionalProperties": {
+            "type": [
+              "integer",
+              "number",
+              "string",
+              "boolean"
+            ]
+          }
+        },
+        "asset_map": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/RuntimeAsset"
+          }
+        }
+      },
+      "required": [
+        "compilation",
+        "capability_profile",
+        "parameters",
+        "asset_map"
+      ],
+      "additionalProperties": false
+    },
+    "ParameterTrace": {
+      "type": "object",
+      "properties": {
+        "canonical_parameter": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "canonical_value": {
+          "type": [
+            "integer",
+            "number",
+            "string",
+            "boolean"
+          ]
+        },
+        "runtime_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "runtime_value": {
+          "type": [
+            "integer",
+            "number",
+            "string",
+            "boolean"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "canonical_parameter",
+        "canonical_value",
+        "runtime_path",
+        "runtime_value",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "TaskExport": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "TaskExport"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "profile_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "compilation_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "mode": {
+          "enum": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ]
+        },
+        "execution": {
+          "enum": [
+            "simulation",
+            "production"
+          ]
+        },
+        "status": {
+          "enum": [
+            "simulation_only",
+            "exported_unexecuted"
+          ]
+        },
+        "payload": {
+          "type": "object"
+        },
+        "parameter_mapping_trace": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ParameterTrace"
+          },
+          "minItems": 1
+        },
+        "media_binding_trace": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/MediaInput"
+          },
+          "minItems": 0
+        },
+        "declarations": {
+          "$ref": "#/$defs/ExportInputs"
+        },
+        "not_run": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "evidence_snapshot": {
+          "$ref": "#/$defs/EvidenceSnapshot"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "profile_digest",
+        "compilation_digest",
+        "mode",
+        "execution",
+        "status",
+        "payload",
+        "parameter_mapping_trace",
+        "media_binding_trace",
+        "declarations",
+        "not_run",
+        "limitations",
+        "evidence_snapshot"
+      ],
+      "additionalProperties": false
+    },
+    "M11Request": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M11Request"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "route_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "target": {
+          "enum": [
+            "M11.1",
+            "M11.2",
+            "M11.3",
+            "M11.4"
+          ]
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "inputs": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "route_version",
+        "work_id",
+        "base_version",
+        "request_id",
+        "target",
+        "sources",
+        "inputs"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "target": {
+                "const": "M11.1"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "inputs": {
+                "$ref": "#/$defs/CapabilityInputs"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "target": {
+                "const": "M11.2"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "inputs": {
+                "$ref": "#/$defs/BindingInputs"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "target": {
+                "const": "M11.3"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "inputs": {
+                "$ref": "#/$defs/CompilationInputs"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "target": {
+                "const": "M11.4"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "inputs": {
+                "$ref": "#/$defs/ExportInputs"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "M11Proposal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M11Proposal"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "route_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "base_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "proposal_id": {
+          "type": "string",
+          "pattern": "^p-[a-f0-9]{64}$"
+        },
+        "module_id": {
+          "enum": [
+            "M11.1",
+            "M11.2",
+            "M11.3",
+            "M11.4"
+          ]
+        },
+        "source_request_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "sources": {
+          "$ref": "#/$defs/Sources"
+        },
+        "context": {
+          "type": "object"
+        },
+        "changes": {
+          "type": "object"
+        },
+        "issues": {
+          "const": []
+        },
+        "status": {
+          "const": "passed_with_unverified"
+        },
+        "execution_status": {
+          "const": "completed"
+        },
+        "not_run": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "route_version",
+        "work_id",
+        "base_version",
+        "proposal_id",
+        "module_id",
+        "source_request_id",
+        "sources",
+        "context",
+        "changes",
+        "issues",
+        "status",
+        "execution_status",
+        "not_run",
+        "limitations"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "module_id": {
+                "const": "M11.1"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "context": {
+                "$ref": "#/$defs/CapabilityInputs"
+              },
+              "changes": {
+                "type": "object",
+                "properties": {
+                  "capability_profile": {
+                    "$ref": "#/$defs/CapabilityProfile"
+                  }
+                },
+                "required": [
+                  "capability_profile"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "module_id": {
+                "const": "M11.2"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "context": {
+                "$ref": "#/$defs/BindingInputs"
+              },
+              "changes": {
+                "type": "object",
+                "properties": {
+                  "reference_binding": {
+                    "$ref": "#/$defs/ReferenceBinding"
+                  }
+                },
+                "required": [
+                  "reference_binding"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "module_id": {
+                "const": "M11.3"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "context": {
+                "$ref": "#/$defs/CompilationInputs"
+              },
+              "changes": {
+                "type": "object",
+                "properties": {
+                  "prompt_compilation": {
+                    "$ref": "#/$defs/PromptCompilation"
+                  }
+                },
+                "required": [
+                  "prompt_compilation"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "module_id": {
+                "const": "M11.4"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "context": {
+                "$ref": "#/$defs/ExportInputs"
+              },
+              "changes": {
+                "type": "object",
+                "properties": {
+                  "task_export": {
+                    "$ref": "#/$defs/TaskExport"
+                  }
+                },
+                "required": [
+                  "task_export"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Receipt": {
+      "type": "object",
+      "properties": {
+        "proposal_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "request_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "proposal_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "accepted_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "request": {
+          "$ref": "#/$defs/M11Request"
+        },
+        "proposal": {
+          "$ref": "#/$defs/M11Proposal"
+        }
+      },
+      "required": [
+        "proposal_id",
+        "request_digest",
+        "proposal_digest",
+        "accepted_version",
+        "request",
+        "proposal"
+      ],
+      "additionalProperties": false
+    },
+    "M11State": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "M11State"
+        },
+        "contract_version": {
+          "const": "1.0.0"
+        },
+        "work_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "owner": {
+          "const": "M11"
+        },
+        "object_type": {
+          "const": "CompilationResult"
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "partial",
+            "compiled_unexecuted"
+          ]
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "capability_profile": {
+              "$ref": "#/$defs/CapabilityProfile"
+            },
+            "reference_binding": {
+              "$ref": "#/$defs/ReferenceBinding"
+            },
+            "prompt_compilation": {
+              "$ref": "#/$defs/PromptCompilation"
+            },
+            "task_export": {
+              "$ref": "#/$defs/TaskExport"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "contexts": {
+          "type": "object",
+          "properties": {
+            "capability_profile": {
+              "$ref": "#/$defs/M11Request"
+            },
+            "reference_binding": {
+              "$ref": "#/$defs/M11Request"
+            },
+            "prompt_compilation": {
+              "$ref": "#/$defs/M11Request"
+            },
+            "task_export": {
+              "$ref": "#/$defs/M11Request"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "sources": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/Source"
+          }
+        },
+        "receipts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Receipt"
+          },
+          "minItems": 0
+        },
+        "consumers": {
+          "const": []
+        },
+        "stale_modules": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "M11.1",
+              "M11.2",
+              "M11.3",
+              "M11.4"
+            ]
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "contract_version",
+        "work_id",
+        "version",
+        "content",
+        "contexts",
+        "sources",
+        "receipts",
+        "consumers",
+        "stale_modules"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,245 @@
+[
+  {
+    "sequence": 1,
+    "name": "00-help",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "--help"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py --help",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/00-help.stdout.txt",
+    "stderr_file": "logs/00-help.stderr.txt",
+    "stdout_bytes": 443,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 2,
+    "name": "11-route",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "route",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-1-request.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py route /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-1-request.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/11-route.stdout.txt",
+    "stderr_file": "logs/11-route.stderr.txt",
+    "stdout_bytes": 809,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 3,
+    "name": "12-propose",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "propose",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-1-request.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py propose /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-1-request.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/12-propose.stdout.txt",
+    "stderr_file": "logs/12-propose.stderr.txt",
+    "stdout_bytes": 8220,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 4,
+    "name": "13-check",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "check",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/proposals/m11-1-proposal.json",
+      "--request",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-1-request.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py check /workspace/scratch/9caa7b23478d/m11-forward-use/output/proposals/m11-1-proposal.json --request /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-1-request.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/13-check.stdout.txt",
+    "stderr_file": "logs/13-check.stderr.txt",
+    "stdout_bytes": 830,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 5,
+    "name": "21-route",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "route",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-2-request.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py route /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-2-request.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/21-route.stdout.txt",
+    "stderr_file": "logs/21-route.stderr.txt",
+    "stdout_bytes": 859,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 6,
+    "name": "22-propose",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "propose",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-2-request.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py propose /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-2-request.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/22-propose.stdout.txt",
+    "stderr_file": "logs/22-propose.stderr.txt",
+    "stdout_bytes": 19989,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 7,
+    "name": "23-check",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "check",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/proposals/m11-2-proposal.json",
+      "--request",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-2-request.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py check /workspace/scratch/9caa7b23478d/m11-forward-use/output/proposals/m11-2-proposal.json --request /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-2-request.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/23-check.stdout.txt",
+    "stderr_file": "logs/23-check.stderr.txt",
+    "stdout_bytes": 830,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 8,
+    "name": "31-route",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "route",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-3-request.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py route /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-3-request.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/31-route.stdout.txt",
+    "stderr_file": "logs/31-route.stderr.txt",
+    "stdout_bytes": 859,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 9,
+    "name": "32-propose",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "propose",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-3-request.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py propose /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-3-request.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/32-propose.stdout.txt",
+    "stderr_file": "logs/32-propose.stderr.txt",
+    "stdout_bytes": 63877,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 10,
+    "name": "33-check",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "check",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/proposals/m11-3-proposal.json",
+      "--request",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-3-request.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py check /workspace/scratch/9caa7b23478d/m11-forward-use/output/proposals/m11-3-proposal.json --request /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-3-request.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/33-check.stdout.txt",
+    "stderr_file": "logs/33-check.stderr.txt",
+    "stdout_bytes": 830,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 11,
+    "name": "41-route",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "route",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-4-request.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py route /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-4-request.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/41-route.stdout.txt",
+    "stderr_file": "logs/41-route.stderr.txt",
+    "stdout_bytes": 859,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 12,
+    "name": "42-propose-blocked",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "propose",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-4-request.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py propose /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/m11-4-request.json",
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "stdout_file": "logs/42-propose-blocked.stdout.txt",
+    "stderr_file": "logs/42-propose-blocked.stderr.txt",
+    "stdout_bytes": 513,
+    "stderr_bytes": 0
+  },
+  {
+    "sequence": 13,
+    "name": "50-accept",
+    "cwd": "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py",
+      "accept",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/proposals/accepted-proposals.json",
+      "--requests",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/accepted-requests.json",
+      "--state",
+      "/workspace/scratch/9caa7b23478d/m11-forward-use/output/state-empty.json"
+    ],
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/scratch/9caa7b23478d/m11-forward-use/h3-model-protocol/scripts/m11_contract.py accept /workspace/scratch/9caa7b23478d/m11-forward-use/output/proposals/accepted-proposals.json --requests /workspace/scratch/9caa7b23478d/m11-forward-use/output/requests/accepted-requests.json --state /workspace/scratch/9caa7b23478d/m11-forward-use/output/state-empty.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_file": "logs/50-accept.stdout.txt",
+    "stderr_file": "logs/50-accept.stderr.txt",
+    "stdout_bytes": 257818,
+    "stderr_bytes": 0
+  }
+]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "H3 模型协议编译"
+  short_description: "Compile H3 modes, references and runtime mappings"
+  default_prompt: "Use $h3-model-protocol to compile the confirmed plan into H3 inputs."

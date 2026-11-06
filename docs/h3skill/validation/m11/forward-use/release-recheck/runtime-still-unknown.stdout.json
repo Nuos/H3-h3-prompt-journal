@@ -1,0 +1,21 @@
+{
+  "status": "fail",
+  "execution_status": "failed",
+  "errors": [
+    {
+      "code": "runtime_unknown",
+      "detail": "No executable task export: actual runtime fields and capabilities are unknown",
+      "path": "/inputs/capability_profile/runtime",
+      "owner": "caller"
+    }
+  ],
+  "not_run": [
+    "natural_language_semantic_audit",
+    "source_authenticity_verification",
+    "media_file_read",
+    "media_decode",
+    "workflow_execution",
+    "h3_inference",
+    "generated_video_acceptance"
+  ]
+}

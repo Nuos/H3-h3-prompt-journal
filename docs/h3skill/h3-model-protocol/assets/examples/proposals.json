@@ -1,0 +1,4185 @@
+[
+  {
+    "kind": "M11Proposal",
+    "contract_version": "1.0.0",
+    "route_version": "1.0.0",
+    "work_id": "synthetic-m11-demo",
+    "base_version": 0,
+    "proposal_id": "p-6b2b3cc1c59c32ed974ffc4d11b4aeb8c735dab46578053718491ecd7bb475e0",
+    "module_id": "M11.1",
+    "source_request_id": "capability-demo",
+    "sources": {
+      "official-base": {
+        "kind": "official_protocol",
+        "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/base-en.txt",
+        "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "excerpt": "Base modes T2VA/I2VA/FL2VA/L2VA have three fields and exact image-alignment lines.",
+        "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"
+      },
+      "official-ref": {
+        "kind": "official_protocol",
+        "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/ref-en.txt",
+        "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "excerpt": "Ref2VA has six fields, independent reference categories and explicit audio retention relationships.",
+        "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"
+      },
+      "fixture-plan": {
+        "kind": "simulation",
+        "locator": "assets/examples/fixture-declarations.json",
+        "version": "1",
+        "excerpt": "Synthetic engineering test declarations; the URI strings do not identify supplied real media and no H3 capability is inferred."
+      },
+      "synthetic-runtime": {
+        "kind": "simulation",
+        "locator": "assets/profiles/simulation.json",
+        "version": "1",
+        "excerpt": "Synthetic object-only adapter: /request/prompt contains the full rendered protocol text including any alignment first line; /request/mode, /request/media is an ordered list of {value,channel,label,input_index} objects; /request/seconds, /request/width, /request/height and /request/fps. This is not a MiniMax API or a real workflow."
+      }
+    },
+    "context": {
+      "profile": {
+        "profile_id": "synthetic-object-adapter",
+        "backend": {
+          "name": "synthetic-fixture-only",
+          "version": "1"
+        },
+        "model": {
+          "name": "no-model-executed",
+          "version": "simulation-1"
+        },
+        "workflow": {
+          "name": "synthetic-object-adapter",
+          "version": "1"
+        },
+        "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "evidence_refs": [
+          "official-base",
+          "official-ref"
+        ],
+        "protocol": {
+          "supported_modes": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ],
+          "language": "en"
+        },
+        "runtime": {
+          "status": "documented",
+          "execution": "simulation",
+          "supported_modes": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ],
+          "evidence_refs": [
+            "synthetic-runtime"
+          ],
+          "parameters": {
+            "duration_ms": {
+              "path": "/request/seconds",
+              "type": "number",
+              "unit": "seconds",
+              "minimum": 0.01,
+              "maximum": 30,
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "width": {
+              "path": "/request/width",
+              "type": "integer",
+              "unit": "pixels",
+              "enum": [
+                640,
+                1280
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "height": {
+              "path": "/request/height",
+              "type": "integer",
+              "unit": "pixels",
+              "enum": [
+                360,
+                720
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "fps": {
+              "path": "/request/fps",
+              "type": "integer",
+              "unit": "fps",
+              "enum": [
+                24,
+                25
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            }
+          },
+          "required_parameters": [
+            "duration_ms",
+            "width",
+            "height",
+            "fps"
+          ],
+          "media": {
+            "path": "/request/media",
+            "format": "ordered_channel_objects",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "prompt": {
+            "path": "/request/prompt",
+            "format": "text",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "mode": {
+            "path": "/request/mode",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "limits": {
+            "max_assets": 8
+          }
+        }
+      }
+    },
+    "changes": {
+      "capability_profile": {
+        "profile_id": "synthetic-object-adapter",
+        "backend": {
+          "name": "synthetic-fixture-only",
+          "version": "1"
+        },
+        "model": {
+          "name": "no-model-executed",
+          "version": "simulation-1"
+        },
+        "workflow": {
+          "name": "synthetic-object-adapter",
+          "version": "1"
+        },
+        "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "evidence_refs": [
+          "official-base",
+          "official-ref"
+        ],
+        "protocol": {
+          "supported_modes": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ],
+          "language": "en"
+        },
+        "runtime": {
+          "status": "documented",
+          "execution": "simulation",
+          "supported_modes": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ],
+          "evidence_refs": [
+            "synthetic-runtime"
+          ],
+          "parameters": {
+            "duration_ms": {
+              "path": "/request/seconds",
+              "type": "number",
+              "unit": "seconds",
+              "minimum": 0.01,
+              "maximum": 30,
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "width": {
+              "path": "/request/width",
+              "type": "integer",
+              "unit": "pixels",
+              "enum": [
+                640,
+                1280
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "height": {
+              "path": "/request/height",
+              "type": "integer",
+              "unit": "pixels",
+              "enum": [
+                360,
+                720
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "fps": {
+              "path": "/request/fps",
+              "type": "integer",
+              "unit": "fps",
+              "enum": [
+                24,
+                25
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            }
+          },
+          "required_parameters": [
+            "duration_ms",
+            "width",
+            "height",
+            "fps"
+          ],
+          "media": {
+            "path": "/request/media",
+            "format": "ordered_channel_objects",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "prompt": {
+            "path": "/request/prompt",
+            "format": "text",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "mode": {
+            "path": "/request/mode",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "limits": {
+            "max_assets": 8
+          }
+        },
+        "evidence_snapshot": {
+          "official-base": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+          },
+          "official-ref": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+          },
+          "synthetic-runtime": {
+            "version": "1",
+            "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+          }
+        },
+        "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc"
+      }
+    },
+    "issues": [],
+    "status": "passed_with_unverified",
+    "execution_status": "completed",
+    "not_run": [
+      "natural_language_semantic_audit",
+      "source_authenticity_verification",
+      "media_file_read",
+      "media_decode",
+      "workflow_execution",
+      "h3_inference",
+      "generated_video_acceptance"
+    ],
+    "limitations": [
+      "Only explicit JSON declarations, supplied evidence references and protocol structure were checked.",
+      "English fragments and their semantic obligation coverage require Agent review.",
+      "A source excerpt is supplied evidence, not independent verification of a deployment.",
+      "Export does not load media, execute a workflow, run H3 or certify generated video quality."
+    ]
+  },
+  {
+    "kind": "M11Proposal",
+    "contract_version": "1.0.0",
+    "route_version": "1.0.0",
+    "work_id": "synthetic-m11-demo",
+    "base_version": 0,
+    "proposal_id": "p-cccd182ad8a5d489f1a0dfebd7e55649a75c5c52cb5adfc0ee1c82f5be039432",
+    "module_id": "M11.2",
+    "source_request_id": "binding-demo",
+    "sources": {
+      "official-base": {
+        "kind": "official_protocol",
+        "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/base-en.txt",
+        "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "excerpt": "Base modes T2VA/I2VA/FL2VA/L2VA have three fields and exact image-alignment lines.",
+        "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"
+      },
+      "official-ref": {
+        "kind": "official_protocol",
+        "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/ref-en.txt",
+        "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "excerpt": "Ref2VA has six fields, independent reference categories and explicit audio retention relationships.",
+        "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"
+      },
+      "fixture-plan": {
+        "kind": "simulation",
+        "locator": "assets/examples/fixture-declarations.json",
+        "version": "1",
+        "excerpt": "Synthetic engineering test declarations; the URI strings do not identify supplied real media and no H3 capability is inferred."
+      },
+      "synthetic-runtime": {
+        "kind": "simulation",
+        "locator": "assets/profiles/simulation.json",
+        "version": "1",
+        "excerpt": "Synthetic object-only adapter: /request/prompt contains the full rendered protocol text including any alignment first line; /request/mode, /request/media is an ordered list of {value,channel,label,input_index} objects; /request/seconds, /request/width, /request/height and /request/fps. This is not a MiniMax API or a real workflow."
+      }
+    },
+    "context": {
+      "capability_profile": {
+        "profile_id": "synthetic-object-adapter",
+        "backend": {
+          "name": "synthetic-fixture-only",
+          "version": "1"
+        },
+        "model": {
+          "name": "no-model-executed",
+          "version": "simulation-1"
+        },
+        "workflow": {
+          "name": "synthetic-object-adapter",
+          "version": "1"
+        },
+        "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "evidence_refs": [
+          "official-base",
+          "official-ref"
+        ],
+        "protocol": {
+          "supported_modes": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ],
+          "language": "en"
+        },
+        "runtime": {
+          "status": "documented",
+          "execution": "simulation",
+          "supported_modes": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ],
+          "evidence_refs": [
+            "synthetic-runtime"
+          ],
+          "parameters": {
+            "duration_ms": {
+              "path": "/request/seconds",
+              "type": "number",
+              "unit": "seconds",
+              "minimum": 0.01,
+              "maximum": 30,
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "width": {
+              "path": "/request/width",
+              "type": "integer",
+              "unit": "pixels",
+              "enum": [
+                640,
+                1280
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "height": {
+              "path": "/request/height",
+              "type": "integer",
+              "unit": "pixels",
+              "enum": [
+                360,
+                720
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "fps": {
+              "path": "/request/fps",
+              "type": "integer",
+              "unit": "fps",
+              "enum": [
+                24,
+                25
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            }
+          },
+          "required_parameters": [
+            "duration_ms",
+            "width",
+            "height",
+            "fps"
+          ],
+          "media": {
+            "path": "/request/media",
+            "format": "ordered_channel_objects",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "prompt": {
+            "path": "/request/prompt",
+            "format": "text",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "mode": {
+            "path": "/request/mode",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "limits": {
+            "max_assets": 8
+          }
+        },
+        "evidence_snapshot": {
+          "official-base": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+          },
+          "official-ref": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+          },
+          "synthetic-runtime": {
+            "version": "1",
+            "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+          }
+        },
+        "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc"
+      },
+      "plan": {
+        "duration_ms": 8000,
+        "shots": [
+          {
+            "shot_id": "shot-open",
+            "start_ms": 0
+          },
+          {
+            "shot_id": "shot-finish",
+            "start_ms": 4000
+          }
+        ],
+        "requested_mode": "Ref2VA"
+      },
+      "assets": [
+        {
+          "asset_id": "music-bed",
+          "version": "fixture-v1",
+          "media_type": "audio",
+          "uri": "fixture://music-bed",
+          "purpose": "audio_reuse",
+          "source_refs": [
+            "fixture-plan"
+          ]
+        },
+        {
+          "asset_id": "aria-photo",
+          "version": "fixture-v1",
+          "media_type": "image",
+          "uri": "fixture://aria-photo",
+          "purpose": "appearance",
+          "source_refs": [
+            "fixture-plan"
+          ]
+        },
+        {
+          "asset_id": "ben-photo",
+          "version": "fixture-v1",
+          "media_type": "image",
+          "uri": "fixture://ben-photo",
+          "purpose": "appearance",
+          "source_refs": [
+            "fixture-plan"
+          ]
+        },
+        {
+          "asset_id": "camera-clip",
+          "version": "fixture-v1",
+          "media_type": "video",
+          "uri": "fixture://camera-clip",
+          "purpose": "structure",
+          "source_refs": [
+            "fixture-plan"
+          ],
+          "enabled_audio": true
+        }
+      ],
+      "subjects": [
+        {
+          "subject_id": "aria",
+          "source_asset_ids": [
+            "aria-photo"
+          ],
+          "description": "The woman with the short dark bob, using only her facial appearance from the source picture.",
+          "retention": "fully_preserved",
+          "retention_reason": "Preserve the defined facial identity; the target wardrobe and bakery are separately authored.",
+          "shot_ids": [
+            "shot-open",
+            "shot-finish"
+          ]
+        },
+        {
+          "subject_id": "ben",
+          "source_asset_ids": [
+            "ben-photo"
+          ],
+          "description": "The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture.",
+          "retention": "fully_preserved",
+          "retention_reason": "Preserve the defined facial identity without importing the source pose or background.",
+          "shot_ids": [
+            "shot-open",
+            "shot-finish"
+          ]
+        }
+      ],
+      "reference_items": [
+        {
+          "asset_id": "camera-clip",
+          "description": "A slow lateral camera movement used only as a movement reference.",
+          "retention": "attribute_transfer",
+          "retention_reason": "Transfer the declared camera direction without copying its scene or edit.",
+          "shot_ids": [
+            "shot-open"
+          ]
+        }
+      ],
+      "audio_bindings": [
+        {
+          "asset_id": "music-bed",
+          "role": "reuse",
+          "description": "The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.",
+          "retention": "partially_copy",
+          "retention_reason": "The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.",
+          "full_source": true,
+          "entire_soundtrack": false,
+          "additional_layers": [
+            "generated-dialogue",
+            "bread-contact"
+          ],
+          "replaced_layers": []
+        },
+        {
+          "asset_id": "camera-clip",
+          "role": "reference",
+          "description": "Use only the calm low voice timbre from the explicitly enabled source audio channel.",
+          "retention": "reference",
+          "retention_reason": "Re-create the vocal timbre for new words without copying the source signal.",
+          "full_source": false,
+          "entire_soundtrack": false,
+          "additional_layers": [],
+          "replaced_layers": [],
+          "speaker_id": "ben-voice",
+          "subject_id": "ben"
+        }
+      ],
+      "speakers": [
+        {
+          "speaker_id": "aria-voice",
+          "first_vocal_ms": 5000,
+          "first_event_kind": "speech",
+          "source_refs": [
+            "fixture-plan"
+          ]
+        },
+        {
+          "speaker_id": "ben-voice",
+          "first_vocal_ms": 1000,
+          "first_event_kind": "speech",
+          "source_refs": [
+            "fixture-plan"
+          ]
+        }
+      ]
+    },
+    "changes": {
+      "reference_binding": {
+        "kind": "ReferenceBinding",
+        "contract_version": "1.0.0",
+        "mode": "Ref2VA",
+        "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc",
+        "duration_ms": 8000,
+        "shots": [
+          {
+            "shot_id": "shot-open",
+            "start_ms": 0
+          },
+          {
+            "shot_id": "shot-finish",
+            "start_ms": 4000
+          }
+        ],
+        "labels": {
+          "subjects": {
+            "aria": "<Subject 1>",
+            "ben": "<Subject 2>"
+          },
+          "assets": {
+            "music-bed": {
+              "audio": "<Audio 1>"
+            },
+            "aria-photo": {
+              "image": "<Picture 1>"
+            },
+            "ben-photo": {
+              "image": "<Picture 2>"
+            },
+            "camera-clip": {
+              "video": "<Video 1>",
+              "audio": "<Audio 2>"
+            }
+          },
+          "speakers": {
+            "ben-voice": "S1",
+            "aria-voice": "S2"
+          },
+          "shots": {
+            "shot-open": "[Shot 1]",
+            "shot-finish": "[Shot 2]"
+          }
+        },
+        "media_inputs": [
+          {
+            "asset_id": "music-bed",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://music-bed",
+            "channel": "audio",
+            "category_index": 1,
+            "input_index": 1,
+            "label": "<Audio 1>",
+            "purpose": "audio_reuse"
+          },
+          {
+            "asset_id": "aria-photo",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://aria-photo",
+            "channel": "image",
+            "category_index": 1,
+            "input_index": 2,
+            "label": "<Picture 1>",
+            "purpose": "appearance"
+          },
+          {
+            "asset_id": "ben-photo",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://ben-photo",
+            "channel": "image",
+            "category_index": 2,
+            "input_index": 3,
+            "label": "<Picture 2>",
+            "purpose": "appearance"
+          },
+          {
+            "asset_id": "camera-clip",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://camera-clip",
+            "channel": "video",
+            "category_index": 1,
+            "input_index": 4,
+            "label": "<Video 1>",
+            "purpose": "structure"
+          },
+          {
+            "asset_id": "camera-clip",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://camera-clip",
+            "channel": "audio",
+            "category_index": 2,
+            "input_index": 5,
+            "label": "<Audio 2>",
+            "purpose": "structure"
+          }
+        ],
+        "task_types": [
+          "reference generation",
+          "audio reuse",
+          "audio reference"
+        ],
+        "declarations": {
+          "capability_profile": {
+            "profile_id": "synthetic-object-adapter",
+            "backend": {
+              "name": "synthetic-fixture-only",
+              "version": "1"
+            },
+            "model": {
+              "name": "no-model-executed",
+              "version": "simulation-1"
+            },
+            "workflow": {
+              "name": "synthetic-object-adapter",
+              "version": "1"
+            },
+            "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "evidence_refs": [
+              "official-base",
+              "official-ref"
+            ],
+            "protocol": {
+              "supported_modes": [
+                "T2VA",
+                "I2VA",
+                "FL2VA",
+                "L2VA",
+                "Ref2VA"
+              ],
+              "language": "en"
+            },
+            "runtime": {
+              "status": "documented",
+              "execution": "simulation",
+              "supported_modes": [
+                "T2VA",
+                "I2VA",
+                "FL2VA",
+                "L2VA",
+                "Ref2VA"
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ],
+              "parameters": {
+                "duration_ms": {
+                  "path": "/request/seconds",
+                  "type": "number",
+                  "unit": "seconds",
+                  "minimum": 0.01,
+                  "maximum": 30,
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                },
+                "width": {
+                  "path": "/request/width",
+                  "type": "integer",
+                  "unit": "pixels",
+                  "enum": [
+                    640,
+                    1280
+                  ],
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                },
+                "height": {
+                  "path": "/request/height",
+                  "type": "integer",
+                  "unit": "pixels",
+                  "enum": [
+                    360,
+                    720
+                  ],
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                },
+                "fps": {
+                  "path": "/request/fps",
+                  "type": "integer",
+                  "unit": "fps",
+                  "enum": [
+                    24,
+                    25
+                  ],
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                }
+              },
+              "required_parameters": [
+                "duration_ms",
+                "width",
+                "height",
+                "fps"
+              ],
+              "media": {
+                "path": "/request/media",
+                "format": "ordered_channel_objects",
+                "evidence_refs": [
+                  "synthetic-runtime"
+                ]
+              },
+              "prompt": {
+                "path": "/request/prompt",
+                "format": "text",
+                "evidence_refs": [
+                  "synthetic-runtime"
+                ]
+              },
+              "mode": {
+                "path": "/request/mode",
+                "evidence_refs": [
+                  "synthetic-runtime"
+                ]
+              },
+              "limits": {
+                "max_assets": 8
+              }
+            },
+            "evidence_snapshot": {
+              "official-base": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+              },
+              "official-ref": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+              },
+              "synthetic-runtime": {
+                "version": "1",
+                "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+              }
+            },
+            "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc"
+          },
+          "plan": {
+            "duration_ms": 8000,
+            "shots": [
+              {
+                "shot_id": "shot-open",
+                "start_ms": 0
+              },
+              {
+                "shot_id": "shot-finish",
+                "start_ms": 4000
+              }
+            ],
+            "requested_mode": "Ref2VA"
+          },
+          "assets": [
+            {
+              "asset_id": "music-bed",
+              "version": "fixture-v1",
+              "media_type": "audio",
+              "uri": "fixture://music-bed",
+              "purpose": "audio_reuse",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "asset_id": "aria-photo",
+              "version": "fixture-v1",
+              "media_type": "image",
+              "uri": "fixture://aria-photo",
+              "purpose": "appearance",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "asset_id": "ben-photo",
+              "version": "fixture-v1",
+              "media_type": "image",
+              "uri": "fixture://ben-photo",
+              "purpose": "appearance",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "asset_id": "camera-clip",
+              "version": "fixture-v1",
+              "media_type": "video",
+              "uri": "fixture://camera-clip",
+              "purpose": "structure",
+              "source_refs": [
+                "fixture-plan"
+              ],
+              "enabled_audio": true
+            }
+          ],
+          "subjects": [
+            {
+              "subject_id": "aria",
+              "source_asset_ids": [
+                "aria-photo"
+              ],
+              "description": "The woman with the short dark bob, using only her facial appearance from the source picture.",
+              "retention": "fully_preserved",
+              "retention_reason": "Preserve the defined facial identity; the target wardrobe and bakery are separately authored.",
+              "shot_ids": [
+                "shot-open",
+                "shot-finish"
+              ]
+            },
+            {
+              "subject_id": "ben",
+              "source_asset_ids": [
+                "ben-photo"
+              ],
+              "description": "The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture.",
+              "retention": "fully_preserved",
+              "retention_reason": "Preserve the defined facial identity without importing the source pose or background.",
+              "shot_ids": [
+                "shot-open",
+                "shot-finish"
+              ]
+            }
+          ],
+          "reference_items": [
+            {
+              "asset_id": "camera-clip",
+              "description": "A slow lateral camera movement used only as a movement reference.",
+              "retention": "attribute_transfer",
+              "retention_reason": "Transfer the declared camera direction without copying its scene or edit.",
+              "shot_ids": [
+                "shot-open"
+              ]
+            }
+          ],
+          "audio_bindings": [
+            {
+              "asset_id": "music-bed",
+              "role": "reuse",
+              "description": "The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.",
+              "retention": "partially_copy",
+              "retention_reason": "The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.",
+              "full_source": true,
+              "entire_soundtrack": false,
+              "additional_layers": [
+                "generated-dialogue",
+                "bread-contact"
+              ],
+              "replaced_layers": []
+            },
+            {
+              "asset_id": "camera-clip",
+              "role": "reference",
+              "description": "Use only the calm low voice timbre from the explicitly enabled source audio channel.",
+              "retention": "reference",
+              "retention_reason": "Re-create the vocal timbre for new words without copying the source signal.",
+              "full_source": false,
+              "entire_soundtrack": false,
+              "additional_layers": [],
+              "replaced_layers": [],
+              "speaker_id": "ben-voice",
+              "subject_id": "ben"
+            }
+          ],
+          "speakers": [
+            {
+              "speaker_id": "aria-voice",
+              "first_vocal_ms": 5000,
+              "first_event_kind": "speech",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "speaker_id": "ben-voice",
+              "first_vocal_ms": 1000,
+              "first_event_kind": "speech",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            }
+          ]
+        },
+        "evidence_snapshot": {
+          "fixture-plan": {
+            "version": "1",
+            "digest": "74e58c58885b2bffe653d8082eeeca9d128b5888430ef423b1f5c4c6f026610e"
+          },
+          "official-base": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+          },
+          "official-ref": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+          },
+          "synthetic-runtime": {
+            "version": "1",
+            "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+          }
+        },
+        "binding_digest": "d5e86460f79d7ed6e3d693f2e21e7737c203b0bdd3154f273320c9a2a31e2ecf"
+      }
+    },
+    "issues": [],
+    "status": "passed_with_unverified",
+    "execution_status": "completed",
+    "not_run": [
+      "natural_language_semantic_audit",
+      "source_authenticity_verification",
+      "media_file_read",
+      "media_decode",
+      "workflow_execution",
+      "h3_inference",
+      "generated_video_acceptance"
+    ],
+    "limitations": [
+      "Only explicit JSON declarations, supplied evidence references and protocol structure were checked.",
+      "English fragments and their semantic obligation coverage require Agent review.",
+      "A source excerpt is supplied evidence, not independent verification of a deployment.",
+      "Export does not load media, execute a workflow, run H3 or certify generated video quality."
+    ]
+  },
+  {
+    "kind": "M11Proposal",
+    "contract_version": "1.0.0",
+    "route_version": "1.0.0",
+    "work_id": "synthetic-m11-demo",
+    "base_version": 0,
+    "proposal_id": "p-91f7a93ddf16a2e576f01abf86cb3871d13de328dea3b2ce5fb448948b0afd19",
+    "module_id": "M11.3",
+    "source_request_id": "compilation-demo",
+    "sources": {
+      "official-base": {
+        "kind": "official_protocol",
+        "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/base-en.txt",
+        "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "excerpt": "Base modes T2VA/I2VA/FL2VA/L2VA have three fields and exact image-alignment lines.",
+        "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"
+      },
+      "official-ref": {
+        "kind": "official_protocol",
+        "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/ref-en.txt",
+        "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "excerpt": "Ref2VA has six fields, independent reference categories and explicit audio retention relationships.",
+        "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"
+      },
+      "fixture-plan": {
+        "kind": "simulation",
+        "locator": "assets/examples/fixture-declarations.json",
+        "version": "1",
+        "excerpt": "Synthetic engineering test declarations; the URI strings do not identify supplied real media and no H3 capability is inferred."
+      },
+      "synthetic-runtime": {
+        "kind": "simulation",
+        "locator": "assets/profiles/simulation.json",
+        "version": "1",
+        "excerpt": "Synthetic object-only adapter: /request/prompt contains the full rendered protocol text including any alignment first line; /request/mode, /request/media is an ordered list of {value,channel,label,input_index} objects; /request/seconds, /request/width, /request/height and /request/fps. This is not a MiniMax API or a real workflow."
+      }
+    },
+    "context": {
+      "binding": {
+        "kind": "ReferenceBinding",
+        "contract_version": "1.0.0",
+        "mode": "Ref2VA",
+        "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc",
+        "duration_ms": 8000,
+        "shots": [
+          {
+            "shot_id": "shot-open",
+            "start_ms": 0
+          },
+          {
+            "shot_id": "shot-finish",
+            "start_ms": 4000
+          }
+        ],
+        "labels": {
+          "subjects": {
+            "aria": "<Subject 1>",
+            "ben": "<Subject 2>"
+          },
+          "assets": {
+            "music-bed": {
+              "audio": "<Audio 1>"
+            },
+            "aria-photo": {
+              "image": "<Picture 1>"
+            },
+            "ben-photo": {
+              "image": "<Picture 2>"
+            },
+            "camera-clip": {
+              "video": "<Video 1>",
+              "audio": "<Audio 2>"
+            }
+          },
+          "speakers": {
+            "ben-voice": "S1",
+            "aria-voice": "S2"
+          },
+          "shots": {
+            "shot-open": "[Shot 1]",
+            "shot-finish": "[Shot 2]"
+          }
+        },
+        "media_inputs": [
+          {
+            "asset_id": "music-bed",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://music-bed",
+            "channel": "audio",
+            "category_index": 1,
+            "input_index": 1,
+            "label": "<Audio 1>",
+            "purpose": "audio_reuse"
+          },
+          {
+            "asset_id": "aria-photo",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://aria-photo",
+            "channel": "image",
+            "category_index": 1,
+            "input_index": 2,
+            "label": "<Picture 1>",
+            "purpose": "appearance"
+          },
+          {
+            "asset_id": "ben-photo",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://ben-photo",
+            "channel": "image",
+            "category_index": 2,
+            "input_index": 3,
+            "label": "<Picture 2>",
+            "purpose": "appearance"
+          },
+          {
+            "asset_id": "camera-clip",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://camera-clip",
+            "channel": "video",
+            "category_index": 1,
+            "input_index": 4,
+            "label": "<Video 1>",
+            "purpose": "structure"
+          },
+          {
+            "asset_id": "camera-clip",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://camera-clip",
+            "channel": "audio",
+            "category_index": 2,
+            "input_index": 5,
+            "label": "<Audio 2>",
+            "purpose": "structure"
+          }
+        ],
+        "task_types": [
+          "reference generation",
+          "audio reuse",
+          "audio reference"
+        ],
+        "declarations": {
+          "capability_profile": {
+            "profile_id": "synthetic-object-adapter",
+            "backend": {
+              "name": "synthetic-fixture-only",
+              "version": "1"
+            },
+            "model": {
+              "name": "no-model-executed",
+              "version": "simulation-1"
+            },
+            "workflow": {
+              "name": "synthetic-object-adapter",
+              "version": "1"
+            },
+            "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "evidence_refs": [
+              "official-base",
+              "official-ref"
+            ],
+            "protocol": {
+              "supported_modes": [
+                "T2VA",
+                "I2VA",
+                "FL2VA",
+                "L2VA",
+                "Ref2VA"
+              ],
+              "language": "en"
+            },
+            "runtime": {
+              "status": "documented",
+              "execution": "simulation",
+              "supported_modes": [
+                "T2VA",
+                "I2VA",
+                "FL2VA",
+                "L2VA",
+                "Ref2VA"
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ],
+              "parameters": {
+                "duration_ms": {
+                  "path": "/request/seconds",
+                  "type": "number",
+                  "unit": "seconds",
+                  "minimum": 0.01,
+                  "maximum": 30,
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                },
+                "width": {
+                  "path": "/request/width",
+                  "type": "integer",
+                  "unit": "pixels",
+                  "enum": [
+                    640,
+                    1280
+                  ],
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                },
+                "height": {
+                  "path": "/request/height",
+                  "type": "integer",
+                  "unit": "pixels",
+                  "enum": [
+                    360,
+                    720
+                  ],
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                },
+                "fps": {
+                  "path": "/request/fps",
+                  "type": "integer",
+                  "unit": "fps",
+                  "enum": [
+                    24,
+                    25
+                  ],
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                }
+              },
+              "required_parameters": [
+                "duration_ms",
+                "width",
+                "height",
+                "fps"
+              ],
+              "media": {
+                "path": "/request/media",
+                "format": "ordered_channel_objects",
+                "evidence_refs": [
+                  "synthetic-runtime"
+                ]
+              },
+              "prompt": {
+                "path": "/request/prompt",
+                "format": "text",
+                "evidence_refs": [
+                  "synthetic-runtime"
+                ]
+              },
+              "mode": {
+                "path": "/request/mode",
+                "evidence_refs": [
+                  "synthetic-runtime"
+                ]
+              },
+              "limits": {
+                "max_assets": 8
+              }
+            },
+            "evidence_snapshot": {
+              "official-base": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+              },
+              "official-ref": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+              },
+              "synthetic-runtime": {
+                "version": "1",
+                "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+              }
+            },
+            "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc"
+          },
+          "plan": {
+            "duration_ms": 8000,
+            "shots": [
+              {
+                "shot_id": "shot-open",
+                "start_ms": 0
+              },
+              {
+                "shot_id": "shot-finish",
+                "start_ms": 4000
+              }
+            ],
+            "requested_mode": "Ref2VA"
+          },
+          "assets": [
+            {
+              "asset_id": "music-bed",
+              "version": "fixture-v1",
+              "media_type": "audio",
+              "uri": "fixture://music-bed",
+              "purpose": "audio_reuse",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "asset_id": "aria-photo",
+              "version": "fixture-v1",
+              "media_type": "image",
+              "uri": "fixture://aria-photo",
+              "purpose": "appearance",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "asset_id": "ben-photo",
+              "version": "fixture-v1",
+              "media_type": "image",
+              "uri": "fixture://ben-photo",
+              "purpose": "appearance",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "asset_id": "camera-clip",
+              "version": "fixture-v1",
+              "media_type": "video",
+              "uri": "fixture://camera-clip",
+              "purpose": "structure",
+              "source_refs": [
+                "fixture-plan"
+              ],
+              "enabled_audio": true
+            }
+          ],
+          "subjects": [
+            {
+              "subject_id": "aria",
+              "source_asset_ids": [
+                "aria-photo"
+              ],
+              "description": "The woman with the short dark bob, using only her facial appearance from the source picture.",
+              "retention": "fully_preserved",
+              "retention_reason": "Preserve the defined facial identity; the target wardrobe and bakery are separately authored.",
+              "shot_ids": [
+                "shot-open",
+                "shot-finish"
+              ]
+            },
+            {
+              "subject_id": "ben",
+              "source_asset_ids": [
+                "ben-photo"
+              ],
+              "description": "The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture.",
+              "retention": "fully_preserved",
+              "retention_reason": "Preserve the defined facial identity without importing the source pose or background.",
+              "shot_ids": [
+                "shot-open",
+                "shot-finish"
+              ]
+            }
+          ],
+          "reference_items": [
+            {
+              "asset_id": "camera-clip",
+              "description": "A slow lateral camera movement used only as a movement reference.",
+              "retention": "attribute_transfer",
+              "retention_reason": "Transfer the declared camera direction without copying its scene or edit.",
+              "shot_ids": [
+                "shot-open"
+              ]
+            }
+          ],
+          "audio_bindings": [
+            {
+              "asset_id": "music-bed",
+              "role": "reuse",
+              "description": "The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.",
+              "retention": "partially_copy",
+              "retention_reason": "The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.",
+              "full_source": true,
+              "entire_soundtrack": false,
+              "additional_layers": [
+                "generated-dialogue",
+                "bread-contact"
+              ],
+              "replaced_layers": []
+            },
+            {
+              "asset_id": "camera-clip",
+              "role": "reference",
+              "description": "Use only the calm low voice timbre from the explicitly enabled source audio channel.",
+              "retention": "reference",
+              "retention_reason": "Re-create the vocal timbre for new words without copying the source signal.",
+              "full_source": false,
+              "entire_soundtrack": false,
+              "additional_layers": [],
+              "replaced_layers": [],
+              "speaker_id": "ben-voice",
+              "subject_id": "ben"
+            }
+          ],
+          "speakers": [
+            {
+              "speaker_id": "aria-voice",
+              "first_vocal_ms": 5000,
+              "first_event_kind": "speech",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "speaker_id": "ben-voice",
+              "first_vocal_ms": 1000,
+              "first_event_kind": "speech",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            }
+          ]
+        },
+        "evidence_snapshot": {
+          "fixture-plan": {
+            "version": "1",
+            "digest": "74e58c58885b2bffe653d8082eeeca9d128b5888430ef423b1f5c4c6f026610e"
+          },
+          "official-base": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+          },
+          "official-ref": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+          },
+          "synthetic-runtime": {
+            "version": "1",
+            "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+          }
+        },
+        "binding_digest": "d5e86460f79d7ed6e3d693f2e21e7737c203b0bdd3154f273320c9a2a31e2ecf"
+      },
+      "fragments": {
+        "style": "Naturalistic live-action bakery footage with warm window light and fine film grain.",
+        "summary": "{{ref:ben}} offers a fresh loaf to {{ref:aria}} across a wooden counter. The scene keeps their facial identities and uses the supplied camera movement and audio only within their declared roles.",
+        "shots": [
+          {
+            "shot_id": "shot-open",
+            "text": "{{ref:ben}} sets the loaf on the counter while {{ref:aria}} watches. The camera follows the lateral movement of {{ref:camera-clip.video}}. At the first vocal event, {{ref:ben}} ({{speaker:ben-voice}}) says {{utterance:ben-line}} in a calm conversational tone. Use {{ref:camera-clip.audio}} only for his vocal timbre. {{ref:aria}} remains silent.",
+            "obligation_ids": [
+              "offer-loaf",
+              "ben-dialogue"
+            ]
+          },
+          {
+            "shot_id": "shot-finish",
+            "text": "a close view shows {{ref:aria}} taking the loaf. {{ref:aria}} ({{speaker:aria-voice}}) says {{utterance:aria-line}} with a small smile. The shelf card reads \"今日新鲜\".",
+            "obligation_ids": [
+              "accept-loaf",
+              "aria-dialogue",
+              "shelf-text"
+            ]
+          }
+        ],
+        "overall_soundscape": "Soft bakery room tone continues behind intermittent dull contacts as the loaf touches the counter.",
+        "non_diegetic_music": "Reuse the full instrumental signal from {{ref:music-bed.audio}} as a quiet audience-only score with its original soft accompaniment and restrained dynamics."
+      },
+      "obligations": [
+        {
+          "obligation_id": "offer-loaf",
+          "shot_id": "shot-open",
+          "description": "Offer the loaf across the counter.",
+          "source_refs": [
+            "fixture-plan"
+          ]
+        },
+        {
+          "obligation_id": "ben-dialogue",
+          "shot_id": "shot-open",
+          "description": "Preserve the first speaker and words.",
+          "source_refs": [
+            "fixture-plan"
+          ]
+        },
+        {
+          "obligation_id": "accept-loaf",
+          "shot_id": "shot-finish",
+          "description": "The recipient takes the loaf.",
+          "source_refs": [
+            "fixture-plan"
+          ]
+        },
+        {
+          "obligation_id": "aria-dialogue",
+          "shot_id": "shot-finish",
+          "description": "Preserve the second speaker and words.",
+          "source_refs": [
+            "fixture-plan"
+          ]
+        },
+        {
+          "obligation_id": "shelf-text",
+          "shot_id": "shot-finish",
+          "description": "Preserve the visible Chinese card text.",
+          "source_refs": [
+            "fixture-plan"
+          ]
+        }
+      ],
+      "utterances": [
+        {
+          "utterance_id": "ben-line",
+          "speaker_id": "ben-voice",
+          "language": "English",
+          "text": "Fresh from the oven.",
+          "source_text": "Fresh from the oven.",
+          "start_ms": 1000,
+          "shot_id": "shot-open",
+          "mode": "on_screen"
+        },
+        {
+          "utterance_id": "aria-line",
+          "speaker_id": "aria-voice",
+          "language": "Chinese",
+          "text": "谢谢，闻起来真香。",
+          "source_text": "谢谢，闻起来真香。",
+          "start_ms": 5000,
+          "shot_id": "shot-finish",
+          "mode": "on_screen"
+        }
+      ],
+      "complete_silence": false,
+      "music_present": true,
+      "visible_text": [
+        {
+          "text_id": "shelf-card",
+          "text": "今日新鲜",
+          "shot_id": "shot-finish"
+        }
+      ]
+    },
+    "changes": {
+      "prompt_compilation": {
+        "kind": "PromptCompilation",
+        "contract_version": "1.0.0",
+        "mode": "Ref2VA",
+        "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc",
+        "binding_digest": "d5e86460f79d7ed6e3d693f2e21e7737c203b0bdd3154f273320c9a2a31e2ecf",
+        "duration_ms": 8000,
+        "fields": {
+          "subject_definitions": "<Subject 1>: The woman with the short dark bob, using only her facial appearance from the source picture. Source: <Picture 1>.\n<Subject 2>: The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture. Source: <Picture 2>.\n<Video 1>: A slow lateral camera movement used only as a movement reference.\n<Audio 1>: The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.\n<Audio 2>: Use only the calm low voice timbre from the explicitly enabled source audio channel. Voice of <Subject 2> (S1).",
+          "summary": "[reference generation + audio reuse + audio reference] <Subject 2> offers a fresh loaf to <Subject 1> across a wooden counter. The scene keeps their facial identities and uses the supplied camera movement and audio only within their declared roles.",
+          "retention_analysis": "<Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity; the target wardrobe and bakery are separately authored.\n<Subject 2> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity without importing the source pose or background.\n<Video 1> ([Shot 1]): attribute_transfer - Transfer the declared camera direction without copying its scene or edit.\n<Audio 1>: partially_copy - The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.\n<Audio 2>: reference - Re-create the vocal timbre for new words without copying the source signal.",
+          "detailed_description": "Naturalistic live-action bakery footage with warm window light and fine film grain.\n\n[Shot 1] <Subject 2> sets the loaf on the counter while <Subject 1> watches. The camera follows the lateral movement of <Video 1>. At the first vocal event, <Subject 2> (S1) says <d>[English] Fresh from the oven.</d> in a calm conversational tone. Use <Audio 2> only for his vocal timbre. <Subject 1> remains silent.\n\n[Shot 2] At 00:04.000, a close view shows <Subject 1> taking the loaf. <Subject 1> (S2) says <d>[Chinese] 谢谢，闻起来真香。</d> with a small smile. The shelf card reads \"今日新鲜\".",
+          "overall_soundscape": "Soft bakery room tone continues behind intermittent dull contacts as the loaf touches the counter.",
+          "non_diegetic_music": "Reuse the full instrumental signal from <Audio 1> as a quiet audience-only score with its original soft accompaniment and restrained dynamics."
+        },
+        "field_order": [
+          "subject_definitions",
+          "summary",
+          "retention_analysis",
+          "detailed_description",
+          "overall_soundscape",
+          "non_diegetic_music"
+        ],
+        "alignment_instruction": null,
+        "rendered_prompt": "subject_definitions: <Subject 1>: The woman with the short dark bob, using only her facial appearance from the source picture. Source: <Picture 1>.\n<Subject 2>: The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture. Source: <Picture 2>.\n<Video 1>: A slow lateral camera movement used only as a movement reference.\n<Audio 1>: The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.\n<Audio 2>: Use only the calm low voice timbre from the explicitly enabled source audio channel. Voice of <Subject 2> (S1).\n\nsummary: [reference generation + audio reuse + audio reference] <Subject 2> offers a fresh loaf to <Subject 1> across a wooden counter. The scene keeps their facial identities and uses the supplied camera movement and audio only within their declared roles.\n\nretention_analysis: <Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity; the target wardrobe and bakery are separately authored.\n<Subject 2> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity without importing the source pose or background.\n<Video 1> ([Shot 1]): attribute_transfer - Transfer the declared camera direction without copying its scene or edit.\n<Audio 1>: partially_copy - The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.\n<Audio 2>: reference - Re-create the vocal timbre for new words without copying the source signal.\n\ndetailed_description: Naturalistic live-action bakery footage with warm window light and fine film grain.\n\n[Shot 1] <Subject 2> sets the loaf on the counter while <Subject 1> watches. The camera follows the lateral movement of <Video 1>. At the first vocal event, <Subject 2> (S1) says <d>[English] Fresh from the oven.</d> in a calm conversational tone. Use <Audio 2> only for his vocal timbre. <Subject 1> remains silent.\n\n[Shot 2] At 00:04.000, a close view shows <Subject 1> taking the loaf. <Subject 1> (S2) says <d>[Chinese] 谢谢，闻起来真香。</d> with a small smile. The shelf card reads \"今日新鲜\".\n\noverall_soundscape: Soft bakery room tone continues behind intermittent dull contacts as the loaf touches the counter.\n\nnon_diegetic_music: Reuse the full instrumental signal from <Audio 1> as a quiet audience-only score with its original soft accompaniment and restrained dynamics.",
+        "media_inputs": [
+          {
+            "asset_id": "music-bed",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://music-bed",
+            "channel": "audio",
+            "category_index": 1,
+            "input_index": 1,
+            "label": "<Audio 1>",
+            "purpose": "audio_reuse"
+          },
+          {
+            "asset_id": "aria-photo",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://aria-photo",
+            "channel": "image",
+            "category_index": 1,
+            "input_index": 2,
+            "label": "<Picture 1>",
+            "purpose": "appearance"
+          },
+          {
+            "asset_id": "ben-photo",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://ben-photo",
+            "channel": "image",
+            "category_index": 2,
+            "input_index": 3,
+            "label": "<Picture 2>",
+            "purpose": "appearance"
+          },
+          {
+            "asset_id": "camera-clip",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://camera-clip",
+            "channel": "video",
+            "category_index": 1,
+            "input_index": 4,
+            "label": "<Video 1>",
+            "purpose": "structure"
+          },
+          {
+            "asset_id": "camera-clip",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://camera-clip",
+            "channel": "audio",
+            "category_index": 2,
+            "input_index": 5,
+            "label": "<Audio 2>",
+            "purpose": "structure"
+          }
+        ],
+        "obligation_trace": [
+          {
+            "obligation_id": "offer-loaf",
+            "shot_id": "shot-open",
+            "output_field": "detailed_description"
+          },
+          {
+            "obligation_id": "ben-dialogue",
+            "shot_id": "shot-open",
+            "output_field": "detailed_description"
+          },
+          {
+            "obligation_id": "accept-loaf",
+            "shot_id": "shot-finish",
+            "output_field": "detailed_description"
+          },
+          {
+            "obligation_id": "aria-dialogue",
+            "shot_id": "shot-finish",
+            "output_field": "detailed_description"
+          },
+          {
+            "obligation_id": "shelf-text",
+            "shot_id": "shot-finish",
+            "output_field": "detailed_description"
+          }
+        ],
+        "punctuation_trace": [],
+        "visible_text_trace": [
+          {
+            "text_id": "shelf-card",
+            "text": "今日新鲜",
+            "shot_id": "shot-finish"
+          }
+        ],
+        "utterance_source_trace": [
+          {
+            "utterance_id": "ben-line",
+            "origin": "generated",
+            "speaker_id": "ben-voice",
+            "audio_asset_id": null,
+            "audio_asset_version": null,
+            "audio_label": null,
+            "source_text": "Fresh from the oven.",
+            "source_language": null,
+            "source_refs": []
+          },
+          {
+            "utterance_id": "aria-line",
+            "origin": "generated",
+            "speaker_id": "aria-voice",
+            "audio_asset_id": null,
+            "audio_asset_version": null,
+            "audio_label": null,
+            "source_text": "谢谢，闻起来真香。",
+            "source_language": null,
+            "source_refs": []
+          }
+        ],
+        "declarations": {
+          "binding": {
+            "kind": "ReferenceBinding",
+            "contract_version": "1.0.0",
+            "mode": "Ref2VA",
+            "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc",
+            "duration_ms": 8000,
+            "shots": [
+              {
+                "shot_id": "shot-open",
+                "start_ms": 0
+              },
+              {
+                "shot_id": "shot-finish",
+                "start_ms": 4000
+              }
+            ],
+            "labels": {
+              "subjects": {
+                "aria": "<Subject 1>",
+                "ben": "<Subject 2>"
+              },
+              "assets": {
+                "music-bed": {
+                  "audio": "<Audio 1>"
+                },
+                "aria-photo": {
+                  "image": "<Picture 1>"
+                },
+                "ben-photo": {
+                  "image": "<Picture 2>"
+                },
+                "camera-clip": {
+                  "video": "<Video 1>",
+                  "audio": "<Audio 2>"
+                }
+              },
+              "speakers": {
+                "ben-voice": "S1",
+                "aria-voice": "S2"
+              },
+              "shots": {
+                "shot-open": "[Shot 1]",
+                "shot-finish": "[Shot 2]"
+              }
+            },
+            "media_inputs": [
+              {
+                "asset_id": "music-bed",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://music-bed",
+                "channel": "audio",
+                "category_index": 1,
+                "input_index": 1,
+                "label": "<Audio 1>",
+                "purpose": "audio_reuse"
+              },
+              {
+                "asset_id": "aria-photo",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://aria-photo",
+                "channel": "image",
+                "category_index": 1,
+                "input_index": 2,
+                "label": "<Picture 1>",
+                "purpose": "appearance"
+              },
+              {
+                "asset_id": "ben-photo",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://ben-photo",
+                "channel": "image",
+                "category_index": 2,
+                "input_index": 3,
+                "label": "<Picture 2>",
+                "purpose": "appearance"
+              },
+              {
+                "asset_id": "camera-clip",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://camera-clip",
+                "channel": "video",
+                "category_index": 1,
+                "input_index": 4,
+                "label": "<Video 1>",
+                "purpose": "structure"
+              },
+              {
+                "asset_id": "camera-clip",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://camera-clip",
+                "channel": "audio",
+                "category_index": 2,
+                "input_index": 5,
+                "label": "<Audio 2>",
+                "purpose": "structure"
+              }
+            ],
+            "task_types": [
+              "reference generation",
+              "audio reuse",
+              "audio reference"
+            ],
+            "declarations": {
+              "capability_profile": {
+                "profile_id": "synthetic-object-adapter",
+                "backend": {
+                  "name": "synthetic-fixture-only",
+                  "version": "1"
+                },
+                "model": {
+                  "name": "no-model-executed",
+                  "version": "simulation-1"
+                },
+                "workflow": {
+                  "name": "synthetic-object-adapter",
+                  "version": "1"
+                },
+                "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "evidence_refs": [
+                  "official-base",
+                  "official-ref"
+                ],
+                "protocol": {
+                  "supported_modes": [
+                    "T2VA",
+                    "I2VA",
+                    "FL2VA",
+                    "L2VA",
+                    "Ref2VA"
+                  ],
+                  "language": "en"
+                },
+                "runtime": {
+                  "status": "documented",
+                  "execution": "simulation",
+                  "supported_modes": [
+                    "T2VA",
+                    "I2VA",
+                    "FL2VA",
+                    "L2VA",
+                    "Ref2VA"
+                  ],
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ],
+                  "parameters": {
+                    "duration_ms": {
+                      "path": "/request/seconds",
+                      "type": "number",
+                      "unit": "seconds",
+                      "minimum": 0.01,
+                      "maximum": 30,
+                      "evidence_refs": [
+                        "synthetic-runtime"
+                      ]
+                    },
+                    "width": {
+                      "path": "/request/width",
+                      "type": "integer",
+                      "unit": "pixels",
+                      "enum": [
+                        640,
+                        1280
+                      ],
+                      "evidence_refs": [
+                        "synthetic-runtime"
+                      ]
+                    },
+                    "height": {
+                      "path": "/request/height",
+                      "type": "integer",
+                      "unit": "pixels",
+                      "enum": [
+                        360,
+                        720
+                      ],
+                      "evidence_refs": [
+                        "synthetic-runtime"
+                      ]
+                    },
+                    "fps": {
+                      "path": "/request/fps",
+                      "type": "integer",
+                      "unit": "fps",
+                      "enum": [
+                        24,
+                        25
+                      ],
+                      "evidence_refs": [
+                        "synthetic-runtime"
+                      ]
+                    }
+                  },
+                  "required_parameters": [
+                    "duration_ms",
+                    "width",
+                    "height",
+                    "fps"
+                  ],
+                  "media": {
+                    "path": "/request/media",
+                    "format": "ordered_channel_objects",
+                    "evidence_refs": [
+                      "synthetic-runtime"
+                    ]
+                  },
+                  "prompt": {
+                    "path": "/request/prompt",
+                    "format": "text",
+                    "evidence_refs": [
+                      "synthetic-runtime"
+                    ]
+                  },
+                  "mode": {
+                    "path": "/request/mode",
+                    "evidence_refs": [
+                      "synthetic-runtime"
+                    ]
+                  },
+                  "limits": {
+                    "max_assets": 8
+                  }
+                },
+                "evidence_snapshot": {
+                  "official-base": {
+                    "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                    "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+                  },
+                  "official-ref": {
+                    "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                    "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+                  },
+                  "synthetic-runtime": {
+                    "version": "1",
+                    "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+                  }
+                },
+                "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc"
+              },
+              "plan": {
+                "duration_ms": 8000,
+                "shots": [
+                  {
+                    "shot_id": "shot-open",
+                    "start_ms": 0
+                  },
+                  {
+                    "shot_id": "shot-finish",
+                    "start_ms": 4000
+                  }
+                ],
+                "requested_mode": "Ref2VA"
+              },
+              "assets": [
+                {
+                  "asset_id": "music-bed",
+                  "version": "fixture-v1",
+                  "media_type": "audio",
+                  "uri": "fixture://music-bed",
+                  "purpose": "audio_reuse",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "asset_id": "aria-photo",
+                  "version": "fixture-v1",
+                  "media_type": "image",
+                  "uri": "fixture://aria-photo",
+                  "purpose": "appearance",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "asset_id": "ben-photo",
+                  "version": "fixture-v1",
+                  "media_type": "image",
+                  "uri": "fixture://ben-photo",
+                  "purpose": "appearance",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "asset_id": "camera-clip",
+                  "version": "fixture-v1",
+                  "media_type": "video",
+                  "uri": "fixture://camera-clip",
+                  "purpose": "structure",
+                  "source_refs": [
+                    "fixture-plan"
+                  ],
+                  "enabled_audio": true
+                }
+              ],
+              "subjects": [
+                {
+                  "subject_id": "aria",
+                  "source_asset_ids": [
+                    "aria-photo"
+                  ],
+                  "description": "The woman with the short dark bob, using only her facial appearance from the source picture.",
+                  "retention": "fully_preserved",
+                  "retention_reason": "Preserve the defined facial identity; the target wardrobe and bakery are separately authored.",
+                  "shot_ids": [
+                    "shot-open",
+                    "shot-finish"
+                  ]
+                },
+                {
+                  "subject_id": "ben",
+                  "source_asset_ids": [
+                    "ben-photo"
+                  ],
+                  "description": "The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture.",
+                  "retention": "fully_preserved",
+                  "retention_reason": "Preserve the defined facial identity without importing the source pose or background.",
+                  "shot_ids": [
+                    "shot-open",
+                    "shot-finish"
+                  ]
+                }
+              ],
+              "reference_items": [
+                {
+                  "asset_id": "camera-clip",
+                  "description": "A slow lateral camera movement used only as a movement reference.",
+                  "retention": "attribute_transfer",
+                  "retention_reason": "Transfer the declared camera direction without copying its scene or edit.",
+                  "shot_ids": [
+                    "shot-open"
+                  ]
+                }
+              ],
+              "audio_bindings": [
+                {
+                  "asset_id": "music-bed",
+                  "role": "reuse",
+                  "description": "The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.",
+                  "retention": "partially_copy",
+                  "retention_reason": "The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.",
+                  "full_source": true,
+                  "entire_soundtrack": false,
+                  "additional_layers": [
+                    "generated-dialogue",
+                    "bread-contact"
+                  ],
+                  "replaced_layers": []
+                },
+                {
+                  "asset_id": "camera-clip",
+                  "role": "reference",
+                  "description": "Use only the calm low voice timbre from the explicitly enabled source audio channel.",
+                  "retention": "reference",
+                  "retention_reason": "Re-create the vocal timbre for new words without copying the source signal.",
+                  "full_source": false,
+                  "entire_soundtrack": false,
+                  "additional_layers": [],
+                  "replaced_layers": [],
+                  "speaker_id": "ben-voice",
+                  "subject_id": "ben"
+                }
+              ],
+              "speakers": [
+                {
+                  "speaker_id": "aria-voice",
+                  "first_vocal_ms": 5000,
+                  "first_event_kind": "speech",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "speaker_id": "ben-voice",
+                  "first_vocal_ms": 1000,
+                  "first_event_kind": "speech",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                }
+              ]
+            },
+            "evidence_snapshot": {
+              "fixture-plan": {
+                "version": "1",
+                "digest": "74e58c58885b2bffe653d8082eeeca9d128b5888430ef423b1f5c4c6f026610e"
+              },
+              "official-base": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+              },
+              "official-ref": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+              },
+              "synthetic-runtime": {
+                "version": "1",
+                "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+              }
+            },
+            "binding_digest": "d5e86460f79d7ed6e3d693f2e21e7737c203b0bdd3154f273320c9a2a31e2ecf"
+          },
+          "fragments": {
+            "style": "Naturalistic live-action bakery footage with warm window light and fine film grain.",
+            "summary": "{{ref:ben}} offers a fresh loaf to {{ref:aria}} across a wooden counter. The scene keeps their facial identities and uses the supplied camera movement and audio only within their declared roles.",
+            "shots": [
+              {
+                "shot_id": "shot-open",
+                "text": "{{ref:ben}} sets the loaf on the counter while {{ref:aria}} watches. The camera follows the lateral movement of {{ref:camera-clip.video}}. At the first vocal event, {{ref:ben}} ({{speaker:ben-voice}}) says {{utterance:ben-line}} in a calm conversational tone. Use {{ref:camera-clip.audio}} only for his vocal timbre. {{ref:aria}} remains silent.",
+                "obligation_ids": [
+                  "offer-loaf",
+                  "ben-dialogue"
+                ]
+              },
+              {
+                "shot_id": "shot-finish",
+                "text": "a close view shows {{ref:aria}} taking the loaf. {{ref:aria}} ({{speaker:aria-voice}}) says {{utterance:aria-line}} with a small smile. The shelf card reads \"今日新鲜\".",
+                "obligation_ids": [
+                  "accept-loaf",
+                  "aria-dialogue",
+                  "shelf-text"
+                ]
+              }
+            ],
+            "overall_soundscape": "Soft bakery room tone continues behind intermittent dull contacts as the loaf touches the counter.",
+            "non_diegetic_music": "Reuse the full instrumental signal from {{ref:music-bed.audio}} as a quiet audience-only score with its original soft accompaniment and restrained dynamics."
+          },
+          "obligations": [
+            {
+              "obligation_id": "offer-loaf",
+              "shot_id": "shot-open",
+              "description": "Offer the loaf across the counter.",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "obligation_id": "ben-dialogue",
+              "shot_id": "shot-open",
+              "description": "Preserve the first speaker and words.",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "obligation_id": "accept-loaf",
+              "shot_id": "shot-finish",
+              "description": "The recipient takes the loaf.",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "obligation_id": "aria-dialogue",
+              "shot_id": "shot-finish",
+              "description": "Preserve the second speaker and words.",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "obligation_id": "shelf-text",
+              "shot_id": "shot-finish",
+              "description": "Preserve the visible Chinese card text.",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            }
+          ],
+          "utterances": [
+            {
+              "utterance_id": "ben-line",
+              "speaker_id": "ben-voice",
+              "language": "English",
+              "text": "Fresh from the oven.",
+              "source_text": "Fresh from the oven.",
+              "start_ms": 1000,
+              "shot_id": "shot-open",
+              "mode": "on_screen"
+            },
+            {
+              "utterance_id": "aria-line",
+              "speaker_id": "aria-voice",
+              "language": "Chinese",
+              "text": "谢谢，闻起来真香。",
+              "source_text": "谢谢，闻起来真香。",
+              "start_ms": 5000,
+              "shot_id": "shot-finish",
+              "mode": "on_screen"
+            }
+          ],
+          "complete_silence": false,
+          "music_present": true,
+          "visible_text": [
+            {
+              "text_id": "shelf-card",
+              "text": "今日新鲜",
+              "shot_id": "shot-finish"
+            }
+          ]
+        },
+        "evidence_snapshot": {
+          "fixture-plan": {
+            "version": "1",
+            "digest": "74e58c58885b2bffe653d8082eeeca9d128b5888430ef423b1f5c4c6f026610e"
+          },
+          "official-base": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+          },
+          "official-ref": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+          },
+          "synthetic-runtime": {
+            "version": "1",
+            "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+          }
+        },
+        "status": "passed_with_unverified",
+        "not_run": [
+          "natural_language_semantic_audit",
+          "source_authenticity_verification",
+          "media_file_read",
+          "media_decode",
+          "workflow_execution",
+          "h3_inference",
+          "generated_video_acceptance"
+        ],
+        "compilation_digest": "6c31389149b44801cc6c6b83088f1870734ff2a47dc3183a009411cbb2164b17"
+      }
+    },
+    "issues": [],
+    "status": "passed_with_unverified",
+    "execution_status": "completed",
+    "not_run": [
+      "natural_language_semantic_audit",
+      "source_authenticity_verification",
+      "media_file_read",
+      "media_decode",
+      "workflow_execution",
+      "h3_inference",
+      "generated_video_acceptance"
+    ],
+    "limitations": [
+      "Only explicit JSON declarations, supplied evidence references and protocol structure were checked.",
+      "English fragments and their semantic obligation coverage require Agent review.",
+      "A source excerpt is supplied evidence, not independent verification of a deployment.",
+      "Export does not load media, execute a workflow, run H3 or certify generated video quality."
+    ]
+  },
+  {
+    "kind": "M11Proposal",
+    "contract_version": "1.0.0",
+    "route_version": "1.0.0",
+    "work_id": "synthetic-m11-demo",
+    "base_version": 0,
+    "proposal_id": "p-83bd2660ec86583bedd657fe1f4632d56d4ecdef12e2096257a161dfaaf9985f",
+    "module_id": "M11.4",
+    "source_request_id": "export-demo",
+    "sources": {
+      "official-base": {
+        "kind": "official_protocol",
+        "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/base-en.txt",
+        "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "excerpt": "Base modes T2VA/I2VA/FL2VA/L2VA have three fields and exact image-alignment lines.",
+        "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"
+      },
+      "official-ref": {
+        "kind": "official_protocol",
+        "locator": "https://github.com/MiniMax-AI/MiniMax-H3/blob/199b7d0e1fd95e7b3eafa8c15eca692534142427/skills/h3-prompt-writing/references/ref-en.txt",
+        "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "excerpt": "Ref2VA has six fields, independent reference categories and explicit audio retention relationships.",
+        "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"
+      },
+      "fixture-plan": {
+        "kind": "simulation",
+        "locator": "assets/examples/fixture-declarations.json",
+        "version": "1",
+        "excerpt": "Synthetic engineering test declarations; the URI strings do not identify supplied real media and no H3 capability is inferred."
+      },
+      "synthetic-runtime": {
+        "kind": "simulation",
+        "locator": "assets/profiles/simulation.json",
+        "version": "1",
+        "excerpt": "Synthetic object-only adapter: /request/prompt contains the full rendered protocol text including any alignment first line; /request/mode, /request/media is an ordered list of {value,channel,label,input_index} objects; /request/seconds, /request/width, /request/height and /request/fps. This is not a MiniMax API or a real workflow."
+      }
+    },
+    "context": {
+      "compilation": {
+        "kind": "PromptCompilation",
+        "contract_version": "1.0.0",
+        "mode": "Ref2VA",
+        "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc",
+        "binding_digest": "d5e86460f79d7ed6e3d693f2e21e7737c203b0bdd3154f273320c9a2a31e2ecf",
+        "duration_ms": 8000,
+        "fields": {
+          "subject_definitions": "<Subject 1>: The woman with the short dark bob, using only her facial appearance from the source picture. Source: <Picture 1>.\n<Subject 2>: The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture. Source: <Picture 2>.\n<Video 1>: A slow lateral camera movement used only as a movement reference.\n<Audio 1>: The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.\n<Audio 2>: Use only the calm low voice timbre from the explicitly enabled source audio channel. Voice of <Subject 2> (S1).",
+          "summary": "[reference generation + audio reuse + audio reference] <Subject 2> offers a fresh loaf to <Subject 1> across a wooden counter. The scene keeps their facial identities and uses the supplied camera movement and audio only within their declared roles.",
+          "retention_analysis": "<Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity; the target wardrobe and bakery are separately authored.\n<Subject 2> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity without importing the source pose or background.\n<Video 1> ([Shot 1]): attribute_transfer - Transfer the declared camera direction without copying its scene or edit.\n<Audio 1>: partially_copy - The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.\n<Audio 2>: reference - Re-create the vocal timbre for new words without copying the source signal.",
+          "detailed_description": "Naturalistic live-action bakery footage with warm window light and fine film grain.\n\n[Shot 1] <Subject 2> sets the loaf on the counter while <Subject 1> watches. The camera follows the lateral movement of <Video 1>. At the first vocal event, <Subject 2> (S1) says <d>[English] Fresh from the oven.</d> in a calm conversational tone. Use <Audio 2> only for his vocal timbre. <Subject 1> remains silent.\n\n[Shot 2] At 00:04.000, a close view shows <Subject 1> taking the loaf. <Subject 1> (S2) says <d>[Chinese] 谢谢，闻起来真香。</d> with a small smile. The shelf card reads \"今日新鲜\".",
+          "overall_soundscape": "Soft bakery room tone continues behind intermittent dull contacts as the loaf touches the counter.",
+          "non_diegetic_music": "Reuse the full instrumental signal from <Audio 1> as a quiet audience-only score with its original soft accompaniment and restrained dynamics."
+        },
+        "field_order": [
+          "subject_definitions",
+          "summary",
+          "retention_analysis",
+          "detailed_description",
+          "overall_soundscape",
+          "non_diegetic_music"
+        ],
+        "alignment_instruction": null,
+        "rendered_prompt": "subject_definitions: <Subject 1>: The woman with the short dark bob, using only her facial appearance from the source picture. Source: <Picture 1>.\n<Subject 2>: The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture. Source: <Picture 2>.\n<Video 1>: A slow lateral camera movement used only as a movement reference.\n<Audio 1>: The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.\n<Audio 2>: Use only the calm low voice timbre from the explicitly enabled source audio channel. Voice of <Subject 2> (S1).\n\nsummary: [reference generation + audio reuse + audio reference] <Subject 2> offers a fresh loaf to <Subject 1> across a wooden counter. The scene keeps their facial identities and uses the supplied camera movement and audio only within their declared roles.\n\nretention_analysis: <Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity; the target wardrobe and bakery are separately authored.\n<Subject 2> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity without importing the source pose or background.\n<Video 1> ([Shot 1]): attribute_transfer - Transfer the declared camera direction without copying its scene or edit.\n<Audio 1>: partially_copy - The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.\n<Audio 2>: reference - Re-create the vocal timbre for new words without copying the source signal.\n\ndetailed_description: Naturalistic live-action bakery footage with warm window light and fine film grain.\n\n[Shot 1] <Subject 2> sets the loaf on the counter while <Subject 1> watches. The camera follows the lateral movement of <Video 1>. At the first vocal event, <Subject 2> (S1) says <d>[English] Fresh from the oven.</d> in a calm conversational tone. Use <Audio 2> only for his vocal timbre. <Subject 1> remains silent.\n\n[Shot 2] At 00:04.000, a close view shows <Subject 1> taking the loaf. <Subject 1> (S2) says <d>[Chinese] 谢谢，闻起来真香。</d> with a small smile. The shelf card reads \"今日新鲜\".\n\noverall_soundscape: Soft bakery room tone continues behind intermittent dull contacts as the loaf touches the counter.\n\nnon_diegetic_music: Reuse the full instrumental signal from <Audio 1> as a quiet audience-only score with its original soft accompaniment and restrained dynamics.",
+        "media_inputs": [
+          {
+            "asset_id": "music-bed",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://music-bed",
+            "channel": "audio",
+            "category_index": 1,
+            "input_index": 1,
+            "label": "<Audio 1>",
+            "purpose": "audio_reuse"
+          },
+          {
+            "asset_id": "aria-photo",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://aria-photo",
+            "channel": "image",
+            "category_index": 1,
+            "input_index": 2,
+            "label": "<Picture 1>",
+            "purpose": "appearance"
+          },
+          {
+            "asset_id": "ben-photo",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://ben-photo",
+            "channel": "image",
+            "category_index": 2,
+            "input_index": 3,
+            "label": "<Picture 2>",
+            "purpose": "appearance"
+          },
+          {
+            "asset_id": "camera-clip",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://camera-clip",
+            "channel": "video",
+            "category_index": 1,
+            "input_index": 4,
+            "label": "<Video 1>",
+            "purpose": "structure"
+          },
+          {
+            "asset_id": "camera-clip",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://camera-clip",
+            "channel": "audio",
+            "category_index": 2,
+            "input_index": 5,
+            "label": "<Audio 2>",
+            "purpose": "structure"
+          }
+        ],
+        "obligation_trace": [
+          {
+            "obligation_id": "offer-loaf",
+            "shot_id": "shot-open",
+            "output_field": "detailed_description"
+          },
+          {
+            "obligation_id": "ben-dialogue",
+            "shot_id": "shot-open",
+            "output_field": "detailed_description"
+          },
+          {
+            "obligation_id": "accept-loaf",
+            "shot_id": "shot-finish",
+            "output_field": "detailed_description"
+          },
+          {
+            "obligation_id": "aria-dialogue",
+            "shot_id": "shot-finish",
+            "output_field": "detailed_description"
+          },
+          {
+            "obligation_id": "shelf-text",
+            "shot_id": "shot-finish",
+            "output_field": "detailed_description"
+          }
+        ],
+        "punctuation_trace": [],
+        "visible_text_trace": [
+          {
+            "text_id": "shelf-card",
+            "text": "今日新鲜",
+            "shot_id": "shot-finish"
+          }
+        ],
+        "utterance_source_trace": [
+          {
+            "utterance_id": "ben-line",
+            "origin": "generated",
+            "speaker_id": "ben-voice",
+            "audio_asset_id": null,
+            "audio_asset_version": null,
+            "audio_label": null,
+            "source_text": "Fresh from the oven.",
+            "source_language": null,
+            "source_refs": []
+          },
+          {
+            "utterance_id": "aria-line",
+            "origin": "generated",
+            "speaker_id": "aria-voice",
+            "audio_asset_id": null,
+            "audio_asset_version": null,
+            "audio_label": null,
+            "source_text": "谢谢，闻起来真香。",
+            "source_language": null,
+            "source_refs": []
+          }
+        ],
+        "declarations": {
+          "binding": {
+            "kind": "ReferenceBinding",
+            "contract_version": "1.0.0",
+            "mode": "Ref2VA",
+            "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc",
+            "duration_ms": 8000,
+            "shots": [
+              {
+                "shot_id": "shot-open",
+                "start_ms": 0
+              },
+              {
+                "shot_id": "shot-finish",
+                "start_ms": 4000
+              }
+            ],
+            "labels": {
+              "subjects": {
+                "aria": "<Subject 1>",
+                "ben": "<Subject 2>"
+              },
+              "assets": {
+                "music-bed": {
+                  "audio": "<Audio 1>"
+                },
+                "aria-photo": {
+                  "image": "<Picture 1>"
+                },
+                "ben-photo": {
+                  "image": "<Picture 2>"
+                },
+                "camera-clip": {
+                  "video": "<Video 1>",
+                  "audio": "<Audio 2>"
+                }
+              },
+              "speakers": {
+                "ben-voice": "S1",
+                "aria-voice": "S2"
+              },
+              "shots": {
+                "shot-open": "[Shot 1]",
+                "shot-finish": "[Shot 2]"
+              }
+            },
+            "media_inputs": [
+              {
+                "asset_id": "music-bed",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://music-bed",
+                "channel": "audio",
+                "category_index": 1,
+                "input_index": 1,
+                "label": "<Audio 1>",
+                "purpose": "audio_reuse"
+              },
+              {
+                "asset_id": "aria-photo",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://aria-photo",
+                "channel": "image",
+                "category_index": 1,
+                "input_index": 2,
+                "label": "<Picture 1>",
+                "purpose": "appearance"
+              },
+              {
+                "asset_id": "ben-photo",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://ben-photo",
+                "channel": "image",
+                "category_index": 2,
+                "input_index": 3,
+                "label": "<Picture 2>",
+                "purpose": "appearance"
+              },
+              {
+                "asset_id": "camera-clip",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://camera-clip",
+                "channel": "video",
+                "category_index": 1,
+                "input_index": 4,
+                "label": "<Video 1>",
+                "purpose": "structure"
+              },
+              {
+                "asset_id": "camera-clip",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://camera-clip",
+                "channel": "audio",
+                "category_index": 2,
+                "input_index": 5,
+                "label": "<Audio 2>",
+                "purpose": "structure"
+              }
+            ],
+            "task_types": [
+              "reference generation",
+              "audio reuse",
+              "audio reference"
+            ],
+            "declarations": {
+              "capability_profile": {
+                "profile_id": "synthetic-object-adapter",
+                "backend": {
+                  "name": "synthetic-fixture-only",
+                  "version": "1"
+                },
+                "model": {
+                  "name": "no-model-executed",
+                  "version": "simulation-1"
+                },
+                "workflow": {
+                  "name": "synthetic-object-adapter",
+                  "version": "1"
+                },
+                "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "evidence_refs": [
+                  "official-base",
+                  "official-ref"
+                ],
+                "protocol": {
+                  "supported_modes": [
+                    "T2VA",
+                    "I2VA",
+                    "FL2VA",
+                    "L2VA",
+                    "Ref2VA"
+                  ],
+                  "language": "en"
+                },
+                "runtime": {
+                  "status": "documented",
+                  "execution": "simulation",
+                  "supported_modes": [
+                    "T2VA",
+                    "I2VA",
+                    "FL2VA",
+                    "L2VA",
+                    "Ref2VA"
+                  ],
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ],
+                  "parameters": {
+                    "duration_ms": {
+                      "path": "/request/seconds",
+                      "type": "number",
+                      "unit": "seconds",
+                      "minimum": 0.01,
+                      "maximum": 30,
+                      "evidence_refs": [
+                        "synthetic-runtime"
+                      ]
+                    },
+                    "width": {
+                      "path": "/request/width",
+                      "type": "integer",
+                      "unit": "pixels",
+                      "enum": [
+                        640,
+                        1280
+                      ],
+                      "evidence_refs": [
+                        "synthetic-runtime"
+                      ]
+                    },
+                    "height": {
+                      "path": "/request/height",
+                      "type": "integer",
+                      "unit": "pixels",
+                      "enum": [
+                        360,
+                        720
+                      ],
+                      "evidence_refs": [
+                        "synthetic-runtime"
+                      ]
+                    },
+                    "fps": {
+                      "path": "/request/fps",
+                      "type": "integer",
+                      "unit": "fps",
+                      "enum": [
+                        24,
+                        25
+                      ],
+                      "evidence_refs": [
+                        "synthetic-runtime"
+                      ]
+                    }
+                  },
+                  "required_parameters": [
+                    "duration_ms",
+                    "width",
+                    "height",
+                    "fps"
+                  ],
+                  "media": {
+                    "path": "/request/media",
+                    "format": "ordered_channel_objects",
+                    "evidence_refs": [
+                      "synthetic-runtime"
+                    ]
+                  },
+                  "prompt": {
+                    "path": "/request/prompt",
+                    "format": "text",
+                    "evidence_refs": [
+                      "synthetic-runtime"
+                    ]
+                  },
+                  "mode": {
+                    "path": "/request/mode",
+                    "evidence_refs": [
+                      "synthetic-runtime"
+                    ]
+                  },
+                  "limits": {
+                    "max_assets": 8
+                  }
+                },
+                "evidence_snapshot": {
+                  "official-base": {
+                    "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                    "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+                  },
+                  "official-ref": {
+                    "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                    "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+                  },
+                  "synthetic-runtime": {
+                    "version": "1",
+                    "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+                  }
+                },
+                "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc"
+              },
+              "plan": {
+                "duration_ms": 8000,
+                "shots": [
+                  {
+                    "shot_id": "shot-open",
+                    "start_ms": 0
+                  },
+                  {
+                    "shot_id": "shot-finish",
+                    "start_ms": 4000
+                  }
+                ],
+                "requested_mode": "Ref2VA"
+              },
+              "assets": [
+                {
+                  "asset_id": "music-bed",
+                  "version": "fixture-v1",
+                  "media_type": "audio",
+                  "uri": "fixture://music-bed",
+                  "purpose": "audio_reuse",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "asset_id": "aria-photo",
+                  "version": "fixture-v1",
+                  "media_type": "image",
+                  "uri": "fixture://aria-photo",
+                  "purpose": "appearance",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "asset_id": "ben-photo",
+                  "version": "fixture-v1",
+                  "media_type": "image",
+                  "uri": "fixture://ben-photo",
+                  "purpose": "appearance",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "asset_id": "camera-clip",
+                  "version": "fixture-v1",
+                  "media_type": "video",
+                  "uri": "fixture://camera-clip",
+                  "purpose": "structure",
+                  "source_refs": [
+                    "fixture-plan"
+                  ],
+                  "enabled_audio": true
+                }
+              ],
+              "subjects": [
+                {
+                  "subject_id": "aria",
+                  "source_asset_ids": [
+                    "aria-photo"
+                  ],
+                  "description": "The woman with the short dark bob, using only her facial appearance from the source picture.",
+                  "retention": "fully_preserved",
+                  "retention_reason": "Preserve the defined facial identity; the target wardrobe and bakery are separately authored.",
+                  "shot_ids": [
+                    "shot-open",
+                    "shot-finish"
+                  ]
+                },
+                {
+                  "subject_id": "ben",
+                  "source_asset_ids": [
+                    "ben-photo"
+                  ],
+                  "description": "The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture.",
+                  "retention": "fully_preserved",
+                  "retention_reason": "Preserve the defined facial identity without importing the source pose or background.",
+                  "shot_ids": [
+                    "shot-open",
+                    "shot-finish"
+                  ]
+                }
+              ],
+              "reference_items": [
+                {
+                  "asset_id": "camera-clip",
+                  "description": "A slow lateral camera movement used only as a movement reference.",
+                  "retention": "attribute_transfer",
+                  "retention_reason": "Transfer the declared camera direction without copying its scene or edit.",
+                  "shot_ids": [
+                    "shot-open"
+                  ]
+                }
+              ],
+              "audio_bindings": [
+                {
+                  "asset_id": "music-bed",
+                  "role": "reuse",
+                  "description": "The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.",
+                  "retention": "partially_copy",
+                  "retention_reason": "The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.",
+                  "full_source": true,
+                  "entire_soundtrack": false,
+                  "additional_layers": [
+                    "generated-dialogue",
+                    "bread-contact"
+                  ],
+                  "replaced_layers": []
+                },
+                {
+                  "asset_id": "camera-clip",
+                  "role": "reference",
+                  "description": "Use only the calm low voice timbre from the explicitly enabled source audio channel.",
+                  "retention": "reference",
+                  "retention_reason": "Re-create the vocal timbre for new words without copying the source signal.",
+                  "full_source": false,
+                  "entire_soundtrack": false,
+                  "additional_layers": [],
+                  "replaced_layers": [],
+                  "speaker_id": "ben-voice",
+                  "subject_id": "ben"
+                }
+              ],
+              "speakers": [
+                {
+                  "speaker_id": "aria-voice",
+                  "first_vocal_ms": 5000,
+                  "first_event_kind": "speech",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "speaker_id": "ben-voice",
+                  "first_vocal_ms": 1000,
+                  "first_event_kind": "speech",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                }
+              ]
+            },
+            "evidence_snapshot": {
+              "fixture-plan": {
+                "version": "1",
+                "digest": "74e58c58885b2bffe653d8082eeeca9d128b5888430ef423b1f5c4c6f026610e"
+              },
+              "official-base": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+              },
+              "official-ref": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+              },
+              "synthetic-runtime": {
+                "version": "1",
+                "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+              }
+            },
+            "binding_digest": "d5e86460f79d7ed6e3d693f2e21e7737c203b0bdd3154f273320c9a2a31e2ecf"
+          },
+          "fragments": {
+            "style": "Naturalistic live-action bakery footage with warm window light and fine film grain.",
+            "summary": "{{ref:ben}} offers a fresh loaf to {{ref:aria}} across a wooden counter. The scene keeps their facial identities and uses the supplied camera movement and audio only within their declared roles.",
+            "shots": [
+              {
+                "shot_id": "shot-open",
+                "text": "{{ref:ben}} sets the loaf on the counter while {{ref:aria}} watches. The camera follows the lateral movement of {{ref:camera-clip.video}}. At the first vocal event, {{ref:ben}} ({{speaker:ben-voice}}) says {{utterance:ben-line}} in a calm conversational tone. Use {{ref:camera-clip.audio}} only for his vocal timbre. {{ref:aria}} remains silent.",
+                "obligation_ids": [
+                  "offer-loaf",
+                  "ben-dialogue"
+                ]
+              },
+              {
+                "shot_id": "shot-finish",
+                "text": "a close view shows {{ref:aria}} taking the loaf. {{ref:aria}} ({{speaker:aria-voice}}) says {{utterance:aria-line}} with a small smile. The shelf card reads \"今日新鲜\".",
+                "obligation_ids": [
+                  "accept-loaf",
+                  "aria-dialogue",
+                  "shelf-text"
+                ]
+              }
+            ],
+            "overall_soundscape": "Soft bakery room tone continues behind intermittent dull contacts as the loaf touches the counter.",
+            "non_diegetic_music": "Reuse the full instrumental signal from {{ref:music-bed.audio}} as a quiet audience-only score with its original soft accompaniment and restrained dynamics."
+          },
+          "obligations": [
+            {
+              "obligation_id": "offer-loaf",
+              "shot_id": "shot-open",
+              "description": "Offer the loaf across the counter.",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "obligation_id": "ben-dialogue",
+              "shot_id": "shot-open",
+              "description": "Preserve the first speaker and words.",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "obligation_id": "accept-loaf",
+              "shot_id": "shot-finish",
+              "description": "The recipient takes the loaf.",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "obligation_id": "aria-dialogue",
+              "shot_id": "shot-finish",
+              "description": "Preserve the second speaker and words.",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            },
+            {
+              "obligation_id": "shelf-text",
+              "shot_id": "shot-finish",
+              "description": "Preserve the visible Chinese card text.",
+              "source_refs": [
+                "fixture-plan"
+              ]
+            }
+          ],
+          "utterances": [
+            {
+              "utterance_id": "ben-line",
+              "speaker_id": "ben-voice",
+              "language": "English",
+              "text": "Fresh from the oven.",
+              "source_text": "Fresh from the oven.",
+              "start_ms": 1000,
+              "shot_id": "shot-open",
+              "mode": "on_screen"
+            },
+            {
+              "utterance_id": "aria-line",
+              "speaker_id": "aria-voice",
+              "language": "Chinese",
+              "text": "谢谢，闻起来真香。",
+              "source_text": "谢谢，闻起来真香。",
+              "start_ms": 5000,
+              "shot_id": "shot-finish",
+              "mode": "on_screen"
+            }
+          ],
+          "complete_silence": false,
+          "music_present": true,
+          "visible_text": [
+            {
+              "text_id": "shelf-card",
+              "text": "今日新鲜",
+              "shot_id": "shot-finish"
+            }
+          ]
+        },
+        "evidence_snapshot": {
+          "fixture-plan": {
+            "version": "1",
+            "digest": "74e58c58885b2bffe653d8082eeeca9d128b5888430ef423b1f5c4c6f026610e"
+          },
+          "official-base": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+          },
+          "official-ref": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+          },
+          "synthetic-runtime": {
+            "version": "1",
+            "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+          }
+        },
+        "status": "passed_with_unverified",
+        "not_run": [
+          "natural_language_semantic_audit",
+          "source_authenticity_verification",
+          "media_file_read",
+          "media_decode",
+          "workflow_execution",
+          "h3_inference",
+          "generated_video_acceptance"
+        ],
+        "compilation_digest": "6c31389149b44801cc6c6b83088f1870734ff2a47dc3183a009411cbb2164b17"
+      },
+      "capability_profile": {
+        "profile_id": "synthetic-object-adapter",
+        "backend": {
+          "name": "synthetic-fixture-only",
+          "version": "1"
+        },
+        "model": {
+          "name": "no-model-executed",
+          "version": "simulation-1"
+        },
+        "workflow": {
+          "name": "synthetic-object-adapter",
+          "version": "1"
+        },
+        "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+        "evidence_refs": [
+          "official-base",
+          "official-ref"
+        ],
+        "protocol": {
+          "supported_modes": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ],
+          "language": "en"
+        },
+        "runtime": {
+          "status": "documented",
+          "execution": "simulation",
+          "supported_modes": [
+            "T2VA",
+            "I2VA",
+            "FL2VA",
+            "L2VA",
+            "Ref2VA"
+          ],
+          "evidence_refs": [
+            "synthetic-runtime"
+          ],
+          "parameters": {
+            "duration_ms": {
+              "path": "/request/seconds",
+              "type": "number",
+              "unit": "seconds",
+              "minimum": 0.01,
+              "maximum": 30,
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "width": {
+              "path": "/request/width",
+              "type": "integer",
+              "unit": "pixels",
+              "enum": [
+                640,
+                1280
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "height": {
+              "path": "/request/height",
+              "type": "integer",
+              "unit": "pixels",
+              "enum": [
+                360,
+                720
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            },
+            "fps": {
+              "path": "/request/fps",
+              "type": "integer",
+              "unit": "fps",
+              "enum": [
+                24,
+                25
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ]
+            }
+          },
+          "required_parameters": [
+            "duration_ms",
+            "width",
+            "height",
+            "fps"
+          ],
+          "media": {
+            "path": "/request/media",
+            "format": "ordered_channel_objects",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "prompt": {
+            "path": "/request/prompt",
+            "format": "text",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "mode": {
+            "path": "/request/mode",
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          "limits": {
+            "max_assets": 8
+          }
+        },
+        "evidence_snapshot": {
+          "official-base": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+          },
+          "official-ref": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+          },
+          "synthetic-runtime": {
+            "version": "1",
+            "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+          }
+        },
+        "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc"
+      },
+      "parameters": {
+        "duration_ms": 8000,
+        "width": 1280,
+        "height": 720,
+        "fps": 24
+      },
+      "asset_map": {
+        "music-bed": {
+          "version": "fixture-v1",
+          "value": "simulation-input://music-bed"
+        },
+        "aria-photo": {
+          "version": "fixture-v1",
+          "value": "simulation-input://aria-photo"
+        },
+        "ben-photo": {
+          "version": "fixture-v1",
+          "value": "simulation-input://ben-photo"
+        },
+        "camera-clip": {
+          "version": "fixture-v1",
+          "value": "simulation-input://camera-clip"
+        }
+      }
+    },
+    "changes": {
+      "task_export": {
+        "kind": "TaskExport",
+        "contract_version": "1.0.0",
+        "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc",
+        "compilation_digest": "6c31389149b44801cc6c6b83088f1870734ff2a47dc3183a009411cbb2164b17",
+        "mode": "Ref2VA",
+        "execution": "simulation",
+        "status": "simulation_only",
+        "payload": {
+          "request": {
+            "prompt": "subject_definitions: <Subject 1>: The woman with the short dark bob, using only her facial appearance from the source picture. Source: <Picture 1>.\n<Subject 2>: The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture. Source: <Picture 2>.\n<Video 1>: A slow lateral camera movement used only as a movement reference.\n<Audio 1>: The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.\n<Audio 2>: Use only the calm low voice timbre from the explicitly enabled source audio channel. Voice of <Subject 2> (S1).\n\nsummary: [reference generation + audio reuse + audio reference] <Subject 2> offers a fresh loaf to <Subject 1> across a wooden counter. The scene keeps their facial identities and uses the supplied camera movement and audio only within their declared roles.\n\nretention_analysis: <Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity; the target wardrobe and bakery are separately authored.\n<Subject 2> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity without importing the source pose or background.\n<Video 1> ([Shot 1]): attribute_transfer - Transfer the declared camera direction without copying its scene or edit.\n<Audio 1>: partially_copy - The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.\n<Audio 2>: reference - Re-create the vocal timbre for new words without copying the source signal.\n\ndetailed_description: Naturalistic live-action bakery footage with warm window light and fine film grain.\n\n[Shot 1] <Subject 2> sets the loaf on the counter while <Subject 1> watches. The camera follows the lateral movement of <Video 1>. At the first vocal event, <Subject 2> (S1) says <d>[English] Fresh from the oven.</d> in a calm conversational tone. Use <Audio 2> only for his vocal timbre. <Subject 1> remains silent.\n\n[Shot 2] At 00:04.000, a close view shows <Subject 1> taking the loaf. <Subject 1> (S2) says <d>[Chinese] 谢谢，闻起来真香。</d> with a small smile. The shelf card reads \"今日新鲜\".\n\noverall_soundscape: Soft bakery room tone continues behind intermittent dull contacts as the loaf touches the counter.\n\nnon_diegetic_music: Reuse the full instrumental signal from <Audio 1> as a quiet audience-only score with its original soft accompaniment and restrained dynamics.",
+            "mode": "Ref2VA",
+            "seconds": 8,
+            "width": 1280,
+            "height": 720,
+            "fps": 24,
+            "media": [
+              {
+                "value": "simulation-input://music-bed",
+                "channel": "audio",
+                "label": "<Audio 1>",
+                "input_index": 1
+              },
+              {
+                "value": "simulation-input://aria-photo",
+                "channel": "image",
+                "label": "<Picture 1>",
+                "input_index": 2
+              },
+              {
+                "value": "simulation-input://ben-photo",
+                "channel": "image",
+                "label": "<Picture 2>",
+                "input_index": 3
+              },
+              {
+                "value": "simulation-input://camera-clip",
+                "channel": "video",
+                "label": "<Video 1>",
+                "input_index": 4
+              },
+              {
+                "value": "simulation-input://camera-clip",
+                "channel": "audio",
+                "label": "<Audio 2>",
+                "input_index": 5
+              }
+            ]
+          }
+        },
+        "parameter_mapping_trace": [
+          {
+            "canonical_parameter": "duration_ms",
+            "canonical_value": 8000,
+            "runtime_path": "/request/seconds",
+            "runtime_value": 8,
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          {
+            "canonical_parameter": "width",
+            "canonical_value": 1280,
+            "runtime_path": "/request/width",
+            "runtime_value": 1280,
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          {
+            "canonical_parameter": "height",
+            "canonical_value": 720,
+            "runtime_path": "/request/height",
+            "runtime_value": 720,
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          },
+          {
+            "canonical_parameter": "fps",
+            "canonical_value": 24,
+            "runtime_path": "/request/fps",
+            "runtime_value": 24,
+            "evidence_refs": [
+              "synthetic-runtime"
+            ]
+          }
+        ],
+        "media_binding_trace": [
+          {
+            "asset_id": "music-bed",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://music-bed",
+            "channel": "audio",
+            "category_index": 1,
+            "input_index": 1,
+            "label": "<Audio 1>",
+            "purpose": "audio_reuse"
+          },
+          {
+            "asset_id": "aria-photo",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://aria-photo",
+            "channel": "image",
+            "category_index": 1,
+            "input_index": 2,
+            "label": "<Picture 1>",
+            "purpose": "appearance"
+          },
+          {
+            "asset_id": "ben-photo",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://ben-photo",
+            "channel": "image",
+            "category_index": 2,
+            "input_index": 3,
+            "label": "<Picture 2>",
+            "purpose": "appearance"
+          },
+          {
+            "asset_id": "camera-clip",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://camera-clip",
+            "channel": "video",
+            "category_index": 1,
+            "input_index": 4,
+            "label": "<Video 1>",
+            "purpose": "structure"
+          },
+          {
+            "asset_id": "camera-clip",
+            "asset_version": "fixture-v1",
+            "uri": "fixture://camera-clip",
+            "channel": "audio",
+            "category_index": 2,
+            "input_index": 5,
+            "label": "<Audio 2>",
+            "purpose": "structure"
+          }
+        ],
+        "declarations": {
+          "compilation": {
+            "kind": "PromptCompilation",
+            "contract_version": "1.0.0",
+            "mode": "Ref2VA",
+            "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc",
+            "binding_digest": "d5e86460f79d7ed6e3d693f2e21e7737c203b0bdd3154f273320c9a2a31e2ecf",
+            "duration_ms": 8000,
+            "fields": {
+              "subject_definitions": "<Subject 1>: The woman with the short dark bob, using only her facial appearance from the source picture. Source: <Picture 1>.\n<Subject 2>: The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture. Source: <Picture 2>.\n<Video 1>: A slow lateral camera movement used only as a movement reference.\n<Audio 1>: The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.\n<Audio 2>: Use only the calm low voice timbre from the explicitly enabled source audio channel. Voice of <Subject 2> (S1).",
+              "summary": "[reference generation + audio reuse + audio reference] <Subject 2> offers a fresh loaf to <Subject 1> across a wooden counter. The scene keeps their facial identities and uses the supplied camera movement and audio only within their declared roles.",
+              "retention_analysis": "<Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity; the target wardrobe and bakery are separately authored.\n<Subject 2> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity without importing the source pose or background.\n<Video 1> ([Shot 1]): attribute_transfer - Transfer the declared camera direction without copying its scene or edit.\n<Audio 1>: partially_copy - The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.\n<Audio 2>: reference - Re-create the vocal timbre for new words without copying the source signal.",
+              "detailed_description": "Naturalistic live-action bakery footage with warm window light and fine film grain.\n\n[Shot 1] <Subject 2> sets the loaf on the counter while <Subject 1> watches. The camera follows the lateral movement of <Video 1>. At the first vocal event, <Subject 2> (S1) says <d>[English] Fresh from the oven.</d> in a calm conversational tone. Use <Audio 2> only for his vocal timbre. <Subject 1> remains silent.\n\n[Shot 2] At 00:04.000, a close view shows <Subject 1> taking the loaf. <Subject 1> (S2) says <d>[Chinese] 谢谢，闻起来真香。</d> with a small smile. The shelf card reads \"今日新鲜\".",
+              "overall_soundscape": "Soft bakery room tone continues behind intermittent dull contacts as the loaf touches the counter.",
+              "non_diegetic_music": "Reuse the full instrumental signal from <Audio 1> as a quiet audience-only score with its original soft accompaniment and restrained dynamics."
+            },
+            "field_order": [
+              "subject_definitions",
+              "summary",
+              "retention_analysis",
+              "detailed_description",
+              "overall_soundscape",
+              "non_diegetic_music"
+            ],
+            "alignment_instruction": null,
+            "rendered_prompt": "subject_definitions: <Subject 1>: The woman with the short dark bob, using only her facial appearance from the source picture. Source: <Picture 1>.\n<Subject 2>: The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture. Source: <Picture 2>.\n<Video 1>: A slow lateral camera movement used only as a movement reference.\n<Audio 1>: The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.\n<Audio 2>: Use only the calm low voice timbre from the explicitly enabled source audio channel. Voice of <Subject 2> (S1).\n\nsummary: [reference generation + audio reuse + audio reference] <Subject 2> offers a fresh loaf to <Subject 1> across a wooden counter. The scene keeps their facial identities and uses the supplied camera movement and audio only within their declared roles.\n\nretention_analysis: <Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity; the target wardrobe and bakery are separately authored.\n<Subject 2> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined facial identity without importing the source pose or background.\n<Video 1> ([Shot 1]): attribute_transfer - Transfer the declared camera direction without copying its scene or edit.\n<Audio 1>: partially_copy - The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.\n<Audio 2>: reference - Re-create the vocal timbre for new words without copying the source signal.\n\ndetailed_description: Naturalistic live-action bakery footage with warm window light and fine film grain.\n\n[Shot 1] <Subject 2> sets the loaf on the counter while <Subject 1> watches. The camera follows the lateral movement of <Video 1>. At the first vocal event, <Subject 2> (S1) says <d>[English] Fresh from the oven.</d> in a calm conversational tone. Use <Audio 2> only for his vocal timbre. <Subject 1> remains silent.\n\n[Shot 2] At 00:04.000, a close view shows <Subject 1> taking the loaf. <Subject 1> (S2) says <d>[Chinese] 谢谢，闻起来真香。</d> with a small smile. The shelf card reads \"今日新鲜\".\n\noverall_soundscape: Soft bakery room tone continues behind intermittent dull contacts as the loaf touches the counter.\n\nnon_diegetic_music: Reuse the full instrumental signal from <Audio 1> as a quiet audience-only score with its original soft accompaniment and restrained dynamics.",
+            "media_inputs": [
+              {
+                "asset_id": "music-bed",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://music-bed",
+                "channel": "audio",
+                "category_index": 1,
+                "input_index": 1,
+                "label": "<Audio 1>",
+                "purpose": "audio_reuse"
+              },
+              {
+                "asset_id": "aria-photo",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://aria-photo",
+                "channel": "image",
+                "category_index": 1,
+                "input_index": 2,
+                "label": "<Picture 1>",
+                "purpose": "appearance"
+              },
+              {
+                "asset_id": "ben-photo",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://ben-photo",
+                "channel": "image",
+                "category_index": 2,
+                "input_index": 3,
+                "label": "<Picture 2>",
+                "purpose": "appearance"
+              },
+              {
+                "asset_id": "camera-clip",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://camera-clip",
+                "channel": "video",
+                "category_index": 1,
+                "input_index": 4,
+                "label": "<Video 1>",
+                "purpose": "structure"
+              },
+              {
+                "asset_id": "camera-clip",
+                "asset_version": "fixture-v1",
+                "uri": "fixture://camera-clip",
+                "channel": "audio",
+                "category_index": 2,
+                "input_index": 5,
+                "label": "<Audio 2>",
+                "purpose": "structure"
+              }
+            ],
+            "obligation_trace": [
+              {
+                "obligation_id": "offer-loaf",
+                "shot_id": "shot-open",
+                "output_field": "detailed_description"
+              },
+              {
+                "obligation_id": "ben-dialogue",
+                "shot_id": "shot-open",
+                "output_field": "detailed_description"
+              },
+              {
+                "obligation_id": "accept-loaf",
+                "shot_id": "shot-finish",
+                "output_field": "detailed_description"
+              },
+              {
+                "obligation_id": "aria-dialogue",
+                "shot_id": "shot-finish",
+                "output_field": "detailed_description"
+              },
+              {
+                "obligation_id": "shelf-text",
+                "shot_id": "shot-finish",
+                "output_field": "detailed_description"
+              }
+            ],
+            "punctuation_trace": [],
+            "visible_text_trace": [
+              {
+                "text_id": "shelf-card",
+                "text": "今日新鲜",
+                "shot_id": "shot-finish"
+              }
+            ],
+            "utterance_source_trace": [
+              {
+                "utterance_id": "ben-line",
+                "origin": "generated",
+                "speaker_id": "ben-voice",
+                "audio_asset_id": null,
+                "audio_asset_version": null,
+                "audio_label": null,
+                "source_text": "Fresh from the oven.",
+                "source_language": null,
+                "source_refs": []
+              },
+              {
+                "utterance_id": "aria-line",
+                "origin": "generated",
+                "speaker_id": "aria-voice",
+                "audio_asset_id": null,
+                "audio_asset_version": null,
+                "audio_label": null,
+                "source_text": "谢谢，闻起来真香。",
+                "source_language": null,
+                "source_refs": []
+              }
+            ],
+            "declarations": {
+              "binding": {
+                "kind": "ReferenceBinding",
+                "contract_version": "1.0.0",
+                "mode": "Ref2VA",
+                "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc",
+                "duration_ms": 8000,
+                "shots": [
+                  {
+                    "shot_id": "shot-open",
+                    "start_ms": 0
+                  },
+                  {
+                    "shot_id": "shot-finish",
+                    "start_ms": 4000
+                  }
+                ],
+                "labels": {
+                  "subjects": {
+                    "aria": "<Subject 1>",
+                    "ben": "<Subject 2>"
+                  },
+                  "assets": {
+                    "music-bed": {
+                      "audio": "<Audio 1>"
+                    },
+                    "aria-photo": {
+                      "image": "<Picture 1>"
+                    },
+                    "ben-photo": {
+                      "image": "<Picture 2>"
+                    },
+                    "camera-clip": {
+                      "video": "<Video 1>",
+                      "audio": "<Audio 2>"
+                    }
+                  },
+                  "speakers": {
+                    "ben-voice": "S1",
+                    "aria-voice": "S2"
+                  },
+                  "shots": {
+                    "shot-open": "[Shot 1]",
+                    "shot-finish": "[Shot 2]"
+                  }
+                },
+                "media_inputs": [
+                  {
+                    "asset_id": "music-bed",
+                    "asset_version": "fixture-v1",
+                    "uri": "fixture://music-bed",
+                    "channel": "audio",
+                    "category_index": 1,
+                    "input_index": 1,
+                    "label": "<Audio 1>",
+                    "purpose": "audio_reuse"
+                  },
+                  {
+                    "asset_id": "aria-photo",
+                    "asset_version": "fixture-v1",
+                    "uri": "fixture://aria-photo",
+                    "channel": "image",
+                    "category_index": 1,
+                    "input_index": 2,
+                    "label": "<Picture 1>",
+                    "purpose": "appearance"
+                  },
+                  {
+                    "asset_id": "ben-photo",
+                    "asset_version": "fixture-v1",
+                    "uri": "fixture://ben-photo",
+                    "channel": "image",
+                    "category_index": 2,
+                    "input_index": 3,
+                    "label": "<Picture 2>",
+                    "purpose": "appearance"
+                  },
+                  {
+                    "asset_id": "camera-clip",
+                    "asset_version": "fixture-v1",
+                    "uri": "fixture://camera-clip",
+                    "channel": "video",
+                    "category_index": 1,
+                    "input_index": 4,
+                    "label": "<Video 1>",
+                    "purpose": "structure"
+                  },
+                  {
+                    "asset_id": "camera-clip",
+                    "asset_version": "fixture-v1",
+                    "uri": "fixture://camera-clip",
+                    "channel": "audio",
+                    "category_index": 2,
+                    "input_index": 5,
+                    "label": "<Audio 2>",
+                    "purpose": "structure"
+                  }
+                ],
+                "task_types": [
+                  "reference generation",
+                  "audio reuse",
+                  "audio reference"
+                ],
+                "declarations": {
+                  "capability_profile": {
+                    "profile_id": "synthetic-object-adapter",
+                    "backend": {
+                      "name": "synthetic-fixture-only",
+                      "version": "1"
+                    },
+                    "model": {
+                      "name": "no-model-executed",
+                      "version": "simulation-1"
+                    },
+                    "workflow": {
+                      "name": "synthetic-object-adapter",
+                      "version": "1"
+                    },
+                    "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                    "evidence_refs": [
+                      "official-base",
+                      "official-ref"
+                    ],
+                    "protocol": {
+                      "supported_modes": [
+                        "T2VA",
+                        "I2VA",
+                        "FL2VA",
+                        "L2VA",
+                        "Ref2VA"
+                      ],
+                      "language": "en"
+                    },
+                    "runtime": {
+                      "status": "documented",
+                      "execution": "simulation",
+                      "supported_modes": [
+                        "T2VA",
+                        "I2VA",
+                        "FL2VA",
+                        "L2VA",
+                        "Ref2VA"
+                      ],
+                      "evidence_refs": [
+                        "synthetic-runtime"
+                      ],
+                      "parameters": {
+                        "duration_ms": {
+                          "path": "/request/seconds",
+                          "type": "number",
+                          "unit": "seconds",
+                          "minimum": 0.01,
+                          "maximum": 30,
+                          "evidence_refs": [
+                            "synthetic-runtime"
+                          ]
+                        },
+                        "width": {
+                          "path": "/request/width",
+                          "type": "integer",
+                          "unit": "pixels",
+                          "enum": [
+                            640,
+                            1280
+                          ],
+                          "evidence_refs": [
+                            "synthetic-runtime"
+                          ]
+                        },
+                        "height": {
+                          "path": "/request/height",
+                          "type": "integer",
+                          "unit": "pixels",
+                          "enum": [
+                            360,
+                            720
+                          ],
+                          "evidence_refs": [
+                            "synthetic-runtime"
+                          ]
+                        },
+                        "fps": {
+                          "path": "/request/fps",
+                          "type": "integer",
+                          "unit": "fps",
+                          "enum": [
+                            24,
+                            25
+                          ],
+                          "evidence_refs": [
+                            "synthetic-runtime"
+                          ]
+                        }
+                      },
+                      "required_parameters": [
+                        "duration_ms",
+                        "width",
+                        "height",
+                        "fps"
+                      ],
+                      "media": {
+                        "path": "/request/media",
+                        "format": "ordered_channel_objects",
+                        "evidence_refs": [
+                          "synthetic-runtime"
+                        ]
+                      },
+                      "prompt": {
+                        "path": "/request/prompt",
+                        "format": "text",
+                        "evidence_refs": [
+                          "synthetic-runtime"
+                        ]
+                      },
+                      "mode": {
+                        "path": "/request/mode",
+                        "evidence_refs": [
+                          "synthetic-runtime"
+                        ]
+                      },
+                      "limits": {
+                        "max_assets": 8
+                      }
+                    },
+                    "evidence_snapshot": {
+                      "official-base": {
+                        "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                        "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+                      },
+                      "official-ref": {
+                        "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                        "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+                      },
+                      "synthetic-runtime": {
+                        "version": "1",
+                        "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+                      }
+                    },
+                    "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc"
+                  },
+                  "plan": {
+                    "duration_ms": 8000,
+                    "shots": [
+                      {
+                        "shot_id": "shot-open",
+                        "start_ms": 0
+                      },
+                      {
+                        "shot_id": "shot-finish",
+                        "start_ms": 4000
+                      }
+                    ],
+                    "requested_mode": "Ref2VA"
+                  },
+                  "assets": [
+                    {
+                      "asset_id": "music-bed",
+                      "version": "fixture-v1",
+                      "media_type": "audio",
+                      "uri": "fixture://music-bed",
+                      "purpose": "audio_reuse",
+                      "source_refs": [
+                        "fixture-plan"
+                      ]
+                    },
+                    {
+                      "asset_id": "aria-photo",
+                      "version": "fixture-v1",
+                      "media_type": "image",
+                      "uri": "fixture://aria-photo",
+                      "purpose": "appearance",
+                      "source_refs": [
+                        "fixture-plan"
+                      ]
+                    },
+                    {
+                      "asset_id": "ben-photo",
+                      "version": "fixture-v1",
+                      "media_type": "image",
+                      "uri": "fixture://ben-photo",
+                      "purpose": "appearance",
+                      "source_refs": [
+                        "fixture-plan"
+                      ]
+                    },
+                    {
+                      "asset_id": "camera-clip",
+                      "version": "fixture-v1",
+                      "media_type": "video",
+                      "uri": "fixture://camera-clip",
+                      "purpose": "structure",
+                      "source_refs": [
+                        "fixture-plan"
+                      ],
+                      "enabled_audio": true
+                    }
+                  ],
+                  "subjects": [
+                    {
+                      "subject_id": "aria",
+                      "source_asset_ids": [
+                        "aria-photo"
+                      ],
+                      "description": "The woman with the short dark bob, using only her facial appearance from the source picture.",
+                      "retention": "fully_preserved",
+                      "retention_reason": "Preserve the defined facial identity; the target wardrobe and bakery are separately authored.",
+                      "shot_ids": [
+                        "shot-open",
+                        "shot-finish"
+                      ]
+                    },
+                    {
+                      "subject_id": "ben",
+                      "source_asset_ids": [
+                        "ben-photo"
+                      ],
+                      "description": "The man with the narrow face and close-cropped hair, using only his facial appearance from the source picture.",
+                      "retention": "fully_preserved",
+                      "retention_reason": "Preserve the defined facial identity without importing the source pose or background.",
+                      "shot_ids": [
+                        "shot-open",
+                        "shot-finish"
+                      ]
+                    }
+                  ],
+                  "reference_items": [
+                    {
+                      "asset_id": "camera-clip",
+                      "description": "A slow lateral camera movement used only as a movement reference.",
+                      "retention": "attribute_transfer",
+                      "retention_reason": "Transfer the declared camera direction without copying its scene or edit.",
+                      "shot_ids": [
+                        "shot-open"
+                      ]
+                    }
+                  ],
+                  "audio_bindings": [
+                    {
+                      "asset_id": "music-bed",
+                      "role": "reuse",
+                      "description": "The supplied instrumental music signal reused under newly generated dialogue and bread-contact sounds.",
+                      "retention": "partially_copy",
+                      "retention_reason": "The full source music is one layer of the final soundtrack, which also contains new dialogue and effects.",
+                      "full_source": true,
+                      "entire_soundtrack": false,
+                      "additional_layers": [
+                        "generated-dialogue",
+                        "bread-contact"
+                      ],
+                      "replaced_layers": []
+                    },
+                    {
+                      "asset_id": "camera-clip",
+                      "role": "reference",
+                      "description": "Use only the calm low voice timbre from the explicitly enabled source audio channel.",
+                      "retention": "reference",
+                      "retention_reason": "Re-create the vocal timbre for new words without copying the source signal.",
+                      "full_source": false,
+                      "entire_soundtrack": false,
+                      "additional_layers": [],
+                      "replaced_layers": [],
+                      "speaker_id": "ben-voice",
+                      "subject_id": "ben"
+                    }
+                  ],
+                  "speakers": [
+                    {
+                      "speaker_id": "aria-voice",
+                      "first_vocal_ms": 5000,
+                      "first_event_kind": "speech",
+                      "source_refs": [
+                        "fixture-plan"
+                      ]
+                    },
+                    {
+                      "speaker_id": "ben-voice",
+                      "first_vocal_ms": 1000,
+                      "first_event_kind": "speech",
+                      "source_refs": [
+                        "fixture-plan"
+                      ]
+                    }
+                  ]
+                },
+                "evidence_snapshot": {
+                  "fixture-plan": {
+                    "version": "1",
+                    "digest": "74e58c58885b2bffe653d8082eeeca9d128b5888430ef423b1f5c4c6f026610e"
+                  },
+                  "official-base": {
+                    "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                    "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+                  },
+                  "official-ref": {
+                    "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                    "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+                  },
+                  "synthetic-runtime": {
+                    "version": "1",
+                    "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+                  }
+                },
+                "binding_digest": "d5e86460f79d7ed6e3d693f2e21e7737c203b0bdd3154f273320c9a2a31e2ecf"
+              },
+              "fragments": {
+                "style": "Naturalistic live-action bakery footage with warm window light and fine film grain.",
+                "summary": "{{ref:ben}} offers a fresh loaf to {{ref:aria}} across a wooden counter. The scene keeps their facial identities and uses the supplied camera movement and audio only within their declared roles.",
+                "shots": [
+                  {
+                    "shot_id": "shot-open",
+                    "text": "{{ref:ben}} sets the loaf on the counter while {{ref:aria}} watches. The camera follows the lateral movement of {{ref:camera-clip.video}}. At the first vocal event, {{ref:ben}} ({{speaker:ben-voice}}) says {{utterance:ben-line}} in a calm conversational tone. Use {{ref:camera-clip.audio}} only for his vocal timbre. {{ref:aria}} remains silent.",
+                    "obligation_ids": [
+                      "offer-loaf",
+                      "ben-dialogue"
+                    ]
+                  },
+                  {
+                    "shot_id": "shot-finish",
+                    "text": "a close view shows {{ref:aria}} taking the loaf. {{ref:aria}} ({{speaker:aria-voice}}) says {{utterance:aria-line}} with a small smile. The shelf card reads \"今日新鲜\".",
+                    "obligation_ids": [
+                      "accept-loaf",
+                      "aria-dialogue",
+                      "shelf-text"
+                    ]
+                  }
+                ],
+                "overall_soundscape": "Soft bakery room tone continues behind intermittent dull contacts as the loaf touches the counter.",
+                "non_diegetic_music": "Reuse the full instrumental signal from {{ref:music-bed.audio}} as a quiet audience-only score with its original soft accompaniment and restrained dynamics."
+              },
+              "obligations": [
+                {
+                  "obligation_id": "offer-loaf",
+                  "shot_id": "shot-open",
+                  "description": "Offer the loaf across the counter.",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "obligation_id": "ben-dialogue",
+                  "shot_id": "shot-open",
+                  "description": "Preserve the first speaker and words.",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "obligation_id": "accept-loaf",
+                  "shot_id": "shot-finish",
+                  "description": "The recipient takes the loaf.",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "obligation_id": "aria-dialogue",
+                  "shot_id": "shot-finish",
+                  "description": "Preserve the second speaker and words.",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                },
+                {
+                  "obligation_id": "shelf-text",
+                  "shot_id": "shot-finish",
+                  "description": "Preserve the visible Chinese card text.",
+                  "source_refs": [
+                    "fixture-plan"
+                  ]
+                }
+              ],
+              "utterances": [
+                {
+                  "utterance_id": "ben-line",
+                  "speaker_id": "ben-voice",
+                  "language": "English",
+                  "text": "Fresh from the oven.",
+                  "source_text": "Fresh from the oven.",
+                  "start_ms": 1000,
+                  "shot_id": "shot-open",
+                  "mode": "on_screen"
+                },
+                {
+                  "utterance_id": "aria-line",
+                  "speaker_id": "aria-voice",
+                  "language": "Chinese",
+                  "text": "谢谢，闻起来真香。",
+                  "source_text": "谢谢，闻起来真香。",
+                  "start_ms": 5000,
+                  "shot_id": "shot-finish",
+                  "mode": "on_screen"
+                }
+              ],
+              "complete_silence": false,
+              "music_present": true,
+              "visible_text": [
+                {
+                  "text_id": "shelf-card",
+                  "text": "今日新鲜",
+                  "shot_id": "shot-finish"
+                }
+              ]
+            },
+            "evidence_snapshot": {
+              "fixture-plan": {
+                "version": "1",
+                "digest": "74e58c58885b2bffe653d8082eeeca9d128b5888430ef423b1f5c4c6f026610e"
+              },
+              "official-base": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+              },
+              "official-ref": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+              },
+              "synthetic-runtime": {
+                "version": "1",
+                "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+              }
+            },
+            "status": "passed_with_unverified",
+            "not_run": [
+              "natural_language_semantic_audit",
+              "source_authenticity_verification",
+              "media_file_read",
+              "media_decode",
+              "workflow_execution",
+              "h3_inference",
+              "generated_video_acceptance"
+            ],
+            "compilation_digest": "6c31389149b44801cc6c6b83088f1870734ff2a47dc3183a009411cbb2164b17"
+          },
+          "capability_profile": {
+            "profile_id": "synthetic-object-adapter",
+            "backend": {
+              "name": "synthetic-fixture-only",
+              "version": "1"
+            },
+            "model": {
+              "name": "no-model-executed",
+              "version": "simulation-1"
+            },
+            "workflow": {
+              "name": "synthetic-object-adapter",
+              "version": "1"
+            },
+            "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "evidence_refs": [
+              "official-base",
+              "official-ref"
+            ],
+            "protocol": {
+              "supported_modes": [
+                "T2VA",
+                "I2VA",
+                "FL2VA",
+                "L2VA",
+                "Ref2VA"
+              ],
+              "language": "en"
+            },
+            "runtime": {
+              "status": "documented",
+              "execution": "simulation",
+              "supported_modes": [
+                "T2VA",
+                "I2VA",
+                "FL2VA",
+                "L2VA",
+                "Ref2VA"
+              ],
+              "evidence_refs": [
+                "synthetic-runtime"
+              ],
+              "parameters": {
+                "duration_ms": {
+                  "path": "/request/seconds",
+                  "type": "number",
+                  "unit": "seconds",
+                  "minimum": 0.01,
+                  "maximum": 30,
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                },
+                "width": {
+                  "path": "/request/width",
+                  "type": "integer",
+                  "unit": "pixels",
+                  "enum": [
+                    640,
+                    1280
+                  ],
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                },
+                "height": {
+                  "path": "/request/height",
+                  "type": "integer",
+                  "unit": "pixels",
+                  "enum": [
+                    360,
+                    720
+                  ],
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                },
+                "fps": {
+                  "path": "/request/fps",
+                  "type": "integer",
+                  "unit": "fps",
+                  "enum": [
+                    24,
+                    25
+                  ],
+                  "evidence_refs": [
+                    "synthetic-runtime"
+                  ]
+                }
+              },
+              "required_parameters": [
+                "duration_ms",
+                "width",
+                "height",
+                "fps"
+              ],
+              "media": {
+                "path": "/request/media",
+                "format": "ordered_channel_objects",
+                "evidence_refs": [
+                  "synthetic-runtime"
+                ]
+              },
+              "prompt": {
+                "path": "/request/prompt",
+                "format": "text",
+                "evidence_refs": [
+                  "synthetic-runtime"
+                ]
+              },
+              "mode": {
+                "path": "/request/mode",
+                "evidence_refs": [
+                  "synthetic-runtime"
+                ]
+              },
+              "limits": {
+                "max_assets": 8
+              }
+            },
+            "evidence_snapshot": {
+              "official-base": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+              },
+              "official-ref": {
+                "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+                "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+              },
+              "synthetic-runtime": {
+                "version": "1",
+                "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+              }
+            },
+            "profile_digest": "2665c6b92b59d213c8ed4957baceeb6672ea4efd332298681e490cf8422b63dc"
+          },
+          "parameters": {
+            "duration_ms": 8000,
+            "width": 1280,
+            "height": 720,
+            "fps": 24
+          },
+          "asset_map": {
+            "music-bed": {
+              "version": "fixture-v1",
+              "value": "simulation-input://music-bed"
+            },
+            "aria-photo": {
+              "version": "fixture-v1",
+              "value": "simulation-input://aria-photo"
+            },
+            "ben-photo": {
+              "version": "fixture-v1",
+              "value": "simulation-input://ben-photo"
+            },
+            "camera-clip": {
+              "version": "fixture-v1",
+              "value": "simulation-input://camera-clip"
+            }
+          }
+        },
+        "evidence_snapshot": {
+          "fixture-plan": {
+            "version": "1",
+            "digest": "74e58c58885b2bffe653d8082eeeca9d128b5888430ef423b1f5c4c6f026610e"
+          },
+          "official-base": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "08bfabe42a96643b5e33b8d917d3f06089488d1e6d95127fec5cf1ad84ad21b8"
+          },
+          "official-ref": {
+            "version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+            "digest": "610c126b0b04fa22d4f26b15e454c97be95268492f622f49460a19ae405893b0"
+          },
+          "synthetic-runtime": {
+            "version": "1",
+            "digest": "ee775cbf0076526355d34525186e308ab06bba2a398601d4473c27cb88d7f2ac"
+          }
+        },
+        "not_run": [
+          "natural_language_semantic_audit",
+          "source_authenticity_verification",
+          "media_file_read",
+          "media_decode",
+          "workflow_execution",
+          "h3_inference",
+          "generated_video_acceptance"
+        ],
+        "limitations": [
+          "Only explicit JSON declarations, supplied evidence references and protocol structure were checked.",
+          "English fragments and their semantic obligation coverage require Agent review.",
+          "A source excerpt is supplied evidence, not independent verification of a deployment.",
+          "Export does not load media, execute a workflow, run H3 or certify generated video quality."
+        ]
+      }
+    },
+    "issues": [],
+    "status": "passed_with_unverified",
+    "execution_status": "completed",
+    "not_run": [
+      "natural_language_semantic_audit",
+      "source_authenticity_verification",
+      "media_file_read",
+      "media_decode",
+      "workflow_execution",
+      "h3_inference",
+      "generated_video_acceptance"
+    ],
+    "limitations": [
+      "Only explicit JSON declarations, supplied evidence references and protocol structure were checked.",
+      "English fragments and their semantic obligation coverage require Agent review.",
+      "A source excerpt is supplied evidence, not independent verification of a deployment.",
+      "Export does not load media, execute a workflow, run H3 or certify generated video quality."
+    ]
+  }
+]

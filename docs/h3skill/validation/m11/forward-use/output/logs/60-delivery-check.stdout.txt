@@ -1,0 +1,1 @@
+{"status": "pass", "delivery_checks": 18, "obligations": 17, "detailed_description_whitespace_words": 490, "accepted_status": "partial"}

@@ -1,0 +1,114 @@
+{
+  "kind": "M11ReleaseVerification",
+  "status": "pass",
+  "checks": [
+    {
+      "check": "release_file_hashes",
+      "status": "pass",
+      "errors": [],
+      "count": 210
+    },
+    {
+      "check": "portable_layout",
+      "status": "pass",
+      "errors": [],
+      "roots": [
+        "SKILL.md",
+        "agents",
+        "assets",
+        "references",
+        "scripts"
+      ],
+      "note": "Only SKILL.md is universal; the other directories are deliberate optional resources."
+    },
+    {
+      "check": "frontmatter_and_entry",
+      "status": "pass",
+      "errors": [],
+      "lines": 87,
+      "description_chars": 295
+    },
+    {
+      "check": "progressive_resource_routes",
+      "status": "pass",
+      "errors": [],
+      "link_count": 28
+    },
+    {
+      "check": "strict_json_and_python_syntax",
+      "status": "pass",
+      "errors": [],
+      "json_files": 22,
+      "python_files": 1
+    },
+    {
+      "check": "independent_module_registry",
+      "status": "pass",
+      "errors": [],
+      "module_count": 5
+    },
+    {
+      "check": "contract_schema_reference_closure",
+      "status": "pass",
+      "errors": [],
+      "definitions": 45,
+      "local_references": 78,
+      "note": "Local reference closure only; behavioral validation uses the supplied Python contract implementation."
+    },
+    {
+      "check": "case_source_pins_and_scope",
+      "status": "pass",
+      "errors": [],
+      "indexed_files": 9,
+      "full_text_lines": 2033,
+      "structured_projection_source_lines": 4982,
+      "note": "Hash and scope checks reproduce source identity, not media observation."
+    },
+    {
+      "check": "protected_existing_text",
+      "status": "pass",
+      "errors": [],
+      "count": 1694,
+      "base_commit": "586373218a0790382fc5eeed99574d2d58eb8eb8"
+    },
+    {
+      "check": "official_protocol_bytes",
+      "status": "pass",
+      "errors": [],
+      "commit": "199b7d0e1fd95e7b3eafa8c15eca692534142427"
+    },
+    {
+      "check": "standards_source_verification",
+      "status": "pass",
+      "errors": [],
+      "files": 6
+    },
+    {
+      "check": "recorded_validation",
+      "status": "pass",
+      "errors": [],
+      "note": "Records are scoped; no H3 inference or media certification."
+    },
+    {
+      "check": "forward_use_and_review_records",
+      "status": "pass",
+      "errors": [],
+      "counts": {
+        "tasks": 1,
+        "rounds": 2,
+        "cli_calls_per_round": 13,
+        "cli_calls_total": 26,
+        "expected_runtime_unknown_rejections": 2,
+        "final_obligations": 17,
+        "final_detailed_description_whitespace_words": 490,
+        "final_full_prompt_whitespace_words": 863,
+        "root_final_cli_rechecks": 5,
+        "total_recorded_public_cli_calls": 31,
+        "final_recheck_expected_runtime_unknown_rejections": 1
+      },
+      "note": "One text task with a disclosed supervised correction; expected runtime_unknown is not a successful runtime export."
+    }
+  ],
+  "h3_inference": "not_run",
+  "media_observation": "not_run"
+}

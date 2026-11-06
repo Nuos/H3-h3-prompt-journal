@@ -1,0 +1,34 @@
+{
+  "status": "ready",
+  "invocation_status": "not_invoked",
+  "route_version": "1.0.0",
+  "invocations": [
+    {
+      "invocation_id": "i-4eed09504f5ed89c03c9322de7553d6bf40dcb8e87b114f16c06d06f33014e83",
+      "target": "M11.1",
+      "contract_version": "1.0.0",
+      "route_version": "1.0.0",
+      "input_refs": [
+        "official-base",
+        "official-ref"
+      ],
+      "resources": [
+        "scripts/m11_contract.py",
+        "references/contracts.json"
+      ],
+      "status": "not_invoked",
+      "output": null,
+      "error": null
+    }
+  ],
+  "not_run": [
+    "natural_language_semantic_audit",
+    "source_authenticity_verification",
+    "media_file_read",
+    "media_decode",
+    "workflow_execution",
+    "h3_inference",
+    "generated_video_acceptance",
+    "child_invocation"
+  ]
+}

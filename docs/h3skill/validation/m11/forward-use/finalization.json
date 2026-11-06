@@ -1,0 +1,11 @@
+{
+  "kind": "M11FinalWhitespaceNormalization",
+  "changed_lines": [
+    41,
+    42
+  ],
+  "before_sha256": "5f10445313617a4deec3c0ca711012465c424ee41451daf22348de21439b112e",
+  "after_sha256": "bfe89ea05d53190e4454bdf6751c6e9a5b00ae4fa10c31aca0f9d8b8ad6f81ba",
+  "python_ast_equal": true,
+  "scope": "Removed two trailing spaces only; no code, contract, prompt or fixture semantics changed. Historical actual-execution snapshots are preserved; the final public CLI is checked again."
+}

@@ -1,0 +1,34 @@
+{
+  "profile_id": "official-protocol-only",
+  "backend": {
+    "name": "unknown",
+    "version": "unknown"
+  },
+  "model": {
+    "name": "MiniMax-H3",
+    "version": "runtime-unknown"
+  },
+  "workflow": {
+    "name": "unknown",
+    "version": "unknown"
+  },
+  "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+  "evidence_refs": [
+    "official-base",
+    "official-ref"
+  ],
+  "protocol": {
+    "supported_modes": [
+      "T2VA",
+      "I2VA",
+      "FL2VA",
+      "L2VA",
+      "Ref2VA"
+    ],
+    "language": "en"
+  },
+  "runtime": {
+    "status": "unknown",
+    "execution": "unknown"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "profile_id": "synthetic-object-adapter",
+  "backend": {
+    "name": "synthetic-fixture-only",
+    "version": "1"
+  },
+  "model": {
+    "name": "no-model-executed",
+    "version": "simulation-1"
+  },
+  "workflow": {
+    "name": "synthetic-object-adapter",
+    "version": "1"
+  },
+  "protocol_version": "199b7d0e1fd95e7b3eafa8c15eca692534142427",
+  "evidence_refs": [
+    "official-base",
+    "official-ref"
+  ],
+  "protocol": {
+    "supported_modes": [
+      "T2VA",
+      "I2VA",
+      "FL2VA",
+      "L2VA",
+      "Ref2VA"
+    ],
+    "language": "en"
+  },
+  "runtime": {
+    "status": "documented",
+    "execution": "simulation",
+    "supported_modes": [
+      "T2VA",
+      "I2VA",
+      "FL2VA",
+      "L2VA",
+      "Ref2VA"
+    ],
+    "evidence_refs": [
+      "synthetic-runtime"
+    ],
+    "parameters": {
+      "duration_ms": {
+        "path": "/request/seconds",
+        "type": "number",
+        "unit": "seconds",
+        "minimum": 0.01,
+        "maximum": 30,
+        "evidence_refs": [
+          "synthetic-runtime"
+        ]
+      },
+      "width": {
+        "path": "/request/width",
+        "type": "integer",
+        "unit": "pixels",
+        "enum": [
+          640,
+          1280
+        ],
+        "evidence_refs": [
+          "synthetic-runtime"
+        ]
+      },
+      "height": {
+        "path": "/request/height",
+        "type": "integer",
+        "unit": "pixels",
+        "enum": [
+          360,
+          720
+        ],
+        "evidence_refs": [
+          "synthetic-runtime"
+        ]
+      },
+      "fps": {
+        "path": "/request/fps",
+        "type": "integer",
+        "unit": "fps",
+        "enum": [
+          24,
+          25
+        ],
+        "evidence_refs": [
+          "synthetic-runtime"
+        ]
+      }
+    },
+    "required_parameters": [
+      "duration_ms",
+      "width",
+      "height",
+      "fps"
+    ],
+    "media": {
+      "path": "/request/media",
+      "format": "ordered_channel_objects",
+      "evidence_refs": [
+        "synthetic-runtime"
+      ]
+    },
+    "prompt": {
+      "path": "/request/prompt",
+      "format": "text",
+      "evidence_refs": [
+        "synthetic-runtime"
+      ]
+    },
+    "mode": {
+      "path": "/request/mode",
+      "evidence_refs": [
+        "synthetic-runtime"
+      ]
+    },
+    "limits": {
+      "max_assets": 8
+    }
+  }
+}
