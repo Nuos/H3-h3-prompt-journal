@@ -1,6 +1,10 @@
-# 舞蹈动链 H3 库(可重复学习的动作链标准件) · Rev.1.4
+# 舞蹈动链 H3 库(可重复学习的动作链标准件) · Rev.1.8
 
 > **版本记录**
+> Rev.1.8|2026-11-10|T2VA 模式音频修复(minimax-h3-video-reverse 方法论,修复 video-to-h3-prompt 批量的音频缺口):18 片全部跑 onset 实测(onset_probe,22.05kHz 单声道转 WAV);拍速二分判别+格拟合分层——高置信实测:彩虹的微笑 126.3(v25/v26 双源互证)/姜杉 120/Liz 130.4/颜沁 127.7/秋装 122.4/白虎团锣鼓 127.7;低置信或倍频不定:Hwiseo≈89.6(autocorr 89.1 互证)/黄诗予≈100/第一次爱的人 92 vs 76/青花瓷 107 vs 原曲~60/上元 126 vs 63/李真率 85.7 vs 171/EXID 81 vs 动作周期 118/珠光 114/咲良 109;对账:51 链锚点 36 踩 onset±0.35s(70.6%),未踩多为证据覆盖缺口(前奏/黑场/安静段无 S 级 onset:v07 前 24s、白虎团 81-97s 等)或边缘 0.36-0.46s,《坏女孩营业》K131/K133/K134 确认为不卡点互动营业件(内容属性);各片「节拍」行已从(推测)升级为实测数据并注明置信层级
+> Rev.1.7|2026-11-10|K 章追加片 v18-v35 共 18 片、K89-K156 共 68 条:K-pop 直拍批(Hwiseo《To My First Love》/tripleS《ANDLESS》双机位对比/IVE Liz《Looks Can Kill》/李真率《LALALILALA》/咲良饭拍/黄诗予生日SP/王心凌《彩虹的微笑》深圳+长春双场/《第一次爱的人》宁波/姜杉《Genie》九机位/EXID《I Love You》)+饭拍营业件(递麦双接/掩面捧脸/双指比心微活性/牵手旋回)+古风戏腔手势舞(上元)+京剧样板戏武戏首录(1972《奇袭白虎团》:斗篷物理/群像翻扑/过顶举摔)+婚纱换装微活性件;v14 编译合集与 v15 全场直拍按用户指示剔除;编号校正:C/D 两 agent 撞号,D 组重编 K131-K148
+> Rev.1.6|2026-11-09|①K 章追加片 v17 K85-K88:AnimateDiff 补帧 8s AI 宅舞反推(横摆送胯/抓马尾摆胯/过顶钻石/胯波浪收势,BPM132 onset 实测网格);②新增 L 章「成品 T2VA 范本与续写提示词收录」:L1/L2 = Miniskirt(AOA)7 人办公室翻跳 12 Jobs 全文两版(基础版+密帧深化版,道具窗修正为大厅两侧白色方块),L3 = 8s 性感宅舞卡点续写提示词(BPM132,链位 K70/K45/K72/K73/B1/K74,音频 8.06s 实测 onset)
+> Rev.1.5|2026-11-08|K 章追加 K75-K84:《潛行吧！奈亞子！W》宅舞翻跳 97.8s 密集抽帧(4fps×8 窗)反推 10 条——交替高踢/转体前伸/横移交叉开/背身甩发回转/变身双马尾/双马尾甩转(全片签名×7)/宽蹲摆胯/大弓步展臂高潮/力竭躺倒收尾/猫爪马尾横甩；一镜到底固定机位,变身点 24s,躺倒彩蛋收尾
 > Rev.1.4|2026-10-30|新增 K 章「2026-10-30 批量反推动链扩展库」:15 支新片+2 张姿势参考图、74 条动链(K1-K74)经 video-to-h3-prompt 流水线反推并入(双人支撑拉伸/saber 技术下腰/3DCG 舞台变装/情绪撩发写真/吸血鬼写真/腿脚微动作/双人对镜甜舞/K-pop 群舞/卡点换装/AIGC 摆拍等);每片附背景人物档案+节拍判定+镜头形态分流;其余章节与使用规则不变
 > Rev.1.3|2026-10-09|使用规则新增第 9 条「时间窗动作链完整性规范」(强制前置检查:五规则+动作设计五步逻辑+时间窗容量表+失败诊断四情况+逐窗验收十项);第 8 条十条自检不变
 > Rev.1.2|2026-10-09|自检清单替换为用户定稿十条(运镜流程/物理机位/动作库优先/同步时间码/动作峰值/节奏连续/转场钩子/段自包含/视觉一致性/最终排错);第7条同步规则不变
@@ -10,7 +14,7 @@
 > 每条动链 = 一个 2-8 拍的完整编舞单元,带**入态/出态**,可像积木一样首尾相接拼成整支舞。
 > 英文描述均可直接粘贴进 H3 提示词;拍位为**相对拍**(链内第几拍),可放到任何 BPM 网格上。
 > H 章 = 13 支单人成品范本(2026-10 并入):整段提示词可直接粘贴套用,H0 为从范本提炼的成品规律。
-> K 章 = 2026-10-30 批量反推动链扩展(15 支新片+2 图,74 条):每片带背景人物档案+节拍判定+镜头形态分流,风格覆盖双人支撑/技术动作/写真微动作/宅舞/K-pop/AIGC 摆拍。
+> K 章 = 批量反推动链扩展(35 支片+2 图,156 条):每片带背景人物档案+节拍判定+镜头形态分流;L 章 = 成品 T2VA 范本与续写提示词收录(Miniskirt 12 Jobs 两版+8s 卡点续写)。
 
 ## 0. 使用规则
 
@@ -2751,6 +2755,1336 @@ non_diegetic_music: N/A
 - H3:`cutting to an extreme close-up as she winks one eye at the camera and breaks into a wide toothy smile, red plum-petal makeup beside her eye, bokeh lantern lights melting behind her, static face-level close-up holding to the end`
 - 来源:《旗袍夜景》00:15.7-16.8s
 
+**片<v16>《潛行吧！奈亞子！W》(宅舞翻跳·97.8s·4:3)**
+- 背景人物:居家卧室——大床(浅蓝床品+粉色玩偶)、碎花墙纸、立式饮水机、"招财进宝"红金挂画、左墙镜子。人物:女宅舞者,白色水手服短袖(红领巾)+黑色蓬蓬裙+黑色高跟短靴;黑长发,0-24s 披发无饰、24s 变身点后双马尾+白发饰(变身与段落切换对齐,借转体甩发遮蔽完成)。画外行动者:无。
+- 节拍:满电平 BGM(mean -10.3dB);快板宅舞,约 170-180BPM(推测,未核听)。
+- 镜头形态:A 一镜到底固定机位(全程无切镜);结尾力竭躺倒彩蛋(93-97.8s 鞠躬折叠→坐倒床沿→仰躺腿搭床沿)。
+
+### K75 交替高踢开场链(4拍|宅舞)
+- 入态:站立双臂胸前交叉 → 出态:屈膝弹动中
+- 分解:拍1 右腿高踢过腰、双臂同时打开成 V、头随踢后仰;拍2 落地屈膝吸收、双臂落体侧;拍3 左腿高踢同构;拍4 落地接半转预备,重心压前掌
+- H3:`kicking her right leg high while both arms open into a V, her head tipping back with the kick, absorbing into a knee bounce, then the same phrase mirrored left`
+- 来源:《潛行吧！奈亞子！W》0-4s
+
+### K76 转体前伸链(2拍|宅舞)
+- 入态:踢后落地 → 出态:正面双臂上举
+- 分解:拍1 左转 90° 侧对、双臂向前平伸(引导转体);拍2 蹬地转回正面、双臂顺势举过头顶定住
+- H3:`turning sideways with both arms reaching forward, then pivoting back to face the camera as her arms sweep up overhead`
+- 来源:《潛行吧！奈亞子！W》4-6s
+
+### K77 横移交叉开链(4拍|可位移)
+- 入态:正面弹动 → 出态:回中弹动
+- 分解:拍1-2 向左横移两步、双臂先胸前交叉再向体侧平打开;拍3 右腿侧踢、右臂同步上指;拍4 收回并步,交叉重复预备反向
+- H3:`side-stepping left as her arms cross at the chest then sweep open, one side-kick with the opposite arm pointing up, snapping back to a bounce`
+- 来源:《潛行吧！奈亞子！W》6-9s(18-19s 同构复用)
+
+### K78 背身甩发回转链(4拍|甩发)
+- 入态:正面 → 出态:正面手在脸侧
+- 分解:拍1 左转背对镜头、双臂向两侧展开;拍2 背对甩头、长发/马尾横飞(延迟层);拍3 蹬地转回正面;拍4 双手落至脸侧猫爪框脸定住
+- H3:`turning her back with arms spread, whipping her head so the hair fans out, spinning back to camera and landing cat-paw hands beside her face`
+- 来源:《潛行吧！奈亞子！W》9-11s、19-22s(两处复用)
+
+### K79 变身双马尾链(2拍|变身梗)
+- 入态:披发 → 出态:双马尾+白发饰(借转体甩发瞬间完成更换)
+- 分解:拍1 转体背对、发丝横甩遮住换发动作(动作遮蔽);拍2 转回正面时已是双马尾、双臂向体侧大开亮相——动作不断、变身"凭空发生"
+- H3:`spinning through a hair-whip turn and facing camera again with twin-tails that were not there a beat ago, arms flaring wide on the reveal`
+- 来源:《潛行吧！奈亞子！W》24s(变身点)
+
+### K80 双马尾甩转链(2拍|双马尾·签名)
+- 入态:正面或侧对 → 出态:回正面弹动
+- 分解:拍1 头部主导横向甩动、双马尾滞后半拍水平横扫(最高点过肩);拍2 以甩发的角动量带转体 90-180°、马尾继续画弧回摆
+- H3:`snapping her head sideways so the twin-tails whip through a horizontal arc half a beat late, the follow-through spinning her body around`
+- 来源:《潛行吧！奈亞子！W》26-28s、34-36s、38-40s、58-60s、68-70s、78-80s、82-84s(签名复用×7)
+
+### K81 宽蹲摆胯链(4拍|level change)
+- 入态:并步弹动 → 出态:起身并步
+- 分解:拍1 宽站下沉半蹲、双膝外开;拍2-3 保持低位的左右摆胯、双手随体前小幅平摆;拍4 蹬地起身收回,裙摆回弹
+- H3:`sinking into a wide stance and swaying her hips side to side low, hands swinging small in front, then pushing back up to a bounce`
+- 来源:《潛行吧！奈亞子！W》50-56s
+
+### K82 大弓步展臂高潮链(6拍|副歌·全片最大幅度)
+- 入态:弹动 → 出态:回中弹跳
+- 分解:拍1 右大弓步沉低、右臂斜上全开左臂斜下后展(对角线拉满);拍2 保持推远;拍3 换左弓步镜像对角;拍4-5 再换右(或回中);拍6 双臂上举收 V 弹跳
+- H3:`lunging deep side to side with one arm shooting up on the diagonal and the other sweeping low, trading the line left and right at full extension, closing with both arms up in a V hop`
+- 来源:《潛行吧！奈亞子！W》88-93s
+
+### K83 力竭躺倒收尾链(8拍|彩蛋收尾)
+- 入态:V 跳落地 → 出态:仰躺床上静止(settled)
+- 分解:拍1-2 深深鞠躬、上半身完全折叠、双马尾垂直垂落向地面;拍3-4 保持折叠两拍("没电了"暗示);拍5 直不起来的半起身、向后坐倒床沿;拍6-7 向后躺平、双腿搭在床沿垂下;拍8 完全静止躺平收束(全片终)
+- H3:`bowing so deep her twin-tails hang straight down, staying folded like the power ran out, then dropping backward to sit on the bed edge and flopping flat with her legs hanging off the foot of the bed, holding still`
+- 来源:《潛行吧！奈亞子！W》93-97.8s
+
+### K84 猫爪马尾横甩链(2拍|萌)
+- 入态:弹动 → 出态:弹动
+- 分解:拍1 双手举至脸侧五指张开成猫爪、掌心朝前,同时头部左右快甩带动双马尾横扫面颊两次;拍2 爪保持、头回正眨眼
+- H3:`flashing cat-paw hands beside her face while snapping her head side to side so the twin-tails sweep her cheeks, settling with a blink`
+- 来源:《潛行吧！奈亞子！W》20.5-22s、66-68s
+
+**片<v17>《AnimateDiff-补帧》(AI 宅舞·8.0s·9:16·24fps)**
+- 背景人物:夜间城市街头——霓虹招牌虚化、柏油路面、暗色树影。人物:AI 生成(AnimateDiff+补帧)金发双马尾少女、白花发饰、粉色长袖上衣、黑色短裤;动作流畅无硬停顿(AI 特征)。画外行动者:无。
+- 节拍:自带音轨(即所附 mp3,8.06s);onset 实测 BPM≈132,强拍 0.91s 间距:1.03/1.95/2.86/3.77/4.68/5.60/6.50/7.42s,0.81s 弱拍起手;能量密度全程均匀。
+- 镜头形态:A 一镜到底(锁定髋高机位)。
+
+### K85 横摆送胯开手链(2拍|AI宅舞)
+- 入态:双臂前平伸 → 出态:体侧落下
+- 分解:拍1 双臂胸前横扫打开、胯向反侧顶出送力;拍2 双臂沿体前大弧线下摆、重心左右交换,全程无硬停顿(AI 流动感)
+- H3:`sweeping both arms open across the chest while the hip pops to the opposite side, then letting the arms fall along a wide arc as the weight shifts`
+- 来源:《AnimateDiff 补帧》0-2s
+
+### K86 抓马尾摆胯链(4拍|双马尾·Signature)
+- 入态:双手升至颈侧 → 出态:松手双臂外放
+- 分解:拍1-2 双手向上抓握双马尾根、肘外举定型;拍3-4 保持抓举、胯部左右大幅摆动两个来回(马尾随胯反相摆);末拍松手借势外放
+- H3:`gripping both twin-tails up at the roots with elbows raised, holding the pose while the hips swing side to side twice, then releasing the hair into an outward arm throw`
+- 来源:《AnimateDiff 补帧》2.9-4.7s
+
+### K87 过顶钻石链(2拍|Signature)
+- 入态:双手胸前合拢 → 出态:双臂下落
+- 分解:拍1 双手指尖相抵成钻石/心形、沿中线直臂上举过顶,上身后仰、单腿后点;拍2 峰值定住半拍后双臂经体侧下落
+- H3:`pressing the fingertips together into a diamond and raising it straight overhead with the back arching and one toe pointed back, holding the peak then lowering the arms`
+- 来源:《AnimateDiff 补帧》5.6-7.4s
+
+### K88 胯波浪收势链(2拍|收尾)
+- 入态:双臂下落 → 出态:抬腿交叉定格
+- 分解:拍1 上体波浪下传至胯、左右摆两次衰减;拍2 单腿抬起膝上提交叉、同侧手扶膝、另一手侧展定格
+- H3:`rolling a body wave down into two decaying hip sways, then lifting one knee across with one hand on it and the other arm extended, freezing on the pose`
+- 来源:《AnimateDiff 补帧》7.4-8.0s
+
+**片<v18> 《To My First Love》(H1-KEY 赵辉玹直拍·青春叙事·213.5s·竖屏)**
+- 背景人物:DDP 户外庆典开放舞台,深色地胶+橙色地面光带,LED 背景屏(红白几何箭头/绿紫像素块),雾机烟雾,追光手电常入画。人物:灰白细条纹短袖衬衫(开场披搭态)→白色泡泡袖一字露肩短上衣+灰色束腰马甲+灰色双排扣短裤裙+黑丝袜+黑色浅口高跟鞋;酒红色长直发八字帘;银黑手持麦+腰挂发射器。队友同系列白衬衫灰裙/黑抹胸裙作队形背景。
+- 直拍特征:中景全身为主,腰-胸线手持跟拍,呼吸感晃动+横向平移,追焦稳定。
+- 节拍:onset 实测≈89.6 BPM(beat 0.67s;与 autocorr 89.1 互证;0-24s 无 S 级 onset 为前奏/环境段);downbeat 归属推断,verse 8 分音符律动不变。
+- 镜头形态:A 一镜到底跟拍(0-6s 开场等待态)。
+
+### K89 双臂画弧三连-开合链(8拍|开场爆发·放正片起手处)
+- 入态:正面直立持麦,双臂垂 → 出态:双臂落回腰侧屈膝微弹
+- 分解:拍1(副歌 downbeat)右臂立掌从左向右横扫,左手后撑腰,发力源于腰腹旋转;拍2 右臂顺势斜下划落,重心压右腿,双臂斜向张开定格;拍3 换左臂屈肘横于胸前,右臂高举过头伸直,头左倾(肘先出再展臂);拍4 右臂自头顶向左下"斩落",肩带发力、手臂过肩全伸展,重心砸向左腿;拍5 双臂在胸前交叉(右臂在上);拍6 双臂向两侧弹开,掌心向下,身体借地反微弹起;拍7 双臂反向大展开(左上右下对拉),右腿向右点地,裙摆随摆;拍8 双臂收回落至腰侧,屈膝下弹吸收残量;服装物理:酒红长发在拍4 落臂时延迟半拍甩向左;镜头几何:手持横移跟随,全身始终在框
+- H3:`sweeping the right arm across the body then chopping it down from overhead, crossing arms in front of the chest and bursting them back open to the sides, ending with a wide diagonal arm spread and a knee-bounce recovery`
+- 来源:《To My First Love》00:06.0-09.0s
+
+### K90 叉腰背身转体甩发-绕头撩发链(6拍|全片唯一叉腰快转)
+- 入态:正面双手收至腰侧叉腰,小停顿 → 出态:正面右手撩发至脑后,面向镜头微笑定住
+- 分解:拍1 叉腰蓄势(静态一拍,明写静止);拍2 前掌蹬地快速 spin 右转 180°+,角动量由蹬地+头先转提供,灰短裤裙摆水平展开,长发全甩出切向;拍3 背面定桩一拍,长发垂背飘落后摆;拍4 左肩带回带半身转回正面(发梢拖尾延迟约 0.3s);拍5 技术峰值:不待发落,借残余角动量绕头甩发一圈,发梢盖脸再飞向右侧(发完全横飞水平);拍6 右手向上抓拢头发撩至脑后,持麦手垂回体侧;镜头几何:跟拍机随转体小幅右移再回位
+- H3:`quick spin with hands on hips into a back-facing hair whip, then riding the leftover momentum into a full around-the-head hair flip that covers the face before sweeping it back with one hand`
+- 来源:《To My First Love》00:09.0-13.0s(绕头甩发峰值 00:12.2-12.8s)
+
+### K91 挥手三连-转体甩发-领带回正链(6拍|verse 亮相互动件)
+- 入态:正面持麦近嘴唱歌位 → 出态:双手摸回胸前领口系带,回唱歌位
+- 分解:拍1(verse 8 分音符)持麦右手贴嘴,左臂屈肘前臂水平,自右向左上划出(腕带肘);拍2 左臂高举过头顶五指张开,向镜头方向亮相挥手(掌心朝外);拍3 左掌落至肩侧后再抬起挥一次,共两轮,身体随挥臂小幅右倾;拍4 右转 180°,左手顺势下压带动转体,发力来源为头先转+臂下压,长发横向全甩(水平切向,峰值 61.0-61.3s);拍5 转回正面,发落右肩,双手上提摸回胸前领口系带(回收顺序:臂-肩-手);拍6 头回正,重心回双脚,微笑定住一拍
+- H3:`two rounds of raised-hand waving with fingers spread wide, then spinning half a turn whipping the hair horizontally and settling both hands back on the chest ribbon of the top`
+- 来源:《To My First Love》00:58.8-61.5s
+
+### K92 开臂跳-交臂下劈-360°转体甩发链(8拍|副歌爆发·全片唯一大跳)
+- 入态:正面双臂胸前合抱屈膝下蹲蓄力 → 出态:落地回正面双臂垂,走位散开
+- 分解:拍1(副歌 downbeat)合抱下蹲加深;拍2 开臂小跳起,双臂向两侧弹开,落地屈膝缓冲(起跳双臂带升力);拍3 双臂自体侧上划至头顶交叉成 X;拍4 技术峰值前半:双臂从头顶向两侧下劈开至体侧,掌心下压,深屈膝下弹(全身波浪下行);拍5 压膝回弹起,双臂收至胸前再斜上张开五指;拍6 右臂向右侧立掌"挡开",五指张开,身体右倾弓步;拍7 技术峰值后半:右臂斜上 45° 上扬、身体后仰,随即下压带动转体 360°,长发在空中放射状全甩(128.7-129.0s 空中发全开);拍8 落地借惯性半圈回转,发横飞盖脸,站定正面收势;服装物理:裙摆拍7 转体时上扬兜风、拍8 落定;重复变体 00:180.0-182.0s(过头下压+单膝提起+前臂挡脸后甩发转背)
+- H3:`jump opening with arms crossing overhead then chopping down into a deep knee press, followed by an overhead-arm 360-degree spin with the hair fanning out radially mid-air before landing facing camera`
+- 来源:《To My First Love》00:124.0-130.0s(峰值 00:128.6-129.1s;变体 00:180.0-182.0s)
+
+**片<v19> 《ANDLESS》(tripleS 金琉然直拍·冷感未来·194.1s·竖屏)**
+- 背景人物:MCD 室内舞台,黑色亮面地胶,背景屏红黑斜纹/蓝色科技波纹/紫色弧形灯带/白色光柱矩阵,台口白色条形地灯。人物:白色挂脖立领短上衣(胸前蓝色斜纹织带)+白色低腰短裤(蓝色斜纹侧饰)+白色宽筒褶皱堆堆长靴+白色全指手套;超长黑直发垂至大腿+齐刘海;金色耳挂麦。队友同队服发色各异。
+- 直拍特征:全身中景,稳定器级平滑,胸线高度,随队形推拉横移,景深大;161-164s 前景设备/挡板遮挡。
+- 节拍:强点密度实测 0.36s,拍速读法不定(171 BPM 或 85.7+8 分音符——后者与"低重力"律动更符,推测);格拟合 85ms。
+- 镜头形态:A 一镜到底跟拍。
+
+**片<v20> 《ANDLESS》(tripleS 池諝娫直拍·冷感未来·183.8s·竖屏,与 v19 同曲)**
+- 背景人物:同 v19 场景与队服;发型识别点:齐刘海+头顶半扎高马尾+黑长直垂背(马尾与披发双段摆动)。耳挂麦。
+- 直拍特征:中近景偏紧,对象居中率高;开场 5-8s 与 126-128s 有摇臂横穿画面顶部(黑条遮挡);前排队友偶发半遮挡。
+- 节拍:同曲,强点密度实测 0.35s,读法同 v19(推测);格拟合 80ms。
+- 镜头形态:A 一镜到底跟拍。
+
+### K93 开立滑步-双臂波浪展开下压链(6拍|低重力滑行件)
+- 入态:队形散开后面向镜头开立 → 出态:双手胸前收拢站直抬头
+- 分解:拍1(慢重拍)双腿开立,双臂自体侧向斜下展开(掌心向下),身体下沉,发力源于髋部横移;拍2 重心向右横滑一步,双臂保持展开成"滑翔位",身体与地面夹角变小;拍3 双臂沿体侧下压至胯侧(掌推到底),深膝弯,重心最低点;拍4 技术峰值:双臂向后甩出(划水式换向),身体上浮站起,宽筒靴褶皱随腿摆;拍5 双臂收至胸前交叉;拍6 双手胸前收拢,抬头回正;服装物理:超长黑直发滞后重心两拍、滑步时发梢向移动反方向飘;镜头几何:机位随横移平行跟,速度均匀无抖
+- H3:`sliding side to side with arms spreading low like wings, pressing them down to the hips then flicking them backward behind the body before gathering hands back at the chest`
+- 来源:《ANDLESS》00:61.8-64.5s
+
+### K94 上指-交握-斜下大展开-推掌回收链(7拍|副歌群舞同步件)
+- 入态:正面站立双臂垂 → 出态:双手收至胸前站定
+- 分解:拍1 右手食指斜上 45° 指(腕定肘伸),左臂垂,头随指尖抬;拍2 双手在胸前交握;拍3 技术峰值:双臂向斜下大展开(双掌张开、身体下沉成弓步),全队同步成纵深阵列;拍4 斜下展开定桩一拍(明写静止约 0.7s);拍5 双臂向前下方推掌(推水式),腰前弯;拍6 双手低位收拢,身体回升(回收顺序:手-腰-头);拍7 双手收至胸前站定;服装物理:长发在拍3 下沉时整体前披;镜头几何:机位后拉一档容纳群舞纵深再回推
+- H3:`pointing one finger up, clasping hands then spreading both arms wide and low into a lunge, pushing palms down and forward like paddling before gathering back up`
+- 来源:《ANDLESS》00:92.5-96.5s(同形群舞段 00:85.0-87.0s)
+
+### K95 手部记忆点双式:爪形 spelling+脸侧屈肘(4拍|记忆点手势·副歌位)
+- 入态:走位就位,面向镜头 → 出态:单手放下回体侧,转出走位
+- 分解:拍1 双臂屈肘抬至肩侧,腕放松、五指弯曲成爪形,随节拍上下小弹两次(spelling 段);拍2 双手向脸侧收拢、指尖朝内,头微歪,笑点对镜头;拍3 变体(记忆点 pose):单手屈肘抬至右脸侧、手指弯向脸颊,另一手垂麦位,双脚跟踮起一拍;拍4 静态定桩约一拍(明写静止)后放下回位;发力全在前臂与腕,肩不动;镜头几何:拍3 时机位已推至中近景
+- H3:`bouncing claw-shaped finger spells at shoulder height, then tucking one hand up beside the cheek with a bent elbow on tiptoe before releasing`
+- 来源:《ANDLESS》00:52.0-54.0s(爪形 spelling);00:159.5-161.0s(脸侧屈肘)
+
+### K96 双人镜像屈臂拉杆-推窗展开-流水压腕链(8拍|双人配合件)
+- 入态:与队友并肩同向站位 → 出态:双臂收至胸前站定
+- 分解:拍1 双臂屈肘胸前、拳心向下,向下"拉杆"一次(肘向后收,肩胛发力);拍2 右臂向上挥出、左臂下拉(交替互为反相);拍3 换边左上右下,身体随挥臂侧倾;拍4 双臂前平举交叉,随即向两侧"推窗"打开(立掌),技术峰值:双掌推开的同步性(与队友镜像零延时);拍5 双臂上提至肩侧屈肘拳向上,身体再侧倾;拍6 双臂前平举、手腕向下压至指尖向下(流水式,腕关节主导);拍7 胸前双手做五指开合抓握(白手套细节),配合弓步交换;拍8 收臂站定;镜头几何:机位横向微移保持双人同框
+- H3:`pulling both fists down at the chest, alternating arm throws upward, opening the forearms out like pushing open a window, then rolling the wrists down with fingers fluttering`
+- 来源:《ANDLESS》00:44.0-52.0s
+
+### K97 肩侧摇步-前推掌-交叉展翅-波浪压腕链(6拍|verse 连续组合件)
+- 入态:三人组前后纵深站位就位 → 出态:侧身转体双臂展开收,接走位
+- 分解:拍1-2 双臂屈肘肩侧、拳抬起,身体左右摇+侧向跨步两拍(重心髋部驱动,马尾与披发反向甩);拍3 双臂向前平推掌(推水式),弓步前倾,技术峰值:推掌-前倾-下探三层递进(101.8-103.0s 重心最低);拍4 双臂胸前交叉再向外展开成"展翅"(掌张开,身体回升);拍5 双臂前平举、手腕下压指尖向下(波浪,与队友同拍);拍6 侧身转体,双臂展开收势;镜头几何:机位小幅后退跟随前倾
+- H3:`rocking side to side with fists up by the shoulders, pushing both palms forward and down in a layered wave, crossing the arms and bursting them open into a wing spread`
+- 来源:《ANDLESS》00:98.0-106.0s
+
+### K98 INTRO 走位出列-仰头-开立定桩链(4拍|静态亮相件·放开场)
+- 入态:群舞纵深队形中低位 → 出态:大开立下蹲定桩,保持至队形展开
+- 分解:拍1(入态)自群舞中大跨步出列(马尾横飞,步幅大),手臂自然摆;拍2 到定点正面站立,双臂垂体侧,明写静态一拍;拍3 头部后仰仰望(颈部主导,躯干不动,双臂仍垂);拍4 双腿大开立下蹲定桩,双臂垂于两膝之间,队友同步落位形成纵深;发力:跨步为蹬地惯性、下蹲为自重控制;惯性延续:马尾在拍4 仍在摆;回收:无(定桩保持);镜头几何:机位随出列横移半步后停住
+- H3:`striding out from the formation with the ponytail flying, standing still, tilting the head back to look up, then dropping into a wide-stance squat with arms hanging between the knees`
+- 来源:《ANDLESS》00:11.75-13.0s(出列走位 00:08.0-11.0s)
+
+### K99 三人排上举-同步下蹲-起身链(5拍|群形同步件·放 dance break 前后)
+- 入态:三人一排侧对镜头站立 → 出态:起身走位散开
+- 分解:拍1 三人同步双臂上举过头(掌相对,踮起);拍2 双臂保持高举,身体向侧微倾一拍(静态倾斜,明写);拍3 技术峰值:三人同步屈膝下蹲,双臂从头侧向下折落,身体前倾俯身(重心全落);拍4 低位保持半拍后蹬地起身,发上扬;拍5 起立走位散开,双臂自然摆;音乐触发:下蹲咬重拍、起身咬反拍;镜头几何:摇臂横穿画面顶部一次(黑条扫过,非切换),机位不避让
+- H3:`three dancers raising both arms overhead in a line, leaning, then dropping into a synchronized low crouch with a forward fold before bouncing back up and scattering`
+- 来源:《ANDLESS》00:124.0-128.0s
+
+**片<v21> 《Looks Can Kill》(IVE 金志垣直拍·复古未来 disco·214.0s·竖屏)**
+- 背景人物:MCD 行星主题舞台,紫色大行星球体+土星环充气装置、环形轨道灯、星型挂饰、串灯雨帘,结尾段彩纸雨。人物:白色无袖荷叶领短上衣+白色短裤(白色细腰带扣)+红色漆皮及膝长靴+粉色渐变过肘长手套;黑发齐肩内扣+耳侧碎发;金色圈形耳环;耳挂麦。背景队友:蓝色抹胸+浅紫短裤、橙发高双马尾白衬衫、红色蓬蓬裙白靴等,色彩手套系统(粉/蓝/黄/白)为全场视觉锚。
+- 直拍特征:全身景为主,平滑推拉跟随,高度固定;126-128s 摇臂臂架入画遮挡(如实记录);170s 后偶有前景应援物遮挡。
+- 节拍:onset 实测≈130.4 BPM(beat 0.46s,格拟合 105ms);disco 反拍律动不变,原估 120-125 修正上移。
+- 镜头形态:A 一镜到底跟拍(196s 后为转场卡)。
+
+### K100 后仰反弓甩发-回弹盖脸-半圈转体甩发链(6拍|开场爆发·全片最重甩发)
+- 入态:正面站立双手于胸前 → 出态:转回正面双臂肩侧屈肘收势小跳
+- 分解:拍1 双手向外推开(立掌),身体开始后仰,发力源于髋顶+胸展;拍2 技术峰值:后仰反弓至极限(腰胸反弓、双臂斜上下张开),齐肩黑发整体甩向后方(6.2-6.5s 发与地面近平行);拍3 回弹起身,头发借弹性向前甩起盖住整脸(惯性完全交给发);拍4 抬头,发落肩,双手收至胸前(回收顺序:头-臂-手);拍5 右转半圈,借转身再甩发一次,发横飞切向;拍6 转回正面,双臂落至肩侧屈肘,收势小跳一拍;服装物理:红漆皮长靴反光随转身扫过镜头,粉长手套指尖在拍1 张开、拍4 收拢;镜头几何:手持跟拍在后仰时轻微上仰角补偿
+- H3:`arching back into a deep back-bend with the hair whipping fully behind, rebounding so the hair flips over the face, then spinning half a turn with a second horizontal hair whip before settling`
+- 来源:《Looks Can Kill》00:04.75-09.0s(反弓峰值 00:06.2-06.5s)
+
+### K101 双臂上挥-头顶交叠-开花下落-蹲低回弹链(5拍|记忆点开花件)
+- 入态:侧身站立双臂在胸前 → 出态:回弹站起双手收至肩侧
+- 分解:拍1 双臂交替向上挥(右上左下),身体微仰,腕带肘;拍2 双臂至头顶交叉、手腕相叠(静态交叠一拍,明写);拍3 技术峰值:双臂自头顶向下"开花"打开至体侧(掌心向外,指尖先开),与队友同步;拍4 身体下蹲低,双臂落至胯侧,重心全落;拍5 回弹站起,双手收至肩侧;音乐触发:开花落咬 downbeat、蹲低咬下一小节头;服装物理:短裤在蹲低时裤口绷开、手套腕部褶皱堆叠;镜头几何:机位固定,蹲低时构图容纳全蹲不裁头
+- H3:`crossing the wrists overhead and blooming both arms down and open like petals, dropping into a low squat and bouncing back up`
+- 来源:《Looks Can Kill》00:38.75-41.5s
+
+### K102 拨浪摆-转身摆臂踢步-后仰对拉链(6拍|单人 solo 竖条·放 verse 中段)
+- 入态:正面站立居中 → 出态:转回正面双臂胸前交替上摆(与队友同步)
+- 分解:拍1 双臂向右侧同向摆(像拨浪鼓),身体右倾两小拍(发力源于髋侧顶);拍2 收臂左转至侧背位,双臂屈肘肩侧;拍3 摆臂式小跳步:双臂前后交替摆、双腿交替后踢踢臀(步频 2 拍 4 步),身体前倾,技术峰值:摆臂与踢步的节拍咬合(54.0-55.5s);拍4 摆幅加大成一上一下,头后仰;拍5 身体反弓、双臂斜上下对拉到极限(发与裙同摆);拍6 回正,双臂胸前交替上摆;服装物理:粉色长手套在摆臂时袖口滑落半寸再回弹;镜头几何:机位横移半步给转身让位
+- H3:`swaying both arms to one side like a rattle-drum, turning sideways into a skip step with fists pumping and heels kicking back, then arching back with arms stretched in opposite diagonals`
+- 来源:《Looks Can Kill》00:52.0-56.0s
+
+### K103 双人箭头指-换位指线不断链(6拍|双人 spelling 记忆点·放副歌)
+- 入态:与红裙队友并肩同向 → 出态:收指双臂落回体侧站定
+- 分解:拍1 双臂一高一低斜上指(食指伸直、余指握),身体后仰,头抬看指尖;拍2 双臂转前平指(指尖向前),身体前倾,技术峰值:双人指线平行零偏角;拍3 交叉步与队友换位(内侧穿行),手指保持前指不断(指线即"箭头"的调度语言);拍4 双臂指斜下方(点地),身体侧倾;拍5 指回斜上(抬头),完成一次上下循环;拍6 收指、双臂落回体侧站定;音乐触发:每次换向咬 2 拍一次的 disco 反拍;服装物理:换位穿行时发梢扫过队友肩;镜头几何:机位后退半步容纳双人换位
+- H3:`pointing diagonally up with one arm high and one low, switching to a straight-forward arrow point, crossing past the partner while the finger line stays constant`
+- 来源:《Looks Can Kill》00:58.0-62.0s
+
+### K104 合掌-V 举手-开花落-转体甩发-踮脚上举链(6拍|ending 前收束件)
+- 入态:屈膝低坐双臂体侧下压 → 出态:双臂合掌上举踮脚,转接结尾定点
+- 分解:拍1 屈膝低坐、双臂下压收势后于胸前合掌,起身(回收起手);拍2 双臂 V 形高举过头五指张开,站直亮相一拍;拍3 双臂自 V 向下"开花"打开至体侧(掌外翻,身体左右摆一拍);拍4 技术峰值:半圈转体甩发(发盖脸,100.3-100.7s),借转身惯性;拍5 回正面小步走位,双手向下拂裙摆两次(整理动作入编排);拍6 双臂合掌上举过头+踮脚(下段起手式);镜头几何:机位在拍4 转体时轻微跟随回摇
+- H3:`pressing palms together then throwing both arms into a V overhead, blooming them down open, spinning with a hair whip, and rising on tiptoes with palms pressed overhead again`
+- 来源:《Looks Can Kill》00:98.0-101.0s(踮脚上举 00:103.3-106.0s)
+
+**片<v22> 《LALALILALA三光岛》(原 APRIL 李真率直拍·清爽甜酷·197.1s·竖屏)**
+- 背景人物:户外广场白天舞台,大面积玻璃幕墙建筑背景;舞台器材=印"SONIDO"鼓组+镲片、立式麦架、绿色 LED 谱架、黑色监听音箱;可见鼓手、2-3 名白衣系队友(白蕾丝上衣白长裤/奶白长裙/红棕长发)、82-85s 左后方深蓝夹克持相机男工作人员。
+- 直拍特征:手持跟拍、全身景、旋转走位时急速摇镜+变焦补偿、轻微抖动、平视略仰。
+- 节拍:onset 粗测中位强点间距 0.70s,读法不定(85.7 或 171),格拟合差 165ms(户外掌声污染);维持(推测)。
+- 镜头形态:A 跟拍(全程)。
+
+**片<v23> 《咲良饭拍》(LE SSERAFIM 宫脇咲良·互动吟唱·17.1s·竖屏)**
+- 背景人物:室内演唱会主舞台,深蓝黑底+蓝紫色斜向光束、白色轮廓顶光;画面内无队友。人物:宫脇咲良,米白 oversize 连帽开衫+灰蓝牛仔抹胸迷你裙(粉色字样)+黑色安全短裤+大圈耳环+眼下爱心贴纸,左手中黑麦。
+- 直拍特征:长焦手持饭拍、中近景(膝上为主)、呼吸感推拉、随头手小幅摇移。
+- 节拍:onset 粗测≈109 BPM(16 强拍,低置信)。
+- 镜头形态:A 跟拍(长焦)。
+
+### K105 跪姿起链(4拍|level change)
+- 入态:单膝跪地低位定格(一膝点地、另一腿屈膝上抬,双手握麦于胸前) → 出态:完全站直、双脚并拢、麦收至右手垂于体侧
+- 分解:拍1 跪位双手持麦向头顶划弧、双肘外撑成菱形,头随臂右转再回正,卡前奏重拍(发力来自肩带);拍2 双臂从头顶向两侧劈落成风车式,发丝随甩、躯干微前压;拍3 臂落至膝旁做两次手指小波浪,上身随之下压再抬,跪姿膝盖缓冲;拍4 左脚蹬地起身、跪姿腿收落,右手顺势把百褶裙往前抚一下,落位双脚并拢(裙被大腿带起一折后垂回,开衫袖口滑至小臂),卡鼓点收
+- H3:`kneeling low with one knee up, arcing the mic hands overhead then sweeping both arms down to the sides, waving small at the knee, then pushing up to stand while smoothing the pleated skirt down`
+- 来源:《LALALILALA三光岛》0-4.8s
+
+### K106 转身甩发V臂链(4拍|spin)
+- 入态:直立待转、双臂自然垂 → 出态:双臂宽位展开定格、重心压左、眼看右
+- 分解:拍1 右脚为轴全速 360° 顺时针转身,长发水平甩出、百褶裙离心飞张成伞状(技术峰值,风力完全来自角速度);拍2 出转时右手撑胯急停、左臂横摆回中,发梢绕颈惯性回摆半拍;拍3 双肘上折做肩侧"爪爪"位、手腕放松,身体随小弹两下;拍4 双臂伸直过头举成 V、掌心朝前,再向两侧打开压低,重心左移右腿点出,裙摆斜摆落定(1:33s 处同型甩发旋转复现);旋转时跟拍机急速右摇+轻推焦,出转后拉回中线
+- H3:`whipping a full spin with the skirt flying out like a fan, catching it with one hand on the hip, bouncing with bent elbows by the shoulders, then raising both arms into a V and opening them wide`
+- 来源:《LALALILALA三光岛》9-11.8s、93s
+
+### K107 俯身横扫起身链(4拍|arm sweep)
+- 入态:直立、麦举嘴边、右臂垂 → 出态:直立回正、右拳收在下巴侧、麦回到嘴前
+- 分解:拍1 双膝小屈下沉半拍、左拳胸前一记小顿卡重拍,身体向右前顶(先降重心再给水平动力);拍2 上身深前倾约 45°、双臂从右向左低横扫过膝,核心发力是髋部折叠+腰背,长发全甩到面侧、裙摆前后荡;拍3 股四头肌爆发蹬地立直,右臂逆势从低位划上头顶,发梢从左后方甩回(惯性多摆半拍才稳);拍4 收臂、右拳顿下巴旁,肩膀小抖两下收尾、麦提回嘴边;镜头几何:前倾时跟拍机下摇、起身时上摇追头
+- H3:`dipping with a small fist pump, hinging deep to sweep both arms low across the body to the left, then snapping upright with one arm tracing up overhead as the hair swings back into place`
+- 来源:《LALALILALA三光岛》45-47.8s
+
+### K108 抱臂摇摆链(4拍|groove)
+- 入态:双臂交叉环抱胸口(自我拥抱位)、双膝并拢微屈 → 出态:双臂大开、宽位站定、重心回中
+- 分解:拍1 双臂从两侧收拢交叉抱胸、下巴内收含胸(回收顺序:先肘后手);拍2-3 保持环抱、整条脊柱左右钟摆,膝盖一屈一伸弹动,发力全在髋底核心、上肢锁死只随整体荡,长发蒙面跟随、百褶裙左右扫动(技术峰值:无手臂借力的纯重心摆);拍4 双臂向两侧爆开划大弧、肩带胸展开,左右各荡半拍回中,裙摆翻起落定;镜头几何:跟拍机小幅左右平移抵消摆幅保持居中
+- H3:`crossing her arms into a self-hug and rocking the whole body side to side with bouncy knees, hair falling over the face, then bursting the arms open wide and settling back centered`
+- 来源:《LALALILALA三光岛》53.5-56.8s
+
+### K109 提膝挥拳掌浪链(4拍|attitude)
+- 入态:直立、麦垂右手 → 出态:单臂过顶做掌浪、身体立直收正
+- 分解:拍1 一腿屈膝上提至胯高、对侧手伸向侧前,百褶裙被大腿顶得掀起一折;拍2 提膝同时握拳上冲、躯干反向倾顶胯,以支撑脚小跳半圈稳定(技术峰值);拍3 落腿回位、双臂先后过顶交替做掌浪(手臂像水草左右摆,头随臂走,惯性逐拍衰减);拍4 掌浪收小、双手回落胸前两侧、膝盖弹两下收拍;162-163.8s 段复现同款过顶掌浪+头侧兔耳手(指尖翘动),多时间码合并;镜头几何:提膝瞬间跟拍机略上抬,掌浪段机位稳小摇
+- H3:`lifting one knee high while punching the fist up and tipping the hips, then landing and weaving both arms overhead like a palm wave with the head following, finishing with small bounces`
+- 来源:《LALALILALA三光岛》89.5-93.8s、162-163.8s
+
+### K110 比V指枪甩发弓背链(4拍|playful)
+- 入态:双手举至脸侧比 V、掌心朝外、双膝弹动 → 出态:直立、单臂举过头顶握拳、头回正定格
+- 分解:拍1 双手脸侧比 V 弹两下,手腕翻转成指枪指向身体两侧、肘夹肋(腕内旋+肘回收);拍2 双臂如击剑交替向左前戳两下、肩膀送出,身体随戳前倾回弹,裙摆小幅前后翻;拍3 上身弓背低头、长发整片甩到面前(甩发点头),再猛抬头让发回卷——发梢在头已回正后仍前荡半圈(技术峰值=甩发与抬头的时差);拍4 起身同时右臂直举过顶、拳收肩上,头后仰一下再回正;镜头几何:弓背时跟拍机下摇接头部、起身时上摇
+- H3:`flashing double peace signs by the face and flipping them into finger guns, fencing the arms forward twice, then headbanging the hair down over the face and snapping back up with one fist raised overhead`
+- 来源:《LALALILALA三光岛》158-161.3s
+
+### K111 掌浪安抚手势链(3拍|gesture)
+- 入态:直立面向观众、双手交叠腹前、麦直握垂左手 → 出态:右臂伸直高举过头、身体后仰仰头张嘴
+- 分解:拍1 右掌心朝下盖在左手背上,随节奏向前推一记"抚平"手势,噘嘴配合(安抚场内气氛,发力来自肩前束);拍2 右臂掌心朝下从左向右平扫大弧到体侧,躯干跟随右倾、长发从肩后滑落,宽松开衫在背后鼓起、袖口堆腕;拍3 扫到底后手腕轻抖两下做"撒碎"回收,随即缩肩挤眼做撒娇表情、指尖捏起点在下巴旁小弹(回收顺序:腕→肘→肩),最后手臂直举过顶、头后仰进入演唱段;镜头几何:长焦跟拍机随横扫右移半格再回中,举臂时轻微上摇
+- H3:`sweeping the palm-down hand forward like smoothing the air, arcing it wide across the body with the torso leaning, then scrunching into a cheeky shoulder bounce and shooting the arm straight up while tilting the head back`
+- 来源:《咲良饭拍》0-4.5s
+
+### K112 甩发撩颈链(3拍|flirty)
+- 入态:侧身对右、左臂斜举展开 → 出态:身体回正、手收回身侧、随拍左右小荡
+- 分解:拍1 右臂举高掌心张开,头猛向左后甩、嘴大笑张开发声,长发整片向后翻卷(发力来自颈后+腹前收缩,技术峰值=发卷落回肩前慢半拍);拍2 手落回颈后按住发根、下巴内收眼神下瞟做害羞撩发位,抹胸裙随上身扭转微移、开衫领口滑向一侧;拍3 手从颈后顺势下滑、肘尖抬起、腕放松让手垂着晃两下,身体左右小荡、嘴唇收拢做"哦"口型跟唱,发梢惯性多摆两拍才静;镜头几何:甩头时跟拍机轻微上摇+左移接住头部
+- H3:`tossing the head back with one arm raised as the hair rolls over, touching a hand behind the nape with a shy glance, then letting the wrist go loose and swaying with the beat`
+- 来源:《咲良饭拍》7.5-10.3s
+
+### K113 背身兔耳回眸链(3拍|cute)
+- 入态:完全背对镜头、双手举肩侧指节上翘(兔耳手)、麦在左手 → 出态:面向镜头、右臂高举、仰头张嘴进长音
+- 分解:拍1 背身状态双手在肩侧做兔耳指尖小抖、胯随节拍左右顶,长发完全盖背、开衫后背印花全露(机位保持中景等她回身);拍2 左转半圈回身、麦抬到嘴边,长发从背后甩起绕过脸颊、头顺势后仰让发落下(技术峰值=转身与甩发的时间重叠,开衫下摆画弧);拍3 面向镜头双手两侧摊开掌心朝上耸肩,随后右臂直举过顶、左手指在胸口点两下,仰头张嘴进长音;甩发段跟拍机轻微推焦
+- H3:`facing away wiggling bunny-paw hands at the shoulders, spinning back around as the hair whips over the face and falls, then shrugging with both palms up and raising one arm high into the long note`
+- 来源:《咲良饭拍》12-15.5s
+
+**片<v24> 《我可以喜欢你吗》(黄诗予 YGG 生日SP·甜美元气·260.3s·竖屏)**
+- 背景人物:室内小舞台,黑色 LED 墙铺像素星星/闪电+粉蓝歌词字("好想问问宇宙/我喜欢你靠/不敢告诉/就藏在心里");人物:黄诗予——白色短款印花 T+粉色多层蛋糕蓬蓬短裙+白色过膝袜+白色厚底短靴,粉色手柄麦克风,深棕长发两侧编细辫;队友白 T 配粉/粉白格裙变体(粉发成员、粉格裙成员)。
+- 直拍特征:手持竖屏一镜到底跟拍,主体恒居画面中心,队形穿插时短促横摇(197-204s 曾短暂跟丢至粉发成员),快转时全身运动模糊。
+- 节拍:onset 粗测≈100 BPM(强拍=2 拍读法,格拟合差 143ms,低置信);与动作周期 0.5s/拍(≈120)并存,拍速待定。
+- 镜头形态:A 一镜到底跟拍。
+
+### K114 垫步提膝侧移-抛臂-跪地下沉跪姿交替挥击链(9拍|全片唯一完整跪地段)
+- 入态:立姿提膝垫步 → 出态:起身回立,长发甩落后摆
+- 分解:拍1 右膝连提两次原地垫步,重心压在前掌,麦克风举嘴侧,裙摆随提膝小幅前掀;拍2 向右侧移半步,右臂平伸探出,发力来源为左足蹬地+髋侧顶;拍3-4 左向走位中接左转身 180°,发梢横向拖尾延迟约 0.3s,转身完成即刻右臂向上斜 45° 抛出(技术峰值,躯干后仰反弓);拍5 不回收,借抛臂反作用力垂直下沉,右膝跪地、左足前点,双臂顺势向下交叉合拢,裙摆在台面摊成扇形;拍6-7 跪姿双臂交替前抡:先单臂向地板斜下 punching,再横向低扫换边,发力全在肩带+躯干拧转,头随出拳方向点摆,长发每次摆动迟到半拍;拍8 跪姿借最后一次扫臂残余角动量甩头,长发盖过右脸再飞向右侧;拍9 前掌推地起身回立,手收至腰侧(回收顺序:臂→头→重心);镜头几何:跟拍机同步下压再上抬,跪地段主体保持中景
+- H3:`stepping with high knee hops into a side reach, throwing one arm up on a turn before sinking into a deep kneel, alternating floor-level punches and sweeps from the kneel and whipping the hair around while staying down, then pushing back up to standing`
+- 来源:《我可以喜欢你吗》00:30.0-37.5s
+
+### K115 蹲身合掌问宇宙-起身走位-爪手脸框蹲链(8拍|两段蹲身表情包连缀)
+- 入态:走位中立姿 → 出态:爪手蹲身定格带笑
+- 分解:拍1 上半身前倾下沉,双手在腹前十指相扣,膝外展深蹲到底(屈髋+屈膝同步,静态 hold 一拍);拍2 蹲持,抬头看镜头微笑,裙摆叠压在大腿,麦克风垂在扣手下方(相对拍静止,明写 hold);拍3 前掌推地站起接右转走位,双臂松弛随步摆,长发延迟半拍;拍4 横穿舞台,双臂向两侧打开至平举、胸挺(步频不乱、臂走弧线);拍5 左转体带甩发,发梢横扫盖脸;拍6 不等发落,双肘高抬至耳侧、双腕内折、五指张开做"爪手",同时屈膝下沉半蹲;拍7 爪手在脸侧上下小抖两次,膝内扣弹跳维持节奏;拍8 双手贴至脸颊两侧框脸,肘尖内收,蹲位更深,笑定(技术峰值:蹲-手-表情三者同拍到位);服装物理:蛋糕裙层层错动,起蹲时最外层延迟回位;镜头几何:走位段机位横摇 2 次跟住,蹲身段回推近景
+- H3:`rising from a kneel into a deep squat with fingers clasped at the waist, popping back up to cross the stage with arms flaring wide, then spinning with a hair whip and dropping into a paw-hands squat framing the cheeks with a bounce`
+- 来源：《我可以喜欢你吗》00:38.0-44.75s
+
+### K116 副歌过顶交替抡臂宽距弹跳链(6拍|全片副歌主件,三处复现)
+- 入态:宽距屈膝站 → 出态:弹跳持位,臂落回肋侧
+- 分解:拍1 双膝外展宽站半蹲,随拍弹跳,右臂从体侧直臂抡起过头顶(发力:蹬地弹跳+肩胛带甩,肘部不弯);拍2 右臂抡至对侧肩前下劈,躯干随臂折叠左侧屈,裙摆向反方向甩平;拍3 不停顿换左臂抡起过顶(连续发力,无回收拍),右臂经体侧自然回落;拍4 左臂下劈+右侧屈,膝弹跳维持 0.5s/拍,重心左右大幅横移,长发与裙摆反向滞后;拍5 双臂短暂同举过头成 Y,胸展开头微仰(技术峰值,只占半拍);拍6 双臂沿弧线收回肋侧,弹跳不停,接麦克风演唱位;服装物理:蛋糕裙随重心左右换边呈钟摆式摆动,辫梢迟一拍;镜头几何:机位随臂抡方向小幅俯仰,主体始终全身在框;音乐触发:副歌每小节强拍对应单臂过顶
+- H3:`bouncing in a wide plie stance while sweeping alternating straight arms overhead in big arcs, torso folding side to side so the skirt swings like a pendulum, flashing a Y-shaped double-arm reach before pulling the hands back in`
+- 来源:《我可以喜欢你吗》00:59.5-64.0s;00:132.0-140.0s;00:207.0-210.0s(三处同段复现)
+
+### K117 收拳脸侧-蹬地转体甩发-回落跳步链(5拍|快速 spin 招牌件,三处复现)
+- 入态:双拳收于脸侧 → 出态:正面跳步回位,发落定
+- 分解:拍1 双拳收至两颊旁、肘外张,双膝内扣小弹跳蓄势(明写蓄势一拍);拍2 前掌蹬地 spin 右转 360°,角动量由蹬地+头先转提供,长发水平甩出切向盖过整个背,裙摆展开;拍3 转体后半圈手臂向上张开维持平衡,背面一瞬定桩;拍4 借残余角动量回正面,发梢继续飞出再落下(延迟约 0.3s),双拳仍收在脸侧(手位不丢);拍5 落地即接高抬膝小跳步两下回收,拳变掌自然下落;服装物理:转体中裙摆水平飞展、落地后回弹两次;镜头几何:手持机随转体小幅画圆,快转帧全画面运动模糊;音乐触发:转体卡小节尾强拍
+- H3:`curling both fists by the cheeks, spinning a full 360 on the ball of one foot with the hair whipping horizontal and the skirt flaring, landing back to camera with fists still up and finishing into two bouncy knee hops`
+- 来源:《我可以喜欢你吗》00:64.0-66.0s;00:210.5-212.0s;00:243.0-244.0s(结尾段为最长发甩,背面帧最完整)
+
+### K118 藏心画横线-半心画弧哑剧手势链(7拍|歌词哑剧件,两段连缀)
+- 入态:立姿演唱位 → 出态:半心画弧收手回演唱位
+- 分解:拍1 双手合十收进胸口"藏"进心里,肩微含(按词"就藏在心里"触发);拍2 右手掌心向下在嘴前高度从左向右水平画一条长横线,头随指尖转向右("说不出口"封口哑剧,技术峰值:线画满一整拍且头手同速);拍3 指尖在末端向外一点弹出,胯同步左顶;拍4 收手至肩,肘外张;拍5 右手举过右肩上方,双腕在肩上交叉搭出半个心形,胯左顶定格半拍;拍6 半心沿对角线向左肩方向画弧下落,躯干侧屈追随,长发迟半拍;拍7 双臂打开甩出回收至体侧,左移半步接下句;镜头几何:固定中近景,画线段手部全程在画面上三分之一
+- H3:`hiding clasped hands into the chest, drawing a long horizontal silence line across the mouth with the palm flat, then popping a finger point, crossing the wrists above one shoulder into a half-heart and tracing it down in a diagonal arc to the other side`
+- 来源:《我可以喜欢你吗》00:143.0-146.5s;00:148.5-149.75s(画横线两处变体:143 处从左至右、148.75 处收肘变体)
+
+**片<v25> 《彩虹的微笑·深圳》(王心凌商演直拍·啦啦队元气·45.5s·竖屏)**
+- 背景人物:商演舞台,绿→紫→蓝 LED 大色块洗墙,无歌词屏;伴舞 4-6 人白上衣+浅蓝蓬裙、持白色啦啦花球。人物:王心凌——粉橘色齐肩 bob、牛仔泡泡袖短外套+牛仔荷叶边短裙,银色麦克风。
+- 直拍特征:手持近景跟拍(胸像到膝上构图),随举臂上下俯仰,背景花球常虚化,无切镜。
+- 节拍:onset 实测≈126.3 BPM(beat 0.475s,格拟合 52ms,高置信);锤拳泵 0.5s/次≈拍速吻合。
+- 镜头形态:A 一镜到底跟拍。
+
+**片<v26> 《彩虹的微笑·长春》(王心凌演唱会整首·粉亮皮甜酷·147.1s·竖屏)**
+- 背景人物:大型演唱会舞台,浅色圆形/星形 LED 光斑背景,地面彩纸;伴舞 6-8 人黑色荷叶边短裙+白色啦啦花球(与主角强对比)。人物:王心凌——粉色亮皮 oversized 衬衫+同料包臀短裙+黑色细腰带+黑色短靴,白色麦克风,棕长发耳侧发夹;画面右上角 B 站投稿水印。
+- 直拍特征:竖屏演唱会机位,景别比 v25 远(全身常在框),96-108s 镜头甩糊/被遮挡 6s+,队形段短暂变为群像构图。
+- 节拍:onset 实测≈126.3 BPM(同曲双源互证,格拟合 100ms,高置信)。
+- 镜头形态:A 一镜到底跟拍(含 96-108s 遮挡断点)。
+
+### K119 开场胯摆-双臂上抛V-腕上交叉下扫链(6拍|同曲开场件)
+- 入态:松弛立姿 → 出态:双臂落回体侧,接锤拳泵
+- 分解:拍1 双肘微屈垂在肋侧,胯左右小幅摆动(静态律动 hold,发力:膝弹跳带动);拍2 双拳自腰间同时向上抛出成高 V,躯干拉长起踵(发力:蹬地+肩带快甩);拍3 双腕在头顶上方交叉(本曲"比 W/交叉腕"招牌变体,手背相贴一拍);拍4 双臂向两侧打开成弧线自上而下扫落,裙摆随身体右侧横移甩起;拍5 双臂扫至体侧低位后顺势向前小送,胯反向左顶;拍6 手沿身体收回肋侧,直接进入交替锤拳泵(惯性顺接);服装物理:牛仔荷叶边裙在双臂下扫时同步外翻回弹;镜头几何:近景机位随双臂上抛上仰,交叉腕时手部位于画面顶端边缘;音乐触发:开场"哇"音上双臂齐抛
+- H3:`swaying the hips with loose elbows before throwing both fists up into a high V, crossing the wrists overhead, then sweeping both arms wide back down to the ribs to roll straight into alternating fist pumps`
+- 来源:《彩虹的微笑·深圳》00:02.0-06.5s
+
+### K120 交替锤拳泵-反向胯拧链(4拍|同曲主律动件,v25/v26 双源合并)
+- 入态:立姿演唱位 → 出态:泵速渐收,手落回麦
+- 分解:拍1 右拳收在右肋,向内下方向锤泵一次,同时胯向左拧(反向交叉发力,膝弹跳同步);拍2 左拳同幅锤泵,胯回拧向右,左右交替 0.5s/次,肘部始终贴肋不做大臂动作;拍3 泵击中加入头部分拍点动,肩带随之小幅滚压(技术峰值:泵-胯-头三点异相错位);拍4 泵速减半,麦克风抬到嘴,空出的手仍小泵两下再落;服装物理:牛仔/亮皮短裙下摆随胯拧左右荡,齐肩 bob 发尾每泵轻跳;镜头几何:v25 近景、v26 全身景各留证据,机位稳定少摇;音乐触发:主歌逐句末字重拍对应重泵
+- H3:`hammering alternating fists down at the ribs while counter-twisting the hips on every pump, knees bouncing on the beat and the chin nodding off-phase, easing the pumps out as the mic comes up`
+- 来源:《彩虹的微笑·深圳》00:09.5-16.75s;00:27.0-28.25s;00:36.0-37.25s;00:38.0-42.25s / 《彩虹的微笑·长春》00:45.5-48.25s;00:119.5-122.25s(同曲同段,长春版胯幅更大)
+
+### K121 双拳托下巴-膝内扣弹跳链(3拍|同曲卖萌件,双源)
+- 入态:锤拳泵半收 → 出态:回演唱位
+- 分解:拍1 双拳从肋侧上提收在下巴下方,拳背相对,肘尖向下夹;拍2 双膝内扣弹跳两次,躯干左右小倾("害羞"语义,相对拍静止上半身、只有下肢弹);拍3 头侧倾贴向拳背一下,再双手打开下滑回体侧回收;服装物理:裙摆随内扣膝小幅收拢;镜头几何:近景为主,v26 全景中膝内扣清晰可见
+- H3:`tucking both fists under the chin with knuckles together, knocking the knees inward in a shy little bounce and tilting the head onto the fists before releasing the hands`
+- 来源:《彩虹的微笑·深圳》00:28.5-29.75s;00:15.0-16.0s / 《彩虹的微笑·长春》00:50.0-51.25s(同段呼应)
+
+### K122 单臂高举弧线-侧平指互动链(5拍|同曲观众互动件)
+- 入态:演唱位 → 出态:手臂收回,转身走位
+- 分解:拍1 空手从体侧直臂向上抡起成大弧线过顶(发力:肩带+躯干后仰),麦克风不离嘴;拍2 臂在头顶沿弧线向对侧倒,躯干随之侧屈,裙摆向支撑腿侧贴;拍3 臂沿原弧落回,膝弹跳不停;拍4 空手转成侧平举指向观众席/伴舞方向,头转向指尖,定半拍(技术峰值:平举与头转同拍);拍5 指尖画小圈两下收回,向指的方向走位回收;镜头几何:v25 机位随举臂上仰后回平,v26 同段为全景侧移;音乐触发:句首起臂、句尾收指
+- H3:`raising the free hand in one big overhead arc while singing, letting the torso lean into the descent, then leveling the arm into a side point toward the crowd with a couple of lazy fingertip circles`
+- 来源:《彩虹的微笑·深圳》00:24.0-26.75s;00:33.0-34.25s;00:42.5-43.75s
+
+**片<v27> 《第一次爱的人》(王心凌宁波 DAY1·抒情慢摇·231.6s·横屏)**
+- 背景人物:体育馆暗场,红粉色荧光棒海洋铺满背景,台侧可见安保;无伴舞,单人环节。人物:王心凌——白色无袖收腰 A 字中裙(背中拉链,腰后蝴蝶结),深棕长发单侧细辫垂前,粉紫渐变麦克风。
+- 直拍特征:横屏远距固定机位为主体,轻微横移/推拉,主体走远时镜头不追(40-56s 背身行进全程原地),构图稳定居中。
+- 节拍:onset 粗测≈92.3(格拟合差 155ms,人声污染);慢歌叙述拍感 76 保留,低置信。
+- 镜头形态:B 固定机位为主+缓慢横摇(非快剪)。
+
+### K123 指上举臂行进泵链(4拍|v26 主歌变体)
+- 入态:行进立姿 → 出态:臂落,接双肘泵
+- 分解:拍1 右臂直臂向上冲到头顶,食指指天,左手持麦;拍2 指天腕部以腕为轴向下泵两次("raise the roof"变体),同时向前行进,每步提膝,裙摆随步幅翻折;拍3 举臂不落、改腕绕圈一次,面向镜头大笑(技术峰值:指天+行进+笑三线并行);拍4 臂沿弧线下落,双肘屈起交替泵两下回收;服装物理:亮皮衬衫袖口过腕,泵腕时袖口滞后半拍;镜头几何:v26 机位近景仰角,指天手在画框顶被裁一次
+- H3:`marching forward with one arm punching straight up and index finger to the sky, pumping the raised wrist on every knee-lifted step, circling the wrist once with a grin before bringing the arm down`
+- 来源:《彩虹的微笑·长春》00:39.5-42.25s
+
+### K124 单臂高举绕腕挥手行进-甩头撩发链(7拍|v26 挥手互动主件)
+- 入态:侧向站位 → 出态:甩发回正,laughing 接演唱
+- 分解:拍1 空手直臂高举过顶,掌心向前,起步侧移;拍2-3 举臂腕部绕圆挥手两圈,躯干随挥手方向微摆,行进不停(发力全在腕+肩,肘伸直);拍4 挥手加入全臂前后摆幅,向远端观众区送,头仰起看指尖;拍5 手臂下落同时低头,长发整个翻过脸(技术峰值:落臂与甩头同拍);拍6 头从下向上甩回,发梢飞出画弧,脸从发帘后露出大笑;拍7 双手合到肩前小拍两下回收,回演唱位;服装物理:长发甩动完整覆盖面部约 0.4s,亮皮裙随侧移反光变化;镜头几何:机位横移跟行进,甩头帧面部被发遮挡属预期
+- H3:`side-stepping with one arm held high overhead circling the wrist in a big wave toward the stands, then dropping the arm and snapping the head up to toss the hair off the face into a laugh`
+- 来源:《彩虹的微笑·长春》00:65.5-72.0s
+
+### K125 左臂平举缓转背身行进-斜上指角链(5拍|v26 转场件+镜头甩糊注记)
+- 入态:面向镜头演唱 → 出态:背身斜上指,镜头转场
+- 分解:拍1 左臂直臂向左侧平举伸出,指尖引路,身体开始向左缓转;拍2-3 保持平举匀速转身接背身行进,步幅小而稳,长发垂背,背中拉链与腰包入画(转体无蹬地加速,靠步频匀速,与 K117 快 spin 区别);拍4 背身行进中左臂向上斜 45° 抬起,指向画面上角(技术峰值:背身+斜上指同拍);拍5 指角 hold 一拍,另一手持麦垂在体侧;镜头几何:机位从正面急摇到背面方向,96-108s 区间镜头甩糊并被遮挡 6s+,此链尾帧全部运动模糊——作为转场触发器使用时建议配镜头快摇注记
+- H3:`extending one arm level and slowly rotating into a back-facing walk upstage with small even steps, then lifting the same arm into a high diagonal point over the shoulder while still facing away`
+- 来源:《彩虹的微笑·长春》00:96.0-100.5s(100.5s 后镜头被遮挡至约 108s)
+
+### K126 白麦火炬高举-穿队形背行链(6拍|v26 群舞穿行件)
+- 入态:群舞合围位 → 出态:背身行进没入队形
+- 分解:拍1 白色麦克风整支举过头顶如火炬,左手扶腰侧,向前行进提膝;拍2 火炬臂在头顶小幅画弧,两侧黑裙伴舞持白花球同步上举,主角居中领走;拍3-4 行进右转,火炬臂落,双臂张开划水式摆动;拍5 穿入队形中线,转身成背身继续行进,伴舞在她两侧成高低造型(技术峰值:人从队形正中穿过的调度);拍6 背身走位渐远,裙摆随步摆,伴舞花球在画面两侧晃动;服装物理:亮皮裙在背光下发亮,黑裙伴舞花球白色形成前景/背景双层;镜头几何:机位后退拉远让出队形纵深,主角从全景中心渐变小;音乐触发:间奏重拍对应火炬上举
+- H3:`marching through the center of the formation with the white mic raised overhead like a torch, sweeping it down to swim-stroke arms on the turn, then weaving into a back-facing walk as the dancers flank into poses`
+- 来源:《彩虹的微笑·长春》00:113.5-117.0s
+
+### K127 白裙背身缓行-裙摆随步链(5拍|v27 慢摇行进件)
+- 入态:侧身站立 → 出态:背身驻足
+- 分解:拍1 右转 90° 成背身,起步向台深处走,步幅小、膝微弹;拍2-4 匀速行进,A 字裙摆随左右迈步向两侧荡开又合拢(技术峰值:第 3 步裙摆展开幅度最大),单辫垂在背后随步轻甩,手持麦自然下垂随臂摆;拍5 驻足,脚跟并拢站定,肩线回平;镜头几何:固定机位不追,主体在画面中渐远渐小,构图从膝上景变全身远景
+- H3:`turning away from camera and walking slowly upstage in a fit-and-flare dress, small bouncy steps letting the skirt swing open and closed with every stride before coming to a stand`
+- 来源:《第一次爱的人》00:40.0-47.5s
+
+### K128 转身举臂致意远端观众链(6拍|v27 致意主件,两处复现)
+- 入态:背身/侧身驻足 → 出态:手臂落回,回演唱位
+- 分解:拍1 背身或侧身站位,持麦手从低位抬到嘴,头先转向观众席方向;拍2 空手从体侧沿大弧线向头顶抡起(发力:肩带慢甩,躯干后仰配合);拍3 臂伸直至头顶偏斜方向,掌心向远端观众,定一拍;拍4-5 举臂以肩为轴前后摆动持续挥手 2-3 次,头随臂仰,发丝从肩滑落(技术峰值:挥手与仰头同拍);拍6 臂沿弧线落回体侧,身体转回正面,接演唱;服装物理:无袖裙露出整条手臂线,挥手时裙肩无位移;镜头几何:横屏固定机位,举臂手臂两度触到画框顶被裁,远端荧光棒海在挥手方向形成呼应
+- H3:`turning from a back-facing stand to sweep one arm overhead in a slow arc, holding it toward the far stands and waving in sustained strokes with the head tipped back, then letting the arm fall back to singing`
+- 来源:《第一次爱的人》00:79.0-83.5s;00:163.0-167.5s(第二处由背身驻足直接起臂,转身幅度更大)
+
+### K129 指尖指观众-画圈停留链(4拍|v27 收尾互动件)
+- 入态:浅鞠躬起身 → 出态:收手回体侧,视频收尾
+- 分解:拍1 双手垂腹前微低头浅鞠(半拍静态);拍2 起身抬头带笑,持麦手抬至胸前小拳泵两下蓄意;拍3 右臂伸直指向镜头方向观众,食指明确,头微侧倾(技术峰值:指与倾同拍到位);拍4 指尖原地慢速画小圈 2-3 圈保持 3 秒以上,臂不松、笑持续,再收手;镜头几何:横屏固定机位正对指尖方向,荧光棒海为背景衬底
+- H3:`rising out of a small bow into a couple of chest-level fist pumps, then pointing straight at the crowd with the index finger and tracing slow lazy circles while holding the pose with a smile`
+- 来源:《第一次爱的人》00:226.0-231.6s(片尾持续到收镜)
+
+### K130 颈侧整发-掌心拨发回正开唱链(4拍|生活态非编舞件)
+- 入态:立姿停顿 → 出态:面向镜头演唱位
+- 分解:拍1 持麦手不动,空手绕到颈后扶住后颈,头低偏(明写停顿,音乐进行中的自然休止);拍2 手指顺发根将长发整体拢过肩前;拍3 掌心从额侧向后拂,把散发全推到脑后,头随之抬起(技术峰值:拂发与抬头同拍);拍4 双手合握麦克风回嘴边,面向镜头开唱,肩线沉下;服装物理:长发从胸前整体位移到背后,裙摆无参与;镜头几何:固定机位胸像景,手部动作全程在画面中带
+- H3:`resting one hand at the back of the neck, gathering the long hair over the shoulder and sweeping it back off the face with the palm while lifting the head, then bringing both hands to the mic to sing`
+- 来源:《第一次爱的人》00:00.0-07.0s(生活态,非编舞,建议归"日常标准件"而非舞台链)
+
+**片<v28> 《坏女孩营业》(颜沁 K-pop 偶像见面会饭拍·99.1s·竖屏)**
+- 背景人物:淡紫/粉/蓝几何色块背景板+台口白色花丛+黑色返送音箱。人物:颜沁——棕色大波浪左侧低马尾+粉色圆珠发圈,婴儿粉圆领针织背心内搭白衬衫(领口灰色缎带蝴蝶结),灰白百褶短裙,白色堆堆袜+白色厚底运动鞋,黑色麦克风;队友:黑色阿迪外套+牛仔裤长发女、红色玫瑰蓬蓬裙女成员。真人饭拍,无 AIGC 特征。
+- 直拍特征:长焦饭拍变焦(65-71s 由特写拉远为连续变焦非剪切,推测)。
+- 节拍:onset 实测≈127.7 BPM(beat 0.47s,格拟合 91ms);原估 104 修正上移;手势一拍一变不变。
+- 镜头形态:A 一镜到底。
+
+### K131 递麦双接互动链(5拍|饭拍营业/K-pop 见面会)
+- 入态:双手竖握麦垂于腰前站定 → 出态:麦回到自己唇边、眼神锁定镜头
+- 分解:拍1 基座——双手上下叠握麦置于腰前,重心居中,下巴微收(持麦臂自重);拍2 邻位黑衣队友的手从画面左伸入覆住她双手,麦被带低 10cm,她顺势松上手、低头看交叠的手,嘴角先弯(对方臂越过她胸前,肩被轻碰向右让位);拍3 麦被提向队友唇边,她双手托住麦尾仰头看队友,马尾随仰头垂向右后(百褶裙纹路随转髋微旋);拍4 双臂回收把麦拉回自己唇前,头从仰转正再右倾 15°,马尾扫肩(马尾延迟半拍落下);拍5 麦贴唇、眼上翻入镜,左手落回裙前,肩线放平收势;镜头几何:全程镜头从中景推至近景,人物恒居中右
+- H3:`standing in an idol line-up holding the mic with both hands at the waist, letting a teammate's hand glide over hers and lift the mic away, looking up with a shy smile while feeding the mic toward the teammate's mouth, then reclaiming it back to her own lips as the head rights and tilts, ponytail swaying half a beat behind each turn, eyes climbing back into the lens`
+- 来源:《坏女孩营业》00:06-13.5s
+
+### K132 掩面捧脸歪头链(4拍|饭拍营业·大姿势锁死)
+- 入态:双臂交叉抱于腰前低头 → 出态:双手捧脸右歪头定住
+- 分解:拍1(锁死前基座)双臂交叉压住裙腰,头低垂左偏 20°(核心静止,只有颈链预备);拍2 头猛甩向上后方,马尾整体抛过右肩成弧形(技术峰值:发梢最高点),左臂同时向侧松开半臂再收回(发浪过顶后回弹两次);拍3 双手从下颌两侧升起贴住脸颊成捧脸,肘内收夹肋,身体其余锁定;拍4 微活性:头以每拍 5° 速率向右歪三次,慢眨眼一次,眼球从下滑到正对镜头,捧脸手型不动,裙褶与鞋位全程零位移(回收顺序:先肩沉再头停)
+- H3:`arms crossed over the skirt waist bowing the head, whipping the head up and back to send the side ponytail flying over the shoulder, raising both palms to cup the cheeks with elbows pinned to the ribs, tilting the head right in small five-degree steps, slow-blinking into the lens while everything below the neck stays locked`
+- 来源:《坏女孩营业》00:20-28s
+
+### K133 双指比心微活性链(4拍|饭拍营业·大姿势锁死)
+- 入态:近景,双手于胸前交叉拼出一枚大指心 → 出态:双手各持半心、头转左 profile 再回正
+- 分解:拍1 双手拇指食指在胸口拼成一枚完整心形,肘架平,手腕相抵(饭拍推至胸上特写,心形占画面中心);拍2 心形拆开成左右两枚半心,各手上提 3cm 分置锁骨两侧;拍3 微活性:头整体左转 45° 成侧脸,指心原位不动,眨眼一次;拍4 头转回正前方并微低 1cm,双半心向内再合拢 1cm 收势,肩胛下沉换一次重心(仅颈椎+腕关节运动,躯干锁定;背心领口随肩转出现褶光变化)
+- H3:`locking a chest-level finger-heart with both thumbs and index fingers, splitting it into two little half-hearts at the collarbones, rotating only the head to a left profile and back while the hands stay frozen, chin dipping one centimeter on the return, eyes pinned to the camera the whole hold`
+- 来源:《坏女孩营业》00:65-69.5s(69.5-71.5s 同姿势镜头拉远至全身)
+
+### K134 牵手旋回裙摆链(4拍|饭拍营业·双人互动)
+- 入态:双手叠握麦垂于裙前低头羞立 → 出态:回身面向镜头笑、双手张开的 wave 收势
+- 分解:拍1 基座——双手叠握麦垂在裙前,头低右偏,马尾垂右,重心左脚;拍2 左臂向左平伸五指张开邀约,黑衣队友的手接入,她小步并右脚,身体拉成左倾 10°(被牵引而非自走);拍3 队友手臂从她头顶划过做引领,她低头钻转顺时针半圈,百褶裙摆张开成 45° 伞面,马尾在空中甩成横向弧线(技术峰值:转身中点裙摆最大展开;裙摆展开-回弹滞后身体半拍);拍4 转回正面对镜露齿笑,马尾延迟落下扫过右颊,牵着一的手举起晃两下,另一手张开五指在脸侧做小 wave 回收(发梢+裙摆双重回弹;镜头从中景跟摇半圈)
+- H3:`clasping the mic low in front of the skirt with the head bowed, reaching the left arm out to catch a teammate's hand, ducking under the sweeping arm for a clockwise half turn as the pleated skirt blooms and the long ponytail whips horizontal, landing back facing the camera with a wide smile, ponytail settling a half beat late, finishing into a two-hand open-palm wave`
+- 来源:《坏女孩营业》00:78-92s(90-92s wave 段拍位为推测)
+
+**片<v29> 《秋冬换装》(穿搭换装跳剪·22.3s·竖屏)**
+- 背景人物:室内一隅,白纱帘+浅木窗框+米色短绒地毯;模特黑色齐肩外翘卷发、红唇;三套造型:A 炭灰短袖高领+酒红蕾丝中长裙(裸足→酒红尖头细跟→酒红腋下包→黑色外套);B 橄榄绿长袖针织连衣裙+黑丝+黑色粗跟短靴+棕腰带+绿迷你包;C 奶油白 V 领裹身衬衫+藏青阔腿西裤+灰棕尖头靴+黑天鹅绒短外套+酒红手提包。实拍,无 AIGC 特征。
+- 节拍:onset 实测≈122.4 BPM(格拟合 68ms);原估 98 修正上移;段切卡点不变。
+- 镜头形态:C 快剪(每段内一镜,段间跳切换装)。
+
+### K135 配件递进甩发回望链(5拍|穿搭换装·跳剪)(同构两段合并)
+- 入态:段 A 裸足立定扶发 → 出态:段 C 拎包撩发走台步
+- 分解:拍1(00:0.8-1.4s)裸足,右手插入发后拢住,左臂垂,右脚尖前点交叉锁位(基座锁定,只有腕颈活);拍2(1.6s 跳切)高跟鞋+酒红包瞬现:右腿提膝迈步,包坠手腕回荡,发从手中放开前荡(包带在腕上打转半圈);拍3(2.6-3.0s)行走中肩向右拧,回头过肩给镜头一个 3/4 笑,随即拧回全身背对(迈步发力自髋);拍4(3.2-3.6s)原地鞭甩发——头从背位向左后猛抡,整头发出横弧盖脸,包顺势荡出体外(技术峰值:发浪盖脸帧;发梢回弹两次);拍5(3.8-4.0s 复用段 C 17.5-19.5s)黑天鹅绒外套披上肩,双手从领口向上把发全部拢向脑后、下巴扬起,右手换拎包走台步,左手最后插入后发一捋(回收顺序:衣先稳、发后落)
+- H3:`barefoot in a grey turtleneck and burgundy lace skirt holding the hair back, releasing it into a forward swing as heels and a burgundy bag pop in on the cut, walking into a three-quarter over-shoulder smile before whipping the whole head so the hair fans across the face, then settling a cropped velvet jacket on the shoulders, raking both hands up through the hair with the chin lifted, and striding off with the bag swinging from the right hand`
+- 来源:《秋冬换装》00:0.8-4.0s+00:17.5-19.5s
+
+### K136 连衣裙提靴系带链(4拍|穿搭换装·跳剪)
+- 入态:橄榄绿裙手拎腰带立定 → 出态:系好带、拢发走步
+- 分解:拍1 右手拎棕腰带垂在体侧,起步走来,腰带随步频前后荡(步行惯性;全身居中,地毯透视线引导);拍2 右膝高提至腰线,右手下探握住靴筒,头低垂盯靴,左臂后摆平衡(技术峰值:提膝最高点,裙摆贴大腿绷直);拍3 落腿瞬间头前甩,发浪盖脸遮住整脸再向后抡开(发回弹),同时左脚并步;拍4 双手在腰前捏住带尾穿扣系紧,眼随手动,系毕双手沿腰侧向外抚平、右手顺势把一缕发别到耳后,继续向镜头走(回收顺序:带→手→发;裙腰被腰带勒出细褶)
+- H3:`striding forward in an olive knit dress swinging a brown belt from one hand, lifting the right knee high to grip the boot shaft while the head drops to watch, letting the hair whip over the face as the leg drops, threading the belt ends and buckling at the waist with eyes on the hands, smoothing the belt sides before tucking a strand behind the ear and walking on`
+- 来源:《秋冬换装》00:9.5-12.5s
+
+**片<v30> 《珠光婚纱》(婚纱写真一镜·14.2s·竖屏)**
+- 背景人物:法式酒店套房——奶黄护墙板、白罗马柱、黑漆古董边桌+青花瓷瓶、奶油扶手椅、大理石拼花地面;模特深棕低髻、珍珠耳坠、钻饰 choker,象牙白蕾丝挂脖紧身胸衣+象牙缎面超大蓬蓬裙拖尾(露背 V 至腰)。商家宣传实拍;重度磨皮+局部甩镜动态模糊易被误读为 AI(判断依据:裙褶物理连续、手指与裙面接触正确、转场为手持甩镜,推测)。
+- 节拍:onset 粗测≈114.3(13 强拍,格拟合 111ms,低置信);慢板叙述 68 保留。
+- 镜头形态:A 一镜到底(手持环绕+甩镜转场+曝光跌落)。
+
+### K137 正面提裙凝视链(4拍|婚纱写真·微活性)
+- 入态:3/4 左身立定,头低左 profile → 出态:眼球入镜、下巴微扬定住
+- 分解:拍1(大姿势锁死)双腿与蓬裙完全锁死,双手指尖分别压在裙腰两侧蕾丝上,头低垂左 30°(指尖与缎面摩擦力);拍2 微活性:右手五指逐指重新抓握蕾丝一次(只见指节起伏);拍3 微活性:下巴抬起 1cm,眼球先于头转、从下睫毛下缘滑入镜头(眼神先到、头后到);拍4 微活性:重心在双脚间移 1cm,裙体纹丝不动仅腰际缎面反光变宽,头角左偏回收 5°,2.0s 处甩镜糊场转下段(回收顺序:眼→颏→重心;机位绕人物向右缓移 15°)
+- H3:`standing three-quarters left in a lace halter bridal gown with both fingertips pressing the satin skirt at the waist sides, head lowered in left profile, re-gripping the lace one finger at a time, sliding the gaze up to the lens before the chin lifts a breath, shifting weight one centimeter between feet while the huge skirt stays dead still`
+- 来源:《珠光婚纱》00:00-04s(2.0-2.5s 为甩镜转场)
+
+### K138 裸背回眸铺尾链(4拍|婚纱写真·微活性)(两段合并)
+- 入态:全身背影,指尖悬于裙侧 → 出态:柱边全身背影、头转左回眸收尾
+- 分解:拍1(00:5.6-8.0s)裸背全背影,双臂微离体侧、指尖虚触裙面,躯干随呼吸极慢起伏,镜头沿背向下缓移(大姿势锁死,仅肩胛与指尖活);拍2(9.6-10.3s)正面双手抓握裙缘后向右拧身成深 3/4 背,右手在右髋前抓拢一把缎面(核心旋转,裙随腰拧出螺旋褶);拍3(10.5-12.1s)头越过左肩回眸入镜,下巴下沉 1cm 压出颈线,抓裙手再收紧一次、肘外顶(技术峰值:回眸帧——背线+颈线+裙褶三线交会),眼球锁镜不随头回正;拍4(13.3-14.1s)曝光恢复后全身背影立于立柱旁,拖尾在地面铺成扇形,头再向左转 30° 做最后回眸,手垂回裙侧收势(拖尾随最后一移步展开-停驻;远机位全身,人物偏右)
+- H3:`showing the bare back of the halter gown with fingertips hovering at the skirt sides, pivoting to a deep three-quarter back while the right hand gathers a fist of satin at the hip, turning the head over the left shoulder to pin the lens with the chin sunk and a re-grip of the gathered satin, finishing as a full-back silhouette by the column with the train fanned across the marble and the head turned left`
+- 来源:《珠光婚纱》00:5.6-8.0s+00:9.6-14.1s
+
+**片<v31> 《青花瓷翻唱》(翻唱自拍一镜·22.6s·竖屏)**
+- 背景人物:暗调咖啡角——埃菲尔铁塔装饰画、烛形小灯、串灯花环、白色壁炉线脚;女生深棕碎刘海短发(发尾锁骨长),象牙白底青花蓝碎花短袖上衣,右肩黑色圆环包带+浅黄小包身入画下缘。真人自拍翻唱;字幕为后期歌词(天青色等烟雨/炊烟袅袅升起/就当我为遇见你伏笔)。简报"疑似古风/AI"修正:实为室内翻唱。
+- 节拍:onset 粗测读法不定(107 或倍频),原曲量级 ~60 保留,低置信。
+- 镜头形态:A 一镜到底(固定自拍机位,仅曝光渐暗)。
+
+### K139 唱段微活性·天青色句(4拍|翻唱自拍·大姿势锁死)
+- 入态:头微左低、口将张 → 出态:句尾眼回镜头、头回正
+- 分解:拍1(大姿势锁死)胸像构图肩上锁定,肩线/衣褶全程零位移,右手在下缘捏住包带(颈链独立);拍2 微活性:开口唱"天青色"——口型大开再收圆,头随乐句摆 3° 向左;拍3 微活性:一次完整慢眨眼+眼球垂向左下,再沿 45° 爬回镜头(眼神路径固定为下-左-回);拍4 微活性:头右回正过中线 2° 回弹,口型收在"等你"尾音闭合,捏带拇指随拍轻叩一下(刘海随头摆延迟半拍;脸占上 2/3 恒定)
+- H3:`holding a static bust frame in a blue-floral ivory top, swaying the head a few degrees on the phrase, letting the lips open wide and round through the sustained note, blinking slow and full with the eyes drifting down-left before climbing back to the lens, fingertips pinching the strap at the bottom edge with the thumb ticking the beat`
+- 来源:《青花瓷翻唱》00:3.6-7.6s
+
+### K140 唱段收尾·渐暗沉光链(3拍|翻唱自拍·大姿势锁死)
+- 入态:句间换气、头正 → 出态:画面近乎全暗、脸右下 15° 沉入剪影
+- 分解:拍1 唱"就当我为遇见你伏笔",头向右转 5°、下颌微收,口型轻咬字(乐句尾自然带动);拍2 曝光开始跌落,环境先暗、脸后暗,瞳孔显大,眨眼放缓到一次跨两拍(只剩呼吸起伏可见);拍3 头再右沉 15°、视线落向右下,轮廓与肩上黑环带成为最后可读元素,画面沉入近黑收束(回收顺序:环境光→面部→眼神;机位零移动,纯曝光变化)
+- H3:`turning the head five degrees right on the closing phrases, softening the mouth into half-sung syllables, letting the room light dim around the face until only the outline and the shoulder ring stay readable, eyes lowering as the frame fades to near black`
+- 来源:《青花瓷翻唱》00:17.6-22.6s
+
+**片<v32> 《上元·戏腔舞台》(古风戏腔演唱会直拍·36.3s·竖屏)**
+- 背景人物:淡青主调舞台屏——月洞圆窗+瓦檐纹+"上元"大字;女歌手:银黑羽扇形高冠+银流苏步摇+额间花钿,奶白缎面宽袖长袄(袖口织金纹与水墨镶边),湖蓝百褶裙+红金织花腰封,粉白渐变麦克风。真人舞台直拍(字幕歌词:凤箫声动 光转玉壶/你耳语话更改了我两鬓流苏/生辉盼顾 清风吹拂/觥筹交错举杯美酒欢如注/心无旁骛 相对四目/忽然我就深陷中了你的蛊)。简报"疑似 AI"修正:实为现场直拍。
+- 节拍:onset 粗测读法不定(126.3 或半速 63),戏腔慢板倾向 63(推测)。
+- 镜头形态:A 一镜到底(直拍长焦变焦)。
+
+### K141 耳语拢发垂袖链(4拍|古风戏腔舞台·手势舞)
+- 入态:右手持麦于唇、左臂垂 → 出态:左手收回胸前、袖堆腕上
+- 分解:拍1 右手举麦贴唇起唱,左臂随乐句向外荡开,宽袖滑到肘下挂住(肩带臂,袖重拖拽);拍2 左手两指沿鬓角把一缕发别向耳后,头随触点右倾 8°(手势与"你耳语"词点同步——歌词触发实测);拍3 袖面自肘滑脱、整幅垂到腕上堆成玉坠状,指尖仍停在耳后一息(技术峰值:袖坠腕的静帧;缎面袖延迟身体半拍落);拍4 手离耳沿颊侧划下收至胸前,头左回正,冠上银流苏随头摆轻晃(流苏两拍内衰减;镜头从中景推近半身)
+- H3:`singing into a lavender mic held at the mouth while the free arm swings out on an embroidered sleeve, tucking a strand behind the ear with two fingers as the head tilts into the touch, letting the wide sleeve slide down the forearm and pool at the wrist, returning the hand to the chest with the sleeve trailing`
+- 来源:《上元戏腔》00:5.4-8.8s
+
+### K142 按胸扬掌起身链(3拍|古风戏腔舞台·手势舞)
+- 入态:3/4 左身、左掌按于心口 → 出态:手升至颏下、身回正
+- 分解:拍1 左掌平贴心口、五指舒展,头沉入左 profile,麦仍稳在唇边(掌根压胸的自压感,肩胛后收);拍2 按压保持整句,指尖随字腹轻颤两次,视线先垂后扬回镜头(微活性:仅指与眼);拍3 掌离胸、指节向内卷收,沿胸线上浮至颏下停住,脊柱节节回正,冠位全程水平不晃(技术峰值:手到颏下与头回正同时到达;回收顺序:头→手→肩)
+- H3:`pressing the left palm flat over the heart with fingers spread and the head sinking into profile, holding the press through the line, then peeling the hand off the chest and curling the fingers inward as it rises to the chin, spine lengthening back to vertical with the silver-feather crown staying level`
+- 来源:《上元戏腔》00:17.0-19.8s
+
+### K143 双手捧麦羞笑收势链(4拍|古风戏腔舞台·手势舞)
+- 入态:右手单持麦,左手做捏指小动作 → 出态:双手合握麦收于胸前、下颌微收定住
+- 分解:拍1 左手拇食指相捏、余三指弯成小钩,在胸口高度随"深陷中了你的蛊"词点左右摇滚(歌词触发实测;腕为轴小幅摆);拍2 捏指手上提向脸,右手的麦同步降半掌,双手向中聚合(两手互为归点);拍3 双手一并裹住麦身,宽袖翻下来盖住腕背,头右倾 10° 嵌出羞笑,眼球斜上瞟一瞬再回镜(技术峰值:裹麦+羞笑同帧);拍4 双手裹麦收至胸骨前定住,下颌收 1cm,冠珠与流苏静止,肩沉一口气收束(袖堆在腕上叠出三层;镜头微推至半身)
+- H3:`rocking a pinched-finger hand at chest height side to side on the phrase, drawing the hand up toward the face, wrapping both hands around the mic with sleeves draping over the wrists, tilting the head right into a shy smile aimed at the lens, settling hands and mic together at the upper chest with the chin tucked for the close`
+- 来源:《上元戏腔》00:29.6-36.0s
+
+**片<v33> 《奇袭白虎团·踩雷》(1972 京剧电影武戏剪辑·109.1s·竖屏内嵌黑边)**
+- 背景人物:灰蓝夜外景(山影+松枝+石台)→蓝光夜坑→敌指挥所木屋内景(木桌+电话+窗帘);主角侦察排长严伟才:灰绿军官制服+大檐帽,灰面红里斗篷;侦察兵群:灰制服+白/灰披布+钢盔+步枪;夜袭段主角换白衬衫+深色长裤+鸭舌帽+红袖标,持带刺步枪,敌军官灰制服钢盔。1972 年真实京剧电影胶片质感(颗粒/暗角/宽银幕条框),武打为真实戏曲演员配合;水印"桃白白co bilibili",108.5s"必剪"片尾卡;20-40s 为剪辑留黑段。简报"疑似 AI"修正:实为老电影剪辑。
+- 节拍:京剧锣鼓板式驱动,无固定 BPM;锣鼓 onset 实测≈127.7(快板段,格拟合 71ms);板式驱动不变。
+- 镜头形态:C 快剪(原片镜头间硬切;跨切动作连续性为组接,按相对拍标注)。
+
+### K144 夜幕踩雷训令链(4拍|京剧武戏·样板戏电影)
+- 入态:特写,右臂侧平指、目眦欲裂 → 出态:全身令下、群兵伏地后撤
+- 分解:拍1 特写基座——右臂向右侧平伸、五指分张成指物位,斗篷搭肩垂顺,目光钉死画面左(台词"我……踩着地雷了"触发,下颌绷紧只动唇);拍2 特写微活性:眉峰压低 1mm、颈筋显形,臂位纹丝不动(大姿势锁死,只有面部与呼吸);拍3 切全身——臂从侧平位向下向前抡成指挥弧,斗篷随肩转荡起里衬红(腰背拧转带臂,技术峰值:臂挥至前下 45°);拍4 随"迅速后退!"臂再向侧上弹抖一次,身后群兵自蹲踞转伏地倒爬后撤,主角钉在原地成三角站位收势(斗篷下摆随挥臂两拍内摆尽;特写→全身硬切,主角恒居左前景)
+- H3:`in a grey officer uniform and red-lined cape pointing one arm straight out with split fingers, glaring hard to the left while only the jaw moves on the line, sweeping the arm down and forward into a command arc, flicking it out on the retreat order as the squad behind scrambles backward into prone crawls, cape hem settling two beats behind the shoulder turn`
+- 来源:《奇袭白虎团》00:01-09s
+
+### K145 斗篷旋身穿掌指挥链(5拍|京剧武戏·样板戏电影)
+- 入态:群兵一线匍匐 → 出态:主角静立亮相、群兵携枪入场
+- 分解:拍1 群兵白披布覆背、一线匍匐爬行横过画面(群像底噪层);拍2 主角红斗篷自石台后切出,斜线奔跑,斗篷平展拖尾,右手前指(蹬地步频,斗篷反向滞后);拍3 收步跺定,右拳举过头顶,斗篷顺势裹上肩(跑动惯性经跺步灌入拳);拍4 斗篷裹身拧半圈——外灰内红双色翻卷成伞状(技术峰值:篷展伞面帧,6fps 密帧实测 49.4-50.4s),拧出即变左掌向前平推成穿掌位(篷角回甩至背后);拍5 全身静止亮相两拍,随后群兵携枪自画面左列队跑过,主角掌位不动送队(回收顺序:身→篷→目光;全身居中,群兵走前景横线)
+- H3:`leading a line of prone crawlers across the stage, breaking into a diagonal run with the cape flying, stamping to a stop with a fist raised overhead, winding the cape into a half-turn that opens it like an umbrella, breaking out into a flat palm pushed toward the squad, holding still for the photo pose as the ensemble files past from the left with rifles low`
+- 来源:《奇袭白虎团》00:43-56s(旋身细节 00:49.4-51.4s 6fps 密帧)
+
+### K146 排雷腾跃斗篷亮相链(6拍|京剧武戏·样板戏电影)
+- 入态:群兵蹲踞作背景石台,主角步出 → 出态:坐地铺篷收势
+- 分解:拍1 步出至台心,斗篷垂落体侧,随后屈膝下沉蓄力(膝踝压缩储能);拍2 蹬地腾空——双臂向斜上展开,斗篷内衬红面全部张开成双翼(技术峰值一:空中展篷,6fps 实测 84.3-84.5s);拍3 马步落地,双臂水平端平,篷幅仍保持展开弧——静亮相一拍(回收顺序:腿→臂→篷);拍4 反向拧身,斗篷反裹全身成茧状旋团,白外面朝镜头(篷布缠绕躯干-臂三层);拍5 破茧再腾跃二次展篷,空中身体倒平成水平旋子面(技术峰值二:倒身横空帧,87.3s);拍6 落地顺势坐地,斗篷铺满腿面成扇,上身后仰撑手再蜷坐弹起半次收束(篷角在地面滑移半拍;全身正面恒定,背景群兵蹲姿做石台剪影)
+- H3:`sinking to a crouch in front of the rock set, launching into a soaring leap with both arms spread so the cape opens into red wings, landing in a wide horse stance with arms level for the pose, winding the cape around the body through a tight cocoon spin, bursting out into a second leap that inverts horizontal in mid-air, folding into a seated finish with the cape spread over the legs`
+- 来源:《奇袭白虎团》00:83-88s(腾跃/倒身细节 00:84.0-87.8s 6fps 密帧)
+
+### K147 夜坑翻滚群像链(3拍|京剧武戏·群体翻扑)
+- 入态:坑沿白影自右向左跌落 → 出态:坑底叠伏成堆静止
+- 分解:拍1 第一名侦察兵自坑沿抢背翻下,蓝夜光里身体团紧、白披布翻卷包住躯干(前冲惯性+低头抱膝);拍2 连续两三人叠落,半空可见倒插体位、双腿朝天蹬直再团身(技术峰值:倒插帧;披布翻飞滞后身体一拍);拍3 后续队员依次滚压入堆,坑底人堆起伏两次后静止,只剩披布余波(布面颤动两拍;固定全景,跌落方向恒为右→左)
+- H3:`rolling down the blue-lit slope into the trench, bodies tucked and tumbling with legs kicking skyward mid-fall, white cloths lagging a beat behind each rotation, successive scouts piling into a heaped stillness on the pit floor with only cloth ripples remaining`
+- 来源:《奇袭白虎团》00:88.5-95s
+
+### K148 白衣夜袭枪刺过顶摔链(5拍|京剧武戏·对打)
+- 入态:木屋内景,敌兵挺刺、白衣者侧身 → 出态:敌伏地、白衣者立枪亮相
+- 分解:拍1 敌兵自左挺枪直刺,白衣者右手横枪格开、左手护胸前,身成弓步对顶(枪杆相击的反冲,两臂三角锁);拍2 敌二度扑进,白衣者沉肩钻入其臂下,双手锁其腰带向上发力(低身进正是全部前提);拍3 技术峰值——把敌兵整体过顶举起,敌体在空中倒插水平,白衣者双臂全伸托举一拍(镜头微仰强化高度);拍4 顺势旋腰把人摔向右前,紧接着一记扫踢把第二名敌兵踢得横飞扑地,枪身随腰拧画出立圆(枪尖余摆两拍);拍5 拖枪收步,枪托顿地,另一手扶枪身中段立枪于体侧,下颌抬起目视前方,背后敌兵伏地不动——定场亮相(回收顺序:敌→枪→身;镜头从近身切全身)
+- H3:`deflecting a bayonet thrust with a horizontal rifle sweep in the wood-walled room, ducking under the second lunge to hoist the attacker overhead in a full arm extension, spinning him down with a waist turn, sending the second enemy sprawling with a sweeping kick as the rifle draws an upright circle, then grounding the rifle butt and standing tall over the fallen with the chin lifted for the closing pose`
+- 来源:《奇袭白虎团》00:97-108s
+
+**片<v34> 《Genie》(姜杉 Focus 九机位精剪·魔力生日会·K-pop 翻跳·172.1s·竖屏)**
+- 背景人物:室内剧场舞台,深色天幕+大屏蓝白圆形光斑/红色丝带/紫蓝条纹三种灯效;台口返送音箱、落地风扇、侧台灯具与线缆入画。人物:姜杉——白色宽松翻领衬衫(七分卷袖、下摆掖入)、黑色高腰紧身短裤、黑色挂绳白色工牌卡套(职场概念)、黑色过膝弹力长靴(方粗跟)、黑棕中分微卷长发披肩、细项链、深色尖甲。队友同款白衬衫,部分系黑小领带/戴墨镜,黑短裤或黑半裙、黑高跟,工牌挂绳同款。
+- 直拍特征:九机位快剪,切点密集(约 3-8s 一切),检出切换≈30.5/32.0/34.8/63.2/69.5/89.0/90.8/94.3/96.5/127.3/131.0/149.8/152.3/154.3/156.4s;机位含低角仰拍、面部特写、背面全景、三人横排;0-2s 为字卡。
+- 节拍:onset 实测≈120 BPM(强点密度 0.25s=8 分音符层,倍频 240 修正;格拟合 59ms,高置信);拳泵/顶胯周期吻合。
+- 镜头形态:C 多机位快剪。
+
+### K149 走秀扬手顶胯-下擦手侧抬腿链(7拍|单人竖条·职场风)
+- 入态:蓝光群舞行进,双臂体侧自然摆 → 出态:并步站定,双手收于体前,腕部余摆未消
+- 分解:拍1(27-28.5s)群舞行进,髋随步幅左右送,工牌随步左右小荡,白衬衫掖摆稳定(股四头+核心行进);拍2(29-30.5s)右臂向侧甩出掌心向前,左臂屈肘收胸侧,右髋顶出,身体微左倾(肩袖外展+髋侧顶);拍3(30.5-32s)左臂向侧下伸指尖向下,右手收至下颌旁,三连小步交替提膝(30.5/32s 两处切机位);拍4(32-34s)亮相:右手举至头侧五指张开,左手插髋,左髋连顶两下,头随胯小幅左右甩,长发发梢延迟甩动;拍5(34.5-35.5s)双手收至胸前交叠再向两侧打开(34.8s 切暗底圆斑机位);拍6(36-37.2s)技术峰值:右掌从脸侧向下擦过胸前至腰际,同时左腿向左直膝抬起划弧约 45°,上身向右对拉;拍7(37.5-38.5s)收腿落步,双臂顺势向下抖腕甩出(甩毛巾式),惯性使指尖继续下荡,回收=收肩并步;音乐触发=每拍强点对应顶胯/甩腕
+- H3:`strutting forward with hips swaying, sweeping one arm out with the palm forward, popping the hip while flashing an open palm beside the head with the other hand on the hip, then sweeping one hand down the chest as the opposite leg lifts and arcs sideways, flicking both wrists downward like shaking off water`
+- 来源:《Genie》27.0-38.5s(机位切点 30.5/32.0/34.8s)
+
+### K150 推掌抹胸-双拳拳泵-X 交叉-叉腰高抬膝行进链(8拍|单人居中·可爱力)
+- 入态:深红丝带背景中景,双掌举至头侧 → 出态:右拳向上伸直定格,靴筒立起
+- 分解:拍1(60-61s)双掌掌心向外自头侧向前下方压掌,膝弹动两次;拍2(61-61.8s)右掌向左前快速抹过脸前(切式),左拳砸向髋侧,短促发力;拍3(61.8-63.2s)双掌贴胸下滑至腰际指尖张开,耸肩,膝内扣半蹲(核心下段+前锯);拍4(63.2-64.5s)双拳高举过头向上顶两下,身体随拳上弹(63.2s 切机位);拍5(64.5-66s)左拳高举定格,右拳于肩侧向下泵一次,髋左顶小步行进;拍6(66-67s)双掌前推(停势)随即双臂胸前交叉成 X(掌心向外),膝外开半蹲;拍7(67-69.5s)双臂自 X 向两侧打开划落,双手插髋左右顶胯各一次(69.5s 切低机位);拍8(69.5-72s)叉腰高抬膝行进:右膝抬至髋高连提两步,挺胸后仰下颌上扬,结尾右拳向上伸直定格;音乐触发=副歌重拍对齐拳顶/膝提;同款组合 120.0-132.0s 重复(漂浮掌→顺腿上摸→拳泵拇指外弹→X 交叉→叉腰高抬膝→双人胯摆,切点 127.3/131.0s),合并件双时间码
+- H3:`pushing both palms down from head height, sliding the hands from chest to hips with shoulders raised, punching both fists overhead, crossing the arms into an X then opening them wide, hands on hips popping side to side, and marching with high knee lifts before snapping one fist straight up`
+- 来源:《Genie》60.0-72.0s;120.0-132.0s(同款重复)
+
+### K151 拳泵行进-队形背走-低位交叉合手链(6拍|队形变换·利落)
+- 入态:三人景拳泵起,深色背景 → 出态:双手松开垂于体侧,笑颜定格
+- 分解:拍1(86-88.5s)拳泵行进:双拳交替于肩侧向上泵,步幅小髋随泵左右送(86.5s 切近景);拍2(89-90.5s)队形变换:全队转身背对镜头小步快走至后区,长发披背随步摆动,双臂自然后摆(89.0s 切背面全景);拍3(90.5-91.5s)回身:原地右后转,发梢甩起划弧,双臂向外展开(90.8s 切机位);拍4(91.5-93.5s)低位交叉:双臂于小腹前交叉成低位 X,掌背相对,随节拍摆胯两次,红色丝带背景;拍5(93.5-95s)双臂向两侧打开划半圆下落,掌心向下浮于髋侧(94.3s 切紫底机位);拍6(95-96.5s)双手腹前交握,头右倾肩左顶送髋,笑颜定格,回收=松手垂臂(96.5s 切三人横排机位);音乐触发=预副歌小节切换对齐转身与 X 交叉
+- H3:`pumping the fists alternately at shoulder height while marching, turning the whole line to walk away from the camera with hair swaying down the back, spinning back around with a hair whip, crossing both arms low over the belly into an X, then opening the arms in a half circle and clasping the hands in front with a head tilt`
+- 来源:《Genie》86.0-96.5s(切点 86.5/89.0/90.8/94.3/96.5s)
+
+### K152 背叉腰后踢走-回身顶胯-三人拳泵收势链(6拍|背影线·收势)
+- 入态:侧身小跑切步,低机位仰角 → 出态:右手举至头侧五指张开,三人横排定格
+- 分解:拍1(146-147.5s)侧身切步:双拳交替肩侧泵,左肩前送,低角仰拍强化腿部透视;拍2(147.5-149.5s)双手插髋左右顶胯两次,右膝提至髋高再落,头随胯摆(149.8s 切背面全景);拍3(149.5-151.5s)技术峰值:背对镜头叉腰直背,右腿向后伸直点地再踢臀收起,左腿主力,髋部向镜头方向送出,长发全披于背——后伸腿+送髋同拍成大线条;拍4(151.5-153s)原地转身:右肩引导回身,发尾甩出弧线,双手滑至髋骨(152.3s 切蓝底机位);拍5(153-154.5s)指尖卡髋骨左右顶胯各一次,视线过肩回看镜头;拍6(154.5-157s)三人一字排开双拳交替肩侧泵,步幅一致(154.3/156.4s 切机位),结尾姜杉右手举至头侧五指张开收势;音乐触发=桥段末四小节对齐背走,尾拍定格于下一乐句起点
+- H3:`marching with alternating shoulder-level fist pumps, hands on hips popping side to side with a high knee lift, walking away on straight legs kicking one heel back while pushing the hips toward the lens, spinning back with a hair whip to hook the fingertips on the hip bones, then closing in a three-person line with fist pumps and one palm fanned open beside the head`
+- 来源:《Genie》146.0-157.5s(切点 149.8/152.3/154.3/156.4s)
+
+**片<v35> 《I Love You》(EXID 路演直拍·"服装没到随便穿"·195.2s·竖屏)**
+- 背景人物:室内路演舞台(随机舞蹈活动),粉紫色像素风背景板(BZ Boundless Zoom 标识、中文"随机舞蹈"立体字、闪电/音符贴纸)、粉色圆形地贴。被跟拍成员:白色透视宽松长袖衬衫敞开、黑色吊带内搭、黑色紧身短裤、黑色薄丝袜、黑漆皮防水台一字带细高跟(红底),棕色渐变大波浪长发,深色长尖甲——混搭"随便穿"风。队友(背景):红棕发黑抹胸+铆钉黑短裤+红底黑高跟;黑短发黑连体裙+灰丝袜+黑长靴;白衬衫黑背带男装舞者等随机参与者轮换入画。
+- 直拍特征:主机位全身固定直拍为主,间以推拉变焦与横摇(101.5s 起男装舞者入画时左摇);检出切镜≈13/20/26/35.3/44s;100-112s 深蹲段为持续固定仰角直拍。
+- 节拍:onset 粗测 81.1(倍频不定,户外掌声污染);维持 118(X 交叉 0.5s/拍动作周期吻合),低置信。
+- 镜头形态:A 跟拍为主+少量多机位切换。
+
+### K153 X 交叉臂开手滑臂-钟摆摇摆-比心链(6拍|双人前后·X 交叉标志)
+- 入态:双臂胸前交叉成 X,宽距半蹲,双人前后错位站 → 出态:全队转身背对镜头走位
+- 分解:拍1(1-3s)X 交叉(右臂在上),双腿开立宽于肩膝微屈,掌心向下指尖张开,红棕发队友于后同款;拍2(3-5s)交叉不变,双手沿对侧上臂向外滑开再合回,开合循环两轮,指尖始终张开如扇,膝随节拍屈伸(胸大肌水平内收/外展);拍3(5-6.5s)双臂自 X 解开向前下方伸直推落(峰值=双臂直线甩出);拍4(6.5-7.5s)双手胸前快速合拢成心形指位再向两侧下抹(擦桌面式);拍5(7.5-10s)双臂重新交叉成 X,全身以髋为轴左右钟摆,肩头交替前送,膝随摆加深屈伸,重心左右脚交替;拍6(10-12s)X 保持,右拳自交叉中向前弹出一次随即收回,12s 全队转身背对走位(13s 切机位);音乐触发=副歌"알러뷰"吐字点对齐开手滑臂;同款 X 交叉 172.0-184.0s 重复(体摆+拳弹循环→胸前比心下移至盆骨→下砸拳收→转体,切镜 172-184s 全程连续直拍),按合并件双时间码;另 73.3s、93.3s(总览)亦见 X 交叉定场
+- H3:`crossing both arms into an X over the chest in a wide plie, sliding the hands out along the opposite sleeves and back with fingers fanned, unfolding the arms to push straight down, snapping a quick finger heart before a tabletop wipe, then re-crossing and pendulum-swaying the torso hip to hip while popping one fist forward out of the cross`
+- 来源:《I Love You》1.0-12.5s;172.0-184.0s(合并件);定场 73.3s、93.3s
+
+### K154 行进摆臂-飞吻交叉抬腿-扑翼摆-发际定格链(7拍|群舞中心·俏皮)
+- 入态:行进摆臂,黑短发队友于侧 → 出态:双掌举至面部两侧掌心向外,队列收拢定她为中心
+- 分解:拍1(33-34s)行进:双臂体侧大幅摆,步幅大,高跟落脚带踝部微晃(髋屈肌+踝稳定);拍2(34-35s)技术峰值:右手背贴唇向前送吻,左臂后下甩,同时左膝提至髋高前跨——吻与提膝同拍对开,丝袜腿线全展;拍3(35-36.5s)双手滑至髋骨,深蹲幅左右摆胯两次,膝内扣外开切换(35.3s 切三人景);拍4(36.5-39s)扑翼摆:双臂屈肘于体侧上下扑动,膝弹动,头小幅左右甩,两侧队友同拍扑翼(37-38.5s 群舞同步);拍5(39-40.5s)右臂平举前指,收肘回拉一次,小步行进;拍6(40.5-41.5s)定格:右手五指张开贴头侧发际,左手抓短裤下摆,双膝并拢内扣,下颌右偏,长发停摆;拍7(41.5-44.5s)双拳胸前泵两次,队友高踢腿入画(43s),44s 切群景双掌举至面部两侧掌心向外收拢为中心;音乐触发=说唱段语速点对齐扑翼频率
+- H3:`striding forward with big arm swings, blowing a kiss off the fingertips while driving one knee up to hip height, sliding the hands onto the hip bones for a deep side-to-side hip sway, flapping bent elbows like wings with a knee bounce, pointing forward, then freezing with one open hand at the temple and the other gripping the shorts hem`
+- 来源:《I Love You》33.0-44.5s(切镜 35.3/44.0s)
+
+### K155 爪形挥手-弹指-头顶比心-T 位扑臂-宽距比心链(7拍|单人竖条·手势流)
+- 入态:双手举至头侧五指张开 → 出态:双手贴大腿下抹,长发落定
+- 分解:拍1(60-62s)爪形挥手:双手举至头侧五指如爪,手腕快速左右摆,肘高抬,长发随腕摆轻晃;拍2(62-63.5s)双掌于面前向下压一次,右手屈腕向上弹指(响指势),左手按于胸口,重心移右脚(63s 切全景);拍3(63.5-65s)双手举至头顶上方合成心形,踝交叉踮立,下颌微收(峰值=心形顶置);拍4(65-66s)耸肩摊掌:双掌两侧摊开掌心向上,双肩交替耸两次,膝并拢弹动;拍5(66-67.5s)双拳收至肩侧向上顶两次,膝深弹,队友左入画(67s);拍6(67.5-69.5s)T 位扑臂:双臂平举成 T 上下小幅扑压三次,踝交叉小步横移(模特台步);拍7(69.5-71.5s)双腿开立深蹲幅,双手先于额前合心再落至盆骨前合小拳心,膝内扣,收势双手贴大腿下抹;音乐触发=副歌尾"lo-lo-love"音节点对齐比心落位
+- H3:`waving both claw-spread hands beside the head, pressing the palms down then flicking a wrist snap with one hand on the chest, forming a heart above the head on crossed ankles, shrugging the palms open, pumping fists at the shoulders, flapping flat T-arms while stepping cross-ankled, and closing in a wide plie as the heart slides from the forehead down to the pelvis`
+- 来源:《I Love You》60.0-71.5s(切点 63.0s)
+
+### K156 前倾摸背-深前折-甩发深蹲摸踝定格-起身扫腿链(7拍|下腰蹲姿·腿部线标志)
+- 入态:踝交叉站姿,右手抚发别耳后 → 出态:展臂小跳站定,长发扬起未落
+- 分解:拍1(100-101s)抚发站位:右手把发别至耳后,双腿踝交叉,直拍正身;拍2(101-102.5s)前倾摸背:上身前倾,右手沿腰后滑至臀外侧按住,挺胸抬头看镜头(竖脊肌控制前倾,峰值之一=胸部反弓);拍3(102.5-103.5s)深前折:继续前折至背近水平,双手滑过膝至小腿,头侧转看镜头,臀向后顶——丝袜+高跟腿线全展(腿部 line 标志帧);拍4(103.5-104.5s)甩发起身:头发向前甩再向后撩起,双臂后上展开,臀后坐屈膝入蹲(长发滞后于头约半拍);拍5(104.5-109s)技术峰值:深蹲至臀贴踝,右手下滑摸到脚踝一字带,右膝叠于左膝上,上身挺直看镜头,定格持续约 4 秒(固定仰角直拍);拍6(109-110.5s)借伸膝弹出起身,左腿向侧划弧落地,右手顺大腿外侧下抹至膝,男装舞者左入画(机位左摇);拍7(110.5-111.5s)右腿侧伸成低弓步右手抓握大腿,随即起身双臂大幅展开小跳,长发扬起收势;音乐触发=副歌重拍"나 사랑해"落点对齐甩发,蹲姿定格覆盖 4 个小节长音
+- H3:`brushing the hair aside in a crossed-ankle stance, leaning forward sliding one hand along the lower back to the hip with the chest lifted, folding deep until the hands reach the shins with the head turned to the lens, whipping the hair up to rise, dropping into a deep squat resting a hand on the ankle strap for a held four-count, then springing up sweeping one leg out and stroking the thigh before a wide arm-spread hop`
+- 来源:《I Love You》100.0-111.5s(全程连续直拍,仅镜头左摇)
+
+---
+
+## L. 成品 T2VA 范本与续写提示词收录(外部项目全文并入 · 2026-11-09)
+
+> 收录原则:外部反推/续写项目的完整可粘贴提示词**全文并入**,原文不改。L2 为 L1 的密帧深化修订版(道具窗修正:大厅两侧白色方块,非黑椅;以 L2 为准)。各 Job 时长 ≤15s,块自带共享 DNA 段;`<Audio 1>` 未挂接(声音走块外 postproduction_copy 交接,见各文档 PART C)。忠实度 L1(director's plan),非帧级复刻。
+
+### L1 Miniskirt(AOA)7 人办公室翻跳 — H3 T2VA 详细反推(12 Jobs)·基础版
+
+```text
+FIDELITY TIER: L1 (director's plan). Based on ~78 source frames (global + two dense
+batches at ~2.5s spacing); NO per-frame skeleton tracking and NO audio onset detection.
+Timings approximate (0.1s precision); a directorial plan, not a frame-accurate
+reproduction. Visual evidence: source-video frames only, no stock images.
+SCOPE: main dance program only, 0.00–150.53s; the ending credits/blooper reel
+(~150.5–254s) is excluded per user. FILM TYPE: C — multi-shot MV montage with hard-cut
+named setups; audio unverified, cut-to-downbeat claims inferred from picture rhythm.
+```
+
+源文件 SHA-256：`f0aeed79425db69b8788c926c8027ef833234fbe4d92c5e10f9a9b9344b29097`
+画幅：854×384（宽幅，约 2.22:1，画面内为宽银幕构图），30fps。声音：音轨存在、内容未核听（`N/A`，原声交接见文末）。
+
+---
+
+# PART A — 共享视觉 DNA（全片适用，各 Job 引用）
+
+## A1. subject_definitions（七名舞者，按造型与当前位置区分，不固定个人编号）
+
+```text
+Seven female dancers, tracked by current position and look rather than a fixed name,
+since they exchange places. One BLONDE dancer (short chin-length blonde bob, straight
+bangs) is the visual anchor and frequently takes center; the other six have long dark
+hair (black or brown, straight or wavy, some half-tied up, some worn down), fair skin,
+defined eye makeup, small earrings and delicate necklaces.
+OFFICE LOOK (the dominant program): white or fine-striped fitted shirts, some with
+black suspenders, a short black mini-skirt, sheer black stockings, black stiletto
+heels, and a lanyard ID badge on a black strap; hair mostly down.
+HALL LOOK: tight black mini-dresses with cut-out / open-back / halter details, black
+stockings with garter belts, black stilettos; some sequences use black chairs.
+All seven keep the same costume within each scene; the blonde stays blonde throughout.
+```
+
+## A2. environment_definition
+
+```text
+OFFICE: a bright modern open-plan office with a pale blue-grey floor, large floor-to-
+ceiling windows in soft daylight, glass-block walls, a curved archway and a round
+ceiling light; desks, office chairs, computers and a cylindrical column fill the
+background; clean, cool and airy.
+HALL: a grand warm-lit hall with a black-and-white checkerboard floor, tall white
+columns, a white paneled double door, a chandelier, wall sconces and curtains; a warm
+amber glow from the sides; black chairs are used for the chair-dance section.
+The wide frame is letterboxed; no on-screen text is required to be generated.
+```
+
+## A3. lighting_definition
+
+```text
+OFFICE: soft cool daylight from the large windows, even and diffuse with gentle fill,
+pale neutral-to-cyan color temperature, soft shadows and clean specular highlights on
+the smooth floor and the sheen of stockings.
+HALL: warm amber key from side wall lights, harder and more directional, deep warm
+shadows on the checkerboard floor, a chandelier overhead; strong rim light separates
+the black outfits and bare skin.
+Lighting stays constant within each scene and switches only on the hard scene cuts;
+subtle film grain, no random flicker.
+```
+
+## A4. named camera setups
+
+```text
+WIDE FRONTAL (WF): eye-level full-body wide, whole ensemble and floor visible —
+  dominant, establishes formation.
+LOW ANGLE (LA): camera near the floor looking up, legs and stilettos emphasized,
+  figures read long; glossy floor in the foreground.
+HIGH ANGLE (HA): elevated (not fully vertical) framing of layered or bent formations.
+MEDIUM CLOSE (MC): chest-up framing for facial and hand gestures, shallow depth.
+INSERT (INS): tight detail — legs, heels, hem, hands at the lips, hair.
+WHIP / WIPE (WB): fast motion-blur move or a body/hair occlusion used as a motivated
+  bridge between setups.
+Use only the assigned setup per beat; no unmotivated camera moves.
+```
+
+## A5. body_mechanics（K-pop 性感舞蹈力学）
+
+```text
+GROUNDING & FORCE: in stilettos the weight stays over the balls of the feet; every
+move initiates from the floor and travels hip -> lumbar -> chest -> shoulder -> arm.
+A small breath or counter-wind-up precedes each release.
+HIP & WAVE: pelvic sways and body rolls are driven by the hips with the knees soft;
+the wave passes sequentially through belly, chest and shoulders, never as one rigid
+tilt. SQUATS: the center of mass drops over the heels, knees tracking over the toes,
+back elongated, then the hips drive the rise.
+FLOOR WORK: in the lying pose the body lowers with controlled support, the spine
+arcing on the floor; hands frame the head, legs extended, no collapsed weight.
+CHAIR DANCE: the chair is a stable prop; weight sits into the hips, legs extend and
+cross, hands trace the thighs and back while the torso stays lifted.
+HEAD & EYES: gaze follows the leading hand; on turns the head arrives last; faces stay
+composed and confident, expressions controlled, no constant smile.
+```
+
+## A6. costume_hair_physics
+
+```text
+Nothing animates independently. Long hair, the loose shirt hems and the short skirt
+lag slightly behind each hip or body acceleration and settle with a soft secondary
+motion; on turns hair flares and on squats the skirt and stocking lines follow the
+thighs. The ID lanyard swings with a small lag. Fabrics keep a natural body-to-cloth
+gap and fold at the waist and knees; no plastic stiffness, no clipping through the
+body, chairs, heels or other dancers; garter straps and stocking seams stay aligned.
+```
+
+## A7. CONTINUITY GUARD（七人，全片适用）
+
+```text
+- exactly SEVEN dancers at all times: no duplicated or extra bodies, no half-formed or
+  fused limbs;
+- each dancer keeps her own identity and look: NO face swap, NO costume or accessory
+  transfer, the blonde stays the only blonde, including during crossings, occlusion,
+  back views and floor work;
+- position changes occur ONLY via the described continuous paths — NO teleportation,
+  NO instant side-swaps, NO two dancers occupying one point or merging;
+- when hair or a body occludes the lens, identities and costumes remain unchanged
+  behind it; identity continuity takes priority over completing a move;
+- office vs hall changes are SCENE/COSTUME cuts only at the stated boundaries; inside
+  one scene the outfits never change.
+```
+
+---
+
+# PART B — 12 个 Job 详细时间线（本地时钟从 00:00 重置）
+
+## Job 01 — 源 00:00.00 → 00:13.07（13.07s）｜黑场 → 冷开场大厅预告
+
+```text
+integrated_multimodal_description: [Shot 1] A pure black frame holds with only the small fixed platform watermark in the upper corner, no subject and no motion. [Shot 2] At 00:02.300, a hard cut reveals the grand warm hall as a cold-open teaser: the seven dancers in black mini-dresses and stockings on the checkerboard floor, three seated low on the floor with hands planted while four stand behind them, the blonde among the standing group; warm amber light and columns frame the confident pose. [Shot 3] At 00:05.500, the picture begins rapid montage cuts between the hall group and brief cool office flashes, each hard cut landing on a new pose — a hand at the lips, a hip turned, a back-view turn — building anticipation without a continuous camera move.
+
+camera_direction: Shot 1 locked off on black. Shot 2 wide frontal held steady to establish the seven. Shots 3 onward are discrete hard-cut setups (WF/MC), each near-locked, with only small motivated framing; the fast changes come from editing, not a drifting or orbiting camera.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 02 — 源 00:13.07 → 00:24.13（11.06s）｜办公室开场 → 地面躺卧
+
+```text
+integrated_multimodal_description: [Shot 1] A hard cut into the bright cool office; the dancers begin to move into position among the desks and windows. [Shot 2] At 00:03.100, the program settles and a long-haired dancer lowers into a floor pose: she lies on the smooth floor in a white sleeveless knit top and black skirt, spine arcing, long hair spread around her, both hands framing her head while one leg extends; another dancer's legs in heels stand on a desk softly behind her. She holds the reclined pose with controlled support, gaze toward the camera.
+
+camera_direction: Shot 1 wide frontal with a small slow move as they take position. Shot 2 low angle close to the floor, held near-locked on the lying dancer with a tiny slow push, motivated by her lowering to the ground; the background legs stay in frame. No tilt drift, no orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 03 — 源 00:24.13 → 00:35.70（11.57s）｜办公室队形 → 近景
+
+```text
+integrated_multimodal_description: [Shot 1] Back in standing formation, the seven move through synchronized hip sways and soft arm gestures in the office, knees relaxed, weight over the balls of the feet. [Shot 2] At 00:06.500, the framing tightens toward a few dancers as one hand sweeps the hair and the torso rolls through a body wave. [Shot 3] At 00:08.000, a closer chest-up framing catches the confident expression and a hand gesture, the bright windows and desks soft behind.
+
+camera_direction: Shot 1 wide frontal with a small lateral follow of the hip movement, motivated by their sway. Shot 2 medium close with a small slow push as the hand sweeps the hair. Shot 3 near-locked chest-up; every move is motivated by the named body action, no autonomous push or orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 04 — 源 00:35.70 → 00:50.00（14.30s）｜七人全景 → 金发特写
+
+```text
+integrated_multimodal_description: [Shot 1] A wide office shot shows all seven in a clean line, executing a synchronized pelvic sway with hands traveling from the waist outward, the blonde at one side. [Shot 2] At 00:08.100, the camera cuts into a closer formation as the dancers turn and let long hair flare. [Shot 3] At 00:12.500, a medium close frames the blonde dancer turning over her shoulder, fingers drawing to her lips in a confident hush gesture, the office windows glowing behind her while another dancer moves in the foreground.
+
+camera_direction: Shot 1 wide frontal held steady on the line. Shot 2 medium framing with a small follow of the turn and hair flare. Shot 3 medium close with a small slow push toward the blonde, motivated by her hand moving to her lips; no zoom beyond the face, no orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 05 — 源 00:50.00 → 01:04.63（14.63s）｜办公室队形快切
+
+```text
+integrated_multimodal_description: [Shot 1] The office formation continues with the seven stepping through a hip-driven sequence, arms crossing and opening. [Shot 2] At 00:02.100, a quick cut to a tighter angle catches a body wave and a hand tracing the waist. [Shot 3] At 00:03.500, another hard cut shows the group turning, hair and skirt hems flaring. [Shot 4] At 00:04.300, a closer framing holds the confident face. [Shot 5] At 00:12.000, the view returns to a wide office line as they drop into a bent-knee move and rise on the hip.
+
+camera_direction: Shot 1 wide frontal. Shots 2-4 are discrete medium/insert hard cuts, each near-locked, motivated by the wave, turn and facial gesture; Shot 5 wide frontal with a small follow of the drop and rise. The density comes from editing, not a continuous rush or orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 06 — 源 01:04.63 → 01:19.00（14.37s）｜办公室 → 内部机位快切
+
+```text
+integrated_multimodal_description: [Shot 1] A wide office shot carries the seven through synchronized sways and arm arcs. [Shot 2] At 00:03.600, a medium framing follows a turn with hair flare. [Shot 3] At 00:10.400, a rapid burst of internal cuts: hard cut to a back-view, then a side profile, then a hand at the hip, each landing on a distinct pose while the location stays the same office. [Shot 4] At 00:13.100, the group settles into a line facing the camera.
+
+camera_direction: Shot 1 wide frontal with a small lateral follow. Shot 2 medium follow of the turn. Shot 3 three near-locked hard-cut setups (WF/MC/INS) with no motion blur between them, motivated by the back turn, profile and hand gesture; Shot 4 wide frontal held. No LOCK/BURST effect, no orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 07 — 源 01:19.00 → 01:27.67（8.67s）｜办公室双人 → 全景
+
+```text
+integrated_multimodal_description: [Shot 1] A medium two-shot in the office shows two dancers standing back to back, one dark-haired and one brown-haired, each tracing a hand to the neck and rolling the shoulder. [Shot 2] At 00:02.100, a small cut widens as they turn away. [Shot 3] At 00:05.000, the view opens toward the full ensemble beginning the next formation.
+
+camera_direction: Shot 1 medium two-shot near-locked with a tiny push on the shoulder roll. Shot 2 small framing change as they turn. Shot 3 a gentle pull-out to wide frontal, motivated by the group opening up; no orbit, no handheld drift.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 08 — 源 01:27.67 → 01:42.67（15.00s，内部 15s 拆分点）｜办公室全景
+
+```text
+integrated_multimodal_description: [Shot 1] A wide office shot shows all seven in mixed orientations, some facing the camera and some turned, moving through a layered hip sequence with arms extending outward. [Shot 2] At 00:07.000, they bend forward in unison, hands traveling down the thighs, long hair falling forward, then drive the hips back up through a body wave. [Shot 3] At 00:13.300, they settle into a front-facing line, the blonde at one side, holding the closing pose.
+
+camera_direction: Shot 1 wide frontal held with a small follow of the layered moves. Shot 2 the camera dips slightly with the forward bend and rises with the wave, motivated by the body. Shot 3 near-locked wide frontal. No unmotivated push, no orbit; the 15-second boundary is an internal split, so the next Job continues from the same pose.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 09 — 源 01:42.67 → 01:55.63（12.96s）｜办公室末段 → 大厅切换
+
+```text
+integrated_multimodal_description: [Shot 1] The office program continues with the seven in formation, bending forward in unison as hands travel down the thighs and hair falls, then rising through a hip wave. [Shot 2] At 00:07.700, a small cut holds the office line. [Shot 3] At 00:09.500, a hard scene cut reveals the grand warm hall: the seven now in black mini-dresses with cut-out backs and garter belts, the blonde centered, standing in a confident line on the checkerboard floor under warm amber light. [Shot 4] At 00:13.000, they begin the first hall hip sequence.
+
+camera_direction: Shot 1 wide office with a small dip and rise following the bend. Shot 2 near-locked office line. Shot 3 wide frontal hall held steady on the new costume and formation, the hard cut carrying the change. Shot 4 small lateral follow of the hip move. No orbit, no dissolve across the scene change.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 10 — 源 01:55.63 → 02:09.87（14.24s）｜大厅椅子舞
+
+```text
+integrated_multimodal_description: [Shot 1] In the hall, the seven move around black chairs in mixed orientations, some seated and some standing, the blonde at the center. [Shot 2] At 00:02.200, a hard cut shows them seated on the chairs, legs extending and crossing while hands trace the thighs and the back of the chair, torsos lifted. [Shot 3] At 00:08.200, the view opens to a wide hall line as they rise and turn, hair flaring, moving into a standing hip sequence.
+
+camera_direction: Shot 1 wide frontal with a small follow around the chairs. Shot 2 medium framing near-locked on the chair poses, motivated by the leg and hand lines. Shot 3 a gentle pull-out to wide frontal as they rise, then a small follow of the turn; no orbit, no handheld drift.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 11 — 源 02:09.87 → 02:24.53（14.66s）｜大厅椅子舞 → 斜排
+
+```text
+integrated_multimodal_description: [Shot 1] The hall chair sequence continues with the seven in varied seated poses, one dancer turning her back to the camera while others extend a leg. [Shot 2] At 00:08.900, they rise and spread into a diagonal line, the blonde at one end, arms extending. [Shot 3] At 00:10.800, a closer framing catches the blonde and a neighbor facing the camera. [Shot 4] At 00:14.700, the wide hall line drops into a synchronized squat and rises on the hip.
+
+camera_direction: Shot 1 medium/wide near-locked on the chair poses. Shot 2 wide frontal with a small follow as the diagonal forms. Shot 3 medium close with a tiny push. Shot 4 wide frontal dipping and rising with the squat, motivated by the body; no orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 12 — 源 02:24.53 → 02:30.53（6.00s）｜大厅末 → 回办公室收束
+
+```text
+integrated_multimodal_description: [Shot 1] A final wide hall line holds the seven in the black dresses on the checkerboard floor. [Shot 2] At 00:01.500, a hard cut returns briefly to the cool office, the dancers in white shirts and black skirts moving through a closing hip gesture. [Shot 3] At 00:03.700, they settle into a front-facing line and hold the final confident pose as the main dance program ends.
+
+camera_direction: Shot 1 wide hall held steady. Shot 2 hard cut to wide office with a small follow of the closing gesture. Shot 3 near-locked wide frontal on the final pose; the ending credits are excluded and begin immediately after this boundary. No orbit, no drift.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+---
+
+# PART C — 原声交接（audio_handoff，块外，不进入 H3 三字段）
+
+```yaml
+method: postproduction_copy
+source:
+  path: d:\Users\Administrator\Downloads\女人的身体为什么这么美妙 _  Miniskirt-AOA｜短裙的权威我后知后觉_P1_Miniskirt.mp4
+  sha256: f0aeed79425db69b8788c926c8027ef833234fbe4d92c5e10f9a9b9344b29097
+  audio_stream_index: 1
+  audio_start_s: 0.0
+audio_status: unavailable   # 音轨存在但未核听，未写歌词/曲风
+retained_range_s: [0.0, 150.53]   # 仅正片，片尾 150.53–254 不沿用
+route_maps:
+  - {source_range: [0.0, 150.53], assembly_range: [0.0, 150.53], copies: 1}
+postproduction_copy:
+  - 生成全部 12 个视觉 Job 后，移除各 Job 自带的生成音轨；
+  - 从源文件按同一时间戳只铺回一次原始音频 0.0–150.53，跨 Job 硬切处不重启、不重复；
+  - 保留源开头到首个画面之间的原始状态，不另加静音或淡入。
+sync_risks:
+  - 未做音频 onset 检测，"切点挂重拍"仅据画面节奏推断，需后期核对；
+  - 独立生成的嘴型不会自动对齐原曲，口型/节拍未测，若要贴合需改用 Ref2VA 音频驱动；
+  - 若后续重排或改时长，本一比一映射失效，需重新设计声音方案。
+```
+
+# PART D — 装配说明（assembly）
+
+```text
+1. 12 个 Job 按序硬切拼接，总时长 150.53s；Job 之间不做叠化，仅 Job 08→09 为内部 15s 拆分的同姿态延续。
+2. 场景/造型切换只发生在：Job01 冷开场（大厅）、Job02 起办公室、Job09 切大厅、Job12 短暂回办公室。
+3. 椅子舞集中在 Job10–11（约 115–138s），黑椅作为稳定道具，不生成多余椅子。
+4. 冷开场（Job01）先给大厅高潮再回办公室，保留预告式结构，不调整为正序。
+5. 字幕、成员名、credits 与平台水印均为后期叠加层，不要求模型渲染任何中文/文字，避免乱码；本次范围本就不含片尾。
+6. 保持宽幅（约 2.22:1）与 letterbox，不裁切、不改画幅。
+```
+
+# PART E — 局限与诚实声明
+
+```text
+- L1 忠实度：仅基于媒资参数与约 78 个稀疏真实帧（~2.5s 间隔），未做逐帧骨骼追踪，
+  段落时间为近似值（0.1s 精度），不构成帧级复刻。
+- 抽帧信息缺失：关键帧之间的迈步、旋转、换重心无法仅靠联系表精确还原，已按连续运动
+  描述并标注，未把关键帧当独立姿势拼贴。
+- 声音未核听：未跑 onset/BPM，未写歌词、曲风、配器；三字段声音为 N/A，原声以块外
+  postproduction_copy 交接，口型/节拍未测。
+- 提示词 ≠ 生成结果：模型仍可能出现人数漂移、换脸、服装转移、穿模或场景回退，需按
+  七人连续性保护逐段验收。
+- 本片为文件名带 _P1_ 的分段，是否存在 P2 未知；本次仅覆盖该文件正片。
+```
+
+## 12 Job 时长校验
+
+| Job | 源范围 | 时长 | 场景/造型 |
+|---|---|---|---|
+| 01 | 0.00–13.07 | 13.07 | 黑场+大厅冷开场 |
+| 02 | 13.07–24.13 | 11.06 | 办公室（躺地） |
+| 03 | 24.13–35.70 | 11.57 | 办公室 |
+| 04 | 35.70–50.00 | 14.30 | 办公室（金发特写） |
+| 05 | 50.00–64.63 | 14.63 | 办公室 |
+| 06 | 64.63–79.00 | 14.37 | 办公室 |
+| 07 | 79.00–87.67 | 8.67 | 办公室 |
+| 08 | 87.67–102.67 | 15.00 | 办公室（内部拆分） |
+| 09 | 102.67–115.63 | 12.96 | 办公室→大厅 |
+| 10 | 115.63–129.87 | 14.24 | 大厅椅子舞 |
+| 11 | 129.87–144.53 | 14.66 | 大厅椅子舞 |
+| 12 | 144.53–150.53 | 6.00 | 大厅→办公室 |
+| 合计 | | **150.53** | |
+
+### L2 Miniskirt(AOA)7 人办公室翻跳 — H3 T2VA 深化反推(12 Jobs,密帧版)·修订版
+
+```text
+FIDELITY TIER: L1 (director's plan, dense-frame pass). Now based on ~206 source frames:
+the original ~78 plus two new dense batches at ~1.2s spacing (128 frames). Still NO
+per-frame skeleton tracking and NO audio onset detection; timings approximate (0.1s).
+A directorial plan, not a frame-accurate reproduction. Visual evidence: source frames
+only, no stock images. SCOPE: main dance program 0.00–150.53s; ending credits excluded.
+FILM TYPE: C — multi-shot MV montage, hard-cut named setups; cut-to-downbeat claims
+inferred from picture rhythm. This revision refines movement paths, formation order and
+camera setups, and corrects the prop window: the only props are white cube blocks at the
+hall sides, used in selected setups and cross-cut with standing/squatting formations,
+not a continuous seated routine and no black chairs.
+```
+
+源文件 SHA-256：`f0aeed79425db69b8788c926c8027ef833234fbe4d92c5e10f9a9b9344b29097`
+画幅：854×384（宽幅，约 2.22:1，letterbox），30fps。声音：音轨存在、未核听（`N/A`，交接见文末）。
+
+---
+
+# PART A — 共享视觉 DNA（全片适用）
+
+## A1. subject_definitions
+
+```text
+Seven female dancers, tracked by current position and look rather than a fixed name,
+because they exchange places. One BLONDE dancer (short chin-length blonde bob, straight
+bangs) is the visual anchor and frequently takes center; the other six have long dark
+hair (black or brown, straight or wavy, some half-tied or ponytailed, some worn down),
+fair skin, defined eye makeup, small earrings and delicate necklaces.
+OFFICE LOOK (dominant): white or fine-striped fitted shirts, some with black suspenders,
+a short black mini-skirt, sheer black stockings, black stiletto heels, and a lanyard ID
+badge on a black strap; hair mostly down.
+HALL LOOK: tight black mini-dresses with cut-out / open-back / halter / chain details,
+black stockings with garter belts, black stilettos; white cube blocks at the sides are
+used in selected setups only. All seven keep the same costume within a scene; the blonde stays blonde.
+```
+
+## A2. environment_definition
+
+```text
+OFFICE: bright modern open-plan office, pale blue-grey smooth floor, large floor-to-
+ceiling windows in soft daylight, glass-block walls, a curved archway and a round
+ceiling light; desks, office chairs, computers and a cylindrical column in the
+background; clean, cool, airy.
+HALL: grand warm-lit hall, black-and-white checkerboard floor, tall white columns, a
+white paneled double door, a chandelier, wall sconces and curtains; warm amber side
+glow; fixed white cube blocks beside the column bases are used in selected setups.
+Wide letterboxed frame; no on-screen text is to be generated.
+```
+
+## A3. lighting_definition
+
+```text
+OFFICE: soft cool daylight from the windows, even and diffuse with gentle fill, pale
+neutral-to-cyan color temperature, soft shadows, clean specular highlights on the smooth
+floor and the sheen of stockings.
+HALL: warm amber key from side wall lights, harder and more directional, deep warm
+shadows on the checkerboard floor, chandelier overhead; strong rim light separates the
+black outfits and bare skin.
+Constant within each scene, switching only on hard cuts; subtle film grain, no flicker.
+```
+
+## A4. named camera setups
+
+```text
+WF  WIDE FRONTAL : eye-level full-body, whole ensemble and floor — dominant.
+LA  LOW ANGLE    : near the floor looking up, legs and stilettos emphasized, glossy
+                   foreground floor.
+HA  HIGH ANGLE   : elevated (not fully vertical) framing of layered or bent formations.
+MC  MEDIUM CLOSE : chest-up facial and hand gestures, shallow depth.
+INS INSERT       : tight detail — legs, heels, hem, hands at the lips, hair.
+WB  WHIP/WIPE    : fast motion-blur move or body/hair occlusion as a motivated bridge.
+Use only the assigned setup per beat; no unmotivated camera moves.
+```
+
+## A5. body_mechanics
+
+```text
+GROUNDING & FORCE: in stilettos the weight stays over the balls of the feet; every move
+initiates from the floor and travels hip -> lumbar -> chest -> shoulder -> arm. A small
+breath or counter-wind-up precedes each release.
+HIP & WAVE: pelvic sways and body rolls are driven by the hips with soft knees; the wave
+passes sequentially through belly, chest and shoulders, never as one rigid tilt.
+SQUATS: center of mass drops over the heels, knees tracking over the toes, back
+elongated, then the hips drive the rise.
+FLOOR WORK: in the lying pose the body lowers with controlled support, spine arcing on
+the floor; hands frame the head, legs extended, no collapsed weight.
+CUBE BLOCK (selected setups): the white cube is a fixed stable prop beside the column;
+dancers perch on it with weight in the hips, legs extending, hands tracing the thighs
+while the torso stays lifted, then leave it for standing or floor-squat moves.
+HEAD & EYES: gaze follows the leading hand; on turns the head arrives last; faces stay
+composed and confident, no constant smile.
+```
+
+## A6. costume_hair_physics
+
+```text
+Nothing animates independently. Long hair, loose shirt hems and the short skirt lag
+slightly behind each hip or body acceleration and settle with a soft secondary motion;
+on turns hair flares and on squats the skirt and stocking lines follow the thighs. The ID
+lanyard swings with a small lag. Fabrics keep a natural body-to-cloth gap and fold at the
+waist and knees; no plastic stiffness, no clipping through the body, cube blocks, heels or
+other dancers; garter straps and stocking seams stay aligned.
+```
+
+## A7. CONTINUITY GUARD
+
+```text
+- exactly SEVEN dancers at all times: no duplicated or extra bodies, no half-formed or
+  fused limbs;
+- each dancer keeps her own identity and look: NO face swap, NO costume or accessory
+  transfer, the blonde stays the only blonde, including during crossings, occlusion,
+  back views and floor work;
+- position changes occur ONLY via the described continuous paths — NO teleportation,
+  NO instant side-swaps, NO two dancers occupying one point or merging;
+- when hair or a body occludes the lens, identities and costumes remain unchanged;
+  identity continuity takes priority over completing a move;
+- office vs hall changes are SCENE/COSTUME cuts only at the stated boundaries; inside
+  one scene the outfits never change.
+```
+
+---
+
+# PART B — 12 个 Job 深化时间线（本地时钟从 00:00 重置）
+
+## Job 01 — 源 00:00.00 → 00:13.07（13.07s）｜黑场 → 大厅冷开场
+
+```text
+integrated_multimodal_description: [Shot 1] A pure black frame holds with only the small fixed platform watermark in the upper corner, no subject, no motion. [Shot 2] At 00:02.300, a hard cut reveals the grand warm hall as a cold-open teaser: all seven in black mini-dresses and stockings on the checkerboard floor, three seated low with hands planted and legs extended while four stand behind them, the blonde among the standing group turned partly away; warm amber light and columns frame the confident pose. [Shot 3] At 00:05.500, a hard cut to a tighter hall angle catches a hand on the hip and a turned shoulder. [Shot 4] At 00:06.500, another cut shows a back-view turn with hair flaring. [Shot 5] At 00:09.700, a brief cool office flash appears. [Shot 6] At 00:11.500, the hall group returns in a layered pose, building anticipation.
+
+camera_direction: Shot 1 locked off on black. Shot 2 wide frontal held steady to establish the seven. Shots 3-6 are discrete near-locked hard-cut setups (WF/MC/INS), each with only small motivated framing; the fast changes come from editing, not a drifting or orbiting camera, and no dissolve links them.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 02 — 源 00:13.07 → 00:24.13（11.06s）｜办公室开场 → 地面躺卧
+
+```text
+integrated_multimodal_description: [Shot 1] A hard cut into the bright cool office; the dancers move into position among the desks and windows. [Shot 2] At 00:03.100, the program settles and a long-haired dancer lowers into the floor pose: she lies on the smooth floor in a white sleeveless knit top and black skirt, spine arcing, long hair spread around her, both hands framing her head while one leg extends; another dancer's legs in heels stand on a desk softly behind. She holds the reclined pose with controlled support, gaze toward the camera, then begins to gather for the rise.
+
+camera_direction: Shot 1 wide frontal with a small slow move as they take position. Shot 2 low angle close to the floor, held near-locked on the lying dancer with a tiny slow push, motivated by her lowering; the background legs stay in frame. No tilt drift, no orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 03 — 源 00:24.13 → 00:35.70（11.57s）｜办公室队形 → 近景
+
+```text
+integrated_multimodal_description: [Shot 1] Back in standing formation, the seven move through synchronized hip sways and soft arm gestures, knees relaxed, weight over the balls of the feet. [Shot 2] At 00:06.500, the framing tightens as a hand sweeps the hair and the torso rolls through a body wave. [Shot 3] At 00:08.000, a chest-up framing catches the confident expression and a hand gesture, the bright windows and desks soft behind.
+
+camera_direction: Shot 1 wide frontal with a small lateral follow of the sway, motivated by the hip movement. Shot 2 medium close with a small slow push as the hand sweeps the hair. Shot 3 near-locked chest-up; every move is motivated by the named body action, no autonomous push or orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 04 — 源 00:35.70 → 00:50.00（14.30s）｜七人全景 → 单人近景
+
+```text
+integrated_multimodal_description: [Shot 1] A wide office shot shows all seven in a clean line, executing a synchronized pelvic sway with hands traveling from the waist outward. [Shot 2] At 00:08.100, the camera cuts closer as the dancers turn and let long hair flare. [Shot 3] At 00:12.500, a medium framing holds the brown-haired dancer wearing thin-frame glasses as she sways her hips, one hand traveling down the thigh and settling near the hem while the long hair sweeps across her shoulder; a dark-haired dancer moves in the same line and the bright windows glow behind, no hand raised to the lips.
+
+camera_direction: Shot 1 wide frontal held steady on the line. Shot 2 medium framing with a small follow of the turn and hair flare. Shot 3 medium framing held near steady with a tiny follow of the hip sway, motivated by the hand traveling down the thigh; no push toward the face, no orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 05 — 源 00:50.00 → 01:04.63（14.63s）｜办公室队形快切
+
+```text
+integrated_multimodal_description: [Shot 1] The office formation continues with the seven stepping through a hip-driven sequence, arms crossing and opening. [Shot 2] At 00:02.100, a tighter angle catches a body wave and a hand tracing the waist. [Shot 3] At 00:03.500, a hard cut shows the group turning, hair and skirt hems flaring. [Shot 4] At 00:04.300, a closer framing holds the confident face. [Shot 5] At 00:12.000, a tight close-up centers on the blonde dancer: she turns over her shoulder, draws one index finger to her lips and winks, a dark-haired dancer soft behind her, holding the confident hush pose through the end of the Job.
+
+camera_direction: Shot 1 wide frontal. Shots 2-4 are discrete near-locked medium/insert hard cuts, motivated by the wave, turn and facial gesture; Shot 5 tight close-up near-locked on the blonde with only a tiny push toward the face, motivated by the finger moving to the lips and the wink. The density comes from editing, not a continuous rush or orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 06 — 源 01:04.63 → 01:19.00（14.37s）｜办公室内部机位快切
+
+```text
+integrated_multimodal_description: [Shot 1] A wide office shot carries the seven through synchronized sways and arm arcs. [Shot 2] At 00:03.600, a medium framing follows a turn with hair flare. [Shot 3] At 00:10.400, a rapid burst of internal cuts: hard cut to a back-view, then a side profile, then a hand at the hip, each landing on a distinct pose while the location stays the same office. [Shot 4] At 00:13.100, the group settles into a line facing the camera.
+
+camera_direction: Shot 1 wide frontal with a small lateral follow. Shot 2 medium follow of the turn. Shot 3 three near-locked hard-cut setups (WF/MC/INS) with no motion blur between them, motivated by the back turn, profile and hand gesture; Shot 4 wide frontal held. No LOCK/BURST effect, no orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 07 — 源 01:19.00 → 01:27.67（8.67s）｜办公室近景 → 全景
+
+```text
+integrated_multimodal_description: [Shot 1] A medium close framing holds three dancers in the office, hands traveling to the hip and neck as they roll through a hip sway. [Shot 2] At 00:02.100, the view widens to a multi-orientation full-ensemble shot with a leg-lift insert. [Shot 3] At 00:05.000, a two-dancer close-up shows them offset front-to-back rather than back-to-back, one drawing a hand behind her neck, before the framing pulls out toward the full ensemble.
+
+camera_direction: Shot 1 medium close near-locked with a tiny follow of the hip sway. Shot 2 wide framing with a small follow of the leg lift. Shot 3 a gentle pull-out to wide frontal, motivated by the group opening; no orbit, no handheld drift.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 08 — 源 01:27.67 → 01:42.67（15.00s，内部 15s 拆分点）｜办公室全景
+
+```text
+integrated_multimodal_description: [Shot 1] A wide office shot shows all seven in mixed orientations, some facing the camera and some turned, moving through a layered hip sequence with arms extending outward. [Shot 2] At 00:07.000, they bend forward in unison, hands traveling down the thighs, long hair falling forward, then drive the hips back up through a body wave. [Shot 3] At 00:13.300, they settle into a front-facing line holding the closing pose.
+
+camera_direction: Shot 1 wide frontal held with a small follow of the layered moves. Shot 2 the camera dips slightly with the forward bend and rises with the wave, motivated by the body. Shot 3 near-locked wide frontal. No unmotivated push, no orbit; the 15-second boundary is an internal split, so the next Job continues from the same pose.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 09 — 源 01:42.67 → 01:55.63（12.96s）｜办公室末段 → 大厅切换
+
+```text
+integrated_multimodal_description: [Shot 1] The office program continues with the seven in formation, bending forward in unison as hands travel down the thighs and hair falls, then rising through a hip wave. [Shot 2] At 00:01.600, a small cut holds the office line. [Shot 3] At 00:07.700, another office framing carries the closing gesture. [Shot 4] At 00:09.500, a hard scene cut reveals the grand warm hall: the seven in black mini-dresses with cut-out backs and garter belts, the blonde standing in the center of a front-facing line on the checkerboard floor under warm amber light, and they begin the first hall hip sequence within this same shot.
+
+camera_direction: Shots 1-3 wide office near-locked with a small dip and rise following the bend. Shot 4 wide frontal hall held steady on the new costume and formation, the hard cut carrying the change, then a small lateral follow of the hip move. No orbit, no dissolve across the scene change.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 10 — 源 01:55.63 → 02:09.87（14.24s）｜大厅横排
+
+```text
+integrated_multimodal_description: [Shot 1] In the hall the seven form a clean line, all turned sideways with hands reaching forward to connect, the blonde among them, open-back dresses and garter belts visible. [Shot 2] At 00:02.200, a hard cut to a centered framing shows the blonde facing the camera with arms extended while neighbors turn away or back. [Shot 3] At 00:08.200, the wide hall line moves through a synchronized hip sequence with hair flaring.
+
+camera_direction: Shot 1 wide frontal held steady on the connected line. Shot 2 medium framing with a small slow push toward the center, motivated by the arm extension. Shot 3 wide frontal with a small lateral follow of the hip move; no orbit, no handheld drift.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 11 — 源 02:09.87 → 02:24.53（14.66s）｜大厅分层（白色方块）→ 斜排
+
+```text
+integrated_multimodal_description: [Shot 1] A layered hall formation: one dancer stands centered in the foreground, two crouch low directly on the checkerboard floor, and two more perch on the fixed white cube blocks at the sides, hands tracing the thighs and cube tops, torsos lifted. [Shot 2] At 00:08.900, they rise and spread into a diagonal standing line, arms extending, while the cube blocks stay fixed at the edges. [Shot 3] At 00:10.800, a closer framing catches the group turning, long hair flaring.
+
+camera_direction: Shot 1 wide/high angle near-locked on the layered floor-and-cube poses. Shot 2 wide frontal with a small follow as the diagonal forms. Shot 3 medium close with a tiny push on the turn; the white cube blocks are used only in these selected setups, cross-cut with standing and floor-squat formations, not a continuous seated routine. No orbit.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+## Job 12 — 源 02:24.53 → 02:30.53（6.00s）｜大厅末 → 回办公室收束
+
+```text
+integrated_multimodal_description: [Shot 1] A final wide hall line holds the seven in the black dresses on the checkerboard floor. [Shot 2] At 00:01.500, a hard cut returns briefly to the cool office, the dancers in white shirts and black skirts moving through a closing hip gesture. [Shot 3] At 00:03.700, they settle into a front-facing line and hold the final confident pose as the main dance program ends.
+
+camera_direction: Shot 1 wide hall held steady. Shot 2 hard cut to wide office with a small follow of the closing gesture. Shot 3 near-locked wide frontal on the final pose; the ending credits are excluded and begin immediately after this boundary. No orbit, no drift.
+
+overall_soundscape: N/A
+
+non_diegetic_music: N/A
+```
+
+---
+
+# PART C — 原声交接（audio_handoff，块外）
+
+```yaml
+method: postproduction_copy
+source:
+  path: d:\Users\Administrator\Downloads\女人的身体为什么这么美妙 _  Miniskirt-AOA｜短裙的权威我后知后觉_P1_Miniskirt.mp4
+  sha256: f0aeed79425db69b8788c926c8027ef833234fbe4d92c5e10f9a9b9344b29097
+  audio_stream_index: 1
+  audio_start_s: 0.0
+audio_status: unavailable
+retained_range_s: [0.0, 150.53]
+route_maps:
+  - {source_range: [0.0, 150.53], assembly_range: [0.0, 150.53], copies: 1}
+postproduction_copy:
+  - 生成全部 12 个视觉 Job 后，移除各 Job 自带的生成音轨；
+  - 从源文件按同一时间戳只铺回一次原始音频 0.0–150.53，跨 Job 硬切处不重启、不重复；
+  - 保留源开头到首个画面之间的原始状态，不另加静音或淡入。
+sync_risks:
+  - 未做音频 onset 检测，"切点挂重拍"仅据画面节奏推断，需后期核对；
+  - 独立生成的嘴型不会自动对齐原曲，口型/节拍未测，若要贴合需改用 Ref2VA 音频驱动；
+  - 若后续重排或改时长，本一比一映射失效，需重新设计声音方案。
+```
+
+# PART D — 装配说明
+
+```text
+1. 12 个 Job 按序硬切拼接，总时长 150.53s；Job 08→09 为内部 15s 拆分的同姿态延续。
+2. 场景/造型切换只在：Job01 冷开场（大厅）、Job02 起办公室、Job09 切大厅、Job12 回办公室。
+3. 道具仅为大厅两侧的固定白色方块，只在 Job11 等部分机位（约 130–138s）被舞者靠坐，
+   与站立、蹲地队形交叉剪辑；不生成黑色椅子，不生成多余方块。
+4. 冷开场保留预告式结构，先给大厅高潮再回办公室，不调整为正序。
+5. 字幕、成员名、credits 与水印均为后期叠加层，不要求模型渲染任何中文/文字。
+6. 保持宽幅（约 2.22:1）与 letterbox，不裁切、不改画幅。
+```
+
+# PART E — 局限与诚实声明
+
+```text
+- L1 忠实度：基于约 206 个真实帧（含 1.2s 密帧），仍未做逐帧骨骼追踪，段落时间为
+  近似值（0.1s 精度），不构成帧级复刻。
+- 抽帧信息缺失：帧之间的迈步、旋转、换重心无法仅靠联系表精确还原，已按连续运动
+  描述，未把关键帧当独立姿势拼贴。
+- 声音未核听：未跑 onset/BPM，未写歌词、曲风、配器；三字段声音为 N/A，原声以块外
+  postproduction_copy 交接，口型/节拍未测。
+- 提示词 ≠ 生成结果：模型仍可能出现人数漂移、换脸、服装转移、穿模或场景回退，需按
+  七人连续性保护逐段验收。
+- 本片为文件名带 _P1_ 的分段，是否存在 P2 未知；本次仅覆盖该文件正片。
+```
+
+## 12 Job 时长校验
+
+| Job | 源范围 | 时长 | 场景/造型 |
+|---|---|---|---|
+| 01 | 0.00–13.07 | 13.07 | 黑场+大厅冷开场 |
+| 02 | 13.07–24.13 | 11.06 | 办公室（躺地） |
+| 03 | 24.13–35.70 | 11.57 | 办公室 |
+| 04 | 35.70–50.00 | 14.30 | 办公室（近景） |
+| 05 | 50.00–64.63 | 14.63 | 办公室 |
+| 06 | 64.63–79.00 | 14.37 | 办公室 |
+| 07 | 79.00–87.67 | 8.67 | 办公室 |
+| 08 | 87.67–102.67 | 15.00 | 办公室（内部拆分） |
+| 09 | 102.67–115.63 | 12.96 | 办公室→大厅 |
+| 10 | 115.63–129.87 | 14.24 | 大厅横排 |
+| 11 | 129.87–144.53 | 14.66 | 大厅分层（白色方块） |
+| 12 | 144.53–150.53 | 6.00 | 大厅→办公室 |
+| 合计 | | **150.53** | |
+
+### L3 8s 性感宅舞卡点提示词(BPM 132·主动续写·配 8.06s mp3)
+
+> 依据 AnimateDiff 片(片 v17) onset 实测网格(BPM132,强拍 1.03/1.95/2.86/3.77/4.68/5.60/6.50/7.42,弱拍 7.86,音频止于 8.06s);链位全部取自本库性感系:K70/K45/K72/K73 + B1 持续层 + K74 收束;`<Picture 1>` 锁人物,零外貌文字。
+
+```text
+H3 ALL-PURPOSE REFERENCE PROMPT — 8s SEXY-GENKI DANCE — MODE: all-purpose reference (NOT T2VA, NOT a first-frame anchor). Vertical 9:16. Target duration 8.0s, exactly matching <Audio 1> (8.06s).
+
+subject_definitions: <Subject 1> is the exact girl in <Picture 1>; sole all-purpose authority for face, hairstyle, makeup, proportions, costume, accessories and shoes; zero appearance description here. She performs a confident, flirtatious street-idol dance. Exactly one performer; no second person anywhere.
+
+environment_definition: A night city street with warm neon signage melting into bokeh behind her, asphalt under her feet, a few trees as dark silhouettes; the background stays soft and out of focus the whole time.
+
+lighting_definition: Cool streetlight base with warm neon rim-light on her hair edges and shoulders; consistent for all 8 seconds; no light change.
+
+audio: <Audio 1> is the sole authority; fully_copy with original pitch, tempo, dynamics and exact length. BPM 132.0; beat 0.4545s; strong downbeats every 0.91s at 1.03 / 1.95 / 2.86 / 3.77 / 4.68 / 5.60 / 6.50 / 7.42, one syncopated accent at 7.86; audio ends at 8.06. Add no new music or sound effects.
+
+integrated_multimodal_description: One locked hip-height camera, tiny sway always present. A continuous hip figure-eight engine (B1) runs under every phrase on the offbeats, never stopping.
+[Pickup · 0.00-1.03] static prep: weight sunk on her right hip, one hand at her neck, eyes into the lens, holding still for a full beat.
+[Downbeat 1.03] K70: one palm covers her mouth while the other hand flicks out toward the lens, hip twisting right on the hit.
+[Downbeat 1.95] the flicking arm sweeps a wide arc across the frame with heavy motion blur as the torso follows it around.
+[Downbeat 2.86] K45: an open palm sweeps slowly across her eyes dragging the hair with it, then slides out of frame — the reveal lands with a smirk.
+[Downbeat 3.77] K72: both elbows rise high and wide, fists loose beside her ears, hips popping right-left twice under the beat.
+[Downbeat 4.68] the hands slide down from her ears to her collar, one knee bending deeper on the accent while the hips keep popping.
+[Downbeat 5.60] K73a: one palm slides up her torso along the centerline to her cheek, a slow self-touch line, eyes holding the lens.
+[Downbeat 6.50] K73b: cat-paw hands flash beside her face, one crisp clap in front of her chest as the head tips back laughing — clap and chin land on the same frame, the peak of the take.
+[Downbeat 7.42] K73c: pressed palms sway side to side, hips leading and arms following, the swing already decaying.
+[Syncopation 7.86] one knee lifts and crosses with one hand on it, the other arm extending out, settling into the final pose.
+[8.06] END — the pose holds as the audio stops.
+
+camera_direction: Locked hip-height framing, full body in frame the whole take; no push, no orbit, no cuts; tiny handheld sway only.
+
+editing: No cuts; one continuous take; final state: settled knee-cross pose at 8.06s when the audio ends.
+
+performance: Flirtatious but precise — every downbeat lands a shape, offbeats carry the hip engine; the 7.86 accent is the last flourish, nothing after it; no lip-sync.
+
+costume_hair_physics: Hair and hem lag the hits by half a beat; the ponytails whip on every head move and settle into the final pose; fabric never floats independently.
+
+negative_constraints: Exactly one performer as in <Picture 1>, zero redesign; no second person, no crowd, no hands entering frame; no camera cuts, no digital zoom, no slow motion; no lip-sync; every downbeat shape lands exactly once as written; no motion after 7.86 beyond the settling pose.
+
+overall_soundscape: Audio 1 only; add no traffic, wind, crowd or voiceover unless already present.
+
+non_diegetic_music: fully_copy <Audio 1>; the palette is a guide, not permission to layer a replacement.
+```
+
 ---
 
 ## 拼舞模板(把链串成一支舞)
@@ -2764,4 +4098,4 @@ non_diegetic_music: N/A
 7. **检查**:旋转≤2、静止已明写、头部鼓在反拍、手势半径合规、切点在乐句收点、人数/机位 token 齐全。
 
 ---
-*来源视频:《双倍可爱❤️甜蜜暴击》(47.4s)、宅舞vs抖舞分屏(238.6s)、《与你提酒》(118.4s)、《皇上》(77.5s)、录舞运镜权威(61.5s)、《うみたがり》4人(222.5s)、《BLESSING》4人(96.8s)、向阳 BDF2021 队形版(144.9s);由八份逐拍反推报告提炼,动链合计 70+ 条;另并入 13 支 I2VA 单人成品范本(H 章,2026-10);《绝世舞姬》混剪(82.9s/44镜,E6 转场章+C36-C47+G 补充,2026-10-02);双人弧形运镜 16.8s(E7)+醉酒式镜头母规则(E8,2026-10-03);《三种袜子》右入换装 5.9s(E9)+三姿态原位换装系列 18.4s(E10:站姿侧身/深蹲抱膝抖腿/提裙站姿,onset 卡点实测,2026-10-05);2026-10-30 并入 K 章 74 条(15 支新片+2 图,短标题↔原片名:《绫华的锻炼时间》10.4s、《saber白礼服》9.6s(原片含书名号前缀"成为士郎的剑")、《saber下腰挑战》8.2s(原片《saber下腰动作挑战》)、《奥黛塔变装》153.4s(原片《花3000为奥黛塔制作视频后，最终决定放弃她.......》)、《夏天结束了》16.1s(原片《夏天结束了——做了四次不同情绪的撩头发》)、《橘福福》27.6s(原片《如此绝美的 橘福福 之后再也没见到》)、《薇薇安》60.6s(原片《好女孩——薇薇安（测试）》)、《维琳娜》75.0s(原片《这维琳娜对....对吗？》,鸣潮维里奈 cos)、《两个御姐合拍》14.9s(原片《两个御姐~格格巫和月月的合拍合集~_P1_好想谈恋爱》)、《请pick西施吧～》32.7s、《I Got Your Back》154.3s(原片【ILLIT】金丝眼镜水手服)、《依赖姐姐》72.0s(原片《依赖姐姐一辈子也不是什么坏事吧》)、《我是银月呀❤》18.1s、《活动饭拍》11.6s(原文件 ANbHNypfOZ8EhWqP)、《旗袍夜景》16.8s(原文件 AWsiPVCcHGVFeJGL)、《狐耳白发六宫格》写真图、《蓝水手服走廊截图》单帧)。*
+*来源视频:《双倍可爱❤️甜蜜暴击》(47.4s)、宅舞vs抖舞分屏(238.6s)、《与你提酒》(118.4s)、《皇上》(77.5s)、录舞运镜权威(61.5s)、《うみたがり》4人(222.5s)、《BLESSING》4人(96.8s)、向阳 BDF2021 队形版(144.9s);由八份逐拍反推报告提炼,动链合计 70+ 条;另并入 13 支 I2VA 单人成品范本(H 章,2026-10);《绝世舞姬》混剪(82.9s/44镜,E6 转场章+C36-C47+G 补充,2026-10-02);双人弧形运镜 16.8s(E7)+醉酒式镜头母规则(E8,2026-10-03);《三种袜子》右入换装 5.9s(E9)+三姿态原位换装系列 18.4s(E10:站姿侧身/深蹲抱膝抖腿/提裙站姿,onset 卡点实测,2026-10-05);2026-10-30 并入 K 章 74 条(15 支新片+2 图,短标题↔原片名:《绫华的锻炼时间》10.4s、《saber白礼服》9.6s(原片含书名号前缀"成为士郎的剑")、《saber下腰挑战》8.2s(原片《saber下腰动作挑战》)、《奥黛塔变装》153.4s(原片《花3000为奥黛塔制作视频后，最终决定放弃她.......》)、《夏天结束了》16.1s(原片《夏天结束了——做了四次不同情绪的撩头发》)、《橘福福》27.6s(原片《如此绝美的 橘福福 之后再也没见到》)、《薇薇安》60.6s(原片《好女孩——薇薇安（测试）》)、《维琳娜》75.0s(原片《这维琳娜对....对吗？》,鸣潮维里奈 cos)、《两个御姐合拍》14.9s(原片《两个御姐~格格巫和月月的合拍合集~_P1_好想谈恋爱》)、《请pick西施吧～》32.7s、《I Got Your Back》154.3s(原片【ILLIT】金丝眼镜水手服)、《依赖姐姐》72.0s(原片《依赖姐姐一辈子也不是什么坏事吧》)、《我是银月呀❤》18.1s、《活动饭拍》11.6s(原文件 ANbHNypfOZ8EhWqP)、《旗袍夜景》16.8s(原文件 AWsiPVCcHGVFeJGL)、《狐耳白发六宫格》写真图、《蓝水手服走廊截图》单帧);2026-11-08 追加 K75-K84:《潛行吧！奈亞子！W》宅舞翻跳(97.8s,一镜到底固定机位,变身点 24s,双马尾甩转签名×7,力竭躺倒彩蛋收尾);2026-11-09 并入:《AnimateDiff-补帧》8s AI 宅舞(K85-K88,BPM132 onset 实测)+Miniskirt(AOA)12 Jobs T2VA 两版(L1/L2,外部项目全文)+8s 性感宅舞卡点续写(L3);2026-11-10 追加 K89-K156(18 片):K-pop 直拍批(Hwiseo/tripleS《ANDLESS》双机位/Liz/李真率/咲良饭拍/姜杉《Genie》九机位/EXID)+内娱舞台批(黄诗予生日SP/王心凌《彩虹的微笑》深圳+长春/《第一次爱的人》宁波)+饭拍营业件+《上元》戏腔手势舞+1972 京剧《奇袭白虎团》武戏五件+婚纱换装写真件;v14 编译合集与 v15 全场直拍按用户指示未反推。*
