@@ -859,7 +859,7 @@ The performer never behaves intoxicated.
 
 1. **同一拍网格,两套密度**:先写死音乐网格,宅舞版每小节 1-2 个"pose verb"+显式 `freeze N counts`;抖舞版每小节写满 `on every half-beat` 级事件、禁 `freeze/hold`(收势链除外);两版拍位逐拍对齐。
 2. **驱动源声明前置**:宅舞版开头 `upper-body driven, movements live above collarbone, feet stay planted`;抖舞版 `lower-body driven, knee bounce is the engine, arms follow the hips`。不写这句,两版会融成中庸中间密度。
-3. **形状词 vs 路径词分库**:宅舞只用形状词(框取造型, 轻戳, 握拳, 爪形手, 倾斜——可静止);抖舞只用路径词(绕光轴旋转, 猛击, 甩出, 猛推, 画圆——带轨迹)。跨库用词是双版本失败主因。
+3. **形状词 vs 路径词分库**:宅舞只用形状词(框取造型, 轻戳, 握拳, 爪形手, 倾斜——可静止);抖舞只用路径词(身体滚动, 猛击, 甩出, 猛推, 画圆——带轨迹)。跨库用词是双版本失败主因。
 4. **入态/出态显式缝合**:链边界两版必须落在同一拍,只允许内部密度不同。
 5. **反差段落显式配对**:`left side: three statues plus a bow (2 actions per 8 counts); right side: maximum flow (10+ actions per 8 counts); both share the identical final bow on the last beat`——极化段必须双版本写进同一个 提示词。
 
@@ -931,7 +931,7 @@ The performer never behaves intoxicated.
 4. **声音两字段三模式**:
    - **重建**(默认):overall_soundscape 写环境音+衣料/脚步声;non_diegetic_music 写体裁+BPM+情绪+能量段落(01/02/06/09/10/11/12/13)。
    - **原声保留交接**:`overall_soundscape: N/A - the source carries a loudness-verified non-silent audio track whose content was not audibly audited; lay back the original track per the assembly note.` + `non_diegetic_music: N/A (any music is part of the original track; do not regenerate).`(03/04/05)——文字复刻不了波形,原声在装配时铺回。
-   - **全 画内声源 演奏**(乐器/唱):`non_diegetic_music: N/A - all music is diegetic: the live guqin performance ...`(07)。
+   - **全叙事内声源演奏**(乐器/唱):`non_diegetic_music: N/A - all music is diegetic: the live guqin performance ...`(07)。
 5. **BPM 与拍点落位**:BPM 写进 non_diegetic_music(~75-85 / ~100 / ~125-130);卡点段在正文用绝对秒列拍点(03:`bottoms land at 0.0, 0.6, 1.2, ...` + `metronomic squat-bounce cycle every 0.6 seconds`)——循环引擎当持续层、重音强调 写成"第几个 cycle 的变体"(03 双次弹动发生于 3.9),即 B 章引擎链的成品用法。
 6. **结尾纪律**(13 支全部写死终态):`settles into a held pose` / `motion easing to a stop right at the cut` / `pose holds frozen at the cut`;原片硬切的写 `cut off hard, with no fade-out`(08/09/10)——对齐 0.规则#4"静止必须明写"。
 7. **镜头语法样本库**:完全固定机位(01/05/10)、手持轻微摆动(02/03)、缓慢稳定推近 全程(12)、后拉 开场→缓慢推近(04)、固定全身→7.0s 起缓推半身(13)、4 镜头切点 5.9/12.9/19.9s(07);切点全部落乐句/动作收点(对齐 E3)。本组均为常规机位;需要极端仰拍/俯拍/特殊机位时按 E5 机位物理化写法(实物+位置+画面几何+四连否定,单机位不分屏)。
@@ -2516,7 +2516,7 @@ non_diegetic_music: N/A
 - 背景人物:酒店/公寓室内,米色木饰墙板与房门、门上金色长条牌、黑色电子锁挂绳,暖黄室内灯,全程单一固定机位。两名年轻女生并排穿同款浅蓝绞花针织开衫(麻花纹、木色扣、毛球拉头):左=黑色双马尾、素灰百褶裙、稍矮;右=黑长直披发、灰黑格纹百褶裙、稍高。均光腿,画面裁至小腿、鞋未见。无画外行动者。
 - 节拍:有 BGM(平均值 -13.4dB);屈膝弹跳周期全程恒定约 0.4-0.5s、手势切换均落在弹跳谷值→固定节拍,约 120-130BPM(推测)。
 - 镜头形态:A 一镜到底固定机位(判据:15s 内门框与门牌位置像素级不动,无变焦无平移无剪辑)。
-- 双人总则:站位并排、间距约 0.5 个肩宽(40-50cm)、正对镜头、全程无肢体接触、无对视(都看镜头);配合方式="同向齐舞为底+三处错位加花"(1.6-2.4s 分工手势、10.0-10.8s 推掌/撩发、13.0s 镜像 通过 环眼);起手 0.0s 右生手掌已立在脸侧(右先半拍、左以大摆臂跟进);对靠与转身均由左生先启动、右生半拍内对齐。
+- 双人总则:站位并排、间距约 0.5 个肩宽(40-50cm)、正对镜头、全程无肢体接触、无对视(都看镜头);配合方式="同向齐舞为底+三处错位加花"(1.6-2.4s 分工手势、10.0-10.8s 推掌/撩发、13.0s 镜像 OK 环眼);起手 0.0s 右生手掌已立在脸侧(右先半拍、左以大摆臂跟进);对靠与转身均由左生先启动、右生半拍内对齐。
 
 ### K40 开场双掌弹跳+错位指天拳托链(4拍|甜·双人)
 - 入态:二人自然站立、左臂垂 → 出态:左指天/右拳托下巴,同步屈膝定格
@@ -2536,9 +2536,9 @@ non_diegetic_music: N/A
 - H3:`both girls point their index fingers skyward waggling in small outward circles, pinch matching finger hearts at chest level offset one higher one lower on a bouncy dip, then repeat the sky-point twice before dropping their arms to prepare a big swing`
 - 来源:《两个御姐合拍》00:05-8.8s
 
-### K43 摆臂推掌-脸侧摆掌-镜像 通过 环眼链(6拍|甜·双人)
-- 入态:双臂张开放松 → 出态:双人 通过 圈扣眼、歪头弹跳定格至片尾
-- 分解:拍1 [8.8-9.8] 双臂从上向下大摆劈过体前(掌心朝下),同步屈膝下沉;拍2 [10.0-10.8] 错位加花:左生掌心朝前推出两次(欢迎式),右生单手拎起披发发尾向外一甩;拍3 [11.0-11.8] 双臂向后下摆再回摆,右生长发回落肩头;拍4 [12.0-12.8] 双掌立脸侧左右快摆(停止式),头反向小摆;拍5 [13.0-13.8] 镜像 通过 手势:左生 通过 圈扣右眼、右生扣左眼(圈口朝镜头);拍6 [13.8-14.9] 保持 通过 圈,头随节拍左右轻摆+膝弹,定格收尾
+### K43 摆臂推掌-脸侧摆掌-镜像 OK 环眼链(6拍|甜·双人)
+- 入态:双臂张开放松 → 出态:双人 OK 圈扣眼、歪头弹跳定格至片尾
+- 分解:拍1 [8.8-9.8] 双臂从上向下大摆劈过体前(掌心朝下),同步屈膝下沉;拍2 [10.0-10.8] 错位加花:左生掌心朝前推出两次(欢迎式),右生单手拎起披发发尾向外一甩;拍3 [11.0-11.8] 双臂向后下摆再回摆,右生长发回落肩头;拍4 [12.0-12.8] 双掌立脸侧左右快摆(停止式),头反向小摆;拍5 [13.0-13.8] 镜像 OK 手势:左生 OK 圈扣右眼、右生扣左眼(圈口朝镜头);拍6 [13.8-14.9] 保持 OK 圈,头随节拍左右轻摆+膝弹,定格收尾
 - H3:`both girls swing their arms down through the front in sync with a knee dip, the left pushes her palm forward twice as the right flips her long hair over her shoulder, they wave open palms beside their faces with heads tilting, and finish mirrored making OK circles around their inner eyes, wobbling their heads on the beat into the ending freeze`
 - 来源:《两个御姐合拍》00:08.8-14.9s
 
@@ -2672,7 +2672,7 @@ non_diegetic_music: N/A
 
 ### K62 盘腿双 V 喵语链(4拍|萌)
 - 入态:盘腿坐于蒲团、右手起于脸侧 → 出态:双手保持双 V 手势、张嘴"喵"表情定格
-- 分解:拍1 右手举至脸侧五指张开、左手搭膝、目视镜头(0.8s);拍2 右手变 V 字上举、左手于脚踝前向下指 V、张嘴发声口型、狐耳随头势立起(1.4-1.8);拍3 右手换 通过 指、左手 V 字下指、双肩微耸——双手异型手势+喵口型为技术峰值(2.0-2.6);拍4 头向右歪、长发顺势垂滑、V 字保持、Q 版贴纸在胸前同步跳动(2.8-3.2);发力来源均为腕指小肌群,肩颈放松;白裙下摆铺地展开成扇形随坐姿静止;机位眼高固定,人物占画面中下 2/3
+- 分解:拍1 右手举至脸侧五指张开、左手搭膝、目视镜头(0.8s);拍2 右手变 V 字上举、左手于脚踝前向下指 V、张嘴发声口型、狐耳随头势立起(1.4-1.8);拍3 右手换 OK 指、左手 V 字下指、双肩微耸——双手异型手势+喵口型为技术峰值(2.0-2.6);拍4 头向右歪、长发顺势垂滑、V 字保持、Q 版贴纸在胸前同步跳动(2.8-3.2);发力来源均为腕指小肌群,肩颈放松;白裙下摆铺地展开成扇形随坐姿静止;机位眼高固定,人物占画面中下 2/3
 - H3:`sitting cross-legged on a floor cushion, waving alternating V-sign and OK gestures with both hands beside her face while mouthing a cute meow, fox ears perked, long silver hair sliding over still shoulders, eye-level static shot`
 - 来源:《我是银月呀❤》00:00.6-3.2s
 
@@ -4455,7 +4455,7 @@ non_diegetic_music: N/A
 
 ### K290 拍手斜举哇咔摇摆链(7拍|元气热舞·拍手即拍·一镜到底)
 - 入态:正面开手站定 → 出态:双手胸前合十收尾(渐黑)
-- 分解:拍1 1.30-2.00s 双臂体侧摆荡两下,膝部屈-伸-屈弹动;拍2 2.00-2.50s 双手向内交叉相拍合于左肩上方(拍手 1),躯干左倾,合掌沿对角线滑向右肩(拍手 2)——技术峰值:斜举合掌;拍3 2.50-3.33s 合掌胸前小幅上下搓摩三次,肘部架平;拍4 3.33-6.33s 循环组"开掌-交叉拍-斜举滑掌"×2-3 轮,百褶裙摆随胯摆出波浪,白袜黑杠随膝弹;拍5 6.33-7.67s 双掌摊开体侧耸肩摆,掌心朝上挑腕两次;拍6 7.67-9.0s 双手举至脸侧猫爪抖动,再变 通过 手势左右各一次;拍7 9.0-9.33s 双手合十收于胸前,渐黑淡出;音乐触发:拍手即拍点(推测 120-127BPM)
+- 分解:拍1 1.30-2.00s 双臂体侧摆荡两下,膝部屈-伸-屈弹动;拍2 2.00-2.50s 双手向内交叉相拍合于左肩上方(拍手 1),躯干左倾,合掌沿对角线滑向右肩(拍手 2)——技术峰值:斜举合掌;拍3 2.50-3.33s 合掌胸前小幅上下搓摩三次,肘部架平;拍4 3.33-6.33s 循环组"开掌-交叉拍-斜举滑掌"×2-3 轮,百褶裙摆随胯摆出波浪,白袜黑杠随膝弹;拍5 6.33-7.67s 双掌摊开体侧耸肩摆,掌心朝上挑腕两次;拍6 7.67-9.0s 双手举至脸侧猫爪抖动,再变 OK 手势左右各一次;拍7 9.0-9.33s 双手合十收于胸前,渐黑淡出;音乐触发:拍手即拍点(推测 120-127BPM)
 - H3:`dancing the waka-waka cheer combo in one continuous take — clapping palms diagonally over each shoulder, rubbing clasped hands at the chest, shrug-swaying with open palms, wiggling cat paws and OK-signs beside the face before closing with hands together`
 - 来源:《哇咔哇咔》02.00-03.33s(拍手主证)/06.33-09.33s(手势组)
 
@@ -4642,8 +4642,8 @@ non_diegetic_music: N/A
 - 来源:《拿下你》00.00-03.55s
 
 ### K313 AI 渐变双段变装链(6拍|AI 变装机制·渐变+振荡)
-- 入态:学妹黑装端立 → 出态:白色系站姿 通过 手势态(第一段)/黑蕾丝椅坐态(第二段)
-- 分解:拍1 3.55-3.63s 黑装末态静止,渐变窗口开启;拍2 3.63-3.88s 单调溶解中态:黑裙透明度下降、白裙同位浮现,右侧生成鬼影指向臂(畸形五指)——AI 重绘痕迹帧;拍3 3.88-4.90s 白装整态稳定:双手轮流在脸侧比 通过 圈,颈圈 跨装延续(身份锚点),每圈约 0.5s 踩点;拍4 4.90-5.05s 渐变窗口二次开启,白装边缘开始透明;拍5 5.05-5.65s 振荡闪变:白站态↔黑椅坐态整帧反复交替(5.12/5.51 黑、5.25/5.32 白回摆),叠影帧出现多腿与鞭带错位——生成插值时序不稳,峰值帧 5.05s(双态各半透明);拍6 5.65s 后黑蕾丝椅坐态锁定,手位与白装 通过 手势同相位衔接
+- 入态:学妹黑装端立 → 出态:白色系站姿 OK 手势态(第一段)/黑蕾丝椅坐态(第二段)
+- 分解:拍1 3.55-3.63s 黑装末态静止,渐变窗口开启;拍2 3.63-3.88s 单调溶解中态:黑裙透明度下降、白裙同位浮现,右侧生成鬼影指向臂(畸形五指)——AI 重绘痕迹帧;拍3 3.88-4.90s 白装整态稳定:双手轮流在脸侧比 OK 圈,颈圈 跨装延续(身份锚点),每圈约 0.5s 踩点;拍4 4.90-5.05s 渐变窗口二次开启,白装边缘开始透明;拍5 5.05-5.65s 振荡闪变:白站态↔黑椅坐态整帧反复交替(5.12/5.51 黑、5.25/5.32 白回摆),叠影帧出现多腿与鞭带错位——生成插值时序不稳,峰值帧 5.05s(双态各半透明);拍6 5.65s 后黑蕾丝椅坐态锁定,手位与白装 OK 手势同相位衔接
 - H3:`cross-dissolving AI-style from the schoolgirl outfit into the white polo set with ghost-arm artifacts, flashing OK-signs at the face, then flickering back and forth between the white standing and the black lace seated versions with double-exposed limbs before settling seated`
 - 来源:《拿下你》03.55-05.65s(变装 1 主证 03.63-03.88s/变装 2 主证 04.95-05.65s)
 

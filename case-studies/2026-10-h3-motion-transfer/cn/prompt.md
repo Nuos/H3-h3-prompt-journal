@@ -1,6 +1,6 @@
 # H3 动作迁移——人物优先重建（动作迁移 · 人物优先重建）
 
-> 案例展示视频: [result-video.mp4](./result-video.mp4) — 9.4s · 928×1664 · 图1 人物+世界 × 目标视频动作 × 音频1 时序, 一镜合成。
+> 案例展示视频: [result-video.mp4](../result-video.mp4) — 9.4s · 928×1664 · 图1 人物+世界 × 目标视频动作 × 音频1 时序, 一镜合成。
 > **工作流**: [h3-motion-transfer-workflow.json](./h3-motion-transfer-workflow.json) — ComfyUI · MiniMax H3 Ref2VA 双通道，直接拖入 ComfyUI 使用。
 
 ## 这是什么
